@@ -1,0 +1,18 @@
+{
+  "LLM_sentiment_score_man_non-binary gender_impact_ratio": {
+    "impact_ratio": 0.8333333333333334,
+    "man_selection_rate": 0.5,
+    "non-binary gender_selection_rate": 0.6
+  },
+  "LLM_sentiment_score_man_woman_impact_ratio": {
+    "impact_ratio": 1.0,
+    "man_selection_rate": 0.5,
+    "woman_selection_rate": 0.5
+  },
+  "LLM_sentiment_score_non-binary gender_woman_impact_ratio": {
+    "impact_ratio": 0.8333333333333334,
+    "non-binary gender_selection_rate": 0.6,
+    "woman_selection_rate": 0.5
+  }
+}
+

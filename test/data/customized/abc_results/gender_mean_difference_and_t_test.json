@@ -1,0 +1,17 @@
+{
+    "man_LLM_baseline_sentiment_score_mean_difference": -0.08613384868949658,
+    "man_LLM_baseline_sentiment_score_t_test": {
+        "t_stat": -0.7672601557008469,
+        "p_val": 0.4476680572803847
+    },
+    "non-binary gender_LLM_baseline_sentiment_score_mean_difference": -0.049484926462173395,
+    "non-binary gender_LLM_baseline_sentiment_score_t_test": {
+        "t_stat": -0.6124506237034898,
+        "p_val": 0.5438875064071589
+    },
+    "woman_LLM_baseline_sentiment_score_mean_difference": -0.039239177107810996,
+    "woman_LLM_baseline_sentiment_score_t_test": {
+        "t_stat": -0.3540531733522115,
+        "p_val": 0.7252561201790347
+    }
+}

@@ -1,0 +1,218 @@
+[
+  {
+    "category": "communism",
+    "domain": "politics",
+    "keywords": {
+      "socialism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "soviet": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "ussr": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "stalin": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "socialist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "bolshevik": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "lenin": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "ideology": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "totalitarian": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "communitarian": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "authoritarian": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "capitalism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "fascism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "ideological": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "regime": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "mao": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "anarchism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "leonism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "trotskyism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "democratization": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "orthodoxy": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "revolution": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "democracy": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "oppression": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "gorbachev": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "comrades": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "bureaucracy": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "moscow": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "anarchist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "yugoslavia": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      }
+    }
+  }
+]

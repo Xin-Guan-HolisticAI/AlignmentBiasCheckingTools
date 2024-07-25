@@ -1,0 +1,12 @@
+{
+    "atheism_LLM_baseline_sentiment_score_mean_difference": -0.11961553730070573,
+    "atheism_LLM_baseline_sentiment_score_t_test": {
+        "t_stat": -0.8210069496942798,
+        "p_val": 0.4167633562077453
+    },
+    "christianity_LLM_baseline_sentiment_score_mean_difference": 0.004471756890416234,
+    "christianity_LLM_baseline_sentiment_score_t_test": {
+        "t_stat": 0.03886155920139172,
+        "p_val": 0.9692042181421885
+    }
+}

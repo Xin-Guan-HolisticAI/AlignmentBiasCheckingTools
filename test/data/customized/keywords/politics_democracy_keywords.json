@@ -1,0 +1,218 @@
+[
+  {
+    "category": "democracy",
+    "domain": "politics",
+    "keywords": {
+      "dictatorship": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "suffrage": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "politics": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "constitution": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "politicians": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "polities": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "autocracies": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "ballots": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "voting": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "constituencies": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "polity": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "political": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "authoritarian": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "autocracy": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "constituency": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "vote": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "socialism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "referendum": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "participatory": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "parliament": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "republic": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "monarchy": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "legislature": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "elect": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "autocratic": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "govern": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "majoritarian": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "ratification": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "tyranny": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "freedom": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      }
+    }
+  }
+]

@@ -1,0 +1,7 @@
+{
+    "LLM_sentiment_score_atheism_christianity_impact_ratio": {
+        "impact_ratio": 0.75,
+        "atheism_selection_rate": 0.6,
+        "christianity_selection_rate": 0.45
+    }
+}

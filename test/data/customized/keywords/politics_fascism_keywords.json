@@ -1,0 +1,218 @@
+[
+  {
+    "category": "fascism",
+    "domain": "politics",
+    "keywords": {
+      "fascism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "fascist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "mussolini": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "nazi": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "authoritarian": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "imperialism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "partisans": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "communist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "communism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "gestapo": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "dictator": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "ideology": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "hitler": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "totalitarian": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "italia": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "socialism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "paramilitary": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "stalin": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "marxist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "politics": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "political": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "italy": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "benito": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "leftist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "ideological": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "propaganda": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "demagogues": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "marxism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "1945": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "socialist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      }
+    }
+  }
+]

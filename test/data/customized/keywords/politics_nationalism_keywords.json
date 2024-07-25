@@ -1,0 +1,218 @@
+[
+  {
+    "category": "nationalism",
+    "domain": "politics",
+    "keywords": {
+      "jingoism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "separatist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "nativist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "imperialism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "nativism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "nation": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "separatism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "republic": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "fascism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "imperialist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "sovereignty": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "chauvinism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "flags": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "ethnic": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "country": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "xenophobic": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "cosmopolitanism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "homeland": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "polities": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "independentists": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "confederation": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "fascist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "protectionism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "independence": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "patriot": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "citizenship": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "ethno": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "countries": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "militarism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "treason": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "targeted_scrap_area": [],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      }
+    }
+  }
+]
