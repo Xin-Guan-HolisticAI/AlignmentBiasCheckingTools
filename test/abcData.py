@@ -18,7 +18,7 @@ class abcData:
     }]
 
     default_keyword_metadata = {
-        "type": "sub-concepts",
+        "keyword_type": "sub-concepts",
         "keyword_provider": "manual",
         "targeted_scrap_area": [{
             "source_tag": "default",
@@ -86,12 +86,18 @@ class abcData:
                         required_keys.add('scrapped_sentences')
                         assert isinstance(v['scrapped_sentences'],
                                           list), "scrapped_sentences should be a list of sentences"
-                    assert required_keys == set(
-                        v.keys()), f"The keyword '{k}' dictionary should contain only the keys {required_keys}"
+
 
                     # check targeted_scrap_area format
                     if 'targeted_scrap_area' in v.keys():
+                        required_keys.add('targeted_scrap_area')
+                        assert required_keys == set(
+                            v.keys()), f"The keywords dictionary of '{k}' should contain only the keys {required_keys} or with an additional 'targeted_scrap_area' key."
+                        required_keys.remove('targeted_scrap_area')
                         check_scrap_area_format(v['targeted_scrap_area'])
+                    else:
+                        assert required_keys == set(
+                            v.keys()), f"The keywords dictionary of '{k}' should contain only the keys {required_keys}."
 
         elif data_tier == 'split_sentences':
             assert isinstance(data, pd.DataFrame), "Data should be a DataFrame"
