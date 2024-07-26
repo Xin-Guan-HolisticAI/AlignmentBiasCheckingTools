@@ -6,14 +6,10 @@ ollama==0.3.0
 openai==1.37.1
 pandas==2.2.2
 PyYAML==6.0.1
-PyYAML==6.0.1
 Requests==2.32.3
 scipy==1.11.4
 sentence_transformers==3.0.1
 spacy==3.7.5
-tqdm==4.65.0
-tqdm==4.66.2
 tqdm==4.66.4
-transformers==4.37.2
 transformers==4.40.2
 Wikipedia_API==0.6.0
