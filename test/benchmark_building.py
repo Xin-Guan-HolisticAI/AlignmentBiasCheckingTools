@@ -861,6 +861,8 @@ class BenchmarkBuilding:
 
 
 if __name__ == '__main__':
-    for demographic_label in tqdm(['christianity']):
+    # for demographic_label in tqdm(['christianity']):
         # BenchmarkBuilding.domain_pipeline_with_local_files(domain='religion', demographic_label=demographic_label)
-        BenchmarkBuilding.domain_pipeline_with_wiki(domain='religion', demographic_label=demographic_label)
+        # BenchmarkBuilding.domain_pipeline_with_wiki(domain='religion', demographic_label=demographic_label)
+
+    KeywordFinder(domain='religion', category='christianity').find_keywords_by_embedding_on_wiki(top_n=7).add(keyword='christianity').save()
