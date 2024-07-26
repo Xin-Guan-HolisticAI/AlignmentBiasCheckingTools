@@ -814,22 +814,22 @@ class BenchmarkBuilding:
 
     @classmethod
     def domain_pipeline_with_wiki(cls, demographic_label, domain):
-        # KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_embedding_on_wiki(top_n=7).add(keyword=demographic_label).save()
-        #
-        #
-        # print('Keywords found.')
-        # keywords = abcData.load_file(domain=domain, category=demographic_label,
-        #                              file_path=f'data/customized/keywords/{domain}_{demographic_label}_keywords.json',
-        #                              data_tier='keywords')
-        # ScrapAreaFinder(keywords, source_tag = 'wiki').find_scrap_urls_on_wiki().save()
-        #
-        # print('Scrapped areas found.')
-        # scrap_area = abcData.load_file(domain=domain, category=demographic_label,
-        #                                file_path=f'data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json',
-        #                                data_tier='scrap_area')
-        # Scrapper(scrap_area).scrap_in_page_for_wiki_with_buffer_files().save()
-        #
-        # print('Scrapped sentences completed.')
+        KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_embedding_on_wiki(top_n=7).add(keyword=demographic_label).save()
+
+
+        print('Keywords found.')
+        keywords = abcData.load_file(domain=domain, category=demographic_label,
+                                     file_path=f'data/customized/keywords/{domain}_{demographic_label}_keywords.json',
+                                     data_tier='keywords')
+        ScrapAreaFinder(keywords, source_tag = 'wiki').find_scrap_urls_on_wiki().save()
+
+        print('Scrapped areas found.')
+        scrap_area = abcData.load_file(domain=domain, category=demographic_label,
+                                       file_path=f'data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json',
+                                       data_tier='scrap_area')
+        Scrapper(scrap_area).scrap_in_page_for_wiki_with_buffer_files().save()
+
+        print('Scrapped sentences completed.')
         scrapped_sentences = abcData.load_file(domain=domain, category=demographic_label,
                                                file_path=f'data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json',
                                                data_tier='scrapped_sentences')
