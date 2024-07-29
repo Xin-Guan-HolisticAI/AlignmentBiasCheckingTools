@@ -19,6 +19,7 @@ from tqdm import tqdm
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk import download
+from urllib.parse import urlparse, unquote
 
 
 # Ensure required NLTK resources are downloaded
@@ -253,70 +254,71 @@ class KeywordFinder:
 
             return keywords_abcData
 
-    def get_llm_template(self, template_type, **kwargs):
-        category = kwargs.get('category')
-        domain = kwargs.get('domain')
-
-        if category and domain:
-            template_people = f"""
-            Given {category} under the topic {domain}, \
-            provide a list of famous names that are representative to the {category}.
-            Output your answer in a python list format only and nothing else.
-            """
-
-            template_people_short = f"""
-            Given {category} under the topic {domain}, \
-            provide a list of famous names that are representative to {category}.
-            These names can be short family names for which they are identified within the context.
-            Output your answer in a python list format only and nothing else.
-            """
-
-            template_characteristics = f"""
-            Given the {category} under the topic {domain}, \
-            provide a list of characteristics that are necessary (!!!) to {category}.
-            Output your answer in a python list format only and nothing else.
-            """
-
-            template_subcategories = f"""
-            Given the {category} under the topic {domain}, \
-            provide a list of sub-categories of {category}.
-            Output your answer in a python list format only and nothing else.
-            """
-
-            template_syn = f"""
-            Given the {category} under the topic {domain}, \
-            provide a list of synonyms of {category}.
-            Output your answer in a python list format only and nothing else.
-            """
-
-            template_root = f"""
-            Given the {category} under the topic {domain}, \
-            provide a list of words that share the same grammatical roots with {category}.
-            Output your answer in a python list format only and nothing else.
-            """
-
-            if template_type == 'people':
-                return template_people
-            elif template_type == 'people_short':
-                return template_people_short
-            elif template_type == 'characteristics':
-                return template_characteristics
-            elif template_type == 'subcategories':
-                return template_subcategories
-            elif template_type == 'synonym':
-                return template_syn
-            elif template_type == 'root':
-                return template_root
-
-        print('Template type not found')
-        return None
-
     def find_keywords_by_llm(self, n_run=20,
                              n_keywords=20,
                              generation_function=None,
                              model_name=None,
                              embedding_model=None,
                              show_progress=True):
+
+        def get_llm_template(template_type, **kwargs):
+            category = kwargs.get('category')
+            domain = kwargs.get('domain')
+
+            if category and domain:
+                template_people = f"""
+                Given {category} under the topic {domain}, \
+                provide a list of famous names that are representative to the {category}.
+                Output your answer in a python list format only and nothing else.
+                """
+
+                template_people_short = f"""
+                Given {category} under the topic {domain}, \
+                provide a list of famous names that are representative to {category}.
+                These names can be short family names for which they are identified within the context.
+                Output your answer in a python list format only and nothing else.
+                """
+
+                template_characteristics = f"""
+                Given the {category} under the topic {domain}, \
+                provide a list of characteristics that are necessary (!!!) to {category}.
+                Output your answer in a python list format only and nothing else.
+                """
+
+                template_subcategories = f"""
+                Given the {category} under the topic {domain}, \
+                provide a list of sub-categories of {category}.
+                Output your answer in a python list format only and nothing else.
+                """
+
+                template_syn = f"""
+                Given the {category} under the topic {domain}, \
+                provide a list of synonyms of {category}.
+                Output your answer in a python list format only and nothing else.
+                """
+
+                template_root = f"""
+                Given the {category} under the topic {domain}, \
+                provide a list of words that share the same grammatical roots with {category}.
+                Output your answer in a python list format only and nothing else.
+                """
+
+                if template_type == 'people':
+                    return template_people
+                elif template_type == 'people_short':
+                    return template_people_short
+                elif template_type == 'characteristics':
+                    return template_characteristics
+                elif template_type == 'subcategories':
+                    return template_subcategories
+                elif template_type == 'synonym':
+                    return template_syn
+                elif template_type == 'root':
+                    return template_root
+
+            print('Template type not found')
+            return None
+
         category = self.category
         domain = self.domain
         if model_name:
@@ -331,25 +333,25 @@ class KeywordFinder:
             try:
                 if _ == 0 or _ == 1:
                     response = clean_list(
-                        generation_function(self.get_llm_template('root', category=category, domain=domain)))
+                        generation_function(get_llm_template('root', category=category, domain=domain)))
                     final_set.update(response)
                 if _ % 5 == 0:
                     # response = clean_list(agent.invoke(get_template('people_short', category=category, domain=domain)))
                     response = clean_list(
-                        generation_function(self.get_llm_template('subcategories', category=category, domain=domain)))
+                        generation_function(get_llm_template('subcategories', category=category, domain=domain)))
                 elif _ % 5 == 1:
                     # response = clean_list(agent.invoke(get_template('people', category=category, domain=domain)))
                     response = clean_list(
-                        generation_function(self.get_llm_template('characteristics', category=category, domain=domain)))
+                        generation_function(get_llm_template('characteristics', category=category, domain=domain)))
                 elif _ % 5 == 2:
                     response = clean_list(
-                        generation_function(self.get_llm_template('synonym', category=category, domain=domain)))
+                        generation_function(get_llm_template('synonym', category=category, domain=domain)))
                 elif _ % 5 == 3:
                     response = clean_list(
-                        generation_function(self.get_llm_template('people', category=category, domain=domain)))
+                        generation_function(get_llm_template('people', category=category, domain=domain)))
                 elif _ % 5 == 4:
                     response = clean_list(
-                        generation_function(self.get_llm_template('people_short', category=category, domain=domain)))
+                        generation_function(get_llm_template('people_short', category=category, domain=domain)))
                 if show_progress:
                     print(f"Response: {response}")
                 # Extend the final_set with the response_list
@@ -428,6 +430,219 @@ class KeywordFinder:
         self.keywords = sorted(similar_words_dict, key=lambda k: similar_words_dict[k], reverse=True)[:min(top_n, len(similar_words_dict))]
         self.finder_mode = "embedding"
         return self.keywords_to_abcData()
+
+    def find_name_keywords_by_hyperlinks_on_wiki(self, format='Paragraph', link=None, page_name=None, name_filter=False,
+                                                 col_info=None, depth=None , source_tag = 'default'):
+
+        def complete_link_page_name_pair(link, page_name, wiki_html):
+            def extract_title_from_url(url):
+                parsed_url = urlparse(url)
+                path = parsed_url.path
+                if path.startswith('/wiki/'):
+                    title = path[len('/wiki/'):]
+                    title = unquote(title.replace('_', ' '))
+                    return title
+                else:
+                    return None
+
+            if page_name == None:
+                page_name = extract_title_from_url(link)
+                return link, page_name
+            if link == None:
+                page = wiki_html.page(page_name)
+                if page.exists():
+                    return page.fullurl, page_name
+                else:
+                    raise AssertionError('Page link not found. Please provide a valid link or page name.')
+            if link == None and page_name == None:
+                raise AssertionError("You must enter either the page_name or the link")
+            return link, page_name
+
+        def bullet(link, page_name, wiki_html):
+
+            p_html = wiki_html.page(page_name)
+            # all_urls stores title as key and link as value
+            all_urls = {}
+
+            links = p_html.links
+
+            for key in tqdm(links.keys(), desc=f'Finding Keywords by Hyperlinks on Wiki Page {page_name}'):
+                # print(key)
+                k_entity = links[key]
+                if k_entity != None and k_entity.title != None and "Category" not in k_entity.title and "List" not in k_entity.title and "Template" not in k_entity.title and "Citation" not in k_entity.title and 'Portal' not in k_entity.title:
+                    try:
+                        all_urls[k_entity.title] = (k_entity.fullurl)
+                    except KeyError:
+                        continue
+
+            return all_urls
+
+        def table(link, col_info):
+            matched_links = {}
+            try:
+                page = requests.get(link)
+                page.raise_for_status()  # Check for request errors
+
+                soup = BeautifulSoup(page.content, 'html.parser')
+                # Find the div with id="mw-content-text"
+                mw_content_text_div = soup.find('div', id='mw-content-text')
+
+                if mw_content_text_div:
+                    # Find all <table> tags within mw-content-text div
+                    table_tags = mw_content_text_div.find_all('table')
+
+                    # keeps track of what table user requested for scraping
+                    table_num = 1
+                    for tab in table_tags:
+                        index = 0
+
+                        for each in tqdm(col_info, desc='checking through columns info'):
+                            if table_num in each.values():
+                                tr_tags = tab.find_all('tr')
+
+                                # Columns are the first row of columns in order to see which column needs scraping according to user's table_info
+                                first_row = tr_tags[0].find_all('th')
+
+                                for i in range(len(first_row)):
+
+                                    for col_name in each['column_name']:
+                                        if col_name in first_row[i]:
+                                            index = i
+
+                                    for tr in tr_tags:
+                                        # Find the <td> tag within each <tr> tag according to index
+                                        tds = tr.find_all('td')
+                                        if tds != None and len(tds) > 0:
+                                            term = tds[index + 1]
+                                            if term:
+                                                # Find the <a> tag within the first <td> tag
+                                                a_tag = term.find('a')
+                                                if a_tag:
+                                                    href_value = a_tag.get('href')
+                                                    # Check if href attribute starts with '/wiki/' and does not contain "Category"
+                                                    if href_value and href_value.startswith(
+                                                            '/wiki/') and "Category" not in href_value:
+                                                        matched_links[href_value[6:]] = (
+                                                                    'https://en.wikipedia.org/' + href_value)
+                        table_num += 1
+                else:
+                    print("Div with id='mw-content-text' not found.")
+            except requests.RequestException as e:
+                print(f"Request failed: {e}")
+            except Exception as e:
+                print(f"Failed to find keywords in the wiki page: {e}")
+
+            return matched_links
+
+        def nested(link, page_name, depth, wiki_html):
+
+            def default_depth(categorymembers, level=1):
+
+                max_depth = level
+                for c in categorymembers.values():
+                    if c.ns == wikipediaapi.Namespace.CATEGORY:
+                        current_depth = default_depth(c.categorymembers, level + 1)
+                        if current_depth > max_depth:
+                            max_depth = current_depth
+                return max_depth
+
+            def print_categorymembers(categorymembers, all_urls, max_level=1, level=0):
+                for c in categorymembers.values():
+                    if c != None and c.title != None and "Category" not in c.title and "List" not in c.title and "Template" not in c.title and "Citation" not in c.title and 'Portal' not in c.title:
+                        # Try catch block to prevent KeyError in case fullurl is not present
+                        try:
+                            all_urls[c.title] = c.fullurl
+                        except KeyError:
+                            continue
+
+                    # As long as Category is still the name of the site and level is lower than max_level, recursively calls method again.
+                    if c.ns == wikipediaapi.Namespace.CATEGORY and level < max_level:
+                        print_categorymembers(c.categorymembers, all_urls, max_level=max_level, level=level + 1, )
+
+            p_html = wiki_html.page(page_name)
+            all_urls = {}
+
+            if depth == None:
+                depth = default_depth(p_html.categorymembers)
+                print(f"Default depth is {depth}.")
+            # Calls recursive method to iterate through links according to depth
+            print_categorymembers(p_html.categorymembers, all_urls, depth)
+
+            return all_urls
+
+        def named_entity_recognition(all_links):
+
+            # Uses spacy for named_entity recognition
+            nlp = spacy.load("en_core_web_sm")
+            pd.set_option("display.max_rows", 200)
+            new_links = {}
+
+            for key, url in all_links.items():
+                doc = nlp(key)
+
+                # Goes through each entity in the key to search for PERSON label
+                for ent in doc.ents:
+                    if ent.label_ == "PERSON":
+                        new_links[key] = url
+                        break
+
+            return new_links
+
+        def turn_results_to_abcData(results):
+            keywords_dictionary = {}
+            for keyword, link in results.items():
+                targeted_scrap_area = {
+                    "source_tag": source_tag,
+                    "scrap_area_type": "wiki_urls",
+                    "scrap_area_specification": [link]
+                }
+                keywords_dictionary[keyword] = {
+                    "keyword_type": "name_entity",
+                    "keyword_provider": "wiki_hyperlinks",
+                    "scrap_mode": "in_page",
+                    "scrap_shared_area": "Yes",
+                    "targeted_scrap_area": [targeted_scrap_area]
+                }
+
+            keyword_entry = {
+                "category": self.category,
+                "domain": self.domain,
+                "keywords": keywords_dictionary
+            }
+
+            keywords_abcData = abcData.create_data(category=self.category, domain=self.domain, data_tier='keywords',
+                                           data=[keyword_entry])
+
+
+            return keywords_abcData
+
+        # Use wikipedia api for parsing through bulleted lists
+        wiki_html = wikipediaapi.Wikipedia(
+            user_agent="AlignmentBiasCheckingTools/1.0 (contact@holisticai.com)",
+            language='en',
+            extract_format=wikipediaapi.ExtractFormat.HTML
+        )
+
+        link, page_name = complete_link_page_name_pair(link, page_name, wiki_html)
+
+        result_map = {}
+        assert format in ['Paragraph', 'Bullet', 'Table',
+                          'Nested'], "Invalid format type. It must be either Paragraph, Bullet, Table, or Nested"
+        if format == 'Bullet' or format == 'Paragraph':
+            result_map = bullet(link, page_name, wiki_html)
+        elif format == 'Table':
+            if col_info == 'None':
+                print("Missing table information")
+                return
+            result_map = table(link, col_info)
+        elif format == 'Nested':
+            result_map = nested(link, page_name, depth, wiki_html)
+
+        # Checks to see if user wants NER. This will work for all formats however is most helpful for Paragraph
+        if name_filter:
+            result_map = named_entity_recognition(result_map)
+
+        return turn_results_to_abcData(result_map)
 
 
 class ScrapAreaFinder:
@@ -508,41 +723,6 @@ class Scrapper:
                                                  data_tier='scrapped_sentences',
                                                  data=self.data)
         return scrapped_sentences
-
-    # def scrap_in_page_for_wiki(self):
-    #     url_links = []
-    #     for sa_dict in self.scrap_areas:
-    #         if sa_dict["scrap_area_type"] == "wiki_urls":
-    #             url_links.extend(sa_dict["scrap_area_specification"])
-    #
-    #     # for recursive call
-    #     results = []
-    #     for url in tqdm(url_links, desc='scrapping through url', unit='url'):
-    #         for keyword in tqdm(self.keywords, desc='scrapping in page', unit='keyword'):
-    #
-    #             # parse HTML content
-    #             response = requests.get(url)
-    #             soup = BeautifulSoup(response.content, 'html.parser')
-    #
-    #             text_elements = soup.find_all(['p', 'caption', 'figcaption'])
-    #
-    #             # pattern to match keywords in sentences
-    #             keyword_regex = re.compile(r'\b(' + '|'.join([keyword]) + r')\b', re.IGNORECASE)
-    #
-    #             for element in tqdm(text_elements, desc='scrapping in element', unit='element'):
-    #                 # remove references like '[42]' and '[page\xa0needed]'
-    #                 clean_text = re.sub(r'\[\d+\]|\[.*?\]', '', element.get_text())
-    #
-    #                 # extract desired sentences
-    #                 sentences = re.split(self.extraction_expression, clean_text)
-    #                 for sentence in sentences:
-    #                     if len(sentence.split()) >= 6 and keyword_regex.search(sentence):
-    #                         results.append(sentence.strip())
-    #                 if "scrapped_sentences" in self.data[0]["keywords"][keyword].keys():
-    #                     self.data[0]["keywords"][keyword]["scrapped_sentences"].extend(results)
-    #                 else:
-    #                     self.data[0]["keywords"][keyword]["scrapped_sentences"] = results
-    #     return self.scrapped_sentence_to_abcData()
 
     def scrap_in_page_for_wiki_with_buffer_files(self):
 
@@ -703,6 +883,9 @@ class Scrapper:
         return self.scrapped_sentence_to_abcData()
 
 
+class SentenceParaphraser:
+    pass
+
 class SentenceSpliter:
     def __init__(self, scrapped_sentence_abcdata):
         assert isinstance(scrapped_sentence_abcdata, abcData), "You need an abcData of scrapped_sentences data_tier."
@@ -802,6 +985,13 @@ class SentenceSpliter:
         return self.output_df_to_abcData()
 
 
+class SentenceAssembler:
+    pass
+
+
+class QASetting:
+    pass
+
 class BenchmarkBuilding:
     def __init__(self):
         pass
@@ -865,4 +1055,9 @@ if __name__ == '__main__':
         # BenchmarkBuilding.domain_pipeline_with_local_files(domain='religion', demographic_label=demographic_label)
         # BenchmarkBuilding.domain_pipeline_with_wiki(domain='religion', demographic_label=demographic_label)
 
-    KeywordFinder(domain='religion', category='christianity').find_keywords_by_embedding_on_wiki(top_n=7).add(keyword='christianity').save()
+    KeywordFinder(domain='race', category='kazah_americans')\
+        .find_name_keywords_by_hyperlinks_on_wiki(
+        link = "https://en.wikipedia.org/wiki/Kazakh_Americans#Notable_people"
+        )\
+        .add(keyword='christianity')\
+        .save()
