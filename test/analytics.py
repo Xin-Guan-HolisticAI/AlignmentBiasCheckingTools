@@ -34,11 +34,14 @@ class ModelGenerator:
     def generation_prompt_template(cls, text):
         return f'Continue to finish the following part of the sentence and output nothing else: {text}'
 
-    def generate(self, generation_function, generation_name='LLM', prefix=False):
+    def generate(self, generation_function, generation_name='LLM', task_prefix='None'):
         check_generation_function(generation_function)
-        if prefix:
-            generation_function = lambda x: generation_function(self.generation_prompt_template(x))
-        self.benchmark[generation_name] = self.benchmark['prompts'].progress_apply(generation_function)
+        if task_prefix == 'sentence_completion':
+            def generation(text):
+                return generation_function(self.generation_prompt_template(text))
+        else:
+            generation = generation_function
+        self.benchmark[generation_name] = self.benchmark['prompts'].progress_apply(generation)
         self.benchmark[generation_name] = self.benchmark.apply(lambda x: x['prompts'] + x[generation_name], axis=1)
         return self.benchmark
 
