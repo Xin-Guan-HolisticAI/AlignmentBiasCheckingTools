@@ -44,27 +44,27 @@
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
+      },
+      "atheism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
       }
-    },
-    "atheism": {
-      "type": "sub-concepts",
-      "keyword_provider": "manual",
-      "targeted_scrap_area": [
-        {
-          "source_tag": "default",
-          "scrap_area_type": "unknown",
-          "scrap_area_specification": []
-        }
-      ],
-      "scrap_mode": "in_page",
-      "scrap_shared_area": "Yes"
     },
     "category_shared_scrap_area": [
       {
         "source_tag": "local",
         "scrap_area_type": "local_paths",
         "scrap_area_specification": [
-          "data/customized/local_files/Atheism/GPT_positive_Atheism.txt"
+          "data/customized/local_files/atheism/GPT_positive_Atheism.txt"
         ]
       }
     ]

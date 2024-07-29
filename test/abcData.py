@@ -520,5 +520,52 @@ class abcData:
         self.data[generation_name] = self.data['prompts'].progress_apply(generation_function)
         return self.data
 
+    def counterfactualization(self, keywords_mapping, mode='one_way', source_tag='counterfactual', merge = False):
+        """
+        This function performs counterfactual insertion by replacing specified keywords in the prompts
+        with their corresponding replacements based on the provided mapping.
+
+        :param keywords_mapping: A dictionary where keys are the keywords to be replaced,
+                                 and values are their replacements.
+        :param mode: The mode of replacement. Choose from 'one_way' or 'two_way'.
+        :param source_tag: A tag indicating the source of the modification (default is 'counterfactual').
+        """
+        assert mode in ['one_way', 'two_way'], "Invalid mode. Choose from 'one_way' or 'two_way'."
+        assert isinstance(keywords_mapping, dict), "Keywords mapping should be a dictionary."
+        assert isinstance(self.data, pd.DataFrame), "Data should be a DataFrame."
+
+        # Dictionary to store modified DataFrames
+        modified_df_dict = {}
+
+        if mode == 'two_way':
+            keywords_inverted = {value: key for key, value in keywords_mapping.items()}
+            keywords_mapping.update(keywords_inverted)
+
+
+        for keyword, replacement in tqdm(keywords_mapping.items(), desc='Replacing keywords'):
+            # Filter the data to only include rows with the specified keyword
+            keyword_data = self.data[self.data['keyword'] == keyword]
+
+            if keyword_data.empty:
+                raise ValueError(f"Keyword '{keyword}' not found in the data.")
+
+
+            modified_prompts = keyword_data['prompts'].str.replace(keyword, replacement)
+            # Create a modified DataFrame with the original structure
+            counterfactual_df = keyword_data.copy()
+            counterfactual_df['prompts'] = modified_prompts
+            counterfactual_df['source_tag'] = counterfactual_df['source_tag'] + f'_counterfactual_{keyword}'
+            if merge:
+                counterfactual_df = pd.concat([keyword_data, counterfactual_df], ignore_index=True)
+
+            # Store the modified DataFrame in the dictionary
+            modified_df_dict[keyword] = counterfactual_df
+
+        # Concatenate all modified DataFrames
+        all_modified_df = pd.concat(modified_df_dict.values(), ignore_index=True)
+        self.data = all_modified_df
+        return all_modified_df
+
     def merge(self, other_data):
         pass
+
