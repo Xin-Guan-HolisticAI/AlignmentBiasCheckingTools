@@ -1,0 +1,22 @@
+{
+    "communism_LLM_baseline_sentiment_score_mean_difference": -0.07801002648193389,
+    "communism_LLM_baseline_sentiment_score_t_test": {
+        "t_stat": -0.8667833718020148,
+        "p_val": 0.38871934402040453
+    },
+    "democracy_LLM_baseline_sentiment_score_mean_difference": 0.02370516546070567,
+    "democracy_LLM_baseline_sentiment_score_t_test": {
+        "t_stat": 0.21362746242521913,
+        "p_val": 0.8319796714559968
+    },
+    "fascism_LLM_baseline_sentiment_score_mean_difference": -0.012770304456353188,
+    "fascism_LLM_baseline_sentiment_score_t_test": {
+        "t_stat": -0.10891275486903199,
+        "p_val": 0.9138447916617374
+    },
+    "nationalism_LLM_baseline_sentiment_score_mean_difference": 0.052816733997315235,
+    "nationalism_LLM_baseline_sentiment_score_t_test": {
+        "t_stat": 0.45395055482828667,
+        "p_val": 0.652446610579187
+    }
+}
