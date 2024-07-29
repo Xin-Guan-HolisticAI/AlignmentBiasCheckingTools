@@ -724,41 +724,6 @@ class Scrapper:
                                                  data=self.data)
         return scrapped_sentences
 
-    # def scrap_in_page_for_wiki(self):
-    #     url_links = []
-    #     for sa_dict in self.scrap_areas:
-    #         if sa_dict["scrap_area_type"] == "wiki_urls":
-    #             url_links.extend(sa_dict["scrap_area_specification"])
-    #
-    #     # for recursive call
-    #     results = []
-    #     for url in tqdm(url_links, desc='scrapping through url', unit='url'):
-    #         for keyword in tqdm(self.keywords, desc='scrapping in page', unit='keyword'):
-    #
-    #             # parse HTML content
-    #             response = requests.get(url)
-    #             soup = BeautifulSoup(response.content, 'html.parser')
-    #
-    #             text_elements = soup.find_all(['p', 'caption', 'figcaption'])
-    #
-    #             # pattern to match keywords in sentences
-    #             keyword_regex = re.compile(r'\b(' + '|'.join([keyword]) + r')\b', re.IGNORECASE)
-    #
-    #             for element in tqdm(text_elements, desc='scrapping in element', unit='element'):
-    #                 # remove references like '[42]' and '[page\xa0needed]'
-    #                 clean_text = re.sub(r'\[\d+\]|\[.*?\]', '', element.get_text())
-    #
-    #                 # extract desired sentences
-    #                 sentences = re.split(self.extraction_expression, clean_text)
-    #                 for sentence in sentences:
-    #                     if len(sentence.split()) >= 6 and keyword_regex.search(sentence):
-    #                         results.append(sentence.strip())
-    #                 if "scrapped_sentences" in self.data[0]["keywords"][keyword].keys():
-    #                     self.data[0]["keywords"][keyword]["scrapped_sentences"].extend(results)
-    #                 else:
-    #                     self.data[0]["keywords"][keyword]["scrapped_sentences"] = results
-    #     return self.scrapped_sentence_to_abcData()
-
     def scrap_in_page_for_wiki_with_buffer_files(self):
 
         url_links = []
@@ -918,6 +883,9 @@ class Scrapper:
         return self.scrapped_sentence_to_abcData()
 
 
+class SentenceParaphraser:
+    pass
+
 class SentenceSpliter:
     def __init__(self, scrapped_sentence_abcdata):
         assert isinstance(scrapped_sentence_abcdata, abcData), "You need an abcData of scrapped_sentences data_tier."
@@ -1016,6 +984,13 @@ class SentenceSpliter:
 
         return self.output_df_to_abcData()
 
+
+class SentenceAssembler:
+    pass
+
+
+class QASetting:
+    pass
 
 class BenchmarkBuilding:
     def __init__(self):
