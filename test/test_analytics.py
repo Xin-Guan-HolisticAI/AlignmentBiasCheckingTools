@@ -4,6 +4,7 @@ import pandas as pd
 from abcData import abcData
 from assistants import OllamaModel
 
+#example of how to use unitest to test the model generation function
 class TestModelGeneration(unittest.TestCase):
 
     @classmethod
