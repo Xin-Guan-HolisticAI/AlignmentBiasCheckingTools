@@ -9,6 +9,7 @@ tqdm.pandas()
 
 
 class abcData:
+
     tier_order = {value: index for index, value in
                   enumerate(['keywords', 'scrap_area', 'scrapped_sentences', 'split_sentences'])}
 
@@ -505,10 +506,12 @@ class abcData:
             df = self.data
             # print(df['keywords_containment'] == True)
             df = df[df['keywords_containment'] == True]
+            df = df.copy()  # Make a copy to avoid the SettingWithCopyWarning
             df.drop(['keywords_containment'], axis=1, inplace=True)
             # print(df)
             self.data = df
 
+        assert sample <= len(self.data), f"Sample size should be less than or equal to the data size {len(self.data)}."
         sample_data = self.data.sample(n=sample, random_state=seed)
         self.data = sample_data
         return sample_data
@@ -576,6 +579,4 @@ class abcData:
         self.data = all_modified_df
         return all_modified_df
 
-    def merge(self, other_data):
-        pass
 
