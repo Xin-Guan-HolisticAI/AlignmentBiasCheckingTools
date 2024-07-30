@@ -19,7 +19,9 @@ from tqdm import tqdm
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk import download
+
 from urllib.parse import urlparse, unquote
+
 
 
 # Ensure required NLTK resources are downloaded
@@ -254,71 +256,70 @@ class KeywordFinder:
 
             return keywords_abcData
 
+    def get_llm_template(self, template_type, **kwargs):
+        category = kwargs.get('category')
+        domain = kwargs.get('domain')
+
+        if category and domain:
+            template_people = f"""
+            Given {category} under the topic {domain}, \
+            provide a list of famous names that are representative to the {category}.
+            Output your answer in a python list format only and nothing else.
+            """
+
+            template_people_short = f"""
+            Given {category} under the topic {domain}, \
+            provide a list of famous names that are representative to {category}.
+            These names can be short family names for which they are identified within the context.
+            Output your answer in a python list format only and nothing else.
+            """
+
+            template_characteristics = f"""
+            Given the {category} under the topic {domain}, \
+            provide a list of characteristics that are necessary (!!!) to {category}.
+            Output your answer in a python list format only and nothing else.
+            """
+
+            template_subcategories = f"""
+            Given the {category} under the topic {domain}, \
+            provide a list of sub-categories of {category}.
+            Output your answer in a python list format only and nothing else.
+            """
+
+            template_syn = f"""
+            Given the {category} under the topic {domain}, \
+            provide a list of synonyms of {category}.
+            Output your answer in a python list format only and nothing else.
+            """
+
+            template_root = f"""
+            Given the {category} under the topic {domain}, \
+            provide a list of words that share the same grammatical roots with {category}.
+            Output your answer in a python list format only and nothing else.
+            """
+
+            if template_type == 'people':
+                return template_people
+            elif template_type == 'people_short':
+                return template_people_short
+            elif template_type == 'characteristics':
+                return template_characteristics
+            elif template_type == 'subcategories':
+                return template_subcategories
+            elif template_type == 'synonym':
+                return template_syn
+            elif template_type == 'root':
+                return template_root
+
+        print('Template type not found')
+        return None
+
     def find_keywords_by_llm(self, n_run=20,
                              n_keywords=20,
                              generation_function=None,
                              model_name=None,
                              embedding_model=None,
                              show_progress=True):
-
-        def get_llm_template(template_type, **kwargs):
-            category = kwargs.get('category')
-            domain = kwargs.get('domain')
-
-            if category and domain:
-                template_people = f"""
-                Given {category} under the topic {domain}, \
-                provide a list of famous names that are representative to the {category}.
-                Output your answer in a python list format only and nothing else.
-                """
-
-                template_people_short = f"""
-                Given {category} under the topic {domain}, \
-                provide a list of famous names that are representative to {category}.
-                These names can be short family names for which they are identified within the context.
-                Output your answer in a python list format only and nothing else.
-                """
-
-                template_characteristics = f"""
-                Given the {category} under the topic {domain}, \
-                provide a list of characteristics that are necessary (!!!) to {category}.
-                Output your answer in a python list format only and nothing else.
-                """
-
-                template_subcategories = f"""
-                Given the {category} under the topic {domain}, \
-                provide a list of sub-categories of {category}.
-                Output your answer in a python list format only and nothing else.
-                """
-
-                template_syn = f"""
-                Given the {category} under the topic {domain}, \
-                provide a list of synonyms of {category}.
-                Output your answer in a python list format only and nothing else.
-                """
-
-                template_root = f"""
-                Given the {category} under the topic {domain}, \
-                provide a list of words that share the same grammatical roots with {category}.
-                Output your answer in a python list format only and nothing else.
-                """
-
-                if template_type == 'people':
-                    return template_people
-                elif template_type == 'people_short':
-                    return template_people_short
-                elif template_type == 'characteristics':
-                    return template_characteristics
-                elif template_type == 'subcategories':
-                    return template_subcategories
-                elif template_type == 'synonym':
-                    return template_syn
-                elif template_type == 'root':
-                    return template_root
-
-            print('Template type not found')
-            return None
-
         category = self.category
         domain = self.domain
         if model_name:
@@ -333,25 +334,25 @@ class KeywordFinder:
             try:
                 if _ == 0 or _ == 1:
                     response = clean_list(
-                        generation_function(get_llm_template('root', category=category, domain=domain)))
+                        generation_function(self.get_llm_template('root', category=category, domain=domain)))
                     final_set.update(response)
                 if _ % 5 == 0:
                     # response = clean_list(agent.invoke(get_template('people_short', category=category, domain=domain)))
                     response = clean_list(
-                        generation_function(get_llm_template('subcategories', category=category, domain=domain)))
+                        generation_function(self.get_llm_template('subcategories', category=category, domain=domain)))
                 elif _ % 5 == 1:
                     # response = clean_list(agent.invoke(get_template('people', category=category, domain=domain)))
                     response = clean_list(
-                        generation_function(get_llm_template('characteristics', category=category, domain=domain)))
+                        generation_function(self.get_llm_template('characteristics', category=category, domain=domain)))
                 elif _ % 5 == 2:
                     response = clean_list(
-                        generation_function(get_llm_template('synonym', category=category, domain=domain)))
+                        generation_function(self.get_llm_template('synonym', category=category, domain=domain)))
                 elif _ % 5 == 3:
                     response = clean_list(
-                        generation_function(get_llm_template('people', category=category, domain=domain)))
+                        generation_function(self.get_llm_template('people', category=category, domain=domain)))
                 elif _ % 5 == 4:
                     response = clean_list(
-                        generation_function(get_llm_template('people_short', category=category, domain=domain)))
+                        generation_function(self.get_llm_template('people_short', category=category, domain=domain)))
                 if show_progress:
                     print(f"Response: {response}")
                 # Extend the final_set with the response_list
@@ -430,7 +431,7 @@ class KeywordFinder:
         self.keywords = sorted(similar_words_dict, key=lambda k: similar_words_dict[k], reverse=True)[:min(top_n, len(similar_words_dict))]
         self.finder_mode = "embedding"
         return self.keywords_to_abcData()
-
+    
     def find_name_keywords_by_hyperlinks_on_wiki(self, format='Paragraph', link=None, page_name=None, name_filter=False,
                                                  col_info=None, depth=None , source_tag = 'default'):
 
@@ -458,7 +459,7 @@ class KeywordFinder:
                 raise AssertionError("You must enter either the page_name or the link")
             return link, page_name
 
-        def bullet(link, page_name, wiki_html):
+        def bullet(page_name, wiki_html):
 
             p_html = wiki_html.page(page_name)
             # all_urls stores title as key and link as value
@@ -505,6 +506,9 @@ class KeywordFinder:
 
                                 for i in range(len(first_row)):
 
+                                    print(each['column_name'])
+                                    print(first_row)
+
                                     for col_name in each['column_name']:
                                         if col_name in first_row[i]:
                                             index = i
@@ -534,12 +538,12 @@ class KeywordFinder:
 
             return matched_links
 
-        def nested(link, page_name, depth, wiki_html):
+        def nested(page_name, depth):
 
             def default_depth(categorymembers, level=1):
 
                 max_depth = level
-                for c in categorymembers.values():
+                for c in tqdm(categorymembers.values(), desc = "Calculating depth", unit = "category", total= len(categorymembers)):
                     if c.ns == wikipediaapi.Namespace.CATEGORY:
                         current_depth = default_depth(c.categorymembers, level + 1)
                         if current_depth > max_depth:
@@ -547,7 +551,7 @@ class KeywordFinder:
                 return max_depth
 
             def print_categorymembers(categorymembers, all_urls, max_level=1, level=0):
-                for c in categorymembers.values():
+                for c in tqdm(categorymembers.values(), desc = "Processing categories", unit = "category", total=len(categorymembers)):
                     if c != None and c.title != None and "Category" not in c.title and "List" not in c.title and "Template" not in c.title and "Citation" not in c.title and 'Portal' not in c.title:
                         # Try catch block to prevent KeyError in case fullurl is not present
                         try:
@@ -577,7 +581,7 @@ class KeywordFinder:
             pd.set_option("display.max_rows", 200)
             new_links = {}
 
-            for key, url in all_links.items():
+            for key, url in tqdm(all_links.items(), desc="Processing Links", unit="link", total=len(all_links)):
                 doc = nlp(key)
 
                 # Goes through each entity in the key to search for PERSON label
@@ -629,20 +633,21 @@ class KeywordFinder:
         assert format in ['Paragraph', 'Bullet', 'Table',
                           'Nested'], "Invalid format type. It must be either Paragraph, Bullet, Table, or Nested"
         if format == 'Bullet' or format == 'Paragraph':
-            result_map = bullet(link, page_name, wiki_html)
+            result_map = bullet(page_name, wiki_html)
         elif format == 'Table':
             if col_info == 'None':
                 print("Missing table information")
                 return
             result_map = table(link, col_info)
         elif format == 'Nested':
-            result_map = nested(link, page_name, depth, wiki_html)
+            result_map = nested(page_name, depth)
 
         # Checks to see if user wants NER. This will work for all formats however is most helpful for Paragraph
         if name_filter:
             result_map = named_entity_recognition(result_map)
 
         return turn_results_to_abcData(result_map)
+
 
 
 class ScrapAreaFinder:
@@ -723,7 +728,7 @@ class Scrapper:
                                                  data_tier='scrapped_sentences',
                                                  data=self.data)
         return scrapped_sentences
-
+    
     def scrap_in_page_for_wiki_with_buffer_files(self):
 
         url_links = []
@@ -882,7 +887,6 @@ class Scrapper:
                 self.data[0]["keywords"][keyword]["scrapped_sentences"] = aggregated_results_with_source_tag
         return self.scrapped_sentence_to_abcData()
 
-
 class SentenceParaphraser:
     pass
 
@@ -984,7 +988,6 @@ class SentenceSpliter:
 
         return self.output_df_to_abcData()
 
-
 class SentenceAssembler:
     pass
 
@@ -1055,9 +1058,8 @@ if __name__ == '__main__':
         # BenchmarkBuilding.domain_pipeline_with_local_files(domain='religion', demographic_label=demographic_label)
         # BenchmarkBuilding.domain_pipeline_with_wiki(domain='religion', demographic_label=demographic_label)
 
-    KeywordFinder(domain='race', category='kazah_americans')\
-        .find_name_keywords_by_hyperlinks_on_wiki(
-        link = "https://en.wikipedia.org/wiki/Kazakh_Americans#Notable_people"
-        )\
-        .add(keyword='christianity')\
-        .save()
+   KeywordFinder('communism', 'politics').find_name_keywords_by_hyperlinks_on_wiki(
+    format = 'Nested',
+    page_name='Category:Women in computing',
+    depth=1)
+

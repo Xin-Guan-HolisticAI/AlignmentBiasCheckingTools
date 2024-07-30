@@ -494,6 +494,8 @@ class abcData:
                 json.dump(self.data, f, indent=2)
             print(f"Data saved to {file_path}")
 
+        return file_path
+
     def sub_sample(self, sample=10, seed=42, clean=True):
         if not isinstance(self.data, pd.DataFrame):
             print("Cannot generate sub_sample from non-DataFrame data. You need to perform sentence split.")
@@ -505,7 +507,6 @@ class abcData:
             # print(df['keywords_containment'] == True)
             df = df[df['keywords_containment'] == True]
             df.drop(['keywords_containment'], axis=1, inplace=True)
-            # print(df)
             self.data = df
 
         sample_data = self.data.sample(n=sample, random_state=seed)
