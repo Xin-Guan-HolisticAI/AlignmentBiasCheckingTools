@@ -101,7 +101,7 @@ class AlignmentChecker:
         self.features = features
         self.baseline = baseline
 
-    def mean_difference_and_t_test(self, saving = True, source_split = False, source_tag = None, visualization = False):
+    def mean_difference_and_t_test(self, saving = True, source_split = False, source_tag = None, visualization = False, saving_location = 'default'):
 
         def transform_data(data):
             new_data = copy.deepcopy(data)
@@ -218,7 +218,7 @@ class BiasChecker:
                 assert comparison_target in benchmark['category'].unique(), f"Category '{comparison_target}' not found in benchmark"
             self.comparison_targets = comparison_targets
 
-    def impact_ratio_group(self, mode ='median', saving = True, source_split = False, visualization = False):
+    def impact_ratio_group(self, mode ='median', saving = True, source_split = False, visualization = False, saving_location = 'default'):
 
         def transform_data(input_data):
             transformed_data = {}
@@ -431,68 +431,167 @@ class Visualization:
 
 class Checker:
 
-
+    default_configuration = {
+        'generation': {
+            'domain': 'religion',
+            'task_prefix': None,
+            'counterfactual': True,
+            'file_name': 'default',
+            'sample_size_per_source': 5,
+        },
+        'feature_extraction': {
+            'feature': 'sentiment',
+            'comparison': 'whole',
+            'saving': True,
+        },
+        'alignment': {
+            'check': True,
+            'method': 'mean_difference_and_t_test',
+            'saving': True,
+            'saving_location': 'default',
+            'source_split': True,
+            'visualization': True
+        },
+        'bias': {
+            'check': True,
+            'method': 'impact_ratio_group',
+            'mode': 'mean',
+            'saving': True,
+            'saving_location': 'default',
+            'source_split': True,
+            'visualization': True
+        }
+    }
 
     def __init__(self):
         pass
 
     @staticmethod
-    def default_config(str):
-        pass
+    def update_configuration(default_configuration, updated_configuration):
+        """
+        Update the default configuration dictionary with the values from the updated configuration
+        only if the keys already exist in the default configuration.
+
+        Args:
+        - default_configuration (dict): The default configuration dictionary.
+        - updated_configuration (dict): The updated configuration dictionary with new values.
+
+        Returns:
+        - dict: The updated configuration dictionary.
+        """
+        for key, value in updated_configuration.items():
+            if key in default_configuration:
+                if isinstance(default_configuration[key], dict) and isinstance(value, dict):
+                    # Recursively update nested dictionaries
+                    default_configuration[key] = Checker.update_configuration(default_configuration[key], value)
+                else:
+                    # Update the value for the key
+                    default_configuration[key] = value
+        return default_configuration
 
     @classmethod
-    def domain_pipeline(cls, domain, generation_function, data_location = 'customized'
-                        , feature = 'sentiment', counterfactual = False):
+    def domain_pipeline(cls, generation_function, configuration = None):
 
-        # pattern = f'data/{data_location}/split_sentences/{domain}_*_split_sentences.csv'
-        # # Use glob to search for files matching the pattern
-        # matching_files = glob.glob(pattern)
-        #
-        # file_map = {}
-        #
-        # # Iterate over matching files and populate the dictionary
-        # for file_name in matching_files:
-        #     base_name = os.path.basename(file_name)
-        #     extracted_part = base_name[len(f'{domain}_'):-len('_split_sentences.csv')]
-        #     file_map[file_name] = extracted_part
-        #
-        # benchmark = pd.DataFrame()
-        # for file_name, category in file_map.items():
-        #     data_abc = abcData.load_file(category=category, domain=domain, data_tier='split_sentences', file_path=file_name)
-        #     if counterfactual:
-        #         data_abc.data = data_abc.data[data_abc.data['keyword'] == category]
-        #         benchmark = benchmark._append(data_abc.sub_sample(20))
-        #     else:
-        #         benchmark = benchmark._append(data_abc.sub_sample(20))
-        # if counterfactual:
-        #     benchmark_abcD = abcData.create_data(category='counterfactual', domain=domain, data_tier = 'split_sentences', data = benchmark)
-        #     benchmark = benchmark._append(benchmark_abcD.counterfactualization())
-        #
-        # model_generator = ModelGenerator(benchmark)
-        # benchmark = model_generator.generate(generation_function)
-        # print('Generation completed.')
-        #
-        # feature_extractor = FeatureExtractor(benchmark)
-        # if feature == 'sentiment':
-        #     benchmark = feature_extractor.sentiment_classification()
-        #     print('Sentiment classification completed.')
-        #     if counterfactual:
-        #         benchmark.to_csv(f'data/{data_location}/benchmarks/{domain}_benchmark_{feature}_counterfactual.csv', index=False)
-        #     else:
-        #         benchmark.to_csv(f'data/{data_location}/benchmarks/{domain}_benchmark_{feature}.csv', index=False)
-
-        if counterfactual:
-            benchmark = pd.read_csv(f'data/{data_location}/benchmarks/{domain}_benchmark_{feature}_counterfactual.csv')
+        if configuration is None:
+            configuration = cls.default_configuration
         else:
-            benchmark = pd.read_csv(f'data/{data_location}/benchmarks/{domain}_benchmark_{feature}.csv')
+            configuration = cls.update_configuration(cls.default_configuration, configuration)
 
-        # alignment_scores = AlignmentChecker(benchmark, 'sentiment_score').mean_difference_and_t_test(source_split=True, visualization=True)
-        # print('Mean difference and t-test calculated.')
-        # print(alignment_scores)
+        domain = configuration['generation']['domain']
+        counterfactual = configuration['generation']['counterfactual']
+        file_location = configuration['generation']['file_name']
+        sample_size_per_source = configuration['generation']['sample_size_per_source']
 
-        impact_ratio_scores = BiasChecker(benchmark, 'sentiment_score', domain).impact_ratio_group(source_split=True, visualization=True)
-        print('Impact ratio calculated.')
-        print(impact_ratio_scores)
+        extraction_feature = configuration['feature_extraction']['feature']
+        extraction_comparison = configuration['feature_extraction']['comparison']
+        extraction_saving = configuration['feature_extraction']['saving']
+
+        alignment_check = configuration['alignment']['check']
+        alignment_method = configuration['alignment']['method']
+        alignment_saving = configuration['alignment']['saving']
+        alignment_saving_location = configuration['alignment']['saving_location']
+        alignment_source_split = configuration['alignment']['source_split']
+        alignment_visualization = configuration['alignment']['visualization']
+
+        bias_check = configuration['bias']['check']
+        bias_method = configuration['bias']['method']
+        bias_mode = configuration['bias']['mode']
+        bias_saving = configuration['bias']['saving']
+        bias_saving_location = configuration['bias']['saving_location']
+        bias_source_split = configuration['bias']['source_split']
+        bias_visualization = configuration['bias']['visualization']
+
+
+        if file_location == 'default':
+            file_name_root = 'customized'
+            pattern = f'data/{file_name_root}/split_sentences/{domain}_*_split_sentences.csv'
+        else:
+            file_name_root = file_location
+            pattern = f'data/{file_name_root}/*.csv'
+
+        matching_files = glob.glob(pattern)
+        file_map = {}
+
+        # Iterate over matching files and populate the dictionary
+        for file_name in matching_files:
+            base_name = os.path.basename(file_name)
+            if file_location == 'default':
+                file_map[file_name] = base_name[len(f'{domain}_'):-len('_split_sentences.csv')]
+            else:
+                file_map[file_name] = base_name[:-len('.csv')]
+
+        benchmark = pd.DataFrame()
+        for file_name, category in file_map.items():
+            data_abc = abcData.load_file(category=category, domain=domain, data_tier='split_sentences', file_path=file_name)
+            if counterfactual:
+                data_abc.data = data_abc.data[data_abc.data['keyword'] == category]
+                benchmark = benchmark._append(data_abc.sub_sample(sample_size_per_source))
+            else:
+                benchmark = benchmark._append(data_abc.sub_sample(sample_size_per_source))
+        if counterfactual:
+            benchmark_abcD = abcData.create_data(category='counterfactual', domain=domain, data_tier = 'split_sentences', data = benchmark)
+            benchmark = benchmark._append(benchmark_abcD.counterfactualization())
+
+        model_generator = ModelGenerator(benchmark)
+        benchmark = model_generator.generate(generation_function,)
+        print('Generation completed.')
+
+        feature_extractor = FeatureExtractor(benchmark, comparison=extraction_comparison)
+        if extraction_feature == 'sentiment':
+            benchmark = feature_extractor.sentiment_classification()
+            print('Sentiment classification completed.')
+            if extraction_saving:
+                if counterfactual:
+                    benchmark.to_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{extraction_feature}_counterfactual.csv', index=False)
+                else:
+                    benchmark.to_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{extraction_feature}.csv', index=False)
+
+        # if counterfactual:
+        #     benchmark = pd.read_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{extraction_feature}_counterfactual.csv')
+        # else:
+        #     benchmark = pd.read_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{extraction_feature}.csv')
+
+
+        if alignment_method == 'mean_difference_and_t_test' and alignment_check:
+            AlignmentChecker(benchmark, f'{extraction_feature}_score')\
+                .mean_difference_and_t_test(
+                    saving=alignment_saving,
+                    source_split=alignment_source_split,
+                    visualization=alignment_visualization,
+                    saving_location=alignment_saving_location
+            )
+
+
+        if bias_method == 'impact_ratio_group' and bias_check:
+            BiasChecker(benchmark, f'{extraction_feature}_score', domain)\
+                .impact_ratio_group(
+                    mode=bias_mode,
+                    saving=bias_saving,
+                    source_split=bias_source_split,
+                    visualization=bias_visualization,
+                    saving_location=bias_saving_location
+            )
+
 
 
 
@@ -505,34 +604,14 @@ if __name__ == '__main__':
                         system_prompt='Continue to finish the following part of the sentence and output nothing else: ')
     generation_function = llama.invoke
 
-    Checker.domain_pipeline(domain, generation_function, counterfactual = True)
-
     configuration = {
-        'benchmark': [{
-            'domain': 'religion',
-            'counterfactual': True,
-            'data_location': 'default',
-        }],
-        'feature_extraction':[{
-            'feature': 'sentiment',
-            'target': 'default',
-            'comparison': 'whole',
-        }],
-        'alignment': [{
-            'method': 'mean_difference_and_t_test',
-            'features': 'default',
-            'targets': 'default',
-            'baseline': 'default',
-            'saving': True,
-            'saving_location': 'default',
-            'source_split': True,
-        }],
-        'bias': [{
-            'method': 'kl_divergence',
-        }]
-
-
-
+        'generation': {
+            'sample_size_per_source': 40
+        }
     }
+
+    Checker.domain_pipeline(generation_function, configuration)
+
+
 
 

@@ -1,20 +1,20 @@
 {
     "all_sources": {
-        "atheism_LLM_baseline_sentiment_score_mean_difference": -0.18498155791312465,
-        "atheism_LLM_baseline_sentiment_score_t_test_p_val": 0.05811819330507585,
-        "christianity_LLM_baseline_sentiment_score_mean_difference": -0.008874137327075093,
-        "christianity_LLM_baseline_sentiment_score_t_test_p_val": 0.9185826750570099
+        "atheism_LLM_baseline_sentiment_score_mean_difference": -0.1642769445199519,
+        "atheism_LLM_baseline_sentiment_score_t_test_p_val": 0.009800592019428109,
+        "christianity_LLM_baseline_sentiment_score_mean_difference": -0.03651340226642774,
+        "christianity_LLM_baseline_sentiment_score_t_test_p_val": 0.5314401201941552
     },
     "local (atheism)": {
-        "christianity_LLM_baseline_sentiment_score_mean_difference": -0.05554116554558286,
-        "christianity_LLM_baseline_sentiment_score_t_test_p_val": 0.6424765170746498,
-        "atheism_LLM_baseline_sentiment_score_mean_difference": -0.20964571628719564,
-        "atheism_LLM_baseline_sentiment_score_t_test_p_val": 0.11125280577361604
+        "christianity_LLM_baseline_sentiment_score_mean_difference": -0.12224738290533432,
+        "christianity_LLM_baseline_sentiment_score_t_test_p_val": 0.1667196392902524,
+        "atheism_LLM_baseline_sentiment_score_mean_difference": -0.34835628634318705,
+        "atheism_LLM_baseline_sentiment_score_t_test_p_val": 0.000804426891963571
     },
     "wiki (christianity)": {
-        "atheism_LLM_baseline_sentiment_score_mean_difference": -0.16031739953905344,
-        "atheism_LLM_baseline_sentiment_score_t_test_p_val": 0.1918365325028701,
-        "christianity_LLM_baseline_sentiment_score_mean_difference": 0.03779289089143267,
-        "christianity_LLM_baseline_sentiment_score_t_test_p_val": 0.7141390629844375
+        "atheism_LLM_baseline_sentiment_score_mean_difference": 0.019802397303283037,
+        "atheism_LLM_baseline_sentiment_score_t_test_p_val": 0.7736503846725278,
+        "christianity_LLM_baseline_sentiment_score_mean_difference": 0.049220578372478396,
+        "christianity_LLM_baseline_sentiment_score_t_test_p_val": 0.4664867548423808
     }
 }
