@@ -5,7 +5,6 @@ from tqdm import tqdm
 from transformers import pipeline
 import json
 
-tqdm.pandas()
 
 from scipy.stats import entropy
 import numpy as np
@@ -16,7 +15,11 @@ from scipy.stats import ttest_ind
 
 import plotly.graph_objects as go
 import plotly.io as pio
+from plotly.subplots import make_subplots
+import copy
+import re
 
+tqdm.pandas()
 
 def check_benchmark(df):
     # Assert that the DataFrame contains the required columns
@@ -98,53 +101,87 @@ class AlignmentChecker:
         self.features = features
         self.baseline = baseline
 
-    def kl_divergence(self, smooth=False, epsilon=1e-12):
-        df = self.benchmark
+    def mean_difference_and_t_test(self, saving = True, source_split = False, source_tag = None, visualization = False):
+
+        def transform_data(data):
+            new_data = copy.deepcopy(data)
+            keys_to_modify = [key for key in data.keys() if 'counterfactual' in key]
+            sources_to_remove = set()
+
+            for key in keys_to_modify:
+                # Extract the original source name and the subject
+                match = re.match(r'(.+)_counterfactual_(.+)', key)
+                if match:
+                    source = match.group(1)
+                    subject = match.group(2)
+                    new_key = f"{source} ({subject})"
+
+                    if source in data:
+                        sources_to_remove.add(source)
+                        # Merge data from the original source
+                        new_data[new_key] = {
+                            **new_data.pop(key),
+                            f"{subject}_LLM_baseline_sentiment_score_mean_difference": data[source].get(
+                                f"{subject}_LLM_baseline_sentiment_score_mean_difference"),
+                            f"{subject}_LLM_baseline_sentiment_score_t_test_p_val": data[source].get(
+                                f"{subject}_LLM_baseline_sentiment_score_t_test_p_val")
+                        }
+
+            # Remove the original sources dynamically
+            for source in sources_to_remove:
+                new_data.pop(source, None)
+
+            return new_data
+
+        df = self.benchmark.copy()
         result = {}
-        for target in self.targets:
-            for feature in self.features:
-                # Extract the distributions
-                p = np.array(df[f'{target}_{feature}'])
-                q = np.array(df[f'{self.baseline}_{feature}'])
 
-                if smooth:
-                    # Apply smoothing
-                    p_smooth = p + epsilon
-                    q_smooth = q + epsilon
+        if source_split:
+            result_whole = self.mean_difference_and_t_test(saving = False,
+                                                                source_split = False,
+                                                                source_tag = None)
+            result.update(result_whole)
+            for source in df['source_tag'].unique():
+                df_source = df[df['source_tag'] == source]
+                self.benchmark = df_source
+                result_source = self.mean_difference_and_t_test(saving = False,
+                                                                source_split = False,
+                                                                source_tag = source)
+                result.update(result_source)
+            self.benchmark = df.copy()
 
-                    # Calculate KL divergence with smoothed distributions
-                    kl_div = entropy(p_smooth, q_smooth)
-                    result[f'{target}_{self.baseline}_{feature}_kl_divergence'] = kl_div
-                    continue
+        else:
 
-                kl_div = entropy(p, q)
-                result[f'{target}_{self.baseline}_{feature}_kl_divergence'] = kl_div
-        return result
+            for target in self.targets:
+                for feature in self.features:
+                    for category in df['category'].unique():
+                        df_category = df[df['category'] == category]
+                        # Extract the distributions
+                        p = np.array(df_category[f'{target}_{feature}'])
+                        q = np.array(df_category[f'{self.baseline}_{feature}'])
 
-    def mean_difference_and_t_test(self, saving = True):
-        df = self.benchmark
-        result = {}
-        for target in self.targets:
-            for feature in self.features:
-                for category in df['category'].unique():
-                    df_category = df[df['category'] == category]
-                    # Extract the distributions
-                    p = np.array(df_category[f'{target}_{feature}'])
-                    q = np.array(df_category[f'{self.baseline}_{feature}'])
+                        # Calculate the mean difference
+                        mean_diff = np.mean(p) - np.mean(q)
+                        result[f'{category}_{target}_{self.baseline}_{feature}_mean_difference'] = mean_diff
 
-                    # Calculate the mean difference
-                    mean_diff = np.mean(p) - np.mean(q)
-                    result[f'{category}_{target}_{self.baseline}_{feature}_mean_difference'] = mean_diff
+                        # Perform a t-test
+                        t_stat, p_val = ttest_ind(p, q)
+                        result[f'{category}_{target}_{self.baseline}_{feature}_t_test_p_val'] = p_val
 
-                    # Perform a t-test
-                    t_stat, p_val = ttest_ind(p, q)
-                    result[f'{category}_{target}_{self.baseline}_{feature}_t_test'] = {
-                        't_stat': t_stat,
-                        'p_val': p_val
-                    }
+
+        if source_tag is None:
+            source_tag = 'all_sources'
+        if not source_split:
+            result = {source_tag: result}
+
         if saving:
+            result = transform_data(result)
             domain_specification = "-".join(df['domain'].unique())
             open(f'data/customized/abc_results/mean_difference_and_t_test_{domain_specification}.json', 'w', encoding='utf-8').write(json.dumps(result, indent=4))
+
+        if visualization:
+            Visualization.visualize_mean_difference_t_test(result)
+
         return result
 
 
@@ -181,50 +218,39 @@ class BiasChecker:
                 assert comparison_target in benchmark['category'].unique(), f"Category '{comparison_target}' not found in benchmark"
             self.comparison_targets = comparison_targets
 
-    def impact_ratio_pairwise(self, mode ='mean', saving = True):
-        df = self.benchmark
-        result = {}
-        category_pairs = list(combinations(self.comparison_targets, 2))
-        for cat1, cat2 in category_pairs:
-            for target in self.targets:
-                for feature in self.features:
-                    # Extract the distributions
-                    p = np.array(df[df['category'] == cat1][f'{target}_{feature}'])
-                    q = np.array(df[df['category'] == cat2][f'{target}_{feature}'])
-                    if mode == 'mean':
-                        overall_mean = np.mean(np.concatenate((p, q)))
-                        p_sr = np.sum(p > overall_mean) / p.size
-                        q_sr = np.sum(q > overall_mean) / q.size
-                    if mode == 'median':
-                        overall_median = np.median(np.concatenate((p, q)))
-                        p_sr = np.sum(p > overall_median) / p.size
-                        q_sr = np.sum(q > overall_median) / q.size
-                    else:
-                        print('No such mode available. Please use "mean" or "median" mode.')
-                        return
+    def impact_ratio_group(self, mode ='median', saving = True, source_split = False, visualization = False):
 
-                    # Calculate the impact ratio
-                    impact_ratio = min(p_sr, q_sr) / max(p_sr, q_sr)
-                    cat1_selection_rate = p_sr
-                    cat2_selection_rate = q_sr
-                    result[f'{target}_{feature}_{cat1}_{cat2}_impact_ratio'] = {
-                        'impact_ratio': impact_ratio,
-                        f'{cat1}_selection_rate': cat1_selection_rate,
-                        f'{cat2}_selection_rate': cat2_selection_rate
-                    }
-        if saving:
-            open(f'data/customized/abc_results/impact_ratio_{"_".join(self.comparison_targets)}.json', 'w', encoding='utf-8').write(json.dumps(result, indent=4))
-        return result  # Return the impact ratio
+        def transform_data(input_data):
+            transformed_data = {}
 
-    def impact_ratio_group(self, mode ='median', saving = True, source_split = False):
+            for key, value in input_data.items():
+                main_category, sub_category = key.split("_", 1) if "_" in key else (key, "overall")
+
+                if main_category not in transformed_data:
+                    transformed_data[main_category] = {}
+
+                transformed_data[main_category][sub_category] = value
+
+            return transformed_data
+
+        def extract_overall_scores(transformed_data):
+            overall_scores = {}
+
+            for main_category, sub_categories in transformed_data.items():
+                if 'overall' in sub_categories:
+                    overall_scores[main_category] = sub_categories['overall']
+
+            return overall_scores
+
+
         df = self.benchmark
         result = {}
         category_list = df['category'].unique().tolist()
         source_list = df['source_tag'].unique().tolist()
         cat_p = {}
-        for cat in category_list:
-            for target in self.targets:
-                for feature in self.features:
+        for target in self.targets:
+            for feature in self.features:
+                for cat in category_list:
                     # Extract the distributions
                     cat_p[cat] = np.array(df[df['category'] == cat][f'{target}_{feature}'])
                     if source_split:
@@ -233,55 +259,57 @@ class BiasChecker:
                                 cat_p[cat + '_' + source] = np.array(df[(df['category'] == cat) & (df['source_tag'] == source)][f'{target}_{feature}'])
 
 
-        cat_sr = {}
-        if mode == 'mean':
-            overall_list = []
-            for cat in category_list:
-                overall_list.extend(cat_p[cat])
-            overall_mean = np.mean(overall_list)
-            for cat in cat_p.keys():
-                cat_sr[cat] = np.sum(cat_p[cat] > overall_mean) / cat_p[cat].size
-        elif mode == 'median':
-            overall_list = []
-            for cat in category_list:
-                overall_list.extend(cat_p[cat])
-            overall_median = np.median(overall_list)
-            for cat in cat_p.keys():
-                # print(cat)
-                # print(cat_p[cat].size)
-                cat_sr[cat] = np.sum(cat_p[cat] > overall_median) / cat_p[cat].size
-        else:
-            print('No such mode available. Please use "mean" or "median" mode.')
-            return
+                cat_sr = {}
+                if mode == 'mean':
+                    overall_list = []
+                    for cat in category_list:
+                        overall_list.extend(cat_p[cat])
+                    overall_mean = np.mean(overall_list)
+                    for cat in cat_p.keys():
+                        cat_sr[cat] = np.sum(cat_p[cat] > overall_mean) / cat_p[cat].size
+                elif mode == 'median':
+                    overall_list = []
+                    for cat in category_list:
+                        overall_list.extend(cat_p[cat])
+                    overall_median = np.median(overall_list)
+                    for cat in cat_p.keys():
+                        cat_sr[cat] = np.sum(cat_p[cat] > overall_median) / cat_p[cat].size
+                else:
+                    print('No such mode available. Please use "mean" or "median" mode.')
+                    return
 
-        # Calculate the impact ratio
-        impact_ratio = min(list(cat_sr.values())) / max(list(cat_sr.values()))
-        for target in self.targets:
-            for feature in self.features:
+                # Calculate the impact ratio
+                cat_sr_source = transform_data(cat_sr)
+                overall_scores = extract_overall_scores(cat_sr_source)
+                impact_ratio = min(list(overall_scores.values())) / max(list(overall_scores.values()))
+
                 result[f'{target}_{feature}_impact_ratio'] = impact_ratio
-                result['selection_rate'] = cat_sr
+                result[f'{target}_{feature}_selection_rate'] = cat_sr_source
 
         if saving and not source_split:
             open(f'data/customized/abc_results/impact_ratio_group_{"_".join(self.comparison_targets)}_{mode}.json', 'w', encoding='utf-8').write(json.dumps(result, indent=4))
         elif saving and source_split:
             open(f'data/customized/abc_results/impact_ratio_group_{"_".join(self.comparison_targets)}_{mode}_source_split.json', 'w', encoding='utf-8').write(json.dumps(result, indent=4))
+
+        if visualization:
+            Visualization.visualize_impact_ratio_group(result, " v.s. ".join(self.comparison_targets))
         return result  # Return the impact ratio
 
 
 class Visualization:
     @staticmethod
-    def visualize_impact_ratio_group(data, domain, output_file='plot.png'):
+    def visualize_impact_ratio_group(data, domain):
         """
-        Visualize the given data as horizontal bars with a custom color scheme using Plotly.
+         Visualize the given data as horizontal bars with a custom color scheme using Plotly.
 
-        Parameters:
-        data (dict): A dictionary with keys as labels and values as numeric data to be visualized.
-        domain (str): The domain name to be included in the plot title.
-        output_file (str): The filename for the exported plot image.
-        """
+         Parameters:
+         data (dict): A dictionary with keys as labels and values as numeric data to be visualized.
+         domain (str): The domain name to be included in the plot title.
+         """
         labels = []
         values = []
         colors = []
+        category_separators = []
 
         # Extract and handle the impact ratio separately
         impact_ratio_label = "LLM_sentiment_score_impact_ratio"
@@ -291,19 +319,23 @@ class Visualization:
             values.append(impact_ratio_value)
             # Apply color scheme for impact ratio
             colors.append('green' if impact_ratio_value > 0.8 else 'red')
+            category_separators.append(len(labels))  # Add separator after impact ratio
 
         # Handle selection rates and sort them
-        if "selection_rate" in data:
-            selection_rates = data["selection_rate"]
-            sorted_selection_rates = dict(sorted(selection_rates.items(), key=lambda item: item[1]))
+        if "LLM_sentiment_score_selection_rate" in data:
+            selection_rates = data["LLM_sentiment_score_selection_rate"]
 
-            for subkey, subvalue in sorted_selection_rates.items():
-                labels.append(subkey)
-                values.append(subvalue)
-                # Use a purple color gradient for selection rates
-                norm_value = (subvalue - 0) / (1 - 0)  # Normalize between 0 and 1
-                purple_shade = int(150 + norm_value * 105)  # Adjust the shade of purple
-                colors.append(f'rgb({purple_shade}, {purple_shade // 2}, {purple_shade})')
+            for category, subdict in selection_rates.items():
+                sorted_selection_rates = {k: v for k, v in
+                                          sorted(subdict.items(), key=lambda item: (item[0] != "overall", item[1]))}
+                for subkey, subvalue in sorted_selection_rates.items():
+                    labels.append(f"{category} - {subkey.replace('_', ' ')}")
+                    values.append(subvalue)
+                    # Use a purple color gradient for selection rates
+                    norm_value = (subvalue - 0) / (1 - 0)  # Normalize between 0 and 1
+                    purple_shade = int(150 + norm_value * 105)  # Adjust the shade of purple
+                    colors.append(f'rgb({purple_shade}, {purple_shade // 2}, {purple_shade})')
+                category_separators.append(len(labels))  # Add separator after each category
 
         # Create a horizontal bar chart
         fig = go.Figure()
@@ -314,6 +346,18 @@ class Visualization:
             orientation='h',
             marker=dict(color=colors)
         ))
+
+        # Add lines to separate categories and impact ratio
+        for separator in category_separators:
+            fig.add_shape(
+                type="line",
+                x0=0,
+                x1=1,
+                y0=separator - 0.5,
+                y1=separator - 0.5,
+                xref='paper',
+                line=dict(color='black', width=2)
+            )
 
         # Add labels and title
         fig.update_layout(
@@ -336,11 +380,64 @@ class Visualization:
         # Show plot
         fig.show()
 
-        # Export plot as an image
-        pio.write_image(fig, output_file)
+    @staticmethod
+    def visualize_mean_difference_t_test(data):
+        """
+        Visualizes mean differences and p-values by source and category on the same canvas using Plotly.
+
+        Parameters:
+        data (dict): A dictionary containing the data to visualize.
+        """
+        # Convert the data to a DataFrame
+        df = pd.DataFrame(data).transpose()
+
+        # Separate mean differences and p-values for plotting
+        mean_diff_df = df.filter(like='_mean_difference')
+        p_val_df = df.filter(like='_t_test_p_val')
+
+        # Simplify column labels
+        mean_diff_df.columns = [col.split('_')[0] for col in mean_diff_df.columns]
+        p_val_df.columns = [col.split('_')[0] for col in p_val_df.columns]
+
+        # Create a subplot figure with two rows
+        fig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.15,
+                            subplot_titles=(
+                            'Mean Differences by Source and Demographic Label', 'P-Values by Source and Demographic Label'))
+
+        # Add mean differences to the first subplot
+        for column in mean_diff_df.columns:
+            fig.add_trace(
+                go.Bar(x=mean_diff_df.index, y=mean_diff_df[column], name=column),
+                row=1, col=1
+            )
+
+        # Add p-values to the second subplot
+        for column in p_val_df.columns:
+            fig.add_trace(
+                go.Bar(x=p_val_df.index, y=p_val_df[column], name=column),
+                row=2, col=1
+            )
+
+        # Add a horizontal line for the significance level in the p-values plot
+        fig.add_shape(type='line', x0=-0.5, x1=len(p_val_df.index) - 0.5, y0=0.05, y1=0.05,
+                      line=dict(color='red', dash='dash'), row=2, col=1)
+
+        # Update layout
+        fig.update_layout(height=800, width=800, showlegend=True)
+        fig.update_xaxes(tickangle=45)
+
+        # Show plot
+        fig.show()
 
 class Checker:
+
+
+
     def __init__(self):
+        pass
+
+    @staticmethod
+    def default_config(str):
         pass
 
     @classmethod
@@ -362,12 +459,14 @@ class Checker:
         # benchmark = pd.DataFrame()
         # for file_name, category in file_map.items():
         #     data_abc = abcData.load_file(category=category, domain=domain, data_tier='split_sentences', file_path=file_name)
-        #     benchmark = benchmark._append(data_abc.sub_sample(20))
+        #     if counterfactual:
+        #         data_abc.data = data_abc.data[data_abc.data['keyword'] == category]
+        #         benchmark = benchmark._append(data_abc.sub_sample(20))
+        #     else:
+        #         benchmark = benchmark._append(data_abc.sub_sample(20))
         # if counterfactual:
-        #     category_pair_mapping = dict(list(combinations(file_map.values(), 2)))
         #     benchmark_abcD = abcData.create_data(category='counterfactual', domain=domain, data_tier = 'split_sentences', data = benchmark)
-        #     benchmark_abcD.counterfactualization(category_pair_mapping, mode = 'two_way')
-        #     benchmark = benchmark._append(benchmark_abcD.data)
+        #     benchmark = benchmark._append(benchmark_abcD.counterfactualization())
         #
         # model_generator = ModelGenerator(benchmark)
         # benchmark = model_generator.generate(generation_function)
@@ -386,14 +485,12 @@ class Checker:
             benchmark = pd.read_csv(f'data/{data_location}/benchmarks/{domain}_benchmark_{feature}_counterfactual.csv')
         else:
             benchmark = pd.read_csv(f'data/{data_location}/benchmarks/{domain}_benchmark_{feature}.csv')
-        alignment_scores = AlignmentChecker(benchmark, 'sentiment_score').kl_divergence()
-        print('Alignment score calculated.')
-        print(alignment_scores)
-        alignment_scores = AlignmentChecker(benchmark, 'sentiment_score').mean_difference_and_t_test()
-        print('Mean difference and t-test calculated.')
-        print(alignment_scores)
 
-        impact_ratio_scores = BiasChecker(benchmark, 'sentiment_score', domain).impact_ratio_group(source_split=True)
+        # alignment_scores = AlignmentChecker(benchmark, 'sentiment_score').mean_difference_and_t_test(source_split=True, visualization=True)
+        # print('Mean difference and t-test calculated.')
+        # print(alignment_scores)
+
+        impact_ratio_scores = BiasChecker(benchmark, 'sentiment_score', domain).impact_ratio_group(source_split=True, visualization=True)
         print('Impact ratio calculated.')
         print(impact_ratio_scores)
 
@@ -409,5 +506,33 @@ if __name__ == '__main__':
     generation_function = llama.invoke
 
     Checker.domain_pipeline(domain, generation_function, counterfactual = True)
+
+    configuration = {
+        'benchmark': [{
+            'domain': 'religion',
+            'counterfactual': True,
+            'data_location': 'default',
+        }],
+        'feature_extraction':[{
+            'feature': 'sentiment',
+            'target': 'default',
+            'comparison': 'whole',
+        }],
+        'alignment': [{
+            'method': 'mean_difference_and_t_test',
+            'features': 'default',
+            'targets': 'default',
+            'baseline': 'default',
+            'saving': True,
+            'saving_location': 'default',
+            'source_split': True,
+        }],
+        'bias': [{
+            'method': 'kl_divergence',
+        }]
+
+
+
+    }
 
 
