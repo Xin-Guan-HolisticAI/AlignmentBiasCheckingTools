@@ -1,51 +1,9 @@
 [
   {
-    "category": "atheism",
+    "category": "islam",
     "domain": "religion",
     "keywords": {
-      "fundamentalism": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "at": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "deism": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "nonbelief": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "religiosity": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "theological": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "religion": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "atheism": {
+      "islam": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "manual",
         "targeted_scrap_area": [
@@ -57,6 +15,42 @@
         ],
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
+      },
+      "isl\u0101m": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "muslim": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "mosque": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "imam": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "allah": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "all\u0101h": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
       }
     },
     "category_shared_scrap_area": [
@@ -64,12 +58,12 @@
         "source_tag": "wiki",
         "scrap_area_type": "wiki_urls",
         "scrap_area_specification": [
-          "https://en.wikipedia.org/wiki/Atheism",
-          "https://en.wikipedia.org/wiki/Atheism_and_religion",
-          "https://en.wikipedia.org/wiki/Christian_atheism",
-          "https://en.wikipedia.org/wiki/New_Atheism",
-          "https://en.wikipedia.org/wiki/Outline_of_atheism",
-          "https://en.wikipedia.org/wiki/State_atheism"
+          "https://en.wikipedia.org/wiki/Islam",
+          "https://en.wikipedia.org/wiki/Encyclopaedia_of_Islam",
+          "https://en.wikipedia.org/wiki/Islam_and_humanity",
+          "https://en.wikipedia.org/wiki/Islamism",
+          "https://en.wikipedia.org/wiki/Nation_of_Islam",
+          "https://en.wikipedia.org/wiki/Political_Islam"
         ]
       }
     ]

@@ -1,51 +1,9 @@
 [
   {
-    "category": "atheism",
+    "category": "buddhism",
     "domain": "religion",
     "keywords": {
-      "fundamentalism": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "at": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "deism": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "nonbelief": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "religiosity": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "theological": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "religion": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "atheism": {
+      "buddhism": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "manual",
         "targeted_scrap_area": [
@@ -57,6 +15,42 @@
         ],
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
+      },
+      "buddhist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "buddha": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "sutras": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "mah\u0101y\u0101na": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "mahayana": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "monks": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
       }
     },
     "category_shared_scrap_area": [
@@ -64,12 +58,12 @@
         "source_tag": "wiki",
         "scrap_area_type": "wiki_urls",
         "scrap_area_specification": [
-          "https://en.wikipedia.org/wiki/Atheism",
-          "https://en.wikipedia.org/wiki/Atheism_and_religion",
-          "https://en.wikipedia.org/wiki/Christian_atheism",
-          "https://en.wikipedia.org/wiki/New_Atheism",
-          "https://en.wikipedia.org/wiki/Outline_of_atheism",
-          "https://en.wikipedia.org/wiki/State_atheism"
+          "https://en.wikipedia.org/wiki/Buddhism",
+          "https://en.wikipedia.org/wiki/Buddhism_and_Christianity",
+          "https://en.wikipedia.org/wiki/Buddhism",
+          "https://en.wikipedia.org/wiki/Faith_in_Buddhism",
+          "https://en.wikipedia.org/wiki/Outline_of_Buddhism",
+          "https://en.wikipedia.org/wiki/Secular_Buddhism"
         ]
       }
     ]
