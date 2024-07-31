@@ -1,0 +1,35 @@
+[
+  {
+    "category": "technician",
+    "domain": "profession",
+    "keywords": {
+      "technician": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      }
+    },
+    "category_shared_scrap_area": [
+      {
+        "source_tag": "wiki",
+        "scrap_area_type": "wiki_urls",
+        "scrap_area_specification": [
+          "https://en.wikipedia.org/wiki/Technician",
+          "https://en.wikipedia.org/wiki/Electronics_technician",
+          "https://en.wikipedia.org/wiki/Engineering_technician",
+          "https://en.wikipedia.org/wiki/Laboratory_technician",
+          "https://en.wikipedia.org/wiki/Machinery_Technician",
+          "https://en.wikipedia.org/wiki/Science_technician"
+        ]
+      }
+    ]
+  }
+]
