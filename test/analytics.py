@@ -47,8 +47,10 @@ class ModelGenerator:
                 return generation_function(self.generation_prompt_template(text))
         else:
             generation = generation_function
+        print('generating.....')
         self.benchmark[generation_name] = self.benchmark['prompts'].progress_apply(generation)
-        self.benchmark[generation_name] = self.benchmark.apply(lambda x: x['prompts'] + x[generation_name], axis=1)
+        self.benchmark[generation_name] = self.benchmark.apply(lambda x: (x['prompts'] + x[generation_name])[:300], axis=1)
+        # notice that some model has maximal length requirement
         return self.benchmark
 
 
@@ -436,8 +438,10 @@ class Checker:
             'domain': 'religion',
             'task_prefix': None,
             'counterfactual': True,
-            'file_name': 'default',
-            'sample_size_per_source': 5,
+            'file_name': 'default', # this should be the directory name for all relevant csv data files
+            'sample_per_source': 5,
+            'saving' : True,
+            'model_name': 'LLM',
         },
         'feature_extraction': {
             'feature': 'sentiment',
@@ -500,7 +504,9 @@ class Checker:
         domain = configuration['generation']['domain']
         counterfactual = configuration['generation']['counterfactual']
         file_location = configuration['generation']['file_name']
-        sample_size_per_source = configuration['generation']['sample_size_per_source']
+        sample_size_per_source = configuration['generation']['sample_per_source']
+        generation_saving = configuration['generation']['saving']
+        model_name = configuration['generation']['model_name']
 
         extraction_feature = configuration['feature_extraction']['feature']
         extraction_comparison = configuration['feature_extraction']['comparison']
@@ -553,7 +559,15 @@ class Checker:
             benchmark = benchmark._append(benchmark_abcD.counterfactualization())
 
         model_generator = ModelGenerator(benchmark)
-        benchmark = model_generator.generate(generation_function,)
+        benchmark = model_generator.generate(generation_function)
+        if generation_saving:
+            if counterfactual:
+                benchmark.to_csv(
+                    f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation_counterfactual.csv',
+                    index=False)
+            else:
+                benchmark.to_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation.csv',
+                                 index=False)
         print('Generation completed.')
 
         feature_extractor = FeatureExtractor(benchmark, comparison=extraction_comparison)
@@ -562,14 +576,14 @@ class Checker:
             print('Sentiment classification completed.')
             if extraction_saving:
                 if counterfactual:
-                    benchmark.to_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{extraction_feature}_counterfactual.csv', index=False)
+                    benchmark.to_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}_counterfactual.csv', index=False)
                 else:
-                    benchmark.to_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{extraction_feature}.csv', index=False)
+                    benchmark.to_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}.csv', index=False)
 
         # if counterfactual:
-        #     benchmark = pd.read_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{extraction_feature}_counterfactual.csv')
+        #     benchmark = pd.read_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}_counterfactual.csv')
         # else:
-        #     benchmark = pd.read_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{extraction_feature}.csv')
+        #     benchmark = pd.read_csv(f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}.csv')
 
 
         if alignment_method == 'mean_difference_and_t_test' and alignment_check:
@@ -606,7 +620,7 @@ if __name__ == '__main__':
 
     configuration = {
         'generation': {
-            'sample_size_per_source': 40
+            'sample_per_source': 5
         }
     }
 
