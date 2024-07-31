@@ -3,12 +3,13 @@ import os
 import pandas as pd
 from tqdm import tqdm
 from collections import defaultdict
-from itertools import combinations
+from itertools import combinations, permutations
 
 tqdm.pandas()
 
 
 class abcData:
+
     tier_order = {value: index for index, value in
                   enumerate(['keywords', 'scrap_area', 'scrapped_sentences', 'split_sentences'])}
 
@@ -505,10 +506,12 @@ class abcData:
             df = self.data
             # print(df['keywords_containment'] == True)
             df = df[df['keywords_containment'] == True]
+            df = df.copy()  # Make a copy to avoid the SettingWithCopyWarning
             df.drop(['keywords_containment'], axis=1, inplace=True)
             # print(df)
             self.data = df
 
+        assert sample <= len(self.data), f"Sample size should be less than or equal to the data size {len(self.data)}."
         sample_data = self.data.sample(n=sample, random_state=seed)
         self.data = sample_data
         return sample_data
@@ -534,10 +537,10 @@ class abcData:
         assert mode in ['all', 'one_way', 'two_way'], "Invalid mode. Choose from 'one_way' or 'two_way'."
         assert isinstance(self.data, pd.DataFrame), "Data should be a DataFrame."
         if keywords_mapping is not None:
-            assert isinstance(keywords_mapping, dict), "Keywords mapping should be a dictionary."
-            for keyword, replacement in keywords_mapping.items():
-                assert keyword in self.data['keyword'].values, f"Keyword '{keyword}' not found in the data."
-                assert replacement in self.data['keyword'].values, f"Replacement '{replacement}' not found in the data."
+            assert isinstance(keywords_mapping, list), "Keywords mapping should be a list of tuples."
+            for keyword_pair in keywords_mapping:
+                assert keyword_pair[0] in self.data['keyword'].values, f"Keyword '{keyword_pair[0]}' not found in the data."
+                assert keyword_pair[1] in self.data['keyword'].values, f"Replacement '{keyword_pair[1]}' not found in the data."
 
         # Dictionary to store modified DataFrames
         modified_df_dict = {}
@@ -545,14 +548,15 @@ class abcData:
 
         if mode == 'all' or keywords_mapping is None:
             keyword_list = self.data['keyword'].unique()
-            keywords_pair_mapping = dict(list(combinations(keyword_list, 2)))
-            keywords_mapping = keywords_pair_mapping
+            keywords_mapping = list(permutations(keyword_list, 2))
 
-        if mode == 'two_way' or mode == 'all':
-            keywords_inverted = {value: key for key, value in keywords_mapping.items()}
-            keywords_mapping.update(keywords_inverted)
+        if mode == 'two_way':
+            keywords_inverted = [(kw_pairs[1], kw_pairs[0]) for kw_pairs in keywords_mapping]
+            keywords_mapping.extend(keywords_inverted)
 
-        for keyword, replacement in tqdm(keywords_mapping.items(), desc='Replacing keywords'):
+        for keyword_pair in tqdm(keywords_mapping, desc='Replacing keywords'):
+            keyword = keyword_pair[0]
+            replacement = keyword_pair[1]
             # Filter the data to only include rows with the specified keyword
             keyword_data = self.data[self.data['keyword'] == keyword]
 
@@ -569,13 +573,11 @@ class abcData:
                 counterfactual_df = pd.concat([keyword_data, counterfactual_df], ignore_index=True)
 
             # Store the modified DataFrame in the dictionary
-            modified_df_dict[keyword] = counterfactual_df
+            modified_df_dict[keyword_pair] = counterfactual_df
 
         # Concatenate all modified DataFrames
         all_modified_df = pd.concat(modified_df_dict.values(), ignore_index=True)
         self.data = all_modified_df
         return all_modified_df
 
-    def merge(self, other_data):
-        pass
 
