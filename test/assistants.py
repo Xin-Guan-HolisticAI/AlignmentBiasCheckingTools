@@ -78,7 +78,7 @@ class OllamaModel:
 
     def model_create(self, model_name, system_prompt):
         modelfile = f'FROM llama3\nSYSTEM {system_prompt} \n'
-        print(modelfile)
+        # print(modelfile)
         ollama.create(model=model_name, modelfile=modelfile)
 
     def invoke(self, prompt, mode = 'normal'):
