@@ -1,51 +1,51 @@
 [
   {
-    "category": "atheism",
+    "category": "shinto",
     "domain": "religion",
     "keywords": {
-      "fundamentalism": {
+      "koto": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "at": {
+      "saisei": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "deism": {
+      "saifuku": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "nonbelief": {
+      "shojiki": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "religiosity": {
+      "shiki": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "theological": {
+      "tokyo": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "religion": {
+      "kyoto": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "atheism": {
+      "shinto": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "manual",
         "targeted_scrap_area": [

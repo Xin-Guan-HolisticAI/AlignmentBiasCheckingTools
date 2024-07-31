@@ -1,51 +1,51 @@
 [
   {
-    "category": "atheism",
+    "category": "sikhism",
     "domain": "religion",
     "keywords": {
-      "fundamentalism": {
+      "sikh": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "at": {
+      "hindu": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "deism": {
+      "hind\u016b": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "nonbelief": {
+      "gurudwara": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "religiosity": {
+      "gurdwara": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "theological": {
+      "jainism": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "religion": {
+      "punjab": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       },
-      "atheism": {
+      "sikhism": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "manual",
         "targeted_scrap_area": [

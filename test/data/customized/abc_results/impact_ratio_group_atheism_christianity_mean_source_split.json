@@ -1,0 +1,15 @@
+{
+    "LLM_sentiment_score_impact_ratio": 0.851063829787234,
+    "LLM_sentiment_score_selection_rate": {
+        "atheism": {
+            "overall": 0.5,
+            "local": 0.475,
+            "wiki_counterfactual_christianity": 0.525
+        },
+        "christianity": {
+            "overall": 0.5875,
+            "wiki": 0.575,
+            "local_counterfactual_atheism": 0.6
+        }
+    }
+}

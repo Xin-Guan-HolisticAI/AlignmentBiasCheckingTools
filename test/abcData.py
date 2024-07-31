@@ -3,11 +3,13 @@ import os
 import pandas as pd
 from tqdm import tqdm
 from collections import defaultdict
+from itertools import combinations, permutations
 
 tqdm.pandas()
 
 
 class abcData:
+
     tier_order = {value: index for index, value in
                   enumerate(['keywords', 'scrap_area', 'scrapped_sentences', 'split_sentences'])}
 
@@ -506,9 +508,11 @@ class abcData:
             df = self.data
             # print(df['keywords_containment'] == True)
             df = df[df['keywords_containment'] == True]
+            df = df.copy()  # Make a copy to avoid the SettingWithCopyWarning
             df.drop(['keywords_containment'], axis=1, inplace=True)
             self.data = df
 
+        assert sample <= len(self.data), f"Sample size should be less than or equal to the data size {len(self.data)}."
         sample_data = self.data.sample(n=sample, random_state=seed)
         self.data = sample_data
         return sample_data
@@ -521,5 +525,60 @@ class abcData:
         self.data[generation_name] = self.data['prompts'].progress_apply(generation_function)
         return self.data
 
-    def merge(self, other_data):
-        pass
+    def counterfactualization(self, keywords_mapping = None, mode='all', source_tag='counterfactual', merge = False):
+        """
+        This function performs counterfactual insertion by replacing specified keywords in the prompts
+        with their corresponding replacements based on the provided mapping.
+
+        :param keywords_mapping: A dictionary where keys are the keywords to be replaced,
+                                 and values are their replacements.
+        :param mode: The mode of replacement. Choose from 'one_way' or 'two_way'.
+        :param source_tag: A tag indicating the source of the modification (default is 'counterfactual').
+        """
+        assert mode in ['all', 'one_way', 'two_way'], "Invalid mode. Choose from 'one_way' or 'two_way'."
+        assert isinstance(self.data, pd.DataFrame), "Data should be a DataFrame."
+        if keywords_mapping is not None:
+            assert isinstance(keywords_mapping, list), "Keywords mapping should be a list of tuples."
+            for keyword_pair in keywords_mapping:
+                assert keyword_pair[0] in self.data['keyword'].values, f"Keyword '{keyword_pair[0]}' not found in the data."
+                assert keyword_pair[1] in self.data['keyword'].values, f"Replacement '{keyword_pair[1]}' not found in the data."
+
+        # Dictionary to store modified DataFrames
+        modified_df_dict = {}
+        kw_cat_mapping = dict(zip(self.data['keyword'], self.data['category']))
+
+        if mode == 'all' or keywords_mapping is None:
+            keyword_list = self.data['keyword'].unique()
+            keywords_mapping = list(permutations(keyword_list, 2))
+
+        if mode == 'two_way':
+            keywords_inverted = [(kw_pairs[1], kw_pairs[0]) for kw_pairs in keywords_mapping]
+            keywords_mapping.extend(keywords_inverted)
+
+        for keyword_pair in tqdm(keywords_mapping, desc='Replacing keywords'):
+            keyword = keyword_pair[0]
+            replacement = keyword_pair[1]
+            # Filter the data to only include rows with the specified keyword
+            keyword_data = self.data[self.data['keyword'] == keyword]
+
+            if keyword_data.empty:
+                raise ValueError(f"Keyword '{keyword}' not found in the data.")
+
+            # Create a modified DataFrame with the original structure
+            counterfactual_df = keyword_data.copy()
+            counterfactual_df['prompts'] = counterfactual_df['prompts'].apply(lambda x: x.lower().replace(keyword, replacement).title())
+            counterfactual_df['keyword'] = replacement
+            counterfactual_df['category'] = kw_cat_mapping[replacement]
+            counterfactual_df['source_tag'] = counterfactual_df['source_tag'] + f'_counterfactual_{keyword}'
+            if merge:
+                counterfactual_df = pd.concat([keyword_data, counterfactual_df], ignore_index=True)
+
+            # Store the modified DataFrame in the dictionary
+            modified_df_dict[keyword_pair] = counterfactual_df
+
+        # Concatenate all modified DataFrames
+        all_modified_df = pd.concat(modified_df_dict.values(), ignore_index=True)
+        self.data = all_modified_df
+        return all_modified_df
+
+

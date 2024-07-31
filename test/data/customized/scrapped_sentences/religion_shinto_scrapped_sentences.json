@@ -1,0 +1,2065 @@
+[
+  {
+    "category": "shinto",
+    "domain": "religion",
+    "keywords": {
+      "koto": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Instruments used include three reeds (fue, sho, and hichiriki), the yamato-koto, and the \"three drums\" (taiko, kakko, and sh\u014dko).",
+            "wiki"
+          ]
+        ]
+      },
+      "saisei": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Instruments used include three reeds (fue, sho, and hichiriki), the yamato-koto, and the \"three drums\" (taiko, kakko, and sh\u014dko).",
+            "wiki"
+          ],
+          [
+            "Throughout Japanese history, the notion of saisei-itchi, or the union of religious authority and political authority, has long been prominent.",
+            "wiki"
+          ]
+        ]
+      },
+      "saifuku": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Instruments used include three reeds (fue, sho, and hichiriki), the yamato-koto, and the \"three drums\" (taiko, kakko, and sh\u014dko).",
+            "wiki"
+          ],
+          [
+            "Throughout Japanese history, the notion of saisei-itchi, or the union of religious authority and political authority, has long been prominent.",
+            "wiki"
+          ],
+          [
+            "A white silk version of the ikan, used for formal occasions, is known as the saifuku.",
+            "wiki"
+          ]
+        ]
+      },
+      "shojiki": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Instruments used include three reeds (fue, sho, and hichiriki), the yamato-koto, and the \"three drums\" (taiko, kakko, and sh\u014dko).",
+            "wiki"
+          ],
+          [
+            "Throughout Japanese history, the notion of saisei-itchi, or the union of religious authority and political authority, has long been prominent.",
+            "wiki"
+          ],
+          [
+            "A white silk version of the ikan, used for formal occasions, is known as the saifuku.",
+            "wiki"
+          ],
+          [
+            "Shojiki is regarded as a virtue, encompassing honesty, uprightness, veracity, and frankness.",
+            "wiki"
+          ]
+        ]
+      },
+      "shiki": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Instruments used include three reeds (fue, sho, and hichiriki), the yamato-koto, and the \"three drums\" (taiko, kakko, and sh\u014dko).",
+            "wiki"
+          ],
+          [
+            "Throughout Japanese history, the notion of saisei-itchi, or the union of religious authority and political authority, has long been prominent.",
+            "wiki"
+          ],
+          [
+            "A white silk version of the ikan, used for formal occasions, is known as the saifuku.",
+            "wiki"
+          ],
+          [
+            "Shojiki is regarded as a virtue, encompassing honesty, uprightness, veracity, and frankness.",
+            "wiki"
+          ],
+          [
+            "Another rite of passage, the saiten-sai or seijin shiki, is a coming of age ritual marking the transition to adulthood and occurs when an individual is around twenty.",
+            "wiki"
+          ],
+          [
+            "These legally mandated rites were outlined in the Y\u014dr\u014d Code of 718, and expanded in the Jogan Gishiki of circa 872 and the Engi Shiki of 927.",
+            "wiki"
+          ],
+          [
+            "These objects resemble the holy sword and mirror described in the Kojiki and Nihon Shiki, and allowed for a clearer understanding of elements that would lead to the Shinto faith later.",
+            "wiki"
+          ],
+          [
+            "This can be seen in myths in the Kojiki and Nihon Shiki and is believed to have had an impact on the formation of belief in kami with humanlike aspects.",
+            "wiki"
+          ],
+          [
+            "There were also regulations for the \u014charae-shiki, in which the Nakatomi clan first offered an \u014dnusa to the emperor, and the Yamatonoaya clan and Kawachinohumi clan offered a harae-no-tachi (\u7953\u5200, sword used for purification) as well as performed the reading of ritual incantations.",
+            "wiki"
+          ],
+          [
+            "Onmy\u014dd\u014d's development also had an impact on Shinto, as some rituals such as the \u041e\u0304harae-shiki and Michiae-no-Matsuri (\u9053\u9957\u796d) which had been conducted by the Department of Divinities were later conducted by the Onmy\u014dry\u014d (\u9670\u967d\u5bee), the department of Onmy\u014dd\u014d.",
+            "wiki"
+          ],
+          [
+            "Additionally, the ritual text for the \u041e\u0304harae-shiki, also known as the Nakatomi Harae (\u4e2d\u81e3\u7953), changed into the Nakatomi Saimon (\u4e2d\u81e3\u796d\u6587, lit. \"Nakatomi ritual text\") and became used by Onmy\u014dd\u014d priests.",
+            "wiki"
+          ]
+        ]
+      },
+      "tokyo": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Instruments used include three reeds (fue, sho, and hichiriki), the yamato-koto, and the \"three drums\" (taiko, kakko, and sh\u014dko).",
+            "wiki"
+          ],
+          [
+            "Throughout Japanese history, the notion of saisei-itchi, or the union of religious authority and political authority, has long been prominent.",
+            "wiki"
+          ],
+          [
+            "A white silk version of the ikan, used for formal occasions, is known as the saifuku.",
+            "wiki"
+          ],
+          [
+            "Shojiki is regarded as a virtue, encompassing honesty, uprightness, veracity, and frankness.",
+            "wiki"
+          ],
+          [
+            "Another rite of passage, the saiten-sai or seijin shiki, is a coming of age ritual marking the transition to adulthood and occurs when an individual is around twenty.",
+            "wiki"
+          ],
+          [
+            "These legally mandated rites were outlined in the Y\u014dr\u014d Code of 718, and expanded in the Jogan Gishiki of circa 872 and the Engi Shiki of 927.",
+            "wiki"
+          ],
+          [
+            "The actions of priests at the Yasukuni Shrine in Tokyo have generated controversy across East Asia",
+            "wiki"
+          ],
+          [
+            "Particularly controversial has been the Yasukuni Shrine in Tokyo, devoted to Japan's war dead.",
+            "wiki"
+          ],
+          [
+            "In 1979 it enshrined 14 men who had been declared Class-A defendants at the 1946 Tokyo War Crimes Trials, generating domestic and international condemnation, particularly from China and Korea.",
+            "wiki"
+          ],
+          [
+            "In contemporary Japan, there are two main training universities for those wishing to become kannushi, at Kokugakuin University in Tokyo and at Kogakkan University in Mie Prefecture.",
+            "wiki"
+          ],
+          [
+            "Shrines such as Shimogamo Jinja and Fushimi Inari Taisha in Kyoto, Meiji Jing\u016b in Tokyo, and Atsuta Jing\u016b in Nagoya are among Japan's most popular tourist sites.",
+            "wiki"
+          ],
+          [
+            "Procession of the kami as part of the Fukagawa Matsuri festival in Tokyo",
+            "wiki"
+          ],
+          [
+            "In the Meiji period, many local traditions died out and were replaced by nationally standardised practices encouraged from Tokyo.",
+            "wiki"
+          ],
+          [
+            "The headquarters of the Association of Shinto Shrines in Shibuya, Tokyo",
+            "wiki"
+          ],
+          [
+            "These objects resemble the holy sword and mirror described in the Kojiki and Nihon Shiki, and allowed for a clearer understanding of elements that would lead to the Shinto faith later.",
+            "wiki"
+          ],
+          [
+            "This can be seen in myths in the Kojiki and Nihon Shiki and is believed to have had an impact on the formation of belief in kami with humanlike aspects.",
+            "wiki"
+          ],
+          [
+            "There were also regulations for the \u014charae-shiki, in which the Nakatomi clan first offered an \u014dnusa to the emperor, and the Yamatonoaya clan and Kawachinohumi clan offered a harae-no-tachi (\u7953\u5200, sword used for purification) as well as performed the reading of ritual incantations.",
+            "wiki"
+          ],
+          [
+            "Onmy\u014dd\u014d's development also had an impact on Shinto, as some rituals such as the \u041e\u0304harae-shiki and Michiae-no-Matsuri (\u9053\u9957\u796d) which had been conducted by the Department of Divinities were later conducted by the Onmy\u014dry\u014d (\u9670\u967d\u5bee), the department of Onmy\u014dd\u014d.",
+            "wiki"
+          ],
+          [
+            "Additionally, the ritual text for the \u041e\u0304harae-shiki, also known as the Nakatomi Harae (\u4e2d\u81e3\u7953), changed into the Nakatomi Saimon (\u4e2d\u81e3\u796d\u6587, lit. \"Nakatomi ritual text\") and became used by Onmy\u014dd\u014d priests.",
+            "wiki"
+          ]
+        ]
+      },
+      "kyoto": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Instruments used include three reeds (fue, sho, and hichiriki), the yamato-koto, and the \"three drums\" (taiko, kakko, and sh\u014dko).",
+            "wiki"
+          ],
+          [
+            "Throughout Japanese history, the notion of saisei-itchi, or the union of religious authority and political authority, has long been prominent.",
+            "wiki"
+          ],
+          [
+            "A white silk version of the ikan, used for formal occasions, is known as the saifuku.",
+            "wiki"
+          ],
+          [
+            "Shojiki is regarded as a virtue, encompassing honesty, uprightness, veracity, and frankness.",
+            "wiki"
+          ],
+          [
+            "Another rite of passage, the saiten-sai or seijin shiki, is a coming of age ritual marking the transition to adulthood and occurs when an individual is around twenty.",
+            "wiki"
+          ],
+          [
+            "These legally mandated rites were outlined in the Y\u014dr\u014d Code of 718, and expanded in the Jogan Gishiki of circa 872 and the Engi Shiki of 927.",
+            "wiki"
+          ],
+          [
+            "The actions of priests at the Yasukuni Shrine in Tokyo have generated controversy across East Asia",
+            "wiki"
+          ],
+          [
+            "Particularly controversial has been the Yasukuni Shrine in Tokyo, devoted to Japan's war dead.",
+            "wiki"
+          ],
+          [
+            "In 1979 it enshrined 14 men who had been declared Class-A defendants at the 1946 Tokyo War Crimes Trials, generating domestic and international condemnation, particularly from China and Korea.",
+            "wiki"
+          ],
+          [
+            "In contemporary Japan, there are two main training universities for those wishing to become kannushi, at Kokugakuin University in Tokyo and at Kogakkan University in Mie Prefecture.",
+            "wiki"
+          ],
+          [
+            "Shrines such as Shimogamo Jinja and Fushimi Inari Taisha in Kyoto, Meiji Jing\u016b in Tokyo, and Atsuta Jing\u016b in Nagoya are among Japan's most popular tourist sites.",
+            "wiki"
+          ],
+          [
+            "Procession of the kami as part of the Fukagawa Matsuri festival in Tokyo",
+            "wiki"
+          ],
+          [
+            "In the Meiji period, many local traditions died out and were replaced by nationally standardised practices encouraged from Tokyo.",
+            "wiki"
+          ],
+          [
+            "The headquarters of the Association of Shinto Shrines in Shibuya, Tokyo",
+            "wiki"
+          ],
+          [
+            "Shinto purification rite after a ceremonial children's sumo tournament at the Kamigamo Jinja in Kyoto",
+            "wiki"
+          ],
+          [
+            "Assemblage of small torii at the Fushimi Inari-taisha shrine in Kyoto",
+            "wiki"
+          ],
+          [
+            "The main gate to Fushimi Inari-taisha in Kyoto, one of the oldest shrines in Japan",
+            "wiki"
+          ],
+          [
+            "Shrines such as Shimogamo Jinja and Fushimi Inari Taisha in Kyoto, Meiji Jing\u016b in Tokyo, and Atsuta Jing\u016b in Nagoya are among Japan's most popular tourist sites.",
+            "wiki"
+          ],
+          [
+            "At shrines such as \u014charano Shrine in Kyoto, azuma-asobi (\"eastern entertainment\") music is performed on April 8.",
+            "wiki"
+          ],
+          [
+            "Also in Kyoto, various festivals make use of the dengaku style of music and dance, which originated from rice-planting songs.",
+            "wiki"
+          ],
+          [
+            "Participants in a procession for Aoi Matsuri in Kyoto",
+            "wiki"
+          ],
+          [
+            "For instance, the Aoi Matsuri festival, held on 15 May to pray for an abundant grain harvest, takes place at shrines in Kyoto, while the Chichibu Yo-Matsuri takes place on 2\u20133 December in Chichibu.",
+            "wiki"
+          ],
+          [
+            "These objects resemble the holy sword and mirror described in the Kojiki and Nihon Shiki, and allowed for a clearer understanding of elements that would lead to the Shinto faith later.",
+            "wiki"
+          ],
+          [
+            "This can be seen in myths in the Kojiki and Nihon Shiki and is believed to have had an impact on the formation of belief in kami with humanlike aspects.",
+            "wiki"
+          ],
+          [
+            "There were also regulations for the \u014charae-shiki, in which the Nakatomi clan first offered an \u014dnusa to the emperor, and the Yamatonoaya clan and Kawachinohumi clan offered a harae-no-tachi (\u7953\u5200, sword used for purification) as well as performed the reading of ritual incantations.",
+            "wiki"
+          ],
+          [
+            "Onmy\u014dd\u014d's development also had an impact on Shinto, as some rituals such as the \u041e\u0304harae-shiki and Michiae-no-Matsuri (\u9053\u9957\u796d) which had been conducted by the Department of Divinities were later conducted by the Onmy\u014dry\u014d (\u9670\u967d\u5bee), the department of Onmy\u014dd\u014d.",
+            "wiki"
+          ],
+          [
+            "Additionally, the ritual text for the \u041e\u0304harae-shiki, also known as the Nakatomi Harae (\u4e2d\u81e3\u7953), changed into the Nakatomi Saimon (\u4e2d\u81e3\u796d\u6587, lit. \"Nakatomi ritual text\") and became used by Onmy\u014dd\u014d priests.",
+            "wiki"
+          ],
+          [
+            "In the case of the parade of portable shrines, the residents of Kyoto prepared the Ootabisho and conducted the festival, so there was little official involvement of the Imperial Court, and the festival was a common people's festival with an extremely high degree of originality and place of the residents of Kyoto.",
+            "wiki"
+          ],
+          [
+            "By the middle of the Heian period (794-1185), other festivals were established in Kyoto, including the Kitano Goryo-kai, Matsuo Matsuri, Imamiya Matsuri, and Inari Matsuri.",
+            "wiki"
+          ],
+          [
+            "During the \u014cnin reign, the \u014cnin War broke out and Kyoto was burnt to the ground, affecting many temples and shrines, and causing the abortion of imperial court rituals such as the \u014cnin Festival and the coronation ceremony.",
+            "wiki"
+          ],
+          [
+            "Yoshida Shrine in Sakyo-ku Kyoto City",
+            "wiki"
+          ],
+          [
+            "Outside of Edo, many urban festivals were revitalized, such as Gion Matsuri and Imamiya Matsuri in Kyoto, Tenjin Matsuri in Osaka, Hiyoshi Sanno Matsuri in Shiga, Chichibu Yatsuri in Saitama, and Takayama Matsuri in Gifu.",
+            "wiki"
+          ],
+          [
+            "After the death of Yaksai Yamazaki, his pupil Shoshinmachi Kimimichi succeeded him, and the Taruka Shinto sect reached its zenith, spreading throughout the country, especially in Edo and Kyoto, widely spreading among nobles, warriors, and priests, and having the greatest influence on the Shinto world.",
+            "wiki"
+          ]
+        ]
+      },
+      "shinto": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Instruments used include three reeds (fue, sho, and hichiriki), the yamato-koto, and the \"three drums\" (taiko, kakko, and sh\u014dko).",
+            "wiki"
+          ],
+          [
+            "Throughout Japanese history, the notion of saisei-itchi, or the union of religious authority and political authority, has long been prominent.",
+            "wiki"
+          ],
+          [
+            "A white silk version of the ikan, used for formal occasions, is known as the saifuku.",
+            "wiki"
+          ],
+          [
+            "Shojiki is regarded as a virtue, encompassing honesty, uprightness, veracity, and frankness.",
+            "wiki"
+          ],
+          [
+            "Another rite of passage, the saiten-sai or seijin shiki, is a coming of age ritual marking the transition to adulthood and occurs when an individual is around twenty.",
+            "wiki"
+          ],
+          [
+            "These legally mandated rites were outlined in the Y\u014dr\u014d Code of 718, and expanded in the Jogan Gishiki of circa 872 and the Engi Shiki of 927.",
+            "wiki"
+          ],
+          [
+            "The actions of priests at the Yasukuni Shrine in Tokyo have generated controversy across East Asia",
+            "wiki"
+          ],
+          [
+            "Particularly controversial has been the Yasukuni Shrine in Tokyo, devoted to Japan's war dead.",
+            "wiki"
+          ],
+          [
+            "In 1979 it enshrined 14 men who had been declared Class-A defendants at the 1946 Tokyo War Crimes Trials, generating domestic and international condemnation, particularly from China and Korea.",
+            "wiki"
+          ],
+          [
+            "In contemporary Japan, there are two main training universities for those wishing to become kannushi, at Kokugakuin University in Tokyo and at Kogakkan University in Mie Prefecture.",
+            "wiki"
+          ],
+          [
+            "Shrines such as Shimogamo Jinja and Fushimi Inari Taisha in Kyoto, Meiji Jing\u016b in Tokyo, and Atsuta Jing\u016b in Nagoya are among Japan's most popular tourist sites.",
+            "wiki"
+          ],
+          [
+            "Procession of the kami as part of the Fukagawa Matsuri festival in Tokyo",
+            "wiki"
+          ],
+          [
+            "In the Meiji period, many local traditions died out and were replaced by nationally standardised practices encouraged from Tokyo.",
+            "wiki"
+          ],
+          [
+            "The headquarters of the Association of Shinto Shrines in Shibuya, Tokyo",
+            "wiki"
+          ],
+          [
+            "Shinto purification rite after a ceremonial children's sumo tournament at the Kamigamo Jinja in Kyoto",
+            "wiki"
+          ],
+          [
+            "Assemblage of small torii at the Fushimi Inari-taisha shrine in Kyoto",
+            "wiki"
+          ],
+          [
+            "The main gate to Fushimi Inari-taisha in Kyoto, one of the oldest shrines in Japan",
+            "wiki"
+          ],
+          [
+            "Shrines such as Shimogamo Jinja and Fushimi Inari Taisha in Kyoto, Meiji Jing\u016b in Tokyo, and Atsuta Jing\u016b in Nagoya are among Japan's most popular tourist sites.",
+            "wiki"
+          ],
+          [
+            "At shrines such as \u014charano Shrine in Kyoto, azuma-asobi (\"eastern entertainment\") music is performed on April 8.",
+            "wiki"
+          ],
+          [
+            "Also in Kyoto, various festivals make use of the dengaku style of music and dance, which originated from rice-planting songs.",
+            "wiki"
+          ],
+          [
+            "Participants in a procession for Aoi Matsuri in Kyoto",
+            "wiki"
+          ],
+          [
+            "For instance, the Aoi Matsuri festival, held on 15 May to pray for an abundant grain harvest, takes place at shrines in Kyoto, while the Chichibu Yo-Matsuri takes place on 2\u20133 December in Chichibu.",
+            "wiki"
+          ],
+          [
+            "Torii mark the entrance to Shinto shrines and are recognizable symbols of the religion.",
+            "wiki"
+          ],
+          [
+            "Shinto (Japanese: \u795e\u9053, romanized:\u00a0Shint\u014d) is a religion originating in Japan.",
+            "wiki"
+          ],
+          [
+            "There is no central authority in control of Shinto, with much diversity of belief and practice evident among practitioners.",
+            "wiki"
+          ],
+          [
+            "A polytheistic and animistic religion, Shinto revolves around supernatural entities called the kami (\u795e).",
+            "wiki"
+          ],
+          [
+            "Shinto places a major conceptual focus on ensuring purity, largely by cleaning practices such as ritual washing and bathing, especially before worship.",
+            "wiki"
+          ],
+          [
+            "Although historians debate at what point it is suitable to refer to Shinto as a distinct religion, kami veneration has been traced back to Japan's Yayoi period (300 BC to 300 AD).",
+            "wiki"
+          ],
+          [
+            "During the Meiji era (1868 to 1912), Japan's nationalist leadership expelled Buddhist influence from kami worship and formed State Shinto, which some historians regard as the origin of Shinto as a distinct religion.",
+            "wiki"
+          ],
+          [
+            "With the formation of the Japanese Empire in the early 20th century, Shinto was exported to other areas of East Asia.",
+            "wiki"
+          ],
+          [
+            "Following Japan's defeat in World War II, Shinto was formally separated from the state.",
+            "wiki"
+          ],
+          [
+            "Shinto is primarily found in Japan, where there are around 100,000 public shrines, although practitioners are also found abroad.",
+            "wiki"
+          ],
+          [
+            "Most of the country's population takes part in both Shinto and Buddhist activities, especially festivals, reflecting a common view in Japanese culture that the beliefs and practices of different religions need not be exclusive.",
+            "wiki"
+          ],
+          [
+            "Aspects of Shinto have been incorporated into various Japanese new religious movements.",
+            "wiki"
+          ],
+          [
+            "There is no universally agreed definition of Shinto.",
+            "wiki"
+          ],
+          [
+            "However, the authors Joseph Cali and John Dougill stated that if there was \"one single, broad definition of Shinto\" that could be put forward, it would be that \"Shinto is a belief in kami\", the supernatural entities at the centre of the religion.",
+            "wiki"
+          ],
+          [
+            "The Japanologist Helen Hardacre stated that \"Shinto encompasses doctrines, institutions, ritual, and communal life based on kami worship\", while the scholar of religion Inoue Nobutaka observed the term \"Shinto\" was \"often used\" in \"reference to kami worship and related theologies, rituals and practices\".",
+            "wiki"
+          ],
+          [
+            "Various scholars have referred to practitioners of Shinto as Shintoists, although this term has no direct translation in the Japanese language.",
+            "wiki"
+          ],
+          [
+            "Scholars have debated at what point in history it is legitimate to start talking about Shinto as a specific phenomenon.",
+            "wiki"
+          ],
+          [
+            "The scholar of religion Ninian Smart suggested that one could \"speak of the kami religion of Japan, which lived symbiotically with organized Buddhism, and only later was institutionalized as Shinto.\" While several institutions and practices now associated with Shinto existed in Japan by the 8th century, various scholars have argued that Shinto as a distinct religion was essentially \"invented\" during the 19th century, in Japan's Meiji era.",
+            "wiki"
+          ],
+          [
+            "The scholar of religion Brian Bocking stressed that, especially when dealing with periods before the Meiji era, the term Shinto should \"be approached with caution\".",
+            "wiki"
+          ],
+          [
+            "Inoue Nobutaka stated that \"Shinto cannot be considered as a single religious system that existed from the ancient to the modern period\", while the historian Kuroda Toshio noted that \"before modern times Shinto did not exist as an independent religion\".",
+            "wiki"
+          ],
+          [
+            "Many scholars describe Shinto as a religion, a term first translated into Japanese as sh\u016bky\u014d around the time of the Meiji Restoration.",
+            "wiki"
+          ],
+          [
+            "Some practitioners instead view Shinto as a \"way\", thus characterising it more as custom or tradition, partly as an attempt to circumvent the modern separation of religion and state and restore Shinto's historical links with the Japanese state.",
+            "wiki"
+          ],
+          [
+            "Moreover, many of the categories of religion and religiosity defined in Western culture \"do not readily apply\" to Shinto.",
+            "wiki"
+          ],
+          [
+            "Unlike religions familiar in Western countries, such as Christianity and Islam, Shinto has no single founder, nor any single canonical text.",
+            "wiki"
+          ],
+          [
+            "Shinto is often cited alongside Buddhism as one of Japan's two main religions, and the two often differ in focus, with Buddhism emphasising the idea of transcending the cosmos, which it regards as being replete with suffering, while Shinto focuses on adapting to life's pragmatic requirements.",
+            "wiki"
+          ],
+          [
+            "Shinto has integrated elements from religions imported from mainland Asia, such as Buddhism, Confucianism, Taoism, and Chinese divination practices, and shares features like its polytheism with other East Asian religions.",
+            "wiki"
+          ],
+          [
+            "Scholars of religion have debated how to classify Shinto.",
+            "wiki"
+          ],
+          [
+            "Picken suggested that Shinto be classed as a world religion, while the historian H.",
+            "wiki"
+          ],
+          [
+            "Shinto is also often described as an indigenous religion, although this generates debates over the different definitions of \"indigenous\" in the Japanese context.",
+            "wiki"
+          ],
+          [
+            "The notion of Shinto as Japan's \"indigenous religion\" stemmed from the growth of modern nationalism between the Edo and Meiji periods; this view promoted the idea that Shinto's origins were prehistoric and that it represented something like the \"underlying will of Japanese culture\".",
+            "wiki"
+          ],
+          [
+            "The prominent Shinto theologian Sokyo Ono, for instance, said kami worship was \"an expression\" of the Japanese \"native racial faith which arose in the mystic days of remote antiquity\" and that it was \"as indigenous as the people that brought the Japanese nation into existence\".",
+            "wiki"
+          ],
+          [
+            "Earhart noted that Shinto, in having absorbed much Chinese and Buddhist influence, was \"too complex to be labelled simply  indigenous religion\".",
+            "wiki"
+          ],
+          [
+            "In the early 21st century it became increasingly common for practitioners to call Shinto a nature religion, which critics saw as a strategy to disassociate the tradition from controversial issues surrounding militarism and imperialism.",
+            "wiki"
+          ],
+          [
+            "Shinto displays substantial local variation; the anthropologist John K.",
+            "wiki"
+          ],
+          [
+            "Different types of Shinto have been identified. \"Shrine Shinto\" refers to the practices centred around shrines, and \"Domestic Shinto\" to the ways in which kami are venerated in the home.",
+            "wiki"
+          ],
+          [
+            "Some scholars have used the term \"Folk Shinto\" to designate localised Shinto practices, or practices outside of an institutionalised setting.",
+            "wiki"
+          ],
+          [
+            "In various eras of the past, there was also a \"State Shinto\", in which Shinto beliefs and practices were closely interlinked with the Japanese state.",
+            "wiki"
+          ],
+          [
+            "In representing \"a portmanteau term\" for many varied traditions across Japan, the term \"Shinto\" is similar to the term \"Hinduism\", used to describe varied traditions across South Asia.",
+            "wiki"
+          ],
+          [
+            "The term Shinto is often translated into English as \"the way of the kami\", although its meaning has varied throughout Japanese history.",
+            "wiki"
+          ],
+          [
+            "Other terms are sometimes used synonymously with \"Shinto\"; these include kami no michi (\u795e\u306e\u9053, \"the way of the kami\"), kannagara no michi (\u795e\u306a\u304c\u3089\u306e\u9053, also written \u968f\u795e\u306e\u9053 or \u60df\u795e\u306e\u9053, \"the way of the kami from time immemorial\"), Kod\u014d (\u53e4\u9053, \"the ancient way\"), Daid\u014d (\u5927\u9053, \"the great way\"), and Teid\u014d (\u5e1d\u9053, \"the imperial way\").",
+            "wiki"
+          ],
+          [
+            "The term Shinto derives from the combination of two Chinese characters: shin (\u795e), which means \"spirit\" or \"god\", and t\u014d (\u9053), which means \"way\", \"road\" or \"path\". \"Shint\u014d\" (\u795e\u9053, \"the Way of the Gods\") was a term already used in the Book of Changes referring to the divine order of nature.",
+            "wiki"
+          ],
+          [
+            "Among the earliest known appearances of the term Shinto in Japan is in the 8th-century text, Nihon Shoki.",
+            "wiki"
+          ],
+          [
+            "In these early Japanese uses, the word Shinto did not apply to a distinct religious tradition nor to anything uniquely Japanese; the 11th century Konjaku monogatarishui for instance refers to a woman in China practicing Shinto, and also to people in India worshipping kami, indicating these terms were being used to describe religions outside Japan itself.",
+            "wiki"
+          ],
+          [
+            "At this point, the term Shinto increasingly referred to \"the authority, power, or activity of a kami, being a kami, or, in short, the state or attributes of a kami.\" It appears in this form in texts such as Nakatomi no harai kunge and Shint\u014dsh\u016b tales.",
+            "wiki"
+          ],
+          [
+            "In the Japanese Portuguese Dictionary of 1603, Shinto is defined as referring to \"kami or matters pertaining to kami.\" The term Shinto became common in the 15th century.",
+            "wiki"
+          ],
+          [
+            "During the late Edo period, the kokugaku scholars began using the term Shinto to describe what they believed was an ancient, enduring and indigenous Japanese tradition that predated Buddhism; they argued that Shinto should be used to distinguish kami worship from traditions like Buddhism, Taoism, and Confucianism.",
+            "wiki"
+          ],
+          [
+            "This use of the term Shinto became increasingly popular from the 18th century.",
+            "wiki"
+          ],
+          [
+            "The term Shinto has been commonly used only since the early 20th century, when it superseded the term taiky\u014d ('great religion') as the name for the Japanese state religion.",
+            "wiki"
+          ],
+          [
+            "Shinto is polytheistic, involving the veneration of many deities known as kami, or sometimes as jingi (\u795e\u7947).",
+            "wiki"
+          ],
+          [
+            "In Japanese, it is often said that there are eight million kami, a term which connotes an infinite number, and Shinto practitioners believe that they are present everywhere.",
+            "wiki"
+          ],
+          [
+            "Accordingly, Nelson commented that Shinto regards \"the actual phenomena of the world itself\" as being \"divine\".",
+            "wiki"
+          ],
+          [
+            "Shinto seeks to cultivate and ensure a harmonious relationship between humans and the kami and thus with the natural world.",
+            "wiki"
+          ],
+          [
+            "In the State Shinto system of the Meiji era, the emperor of Japan was declared to be a kami, while several Shinto sects have also viewed their leaders as living kami.",
+            "wiki"
+          ],
+          [
+            "Shinto cosmology also includes spirits who cause malevolent acts, bakemono, a category including oni, tengu, kappa, mononoke, and yamanba.",
+            "wiki"
+          ],
+          [
+            "In Shinto, the creative principle permeating all life is known as musubi, and is associated with its own kami.",
+            "wiki"
+          ],
+          [
+            "There is no eschatology in Shinto.",
+            "wiki"
+          ],
+          [
+            "Texts such as the Kojiki and Nihon Shoki portray multiple realms in Shinto cosmology.",
+            "wiki"
+          ],
+          [
+            "Modern Shinto places greater emphasis on this life than on any afterlife, although it does espouse belief in a human spirit or soul, the mitama or tamashii, which contains four aspects.",
+            "wiki"
+          ],
+          [
+            "Mythological stories like the Kojiki describe yomi or yomi-no-kuni as a realm of the dead, although this plays no role in modern Shinto.",
+            "wiki"
+          ],
+          [
+            "Modern Shinto ideas about the afterlife largely revolve around the idea that the spirit survives bodily death and continues to assist the living.",
+            "wiki"
+          ],
+          [
+            "Shinto's afterlife beliefs also include the obake, restless spirits who died in bad circumstances and often seek revenge.",
+            "wiki"
+          ],
+          [
+            "A key theme in Shinto is the avoidance of kegare (\"pollution\" or \"impurity\"), while ensuring harae (\"purity\").",
+            "wiki"
+          ],
+          [
+            "Shinto purification rite after a ceremonial children's sumo tournament at the Kamigamo Jinja in Kyoto",
+            "wiki"
+          ],
+          [
+            "Among the things regarded as particular pollutants in Shinto are death, disease, witchcraft, the flaying alive of an animal, incest, bestiality, excrement, and blood associated with either menstruation or childbirth.",
+            "wiki"
+          ],
+          [
+            "Salt is often regarded as a purifying substance; some Shinto practitioners will for instance sprinkle salt on themselves after a funeral, while those running restaurants may put a small pile of salt outside before business commences each day.",
+            "wiki"
+          ],
+          [
+            "Shinto incorporates morality tales and myths but no codified ethical doctrine, and thus no \"unified, systematized code of behaviour\".",
+            "wiki"
+          ],
+          [
+            "Shinto sometimes includes reference to four virtues known as the akaki kiyoki kokoro or sei-mei-shin, meaning \"purity and cheerfulness of heart\", which are linked to the state of harae.",
+            "wiki"
+          ],
+          [
+            "Attitudes to sex and fertility tend to be forthright in Shinto.",
+            "wiki"
+          ],
+          [
+            "Shinto's flexibility regarding morality and ethics has been a source of frequent criticism, especially from those arguing that the religion can readily become a pawn for those wishing to use it to legitimise their authority and power.",
+            "wiki"
+          ],
+          [
+            "In Shinto, kannagara (\"way of the kami\") is the law of the natural order, with wa (\"benign harmony\") being inherent in all things.",
+            "wiki"
+          ],
+          [
+            "In the modern world, Shinto has tended toward conservatism, as well as nationalism, an association that results in various Japanese civil liberties groups and neighboring countries regarding Shinto suspiciously.",
+            "wiki"
+          ],
+          [
+            "In the 21st century, Shinto has increasingly been portrayed as a nature-centred spirituality with environmentalist credentials; several shrines have collaborated with local environmentalist campaigns, while an international interfaith conference on environmental sustainability was held at the Ise shrine in 2014.",
+            "wiki"
+          ],
+          [
+            "Critical commentators have characterised the presentation of Shinto as an environmentalist movement as a rhetorical ploy rather than a concerted effort by Shinto institutions to become environmentally sustainable.",
+            "wiki"
+          ],
+          [
+            "Shinto focuses on ritual behavior rather than doctrine.",
+            "wiki"
+          ],
+          [
+            "Williams stated that Shinto is \"first and foremost a ritual tradition\", while Picken observed that \"Shinto is interested not in credenda but in agenda, not in things that should be believed but in things that should be done.\" The scholar of religion Clark B.",
+            "wiki"
+          ],
+          [
+            "Offner stated that Shinto's focus was on \"maintaining communal, ceremonial traditions for the purpose of human (communal) well-being\".",
+            "wiki"
+          ],
+          [
+            "It is often difficult to distinguish Shinto practices from Japanese customs more broadly, with Picken observing that the \"worldview of Shinto\" provided the \"principal source of self-understanding within the Japanese way of life\".",
+            "wiki"
+          ],
+          [
+            "Nelson stated that \"Shinto-based orientations and values\u00a0 lie at the core of Japanese culture, society, and character\".",
+            "wiki"
+          ],
+          [
+            "There are around 100,000 public shrines in Japan; about 80,000 are affiliated with the Association of Shinto Shrines, with another 20,000 being unaffiliated.",
+            "wiki"
+          ],
+          [
+            "These funds are used to pay the wages of the priests, to finance the upkeep of the buildings, to cover the shrine's membership fees of various regional and national Shinto groups, and to contribute to disaster relief funds.",
+            "wiki"
+          ],
+          [
+            "In Shinto, it is seen as important that the places in which kami are venerated be kept clean and not neglected.",
+            "wiki"
+          ],
+          [
+            "Yutateshinji ceremony performed by Shinto priests at the Miwa Shrine in Sakurai, Nara",
+            "wiki"
+          ],
+          [
+            "Shinto priests are known in Japanese as kannushi, meaning \"proprietor of kami\", or alternatively as shinshoku or shinkan.",
+            "wiki"
+          ],
+          [
+            "Miko performing a Shinto ceremony near the Kamo River",
+            "wiki"
+          ],
+          [
+            "As with teachers, instructors, and Buddhist clergy, Shinto priests are often referred to as sensei by lay practitioners.",
+            "wiki"
+          ],
+          [
+            "By the late 1990s, around 90% of priests were male, 10% female, contributing to accusations that Shinto discriminates against women.",
+            "wiki"
+          ],
+          [
+            "Unlike in certain other religions, Shinto shrines do not have weekly services that practitioners are expected to attend.",
+            "wiki"
+          ],
+          [
+            "Some Shinto practitioners do not offer their prayers to the kami directly, but rather request that a priest offer them on their behalf; these prayers are known as kit\u014d.",
+            "wiki"
+          ],
+          [
+            "Before a building is constructed, it is common for either private individuals or the construction company to employ a Shinto priest to come to the land being developed and perform the jichinsai, or earth sanctification ritual.",
+            "wiki"
+          ],
+          [
+            "Pilgrimage has long been important in Japanese religion, with pilgrimages to Shinto shrines called junrei.",
+            "wiki"
+          ],
+          [
+            "Shinto rituals begin with a process of purification, often involving the washing of the hands and mouth at the temizu basin; this example is at Itsukushima Jinja.",
+            "wiki"
+          ],
+          [
+            "Shinto rituals begin with a process of purification, or harae.",
+            "wiki"
+          ],
+          [
+            "Another form of purification at the start of a Shinto rite entails waving a white paper streamer or wand known as the haraigushi.",
+            "wiki"
+          ],
+          [
+            "Having seen their popularity increase in the Meiji era, many Shinto practitioners also have a family shrine, or kamidana (\"kami shelf\"), in their home.",
+            "wiki"
+          ],
+          [
+            "In the rare instances where Japanese individuals are given a Shinto funeral rather than a Buddhist one, a tama-ya, mitama-ya, or sorei-sha shrine may be erected in the home in place of a butsudan.",
+            "wiki"
+          ],
+          [
+            "Household Shinto can focus attention on the d\u014dzoku-shin, kami who are perceived to be ancestral to the d\u014dzoku or extended kinship group.",
+            "wiki"
+          ],
+          [
+            "In addition to the jinja shrines and the household shrines, Shinto also features small wayside shrines known as hokora.",
+            "wiki"
+          ],
+          [
+            "A selection of wooden ema hanging up at a Shinto shrine",
+            "wiki"
+          ],
+          [
+            "A common feature of Shinto shrines is the provision of ema, small wooden plaques onto which practitioners will write a wish or desire that they would like to see fulfilled.",
+            "wiki"
+          ],
+          [
+            "Ema are provided both at Shinto shrines and Buddhist temples in Japan; unlike most amulets, which are taken away from the shrine, the ema are typically left there as a message for the resident kami.",
+            "wiki"
+          ],
+          [
+            "Divination is the focus of many Shinto rituals, with various forms of divination used by its practitioners, some introduced from China.",
+            "wiki"
+          ],
+          [
+            "A form of divination that is popular at Shinto shrines are the omikuji.",
+            "wiki"
+          ],
+          [
+            "Ofuda are provided both at Shinto shrines and Buddhist temples.",
+            "wiki"
+          ],
+          [
+            "Throughout Japanese history, dance has played an important culture role and in Shinto it is regarded as having the capacity to pacify kami.",
+            "wiki"
+          ],
+          [
+            "Picken suggested that the festival was \"the central act of Shinto worship\" because Shinto was a \"community- and family-based\" religion.",
+            "wiki"
+          ],
+          [
+            "According to a traditional lunar calendar, Shinto shrines should hold their festival celebrations on hare-no-hi or \"clear\" days\", the days of the new, full, and half moons.",
+            "wiki"
+          ],
+          [
+            "The Niiname-sai, or festival of new rice, is held across many Shinto shrines on 23 November.",
+            "wiki"
+          ],
+          [
+            "A common ritual, the hatsumiyamairi, entails a child's first visit to a Shinto shrine.",
+            "wiki"
+          ],
+          [
+            "Wedding ceremonies are often carried out at Shinto shrines; these are called shinzen kekkon (\"a wedding before the kami\").",
+            "wiki"
+          ],
+          [
+            "In Japan, funerals tend to take place at Buddhist temples and involve cremation, with Shinto funerals being rare.",
+            "wiki"
+          ],
+          [
+            "Bocking noted that most Japanese people are \"still 'born Shinto' yet 'die Buddhist'.\" In Shinto thought, contact with death is seen as imparting impurity (kegare); the period following this contact is known as kibuku and is associated with various taboos.",
+            "wiki"
+          ],
+          [
+            "Although not common, there have been examples of funerals conducted through Shinto rites.",
+            "wiki"
+          ],
+          [
+            "Following the Meiji Restoration, in 1868 the government recognised specifically Shinto funerals for Shinto priests.",
+            "wiki"
+          ],
+          [
+            "Despite this Meiji promotion of Shinto funerals, the majority of the population continued to have Buddhist funeral rites.",
+            "wiki"
+          ],
+          [
+            "In recent decades, Shinto funerals have usually been reserved for Shinto priests and for members of certain Shinto sects.",
+            "wiki"
+          ],
+          [
+            "Shinto practitioners believe that the kami can possess a human being and then speak through them, a process known as kami-gakari.",
+            "wiki"
+          ],
+          [
+            "Several new religious movements drawing upon Shinto, such as Tenrikyo and Oomoto, were founded by individuals claiming to be guided by a possessing kami.",
+            "wiki"
+          ],
+          [
+            "Earhart commented that Shinto ultimately \"emerged from the beliefs and practices of prehistoric Japan\", although Kitagawa noted that it was questionable whether prehistoric Japanese religions could be accurately termed \"early Shinto\".",
+            "wiki"
+          ],
+          [
+            "It was the Yayoi period of Japanese prehistory which first left traces of material and iconography prefiguring that later included in Shinto.",
+            "wiki"
+          ],
+          [
+            "Hardacre saw the Jingikan as \"the institutional origin of Shinto\".",
+            "wiki"
+          ],
+          [
+            "This practice was necessary due to the Shinto belief in the impurity of death and the need to avoid this pollution.",
+            "wiki"
+          ],
+          [
+            "The establishment of the imperial city in partnership with Taih\u014d Code is important to Shinto as the office of the Shinto rites becomes more powerful in assimilating local clan shrines into the imperial fold.",
+            "wiki"
+          ],
+          [
+            "Breen and Teeuwen characterise the period between 1868 and 1915, during the Meiji era, as being the \"formative years\" of modern Shinto.",
+            "wiki"
+          ],
+          [
+            "It is in this period that various scholars have argued that Shinto was essentially \"invented\".",
+            "wiki"
+          ],
+          [
+            "Fridell argues that scholars call the period from 1868 to 1945 the \"State Shinto period\" because, \"during these decades, Shinto elements came under a great deal of overt state influence and control as the Japanese government systematically utilized shrine worship as a major force for mobilizing imperial loyalties on behalf of modern nation-building.\" However, the government had already been treating shrines as an extension of government before Meiji; see for example the Tenp\u014d Reforms.",
+            "wiki"
+          ],
+          [
+            "Shinto effectively became the state cult, one promoted with growing zeal in the build-up to the Second World War.",
+            "wiki"
+          ],
+          [
+            "In 1882, the Meiji government designated 13 religious movements that were neither Buddhist nor Christian to be forms of \"Sect Shinto\".",
+            "wiki"
+          ],
+          [
+            "The number and name of the sects given this formal designation varied; often they merged ideas with Shinto from Buddhism, Christian, Confucian, Daoist, and Western esoteric traditions.",
+            "wiki"
+          ],
+          [
+            "The headquarters of the Association of Shinto Shrines in Shibuya, Tokyo",
+            "wiki"
+          ],
+          [
+            "This enshrined freedom of religion and separated religion from the state, a measure designed to eradicate State Shinto.",
+            "wiki"
+          ],
+          [
+            "The emperor declared that he was not a kami; Shinto rituals performed by the imperial family became their own private affair.",
+            "wiki"
+          ],
+          [
+            "In 1946 many shrines formed a voluntary organisation, the Association of Shinto Shrines (Jinja Honch\u014d).",
+            "wiki"
+          ],
+          [
+            "In 1956 the association issued a creedal statement, the keishin seikatsu no k\u014dry\u014d (\"general characteristics of a life lived in reverence of the kami\"), to summarise what they regarded as Shinto's principles.",
+            "wiki"
+          ],
+          [
+            "By the late 1990s around 80% of Japan's Shinto shrines were part of this association.",
+            "wiki"
+          ],
+          [
+            "In the post-war decades, many Japanese blamed Shinto for encouraging the militarism which had led to defeat and occupation.",
+            "wiki"
+          ],
+          [
+            "Others remained nostalgic for State Shinto, and concerns were repeatedly expressed that sectors of Japanese society were conspiring to restore it.",
+            "wiki"
+          ],
+          [
+            "Various legal debates revolved around the involvement of public officials in Shinto.",
+            "wiki"
+          ],
+          [
+            "In 1965, for instance, the city of Tsu, Mie Prefecture, paid four Shinto priests to purify the site where the municipal athletic hall was to be built.",
+            "wiki"
+          ],
+          [
+            "During the post-war period, Shinto themes often blended into Japanese new religious movements.",
+            "wiki"
+          ],
+          [
+            "Of the Sect Shinto groups, Tenrikyo was probably the most successful, although in 1970 it repudiated its Shinto identity.",
+            "wiki"
+          ],
+          [
+            "Shinto perspectives also influenced popular culture.",
+            "wiki"
+          ],
+          [
+            "The film director Hayao Miyazaki of Studio Ghibli for instance acknowledged Shinto influences on his films such as Spirited Away.",
+            "wiki"
+          ],
+          [
+            "Shinto also spread abroad through both emigration and conversion by non-Japanese.",
+            "wiki"
+          ],
+          [
+            "During the 20th century, most academic research on Shinto was conducted by Shinto theologians, often priests, bringing accusations that it often blurred theology with historical analysis.",
+            "wiki"
+          ],
+          [
+            "From the 1980s onward, there was a renewed academic interest in Shinto both in Japan and abroad.",
+            "wiki"
+          ],
+          [
+            "A Shinto rite carried out at a jinja in San Marino, Southern Europe",
+            "wiki"
+          ],
+          [
+            "Determining the proportions of the country's population who engage in Shinto activity is hindered by the fact that, if asked, Japanese people will often say \"I have no religion\".",
+            "wiki"
+          ],
+          [
+            "Official statistics show Shinto to be Japan's largest religion, with over 80 per cent of its population engaging in Shinto activities.",
+            "wiki"
+          ],
+          [
+            "Conversely, in questionnaires only a small minority of Japanese describe themselves as \"Shintoists.\" This indicates that a far larger number of people engage in Shinto activities than cite Shinto as their religious identity.",
+            "wiki"
+          ],
+          [
+            "There are no formal rituals to become a practitioner of \"folk Shinto\".",
+            "wiki"
+          ],
+          [
+            "Thus, \"Shinto membership\" is often estimated counting only those who do join organized Shinto sects.",
+            "wiki"
+          ],
+          [
+            "Shinto has about 81,000 shrines and about 85,000 priests in the country.",
+            "wiki"
+          ],
+          [
+            "According to surveys carried out in 2006 and 2008, less than 40% of the population of Japan identifies with an organised religion: around 35% are Buddhists, 30% to 40% are members of Shinto sects and derived religions.",
+            "wiki"
+          ],
+          [
+            "In 2008, 26% of the participants reported often visiting Shinto shrines, while only 16.2% expressed belief in the existence of kami in general.",
+            "wiki"
+          ],
+          [
+            "The end of the 19th and beginning of the 20th centuries were marked by the expansion of the Empire of Japan, which also led to the spread of Shinto in the colonized territories.",
+            "wiki"
+          ],
+          [
+            "Japanese migrants have also established jinja in countries like Brazil, while Shinto's lack of doctrinal focus has attracted interest from non-Japanese; in the United States, for example, European Americans have played a significant role in introducing Shinto.",
+            "wiki"
+          ],
+          [
+            "These objects resemble the holy sword and mirror described in the Kojiki and Nihon Shiki, and allowed for a clearer understanding of elements that would lead to the Shinto faith later.",
+            "wiki"
+          ],
+          [
+            "This can be seen in myths in the Kojiki and Nihon Shiki and is believed to have had an impact on the formation of belief in kami with humanlike aspects.",
+            "wiki"
+          ],
+          [
+            "There were also regulations for the \u014charae-shiki, in which the Nakatomi clan first offered an \u014dnusa to the emperor, and the Yamatonoaya clan and Kawachinohumi clan offered a harae-no-tachi (\u7953\u5200, sword used for purification) as well as performed the reading of ritual incantations.",
+            "wiki"
+          ],
+          [
+            "Onmy\u014dd\u014d's development also had an impact on Shinto, as some rituals such as the \u041e\u0304harae-shiki and Michiae-no-Matsuri (\u9053\u9957\u796d) which had been conducted by the Department of Divinities were later conducted by the Onmy\u014dry\u014d (\u9670\u967d\u5bee), the department of Onmy\u014dd\u014d.",
+            "wiki"
+          ],
+          [
+            "Additionally, the ritual text for the \u041e\u0304harae-shiki, also known as the Nakatomi Harae (\u4e2d\u81e3\u7953), changed into the Nakatomi Saimon (\u4e2d\u81e3\u796d\u6587, lit. \"Nakatomi ritual text\") and became used by Onmy\u014dd\u014d priests.",
+            "wiki"
+          ],
+          [
+            "In the case of the parade of portable shrines, the residents of Kyoto prepared the Ootabisho and conducted the festival, so there was little official involvement of the Imperial Court, and the festival was a common people's festival with an extremely high degree of originality and place of the residents of Kyoto.",
+            "wiki"
+          ],
+          [
+            "By the middle of the Heian period (794-1185), other festivals were established in Kyoto, including the Kitano Goryo-kai, Matsuo Matsuri, Imamiya Matsuri, and Inari Matsuri.",
+            "wiki"
+          ],
+          [
+            "During the \u014cnin reign, the \u014cnin War broke out and Kyoto was burnt to the ground, affecting many temples and shrines, and causing the abortion of imperial court rituals such as the \u014cnin Festival and the coronation ceremony.",
+            "wiki"
+          ],
+          [
+            "Yoshida Shrine in Sakyo-ku Kyoto City",
+            "wiki"
+          ],
+          [
+            "Outside of Edo, many urban festivals were revitalized, such as Gion Matsuri and Imamiya Matsuri in Kyoto, Tenjin Matsuri in Osaka, Hiyoshi Sanno Matsuri in Shiga, Chichibu Yatsuri in Saitama, and Takayama Matsuri in Gifu.",
+            "wiki"
+          ],
+          [
+            "After the death of Yaksai Yamazaki, his pupil Shoshinmachi Kimimichi succeeded him, and the Taruka Shinto sect reached its zenith, spreading throughout the country, especially in Edo and Kyoto, widely spreading among nobles, warriors, and priests, and having the greatest influence on the Shinto world.",
+            "wiki"
+          ],
+          [
+            "Shinto is a religion native to Japan with a centuries'-long history tied to various influences in origin.",
+            "wiki"
+          ],
+          [
+            "Although historians debate the point at which it is suitable to begin referring to Shinto as a distinct religion, kami veneration has been traced back to Japan's Yayoi period (300 BC to AD 300).",
+            "wiki"
+          ],
+          [
+            "During the Meiji era (1868 to 1912), Japan's nationalist leadership expelled Buddhist influence from kami worship and formed State Shinto, which some historians regard as the origin of Shinto as a distinct religion.",
+            "wiki"
+          ],
+          [
+            "With the formation of the Japanese Empire in the early 20th century, Shinto was exported to other areas of East Asia.",
+            "wiki"
+          ],
+          [
+            "Following Japan's defeat in World War II, Shinto was formally separated from the state.",
+            "wiki"
+          ],
+          [
+            "Even among experts, there are no settled theories on what Shinto is or how far it should be included, and there are no settled theories on where the history of Shinto begins.",
+            "wiki"
+          ],
+          [
+            "The Shinto scholar Okada Chuangji\u00a0 says that the \"origin\" of Shinto was completed from the Yayoi period to the Kofun period, but as for the timing of the establishment of a systematic Shinto, he says that it is not clear.",
+            "wiki"
+          ],
+          [
+            "Although there is no definitive theory on the origin of Shinto as a religion; its origins date back to the ancient history of Japan.",
+            "wiki"
+          ],
+          [
+            "Rituals were held at the first Shinto shrines such as Munakata Taisha and \u014cmiwa Shrine, and the prototype of Shinto was formed.",
+            "wiki"
+          ],
+          [
+            "In the Heian period, the Ritsuryo system was relaxed and the emperor and his vassals became directly involved in the rituals of local shrines without going through the Shinto priests.",
+            "wiki"
+          ],
+          [
+            "In addition, beliefs such as Shugendo and Onmy\u014dd\u014d were established in Japan, and these also influenced Shinto.",
+            "wiki"
+          ],
+          [
+            "In the Middle Ages, there was a widespread movement to doctrinize and internalize Shinto.",
+            "wiki"
+          ],
+          [
+            "In the midst of this spread of Shinto, the intellectual class began to use Buddhist theories to interpret Shinto, starting with the Esoteric Buddhist monk's dualistic Shinto, and advocated such theories as Honji Suijaku theory, which held that the Shinto gods were incarnations of Buddha.",
+            "wiki"
+          ],
+          [
+            "In response to this, the Shinto shrines, feeling threatened, systematized the Honji Suijaku theory, which placed their gods above Buddha, against the backdrop of the rise of Shinto after the victory over the Mongol invaders, and established Ise Shinto, which uses the Five Books of Shinto as its basic scripture.",
+            "wiki"
+          ],
+          [
+            "In addition, Yoshida Kanetomo, who lost many ancient books in the \u014cnin War of the Muromachi period, took the opportunity to forge sutras to create the first Shinto theory that had its own doctrine, sutras, and rituals independent of Buddhism.",
+            "wiki"
+          ],
+          [
+            "Yoshida Kanetomo took this opportunity to create the first Shinto theory, Yoshida Shint\u014d, which was the first Shinto theory to have a doctrine, scripture, and rituals.",
+            "wiki"
+          ],
+          [
+            "From the Sengoku era to the Azuchi-Momoyama period, Yoshida Shinto was involved in the construction of shrines that enshrined warring feudal lords as gods.",
+            "wiki"
+          ],
+          [
+            "In this context, in the early Edo period, mainstream Shinto, from the standpoint of criticism of Buddhism, became increasingly associated with the Confucianism of the Cheng-Zhu school, and shifted to Confucian Shinto such as Taruka Shinto.",
+            "wiki"
+          ],
+          [
+            "In the mid-Edo period, Kokugaku, which integrated Shinto with the empirical study of Japanese classics such as poetry and languages, developed and flourished, replacing Confucian Shinto.",
+            "wiki"
+          ],
+          [
+            "The Kokugaku scholar Motoori Norinaga strongly criticized the interpretation of Shinto in terms of Chinese-derived Buddhist and Confucian doctrines, and insisted on conducting empirical studies of Shinto scriptures.",
+            "wiki"
+          ],
+          [
+            "In the late Edo period, Nobunaga's theology was critically inherited by Fukko Shinto.",
+            "wiki"
+          ],
+          [
+            "Fukko Shinto, influenced by Christianity, emphasized the afterlife, as well as Chinese mythology, Hindu mythology, Christian mythology, and other myths from around the world were claimed to be accents of Japanese mythology, and were involved in the subsequent restoration of the monarchy.",
+            "wiki"
+          ],
+          [
+            "Late Mito studies, which advocated the rule of Japan by the emperor by combining Confucianism and Shinto, became the nursery ground for the ideas of the Shishi at the end of the Edo period.",
+            "wiki"
+          ],
+          [
+            "When the Shogunate was overthrown and Japan began to move toward the Late modern period, the new government set the goal of unity of Shinto and politics through the Great Decree of Restoration of the Monarchy.",
+            "wiki"
+          ],
+          [
+            "In addition to the propagation of Shinto based on the Daikyo Declaration, the Shinbutsu bunri led to the separation of Shinto and Buddhism, and in some cases, the Haibutsu Kishaku, the destruction of temples and Buddhist statues.",
+            "wiki"
+          ],
+          [
+            "The Meiji government then formed the State Shinto system in which the state controlled shrines as state religious services.",
+            "wiki"
+          ],
+          [
+            "In response to this, Priests organized the National Association of Priests and launched a movement to restore the power of the Shinto priests, demanding that the government make public expenditures.",
+            "wiki"
+          ],
+          [
+            "The Kannushi organized the National Association of Shinto Priests and launched a movement to restore the Shinto officialdom, demanding that the government make public expenditures.",
+            "wiki"
+          ],
+          [
+            "After the end of World War II, the Shinto Directive by the GHQ dismantled the state Shinto system, which was considered the root of Nationalism ideology.",
+            "wiki"
+          ],
+          [
+            "The Shinto Directive by the State Shinto of the Shinto Directive dismantled the state Shinto system, and shrines were transformed into religious corporations with the Association of Shinto Shrines as the umbrella organization.",
+            "wiki"
+          ],
+          [
+            "Although shrines thus lost their official position in modern times, some shrines have since achieved economic prosperity through free religious activities, and Shinto plays a certain role in Japan's annual events and life rituals.",
+            "wiki"
+          ],
+          [
+            "In the Yayoi period, several Shinto practices appeared that had clear similarities to those seen in the Kojiki and Nihon Shoki.",
+            "wiki"
+          ],
+          [
+            "These objects resemble the holy sword and mirror described in the Kojiki and Nihon Shiki, and allowed for a clearer understanding of elements that would lead to the Shinto faith later.",
+            "wiki"
+          ],
+          [
+            "The first state Shinto rituals occurred in the 4th century.",
+            "wiki"
+          ],
+          [
+            "It is believed that the 4th century, with the rituals held at the early shrines of Munaka Taisha and \u014cmiwa Shrine, was when the base of the following Shinto faith developed.",
+            "wiki"
+          ],
+          [
+            "Other religious objects of the 5th century include iron grave goods in kofun, as well as sue pottery and cloth excavated from various sites including the Senzokudai Site in Chiba Prefecture and Shussaku Site in Ehime Prefecture, and, therefore, this era is believed to be when the precursors of modern Shinto religious offerings (\u5e63\u5e1b, heihaku) developed.",
+            "wiki"
+          ],
+          [
+            "In the 7th century, the establishment of the Ritsury\u014d system began primarily during the Tenmu period and Jit\u014d period, during which Shinto underwent a major transformation.",
+            "wiki"
+          ],
+          [
+            "The systemization of Shinto and the development of an institutional framework of its rituals progressed based on the faiths formed from the Kofun period onward while incorporating aspects from external beliefs, as ritual systems, shrines, and ceremonies developed.",
+            "wiki"
+          ],
+          [
+            "Shinto had an influence on the compilation of national history, a duty which was formed during the reign of Emperor Temmu and developed further during the reign of Empress Genmei.",
+            "wiki"
+          ],
+          [
+            "Volumes one through ten contain laws regarding Shinto, and these ten volumes are collectively referred to as the Jingishiki (\u795e\u7947\u5f0f).",
+            "wiki"
+          ],
+          [
+            "Early on in the adoption, however, Buddhism was not seen as different from Shinto and was taken up in the same way as local Shinto had been.",
+            "wiki"
+          ],
+          [
+            "Buddhist temples also made attempts to move Shinto closer to Buddhism which resulted in the belief that kami were also Defenders of the Justice, beings who protect dharma, and so jinj\u016b-sha shrines were built into Buddhist temples.",
+            "wiki"
+          ],
+          [
+            "Several faiths appeared during the Heian period which contained elements of both Shinto and Buddhism such as belief in Gory\u014d and the Kumano faith which regards Kumano a Pure Land, and the influence of Buddhism led to the creation of statues of kami inspired by Buddhist statues.",
+            "wiki"
+          ],
+          [
+            "Shinto-Buddhims syncretism continued as time went on, giving rise to the honji suijaku theory which claims kami are the temporary forms of Buddhist deities manifested in Japan in order to save the people.",
+            "wiki"
+          ],
+          [
+            "At the same time, the desire to separate Shinto and Buddhism was seen in the imperial court and amongst the shrines.",
+            "wiki"
+          ],
+          [
+            "While Shinto and Buddhism had begun to blend as a faith, ritualistically, they remained two separate systems.",
+            "wiki"
+          ],
+          [
+            "Onmy\u014dd\u014d's development also had an impact on Shinto, as some rituals such as the \u041e\u0304harae-shiki and Michiae-no-Matsuri (\u9053\u9957\u796d) which had been conducted by the Department of Divinities were later conducted by the Onmy\u014dry\u014d (\u9670\u967d\u5bee), the department of Onmy\u014dd\u014d.",
+            "wiki"
+          ],
+          [
+            "However, while Shinto rituals were affairs of the state, Onmy\u014dd\u014d rituals were conducted in an environment of heightened materialistic desires of the aristocrats in order to request personal success and the curing of illness.",
+            "wiki"
+          ],
+          [
+            "Minamoto no Yoritomo, the founder of the shogunate, was a devout follower of Shinto and officially acknowledged the Ise Grand Shrine's claim over its territory.",
+            "wiki"
+          ],
+          [
+            "Additionally, the Kant\u043e\u0304 Shinsei (\u95a2\u6771\u65b0\u5236), a legal code released by the shogunate as opposed to the emperor, contained several regulations surrounding religion such as those relating to development of Shinto institutions and the prevention of the misconduct of Shinto priests.",
+            "wiki"
+          ],
+          [
+            "The retired emperor also conducted more frequent pilgrimages to Kumano Taisha during this period, and the imperial court began to focus more on Shinto rituals as its authority declined as the shogunate rose.",
+            "wiki"
+          ],
+          [
+            "Emperor Juntoku wrote in the Kinpish\u043e\u0304 (\u7981\u79d8\u6284), \"Shinto matters first, all other matters after.\"",
+            "wiki"
+          ],
+          [
+            "In the intellectual class, there was a widespread movement to doctrinize and internalize Shinto.",
+            "wiki"
+          ],
+          [
+            "Later, the Reiki was compiled and became a collection of secret theories based on Shingon esotericism and a representative book of both Shinto",
+            "wiki"
+          ],
+          [
+            "In addition, as Shinto calligraphy and related paper were established at temples, Shinto schools of the Ryobu Shinto sect were formed to transmit these calligraphies, including the Sanpo-in Goryu school, whose founder was Prince Morikaku, and the Miwa school, which developed at Byodoji Temple around Mt.",
+            "wiki"
+          ],
+          [
+            "In these schools of Shinto, the transmission of the secrets of the Shinto religion was carried out in a manner similar to esoteric Buddhism, and this was called Shinto perfusion.",
+            "wiki"
+          ],
+          [
+            "Not only from the standpoint of Shingon Buddhism, but also from the standpoint of Tendai Buddhism, a Shinto theory based on the idea of Shinto-Buddhist syncretism arose.",
+            "wiki"
+          ],
+          [
+            "The basic idea is to explain the significance of Hiyoshi Taisha, the guardian deity of Mount Hiei, based on Tendai doctrine, and this is called Sanno Shinto.",
+            "wiki"
+          ],
+          [
+            "The theory of Shinto in the Tendai sect was mainly carried out by a group of monks called the Kike.",
+            "wiki"
+          ],
+          [
+            "In the Middle Ages, with the spread of the idea of Shinto and Buddhist syncretism, shrines began to produce a large number of auspicious stories, and many shrine auspicious stories and auspicious picture scrolls were produced.",
+            "wiki"
+          ],
+          [
+            "The \"Kasuga Gongen Genki\", the \"Kitano Tenjin Enki\", and the \"Hachiman Gudokun\" are prominent examples, and the \"Shinto Shu\", which was established in the 14th century, contains a collection of such tales.",
+            "wiki"
+          ],
+          [
+            "Medieval mythology, which reinterprets myths based on the syncretism of Shinto and Buddhism, also spread.",
+            "wiki"
+          ],
+          [
+            "In Nichiren Shoshu, Nichiren himself actively adopted Shinto, and it was systematized in the form of Hokke Shinto by Nichiren's disciple Nichiz\u014d.",
+            "wiki"
+          ],
+          [
+            "On the other hand, the Shinto shrines, while being influenced by foreign religions such as Buddhism, began to internalize the doctrine of Shinto.",
+            "wiki"
+          ],
+          [
+            "With the collapse of the Ritsuryo system, a strong sense of crisis arose among the Shinto forces, which began to shake the foundations of their existence, and they began to describe Shinto rituals with a mystical authority.",
+            "wiki"
+          ],
+          [
+            "The background to this is that the Shinto side tried to assert the position of Shinto against Buddhism.",
+            "wiki"
+          ],
+          [
+            "In addition, the rise of Shinkoku\u00a0 thought, or thought that incorporated Jaopan as a sacred land of Shinto after the Japanese victory in the Mongol invasions of Japan and the increase in the authority of Ise Shrine due to the increase in the number of Jingu Mikuriya throughout Japan also served as a background for the formation of systematic Shinto theory.",
+            "wiki"
+          ],
+          [
+            "One of the sutras of Ise Shinto, \"Wahime-no-Mikoto Seiki\" (transcribed in 1769 by Togetsu Maro, a priest at the shrine)",
+            "wiki"
+          ],
+          [
+            "The pioneering example of this is Ise Shinto, which was established in the mid-Kamakura period.",
+            "wiki"
+          ],
+          [
+            "Ise Shinto is a Shinto theory that was formed mainly by the Tukai clan, the outer shrine officials of Ise Jingu, with the \"Five Books of Shinto\" as its basic scriptures.",
+            "wiki"
+          ],
+          [
+            "The five books of Shinto are the basic scriptures.",
+            "wiki"
+          ],
+          [
+            "Among the five books of Shinto, \"Wahime no Mikoto Seiki\" and \"Zou Ise Nisho Taijingu Houbei Ki\" were established relatively early, and they attempted to make the inner and outer shrines equal in rank, and even to make the outer shrine superior to the inner shrine, while using the theory of both the inner and outer shrines in Ryoubu Shinto.",
+            "wiki"
+          ],
+          [
+            "In addition to the theory of rituals, he emphasized the idea of the divine nation by preaching the imperishable nature of the imperial lineage, the dignity of the three sacred treasures, and the nobility of the Shinto shrine.",
+            "wiki"
+          ],
+          [
+            "The impetus for the further development of Ise Shinto was the \"Ise Grand Shrine Controversy\" that arose in 1296 (Eijin 4th year) when the character \"Emperor\" was added to Toyokei Daijingu.",
+            "wiki"
+          ],
+          [
+            "After taking up the above-mentioned books as the basis for the legitimacy of the outer shrine, Yukitada Tokai, who became the center of the outer shrine, said, \"The biography of the Emperor Ise Grand Shrine\" and \"The book of the Emperor Toyokei Shrine\" were written, and the book of Ise Shinto was expanded to the world.",
+            "wiki"
+          ],
+          [
+            "He systematized Ise Shinto by writing \"Ruiju Shingi Hongen\" (The Origin of Shinto), which drew on a wide variety of texts, including those of the Sung school, Laoshou, and Buddhism, as well as his own Shinto doctrine called \"Kikizenron.",
+            "wiki"
+          ],
+          [
+            "In addition to systematizing the Ise Shinto religion, he also taught a unique Shinto doctrine called \"Kikizenron,\" which refers to the state of chaos before the creation of the world as \"Kikizen,\" and states that this is the source of our mind and the essence of God.It is the practice of maintaining cleanliness as a way to make the most of this opportunity.",
+            "wiki"
+          ],
+          [
+            "In the North and South dynasties, Kitabatake Chikafusa, influenced by Ise Shinto, wrote Sh\u014dt\u014dki Kitabatake Chikafusa, who was influenced by the Shinto religion, wrote Sh\u014dtoki and Gengensh\u016b, in which he argued for the supremacy of Japan as a divine nation, since the Japanese imperial line had been continuous since the Shinto era and had never been replaced.",
+            "wiki"
+          ],
+          [
+            "During the same period, the Tendai monk Jippen, influenced by the Ise Shinto religion, wrote \"Gyojimoto Ki Gengi,\" which presented the image of the Emperor as a sovereign and established the political theory of Shinto.",
+            "wiki"
+          ],
+          [
+            "The nobleman Ichij\u014d Kaneyoshi also wrote the \"Nihonshoki Sosho\" (Compilation and Commentary on the Chronicles of Japan), in which he interpreted the Nihonshoki Shinto scrolls philosophically and formed Shinto thought.",
+            "wiki"
+          ],
+          [
+            "Masamichi Imawabe wrote \"Kuchikubetsu\" (The Secrets of the Divine Age Scrolls), in which he described Shinto theology through his commentary on the Divine Age Scrolls of the Nihon Shoki.",
+            "wiki"
+          ],
+          [
+            "However, the loss of many ancient manuscripts due to the war led to the formation of a new Shinto theory called Yoshida Shinto.",
+            "wiki"
+          ],
+          [
+            "Kanetsu wrote \"Shinto Taioi\" and \"Onna Shinto Meibyo Shu\" to compile medieval Shinto thought, while incorporating discourses from various religions to present a new Shinto theory called \"Yoshida Shinto\".",
+            "wiki"
+          ],
+          [
+            "In the book, he classified Shinto into three categories: \"Honjaku Enki Shinto\" (auspicious signs handed down from shrine to shrine), \"Ryobu Nariai Shinto\", and \"Motomune Sougen Shinto\".",
+            "wiki"
+          ],
+          [
+            "He stated that the \"Motomune Sougen Shinto\" handed down by his family was the legitimate Shinto since the dawn of Japan, and defined God as \"the spiritual head of heaven, earth and all things\" and the Way as \"the origin of all things and all actions\".",
+            "wiki"
+          ],
+          [
+            "With regard to the relationship between Shinto, Confucianism and Buddhism, he strongly advocated the theory that Shinto was the root, Confucianism emerged as a branch and leaf in China, and Buddhism blossomed as a fruit in India.",
+            "wiki"
+          ],
+          [
+            "He argued that Shinto has three aspects: \"body,\" which is the essence, \"aspect,\" which is the manifestation, and \"use,\" which is the action, and that these actions govern all phenomena such as the sun and moon, cold and heat, and nature.",
+            "wiki"
+          ],
+          [
+            "In the end, Kaneku's theory of Shinto was a kind of pantheism in which God exists within all beings, and God is omnipresent throughout the universe.",
+            "wiki"
+          ],
+          [
+            "Kaneku formed many rituals along with his Shinto theories.",
+            "wiki"
+          ],
+          [
+            "First, he established the Omotoshae Shrine in the precincts of Yoshida Shrine, which he proclaimed to be the place of worship for the Inner Shrine, Outer Shrine, eight temples, and more than 3,000 Shinto shrines, the root of Shinto rituals in Japan since the time of Jimmu, and the main shrine of all Shinto shrines in Japan.",
+            "wiki"
+          ],
+          [
+            "In addition, under the influence of esoteric Buddhism, he invented the Goma event, in which a fire is kindled in an octagonal platform with a furnace at its center, and grain and porridge are thrown into the fire while praying, forming the San-dan event along with the 18 Shinto events and Sougen Shinto events.",
+            "wiki"
+          ],
+          [
+            "These teachings were expounded by the \"Three Nerves\" of the Tengen Shinhen Shinmyou Sutra, the Local Shinto Shinmyou Sutra, and the Jingen Shinryoku Shinmyou Sutra.",
+            "wiki"
+          ],
+          [
+            "Yoshida Shinto also established the ritual of Shinto funeral rites, in which people are worshipped as gods.",
+            "wiki"
+          ],
+          [
+            "Since ancient times, Shinto has not been very involved in funeral rituals due to the custom of viewing death as Stain, and examples of enshrining deceased people as gods were limited to forms such as grudge worship and Tenjin worship to appease grudges.",
+            "wiki"
+          ],
+          [
+            "However, in Yoshida Shinto, where people and gods are considered to be closely related, funeral rituals were actively practiced, and Yoshida Kento built a Shinryu-sha, a spiritual shrine, over the remains of the deceased.",
+            "wiki"
+          ],
+          [
+            "Although Yoshida Shinto was an emerging force, it rapidly rose to prominence, perhaps due to the social unrest of the age of war, and was widely accepted, especially by the upper classes, as it received the support of Hino Tomiko in the construction of the Omoto Shrine, and even received the imperial approval of the Omoto Shrine in 1473 (Bunmei5).\u3001The center of the Shinto world in modern times.",
+            "wiki"
+          ],
+          [
+            "Yoshida Shinto is the first Shinto theory to have its own doctrines, scriptures, and rituals independent of Buddhism, while integrating various religious discourses in a cross-border manner.",
+            "wiki"
+          ],
+          [
+            "The Shinto scholar Okada Chuangji\u00a0 described the establishment of Yoshida Shinto as \"a turning point in the history of Shinto.",
+            "wiki"
+          ],
+          [
+            "The historian Toshio Kuroda argues that the establishment of Yoshida Shinto was the establishment of Shinto It is considered by several researchers to be a turning point in the history of Shinto.",
+            "wiki"
+          ],
+          [
+            "As mentioned above, Yoshida Shinto, which established Shinto funeral rites, became involved in the construction of shrines that enshrined warring feudal lords as gods in the Warring States period, and Kanemi Yoshida was involved in the construction of Toyokuni Shrine, which enshrined Toyotomi Hideyoshi as a god.",
+            "wiki"
+          ],
+          [
+            "Shinryuin Bonshun of the Yoshida family taught Shinto to Tokugawa Ieyasu, and according to his will, conducted a Shinto funeral service after Ieyasu's death.(However, Nikk\u014d T\u014dsh\u014d-g\u016b became the Sanno Shinto style after Tenkai won the debate).",
+            "wiki"
+          ],
+          [
+            "In addition, a Shinto department under the jurisdiction of the temple and shrine magistrates was established to study the truths of Shinto and the rituals of rituals and to respond to the advice of the temple and shrine magistrates.On the other hand, individual magistrates were assigned to specific shrines, such as Yamada bugy\u014d, who was in charge of Ise Shrine, and Nikko bugy\u014d, who was in charge of Nikko T\u014dsh\u014d-g\u016b.",
+            "wiki"
+          ],
+          [
+            "In 1665 (the fifth year of the Kanbun), the shogunate issued the Priest Law for Priests of Various Shrines, which stated that ordinary Priests without rank must obtain a Shinto license issued by the Yoshida family before they can wear a hunting robe or crown, giving the Yoshida family control over almost all priests.",
+            "wiki"
+          ],
+          [
+            "In this case, the shrine, not the temple, proved that the Christians were not Christians, so it was called \"Shinto Shinto Shinto\" instead of \"Temple Shinto.",
+            "wiki"
+          ],
+          [
+            "After the early modern period, with the restoration of public safety and the improvement of transportation conditions, such as the construction of Kaido roads and the formation of Shukuba-machi, the belief in Shinto became more widespread among the general population.",
+            "wiki"
+          ],
+          [
+            "When people visited the shrine, they were welcomed at their own residences, where they performed Kagura (Shinto music and dance) and were treated to sake, Ise delicacies, and quilts.",
+            "wiki"
+          ],
+          [
+            "In addition, Jippensha Ikku's T\u014dkaid\u014dch\u016b Hizakurige, which depicts the unusual journey of a pilgrim to Ise, and Comic books called \"Hizakurige monogatari,\" which were written in response to this hit, and other literature on the theme of pilgrimages to shrines and temples were also published in the early modern period, contributing to the spread of Shinto faith among the general public.",
+            "wiki"
+          ],
+          [
+            "As mentioned above, the spread of Shinto beliefs to the common people during the Edo period gave rise to a large number of lecturers who taught Shinto to the common people in an interactive manner.",
+            "wiki"
+          ],
+          [
+            "He gave oral talks on the streets with a clever joking tone, and instead of the academic Shinto that sought its basis in the Shinto scriptures, he quoted freely from the legends of Shinto, Confucianism, Buddhism, and the three religions, and attributed Shinto to matters of the heart and practice.",
+            "wiki"
+          ],
+          [
+            "In this way, he preached common morals such as harmony between husband and wife and equality between men and women, and he also preached the essence of Shinto, which was to work hard in accordance with one's status, in order to meet the demands of common people living in a status society.",
+            "wiki"
+          ],
+          [
+            "These Shinto scholars' efforts to educate the people influenced the emergence of popular Shintoists in later periods.",
+            "wiki"
+          ],
+          [
+            "Shoshitsu Inoue, a priest of the Shinto shrine in Umeda, started the Misogi Doctrine and gained many followers by teaching the art of \"shofar,\" the law of eternal life, and chanting \"three kinds of exorcism\" to entrust the safety of one's body to the Shinto light, but the shogunate suspected him and sent him to Miyakejima.",
+            "wiki"
+          ],
+          [
+            "Ishida Baigan, the founder of Shingaku, the largest school of popular education in the early modern period, was also influenced by Shinto scholars in his youth.",
+            "wiki"
+          ],
+          [
+            "He emphasized the concept of \"honesty\", a virtue of medieval Shinto, and harmonized the teachings of Shinto, Confucianism, and Buddhism to teach ideas for the people and merchants.",
+            "wiki"
+          ],
+          [
+            "In the late Edo period, Ninomiya Sontoku also spread the idea of virtue, based on the principles of sincerity, hard work, decentralization, and compromise, to the people as the \"great way of the dawn of creation\" and the \"great way of Shinto\" since Amaterasu opened the reeds field and made it the Land of Mizuho.",
+            "wiki"
+          ],
+          [
+            "He harmonized the three religions of Shinto, Confucianism, and Buddhism with Shinto at the center, likening his learning to \"a grain of Shinto, a grain of Confucianism, and a grain of Buddha.",
+            "wiki"
+          ],
+          [
+            "The mainstream theories of Shinto also shifted from Shinto and Buddhism to Confucian Shinto, which was more closely linked to Confucianism.",
+            "wiki"
+          ],
+          [
+            "Although there were theories of Shinto advocated by the Yangmingism school, such as Nakae T\u014dju's Taiky\u014d Shinto, most of the theories of Shinto were formed by Sh\u016bji.",
+            "wiki"
+          ],
+          [
+            "Although Confucian thought was also incorporated in the idea of Shinto, Confucian Shinto differs in that it explicitly criticized Buddhism and attempted to escape its influence.",
+            "wiki"
+          ],
+          [
+            "On the other hand, the logical structure of the Confucian Shinto inherited a strong medieval esoteric tradition, and the Buddhist theory of Shinto-Buddhist syncretism was replaced by the Shuko theory, which can be said to be in a transitional period between the medieval and early modern periods.",
+            "wiki"
+          ],
+          [
+            "Lin Luoshan, a pioneer of Confucian Shinto",
+            "wiki"
+          ],
+          [
+            "The pioneer of Confucian Shinto was Hayashi Razan.",
+            "wiki"
+          ],
+          [
+            "In addition to spreading his knowledge of Zhu Xi to Japan, Razan also studied Shinto, and wrote such works as \"Shinto Denju\" and \"Honcho Jinja Ko\", forming his own theory of Shinto called Rituji Shinto.",
+            "wiki"
+          ],
+          [
+            "The idea was that the Confucian god Li was the same as the Shinto god, and that the ultimate god was Kuni-Tokotachi.",
+            "wiki"
+          ],
+          [
+            "While advocating Shinto and anti-Buddhism, claiming that Japan was pure and superior before the introduction of Buddhism, he also claimed that Emperor Jimmu was a descendant of Taihaku based on Chinese thought, and that the Imperial Regalia of Japan, claiming that the Three Sacred Treasures represented the three virtues of Confucianism, and tried to appeal to the high level of Japanese civilization by claiming that Japan has belonged to the Chinese sphere since ancient times.",
+            "wiki"
+          ],
+          [
+            "In addition, the essence of Shinto is a political doctrine that has been handed down from Amaterasu to successive emperors, and rituals at ordinary shrines and festivals for common people were dismissed as \"toshu-zuyaku Shinto\" and mere \"actors.",
+            "wiki"
+          ],
+          [
+            "In the case of Yoshida Shinto, Yoshikawa Tadashi, a merchant, was initiated into the Yoshida family, and was granted the \"Shinto Dotosho\" by Hagiwara Kanetsugu, the head of the Yoshida family, and became the official successor.",
+            "wiki"
+          ],
+          [
+            "He formed Yoshikawa Shinto, which removed Buddhist discourse from Yoshida Shinto and incorporated more Confucian teachings.",
+            "wiki"
+          ],
+          [
+            "His philosophy was that Shinto is the source of all laws and that Kunitokotachi-no-Mikoto presides over the world, and that the world and human beings are created by \"truth,\" which is the same as God.",
+            "wiki"
+          ],
+          [
+            "In Ise Shinto, the late Ise Shinto, which excluded Buddhism and incorporated Confucianism, was formed in the Edo period by Nobuka Deguchi, a Shinto priest.",
+            "wiki"
+          ],
+          [
+            "The essence of Shinto, he wrote, is the way that Japanese people should naturally conduct themselves in their daily lives, the \"way of daily use,\" which is to perform one's duties with honesty and purity of mind.",
+            "wiki"
+          ],
+          [
+            "He pointed out that it is a mistake to think that only the rituals at shrines, such as chanting congratulatory prayers and holding ball-shaped sticks, are Shinto.",
+            "wiki"
+          ],
+          [
+            "In addition, he criticized the use of Confucianism and Buddhism for the purpose of learning, arguing that although all religions are ultimately the same, and there are many points of agreement between Shinto and Confucianism, the systems and customs of each country differ, and therefore Japanese people should respect the laws and customs of Japan.",
+            "wiki"
+          ],
+          [
+            "However, he also stated that it is okay to study Confucianism and Buddhism as long as Shinto is placed at the center.",
+            "wiki"
+          ],
+          [
+            "He argued that prohibiting Buddhism and Confucianism because of their harmful effects and destroying current customs is against the natural order of things and is different from Shinto.",
+            "wiki"
+          ],
+          [
+            "Yaksai Yamazaki, the culmination of Confucian Shinto",
+            "wiki"
+          ],
+          [
+            "These Confucian theories of Shinto were compiled by Yamazaki Ansai.",
+            "wiki"
+          ],
+          [
+            "After making a name for himself as a Confucian scholar, he was taken in by Hoshina Masayuki, Lord of the Aizu Domain, where he came into contact with Masayuki's guest teacher, Yoshikawa Tadashi, and learned Yoshikawa Shinto, leading to the creation of his own Taruka Shinto.",
+            "wiki"
+          ],
+          [
+            "He said that Shinto means that people should live according to God, and that people should pray to God to obtain blessings, but that people must be \"honest\" in order to do so, and that \"respect\" is the first thing to realize this \"honesty.",
+            "wiki"
+          ],
+          [
+            "After the death of Yaksai Yamazaki, his pupil Shoshinmachi Kimimichi succeeded him, and the Taruka Shinto sect reached its zenith, spreading throughout the country, especially in Edo and Kyoto, widely spreading among nobles, warriors, and priests, and having the greatest influence on the Shinto world.",
+            "wiki"
+          ],
+          [
+            "After the death of Masamichi, his disciple, Masahide Tamaki, succeeded him and organized the single, double, triple, and quadruple mysteries based on the \"Mochijusho\" written by Masamichi, and worked on the organization of the Taruka Shinto.",
+            "wiki"
+          ],
+          [
+            "In addition to the Tachibana family Shinto mentioned above, the Hakka Shinto and Tsuchimikado Shinto were organized under the influence of the Taruka Shinto.",
+            "wiki"
+          ],
+          [
+            "Yoshimi Yukikazu, who was one of Tamaki Masahide's pupils, wrote a book entitled \"Goubu-shosetsu-ben\" in which he criticized Ise Shinto and Yoshida Shinto by arguing that the Shinto Goubu-shosetsu was a fake book from the Middle Ages, and also criticized Taruka Shinto, which also used the Goubu-shosetsu as its scriptures.",
+            "wiki"
+          ],
+          [
+            "In fact, after Masahide Tamaki, Taraka Shinto began to stagnate ideologically and surrendered its mainstream position to Kokugaku.",
+            "wiki"
+          ],
+          [
+            "In conjunction with these anti-Buddhist ideological trends, a movement to separate Shinto and Buddhism began to spread in some of the clans that had accepted Confucian Shinto.",
+            "wiki"
+          ],
+          [
+            "In the Mito Domain, Tokugawa Mitsukuni investigated the history of shrines with strong Shinto-Buddhist practices in 1696 (the 9th year of the Genroku), and organized them in such a way as to wipe out the Buddhist flavor.",
+            "wiki"
+          ],
+          [
+            "In addition, Ikeda Mitsumasa of the Okayama Domain promoted the return of priests from the Nichiren-sh\u016b Fuju-fuse and Tendai and Shingon sects, reducing the number of temples and encouraging Shinto funerals.",
+            "wiki"
+          ],
+          [
+            "In the mid-Edo period, Kokugaku began to flourish in place of Confucian Shinto.",
+            "wiki"
+          ],
+          [
+            "As can be seen in the Sogakusei, Shunman had the intention of organizing history, yushoku-nijitsu, and theology as a school under the name of wagaku, and in Shunman, Shinto and language studies (by Qi oki and others) were integrated as \"Kokugaku\".",
+            "wiki"
+          ],
+          [
+            "He also developed the aspect of Shinto theology in Kokugaku.",
+            "wiki"
+          ],
+          [
+            "He strongly criticized Buddhist and Confucian Shinto, which interpreted Shinto in accordance with Buddhist and Confucian doctrines.",
+            "wiki"
+          ],
+          [
+            "He also criticized Lao Zhuang Thought, which describes heaven and earth as \"the way that comes naturally.\u3001He argued that all events in the heavens and the earth are governed by the Shinto gods, and that the evil that exists in the world governed by the gods is the work of the evil god Mazutsunichi.",
+            "wiki"
+          ],
+          [
+            "In the late Edo period (1603-1868), society began to undergo major changes, such as the repeated attacks by foreign ships, and a new Shinto philosophy was born in the midst of these social conditions.",
+            "wiki"
+          ],
+          [
+            "In the 18th century and prior to that, \"Shinto had moved away from its roots as a cult of nature worship to become intertwined with Buddhism and Confucianism.\" In the 1730, Kada Azumamaro, Kamo Mabuchi, and their followers wanted to create a new Shinto that restored what they saw as traditional, indigenous Japanese practices and \"ancient rites\".",
+            "wiki"
+          ],
+          [
+            "Hirata Atsutane, who met Honcho Motoi in a dream and called himself a \"posthumous student,\" wrote major works such as \"Shinbashira of the Spirit,\" \"Koshiden,\" and \"Honkyo Gaiben,\" and developed a new philosophy called \"Restoration Shinto\" while critically inheriting the theology of Motoi Nobunaga.",
+            "wiki"
+          ],
+          [
+            "He rejected the Shinto theory that \"when a person dies, he goes to Hades,\" and claimed that when a person dies, his spirit goes to the \"underworld\" presided over by Okuninushi God in \"earth,\" where he is judged by Okuninushi God for his deeds before his death.",
+            "wiki"
+          ],
+          [
+            "This theorized the ancient Japanese view of the spirit, and became the theoretical basis for the Shinto funeral ritual.",
+            "wiki"
+          ],
+          [
+            "Thus, Hirata Atsutane departed from the positivistic research of Nobunaga and presented a Shinto theory that contained many religious elements.",
+            "wiki"
+          ],
+          [
+            "On the other hand, the theology of Hirata Atsutane was handed down to many of his students, and Hirata school Kokugaku scholars such as Okuni Takamasa, Yano Gendo, Maruyama Sakuraku, Gonda Naosuke, and Fukuha Mishizei were responsible for the restoration of the monarchy and the formation of Shinto policies in the early Meiji period.",
+            "wiki"
+          ],
+          [
+            "He also sharply criticized the practice of Shinto and Buddhism as destructive of the national identity, but highly praised the effectiveness of Buddhism as a means of indoctrinating the people.",
+            "wiki"
+          ],
+          [
+            "Furthermore, Shoshisai incorporated Confucianism into his interpretation of Shinto mythology.",
+            "wiki"
+          ],
+          [
+            "He claimed that the \"Divine Decree of the Immortality of Heaven and Earth,\" which is found in the \"Nihon Shoki\" (Chronicles of Japan), in which Amaterasu ordered Qioniongine to rule the country from generation to generation by the descendants of the Heavenly Founder, was the beginning of the \"loyalty of sovereign and vassal,\" and that the \"Divine Decree of the Preservation of the Treasure Mirror,\" in which the Yatagami mirror was ordered to be enshrined as the divine body, was the beginning of the \"filial piety of parents and children,\" which is one of the five principles of Shinto.",
+            "wiki"
+          ],
+          [
+            "He believed that this was proof that humanity had been established in Japan since ancient times, and he linked Shinto with Confucianism.",
+            "wiki"
+          ],
+          [
+            "He played a leading role in Shinto administration in the early Meiji period.",
+            "wiki"
+          ],
+          [
+            "The government first emphasized Shinto with the goal of unity of ritual and government and pro-emperor government, and revived the Shingi Kan to be an organization along with the Grand Council of State.",
+            "wiki"
+          ],
+          [
+            "The position of \"missionary\" was assigned to the Shinto priest, and based on the Daikyo Declaration, the Shinto religion was propagated.",
+            "wiki"
+          ],
+          [
+            "However, lower-ranking officials of the Meiji government who were influenced by the Hirata School of Kokugaku, which had a strong anti-Buddhist ideology, as well as Shinto priests and some people who had antipathy toward the temples that had been dominant under the temple-contractor system in the Edo period, expanded the interpretation of the decree to include radical Abandonment of Buddhism On June 22, the Meiji government issued the \"Notice that the Separation of Buddhism and Shinto is not the Abolition of Buddhism\", calling for a halt to the Abolition of Buddhism, and in 1871 (the fourth year of the Meiji), it enacted the \"Important Cultural Property\", and the Abolition of Buddhism began to subside.",
+            "wiki"
+          ],
+          [
+            "In addition, the Modern system of ranked Shinto shrines was introduced, referring to the ancient system of shrine rankings, and each shrine was officially ranked.",
+            "wiki"
+          ],
+          [
+            "Based on this, the way of shrines and Shinto in the pre-modern era was drastically changed, and a system in which shrines were controlled by the state, the so-called State Shinto, was formed.",
+            "wiki"
+          ],
+          [
+            "At the beginning of the Meiji Restoration, the Hirata school of Kokugakusha was at the centre of the government, and the unity of ritual and politics and the nationalization of Shinto were promoted, but Ito Hirobumi, Iwakura Tomomi, and other important government officials of the open-minded faction began to aim for separation of church and state, and Tamamatsu Misao left the government in 1870 (Meiji 3) in conflict with Iwakura.",
+            "wiki"
+          ],
+          [
+            "This was a change from the original policy of aiming for a government based on Shinto with unity of ritual and government, and the theory of non-religion of shrines was adopted.",
+            "wiki"
+          ],
+          [
+            "The Meiji Constitution enacted in 1890 (Meiji 23) also did not include any mention of Shinto.",
+            "wiki"
+          ],
+          [
+            "After the abolition of the hereditary system of the Shinto priesthood, which was regarded as a \"state religion,\" on the grounds that it should not be occupied by a single family, the state trained the priesthood and decided on their appointment, in the same way as officials (civil service).",
+            "wiki"
+          ],
+          [
+            "Since Shinto shrines were considered non-religious, the Shinto priests of the official national shrines were prohibited from engaging in religious activities, including involvement in Shinto funeral rites and the propagation of Shinto doctrine.",
+            "wiki"
+          ],
+          [
+            "For this reason, the shrine Shinto that existed before the early modern period, such as Yoshida Shinto and Ise Shinto, also disappeared as a force.",
+            "wiki"
+          ],
+          [
+            "In 1871 (Meiji 4), the \"Shinto shrine territory decree\" was promulgated, which collects all the land of shrines and temples except the precincts.",
+            "wiki"
+          ],
+          [
+            "The Ministry of Religion introduced a system of teaching positions to inculcate a spirit of patriotism and respect for the emperor among the people through the joint efforts of Shinto priests and Buddhist monks called Kyodo Shoku, but this system was quickly dismantled due to opposition from both the Shinto and Buddhist sides.",
+            "wiki"
+          ],
+          [
+            "Only the \"Sanjo Kyoshoku,\" which outlined the teachings of patriotism and respect for the Emperor, was allowed to be propagated in the teaching position, and the spread of Shinto and Buddhist teachings and doctrines was prohibited.",
+            "wiki"
+          ],
+          [
+            "After the dissolution of the Ministry of Religion, the Shinto priests and others established the Bureau of Shinto Affairs to continue their activities.",
+            "wiki"
+          ],
+          [
+            "A controversy arose over the establishment of the Bureau of Shinto Affairs over whether or not Okuninushi should be added to the temple.",
+            "wiki"
+          ],
+          [
+            "In 1890, Kokugakuin, an educational institution established in the Office of Japanese Classics Research, later developed into Kokugakuin University, a Shinto university.",
+            "wiki"
+          ],
+          [
+            "On the other hand, Kogakukan, which was also established in 1882 within the shrine's Hayashizaki Library by order of the Jingu priest, later became another Shinto university, Kogakukan University.",
+            "wiki"
+          ],
+          [
+            "In 1877, the status of Shinto priests was changed to that of non-officials, and in 1879, public spending on Shinto shrines was cut off.",
+            "wiki"
+          ],
+          [
+            "The payment of salaries from public funds to the Shinto priests had already been discontinued in 1873.",
+            "wiki"
+          ],
+          [
+            "As a result, Shinto shrines suffered more economic damage than temples, which were expected to generate income from funerals and religious activities\u3001and shrines were placed in a very difficult economic position throughout the Meiji period.",
+            "wiki"
+          ],
+          [
+            "While the Shinto shrines were being cut off from public spending, the Shinto priests organized the National Shinto Priests' Association and launched a movement called the Shinto Priests' Restoration Movement, which demanded that the government restore the Shinto priests, arguing that the government should be responsible for providing a budget for the state's religious services.",
+            "wiki"
+          ],
+          [
+            "As a result, in 1894, the \"Law Concerning the Shinto Priests of Prefectures and Subordinate Shrines\" was issued, and the Shinto priests of prefectures and subordinate shrines were given the status of officials who were appointed by the local commissioner.",
+            "wiki"
+          ],
+          [
+            "However, in 1900, the Ministry of the Interior's Bureau of Shrines and Temples was separated into the Bureau of Shrines and the Bureau of Religious Affairs, and a clear administrative distinction was made between Shinto and other religions.",
+            "wiki"
+          ],
+          [
+            "Furthermore, the administration of Shinto shrines by the Shrine Bureau of the Ministry of Home Affairs was also extremely passive.",
+            "wiki"
+          ],
+          [
+            "The Ministry of the Interior's Bureau of Shrine Administration was also extremely passive in its administration of Shinto shrines.",
+            "wiki"
+          ],
+          [
+            "The Bureau strongly emphasized the precept that \"Shinto is a non-religion,\" and worked to prohibit the expression of Shinto's own religious ideas, while it vigorously restrained the religious activities of Shinto priests, such as funeral rites and missionary activities.",
+            "wiki"
+          ],
+          [
+            "He also worked to suppress the debate between Shinto and other religions, arguing that all foreign religions were assimilated into the national spirit and therefore should not be challenged.",
+            "wiki"
+          ],
+          [
+            "Based on the above circumstances, Shintoist Chinhiko Ashiizu commented that the main task of the Bureau of Shinto Affairs was to ensure that Shinto was de-ideologized, that the spirit of Shinto was reduced to a vacuum, that the expression of Shinto's original thought was abandoned, and that a compromise with Buddhism, Christianity, and all other legitimate religions was painstakingly made so that the state Shinto system could exist without contradicting the separation of church and state.",
+            "wiki"
+          ],
+          [
+            "The Shinto bureau itself was treated as a third-class bureau within the Ministry of Home Affairs, and the bureau chiefs were considered to be waiting for their posts before becoming regional prefectural governors or directors of influential bureaus.",
+            "wiki"
+          ],
+          [
+            "In 1940, the Shrine Bureau was reorganized into the Shinto Academy, but it was dismantled due to the defeat of the war without effective policies being implemented.",
+            "wiki"
+          ],
+          [
+            "In this way, the state Shinto system, which abandoned the expression of Shinto thought and created a vacuum of Shinto spirit, was condemned by the local Shinto priests and Shinto thinkers, some of whom developed their own Shinto thought or created private Shinto groups to confront it.",
+            "wiki"
+          ],
+          [
+            "Among those groups, the thirteen schools of Sect Shinto were particularly powerful.",
+            "wiki"
+          ],
+          [
+            "These thirteen groups generally include Kurozumiky\u014d Shinto Shusei Jingu-kyo Izumo-taishakyo Fuso-kyo Jikk\u014d ky\u014d Shinto Taiseikyo (\u795e\u9053\u5927\u6210\u6559)Shinshu-kyo Mitake-kyo Shinto Taikyo Shinrikyo Misogikyo Konkokyo and Tenrikyo.",
+            "wiki"
+          ],
+          [
+            "Originally, Jingu-kyo was also included, but later it was reorganized into Jingu Hosaikai and withdrew from sect Shinto.",
+            "wiki"
+          ],
+          [
+            "These denominations began to move in the late Tokugawa period on the basis of modern Shinto thought and folk beliefs, and developed in the religious administration of the Meiji era.",
+            "wiki"
+          ],
+          [
+            "In 1875, the teaching position of the Ministry of Education was abolished, and as mentioned above, state Shinto came to be separated from its religious aspects based on the theory of Shinto non-religion.",
+            "wiki"
+          ],
+          [
+            "In 1875, the Ministry of Education was abolished, and as mentioned above, State Shinto was separated from its religious aspects based on the Secular Shrine Theory.",
+            "wiki"
+          ],
+          [
+            "In particular, Tenrikyo grew rapidly from the mid-Meiji period and became the denomination with the largest number of followers among the denominational Shinto sects.",
+            "wiki"
+          ],
+          [
+            "Oomoto also had an extremely large impact on the Shinto sects of later generations, giving rise to a series of new religious movements known as \"Oomon-kei\" and influencing the formation of the Seicho-no-ie.",
+            "wiki"
+          ],
+          [
+            "As an overall characteristic of the teachings of denominational Shinto, while based on traditional Shinto beliefs, each denomination often had its own main deity and used traditional rituals such as magi nai and divination to propagate their teachings.",
+            "wiki"
+          ],
+          [
+            "There were also a number of Shinto thinkers who, unlike Shinto denominations and other Shinto groups, were active in their own thought processes.",
+            "wiki"
+          ],
+          [
+            "Kawamori Bonji, a Shintoist, criticized the Ministry of the Interior's Shinto policy and argued for the restoration of the Shinto spirit centered on misogi (purification).",
+            "wiki"
+          ],
+          [
+            "Influenced by Kawamori, Imaizumi Sadasuke, while conducting empirical research on Shinto since the time of Nobunaga, was initiated into Kawamori, learned religious practices, and expressed his own Shinto philosophy.",
+            "wiki"
+          ],
+          [
+            "After Japan surrendered at the end of World War II in 1945, the GHQ issued a Shinto directive during the occupation policy and dismantled the state Shinto system.Shinto was declared the root of nationalistic ideology by the GHQ, and in February 1946, all laws related to the administration of Shinto shrines since the Meiji era were abolished.",
+            "wiki"
+          ],
+          [
+            "In accordance with the provisions of the Religious Corporation Ordinance enacted in December 1945, Shinto shrines are to be treated as religious corporations in the same way as other religions, and the modern corporate personality system has been abolished.",
+            "wiki"
+          ],
+          [
+            "In January 1946, the Institute of Divinities, the Office of Japanese Classics Research, the National Association of Shinto Priests and the Jing\u016bky\u014d were dissolved and the Association of Shinto Shrines was formed as a shrine organization to encompass all shrines in Japan that were to remain as religious corporations.",
+            "wiki"
+          ],
+          [
+            "Although the shrines lost their official status, their economic prosperity surpassed that of the prewar period due to the implementation of Shinto funeral rites, which had been prohibited before the war, and the flourishing of various types of prayers.",
+            "wiki"
+          ],
+          [
+            "On the other hand, as urbanization progressed due to economic growth, problems such as a decrease in the number of Ujiko (shrine parishioners) and a shortage of successors to the Shinto priests became apparent due to the depopulation of rural areas.",
+            "wiki"
+          ],
+          [
+            "In 2009 (Heisei 21), the Jinja Honcho participated as a representative of Shinto in the World Assembly for Peace, a gathering of diverse religious figures from around the world, and from the standpoint of Shinto, appealed for the necessity of coexistence between nature and humankind.",
+            "wiki"
+          ],
+          [
+            "Ko-Shint\u014d (\u53e4\u795e\u9053) refers to the animistic religion of J\u014dmon period Japan, which is the alleged basis of modern Shinto.",
+            "wiki"
+          ],
+          [
+            "The search for traces of Koshint\u014d began with the \"Restoration Shinto\" in the Edo period, which goal was to remove any foreign ideas and worldviews from Shinto (specifically referring to Buddhism).",
+            "wiki"
+          ],
+          [
+            "Medieval development meant that Shinto was integrated into Buddhist symbology.",
+            "wiki"
+          ],
+          [
+            "In this era, Japan's shrine rituals were being \"purified\" of their religious nature and turned into national forms, a process called State Shinto today.",
+            "wiki"
+          ],
+          [
+            "A Shinto rite carried out at a jinja in San Marino, Southern Europe",
+            "wiki"
+          ],
+          [
+            "Overseas Shinto designates the practice of the Japanese religion of Shinto outside Japan itself.",
+            "wiki"
+          ],
+          [
+            "Shinto has spread abroad by various methods, including the imperial expansion of the Empire of Japan during the Meiji period, the migration of Japanese to other countries, and the embrace of Shinto by various non-Japanese individuals.",
+            "wiki"
+          ],
+          [
+            "On June 22, 2014, Europe's first official Shinto Shrine: San Marino Shrine was opened in Serravalle, San Marino.",
+            "wiki"
+          ],
+          [
+            "The San Marino shrine was inaugurated in the presence of 150 personalities including the president of the Association of Shinto Shrines and Yoko Kishi, mother of the former Prime Minister of Japan Shinz\u014d Abe and daughter of Prime Minister Nobusuke Kishi.",
+            "wiki"
+          ],
+          [
+            "These shrines were built by decree of the governor and without consultation with the Shinto clergy, and their policies were determined by the military.",
+            "wiki"
+          ],
+          [
+            "The first Shinto shrine in Hawaii was Hilo Daijingu\u00a0, built in 1898.",
+            "wiki"
+          ],
+          [
+            "Two Shinto shrines were built in Brazil before the outbreak of World War II, both in the state of S\u00e3o Paulo.",
+            "wiki"
+          ],
+          [
+            "Shinto shrines dating from during or after World War II exist in some Micronesian countries.",
+            "wiki"
+          ],
+          [
+            "Some Shinto-inspired new religions have gained ground in various cities in Sub-Saharan Africa.",
+            "wiki"
+          ],
+          [
+            "Shinto is the native religion of Japan and was once its state religion.",
+            "wiki"
+          ],
+          [
+            "Shinto or Shint\u014d may also refer to:",
+            "wiki"
+          ],
+          [
+            "This category comprises articles pertaining to the Shinto religion.",
+            "wiki"
+          ]
+        ]
+      }
+    },
+    "category_shared_scrap_area": [
+      {
+        "source_tag": "wiki",
+        "scrap_area_type": "wiki_urls",
+        "scrap_area_specification": [
+          "https://en.wikipedia.org/wiki/Shinto",
+          "https://en.wikipedia.org/wiki/History_of_Shinto",
+          "https://en.wikipedia.org/wiki/Ko-Shint%C5%8D",
+          "https://en.wikipedia.org/wiki/Overseas_Shinto",
+          "https://en.wikipedia.org/wiki/Shinto_(disambiguation)",
+          "https://en.wikipedia.org/wiki/Category:Shinto"
+        ]
+      }
+    ]
+  }
+]

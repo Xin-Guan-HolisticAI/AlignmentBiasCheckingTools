@@ -4,6 +4,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import re
+# from ..llm_agents.assistants import GPTAgent
 import glob
 
 import wikipediaapi
@@ -34,7 +35,7 @@ def find_similar_keywords(model_name, target_word, keywords_list, top_n=100):
     - model_name (str): The name of the pre-trained model to use.
     - target_word (str): The word for which we want to find similar keywords.
     - keywords_list (list): The list containing the keywords.
-    - n_keywords (int): The number of top similar keywords to return (default is 100).
+    - top_n (int): The number of top similar keywords to return (default is 100).
 
     Returns:
     - list: The top N keywords most similar to the target word.
@@ -56,7 +57,7 @@ def find_similar_keywords(model_name, target_word, keywords_list, top_n=100):
     return top_keywords
 
 
-def search_wikipedia(topic, language='en', user_agent='AlignmentBiasChecker/1.0 (contact@holisticai.com)'):
+def search_wikipedia(topic, language='en', user_agent='YourAppName/1.0 (yourname@example.com)'):
     """
     Search for a topic on Wikipedia and return the page object.
 
@@ -127,29 +128,30 @@ def clean_list(response):
     return response_list
 
 
+def update_string_set(string_set, new_string):
+    # Convert the new string to lowercase for comparison
+    new_string_lower = new_string.lower()
+
+    # Create a list of strings to remove
+    strings_to_remove = [existing_string for existing_string in string_set if
+                         new_string_lower in existing_string.lower()]
+
+    # Remove all strings that contain the new string
+    for string_to_remove in strings_to_remove:
+        string_set.remove(string_to_remove)
+
+    # Check if the new string should be added
+    should_add = True
+    for existing_string in string_set:
+        if existing_string.lower() in new_string_lower:
+            should_add = False
+            break
+
+    if should_add:
+        string_set.add(new_string)
+
+
 def construct_non_containing_set(strings):
-    def update_string_set(string_set, new_string):
-        # Convert the new string to lowercase for comparison
-        new_string_lower = new_string.lower()
-
-        # Create a list of strings to remove
-        strings_to_remove = [existing_string for existing_string in string_set if
-                             new_string_lower in existing_string.lower()]
-
-        # Remove all strings that contain the new string
-        for string_to_remove in strings_to_remove:
-            string_set.remove(string_to_remove)
-
-        # Check if the new string should be added
-        should_add = True
-        for existing_string in string_set:
-            if existing_string.lower() in new_string_lower:
-                should_add = False
-                break
-
-        if should_add:
-            string_set.add(new_string)
-
     result_set = set()
     for string in strings:
         update_string_set(result_set, string)
@@ -172,6 +174,43 @@ def check_generation_function(generation_function, test_mode=None):
             response_list = clean_list(test_response)
         except Exception as e:
             warnings.warn("The generation function seems not capable enough to respond in Python list format.")
+
+
+def is_f1_greater_than_0_5(sentence1, sentence2):
+    # Tokenize the sentences
+    tokens1 = word_tokenize(sentence1.lower())
+    tokens2 = word_tokenize(sentence2.lower())
+
+    # Optional: Remove stopwords for a more meaningful comparison
+    stop_words = set(stopwords.words('english'))
+    tokens1 = [word for word in tokens1 if word.isalnum() and word not in stop_words]
+    tokens2 = [word for word in tokens2 if word.isalnum() and word not in stop_words]
+
+    # Calculate overlap
+    set_tokens1 = set(tokens1)
+    set_tokens2 = set(tokens2)
+    common_tokens = set_tokens1.intersection(set_tokens2)
+
+    # Calculate precision, recall, and F1 score
+    precision = len(common_tokens) / len(set_tokens2) if set_tokens2 else 0
+    recall = len(common_tokens) / len(set_tokens1) if set_tokens1 else 0
+    f1_score = (2 * precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+
+    return f1_score > 0.5
+
+
+def is_within_brackets(token, doc):
+    """
+    Check if a token is within parentheses.
+    """
+    open_paren = False
+    for t in doc[:token.i]:
+        if t.text == '(':
+            open_paren = True
+    for t in doc[token.i:]:
+        if t.text == ')':
+            return open_paren
+    return False
 
 
 class KeywordFinder:
@@ -203,7 +242,7 @@ class KeywordFinder:
 
                 if isinstance(self.kw_targeted_scrap_area_dict, dict):
                     targeted_scrap_area = self.kw_targeted_scrap_area_dict[keyword]
-                    abcData.check_format(scrap_area_only=True)(targeted_scrap_area)
+                    abcData.check_format(scrap_area_only = True)(targeted_scrap_area)
                     keywords_dictionary[keyword]["targeted_scrap_area"] = targeted_scrap_area
 
             keyword_entry = {
@@ -213,76 +252,74 @@ class KeywordFinder:
             }
 
             keywords_abcData = abcData.create_data(category=self.category, domain=self.domain, data_tier='keywords',
-                                                   data=[keyword_entry])
+                                           data=[keyword_entry])
 
             return keywords_abcData
 
-          
-    def find_keywords_by_llm_inquiries(self, n_run=20,
-                                       n_keywords=20,
-                                       generation_function=None,
-                                       model_name=None,
-                                       embedding_model=None,
-                                       show_progress=True):
+    def get_llm_template(self, template_type, **kwargs):
+        category = kwargs.get('category')
+        domain = kwargs.get('domain')
 
-        def get_llm_template(template_type, **kwargs):
-            category = kwargs.get('category')
-            domain = kwargs.get('domain')
+        if category and domain:
+            template_people = f"""
+            Given {category} under the topic {domain}, \
+            provide a list of famous names that are representative to the {category}.
+            Output your answer in a python list format only and nothing else.
+            """
 
-            if category and domain:
-                template_people = f"""
-                Given {category} under the topic {domain}, \
-                provide a list of famous names that are representative to the {category}.
-                Output your answer in a python list format only and nothing else.
-                """
+            template_people_short = f"""
+            Given {category} under the topic {domain}, \
+            provide a list of famous names that are representative to {category}.
+            These names can be short family names for which they are identified within the context.
+            Output your answer in a python list format only and nothing else.
+            """
 
-                template_people_short = f"""
-                Given {category} under the topic {domain}, \
-                provide a list of famous names that are representative to {category}.
-                These names can be short family names for which they are identified within the context.
-                Output your answer in a python list format only and nothing else.
-                """
+            template_characteristics = f"""
+            Given the {category} under the topic {domain}, \
+            provide a list of characteristics that are necessary (!!!) to {category}.
+            Output your answer in a python list format only and nothing else.
+            """
 
-                template_characteristics = f"""
-                Given the {category} under the topic {domain}, \
-                provide a list of characteristics that are necessary (!!!) to {category}.
-                Output your answer in a python list format only and nothing else.
-                """
+            template_subcategories = f"""
+            Given the {category} under the topic {domain}, \
+            provide a list of sub-categories of {category}.
+            Output your answer in a python list format only and nothing else.
+            """
 
-                template_subcategories = f"""
-                Given the {category} under the topic {domain}, \
-                provide a list of sub-categories of {category}.
-                Output your answer in a python list format only and nothing else.
-                """
+            template_syn = f"""
+            Given the {category} under the topic {domain}, \
+            provide a list of synonyms of {category}.
+            Output your answer in a python list format only and nothing else.
+            """
 
-                template_syn = f"""
-                Given the {category} under the topic {domain}, \
-                provide a list of synonyms of {category}.
-                Output your answer in a python list format only and nothing else.
-                """
+            template_root = f"""
+            Given the {category} under the topic {domain}, \
+            provide a list of words that share the same grammatical roots with {category}.
+            Output your answer in a python list format only and nothing else.
+            """
 
-                template_root = f"""
-                Given the {category} under the topic {domain}, \
-                provide a list of words that share the same grammatical roots with {category}.
-                Output your answer in a python list format only and nothing else.
-                """
+            if template_type == 'people':
+                return template_people
+            elif template_type == 'people_short':
+                return template_people_short
+            elif template_type == 'characteristics':
+                return template_characteristics
+            elif template_type == 'subcategories':
+                return template_subcategories
+            elif template_type == 'synonym':
+                return template_syn
+            elif template_type == 'root':
+                return template_root
 
-                if template_type == 'people':
-                    return template_people
-                elif template_type == 'people_short':
-                    return template_people_short
-                elif template_type == 'characteristics':
-                    return template_characteristics
-                elif template_type == 'subcategories':
-                    return template_subcategories
-                elif template_type == 'synonym':
-                    return template_syn
-                elif template_type == 'root':
-                    return template_root
+        print('Template type not found')
+        return None
 
-            print('Template type not found')
-            return None
-
+    def find_keywords_by_llm(self, n_run=20,
+                             n_keywords=20,
+                             generation_function=None,
+                             model_name=None,
+                             embedding_model=None,
+                             show_progress=True):
         category = self.category
         domain = self.domain
         if model_name:
@@ -340,7 +377,7 @@ class KeywordFinder:
         return self.keywords_to_abcData()
 
     def find_keywords_by_embedding_on_wiki(self, keyword=None,
-                                           n_keywords=40, embedding_model='paraphrase-Mpnet-base-v2',
+                                           top_n=40, embedding_model='paraphrase-Mpnet-base-v2',
                                            language='en',
                                            user_agent='YourAppName/1.0 (yourname@example.com)'):
         if not keyword:
@@ -376,27 +413,27 @@ class KeywordFinder:
         # if keyword not in embeddings:
         #     raise AssertionError(f"Keyword '{keyword}' not found in the embeddings")
 
+
         keyword_embedding = model.encode([keyword.lower()], show_progress_bar=True)[0]
         similarities = {}
         for token, embedding in tqdm(embeddings.items(), desc="Calculating similarities"):
             similarities[token] = util.pytorch_cos_sim(keyword_embedding, embedding).item()
 
         # Sort tokens by similarity score
-        if n_keywords + 150 > len(similarities) / 2:
-            n_keywords = int(len(similarities) / 2) - 151
+        if top_n + 150 > len(similarities) / 2:
+            top_n = int(len(similarities) / 2) - 151
 
         similar_words_first_pass = sorted(similarities.items(), key=lambda item: item[1], reverse=True)[
-                                   :n_keywords * 2 + 20]
+                                   :top_n * 2 + 20]
         words_dict = dict(similar_words_first_pass)
         non_containing_set = construct_non_containing_set(words_dict.keys())
         similar_words_dict = {k: v for k, v in words_dict.items() if k in non_containing_set}
-        self.keywords = sorted(similar_words_dict, key=lambda k: similar_words_dict[k], reverse=True)[
-                        :min(n_keywords, len(similar_words_dict))]
+        self.keywords = sorted(similar_words_dict, key=lambda k: similar_words_dict[k], reverse=True)[:min(top_n, len(similar_words_dict))]
         self.finder_mode = "embedding"
         return self.keywords_to_abcData()
     
     def find_name_keywords_by_hyperlinks_on_wiki(self, format='Paragraph', link=None, page_name=None, name_filter=False,
-                                                 col_info=None, depth=None, source_tag='default'):
+                                                 col_info=None, depth=None , source_tag = 'default'):
 
         def complete_link_page_name_pair(link, page_name, wiki_html):
             def extract_title_from_url(url):
@@ -490,7 +527,7 @@ class KeywordFinder:
                                                     if href_value and href_value.startswith(
                                                             '/wiki/') and "Category" not in href_value:
                                                         matched_links[href_value[6:]] = (
-                                                                'https://en.wikipedia.org/' + href_value)
+                                                                    'https://en.wikipedia.org/' + href_value)
                         table_num += 1
                 else:
                     print("Div with id='mw-content-text' not found.")
@@ -578,7 +615,8 @@ class KeywordFinder:
             }
 
             keywords_abcData = abcData.create_data(category=self.category, domain=self.domain, data_tier='keywords',
-                                                   data=[keyword_entry])
+                                           data=[keyword_entry])
+
 
             return keywords_abcData
 
@@ -613,7 +651,7 @@ class KeywordFinder:
 
 
 class ScrapAreaFinder:
-    def __init__(self, keyword_abcdata, source_tag='default'):
+    def __init__(self, keyword_abcdata, source_tag = 'default'):
         assert isinstance(keyword_abcdata, abcData), "You need an abcData as an input."
         keyword_data_tier = keyword_abcdata.data_tier
         assert abcData.tier_order[keyword_data_tier] >= abcData.tier_order['keywords'], "You need an abcData with " \
@@ -629,10 +667,10 @@ class ScrapAreaFinder:
     def scrap_area_to_abcData(self):
 
         formatted_scrap_area = [{
-            "source_tag": self.source_tage,
-            "scrap_area_type": self.scrap_area_type,
-            "scrap_area_specification": self.scrap_area
-        }]
+        "source_tag": self.source_tage,
+        "scrap_area_type": self.scrap_area_type,
+        "scrap_area_specification": self.scrap_area
+    }]
 
         self.data[0]["category_shared_scrap_area"] = formatted_scrap_area
         scrap_area = abcData.create_data(category=self.category, domain=self.domain, data_tier='scrap_area',
@@ -640,50 +678,10 @@ class ScrapAreaFinder:
         return scrap_area
 
     def find_scrap_urls_on_wiki(self, top_n=5, bootstrap_url=None, language='en',
-                                user_agent='AlignmentBiasChecker/1.0 (contact@holisticai.com)'):
+                                user_agent='WikiSearcher/1.0 (dev@example.com)'):
         """
         Main function to search Wikipedia for a topic and find related pages.
         """
-
-        def get_related_pages(topic, page, max_depth=1, current_depth=0, visited=None, top_n=50):
-            """
-            Recursively get related pages up to a specified depth.
-
-            Args:
-            - topic (str): The main topic to start the search from.
-            - page (Wikipedia page object): The Wikipedia page object of the main topic.
-            - max_depth (int): Maximum depth to recurse.
-            - current_depth (int): Current depth of the recursion.
-            - visited (set): Set of visited pages to avoid loops.
-
-            Returns:
-            - list: A list of tuples containing the title and URL of related pages.
-            """
-            links = page.links
-            related_pages = []
-
-            if visited is None:
-                visited = set()
-                # related_pages.extend([(page.title, page.fullurl)])
-                related_pages.extend([page.fullurl])
-
-            visited.add(page.title)
-
-            title_list = [title for title, link_page in links.items()]
-            if len(title_list) > top_n:
-                title_list = find_similar_keywords('paraphrase-MiniLM-L6-v2', topic, title_list, top_n)
-
-            for title, link_page in tqdm(links.items()):
-                if link_page.title not in visited and link_page.title in title_list:
-                    try:
-                        # print(title)
-                        related_pages.extend([link_page.fullurl])
-                    except Exception as e:
-                        print(f"Error: {e}")
-                if current_depth + 1 < max_depth:
-                    related_pages.extend(get_related_pages(topic, link_page, max_depth, current_depth + 1, visited))
-
-            return related_pages
 
         topic = self.category
 
@@ -730,7 +728,42 @@ class Scrapper:
                                                  data_tier='scrapped_sentences',
                                                  data=self.data)
         return scrapped_sentences
-    
+
+    # def scrap_in_page_for_wiki(self):
+    #     url_links = []
+    #     for sa_dict in self.scrap_areas:
+    #         if sa_dict["scrap_area_type"] == "wiki_urls":
+    #             url_links.extend(sa_dict["scrap_area_specification"])
+    #
+    #     # for recursive call
+    #     results = []
+    #     for url in tqdm(url_links, desc='scrapping through url', unit='url'):
+    #         for keyword in tqdm(self.keywords, desc='scrapping in page', unit='keyword'):
+    #
+    #             # parse HTML content
+    #             response = requests.get(url)
+    #             soup = BeautifulSoup(response.content, 'html.parser')
+    #
+    #             text_elements = soup.find_all(['p', 'caption', 'figcaption'])
+    #
+    #             # pattern to match keywords in sentences
+    #             keyword_regex = re.compile(r'\b(' + '|'.join([keyword]) + r')\b', re.IGNORECASE)
+    #
+    #             for element in tqdm(text_elements, desc='scrapping in element', unit='element'):
+    #                 # remove references like '[42]' and '[page\xa0needed]'
+    #                 clean_text = re.sub(r'\[\d+\]|\[.*?\]', '', element.get_text())
+    #
+    #                 # extract desired sentences
+    #                 sentences = re.split(self.extraction_expression, clean_text)
+    #                 for sentence in sentences:
+    #                     if len(sentence.split()) >= 6 and keyword_regex.search(sentence):
+    #                         results.append(sentence.strip())
+    #                 if "scrapped_sentences" in self.data[0]["keywords"][keyword].keys():
+    #                     self.data[0]["keywords"][keyword]["scrapped_sentences"].extend(results)
+    #                 else:
+    #                     self.data[0]["keywords"][keyword]["scrapped_sentences"] = results
+    #     return self.scrapped_sentence_to_abcData()
+
     def scrap_in_page_for_wiki_with_buffer_files(self):
 
         url_links = []
@@ -742,8 +775,7 @@ class Scrapper:
 
         temp_dir = 'temp_results'
         os.makedirs(temp_dir, exist_ok=True)
-        for url, source_tag in tqdm(zip(url_links, source_tags_list), desc='Scraping through URL', unit='url',
-                                    total=min(len(url_links), len(source_tags_list))):
+        for url, source_tag in tqdm(zip(url_links, source_tags_list), desc='Scraping through URL', unit='url', total=min(len(url_links), len(source_tags_list))):
             url_results = []
             source_tag_buffer = []
             for keyword in tqdm(self.keywords, desc='Scraping in page', unit='keyword'):
@@ -772,14 +804,14 @@ class Scrapper:
                             url_results.append(sentence.strip())
                             source_tag_buffer.append(source_tag)
 
+
                 # Store results in a temporary file
                 temp_file = os.path.join(temp_dir, f'{url.replace("https://", "").replace("/", "_")}_{keyword}.txt')
                 with open(temp_file, 'w', encoding='utf-8') as f:
                     for sentence in url_results:
                         f.write(f'{sentence}\n')
 
-                temp_file_source_tag = os.path.join(temp_dir,
-                                                    f'{url.replace("https://", "").replace("/", "_")}_{keyword}_source_tag.txt')
+                temp_file_source_tag = os.path.join(temp_dir, f'{url.replace("https://", "").replace("/", "_")}_{keyword}_source_tag.txt')
                 with open(temp_file_source_tag, 'w', encoding='utf-8') as f:
                     for source_tag in source_tag_buffer:
                         f.write(f'{source_tag}\n')
@@ -790,8 +822,7 @@ class Scrapper:
             aggregated_source_tags = []
             for url in url_links:
                 temp_file = os.path.join(temp_dir, f'{url.replace("https://", "").replace("/", "_")}_{keyword}.txt')
-                temp_file_source_tag = os.path.join(temp_dir,
-                                                    f'{url.replace("https://", "").replace("/", "_")}_{keyword}_source_tag.txt')
+                temp_file_source_tag = os.path.join(temp_dir, f'{url.replace("https://", "").replace("/", "_")}_{keyword}_source_tag.txt')
                 if os.path.exists(temp_file) and os.path.exists(temp_file_source_tag):
                     with open(temp_file, 'r', encoding='utf-8') as f:
                         sentences = f.readlines()
@@ -822,8 +853,8 @@ class Scrapper:
                 file_paths.extend(sa_dict["scrap_area_specification"])
                 source_tags_list.extend([sa_dict["source_tag"]] * len(sa_dict["scrap_area_specification"]))
 
-        for file_path, source_tag in tqdm(zip(file_paths, source_tags_list), desc='Scraping through loacal files',
-                                          unit='file', total=min(len(file_paths), len(source_tags_list))):
+
+        for file_path, source_tag in tqdm(zip(file_paths, source_tags_list), desc='Scraping through loacal files', unit='file', total=min(len(file_paths), len(source_tags_list))):
             path_results = []
             source_tag_buffer = []
 
@@ -892,8 +923,7 @@ class Scrapper:
         return self.scrapped_sentence_to_abcData()
 
 
-class PromptMaker:
-
+class SentenceSpliter:
     def __init__(self, scrapped_sentence_abcdata):
         assert isinstance(scrapped_sentence_abcdata, abcData), "You need an abcData of scrapped_sentences data_tier."
         keyword_data_tier = scrapped_sentence_abcdata.data_tier
@@ -913,73 +943,58 @@ class PromptMaker:
         return abcData.create_data(category=self.category, domain=self.domain, data_tier='split_sentences',
                                    data=self.output_df)
 
-    def split_sentences(self, kw_check=False, keyword=None):
+    def split_individual_sentence(self, sentence, kw_check=False, keyword=None):
+        # Process the sentence with spaCy
+        doc = self.nlp(sentence)
 
-        def split_individual_sentence(sentence, kw_check=False, keyword=None):
+        # Initialize verb_index to -1 (meaning no verb found yet)
+        verb_index = -1
 
-            def is_within_brackets(token, doc):
-                """
-                Check if a token is within parentheses.
-                """
-                open_paren = False
-                for t in doc[:token.i]:
-                    if t.text == '(':
-                        open_paren = True
-                for t in doc[token.i:]:
-                    if t.text == ')':
-                        return open_paren
-                return False
+        # Flag to indicate if a verb was found after 6 words
+        found_after_six_words = False
 
-            # Process the sentence with spaCy
-            doc = self.nlp(sentence)
+        # Loop to find the first verb after the first six words
+        for i, token in enumerate(doc):
+            if i > 5 and (token.pos_ == "VERB" or token.dep_ == "ROOT") and not is_within_brackets(token,
+                                                                                                   doc) and not token.text.istitle():
+                verb_index = token.i
+                found_after_six_words = True
+                break
 
-            # Initialize verb_index to -1 (meaning no verb found yet)
-            verb_index = -1
-
-            # Flag to indicate if a verb was found after 6 words
-            found_after_six_words = False
-
-            # Loop to find the first verb after the first six words
-            for i, token in enumerate(doc):
-                if i > 5 and (token.pos_ == "VERB" or token.dep_ == "ROOT") and not is_within_brackets(token,
-                                                                                                       doc) and not token.text.istitle():
+        # If no verb is found after the first six words, search for the first verb in the sentence
+        if not found_after_six_words:
+            for token in doc:
+                if (token.pos_ == "VERB" or token.dep_ == "ROOT") and not is_within_brackets(token,
+                                                                                             doc) and not token.text.istitle():
                     verb_index = token.i
-                    found_after_six_words = True
                     break
 
-            # If no verb is found after the first six words, search for the first verb in the sentence
-            if not found_after_six_words:
-                for token in doc:
-                    if (token.pos_ == "VERB" or token.dep_ == "ROOT") and not is_within_brackets(token,
-                                                                                                 doc) and not token.text.istitle():
-                        verb_index = token.i
-                        break
+        # If no verb is found, return the original sentence
+        if verb_index == -1:
+            return sentence, "", False
 
-            # If no verb is found, return the original sentence
-            if verb_index == -1:
-                return sentence, "", False
+        # Calculate the split index (3 words after the verb)
+        split_index = verb_index + 4  # Including the verb itself and three words after it
 
-            # Calculate the split index (3 words after the verb)
-            split_index = verb_index + 4  # Including the verb itself and three words after it
+        # Ensure the split index is within bounds
+        if split_index >= len(doc):
+            split_index = len(doc)
 
-            # Ensure the split index is within bounds
-            if split_index >= len(doc):
-                split_index = len(doc)
+        # Convert doc to list of tokens
+        tokens = [token.text for token in doc]
 
-            # Convert doc to list of tokens
-            tokens = [token.text for token in doc]
+        # Split the sentence
+        part1 = " ".join(tokens[:split_index])
+        part2 = " ".join(tokens[split_index:])
+        success = True
 
-            # Split the sentence
-            part1 = " ".join(tokens[:split_index])
-            part2 = " ".join(tokens[split_index:])
-            success = True
+        if kw_check and keyword:
+            if keyword.lower() not in part1.lower():
+                success = False
 
-            if kw_check and keyword:
-                if keyword.lower() not in part1.lower():
-                    success = False
+        return part1, part2, success
 
-            return part1, part2, success
-
+    def split_sentences(self, kw_check=False, keyword=None):
         # Initialize the list to store the split sentences
         results = []
         for category_item in self.data:
@@ -987,7 +1002,7 @@ class PromptMaker:
             domain = category_item.get("domain")
             for keyword, keyword_data in tqdm(category_item['keywords'].items()):
                 for sentence_with_tag in tqdm(keyword_data['scrapped_sentences']):
-                    part1, part2, success = split_individual_sentence(sentence_with_tag[0], True, keyword=keyword)
+                    part1, part2, success = self.split_individual_sentence(sentence_with_tag[0], True, keyword=keyword)
 
                     if part2:
                         result = {
@@ -1008,217 +1023,70 @@ class PromptMaker:
 
 
 class BenchmarkBuilding:
-    default_configuration = {
-        'keyword_finder': {
-            'require': True,
-            'reading_location': 'default',
-            'method': 'embedding_on_wiki',  # 'embedding_on_wiki' or 'llm_templates' or 'hyperlinks_on_wiki'
-            'keyword_number': 7,
-            'embedding_model': 'paraphrase-Mpnet-base-v2',
-            'saving': True,
-            'saving_location': 'default',
-            'generation_function': None,  # if llm is chosen as the method, this function should be provided
-        },
-        'scrap_area_finder': {
-            'require': True,
-            'reading_location': 'default',
-            'local_file_location': 'default',
-            'method': 'wiki',  # 'wiki' or 'local_files'
-            'scrap_number': 5,
-            'saving': True,
-            'saving_location': 'default',
-        },
-        'scrapper': {
-            'require': True,
-            'reading_location': 'default',
-            'saving': True,
-            'method': 'wiki',  # This is related to the scrap_area_finder method
-            'saving_location': 'default'},
-        'prompt_maker': {
-            'method': 'split_sentences',
-            'saving_location': 'default',
-        },
-    }
-
     def __init__(self):
         pass
 
-    @staticmethod
-    def update_configuration(default_configuration, updated_configuration):
-        """
-        Update the default configuration dictionary with the values from the updated configuration
-        only if the keys already exist in the default configuration.
+    def pipeline(self):
+        pass
 
-        Args:
-        - default_configuration (dict): The default configuration dictionary.
-        - updated_configuration (dict): The updated configuration dictionary with new values.
-
-        Returns:
-        - dict: The updated configuration dictionary.
-        """
-        for key, value in updated_configuration.items():
-            if key in default_configuration:
-                if isinstance(default_configuration[key], dict) and isinstance(value, dict):
-                    # Recursively update nested dictionaries
-                    default_configuration[key] = BenchmarkBuilding.update_configuration(default_configuration[key],
-                                                                                        value)
-                else:
-                    # Update the value for the key
-                    default_configuration[key] = value
-        return default_configuration
+    def demographic_labels_finder(self):
+        pass
 
     @classmethod
-    def category_pipeline(cls, domain, demographic_label, configuration=None):
-        if configuration is None:
-            configuration = cls.default_configuration
-        else:
-            configuration = cls.update_configuration(cls.default_configuration, configuration)
+    def domain_pipeline_with_wiki(cls, demographic_label, domain):
+        KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_embedding_on_wiki(top_n=7).add(keyword=demographic_label).save()
 
-        keyword_finder_require = configuration['keyword_finder']['require']
-        keyword_finder_reading_location = configuration['keyword_finder']['reading_location']
-        keyword_finder_method = configuration['keyword_finder']['method']
-        keyword_finder_keyword_number = configuration['keyword_finder']['keyword_number']
-        keyword_finder_embedding_model = configuration['keyword_finder']['embedding_model']
-        keyword_finder_saving = configuration['keyword_finder']['saving']
-        keyword_finder_saving_location = configuration['keyword_finder']['saving_location']
-        keyword_finder_generation_function = configuration['keyword_finder']['generation_function']
 
-        scrap_area_finder_require = configuration['scrap_area_finder']['require']
-        scrap_area_local_files_location = configuration['scrap_area_finder']['local_file_location']
-        scrap_area_finder_reading_location = configuration['scrap_area_finder']['reading_location']
-        scrap_area_finder_method = configuration['scrap_area_finder']['method']
-        scrap_area_finder_saving = configuration['scrap_area_finder']['saving']
-        scrap_area_finder_saving_location = configuration['scrap_area_finder']['saving_location']
-        scrap_area_finder_scrap_area_number = configuration['scrap_area_finder']['scrap_number']
+        print('Keywords found.')
+        keywords = abcData.load_file(domain=domain, category=demographic_label,
+                                     file_path=f'data/customized/keywords/{domain}_{demographic_label}_keywords.json',
+                                     data_tier='keywords')
+        ScrapAreaFinder(keywords, source_tag = 'wiki').find_scrap_urls_on_wiki().save()
 
-        scrapper_require = configuration['scrapper']['require']
-        scrapper_reading_location = configuration['scrapper']['reading_location']
-        scrapper_saving = configuration['scrapper']['saving']
-        scrapper_method = configuration['scrapper']['method']
-        scrapper_saving_location = configuration['scrapper']['saving_location']
-
-        prompt_maker_method = configuration['prompt_maker']['method']
-        prompt_maker_saving_location = configuration['prompt_maker']['saving_location']
-
-        # check the validity of the configuration
-        assert keyword_finder_method in ['embedding_on_wiki', 'llm_inquiries',
-                                         'hyperlinks_on_wiki'], "Invalid keyword finder method. Choose either 'embedding_on_wiki', 'llm_inquiries', or 'hyperlinks_on_wiki'."
-        if keyword_finder_method == 'llm_inquiries':
-            assert keyword_finder_generation_function is not None, "generation function must be provided if llm_inquiries is chosen as the method"
-            check_generation_function(keyword_finder_generation_function)
-        assert scrap_area_finder_method in ['wiki',
-                                            'local_files'], "Invalid scrap area finder method. Choose either 'wiki' or 'local_files'"
-        assert scrapper_method in ['wiki',
-                                   'local_files'], "Invalid scrapper method. Choose either 'wiki' or 'local_files'"
-        assert scrap_area_finder_method == scrapper_method, "scrap_area_finder and scrapper methods must be the same"
-        assert prompt_maker_method in ['split_sentences'], "Invalid prompt maker method. Choose 'split_sentences'"
-
-        # make sure only the required loading is done
-        if not scrapper_require:
-            scrap_area_finder_require = False
-
-        if not scrap_area_finder_require:
-            keyword_finder_require = False
-
-        if keyword_finder_require:
-            if keyword_finder_method == 'embedding_on_wiki':
-                kw = KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_embedding_on_wiki(
-                    n_keywords=keyword_finder_keyword_number, embedding_model=keyword_finder_embedding_model).add(
-                    keyword=demographic_label)
-            elif keyword_finder_method == 'llm_inquiries':
-                kw = KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_llm_inquiries(
-                    generation_function=keyword_finder_generation_function).add(
-                    keyword=demographic_label)
-            elif keyword_finder_method == 'hyperlinks_on_wiki':
-                kw = KeywordFinder(domain=domain,
-                                   category=demographic_label).find_name_keywords_by_hyperlinks_on_wiki().add(
-                    keyword=demographic_label)
-            print('Keywords found.')
-
-            if keyword_finder_saving:
-                if keyword_finder_saving_location == 'default':
-                    kw.save()
-                else:
-                    kw.save(file_path=keyword_finder_saving_location)
-
-        elif scrap_area_finder_require:
-            if keyword_finder_reading_location == 'default':
-                kw = abcData.load_file(domain=domain, category=demographic_label,
-                                       file_path=f'data/customized/keywords/{domain}_{demographic_label}_keywords.json',
-                                       data_tier='keywords')
-                print(f'Keywords loaded from data/customized/keywords/{domain}_{demographic_label}_keywords.json')
-            else:
-                kw = abcData.load_file(domain=domain, category=demographic_label,
-                                       file_path=keyword_finder_reading_location, data_tier='keywords')
-                print(f'Keywords loaded from {keyword_finder_reading_location}')
-
-        if scrap_area_finder_require:
-            if scrap_area_finder_method == 'wiki':
-                sa = ScrapAreaFinder(kw, source_tag='wiki').find_scrap_urls_on_wiki(top_n=scrap_area_finder_scrap_area_number)
-            elif scrap_area_finder_method == 'local_files':
-                if scrap_area_finder_reading_location == 'default':
-                    sa = ScrapAreaFinder(kw, source_tag='local').find_scrap_paths_local(
-                        f'data/customized/local_files/{demographic_label}')
-                else:
-                    sa = ScrapAreaFinder(kw, source_tag='local').find_scrap_paths_local(scrap_area_local_files_location)
-            print('Scrapped areas found.')
-
-            if scrap_area_finder_saving:
-                if scrap_area_finder_saving_location == 'default':
-                    sa.save()
-                else:
-                    sa.save(file_path=scrap_area_finder_saving_location)
-
-        elif scrapper_require:
-            if scrap_area_finder_reading_location == 'default':
-                sa = abcData.load_file(domain=domain, category=demographic_label,
+        print('Scrapped areas found.')
+        scrap_area = abcData.load_file(domain=domain, category=demographic_label,
                                        file_path=f'data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json',
                                        data_tier='scrap_area')
-                print(f'Scrap areas loaded from data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json')
-            else:
-                sa = abcData.load_file(domain=domain, category=demographic_label,
-                                       file_path=scrap_area_finder_reading_location, data_tier='scrap_area')
-                print(f'Scrap areas loaded from {scrap_area_finder_reading_location}')
+        Scrapper(scrap_area).scrap_in_page_for_wiki_with_buffer_files().save()
 
-        if scrapper_require:
-            if scrapper_method == 'wiki':
-                sc = Scrapper(sa).scrap_in_page_for_wiki_with_buffer_files()
-            elif scrapper_method == 'local_files':
-                sc = Scrapper(sa).scrap_local_with_buffer_files()
-            print('Scrapped sentences completed.')
+        print('Scrapped sentences completed.')
+        scrapped_sentences = abcData.load_file(domain=domain, category=demographic_label,
+                                               file_path=f'data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json',
+                                               data_tier='scrapped_sentences')
+        SentenceSpliter(scrapped_sentences).split_sentences().save()
+        print(f'Benchmark building for {demographic_label} completed.')
 
-            if scrapper_saving:
-                if scrapper_saving_location == 'default':
-                    sc.save()
-                else:
-                    sc.save(file_path=scrapper_saving_location)
-
-        else:
-            if scrapper_reading_location == 'default':
-                sc = abcData.load_file(domain=domain, category=demographic_label,
-                                       file_path=f'data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json',
-                                       data_tier='scrapped_sentences')
-                print(f'Scrapped sentences loaded from data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json')
-            else:
-                sc = abcData.load_file(domain=domain, category=demographic_label, file_path=scrapper_reading_location,
-                                       data_tier='scrapped_sentences')
-                print(f'Scrapped sentences loaded from {scrapper_reading_location}')
-
-        if prompt_maker_method == 'split_sentences':
-            pm = PromptMaker(sc).split_sentences()
-            if prompt_maker_saving_location == 'default':
-                pm.save()
-            else:
-                pm.save(file_path=prompt_maker_saving_location)
-            print(f'Benchmark building for {demographic_label} completed.')
+    @classmethod
+    def domain_pipeline_with_local_files(cls, demographic_label, domain):
+        # KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_embedding_on_wiki(top_n=7).add(keyword=demographic_label).save()
+        #
+        # print('Keywords found.')
+        # keywords = abcData.load_file(domain=domain, category=demographic_label,
+        #                              file_path=f'data/customized/keywords/{domain}_{demographic_label}_keywords.json',
+        #                              data_tier='keywords')
+        # ScrapAreaFinder(keywords, source_tag = 'local').find_scrap_paths_local('data/customized/local_files/Atheism').save()
+        #
+        # print('Scrapped areas found.')
+        # scrap_area = abcData.load_file(domain=domain, category=demographic_label,
+        #                                file_path=f'data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json',
+        #                                data_tier='scrap_area')
+        # Scrapper(scrap_area).scrap_local_with_buffer_files().save()
+        #
+        # print('Scrapped sentences completed.')
+        scrapped_sentences = abcData.load_file(domain=domain, category=demographic_label,
+                                               file_path=f'data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json',
+                                               data_tier='scrapped_sentences')
+        SentenceSpliter(scrapped_sentences).split_sentences().save()
+        print(f'Benchmark building for {demographic_label} completed.')
 
 
 if __name__ == '__main__':
+    # for demographic_label in tqdm(['christianity']):
+        # BenchmarkBuilding.domain_pipeline_with_local_files(domain='religion', demographic_label=demographic_label)
+        # BenchmarkBuilding.domain_pipeline_with_wiki(domain='religion', demographic_label=demographic_label)
 
-    configuration = {
-        'scrapper': {
-            'require': False,
-        },
-    }
-    BenchmarkBuilding.category_pipeline('profession', 'technician', configuration)
+   KeywordFinder('communism', 'politics').find_name_keywords_by_hyperlinks_on_wiki(
+    format = 'Nested',
+    page_name='Category:Women in computing',
+    depth=1)
 

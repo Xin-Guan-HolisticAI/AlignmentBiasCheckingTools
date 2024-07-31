@@ -1,51 +1,9 @@
 [
   {
-    "category": "atheism",
+    "category": "judaism",
     "domain": "religion",
     "keywords": {
-      "fundamentalism": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "at": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "deism": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "nonbelief": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "religiosity": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "theological": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "religion": {
-        "keyword_type": "sub-concepts",
-        "keyword_provider": "embedding",
-        "scrap_mode": "in_page",
-        "scrap_shared_area": "Yes"
-      },
-      "atheism": {
+      "judaism": {
         "keyword_type": "sub-concepts",
         "keyword_provider": "manual",
         "targeted_scrap_area": [
@@ -55,6 +13,42 @@
             "scrap_area_specification": []
           }
         ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "synagogue": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "jew": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "rabbi": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "torah": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "talmud": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "jerusalem": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
       }
