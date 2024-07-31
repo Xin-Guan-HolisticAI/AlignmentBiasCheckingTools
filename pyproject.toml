@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "alignmentbiascheckingtools"
+version = "0.1.0"
+description = "Alignment bias package with benchmark building and analytical tools"
+authors = ["HolisticAI"]
+readme = "README.md"
+packages = [{include = "alignmentbiascheckingtools"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
