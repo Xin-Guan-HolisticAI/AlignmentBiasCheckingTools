@@ -908,7 +908,7 @@ class PromptMaker:
 
     def split_sentences(self, kw_check=False, keyword=None):
 
-        def split_individual_sentence(self, sentence, kw_check=False, keyword=None):
+        def split_individual_sentence(sentence, kw_check=False, keyword=None):
 
             def is_within_brackets(token, doc):
                 """
@@ -1001,22 +1001,23 @@ class PromptMaker:
 
 
 class BenchmarkBuilding:
-
     default_configuration = {
         'keyword_finder': {
             'require': True,
-            'reading_location': 'default',  # 'default' or 'local_files'. This must be provided if require is False
-            'method': 'embedding_on_wiki', # 'embedding_on_wiki' or 'llm_templates' or 'hyperlinks_on_wiki'
+            'reading_location': 'default',
+            'method': 'embedding_on_wiki',  # 'embedding_on_wiki' or 'llm_templates' or 'hyperlinks_on_wiki'
             'keyword_number': 7,
             'embedding_model': 'paraphrase-Mpnet-base-v2',
             'saving': True,
             'saving_location': 'default',
-            'generation_function': None, # if llm is chosen as the method, this function should be provided
+            'generation_function': None,  # if llm is chosen as the method, this function should be provided
         },
         'scrap_area_finder': {
             'require': True,
             'reading_location': 'default',
+            'local_file_location': 'default',
             'method': 'wiki',  # 'wiki' or 'local_files'
+            'scrap_number': 5,
             'saving': True,
             'saving_location': 'default',
         },
@@ -1024,7 +1025,7 @@ class BenchmarkBuilding:
             'require': True,
             'reading_location': 'default',
             'saving': True,
-            'method': 'wiki', # This is related to the scrap_area_finder method
+            'method': 'wiki',  # This is related to the scrap_area_finder method
             'saving_location': 'default'},
         'prompt_maker': {
             'method': 'split_sentences',
@@ -1052,14 +1053,15 @@ class BenchmarkBuilding:
             if key in default_configuration:
                 if isinstance(default_configuration[key], dict) and isinstance(value, dict):
                     # Recursively update nested dictionaries
-                    default_configuration[key] = BenchmarkBuilding.update_configuration(default_configuration[key], value)
+                    default_configuration[key] = BenchmarkBuilding.update_configuration(default_configuration[key],
+                                                                                        value)
                 else:
                     # Update the value for the key
                     default_configuration[key] = value
         return default_configuration
 
     @classmethod
-    def domain_pipeline(cls, domain, demographic_label, configuration=None):
+    def category_pipeline(cls, domain, demographic_label, configuration=None):
         if configuration is None:
             configuration = cls.default_configuration
         else:
@@ -1073,13 +1075,14 @@ class BenchmarkBuilding:
         keyword_finder_saving = configuration['keyword_finder']['saving']
         keyword_finder_saving_location = configuration['keyword_finder']['saving_location']
         keyword_finder_generation_function = configuration['keyword_finder']['generation_function']
-        check_generation_function(keyword_finder_generation_function)
 
         scrap_area_finder_require = configuration['scrap_area_finder']['require']
+        scrap_area_local_files_location = configuration['scrap_area_finder']['local_file_location']
         scrap_area_finder_reading_location = configuration['scrap_area_finder']['reading_location']
         scrap_area_finder_method = configuration['scrap_area_finder']['method']
         scrap_area_finder_saving = configuration['scrap_area_finder']['saving']
         scrap_area_finder_saving_location = configuration['scrap_area_finder']['saving_location']
+        scrap_area_finder_scrap_area_number = configuration['scrap_area_finder']['scrap_number']
 
         scrapper_require = configuration['scrapper']['require']
         scrapper_reading_location = configuration['scrapper']['reading_location']
@@ -1087,34 +1090,43 @@ class BenchmarkBuilding:
         scrapper_method = configuration['scrapper']['method']
         scrapper_saving_location = configuration['scrapper']['saving_location']
 
-        prompt_maker_require = configuration['prompt_maker']['require']
         prompt_maker_method = configuration['prompt_maker']['method']
+        prompt_maker_saving_location = configuration['prompt_maker']['saving_location']
 
         # check the validity of the configuration
-        assert keyword_finder_method in ['embedding_on_wiki', 'llm_inquiries', 'hyperlinks_on_wiki'], "Invalid keyword finder method. Choose either 'embedding_on_wiki', 'llm_inquiries', or 'hyperlinks_on_wiki'."
+        assert keyword_finder_method in ['embedding_on_wiki', 'llm_inquiries',
+                                         'hyperlinks_on_wiki'], "Invalid keyword finder method. Choose either 'embedding_on_wiki', 'llm_inquiries', or 'hyperlinks_on_wiki'."
         if keyword_finder_method == 'llm_inquiries':
             assert keyword_finder_generation_function is not None, "generation function must be provided if llm_inquiries is chosen as the method"
             check_generation_function(keyword_finder_generation_function)
-        for sub_config in configuration.values():
-            if 'require' in sub_config.keys() and not sub_config['require']:
-                assert sub_config['reading_location'] != 'default', "reading location of the file must be given if require of the module is False"
-        assert scrap_area_finder_method in ['wiki', 'local_files'], "Invalid scrap area finder method. Choose either 'wiki' or 'local_files'"
-        assert scrapper_method in ['wiki', 'local_files'], "Invalid scrapper method. Choose either 'wiki' or 'local_files'"
+        assert scrap_area_finder_method in ['wiki',
+                                            'local_files'], "Invalid scrap area finder method. Choose either 'wiki' or 'local_files'"
+        assert scrapper_method in ['wiki',
+                                   'local_files'], "Invalid scrapper method. Choose either 'wiki' or 'local_files'"
         assert scrap_area_finder_method == scrapper_method, "scrap_area_finder and scrapper methods must be the same"
         assert prompt_maker_method in ['split_sentences'], "Invalid prompt maker method. Choose 'split_sentences'"
 
+        # make sure only the required loading is done
+        if not scrapper_require:
+            scrap_area_finder_require = False
+
+        if not scrap_area_finder_require:
+            keyword_finder_require = False
 
         if keyword_finder_require:
             if keyword_finder_method == 'embedding_on_wiki':
-                kw = KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_embedding_on_wiki(n_keywords=keyword_finder_keyword_number, model=keyword_finder_embedding_model).add(
+                kw = KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_embedding_on_wiki(
+                    n_keywords=keyword_finder_keyword_number, embedding_model=keyword_finder_embedding_model).add(
                     keyword=demographic_label)
             elif keyword_finder_method == 'llm_inquiries':
                 kw = KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_llm_inquiries(
                     generation_function=keyword_finder_generation_function).add(
                     keyword=demographic_label)
             elif keyword_finder_method == 'hyperlinks_on_wiki':
-                kw = KeywordFinder(domain=domain, category=demographic_label).find_name_keywords_by_hyperlinks_on_wiki().add(
+                kw = KeywordFinder(domain=domain,
+                                   category=demographic_label).find_name_keywords_by_hyperlinks_on_wiki().add(
                     keyword=demographic_label)
+            print('Keywords found.')
 
             if keyword_finder_saving:
                 if keyword_finder_saving_location == 'default':
@@ -1122,95 +1134,83 @@ class BenchmarkBuilding:
                 else:
                     kw.save(file_path=keyword_finder_saving_location)
 
+        elif scrap_area_finder_require:
+            if keyword_finder_reading_location == 'default':
+                kw = abcData.load_file(domain=domain, category=demographic_label,
+                                       file_path=f'data/customized/keywords/{domain}_{demographic_label}_keywords.json',
+                                       data_tier='keywords')
+                print(f'Keywords loaded from data/customized/keywords/{domain}_{demographic_label}_keywords.json')
+            else:
+                kw = abcData.load_file(domain=domain, category=demographic_label,
+                                       file_path=keyword_finder_reading_location, data_tier='keywords')
+                print(f'Keywords loaded from {keyword_finder_reading_location}')
 
-        KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_embedding_on_wiki(n_keywords=7).add(
-            keyword=demographic_label).save()
+        if scrap_area_finder_require:
+            if scrap_area_finder_method == 'wiki':
+                sa = ScrapAreaFinder(kw, source_tag='wiki').find_scrap_urls_on_wiki(top_n=scrap_area_finder_scrap_area_number)
+            elif scrap_area_finder_method == 'local_files':
+                if scrap_area_finder_reading_location == 'default':
+                    sa = ScrapAreaFinder(kw, source_tag='local').find_scrap_paths_local(
+                        f'data/customized/local_files/{demographic_label}')
+                else:
+                    sa = ScrapAreaFinder(kw, source_tag='local').find_scrap_paths_local(scrap_area_local_files_location)
+            print('Scrapped areas found.')
 
-        print('Keywords found.')
-        keywords = abcData.load_file(domain=domain, category=demographic_label,
-                                     file_path=f'data/customized/keywords/{domain}_{demographic_label}_keywords.json',
-                                     data_tier='keywords')
-        ScrapAreaFinder(keywords, source_tag='wiki').find_scrap_urls_on_wiki().save()
+            if scrap_area_finder_saving:
+                if scrap_area_finder_saving_location == 'default':
+                    sa.save()
+                else:
+                    sa.save(file_path=scrap_area_finder_saving_location)
 
-        print('Scrapped areas found.')
-        scrap_area = abcData.load_file(domain=domain, category=demographic_label,
+        elif scrapper_require:
+            if scrap_area_finder_reading_location == 'default':
+                sa = abcData.load_file(domain=domain, category=demographic_label,
                                        file_path=f'data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json',
                                        data_tier='scrap_area')
-        Scrapper(scrap_area).scrap_in_page_for_wiki_with_buffer_files().save()
+                print(f'Scrap areas loaded from data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json')
+            else:
+                sa = abcData.load_file(domain=domain, category=demographic_label,
+                                       file_path=scrap_area_finder_reading_location, data_tier='scrap_area')
+                print(f'Scrap areas loaded from {scrap_area_finder_reading_location}')
 
-        print('Scrapped sentences completed.')
-        scrapped_sentences = abcData.load_file(domain=domain, category=demographic_label,
-                                               file_path=f'data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json',
-                                               data_tier='scrapped_sentences')
-        PromptMaker(scrapped_sentences).split_sentences().save()
-        print(f'Benchmark building for {demographic_label} completed.')
+        if scrapper_require:
+            if scrapper_method == 'wiki':
+                sc = Scrapper(sa).scrap_in_page_for_wiki_with_buffer_files()
+            elif scrapper_method == 'local_files':
+                sc = Scrapper(sa).scrap_local_with_buffer_files()
+            print('Scrapped sentences completed.')
 
+            if scrapper_saving:
+                if scrapper_saving_location == 'default':
+                    sc.save()
+                else:
+                    sc.save(file_path=scrapper_saving_location)
 
+        else:
+            if scrapper_reading_location == 'default':
+                sc = abcData.load_file(domain=domain, category=demographic_label,
+                                       file_path=f'data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json',
+                                       data_tier='scrapped_sentences')
+                print(f'Scrapped sentences loaded from data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json')
+            else:
+                sc = abcData.load_file(domain=domain, category=demographic_label, file_path=scrapper_reading_location,
+                                       data_tier='scrapped_sentences')
+                print(f'Scrapped sentences loaded from {scrapper_reading_location}')
 
-
-    @classmethod
-    def domain_pipeline_with_wiki(cls, demographic_label, domain):
-        KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_embedding_on_wiki(n_keywords=7).add(
-            keyword=demographic_label).save()
-
-        print('Keywords found.')
-        keywords = abcData.load_file(domain=domain, category=demographic_label,
-                                     file_path=f'data/customized/keywords/{domain}_{demographic_label}_keywords.json',
-                                     data_tier='keywords')
-        ScrapAreaFinder(keywords, source_tag='wiki').find_scrap_urls_on_wiki().save()
-
-        print('Scrapped areas found.')
-        scrap_area = abcData.load_file(domain=domain, category=demographic_label,
-                                       file_path=f'data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json',
-                                       data_tier='scrap_area')
-        Scrapper(scrap_area).scrap_in_page_for_wiki_with_buffer_files().save()
-
-        print('Scrapped sentences completed.')
-        scrapped_sentences = abcData.load_file(domain=domain, category=demographic_label,
-                                               file_path=f'data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json',
-                                               data_tier='scrapped_sentences')
-        PromptMaker(scrapped_sentences).split_sentences().save()
-        print(f'Benchmark building for {demographic_label} completed.')
-
-    @classmethod
-    def domain_pipeline_with_local_files(cls, demographic_label, domain):
-        KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_embedding_on_wiki(n_keywords=7).add(
-            keyword=demographic_label).save()
-
-        print('Keywords found.')
-        keywords = abcData.load_file(domain=domain, category=demographic_label,
-                                     file_path=f'data/customized/keywords/{domain}_{demographic_label}_keywords.json',
-                                     data_tier='keywords')
-        ScrapAreaFinder(keywords, source_tag='local').find_scrap_paths_local(
-            f'data/customized/local_files/{demographic_label}').save()
-
-        print('Scrapped areas found.')
-        scrap_area = abcData.load_file(domain=domain, category=demographic_label,
-                                       file_path=f'data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json',
-                                       data_tier='scrap_area')
-        Scrapper(scrap_area).scrap_local_with_buffer_files().save()
-
-        print('Scrapped sentences completed.')
-        scrapped_sentences = abcData.load_file(domain=domain, category=demographic_label,
-                                               file_path=f'data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json',
-                                               data_tier='scrapped_sentences')
-        PromptMaker(scrapped_sentences).split_sentences().save()
-        print(f'Benchmark building for {demographic_label} completed.')
+        if prompt_maker_method == 'split_sentences':
+            pm = PromptMaker(sc).split_sentences()
+            if prompt_maker_saving_location == 'default':
+                pm.save()
+            else:
+                pm.save(file_path=prompt_maker_saving_location)
+            print(f'Benchmark building for {demographic_label} completed.')
 
 
 if __name__ == '__main__':
-    for demographic_label in tqdm(
-            ['christianity', 'atheism', 'buddhism', 'hinduism', 'islam', 'judaism', 'sikhism', 'confucianism', 'shinto',
-             'taoism']):
-        # BenchmarkBuilding.domain_pipeline_with_local_files(domain='religion', demographic_label=demographic_label)
-        BenchmarkBuilding.domain_pipeline_with_wiki(domain='religion', demographic_label=demographic_label)
 
-    # BenchmarkBuilding.domain_pipeline_with_local_files(domain='religion', demographic_label='atheism')
-    # BenchmarkBuilding.domain_pipeline_with_wiki(domain='religion', demographic_label='christianity')
-
-    # KeywordFinder(domain='race', category='kazah_americans')\
-    #     .find_name_keywords_by_hyperlinks_on_wiki(
-    #     link = "https://en.wikipedia.org/wiki/Kazakh_Americans#Notable_people"
-    #     )\
-    #     .add(keyword='christianity')\
-    #     .save()
+    configuration = {
+        'scrapper': {
+            'require': False,
+        },
+    }
+    BenchmarkBuilding.category_pipeline('profession', 'technician', configuration)
