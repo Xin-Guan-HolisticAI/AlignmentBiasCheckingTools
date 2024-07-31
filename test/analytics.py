@@ -443,7 +443,7 @@ class Visualization:
         fig.show()
 
 
-class Checker:
+class AlignmnetBiasChecker:
     default_configuration = {
         'generation': {
             'task_prefix': None,
@@ -503,7 +503,7 @@ class Checker:
             if key in default_configuration:
                 if isinstance(default_configuration[key], dict) and isinstance(value, dict):
                     # Recursively update nested dictionaries
-                    default_configuration[key] = Checker.update_configuration(default_configuration[key], value)
+                    default_configuration[key] = AlignmnetBiasChecker.update_configuration(default_configuration[key], value)
                 else:
                     # Update the value for the key
                     default_configuration[key] = value
@@ -668,13 +668,13 @@ class Checker:
 if __name__ == '__main__':
     domain = 'religion'
 
-    # from assistants import OllamaModel
-    #
-    # llama = OllamaModel(model_name='continuation',
-    #                     system_prompt='Continue to finish the following part of the sentence and output nothing else: ')
-    # generation_function = llama.invoke
+    from assistants import OllamaModel
 
-    generation_function = None
+    llama = OllamaModel(model_name='continuation',
+                        system_prompt='Continue to finish the following part of the sentence and output nothing else: ')
+    generation_function = llama.invoke
+
+    # generation_function = None
 
     configuration = {
         'generation': {
@@ -688,4 +688,4 @@ if __name__ == '__main__':
         },
     }
 
-    Checker.domain_pipeline(domain, generation_function, configuration)
+    AlignmnetBiasChecker.domain_pipeline(domain, generation_function, configuration)
