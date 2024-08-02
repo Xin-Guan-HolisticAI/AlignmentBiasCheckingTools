@@ -1,0 +1,2857 @@
+[
+  {
+    "category": "populism",
+    "domain": "political-ideology",
+    "keywords": {
+      "populi": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Populist leaders thus \"come in many different shades and sizes\" but, according to Mudde and Rovira Kaltwasser, share one common element: \"a carefully crafted image of the vox populi\".",
+            "wiki"
+          ],
+          [
+            "For these leaders, populist rhetoric allows them to claim that they have a direct relationship with \"the people\", and in many cases they claim to be a personification of \"the people\" themselves, presenting themselves as the vox populi or \"voice of the people\".",
+            "wiki"
+          ]
+        ]
+      },
+      "conservatism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Populist leaders thus \"come in many different shades and sizes\" but, according to Mudde and Rovira Kaltwasser, share one common element: \"a carefully crafted image of the vox populi\".",
+            "wiki"
+          ],
+          [
+            "For these leaders, populist rhetoric allows them to claim that they have a direct relationship with \"the people\", and in many cases they claim to be a personification of \"the people\" themselves, presenting themselves as the vox populi or \"voice of the people\".",
+            "wiki"
+          ],
+          [
+            "As noted by the political scientist Margaret Canovan, \"there has been no self-conscious international populist movement which might have attempted to control or limit the term's reference, and as a result those who have used it have been able to attach it a wide variety of meanings.\" In this it differs from other political terms, like \"socialism\" or \"conservatism\", which have been widely used as self-designations by individuals who have then presented their own, internal definitions of the word.",
+            "wiki"
+          ],
+          [
+            "Thus, populism can be found merged with forms of nationalism, liberalism, socialism, federalism, or conservatism.",
+            "wiki"
+          ],
+          [
+            "According to experts, Yamamoto uses a simple message to spotlight single individuals left behind, including people struggling with poverty or non-permanent employment, who used to devote themselves to radical conservatism.",
+            "wiki"
+          ],
+          [
+            "Recurring themes of right-wing populists include neo-nationalism, social conservatism, economic nationalism and fiscal conservatism.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is an ideology that primarily espouses neo-nationalism, social conservatism, and economic nationalism.",
+            "wiki"
+          ],
+          [
+            "Even with Kwankwaso's cultural conservatism, he has expressed support for women's rights in Nigeria.",
+            "wiki"
+          ],
+          [
+            "Conservatism in South Korea has traditionally been more inclined toward elitism than populism.",
+            "wiki"
+          ],
+          [
+            "It combines social conservatism and criticism of immigration with strong support for NATO and an interventionist economic policy.",
+            "wiki"
+          ],
+          [
+            "In the Conservative Party, Thatcherism had right-wing populist elements, including nationalism and social conservatism Although Margaret Thatcher has been characterised by some scholars as a right-wing populist politician in the UK, this has been disputed by other scholars due to its applicability in the context of the 1980s.",
+            "wiki"
+          ]
+        ]
+      },
+      "radicalism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Populist leaders thus \"come in many different shades and sizes\" but, according to Mudde and Rovira Kaltwasser, share one common element: \"a carefully crafted image of the vox populi\".",
+            "wiki"
+          ],
+          [
+            "For these leaders, populist rhetoric allows them to claim that they have a direct relationship with \"the people\", and in many cases they claim to be a personification of \"the people\" themselves, presenting themselves as the vox populi or \"voice of the people\".",
+            "wiki"
+          ],
+          [
+            "As noted by the political scientist Margaret Canovan, \"there has been no self-conscious international populist movement which might have attempted to control or limit the term's reference, and as a result those who have used it have been able to attach it a wide variety of meanings.\" In this it differs from other political terms, like \"socialism\" or \"conservatism\", which have been widely used as self-designations by individuals who have then presented their own, internal definitions of the word.",
+            "wiki"
+          ],
+          [
+            "Thus, populism can be found merged with forms of nationalism, liberalism, socialism, federalism, or conservatism.",
+            "wiki"
+          ],
+          [
+            "Three of these were forms of \"agrarian populism\"; these included farmers' radicalism, peasant movements, and intellectual agrarian socialism.",
+            "wiki"
+          ],
+          [
+            "According to experts, Yamamoto uses a simple message to spotlight single individuals left behind, including people struggling with poverty or non-permanent employment, who used to devote themselves to radical conservatism.",
+            "wiki"
+          ],
+          [
+            "Recurring themes of right-wing populists include neo-nationalism, social conservatism, economic nationalism and fiscal conservatism.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is an ideology that primarily espouses neo-nationalism, social conservatism, and economic nationalism.",
+            "wiki"
+          ],
+          [
+            "Even with Kwankwaso's cultural conservatism, he has expressed support for women's rights in Nigeria.",
+            "wiki"
+          ],
+          [
+            "Conservatism in South Korea has traditionally been more inclined toward elitism than populism.",
+            "wiki"
+          ],
+          [
+            "It combines social conservatism and criticism of immigration with strong support for NATO and an interventionist economic policy.",
+            "wiki"
+          ],
+          [
+            "In the Conservative Party, Thatcherism had right-wing populist elements, including nationalism and social conservatism Although Margaret Thatcher has been characterised by some scholars as a right-wing populist politician in the UK, this has been disputed by other scholars due to its applicability in the context of the 1980s.",
+            "wiki"
+          ]
+        ]
+      },
+      "conservative": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Populist leaders thus \"come in many different shades and sizes\" but, according to Mudde and Rovira Kaltwasser, share one common element: \"a carefully crafted image of the vox populi\".",
+            "wiki"
+          ],
+          [
+            "For these leaders, populist rhetoric allows them to claim that they have a direct relationship with \"the people\", and in many cases they claim to be a personification of \"the people\" themselves, presenting themselves as the vox populi or \"voice of the people\".",
+            "wiki"
+          ],
+          [
+            "As noted by the political scientist Margaret Canovan, \"there has been no self-conscious international populist movement which might have attempted to control or limit the term's reference, and as a result those who have used it have been able to attach it a wide variety of meanings.\" In this it differs from other political terms, like \"socialism\" or \"conservatism\", which have been widely used as self-designations by individuals who have then presented their own, internal definitions of the word.",
+            "wiki"
+          ],
+          [
+            "Thus, populism can be found merged with forms of nationalism, liberalism, socialism, federalism, or conservatism.",
+            "wiki"
+          ],
+          [
+            "Three of these were forms of \"agrarian populism\"; these included farmers' radicalism, peasant movements, and intellectual agrarian socialism.",
+            "wiki"
+          ],
+          [
+            "For instance, in Britain, the centre-right Conservative Party conceived of \"Middle England\" as its heartland, while the far-right British National Party conceived of the \"native British people\" as its heartland.",
+            "wiki"
+          ],
+          [
+            "They are also more likely to benefit from emphasizing social and cultural issues such as immigration and race, appealing to voters who are positioned economically towards the left-wing but hold socially conservative views.",
+            "wiki"
+          ],
+          [
+            "These were largely isolated and mostly reflected a conservative agricultural backlash against the centralisation and politicisation of the agricultural sector then occurring.",
+            "wiki"
+          ],
+          [
+            "For example, in the 2001 electoral campaign, the Conservative Party leader William Hague accused Tony Blair's governing Labour Party government of representing \"the condescending liberal elite\".",
+            "wiki"
+          ],
+          [
+            "Hague repeatedly referring to it as \"metropolitan\", implying that it was out of touch with \"the people\", who in Conservative discourse are represented by \"Middle England\".",
+            "wiki"
+          ],
+          [
+            "According to experts, Yamamoto uses a simple message to spotlight single individuals left behind, including people struggling with poverty or non-permanent employment, who used to devote themselves to radical conservatism.",
+            "wiki"
+          ],
+          [
+            "Left-liberal economic populism appealing to the working class has been prominent in some countries, such as with Joe Biden of United States and Lee Jae-myung of South Korea, in the 2020s, where liberal and conservative parties are the main two parties.",
+            "wiki"
+          ],
+          [
+            "Obi sought to challenge the traditional two-party system, led by the centrist and Buharist All Progressives Congress on one side, and the center-right, nationalist, and conservative-liberal Peoples Democratic Party.",
+            "wiki"
+          ],
+          [
+            "However, unlike many similar left-wing populist parties that have a hard-right approach to race, the EFF is not socially conservative.",
+            "wiki"
+          ],
+          [
+            "He once said he was \"conservative\" and suggested policies far from general left-wing populism in the United States and Europe, partially insisting on economic liberal policies such as deregulating companies on some issues.",
+            "wiki"
+          ],
+          [
+            "In addition, he showed a somewhat conservative tendency on some social agendas.",
+            "wiki"
+          ],
+          [
+            "In addition, Lee Jae-myung's political orientation was somewhat ambiguous, so conservative journalist Dong-A Ilbo denied that he was a left-wing politician, while South Korea's far-left organization Workers' Solidarity evaluated him as a social democratic. (However, another South Korean left-wing undongkwon group denied that Lee Jae-myung is not a social democratic.) Lee is also a staunch supporter of free trade, unlike ordinary economic populists.",
+            "wiki"
+          ],
+          [
+            "In the 2015 election for the national parliament, Podemos reached 20.65% of the vote and became the third largest party in the parliament after the conservative People's Party with 28.71% and the Spanish Socialist Workers' Party with 22.02%.",
+            "wiki"
+          ],
+          [
+            "Recurring themes of right-wing populists include neo-nationalism, social conservatism, economic nationalism and fiscal conservatism.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is an ideology that primarily espouses neo-nationalism, social conservatism, and economic nationalism.",
+            "wiki"
+          ],
+          [
+            "Even with Kwankwaso's cultural conservatism, he has expressed support for women's rights in Nigeria.",
+            "wiki"
+          ],
+          [
+            "Conservatism in South Korea has traditionally been more inclined toward elitism than populism.",
+            "wiki"
+          ],
+          [
+            "It combines social conservatism and criticism of immigration with strong support for NATO and an interventionist economic policy.",
+            "wiki"
+          ],
+          [
+            "In the Conservative Party, Thatcherism had right-wing populist elements, including nationalism and social conservatism Although Margaret Thatcher has been characterised by some scholars as a right-wing populist politician in the UK, this has been disputed by other scholars due to its applicability in the context of the 1980s.",
+            "wiki"
+          ],
+          [
+            "Under Orb\u00e1n's leadership, the party has stressed national sovereignty, anti-immigrant policies, and conservative social values, frequently battling with the EU on a variety of topics.",
+            "wiki"
+          ],
+          [
+            "Republican Party and the Conservative Party of Canada include right-wing populist factions.",
+            "wiki"
+          ],
+          [
+            "Kwankwaso is seen as being strongly culturally conservative and a deeply pious Muslim, although he is no Islamist.",
+            "wiki"
+          ],
+          [
+            "Freedom Front Plus has always promoted policies which are conservative in nature and support Afrikaans-speakers and Christians from the Dutch Reformed Church of South Africa.",
+            "wiki"
+          ],
+          [
+            "In the Brazilian general election of 2014, Levy Fidelix, from the Brazilian Labour Renewal Party, presented himself with a conservative speech and, according to him, the only right-wing candidate.",
+            "wiki"
+          ],
+          [
+            "In addition, according to the political analyst of the Inter-Union Department of Parliamentary Advice, Ant\u00f4nio Augusto de Queiroz, the National Congress elected in 2014 may be considered the most conservative since the \"re-democratization\" movement, noting an increase in the number of parliamentarians linked to more conservative segments, such as ruralists, the military, the police, and the religious right.",
+            "wiki"
+          ],
+          [
+            "The subsequent economic crisis of 2015 and investigations of corruption scandals led to a right-wing movement that sought to rescue fiscally and socially conservative ideas in opposition to the left-wing policies of the Workers' Party.",
+            "wiki"
+          ],
+          [
+            "In the late 1980s, the Reform Party of Canada, led by Preston Manning, became another right-wing populist movement formed due to the policies of the center-right Progressive Conservative Party of Canada, which alienated many Blue Tories and led to a feeling of neglect in the West of Canada.",
+            "wiki"
+          ],
+          [
+            "Initially motivated by a single-issue desire to give a voice to Western Canada, the Reform Party expanded its platform to include a blend of socially conservative and right-wing populist policies.",
+            "wiki"
+          ],
+          [
+            "The Alliance ultimately merged with the Progressive Conservative Party to form the modern-day Conservative Party of Canada, after which the Alliance faction dropped some of its populist and socially conservative ideas.",
+            "wiki"
+          ],
+          [
+            "In recent years, right-wing populist elements have existed within the Conservative Party of Canada and mainstream provincial parties and have most notably been espoused by Ontario MP Kellie Leitch; businessman Kevin O'Leary; Quebec Premier Fran\u00e7ois Legault; the former Mayor of Toronto Rob Ford; and his brother, Ontario Premier Doug Ford.",
+            "wiki"
+          ],
+          [
+            "In August 2018, Conservative MP Maxime Bernier left the party, and the following month he founded the People's Party of Canada, which has self-described as \"smart populism\" and been described as a \"right of centre, populist\" movement.",
+            "wiki"
+          ],
+          [
+            "Pierre Poilievre, who has been described as populist by some journalists, won the 2022 Conservative Party of Canada leadership election and became the leader of both the Conservative Party and the Official Opposition.",
+            "wiki"
+          ],
+          [
+            "Moore (1996) argues that \"populist opposition to the growing power of political, economic, and cultural elites\" helped shape \"conservative and right-wing movements\" since the 1920s.",
+            "wiki"
+          ],
+          [
+            "William Jennings Bryan, the 1896 Populist presidential nominee, was socially and theologically conservative, supporting creationism, Prohibition and other aspects of Christian fundamentalism.",
+            "wiki"
+          ],
+          [
+            "Longfield posits Bryan was a \"theologically conservative Social Gospeler\".",
+            "wiki"
+          ],
+          [
+            "In 2010, David Barstow wrote in The New York Times: \"The Tea Party movement has become a platform for conservative populist discontent\".",
+            "wiki"
+          ],
+          [
+            "The other faction resembles Western far-right populists and includes parties such as Japan First Party, Sanseito, and the Conservative Party of Japan.",
+            "wiki"
+          ],
+          [
+            "A economic nationalist and social conservative, Muldoon has been cited as having appealed to the masses through his animosity towards the media and leftists and his own abrasive and colourful public persona.",
+            "wiki"
+          ],
+          [
+            "However, since the 2016 South Korean political scandal, Korean conservative forces have changed their political lines to populism as the distrust of the elite spread among the Korean public.",
+            "wiki"
+          ],
+          [
+            "Hong Joon-pyo and Lee Un-ju of the People Power Party are leading right-wing populists advocating anti-homosexuality, anti-immigration and social conservative views.",
+            "wiki"
+          ],
+          [
+            "South Korean right-wing circles insist that the impeachment of former president Park Geun-hye is wrong, stimulating conservative public nostalgia for the Park Chung-hee administration.",
+            "wiki"
+          ],
+          [
+            "The Flemish nationalist and conservative liberal N-VA party has been described as populist or containing right-wing populist elements by foreign media such as the German Die Zeit magazine.",
+            "wiki"
+          ],
+          [
+            "Silvio Berlusconi, leader of the liberal-conservative Forza Italia and former Prime Minister of Italy.",
+            "wiki"
+          ],
+          [
+            "Giorgia Meloni, leader of the national-conservative Brothers of Italy and current Prime Minister of Italy",
+            "wiki"
+          ],
+          [
+            "The nationalist and national-conservative Brothers of Italy (FdI), led by Giorgia Meloni, gained 4.4% of votes in the 2018 election and, four years later, it became the most voted party in the 2022 general election, gaining 26% of votes.",
+            "wiki"
+          ],
+          [
+            "Some national conservative, nationalist, and arguably right-wing populist parties are strong, especially in Lazio, the region around Rome, and Southern Italy.",
+            "wiki"
+          ],
+          [
+            "Most of them originated due to the Italian Social Movement (a national-conservative party whose best result was 8.7% of the vote in the 1972 general election) and its successor National Alliance (which reached 15.7% of the vote in the 1996 general election).",
+            "wiki"
+          ],
+          [
+            "Polish Congress of the New Right, headed by Micha\u0142 Marusik, aggressively promotes fiscally conservative concepts like radical tax reductions preceded by the abolishment of social security, universal public healthcare, state-sponsored education, and Communist Polish 1944 agricultural reform as a way to dynamical economic and welfare growth.",
+            "wiki"
+          ],
+          [
+            "The party is mainly considered national conservative, but it has also variously been identified as \"extreme right\" and \"radical right-wing populist\", reflecting a spectrum of ideologies among its members.",
+            "wiki"
+          ],
+          [
+            "In 2013, the Conservative Party, which along with the Liberal Democrats governed from 2010 to 2015 as a coalition government, saw local party campaigners pledging support for UKIP over issues related to the European Union and gay marriage.",
+            "wiki"
+          ],
+          [
+            "In the Conservative Party, Thatcherism had right-wing populist elements, including nationalism and social conservatism Although Margaret Thatcher has been characterised by some scholars as a right-wing populist politician in the UK, this has been disputed by other scholars due to its applicability in the context of the 1980s.",
+            "wiki"
+          ]
+        ]
+      },
+      "demagoguery": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Populist leaders thus \"come in many different shades and sizes\" but, according to Mudde and Rovira Kaltwasser, share one common element: \"a carefully crafted image of the vox populi\".",
+            "wiki"
+          ],
+          [
+            "For these leaders, populist rhetoric allows them to claim that they have a direct relationship with \"the people\", and in many cases they claim to be a personification of \"the people\" themselves, presenting themselves as the vox populi or \"voice of the people\".",
+            "wiki"
+          ],
+          [
+            "As noted by the political scientist Margaret Canovan, \"there has been no self-conscious international populist movement which might have attempted to control or limit the term's reference, and as a result those who have used it have been able to attach it a wide variety of meanings.\" In this it differs from other political terms, like \"socialism\" or \"conservatism\", which have been widely used as self-designations by individuals who have then presented their own, internal definitions of the word.",
+            "wiki"
+          ],
+          [
+            "Thus, populism can be found merged with forms of nationalism, liberalism, socialism, federalism, or conservatism.",
+            "wiki"
+          ],
+          [
+            "Three of these were forms of \"agrarian populism\"; these included farmers' radicalism, peasant movements, and intellectual agrarian socialism.",
+            "wiki"
+          ],
+          [
+            "For instance, in Britain, the centre-right Conservative Party conceived of \"Middle England\" as its heartland, while the far-right British National Party conceived of the \"native British people\" as its heartland.",
+            "wiki"
+          ],
+          [
+            "They are also more likely to benefit from emphasizing social and cultural issues such as immigration and race, appealing to voters who are positioned economically towards the left-wing but hold socially conservative views.",
+            "wiki"
+          ],
+          [
+            "These were largely isolated and mostly reflected a conservative agricultural backlash against the centralisation and politicisation of the agricultural sector then occurring.",
+            "wiki"
+          ],
+          [
+            "For example, in the 2001 electoral campaign, the Conservative Party leader William Hague accused Tony Blair's governing Labour Party government of representing \"the condescending liberal elite\".",
+            "wiki"
+          ],
+          [
+            "Hague repeatedly referring to it as \"metropolitan\", implying that it was out of touch with \"the people\", who in Conservative discourse are represented by \"Middle England\".",
+            "wiki"
+          ],
+          [
+            "In news media, the term \"populism\" has often been conflated with other concepts like demagoguery, and generally presented as something to be \"feared and discredited\".",
+            "wiki"
+          ],
+          [
+            "According to experts, Yamamoto uses a simple message to spotlight single individuals left behind, including people struggling with poverty or non-permanent employment, who used to devote themselves to radical conservatism.",
+            "wiki"
+          ],
+          [
+            "Left-liberal economic populism appealing to the working class has been prominent in some countries, such as with Joe Biden of United States and Lee Jae-myung of South Korea, in the 2020s, where liberal and conservative parties are the main two parties.",
+            "wiki"
+          ],
+          [
+            "Obi sought to challenge the traditional two-party system, led by the centrist and Buharist All Progressives Congress on one side, and the center-right, nationalist, and conservative-liberal Peoples Democratic Party.",
+            "wiki"
+          ],
+          [
+            "However, unlike many similar left-wing populist parties that have a hard-right approach to race, the EFF is not socially conservative.",
+            "wiki"
+          ],
+          [
+            "He once said he was \"conservative\" and suggested policies far from general left-wing populism in the United States and Europe, partially insisting on economic liberal policies such as deregulating companies on some issues.",
+            "wiki"
+          ],
+          [
+            "In addition, he showed a somewhat conservative tendency on some social agendas.",
+            "wiki"
+          ],
+          [
+            "In addition, Lee Jae-myung's political orientation was somewhat ambiguous, so conservative journalist Dong-A Ilbo denied that he was a left-wing politician, while South Korea's far-left organization Workers' Solidarity evaluated him as a social democratic. (However, another South Korean left-wing undongkwon group denied that Lee Jae-myung is not a social democratic.) Lee is also a staunch supporter of free trade, unlike ordinary economic populists.",
+            "wiki"
+          ],
+          [
+            "In the 2015 election for the national parliament, Podemos reached 20.65% of the vote and became the third largest party in the parliament after the conservative People's Party with 28.71% and the Spanish Socialist Workers' Party with 22.02%.",
+            "wiki"
+          ],
+          [
+            "Recurring themes of right-wing populists include neo-nationalism, social conservatism, economic nationalism and fiscal conservatism.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is an ideology that primarily espouses neo-nationalism, social conservatism, and economic nationalism.",
+            "wiki"
+          ],
+          [
+            "Even with Kwankwaso's cultural conservatism, he has expressed support for women's rights in Nigeria.",
+            "wiki"
+          ],
+          [
+            "Conservatism in South Korea has traditionally been more inclined toward elitism than populism.",
+            "wiki"
+          ],
+          [
+            "It combines social conservatism and criticism of immigration with strong support for NATO and an interventionist economic policy.",
+            "wiki"
+          ],
+          [
+            "In the Conservative Party, Thatcherism had right-wing populist elements, including nationalism and social conservatism Although Margaret Thatcher has been characterised by some scholars as a right-wing populist politician in the UK, this has been disputed by other scholars due to its applicability in the context of the 1980s.",
+            "wiki"
+          ],
+          [
+            "Under Orb\u00e1n's leadership, the party has stressed national sovereignty, anti-immigrant policies, and conservative social values, frequently battling with the EU on a variety of topics.",
+            "wiki"
+          ],
+          [
+            "Republican Party and the Conservative Party of Canada include right-wing populist factions.",
+            "wiki"
+          ],
+          [
+            "Kwankwaso is seen as being strongly culturally conservative and a deeply pious Muslim, although he is no Islamist.",
+            "wiki"
+          ],
+          [
+            "Freedom Front Plus has always promoted policies which are conservative in nature and support Afrikaans-speakers and Christians from the Dutch Reformed Church of South Africa.",
+            "wiki"
+          ],
+          [
+            "In the Brazilian general election of 2014, Levy Fidelix, from the Brazilian Labour Renewal Party, presented himself with a conservative speech and, according to him, the only right-wing candidate.",
+            "wiki"
+          ],
+          [
+            "In addition, according to the political analyst of the Inter-Union Department of Parliamentary Advice, Ant\u00f4nio Augusto de Queiroz, the National Congress elected in 2014 may be considered the most conservative since the \"re-democratization\" movement, noting an increase in the number of parliamentarians linked to more conservative segments, such as ruralists, the military, the police, and the religious right.",
+            "wiki"
+          ],
+          [
+            "The subsequent economic crisis of 2015 and investigations of corruption scandals led to a right-wing movement that sought to rescue fiscally and socially conservative ideas in opposition to the left-wing policies of the Workers' Party.",
+            "wiki"
+          ],
+          [
+            "In the late 1980s, the Reform Party of Canada, led by Preston Manning, became another right-wing populist movement formed due to the policies of the center-right Progressive Conservative Party of Canada, which alienated many Blue Tories and led to a feeling of neglect in the West of Canada.",
+            "wiki"
+          ],
+          [
+            "Initially motivated by a single-issue desire to give a voice to Western Canada, the Reform Party expanded its platform to include a blend of socially conservative and right-wing populist policies.",
+            "wiki"
+          ],
+          [
+            "The Alliance ultimately merged with the Progressive Conservative Party to form the modern-day Conservative Party of Canada, after which the Alliance faction dropped some of its populist and socially conservative ideas.",
+            "wiki"
+          ],
+          [
+            "In recent years, right-wing populist elements have existed within the Conservative Party of Canada and mainstream provincial parties and have most notably been espoused by Ontario MP Kellie Leitch; businessman Kevin O'Leary; Quebec Premier Fran\u00e7ois Legault; the former Mayor of Toronto Rob Ford; and his brother, Ontario Premier Doug Ford.",
+            "wiki"
+          ],
+          [
+            "In August 2018, Conservative MP Maxime Bernier left the party, and the following month he founded the People's Party of Canada, which has self-described as \"smart populism\" and been described as a \"right of centre, populist\" movement.",
+            "wiki"
+          ],
+          [
+            "Pierre Poilievre, who has been described as populist by some journalists, won the 2022 Conservative Party of Canada leadership election and became the leader of both the Conservative Party and the Official Opposition.",
+            "wiki"
+          ],
+          [
+            "Moore (1996) argues that \"populist opposition to the growing power of political, economic, and cultural elites\" helped shape \"conservative and right-wing movements\" since the 1920s.",
+            "wiki"
+          ],
+          [
+            "William Jennings Bryan, the 1896 Populist presidential nominee, was socially and theologically conservative, supporting creationism, Prohibition and other aspects of Christian fundamentalism.",
+            "wiki"
+          ],
+          [
+            "Longfield posits Bryan was a \"theologically conservative Social Gospeler\".",
+            "wiki"
+          ],
+          [
+            "In 2010, David Barstow wrote in The New York Times: \"The Tea Party movement has become a platform for conservative populist discontent\".",
+            "wiki"
+          ],
+          [
+            "The other faction resembles Western far-right populists and includes parties such as Japan First Party, Sanseito, and the Conservative Party of Japan.",
+            "wiki"
+          ],
+          [
+            "A economic nationalist and social conservative, Muldoon has been cited as having appealed to the masses through his animosity towards the media and leftists and his own abrasive and colourful public persona.",
+            "wiki"
+          ],
+          [
+            "However, since the 2016 South Korean political scandal, Korean conservative forces have changed their political lines to populism as the distrust of the elite spread among the Korean public.",
+            "wiki"
+          ],
+          [
+            "Hong Joon-pyo and Lee Un-ju of the People Power Party are leading right-wing populists advocating anti-homosexuality, anti-immigration and social conservative views.",
+            "wiki"
+          ],
+          [
+            "South Korean right-wing circles insist that the impeachment of former president Park Geun-hye is wrong, stimulating conservative public nostalgia for the Park Chung-hee administration.",
+            "wiki"
+          ],
+          [
+            "The Flemish nationalist and conservative liberal N-VA party has been described as populist or containing right-wing populist elements by foreign media such as the German Die Zeit magazine.",
+            "wiki"
+          ],
+          [
+            "Silvio Berlusconi, leader of the liberal-conservative Forza Italia and former Prime Minister of Italy.",
+            "wiki"
+          ],
+          [
+            "Giorgia Meloni, leader of the national-conservative Brothers of Italy and current Prime Minister of Italy",
+            "wiki"
+          ],
+          [
+            "The nationalist and national-conservative Brothers of Italy (FdI), led by Giorgia Meloni, gained 4.4% of votes in the 2018 election and, four years later, it became the most voted party in the 2022 general election, gaining 26% of votes.",
+            "wiki"
+          ],
+          [
+            "Some national conservative, nationalist, and arguably right-wing populist parties are strong, especially in Lazio, the region around Rome, and Southern Italy.",
+            "wiki"
+          ],
+          [
+            "Most of them originated due to the Italian Social Movement (a national-conservative party whose best result was 8.7% of the vote in the 1972 general election) and its successor National Alliance (which reached 15.7% of the vote in the 1996 general election).",
+            "wiki"
+          ],
+          [
+            "Polish Congress of the New Right, headed by Micha\u0142 Marusik, aggressively promotes fiscally conservative concepts like radical tax reductions preceded by the abolishment of social security, universal public healthcare, state-sponsored education, and Communist Polish 1944 agricultural reform as a way to dynamical economic and welfare growth.",
+            "wiki"
+          ],
+          [
+            "The party is mainly considered national conservative, but it has also variously been identified as \"extreme right\" and \"radical right-wing populist\", reflecting a spectrum of ideologies among its members.",
+            "wiki"
+          ],
+          [
+            "In 2013, the Conservative Party, which along with the Liberal Democrats governed from 2010 to 2015 as a coalition government, saw local party campaigners pledging support for UKIP over issues related to the European Union and gay marriage.",
+            "wiki"
+          ],
+          [
+            "In the Conservative Party, Thatcherism had right-wing populist elements, including nationalism and social conservatism Although Margaret Thatcher has been characterised by some scholars as a right-wing populist politician in the UK, this has been disputed by other scholars due to its applicability in the context of the 1980s.",
+            "wiki"
+          ]
+        ]
+      },
+      "ideology": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Populist leaders thus \"come in many different shades and sizes\" but, according to Mudde and Rovira Kaltwasser, share one common element: \"a carefully crafted image of the vox populi\".",
+            "wiki"
+          ],
+          [
+            "For these leaders, populist rhetoric allows them to claim that they have a direct relationship with \"the people\", and in many cases they claim to be a personification of \"the people\" themselves, presenting themselves as the vox populi or \"voice of the people\".",
+            "wiki"
+          ],
+          [
+            "As noted by the political scientist Margaret Canovan, \"there has been no self-conscious international populist movement which might have attempted to control or limit the term's reference, and as a result those who have used it have been able to attach it a wide variety of meanings.\" In this it differs from other political terms, like \"socialism\" or \"conservatism\", which have been widely used as self-designations by individuals who have then presented their own, internal definitions of the word.",
+            "wiki"
+          ],
+          [
+            "Thus, populism can be found merged with forms of nationalism, liberalism, socialism, federalism, or conservatism.",
+            "wiki"
+          ],
+          [
+            "Three of these were forms of \"agrarian populism\"; these included farmers' radicalism, peasant movements, and intellectual agrarian socialism.",
+            "wiki"
+          ],
+          [
+            "For instance, in Britain, the centre-right Conservative Party conceived of \"Middle England\" as its heartland, while the far-right British National Party conceived of the \"native British people\" as its heartland.",
+            "wiki"
+          ],
+          [
+            "They are also more likely to benefit from emphasizing social and cultural issues such as immigration and race, appealing to voters who are positioned economically towards the left-wing but hold socially conservative views.",
+            "wiki"
+          ],
+          [
+            "These were largely isolated and mostly reflected a conservative agricultural backlash against the centralisation and politicisation of the agricultural sector then occurring.",
+            "wiki"
+          ],
+          [
+            "For example, in the 2001 electoral campaign, the Conservative Party leader William Hague accused Tony Blair's governing Labour Party government of representing \"the condescending liberal elite\".",
+            "wiki"
+          ],
+          [
+            "Hague repeatedly referring to it as \"metropolitan\", implying that it was out of touch with \"the people\", who in Conservative discourse are represented by \"Middle England\".",
+            "wiki"
+          ],
+          [
+            "In news media, the term \"populism\" has often been conflated with other concepts like demagoguery, and generally presented as something to be \"feared and discredited\".",
+            "wiki"
+          ],
+          [
+            "A common framework for interpreting populism is known as the ideational approach: this defines populism as an ideology that presents \"the people\" as a morally good force and contrasts them against \"the elite\", who are portrayed as corrupt and self-serving.",
+            "wiki"
+          ],
+          [
+            "A thin-centred ideology that considers society to be ultimately separated into two homogenous and antagonistic camps, \"the pure people\" versus \"the corrupt elite\", and which argues that politics should be an expression of the volont\u00e9 g\u00e9n\u00e9rale (general will) of the people.",
+            "wiki"
+          ],
+          [
+            "Adopting this approach, Albertazzi and McDonnell define populism as an ideology that \"pits a virtuous and homogeneous people against a set of elites and dangerous 'others' who are together depicted as depriving (or attempting to deprive) the sovereign people of their rights, values, prosperity, identity, and voice\".",
+            "wiki"
+          ],
+          [
+            "The political scientist Manuel Anselmi proposed that populism be defined as featuring a \"homogeneous community-people\" which \"perceives itself as the absolute holder of popular sovereignty\" and \"expresses an anti-establishment attitude.\" This understanding conceives of populism as a discourse, ideology, or worldview.",
+            "wiki"
+          ],
+          [
+            "According to this approach, populism is viewed as a \"thin ideology\" or \"thin-centred ideology\" which on its own is seen as too insubstantial to provide a blueprint for societal change.",
+            "wiki"
+          ],
+          [
+            "As a thin-centred ideology, populism is therefore attached to a thick-ideology by populist politicians.",
+            "wiki"
+          ],
+          [
+            "According to Stanley, \"the thinness of populism ensures that in practice it is a complementary ideology: it does not so much overlap with as diffuse itself throughout full ideologies.\"",
+            "wiki"
+          ],
+          [
+            "Nevertheless, the ideational school's approach to populism is problematic for the amount of substantive assumptions it im- poses on how populism actually works as a discursive phenomenon, such as the idea that it is of a moral register, that vindications always refer to a homogeneous/pure people, or that it takes shape socially as an ideology.",
+            "wiki"
+          ],
+          [
+            "In addition, populism cannot be considered an ideology because it doesn\u2019t consist of specific ideas or ideals related to economic or political theory and policy.",
+            "wiki"
+          ],
+          [
+            "Populism has no political ideology; it is only a political style.",
+            "wiki"
+          ],
+          [
+            "Populism is not a political ideology; it is just a way to present ideas through both rhetorical and aesthetic aspects.",
+            "wiki"
+          ],
+          [
+            "However, some of the movements that have been portrayed as progenitors of modern populism did not develop a truly populist ideology.",
+            "wiki"
+          ],
+          [
+            "Eatwell noted that although the actual term populism parallels that of the Populares who were active in the Roman Republic, these and other pre-modern groups \"did not develop a truly populist ideology.\" The origins of populism are often traced to the late nineteenth century, when movements calling themselves populist arose in both the United States and the Russian Empire.",
+            "wiki"
+          ],
+          [
+            "Blair's rhetoric has been characterised as the adoption of a populist style rather than the expression of an underlying populist ideology.",
+            "wiki"
+          ],
+          [
+            "In Canada, populist groups adhering to a social credit ideology had various successes at local and regional elections from the 1930s to the 1960s, although the main Social Credit Party of Canada never became a dominant national force.",
+            "wiki"
+          ],
+          [
+            "These relied on the Americanismo ideology, presenting a common identity across Latin America and denouncing any interference from imperialist powers.",
+            "wiki"
+          ],
+          [
+            "According to experts, Yamamoto uses a simple message to spotlight single individuals left behind, including people struggling with poverty or non-permanent employment, who used to devote themselves to radical conservatism.",
+            "wiki"
+          ],
+          [
+            "Left-liberal economic populism appealing to the working class has been prominent in some countries, such as with Joe Biden of United States and Lee Jae-myung of South Korea, in the 2020s, where liberal and conservative parties are the main two parties.",
+            "wiki"
+          ],
+          [
+            "Obi sought to challenge the traditional two-party system, led by the centrist and Buharist All Progressives Congress on one side, and the center-right, nationalist, and conservative-liberal Peoples Democratic Party.",
+            "wiki"
+          ],
+          [
+            "However, unlike many similar left-wing populist parties that have a hard-right approach to race, the EFF is not socially conservative.",
+            "wiki"
+          ],
+          [
+            "He once said he was \"conservative\" and suggested policies far from general left-wing populism in the United States and Europe, partially insisting on economic liberal policies such as deregulating companies on some issues.",
+            "wiki"
+          ],
+          [
+            "In addition, he showed a somewhat conservative tendency on some social agendas.",
+            "wiki"
+          ],
+          [
+            "In addition, Lee Jae-myung's political orientation was somewhat ambiguous, so conservative journalist Dong-A Ilbo denied that he was a left-wing politician, while South Korea's far-left organization Workers' Solidarity evaluated him as a social democratic. (However, another South Korean left-wing undongkwon group denied that Lee Jae-myung is not a social democratic.) Lee is also a staunch supporter of free trade, unlike ordinary economic populists.",
+            "wiki"
+          ],
+          [
+            "In the 2015 election for the national parliament, Podemos reached 20.65% of the vote and became the third largest party in the parliament after the conservative People's Party with 28.71% and the Spanish Socialist Workers' Party with 22.02%.",
+            "wiki"
+          ],
+          [
+            "Left-wing populism, also called social populism, is a political ideology that combines left-wing politics with populist rhetoric and themes.",
+            "wiki"
+          ],
+          [
+            "Mugabe's ideology combined African nationalism with socialist economics and a broad-based appeal to the people.",
+            "wiki"
+          ],
+          [
+            "Lulism is a pragmatic centre-left ideology to the extent that it is called \"socialist neoliberalism\", but it appeals to a progressive, common-class image and also has populist elements in terms of popular mobilization.",
+            "wiki"
+          ],
+          [
+            "Recurring themes of right-wing populists include neo-nationalism, social conservatism, economic nationalism and fiscal conservatism.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is an ideology that primarily espouses neo-nationalism, social conservatism, and economic nationalism.",
+            "wiki"
+          ],
+          [
+            "Even with Kwankwaso's cultural conservatism, he has expressed support for women's rights in Nigeria.",
+            "wiki"
+          ],
+          [
+            "Conservatism in South Korea has traditionally been more inclined toward elitism than populism.",
+            "wiki"
+          ],
+          [
+            "It combines social conservatism and criticism of immigration with strong support for NATO and an interventionist economic policy.",
+            "wiki"
+          ],
+          [
+            "In the Conservative Party, Thatcherism had right-wing populist elements, including nationalism and social conservatism Although Margaret Thatcher has been characterised by some scholars as a right-wing populist politician in the UK, this has been disputed by other scholars due to its applicability in the context of the 1980s.",
+            "wiki"
+          ],
+          [
+            "Under Orb\u00e1n's leadership, the party has stressed national sovereignty, anti-immigrant policies, and conservative social values, frequently battling with the EU on a variety of topics.",
+            "wiki"
+          ],
+          [
+            "Republican Party and the Conservative Party of Canada include right-wing populist factions.",
+            "wiki"
+          ],
+          [
+            "Kwankwaso is seen as being strongly culturally conservative and a deeply pious Muslim, although he is no Islamist.",
+            "wiki"
+          ],
+          [
+            "Freedom Front Plus has always promoted policies which are conservative in nature and support Afrikaans-speakers and Christians from the Dutch Reformed Church of South Africa.",
+            "wiki"
+          ],
+          [
+            "In the Brazilian general election of 2014, Levy Fidelix, from the Brazilian Labour Renewal Party, presented himself with a conservative speech and, according to him, the only right-wing candidate.",
+            "wiki"
+          ],
+          [
+            "In addition, according to the political analyst of the Inter-Union Department of Parliamentary Advice, Ant\u00f4nio Augusto de Queiroz, the National Congress elected in 2014 may be considered the most conservative since the \"re-democratization\" movement, noting an increase in the number of parliamentarians linked to more conservative segments, such as ruralists, the military, the police, and the religious right.",
+            "wiki"
+          ],
+          [
+            "The subsequent economic crisis of 2015 and investigations of corruption scandals led to a right-wing movement that sought to rescue fiscally and socially conservative ideas in opposition to the left-wing policies of the Workers' Party.",
+            "wiki"
+          ],
+          [
+            "In the late 1980s, the Reform Party of Canada, led by Preston Manning, became another right-wing populist movement formed due to the policies of the center-right Progressive Conservative Party of Canada, which alienated many Blue Tories and led to a feeling of neglect in the West of Canada.",
+            "wiki"
+          ],
+          [
+            "Initially motivated by a single-issue desire to give a voice to Western Canada, the Reform Party expanded its platform to include a blend of socially conservative and right-wing populist policies.",
+            "wiki"
+          ],
+          [
+            "The Alliance ultimately merged with the Progressive Conservative Party to form the modern-day Conservative Party of Canada, after which the Alliance faction dropped some of its populist and socially conservative ideas.",
+            "wiki"
+          ],
+          [
+            "In recent years, right-wing populist elements have existed within the Conservative Party of Canada and mainstream provincial parties and have most notably been espoused by Ontario MP Kellie Leitch; businessman Kevin O'Leary; Quebec Premier Fran\u00e7ois Legault; the former Mayor of Toronto Rob Ford; and his brother, Ontario Premier Doug Ford.",
+            "wiki"
+          ],
+          [
+            "In August 2018, Conservative MP Maxime Bernier left the party, and the following month he founded the People's Party of Canada, which has self-described as \"smart populism\" and been described as a \"right of centre, populist\" movement.",
+            "wiki"
+          ],
+          [
+            "Pierre Poilievre, who has been described as populist by some journalists, won the 2022 Conservative Party of Canada leadership election and became the leader of both the Conservative Party and the Official Opposition.",
+            "wiki"
+          ],
+          [
+            "Moore (1996) argues that \"populist opposition to the growing power of political, economic, and cultural elites\" helped shape \"conservative and right-wing movements\" since the 1920s.",
+            "wiki"
+          ],
+          [
+            "William Jennings Bryan, the 1896 Populist presidential nominee, was socially and theologically conservative, supporting creationism, Prohibition and other aspects of Christian fundamentalism.",
+            "wiki"
+          ],
+          [
+            "Longfield posits Bryan was a \"theologically conservative Social Gospeler\".",
+            "wiki"
+          ],
+          [
+            "In 2010, David Barstow wrote in The New York Times: \"The Tea Party movement has become a platform for conservative populist discontent\".",
+            "wiki"
+          ],
+          [
+            "The other faction resembles Western far-right populists and includes parties such as Japan First Party, Sanseito, and the Conservative Party of Japan.",
+            "wiki"
+          ],
+          [
+            "A economic nationalist and social conservative, Muldoon has been cited as having appealed to the masses through his animosity towards the media and leftists and his own abrasive and colourful public persona.",
+            "wiki"
+          ],
+          [
+            "However, since the 2016 South Korean political scandal, Korean conservative forces have changed their political lines to populism as the distrust of the elite spread among the Korean public.",
+            "wiki"
+          ],
+          [
+            "Hong Joon-pyo and Lee Un-ju of the People Power Party are leading right-wing populists advocating anti-homosexuality, anti-immigration and social conservative views.",
+            "wiki"
+          ],
+          [
+            "South Korean right-wing circles insist that the impeachment of former president Park Geun-hye is wrong, stimulating conservative public nostalgia for the Park Chung-hee administration.",
+            "wiki"
+          ],
+          [
+            "The Flemish nationalist and conservative liberal N-VA party has been described as populist or containing right-wing populist elements by foreign media such as the German Die Zeit magazine.",
+            "wiki"
+          ],
+          [
+            "Silvio Berlusconi, leader of the liberal-conservative Forza Italia and former Prime Minister of Italy.",
+            "wiki"
+          ],
+          [
+            "Giorgia Meloni, leader of the national-conservative Brothers of Italy and current Prime Minister of Italy",
+            "wiki"
+          ],
+          [
+            "The nationalist and national-conservative Brothers of Italy (FdI), led by Giorgia Meloni, gained 4.4% of votes in the 2018 election and, four years later, it became the most voted party in the 2022 general election, gaining 26% of votes.",
+            "wiki"
+          ],
+          [
+            "Some national conservative, nationalist, and arguably right-wing populist parties are strong, especially in Lazio, the region around Rome, and Southern Italy.",
+            "wiki"
+          ],
+          [
+            "Most of them originated due to the Italian Social Movement (a national-conservative party whose best result was 8.7% of the vote in the 1972 general election) and its successor National Alliance (which reached 15.7% of the vote in the 1996 general election).",
+            "wiki"
+          ],
+          [
+            "Polish Congress of the New Right, headed by Micha\u0142 Marusik, aggressively promotes fiscally conservative concepts like radical tax reductions preceded by the abolishment of social security, universal public healthcare, state-sponsored education, and Communist Polish 1944 agricultural reform as a way to dynamical economic and welfare growth.",
+            "wiki"
+          ],
+          [
+            "The party is mainly considered national conservative, but it has also variously been identified as \"extreme right\" and \"radical right-wing populist\", reflecting a spectrum of ideologies among its members.",
+            "wiki"
+          ],
+          [
+            "In 2013, the Conservative Party, which along with the Liberal Democrats governed from 2010 to 2015 as a coalition government, saw local party campaigners pledging support for UKIP over issues related to the European Union and gay marriage.",
+            "wiki"
+          ],
+          [
+            "In the Conservative Party, Thatcherism had right-wing populist elements, including nationalism and social conservatism Although Margaret Thatcher has been characterised by some scholars as a right-wing populist politician in the UK, this has been disputed by other scholars due to its applicability in the context of the 1980s.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism, also called right populism, is a political ideology that combines right-wing politics with populist rhetoric and themes.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is an ideology that primarily espouses neo-nationalism, social conservatism, and economic nationalism.",
+            "wiki"
+          ],
+          [
+            "He however rejects the use of nationalism as a core ideology of right-wing populism on the ground that there are also purely \"civic\" or \"liberal\" forms of nationalism, preferring instead the term \"nativism\": a xenophobic form of nationalism asserting that \"states should be inhabited exclusively by members of the native group ('the nation'), and that non-native elements (persons and ideas) are fundamentally threatening to the homogeneous nation-state\".",
+            "wiki"
+          ],
+          [
+            "In the maximum definition, to nativism is added authoritarianism\u2014an attitude, not necessarily anti-democratic or autocratic, to prefer \"law and order\" and the submission to authority\u2014and populism\u2014a \"thin-centered ideology\" that considers society to be ultimately separated into two homogeneous and antagonistic groups, \"the pure people\" versus \"the corrupt elite\", and which argues that politics should be an expression of the \"general will of the people\", regardless of human rights or constitutional guarantees.",
+            "wiki"
+          ],
+          [
+            "Erik Berggren and Andres Neergard wrote in 2015 that \"ost researchers agree  that xenophobia, anti-immigration sentiments, nativism, ethno-nationalism are, in different ways, central elements in the ideologies, politics, and practices of right-wing populism and Extreme Right Wing Parties.\" Similarly, historian Rick Shenkman describes the ideology presented by right-wing populism as \"a deadly mix of xenophobia, racism, and authoritarianism.\" Tamir Bar-On also concluded in 2018 that the literature generally places \"nativism\" or \"ethnic nationalism\" as the core concept of the ideology, which \"implicitly posits a politically dominant group, while minorities are conceived as threats to the nation\".",
+            "wiki"
+          ],
+          [
+            "As Front National ideologue Fran\u00e7ois Duprat put in the 1970s, inspired by the Latin American right of that time, right-populism aims to constitute a \"national, social, and popular\" ideology.",
+            "wiki"
+          ],
+          [
+            "According to Jean-Yves Camus and Nicolas Lebourg, those parties are not a real syncretism of the left and right, as their ideology and voter base are interclassist.",
+            "wiki"
+          ],
+          [
+            "The ideology of Trump's former Chief Strategist, Steve Bannon, has also been described as such.",
+            "wiki"
+          ],
+          [
+            "In less than a week, the party was re-established under the name Vlaams Belang, initially with a near-identical ideology before moderating parts of its statute.",
+            "wiki"
+          ],
+          [
+            "The party's ideology includes annexing territory in Albania and Turkey, including the Turkish cities of Istanbul and \u0130zmir.",
+            "wiki"
+          ],
+          [
+            "Others contend that Thatcher's role was pivotal in steering the party's ideology towards a more populist direction.",
+            "wiki"
+          ],
+          [
+            "Valence populism is also an anti-establishment ideology that lacks a consistent ideology, unlike left-wing or right-wing populism.",
+            "wiki"
+          ],
+          [
+            "Together with political scientist Petra Guasti, Zulianello said that valence populists lack a \"thick ideology\" such as nativism or socialism, which is not the case for positional populism.",
+            "wiki"
+          ],
+          [
+            "Because of this, the ideology of valence populists is solely populism.",
+            "wiki"
+          ],
+          [
+            "This has led the ideology to being described as a \"purer form of populism\".",
+            "wiki"
+          ]
+        ]
+      },
+      "politicisation": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Populist leaders thus \"come in many different shades and sizes\" but, according to Mudde and Rovira Kaltwasser, share one common element: \"a carefully crafted image of the vox populi\".",
+            "wiki"
+          ],
+          [
+            "For these leaders, populist rhetoric allows them to claim that they have a direct relationship with \"the people\", and in many cases they claim to be a personification of \"the people\" themselves, presenting themselves as the vox populi or \"voice of the people\".",
+            "wiki"
+          ],
+          [
+            "As noted by the political scientist Margaret Canovan, \"there has been no self-conscious international populist movement which might have attempted to control or limit the term's reference, and as a result those who have used it have been able to attach it a wide variety of meanings.\" In this it differs from other political terms, like \"socialism\" or \"conservatism\", which have been widely used as self-designations by individuals who have then presented their own, internal definitions of the word.",
+            "wiki"
+          ],
+          [
+            "Thus, populism can be found merged with forms of nationalism, liberalism, socialism, federalism, or conservatism.",
+            "wiki"
+          ],
+          [
+            "Three of these were forms of \"agrarian populism\"; these included farmers' radicalism, peasant movements, and intellectual agrarian socialism.",
+            "wiki"
+          ],
+          [
+            "For instance, in Britain, the centre-right Conservative Party conceived of \"Middle England\" as its heartland, while the far-right British National Party conceived of the \"native British people\" as its heartland.",
+            "wiki"
+          ],
+          [
+            "They are also more likely to benefit from emphasizing social and cultural issues such as immigration and race, appealing to voters who are positioned economically towards the left-wing but hold socially conservative views.",
+            "wiki"
+          ],
+          [
+            "These were largely isolated and mostly reflected a conservative agricultural backlash against the centralisation and politicisation of the agricultural sector then occurring.",
+            "wiki"
+          ],
+          [
+            "For example, in the 2001 electoral campaign, the Conservative Party leader William Hague accused Tony Blair's governing Labour Party government of representing \"the condescending liberal elite\".",
+            "wiki"
+          ],
+          [
+            "Hague repeatedly referring to it as \"metropolitan\", implying that it was out of touch with \"the people\", who in Conservative discourse are represented by \"Middle England\".",
+            "wiki"
+          ],
+          [
+            "In news media, the term \"populism\" has often been conflated with other concepts like demagoguery, and generally presented as something to be \"feared and discredited\".",
+            "wiki"
+          ],
+          [
+            "A common framework for interpreting populism is known as the ideational approach: this defines populism as an ideology that presents \"the people\" as a morally good force and contrasts them against \"the elite\", who are portrayed as corrupt and self-serving.",
+            "wiki"
+          ],
+          [
+            "A thin-centred ideology that considers society to be ultimately separated into two homogenous and antagonistic camps, \"the pure people\" versus \"the corrupt elite\", and which argues that politics should be an expression of the volont\u00e9 g\u00e9n\u00e9rale (general will) of the people.",
+            "wiki"
+          ],
+          [
+            "Adopting this approach, Albertazzi and McDonnell define populism as an ideology that \"pits a virtuous and homogeneous people against a set of elites and dangerous 'others' who are together depicted as depriving (or attempting to deprive) the sovereign people of their rights, values, prosperity, identity, and voice\".",
+            "wiki"
+          ],
+          [
+            "The political scientist Manuel Anselmi proposed that populism be defined as featuring a \"homogeneous community-people\" which \"perceives itself as the absolute holder of popular sovereignty\" and \"expresses an anti-establishment attitude.\" This understanding conceives of populism as a discourse, ideology, or worldview.",
+            "wiki"
+          ],
+          [
+            "According to this approach, populism is viewed as a \"thin ideology\" or \"thin-centred ideology\" which on its own is seen as too insubstantial to provide a blueprint for societal change.",
+            "wiki"
+          ],
+          [
+            "As a thin-centred ideology, populism is therefore attached to a thick-ideology by populist politicians.",
+            "wiki"
+          ],
+          [
+            "According to Stanley, \"the thinness of populism ensures that in practice it is a complementary ideology: it does not so much overlap with as diffuse itself throughout full ideologies.\"",
+            "wiki"
+          ],
+          [
+            "Nevertheless, the ideational school's approach to populism is problematic for the amount of substantive assumptions it im- poses on how populism actually works as a discursive phenomenon, such as the idea that it is of a moral register, that vindications always refer to a homogeneous/pure people, or that it takes shape socially as an ideology.",
+            "wiki"
+          ],
+          [
+            "In addition, populism cannot be considered an ideology because it doesn\u2019t consist of specific ideas or ideals related to economic or political theory and policy.",
+            "wiki"
+          ],
+          [
+            "Populism has no political ideology; it is only a political style.",
+            "wiki"
+          ],
+          [
+            "Populism is not a political ideology; it is just a way to present ideas through both rhetorical and aesthetic aspects.",
+            "wiki"
+          ],
+          [
+            "However, some of the movements that have been portrayed as progenitors of modern populism did not develop a truly populist ideology.",
+            "wiki"
+          ],
+          [
+            "Eatwell noted that although the actual term populism parallels that of the Populares who were active in the Roman Republic, these and other pre-modern groups \"did not develop a truly populist ideology.\" The origins of populism are often traced to the late nineteenth century, when movements calling themselves populist arose in both the United States and the Russian Empire.",
+            "wiki"
+          ],
+          [
+            "Blair's rhetoric has been characterised as the adoption of a populist style rather than the expression of an underlying populist ideology.",
+            "wiki"
+          ],
+          [
+            "In Canada, populist groups adhering to a social credit ideology had various successes at local and regional elections from the 1930s to the 1960s, although the main Social Credit Party of Canada never became a dominant national force.",
+            "wiki"
+          ],
+          [
+            "These relied on the Americanismo ideology, presenting a common identity across Latin America and denouncing any interference from imperialist powers.",
+            "wiki"
+          ],
+          [
+            "These were largely isolated and mostly reflected a conservative agricultural backlash against the centralisation and politicisation of the agricultural sector then occurring.",
+            "wiki"
+          ],
+          [
+            "According to experts, Yamamoto uses a simple message to spotlight single individuals left behind, including people struggling with poverty or non-permanent employment, who used to devote themselves to radical conservatism.",
+            "wiki"
+          ],
+          [
+            "Left-liberal economic populism appealing to the working class has been prominent in some countries, such as with Joe Biden of United States and Lee Jae-myung of South Korea, in the 2020s, where liberal and conservative parties are the main two parties.",
+            "wiki"
+          ],
+          [
+            "Obi sought to challenge the traditional two-party system, led by the centrist and Buharist All Progressives Congress on one side, and the center-right, nationalist, and conservative-liberal Peoples Democratic Party.",
+            "wiki"
+          ],
+          [
+            "However, unlike many similar left-wing populist parties that have a hard-right approach to race, the EFF is not socially conservative.",
+            "wiki"
+          ],
+          [
+            "He once said he was \"conservative\" and suggested policies far from general left-wing populism in the United States and Europe, partially insisting on economic liberal policies such as deregulating companies on some issues.",
+            "wiki"
+          ],
+          [
+            "In addition, he showed a somewhat conservative tendency on some social agendas.",
+            "wiki"
+          ],
+          [
+            "In addition, Lee Jae-myung's political orientation was somewhat ambiguous, so conservative journalist Dong-A Ilbo denied that he was a left-wing politician, while South Korea's far-left organization Workers' Solidarity evaluated him as a social democratic. (However, another South Korean left-wing undongkwon group denied that Lee Jae-myung is not a social democratic.) Lee is also a staunch supporter of free trade, unlike ordinary economic populists.",
+            "wiki"
+          ],
+          [
+            "In the 2015 election for the national parliament, Podemos reached 20.65% of the vote and became the third largest party in the parliament after the conservative People's Party with 28.71% and the Spanish Socialist Workers' Party with 22.02%.",
+            "wiki"
+          ],
+          [
+            "Left-wing populism, also called social populism, is a political ideology that combines left-wing politics with populist rhetoric and themes.",
+            "wiki"
+          ],
+          [
+            "Mugabe's ideology combined African nationalism with socialist economics and a broad-based appeal to the people.",
+            "wiki"
+          ],
+          [
+            "Lulism is a pragmatic centre-left ideology to the extent that it is called \"socialist neoliberalism\", but it appeals to a progressive, common-class image and also has populist elements in terms of popular mobilization.",
+            "wiki"
+          ],
+          [
+            "Recurring themes of right-wing populists include neo-nationalism, social conservatism, economic nationalism and fiscal conservatism.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is an ideology that primarily espouses neo-nationalism, social conservatism, and economic nationalism.",
+            "wiki"
+          ],
+          [
+            "Even with Kwankwaso's cultural conservatism, he has expressed support for women's rights in Nigeria.",
+            "wiki"
+          ],
+          [
+            "Conservatism in South Korea has traditionally been more inclined toward elitism than populism.",
+            "wiki"
+          ],
+          [
+            "It combines social conservatism and criticism of immigration with strong support for NATO and an interventionist economic policy.",
+            "wiki"
+          ],
+          [
+            "In the Conservative Party, Thatcherism had right-wing populist elements, including nationalism and social conservatism Although Margaret Thatcher has been characterised by some scholars as a right-wing populist politician in the UK, this has been disputed by other scholars due to its applicability in the context of the 1980s.",
+            "wiki"
+          ],
+          [
+            "Under Orb\u00e1n's leadership, the party has stressed national sovereignty, anti-immigrant policies, and conservative social values, frequently battling with the EU on a variety of topics.",
+            "wiki"
+          ],
+          [
+            "Republican Party and the Conservative Party of Canada include right-wing populist factions.",
+            "wiki"
+          ],
+          [
+            "Kwankwaso is seen as being strongly culturally conservative and a deeply pious Muslim, although he is no Islamist.",
+            "wiki"
+          ],
+          [
+            "Freedom Front Plus has always promoted policies which are conservative in nature and support Afrikaans-speakers and Christians from the Dutch Reformed Church of South Africa.",
+            "wiki"
+          ],
+          [
+            "In the Brazilian general election of 2014, Levy Fidelix, from the Brazilian Labour Renewal Party, presented himself with a conservative speech and, according to him, the only right-wing candidate.",
+            "wiki"
+          ],
+          [
+            "In addition, according to the political analyst of the Inter-Union Department of Parliamentary Advice, Ant\u00f4nio Augusto de Queiroz, the National Congress elected in 2014 may be considered the most conservative since the \"re-democratization\" movement, noting an increase in the number of parliamentarians linked to more conservative segments, such as ruralists, the military, the police, and the religious right.",
+            "wiki"
+          ],
+          [
+            "The subsequent economic crisis of 2015 and investigations of corruption scandals led to a right-wing movement that sought to rescue fiscally and socially conservative ideas in opposition to the left-wing policies of the Workers' Party.",
+            "wiki"
+          ],
+          [
+            "In the late 1980s, the Reform Party of Canada, led by Preston Manning, became another right-wing populist movement formed due to the policies of the center-right Progressive Conservative Party of Canada, which alienated many Blue Tories and led to a feeling of neglect in the West of Canada.",
+            "wiki"
+          ],
+          [
+            "Initially motivated by a single-issue desire to give a voice to Western Canada, the Reform Party expanded its platform to include a blend of socially conservative and right-wing populist policies.",
+            "wiki"
+          ],
+          [
+            "The Alliance ultimately merged with the Progressive Conservative Party to form the modern-day Conservative Party of Canada, after which the Alliance faction dropped some of its populist and socially conservative ideas.",
+            "wiki"
+          ],
+          [
+            "In recent years, right-wing populist elements have existed within the Conservative Party of Canada and mainstream provincial parties and have most notably been espoused by Ontario MP Kellie Leitch; businessman Kevin O'Leary; Quebec Premier Fran\u00e7ois Legault; the former Mayor of Toronto Rob Ford; and his brother, Ontario Premier Doug Ford.",
+            "wiki"
+          ],
+          [
+            "In August 2018, Conservative MP Maxime Bernier left the party, and the following month he founded the People's Party of Canada, which has self-described as \"smart populism\" and been described as a \"right of centre, populist\" movement.",
+            "wiki"
+          ],
+          [
+            "Pierre Poilievre, who has been described as populist by some journalists, won the 2022 Conservative Party of Canada leadership election and became the leader of both the Conservative Party and the Official Opposition.",
+            "wiki"
+          ],
+          [
+            "Moore (1996) argues that \"populist opposition to the growing power of political, economic, and cultural elites\" helped shape \"conservative and right-wing movements\" since the 1920s.",
+            "wiki"
+          ],
+          [
+            "William Jennings Bryan, the 1896 Populist presidential nominee, was socially and theologically conservative, supporting creationism, Prohibition and other aspects of Christian fundamentalism.",
+            "wiki"
+          ],
+          [
+            "Longfield posits Bryan was a \"theologically conservative Social Gospeler\".",
+            "wiki"
+          ],
+          [
+            "In 2010, David Barstow wrote in The New York Times: \"The Tea Party movement has become a platform for conservative populist discontent\".",
+            "wiki"
+          ],
+          [
+            "The other faction resembles Western far-right populists and includes parties such as Japan First Party, Sanseito, and the Conservative Party of Japan.",
+            "wiki"
+          ],
+          [
+            "A economic nationalist and social conservative, Muldoon has been cited as having appealed to the masses through his animosity towards the media and leftists and his own abrasive and colourful public persona.",
+            "wiki"
+          ],
+          [
+            "However, since the 2016 South Korean political scandal, Korean conservative forces have changed their political lines to populism as the distrust of the elite spread among the Korean public.",
+            "wiki"
+          ],
+          [
+            "Hong Joon-pyo and Lee Un-ju of the People Power Party are leading right-wing populists advocating anti-homosexuality, anti-immigration and social conservative views.",
+            "wiki"
+          ],
+          [
+            "South Korean right-wing circles insist that the impeachment of former president Park Geun-hye is wrong, stimulating conservative public nostalgia for the Park Chung-hee administration.",
+            "wiki"
+          ],
+          [
+            "The Flemish nationalist and conservative liberal N-VA party has been described as populist or containing right-wing populist elements by foreign media such as the German Die Zeit magazine.",
+            "wiki"
+          ],
+          [
+            "Silvio Berlusconi, leader of the liberal-conservative Forza Italia and former Prime Minister of Italy.",
+            "wiki"
+          ],
+          [
+            "Giorgia Meloni, leader of the national-conservative Brothers of Italy and current Prime Minister of Italy",
+            "wiki"
+          ],
+          [
+            "The nationalist and national-conservative Brothers of Italy (FdI), led by Giorgia Meloni, gained 4.4% of votes in the 2018 election and, four years later, it became the most voted party in the 2022 general election, gaining 26% of votes.",
+            "wiki"
+          ],
+          [
+            "Some national conservative, nationalist, and arguably right-wing populist parties are strong, especially in Lazio, the region around Rome, and Southern Italy.",
+            "wiki"
+          ],
+          [
+            "Most of them originated due to the Italian Social Movement (a national-conservative party whose best result was 8.7% of the vote in the 1972 general election) and its successor National Alliance (which reached 15.7% of the vote in the 1996 general election).",
+            "wiki"
+          ],
+          [
+            "Polish Congress of the New Right, headed by Micha\u0142 Marusik, aggressively promotes fiscally conservative concepts like radical tax reductions preceded by the abolishment of social security, universal public healthcare, state-sponsored education, and Communist Polish 1944 agricultural reform as a way to dynamical economic and welfare growth.",
+            "wiki"
+          ],
+          [
+            "The party is mainly considered national conservative, but it has also variously been identified as \"extreme right\" and \"radical right-wing populist\", reflecting a spectrum of ideologies among its members.",
+            "wiki"
+          ],
+          [
+            "In 2013, the Conservative Party, which along with the Liberal Democrats governed from 2010 to 2015 as a coalition government, saw local party campaigners pledging support for UKIP over issues related to the European Union and gay marriage.",
+            "wiki"
+          ],
+          [
+            "In the Conservative Party, Thatcherism had right-wing populist elements, including nationalism and social conservatism Although Margaret Thatcher has been characterised by some scholars as a right-wing populist politician in the UK, this has been disputed by other scholars due to its applicability in the context of the 1980s.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism, also called right populism, is a political ideology that combines right-wing politics with populist rhetoric and themes.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is an ideology that primarily espouses neo-nationalism, social conservatism, and economic nationalism.",
+            "wiki"
+          ],
+          [
+            "He however rejects the use of nationalism as a core ideology of right-wing populism on the ground that there are also purely \"civic\" or \"liberal\" forms of nationalism, preferring instead the term \"nativism\": a xenophobic form of nationalism asserting that \"states should be inhabited exclusively by members of the native group ('the nation'), and that non-native elements (persons and ideas) are fundamentally threatening to the homogeneous nation-state\".",
+            "wiki"
+          ],
+          [
+            "In the maximum definition, to nativism is added authoritarianism\u2014an attitude, not necessarily anti-democratic or autocratic, to prefer \"law and order\" and the submission to authority\u2014and populism\u2014a \"thin-centered ideology\" that considers society to be ultimately separated into two homogeneous and antagonistic groups, \"the pure people\" versus \"the corrupt elite\", and which argues that politics should be an expression of the \"general will of the people\", regardless of human rights or constitutional guarantees.",
+            "wiki"
+          ],
+          [
+            "Erik Berggren and Andres Neergard wrote in 2015 that \"ost researchers agree  that xenophobia, anti-immigration sentiments, nativism, ethno-nationalism are, in different ways, central elements in the ideologies, politics, and practices of right-wing populism and Extreme Right Wing Parties.\" Similarly, historian Rick Shenkman describes the ideology presented by right-wing populism as \"a deadly mix of xenophobia, racism, and authoritarianism.\" Tamir Bar-On also concluded in 2018 that the literature generally places \"nativism\" or \"ethnic nationalism\" as the core concept of the ideology, which \"implicitly posits a politically dominant group, while minorities are conceived as threats to the nation\".",
+            "wiki"
+          ],
+          [
+            "As Front National ideologue Fran\u00e7ois Duprat put in the 1970s, inspired by the Latin American right of that time, right-populism aims to constitute a \"national, social, and popular\" ideology.",
+            "wiki"
+          ],
+          [
+            "According to Jean-Yves Camus and Nicolas Lebourg, those parties are not a real syncretism of the left and right, as their ideology and voter base are interclassist.",
+            "wiki"
+          ],
+          [
+            "The ideology of Trump's former Chief Strategist, Steve Bannon, has also been described as such.",
+            "wiki"
+          ],
+          [
+            "In less than a week, the party was re-established under the name Vlaams Belang, initially with a near-identical ideology before moderating parts of its statute.",
+            "wiki"
+          ],
+          [
+            "The party's ideology includes annexing territory in Albania and Turkey, including the Turkish cities of Istanbul and \u0130zmir.",
+            "wiki"
+          ],
+          [
+            "Others contend that Thatcher's role was pivotal in steering the party's ideology towards a more populist direction.",
+            "wiki"
+          ],
+          [
+            "Valence populism is also an anti-establishment ideology that lacks a consistent ideology, unlike left-wing or right-wing populism.",
+            "wiki"
+          ],
+          [
+            "Together with political scientist Petra Guasti, Zulianello said that valence populists lack a \"thick ideology\" such as nativism or socialism, which is not the case for positional populism.",
+            "wiki"
+          ],
+          [
+            "Because of this, the ideology of valence populists is solely populism.",
+            "wiki"
+          ],
+          [
+            "This has led the ideology to being described as a \"purer form of populism\".",
+            "wiki"
+          ]
+        ]
+      },
+      "populism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Populist leaders thus \"come in many different shades and sizes\" but, according to Mudde and Rovira Kaltwasser, share one common element: \"a carefully crafted image of the vox populi\".",
+            "wiki"
+          ],
+          [
+            "For these leaders, populist rhetoric allows them to claim that they have a direct relationship with \"the people\", and in many cases they claim to be a personification of \"the people\" themselves, presenting themselves as the vox populi or \"voice of the people\".",
+            "wiki"
+          ],
+          [
+            "As noted by the political scientist Margaret Canovan, \"there has been no self-conscious international populist movement which might have attempted to control or limit the term's reference, and as a result those who have used it have been able to attach it a wide variety of meanings.\" In this it differs from other political terms, like \"socialism\" or \"conservatism\", which have been widely used as self-designations by individuals who have then presented their own, internal definitions of the word.",
+            "wiki"
+          ],
+          [
+            "Thus, populism can be found merged with forms of nationalism, liberalism, socialism, federalism, or conservatism.",
+            "wiki"
+          ],
+          [
+            "Three of these were forms of \"agrarian populism\"; these included farmers' radicalism, peasant movements, and intellectual agrarian socialism.",
+            "wiki"
+          ],
+          [
+            "For instance, in Britain, the centre-right Conservative Party conceived of \"Middle England\" as its heartland, while the far-right British National Party conceived of the \"native British people\" as its heartland.",
+            "wiki"
+          ],
+          [
+            "They are also more likely to benefit from emphasizing social and cultural issues such as immigration and race, appealing to voters who are positioned economically towards the left-wing but hold socially conservative views.",
+            "wiki"
+          ],
+          [
+            "These were largely isolated and mostly reflected a conservative agricultural backlash against the centralisation and politicisation of the agricultural sector then occurring.",
+            "wiki"
+          ],
+          [
+            "For example, in the 2001 electoral campaign, the Conservative Party leader William Hague accused Tony Blair's governing Labour Party government of representing \"the condescending liberal elite\".",
+            "wiki"
+          ],
+          [
+            "Hague repeatedly referring to it as \"metropolitan\", implying that it was out of touch with \"the people\", who in Conservative discourse are represented by \"Middle England\".",
+            "wiki"
+          ],
+          [
+            "In news media, the term \"populism\" has often been conflated with other concepts like demagoguery, and generally presented as something to be \"feared and discredited\".",
+            "wiki"
+          ],
+          [
+            "A common framework for interpreting populism is known as the ideational approach: this defines populism as an ideology that presents \"the people\" as a morally good force and contrasts them against \"the elite\", who are portrayed as corrupt and self-serving.",
+            "wiki"
+          ],
+          [
+            "A thin-centred ideology that considers society to be ultimately separated into two homogenous and antagonistic camps, \"the pure people\" versus \"the corrupt elite\", and which argues that politics should be an expression of the volont\u00e9 g\u00e9n\u00e9rale (general will) of the people.",
+            "wiki"
+          ],
+          [
+            "Adopting this approach, Albertazzi and McDonnell define populism as an ideology that \"pits a virtuous and homogeneous people against a set of elites and dangerous 'others' who are together depicted as depriving (or attempting to deprive) the sovereign people of their rights, values, prosperity, identity, and voice\".",
+            "wiki"
+          ],
+          [
+            "The political scientist Manuel Anselmi proposed that populism be defined as featuring a \"homogeneous community-people\" which \"perceives itself as the absolute holder of popular sovereignty\" and \"expresses an anti-establishment attitude.\" This understanding conceives of populism as a discourse, ideology, or worldview.",
+            "wiki"
+          ],
+          [
+            "According to this approach, populism is viewed as a \"thin ideology\" or \"thin-centred ideology\" which on its own is seen as too insubstantial to provide a blueprint for societal change.",
+            "wiki"
+          ],
+          [
+            "As a thin-centred ideology, populism is therefore attached to a thick-ideology by populist politicians.",
+            "wiki"
+          ],
+          [
+            "According to Stanley, \"the thinness of populism ensures that in practice it is a complementary ideology: it does not so much overlap with as diffuse itself throughout full ideologies.\"",
+            "wiki"
+          ],
+          [
+            "Nevertheless, the ideational school's approach to populism is problematic for the amount of substantive assumptions it im- poses on how populism actually works as a discursive phenomenon, such as the idea that it is of a moral register, that vindications always refer to a homogeneous/pure people, or that it takes shape socially as an ideology.",
+            "wiki"
+          ],
+          [
+            "In addition, populism cannot be considered an ideology because it doesn\u2019t consist of specific ideas or ideals related to economic or political theory and policy.",
+            "wiki"
+          ],
+          [
+            "Populism has no political ideology; it is only a political style.",
+            "wiki"
+          ],
+          [
+            "Populism is not a political ideology; it is just a way to present ideas through both rhetorical and aesthetic aspects.",
+            "wiki"
+          ],
+          [
+            "However, some of the movements that have been portrayed as progenitors of modern populism did not develop a truly populist ideology.",
+            "wiki"
+          ],
+          [
+            "Eatwell noted that although the actual term populism parallels that of the Populares who were active in the Roman Republic, these and other pre-modern groups \"did not develop a truly populist ideology.\" The origins of populism are often traced to the late nineteenth century, when movements calling themselves populist arose in both the United States and the Russian Empire.",
+            "wiki"
+          ],
+          [
+            "Blair's rhetoric has been characterised as the adoption of a populist style rather than the expression of an underlying populist ideology.",
+            "wiki"
+          ],
+          [
+            "In Canada, populist groups adhering to a social credit ideology had various successes at local and regional elections from the 1930s to the 1960s, although the main Social Credit Party of Canada never became a dominant national force.",
+            "wiki"
+          ],
+          [
+            "These relied on the Americanismo ideology, presenting a common identity across Latin America and denouncing any interference from imperialist powers.",
+            "wiki"
+          ],
+          [
+            "These were largely isolated and mostly reflected a conservative agricultural backlash against the centralisation and politicisation of the agricultural sector then occurring.",
+            "wiki"
+          ],
+          [
+            "Populism is a range of political stances that emphasize the idea of \"the people\" and often juxtapose this group with \"the elite\".",
+            "wiki"
+          ],
+          [
+            "Within political science and other social sciences, several different definitions of populism have been employed, with some scholars proposing that the term be rejected altogether.",
+            "wiki"
+          ],
+          [
+            "A common framework for interpreting populism is known as the ideational approach: this defines populism as an ideology that presents \"the people\" as a morally good force and contrasts them against \"the elite\", who are portrayed as corrupt and self-serving.",
+            "wiki"
+          ],
+          [
+            "According to the ideational approach, populism is often combined with other ideologies, such as nationalism, liberalism, socialism, capitalism or consumerism.",
+            "wiki"
+          ],
+          [
+            "Thus, populists can be found at different locations along the left\u2013right political spectrum, and there exist both left-wing populism and right-wing populism.",
+            "wiki"
+          ],
+          [
+            "Other scholars of the social sciences have defined the term populism differently.",
+            "wiki"
+          ],
+          [
+            "According to the popular agency definition used by some historians of United States history, populism refers to popular engagement of the population in political decision making.",
+            "wiki"
+          ],
+          [
+            "An approach associated with the political scientist Ernesto Laclau presents populism as an emancipatory social force through which marginalised groups challenge dominant power structures.",
+            "wiki"
+          ],
+          [
+            "The word \"populism\" has been contested, mistranslated and used in reference to a diverse variety of movements and beliefs.",
+            "wiki"
+          ],
+          [
+            "The political scientist Will Brett characterised it as \"a classic example of a stretched concept, pulled out of shape by overuse and misuse\", while the political scientist Paul Taggart has said of populism that it is \"one of the most widely used but poorly understood political concepts of our time\".",
+            "wiki"
+          ],
+          [
+            "In news media, the term \"populism\" has often been conflated with other concepts like demagoguery, and generally presented as something to be \"feared and discredited\".",
+            "wiki"
+          ],
+          [
+            "The political scientists Yves M\u00e9ny and Yves Surel noted that \"populism\" had become \"a catchword, particularly in the media, to designate the newborn political or social movements which challenge the entrenched values, rules and institutions of democratic orthodoxy.\" Typically, the term is used against others, often in a pejorative sense to discredit opponents.",
+            "wiki"
+          ],
+          [
+            "The French far-right politician Jean-Marie Le Pen for instance was often accused of populism and eventually responded by stating that \"Populism precisely is taking into account the people's opinion.",
+            "wiki"
+          ],
+          [
+            "Following 2016, the year which saw the election of Donald Trump as president of the United States and the United Kingdom's vote to leave the European Union\u2014both events linked to populism\u2014the word populism became one of the most widely used terms by international political commentators.",
+            "wiki"
+          ],
+          [
+            "Until the 1950s, use of the term populism remained restricted largely to historians studying the People's Party, but in 1954 the US sociologist Edward Shils published an article proposing populism as a term to describe anti-elite trends in US society more broadly.",
+            "wiki"
+          ],
+          [
+            "Following on from Shils' article, during the 1960s the term \"populism\" became increasingly popular among sociologists and other academics in the social sciences.",
+            "wiki"
+          ],
+          [
+            "In 1967 a Conference on Populism was held at the London School of Economics, the participants of which failed to agree on a clear, single definition.",
+            "wiki"
+          ],
+          [
+            "As a result of this scholarly interest, an academic field known as \"populism studies\" emerged.",
+            "wiki"
+          ],
+          [
+            "Interest in the subject grew rapidly: between 1950 and 1960 about 160 publications on populism appeared, while between 1990 and 2000 that number was over 1500.",
+            "wiki"
+          ],
+          [
+            "From 2000 to 2015, about 95 papers and books including the term \"populism\" were catalogued each year by Web of Science.",
+            "wiki"
+          ],
+          [
+            "Canovan noted that \"if the notion of populism did not exist, no social scientist would deliberately invent it; the term is far too ambiguous for that\".",
+            "wiki"
+          ],
+          [
+            "From examining how the term \"populism\" had been used, she proposed that seven different types of populism could be discerned.",
+            "wiki"
+          ],
+          [
+            "Three of these were forms of \"agrarian populism\"; these included farmers' radicalism, peasant movements, and intellectual agrarian socialism.",
+            "wiki"
+          ],
+          [
+            "The other four were forms of \"political populism\", representing populist dictatorship, populist democracy, reactionary populism, and politicians' populism.",
+            "wiki"
+          ],
+          [
+            "In this way, Canovan conceived of populism as a family of related concepts rather than as a single concept in itself.",
+            "wiki"
+          ],
+          [
+            "In contrast to this view, the political scientists Cas Mudde and Crist\u00f3bal Rovira Kaltwasser stated that \"while the frustration is understandable, the term populism is too central to debates about politics from Europe to the Americas to simply do away with.\" Similarly, Canovan noted that the term \"does have comparatively clear and definite meanings in a number of specialist areas\" and that it \"provides a pointer, however shaky, to an interesting and largely unexplored area of political and social experience\".",
+            "wiki"
+          ],
+          [
+            "The political scientists Daniele Albertazzi and Duncan McDonnell thought that \"if carefully defined, the term 'populism' can be used profitably to help us understand and explain a wide array of political actors\".",
+            "wiki"
+          ],
+          [
+            "The political scientist Ben Stanley noted that \"although the meaning of the term has proven controversial in the literature, the persistence with which it has recurred suggests the existence at least of an ineliminable core: that is, that it refers to a distinct pattern of ideas.\" Political scientist David Art argues that the concept of populism brings together disparate phenomena in an unhelpful manner, and ultimately obscures and legitimizes figures who are more comprehensively defined as nativists and authoritarians.",
+            "wiki"
+          ],
+          [
+            "Although academic definitions of populism have differed, most of them have focused on the idea that it should reference some form of relationship between \"the people\" and \"the elite\", and that it entailed taking an anti-establishment stance.",
+            "wiki"
+          ],
+          [
+            "Beyond that, different scholars have emphasised different features that they wish to use to define populism.",
+            "wiki"
+          ],
+          [
+            "Author Thomas Frank has criticized the common use of the term Populism to refer to far-right nativism and racism, noting that the original People's Party was relatively liberal on the rights of women and minorities by the standards of the time.",
+            "wiki"
+          ],
+          [
+            "The V-Party Dataset assesses populism as anti-elitism and people-centrism.",
+            "wiki"
+          ],
+          [
+            "The ideational definition of populism used by Mudde and Rovira Kaltwasser",
+            "wiki"
+          ],
+          [
+            "A common approach to defining populism is known as the ideational approach.",
+            "wiki"
+          ],
+          [
+            "This emphasises the notion that populism should be defined according to specific ideas which underlie it, as opposed to certain economic policies or leadership styles which populist politicians may display.",
+            "wiki"
+          ],
+          [
+            "In this definition, the term populism is applied to political groups and individuals who make appeals to \"the people\" and then contrast this group against \"the elite\".",
+            "wiki"
+          ],
+          [
+            "Adopting this approach, Albertazzi and McDonnell define populism as an ideology that \"pits a virtuous and homogeneous people against a set of elites and dangerous 'others' who are together depicted as depriving (or attempting to deprive) the sovereign people of their rights, values, prosperity, identity, and voice\".",
+            "wiki"
+          ],
+          [
+            "Similarly, the political scientist Carlos de la Torre defined populism as \"a Manichean discourse that divides politics and society as the struggle between two irreconcilable and antagonistic camps: the people and the oligarchy or the power block.\"",
+            "wiki"
+          ],
+          [
+            "In this understanding, note Mudde and Rovira Kaltwasser, \"populism always involves a critique of the establishment and an adulation of the common people\", and according to Ben Stanley, populism itself is a product of \"an antagonistic relationship\" between \"the people\" and \"the elite\", and is \"latent wherever the possibility occurs for the emergence of such a dichotomy\".",
+            "wiki"
+          ],
+          [
+            "The political scientist Manuel Anselmi proposed that populism be defined as featuring a \"homogeneous community-people\" which \"perceives itself as the absolute holder of popular sovereignty\" and \"expresses an anti-establishment attitude.\" This understanding conceives of populism as a discourse, ideology, or worldview.",
+            "wiki"
+          ],
+          [
+            "According to this approach, populism is viewed as a \"thin ideology\" or \"thin-centred ideology\" which on its own is seen as too insubstantial to provide a blueprint for societal change.",
+            "wiki"
+          ],
+          [
+            "As a thin-centred ideology, populism is therefore attached to a thick-ideology by populist politicians.",
+            "wiki"
+          ],
+          [
+            "Thus, populism can be found merged with forms of nationalism, liberalism, socialism, federalism, or conservatism.",
+            "wiki"
+          ],
+          [
+            "According to Stanley, \"the thinness of populism ensures that in practice it is a complementary ideology: it does not so much overlap with as diffuse itself throughout full ideologies.\"",
+            "wiki"
+          ],
+          [
+            "Populism is, according to Mudde and Rovira Kaltwasser, \"a kind of mental map through which individuals analyse and comprehend political reality\".",
+            "wiki"
+          ],
+          [
+            "Mudde noted that populism is \"moralistic rather than programmatic\".",
+            "wiki"
+          ],
+          [
+            "In emphasising one's purity against the corruption and immorality of \"the elite\", from which \"the people\" must remain pure and untouched, populism prevents compromise between different groups.",
+            "wiki"
+          ],
+          [
+            "The incredible rise in research and discussion about populism, both academic and social, stems largely from efforts by ideational scholars to place centre stage the significance of appeals to the people beyond ideological differences, and to conceptualise populism as a discursive phenomenon.",
+            "wiki"
+          ],
+          [
+            "Nevertheless, the ideational school's approach to populism is problematic for the amount of substantive assumptions it im- poses on how populism actually works as a discursive phenomenon, such as the idea that it is of a moral register, that vindications always refer to a homogeneous/pure people, or that it takes shape socially as an ideology.",
+            "wiki"
+          ],
+          [
+            "These assumptions can be counter-productive to the study of populism which has arguably become excessively conceptually deductive.",
+            "wiki"
+          ],
+          [
+            "Still, this does not mean we cannot come to a more minimal, formal definition of what populism is that can consensually group scholars and open up research to a broader scope, as indicated by Stavrakakis and De Cleen in defining populism as a type of discourse \u2018characterized by a people/elite distinction and the claim to speak in the name of \"the people.\"\u2019",
+            "wiki"
+          ],
+          [
+            "As a result of the various different ideologies with which populism can be paired, the forms that populism can take vary widely.",
+            "wiki"
+          ],
+          [
+            "Populism itself cannot be positioned on the left\u2013right political spectrum, and both right and left-wing populisms exist.",
+            "wiki"
+          ],
+          [
+            "The ideational definition of populism used by Ben Stanley",
+            "wiki"
+          ],
+          [
+            "The ideologies with which populism can be paired can be contradictory, resulting in different forms of populism that can oppose each other.",
+            "wiki"
+          ],
+          [
+            "For instance, in Latin America during the 1990s, populism was often associated with politicians like Peru's Alberto Fujimori who promoted neoliberal economics, while in the 2000s it was instead associated with those like Venezuela's Hugo Ch\u00e1vez who promoted socialist programs.",
+            "wiki"
+          ],
+          [
+            "As well as populists of the left and right, populist figures like Italy's Beppe Grillo have been characterised as centrist and liberal, while groups like Turkey's Justice and Development Party have been described as combining populism with Islamism, and India's Bharatiya Janata Party has been seen as mixing populism with Hindu nationalism.",
+            "wiki"
+          ],
+          [
+            "On the political right, populism is often combined with nationalism, with \"the people\" and \"the nation\" becoming fairly interchangeable categories in their discourse.",
+            "wiki"
+          ],
+          [
+            "Some political scientists have also argued that populism can be divided into \"inclusionary\" and \"exclusionary\" forms.",
+            "wiki"
+          ],
+          [
+            "Populism typically entails \"celebrating them as the people\", in Stanley's words.",
+            "wiki"
+          ],
+          [
+            "Populism often entails presenting \"the people\" as the underdog.",
+            "wiki"
+          ],
+          [
+            "Populism can also be subdivided into \"inclusionary\" and \"exclusionary\" forms, which differ in their conceptions of who \"the people\" are.",
+            "wiki"
+          ],
+          [
+            "Inclusionary populism tends to define \"the people\" more broadly, accepting and advocating for minority and marginalised groups, while exclusionary populism defines \"the people\" in a much stricter sense, generally being focused on a particular sociocultural group and antagonistic against minority groups.",
+            "wiki"
+          ],
+          [
+            "In addition, all populisms are implicitly exclusionary, since they define \"the people\" against \"the elite\", thus some scholars argue that the difference between populisms is not whether a particular populism excludes but whom it excludes from its conception of \"the people\".",
+            "wiki"
+          ],
+          [
+            "Anti-elitism is widely considered the central characteristic feature of populism, although Mudde and Rovira Kaltwasser argued that anti-elitism alone was not evidence of populism.",
+            "wiki"
+          ],
+          [
+            "A third component of the ideational approach to populism is the idea of the general will, or volont\u00e9 g\u00e9n\u00e9rale.",
+            "wiki"
+          ],
+          [
+            "For this reason, Mudde and Rovira Kaltwasser suggested that \"it can be argued that an elective affinity exists between populism and direct democracy\", although Stanley cautioned that \"support for direct democracy is not an essential attribute of populism.\"  Populist notions of the \"general will\" and its links with populist leaders are usually based on the idea of \"common sense\".",
+            "wiki"
+          ],
+          [
+            "Thus, a critique of the ideational definition of populism is that it becomes too broad and can potentially apply to all political actors and movements.",
+            "wiki"
+          ],
+          [
+            "Responding to this critique, Mudde and Rovira Kaltwasser argued that the ideational definition did allow for a \"non-populism\" in the form of both elitism and pluralism.",
+            "wiki"
+          ],
+          [
+            "Pluralism differs from both elitism and populism by rejecting any dualist framework, instead viewing society as a broad array of overlapping social groups, each with their own ideas and interests.",
+            "wiki"
+          ],
+          [
+            "The popular agency definition to populism uses the term in reference to a democratic way of life that is built on the popular engagement of the population in political activity.",
+            "wiki"
+          ],
+          [
+            "In this understanding, populism is usually perceived as a positive factor in the mobilisation of the populace to develop a communitarian form of democracy.",
+            "wiki"
+          ],
+          [
+            "The Argentine political theorist Ernesto Laclau developed his own definition of populism.",
+            "wiki"
+          ],
+          [
+            "The Laclauan definition of populism, so called after the Argentinian political theorist Ernesto Laclau who developed it, uses the term in reference to what proponents regard as an emancipatory force that is the essence of politics.",
+            "wiki"
+          ],
+          [
+            "In this concept of populism, it is believed to mobilise excluded sectors of society against dominant elites and changing the status quo.",
+            "wiki"
+          ],
+          [
+            "For Laclau, socialism was \"the highest form of populism\".",
+            "wiki"
+          ],
+          [
+            "Boyte for example defined populism as \"a politics of civic agency\" which \"develops the power of 'the people' to shape their destiny\", as examples citing both the Russian narodniks and the South African Black Consciousness Movement.",
+            "wiki"
+          ],
+          [
+            "The socioeconomic definition of populism applies the term to what it regards as an irresponsible form of economic policy by which a government engages in a period of massive public spending financed by foreign loans, after which the country falls into hyperinflation and harsh economic adjustments are then imposed.",
+            "wiki"
+          ],
+          [
+            "This definition relies on focusing on socialist and other left-wing forms of populism; it does not apply to other groups commonly understood as populist which adopted right-wing stances on economic issues.",
+            "wiki"
+          ],
+          [
+            "This applies the term populism to a political strategy in which a charismatic leader seeks to govern based on direct and unmediated connection with their followers.",
+            "wiki"
+          ],
+          [
+            "Kurt Weyland defined this conception of populism as \"a political strategy through which a personalist leader seeks or exercises government power based on direct, unmediated, uninstitutionalized support from large numbers of mostly unorganized followers\".",
+            "wiki"
+          ],
+          [
+            "By focusing on leadership, this concept of populism does not allow for the existence of populist parties or populist social movements; under this definition, for instance, the US People's Party which first invented the term populism could not be considered populist.",
+            "wiki"
+          ],
+          [
+            "Mudde suggested that although the idea of a leader having direct access to \"the people\" was a common element among populists, it is best regarded as a feature which facilitates rather than defines populism.",
+            "wiki"
+          ],
+          [
+            "In popular discourse, populism is sometimes used in a negative sense in reference to politics which involves promoting extremely simple solutions to complex problems in a highly emotional manner.",
+            "wiki"
+          ],
+          [
+            "Mudde thought that this phenomenon was better termed demagogy rather than populism.",
+            "wiki"
+          ],
+          [
+            "Mudde suggested that this phenomenon is better described as opportunism rather than populism.",
+            "wiki"
+          ],
+          [
+            "Another way of defining populism is by defining it as a political style.",
+            "wiki"
+          ],
+          [
+            "This definition acknowledges that populism includes both rhetorical aspects such as gestures and body language, spoken language, argumentation while also acknowledging that populism includes aesthetic aspects such as fashion, self-presentation, images, and designs.",
+            "wiki"
+          ],
+          [
+            "In addition, populism cannot be considered an ideology because it doesn\u2019t consist of specific ideas or ideals related to economic or political theory and policy.",
+            "wiki"
+          ],
+          [
+            "Populism as a political style is only concerned with the way that political ideas are presented and preformed.",
+            "wiki"
+          ],
+          [
+            "According to Moffitt, this is why populism can appear across a number of different ideological spectrums on the left and right.",
+            "wiki"
+          ],
+          [
+            "Populism has no political ideology; it is only a political style.",
+            "wiki"
+          ],
+          [
+            "Moffitt notes that populism as a political style has certain features which define it.",
+            "wiki"
+          ],
+          [
+            "Moffitt acknowledges that the \u201cdichotomic division of society between \u2018the people\u2019 and \u2018the elite\u2019\u201d is one of the most popular definitions of populism but is only one of the features of populism as a political style.",
+            "wiki"
+          ],
+          [
+            "The second feature of populism as a political style is the use of \u2018bad manners\u2019. \u2018Bad manners\u2019 consists of, \u201cslang, swearing, political incorrectness, and being over demonstrative and \u2018colorful\u2019, as opposed to the \u2018high\u2019 behaviors of rigidness, rationality, composure and use of technocratic language.\u201d",
+            "wiki"
+          ],
+          [
+            "The third feature of populism as a political style is crisis, breakdown, or threat.",
+            "wiki"
+          ],
+          [
+            "There are multiple implications for populism being understood as a political style.",
+            "wiki"
+          ],
+          [
+            "The first implication that Moffitt points out is that populism as a political style allows people to understand why populism doesn\u2019t adhere to the common left/right ideological spectrum.",
+            "wiki"
+          ],
+          [
+            "Populism is not a political ideology; it is just a way to present ideas through both rhetorical and aesthetic aspects.",
+            "wiki"
+          ],
+          [
+            "In addition, populism as a political style means that populism no longer has to be conceptualized as a binary category but can instead be conceptualized as a gradational concept.",
+            "wiki"
+          ],
+          [
+            "However, this means that there has to be an opposite political style to populism.",
+            "wiki"
+          ],
+          [
+            "Moffitt notes that the opposing political style to populism is a technocratic political style.",
+            "wiki"
+          ],
+          [
+            "One area of debate in explaining populism is whether its main cause is based in the needs of citizens (demand-side explanations)  or in the failures of governments (supply-side explanations).",
+            "wiki"
+          ],
+          [
+            "The economic grievance thesis argues that economic factors, such as deindustrialisation, economic liberalisation, and deregulation, are causing the formation of a 'left-behind' precariat with low job security, high inequality, and wage stagnation, who then support populism.",
+            "wiki"
+          ],
+          [
+            "The modernisation losers theory argues that certain aspects of transition to modernity have caused demand for populism.",
+            "wiki"
+          ],
+          [
+            "Populism offers a broad identity which gives sovereignty to the previously marginalized masses as \"the people\".",
+            "wiki"
+          ],
+          [
+            "However, empirical studies suggest that supporters of radical right-wing populism occur across the social spectrum, and are not more likely to appear in groups defined as \"modernisation losers\".",
+            "wiki"
+          ],
+          [
+            "For example, the cultural backlash thesis argues that right-wing populism is reaction to the rise of postmaterialism in many developed countries, including the spread of feminism, multiculturalism, and environmentalism.",
+            "wiki"
+          ],
+          [
+            "According to this view, the spread of ideas and values through a society challenges accepted norms until society reaches a 'tipping point', which causes a reaction, in this case support for right-wing populism.",
+            "wiki"
+          ],
+          [
+            "However, this explanation suffers from the lack of success of populism in most post-communist countries.",
+            "wiki"
+          ],
+          [
+            "In this view, citizens turn to populism when governments do not respond effectively to the challenges they and their citizens face.",
+            "wiki"
+          ],
+          [
+            "Research supports the idea that populism is more likely to thrive when mainstream parties on the center-left and center-right do not address important contemporary issues and do not offer clear alternatives to voters.",
+            "wiki"
+          ],
+          [
+            "Coalitions that blur distinctions on positions are also likely to increase populism.",
+            "wiki"
+          ],
+          [
+            "In a supply-side view of American politics, populism can be seen as a symptom of institutional decay.",
+            "wiki"
+          ],
+          [
+            "This in turn generates dissatisfaction, which may increase the likelihood that citizens will support populism.",
+            "wiki"
+          ],
+          [
+            "This too may have increased support for populism.",
+            "wiki"
+          ],
+          [
+            "Another underlying debate in discussions of populism is the comparison of structural and voluntarist approaches.",
+            "wiki"
+          ],
+          [
+            "Another catalyst for the growth of populism is a widespread perception among voters that the political system is unresponsive to them.",
+            "wiki"
+          ],
+          [
+            "Populism is often associated with charismatic and dominant leaders, and the populist leader is, according to Mudde and Rovira Kaltwasser, \"the quintessential form of populist mobilization\".",
+            "wiki"
+          ],
+          [
+            "Populism and strongmen are not intrinsically connected, however; as stressed by Mudde and Rovira Kaltwasser, \"only a minority of strongmen are populists and only a minority of populists is a strongman\".",
+            "wiki"
+          ],
+          [
+            "A subset of populism which deals with the use of media by politicians is called \"media populism\".",
+            "wiki"
+          ],
+          [
+            "Based on his analysis of Dutch and British media, Tjitske Akkerman however argued that tabloids were no more prone to populism than the quality press.",
+            "wiki"
+          ],
+          [
+            "Political systems with low political efficacy or high wasted votes can contribute to populism.",
+            "wiki"
+          ],
+          [
+            "Populism is a flexible term as it can be seen to exist in both democracies as well as authoritarian regimes.",
+            "wiki"
+          ],
+          [
+            "There have been intense debates about the relationship between populism and democracy.",
+            "wiki"
+          ],
+          [
+            "Some regard populism as being an intrinsic danger to democracy; others regard it as the only \"true\" form of democracy.",
+            "wiki"
+          ],
+          [
+            "It could be argued that populism is democratic as it allows voters to remove governments they do not approve via the ballot box because voting is an essential value for a state to be considered a democracy.",
+            "wiki"
+          ],
+          [
+            "Albertazzi and McDonnell stated that populism and democracy were \"inextricably linked\", the political scientist Manuel Anselmi described populism as being \"deeply connected with democracy\", and March suggested that populism represented a \"critique of democracy, not an alternative to it\".",
+            "wiki"
+          ],
+          [
+            "Mudde and Rovira Kaltwasser write that \"In a world that is dominated by democracy and liberalism, populism has essentially become an illiberal democratic response to undemocratic liberalism.\" Adamidis argues that the effect of populism on democracy can be measured by reference to its impact on the democratic legal systems and, in particular, to the changes it effects on their rule of recognition.",
+            "wiki"
+          ],
+          [
+            "Populism can serve as a democratic corrective by contributing to the mobilisation of social groups who feel excluded from political decision making.",
+            "wiki"
+          ],
+          [
+            "Mudde and Rovira Kaltwasser argued that \"populism is essentially democratic, but at odds with liberal democracy,\" since populism is based on putting into effect \"the will of the people\".",
+            "wiki"
+          ],
+          [
+            "Populism also undermines the tenets of liberal democracy by rejecting notions of pluralism and the idea that anything, including constitutional limits, should constrain the \"general will\" of \"the people\".",
+            "wiki"
+          ],
+          [
+            "In Europe in particular, ethnic minorities have had their rights undermined by populism, while in Latin America it is political opposition groups who have been undermined by populist governments.",
+            "wiki"
+          ],
+          [
+            "In contrast, an analysis of the V-Party Dataset demonstrates moderate levels of populism are not necessarily antidemocratic, only high levels of populism are related to higher autocratization.",
+            "wiki"
+          ],
+          [
+            "Mudde and Rovira Kaltwasser suggested that to deflate the appeal of populism, those government figures found guilty of corruption need to be seen to face adequate punishment.",
+            "wiki"
+          ],
+          [
+            "They also suggested that the appeal of populism could be reduced by wider civic education in the values of liberal democracy and the relevance of pluralism.",
+            "wiki"
+          ],
+          [
+            "In their view, \"the best way to deal with populism is to engage\u2014as difficult as it is\u2014in an open dialogue with populist actors and supporters\" in order to \"better understand the claims and grievances of the populist elites and masses and to develop liberal democratic responses to them\".",
+            "wiki"
+          ],
+          [
+            "Most importantly, given that populism often asks the right questions but provides the wrong answers, the ultimate goal should be not just the destruction of populist supply, but also the weakening of populist demand.",
+            "wiki"
+          ],
+          [
+            "In a similar vein, mainstream parties use the term \"populism\" to delegitimize populist actors due to its negative connotation among the public but also use the term to attack non-populist competitors.",
+            "wiki"
+          ],
+          [
+            "The historian Roger Eatwell noted that \"major ideological differences ... lie at the core\" of fascism and populism, the former being anti-democratic and latter being rooted in democracy, \"albeit not liberal democracy\".",
+            "wiki"
+          ],
+          [
+            "In recent history, a 2018 analysis by political scientists Yascha Mounk and Jordan Kyle links populism to democratic backsliding, showing that since 1990, five out of 13 elected right-wing populist governments and five out of 15 elected left-wing populist governments brought about significant democratic backsliding.",
+            "wiki"
+          ],
+          [
+            "From the left, the pink tide spreading over Latin America was \"prone to populism and authoritarianism\".",
+            "wiki"
+          ],
+          [
+            "Correa in Ecuador and Hugo Ch\u00e1vez in Venezuela and his regional allies used populism to achieve their dominance and later established authoritarian regimes when they were empowered.",
+            "wiki"
+          ],
+          [
+            "Such actions, Weyland argues, proves that populism is a strategy for winning and exerting state power and stands in tension with democracy and the values of pluralism, open debate, and fair competition.",
+            "wiki"
+          ],
+          [
+            "They also argue that authoritarian-populism provides a more powerful analytical lens than conventional labels like right-wing populism.",
+            "wiki"
+          ],
+          [
+            "However, some of the movements that have been portrayed as progenitors of modern populism did not develop a truly populist ideology.",
+            "wiki"
+          ],
+          [
+            "It was only with the coming of Boulangism in France and the American People's Party, which was also known as the Populist Party, that the foundational forms of populism can fully be discerned.",
+            "wiki"
+          ],
+          [
+            "Mudde and Rovira Kaltwasser argue that populism is a modern phenomenon.",
+            "wiki"
+          ],
+          [
+            "However, attempts have been made to identify manifestations of populism in the democracy of classical Athens.",
+            "wiki"
+          ],
+          [
+            "Eatwell noted that although the actual term populism parallels that of the Populares who were active in the Roman Republic, these and other pre-modern groups \"did not develop a truly populist ideology.\" The origins of populism are often traced to the late nineteenth century, when movements calling themselves populist arose in both the United States and the Russian Empire.",
+            "wiki"
+          ],
+          [
+            "Populism has often been linked to the spread of democracy, both as an idea and as a framework for governance.",
+            "wiki"
+          ],
+          [
+            "Strauss argued that populism could also be seen in the ancient world, citing the examples of the fifth-century B.C.",
+            "wiki"
+          ],
+          [
+            "The historian Rachel Foxley argued that the Levellers of 17th-century England could also be labelled \"populists\", meaning that they believed \"equal natural rights ... must shape political life\" while the historian Peter Blickle linked populism to the Protestant Reformation.",
+            "wiki"
+          ],
+          [
+            "Although the Russian movement was primarily a movement of the middle class and intellectuals \"going to the people\", in some respects their agrarian populism was similar to that of the US People's Party, with both presenting small farmers (the peasantry in Europe) as the foundation of society and main source of societal morality.",
+            "wiki"
+          ],
+          [
+            "In the early 20th century, adherents of both Marxism and fascism flirted with populism, but both movements remained ultimately elitist, emphasising the idea of a small elite who should guide and govern society.",
+            "wiki"
+          ],
+          [
+            "After 1945 populism was largely absent from Europe, in part due to the domination of elitist Marxism\u2013Leninism in Eastern Europe and a desire to emphasise moderation among many West European political parties.",
+            "wiki"
+          ],
+          [
+            "However it was only in the late 1990s, according to Mudde and Rovira Kaltwasser, that populism became \"a relevant political force in Europe\", one which could have a significant impact on mainstream politics.",
+            "wiki"
+          ],
+          [
+            "Following the fall of the Soviet Union and the Eastern Bloc of the early 1990s, there was a rise in populism across much of Central and Eastern Europe.",
+            "wiki"
+          ],
+          [
+            "The collapse of Marxism\u2013Leninism as a central force in socialist politics also led to a broader growth of left-wing populism across Europe, reflected in groups like the Dutch Socialist Party, Scottish Socialist Party, and German's The Left party.",
+            "wiki"
+          ],
+          [
+            "Jean-Marie Le Pen, founder and leader of the French National Front, the \"prototypical radical right party\" which used populism to advance its cause",
+            "wiki"
+          ],
+          [
+            "By the 21st century, European populism was again associated largely with the political right.",
+            "wiki"
+          ],
+          [
+            "The populist radical right combined populism with authoritarianism and nativism.",
+            "wiki"
+          ],
+          [
+            "After the 2016 UK referendum on membership of the European Union, in which British citizens voted to leave, some have claimed the \"Brexit\" as a victory for populism, encouraging a flurry of calls for referendums among other EU countries by populist political parties.",
+            "wiki"
+          ],
+          [
+            "In North America, populism has often been characterised by regional mobilisation and loose organisation.",
+            "wiki"
+          ],
+          [
+            "In this instance, populism was combined with agrarianism and often known as \"prairie populism\".",
+            "wiki"
+          ],
+          [
+            "By the mid-20th century, US populism had moved from a largely progressive to a largely reactionary stance, being closely intertwined with the anti-communist politics of the period.",
+            "wiki"
+          ],
+          [
+            "Harris' New Populism embraced egalitarian themes.",
+            "wiki"
+          ],
+          [
+            "The Tea Party's populism was Producerism, while \"the elite\" it presented was more party partisan than that of Occupy, being defined largely\u2014although not exclusively\u2014as the Democratic administration of President Barack Obama.",
+            "wiki"
+          ],
+          [
+            "Populism has been dominant in Latin American politics since the 1930s and 1940s, being far more prevalent there than in Europe.",
+            "wiki"
+          ],
+          [
+            "They suggested that this was the case because it was a region with a long tradition of democratic governance and free elections, but with high rates of socio-economic inequality, generating widespread resentments that politicians can articulate through populism.",
+            "wiki"
+          ],
+          [
+            "March instead thought that it was the important role of \"catch-all parties and prominent personalities\" in Latin American politics which had made populism more common.",
+            "wiki"
+          ],
+          [
+            "The first wave of Latin American populism began at the start of the Great Depression in 1929 and last until the end of the 1960s.",
+            "wiki"
+          ],
+          [
+            "The second wave took place in the early 1990s; de la Torre called it \"neoliberal populism\".",
+            "wiki"
+          ],
+          [
+            "During the 1990s, there was a growth in populism in both Australia and New Zealand.",
+            "wiki"
+          ],
+          [
+            "Populism has become a pervasive trend in New Zealand politics since the introduction of the mixed-member proportional voting system in 1996.",
+            "wiki"
+          ],
+          [
+            "In much of Africa, populism has been a rare phenomenon.",
+            "wiki"
+          ],
+          [
+            "The political scientist Danielle Resnick argued that populism first became apparent in Africa during the 1980s, when a series of coups brought military leaders to power in various countries.",
+            "wiki"
+          ],
+          [
+            "In North Africa, populism was associated with the approaches of several political leaders active in the 20th century, most notably Egypt's Gamal Abdel Nasser and Libya's Muammar Gaddafi.",
+            "wiki"
+          ],
+          [
+            "Sheri Berman reviews various explanations of populism including \"demand- and supply-side explanations of populism, economic grievance\u2013based and sociocultural grievance\u2013based explanations of populism, and structure- and agency-based explanations of populism\".",
+            "wiki"
+          ],
+          [
+            "In the early 1990s, there was an increasing awareness of populism in established liberal democracies, sometimes referred to as the \"New Populism\".",
+            "wiki"
+          ],
+          [
+            "By 2016, \"populism\" was regularly used by political commentators.",
+            "wiki"
+          ],
+          [
+            "The rise of populism in Western Europe is, in large part, a reaction to the failure of traditional parties to respond adequately in the eyes of the electorate to a series of phenomena such as economic and cultural globalisation, the speed and direction of European integration, immigration, the decline of ideologies and class politics, exposure of elite corruption, etc.",
+            "wiki"
+          ],
+          [
+            "Mudde argued that by the early 1990s, populism had become a regular feature in Western democracies.",
+            "wiki"
+          ],
+          [
+            "Mudde argued that another reason for the growth of Western populism in this period was the improved education of the populace; since the 1960s, citizens have expected more from their politicians and felt increasingly competent to judge their actions.",
+            "wiki"
+          ],
+          [
+            "The other theory is the cultural backlash thesis, in which Norris and Inglehart suggest that the rise of populism is a reaction from previously dominant sectors of the population, the white, uneducated, elderly men of today, who feel threatened and marginalised by the progressive values of modern society.",
+            "wiki"
+          ],
+          [
+            "Using Brexit and Trump's election as examples, Michael Sandel in his 2020 book The Tyranny of Merit argues that populism came out of disenchantment with 'meritocratic' elites ruling over disenchanted working people.",
+            "wiki"
+          ],
+          [
+            "According to experts, Yamamoto uses a simple message to spotlight single individuals left behind, including people struggling with poverty or non-permanent employment, who used to devote themselves to radical conservatism.",
+            "wiki"
+          ],
+          [
+            "Left-liberal economic populism appealing to the working class has been prominent in some countries, such as with Joe Biden of United States and Lee Jae-myung of South Korea, in the 2020s, where liberal and conservative parties are the main two parties.",
+            "wiki"
+          ],
+          [
+            "Obi sought to challenge the traditional two-party system, led by the centrist and Buharist All Progressives Congress on one side, and the center-right, nationalist, and conservative-liberal Peoples Democratic Party.",
+            "wiki"
+          ],
+          [
+            "However, unlike many similar left-wing populist parties that have a hard-right approach to race, the EFF is not socially conservative.",
+            "wiki"
+          ],
+          [
+            "He once said he was \"conservative\" and suggested policies far from general left-wing populism in the United States and Europe, partially insisting on economic liberal policies such as deregulating companies on some issues.",
+            "wiki"
+          ],
+          [
+            "In addition, he showed a somewhat conservative tendency on some social agendas.",
+            "wiki"
+          ],
+          [
+            "In addition, Lee Jae-myung's political orientation was somewhat ambiguous, so conservative journalist Dong-A Ilbo denied that he was a left-wing politician, while South Korea's far-left organization Workers' Solidarity evaluated him as a social democratic. (However, another South Korean left-wing undongkwon group denied that Lee Jae-myung is not a social democratic.) Lee is also a staunch supporter of free trade, unlike ordinary economic populists.",
+            "wiki"
+          ],
+          [
+            "In the 2015 election for the national parliament, Podemos reached 20.65% of the vote and became the third largest party in the parliament after the conservative People's Party with 28.71% and the Spanish Socialist Workers' Party with 22.02%.",
+            "wiki"
+          ],
+          [
+            "Left-wing populism, also called social populism, is a political ideology that combines left-wing politics with populist rhetoric and themes.",
+            "wiki"
+          ],
+          [
+            "Mugabe's ideology combined African nationalism with socialist economics and a broad-based appeal to the people.",
+            "wiki"
+          ],
+          [
+            "Lulism is a pragmatic centre-left ideology to the extent that it is called \"socialist neoliberalism\", but it appeals to a progressive, common-class image and also has populist elements in terms of popular mobilization.",
+            "wiki"
+          ],
+          [
+            "Left-wing populism, also called social populism, is a political ideology that combines left-wing politics with populist rhetoric and themes.",
+            "wiki"
+          ],
+          [
+            "Unlike exclusionary or right-wing populism, left-wing populist parties are generally supportive of minority rights, as well as to an idea of nationality that is not delimited by cultural or ethnic particularisms.",
+            "wiki"
+          ],
+          [
+            "With the rise of Syriza and Podemos during the European debt crisis, there has been increased debate on new left-wing populism in Europe.",
+            "wiki"
+          ],
+          [
+            "Traditionally, left-wing populism has been associated with the socialist movement; since the 2010s, there has been a movement close to left-wing populism in the left-liberal camp, some of which are considered social democratic positions.",
+            "wiki"
+          ],
+          [
+            "Left-liberal economic populism appealing to the working class has been prominent in some countries, such as with Joe Biden of United States and Lee Jae-myung of South Korea, in the 2020s, where liberal and conservative parties are the main two parties.",
+            "wiki"
+          ],
+          [
+            "The leadership of Siles Zuazo practised left-wing populism as well as that of former socialist President Evo Morales.",
+            "wiki"
+          ],
+          [
+            "Anti-Americanism was crucial to Ch\u00e1vez's populism, even though Venezuela's history is somewhat unique compared to the rest of Latin America.",
+            "wiki"
+          ],
+          [
+            "He once said he was \"conservative\" and suggested policies far from general left-wing populism in the United States and Europe, partially insisting on economic liberal policies such as deregulating companies on some issues.",
+            "wiki"
+          ],
+          [
+            "France has a long tradition of left-wing populism.",
+            "wiki"
+          ],
+          [
+            "The Party of Democratic Socialism was explicitly studied under left-wing populism, especially by German academics.",
+            "wiki"
+          ],
+          [
+            "Recurring themes of right-wing populists include neo-nationalism, social conservatism, economic nationalism and fiscal conservatism.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is an ideology that primarily espouses neo-nationalism, social conservatism, and economic nationalism.",
+            "wiki"
+          ],
+          [
+            "Even with Kwankwaso's cultural conservatism, he has expressed support for women's rights in Nigeria.",
+            "wiki"
+          ],
+          [
+            "Conservatism in South Korea has traditionally been more inclined toward elitism than populism.",
+            "wiki"
+          ],
+          [
+            "It combines social conservatism and criticism of immigration with strong support for NATO and an interventionist economic policy.",
+            "wiki"
+          ],
+          [
+            "In the Conservative Party, Thatcherism had right-wing populist elements, including nationalism and social conservatism Although Margaret Thatcher has been characterised by some scholars as a right-wing populist politician in the UK, this has been disputed by other scholars due to its applicability in the context of the 1980s.",
+            "wiki"
+          ],
+          [
+            "Under Orb\u00e1n's leadership, the party has stressed national sovereignty, anti-immigrant policies, and conservative social values, frequently battling with the EU on a variety of topics.",
+            "wiki"
+          ],
+          [
+            "Republican Party and the Conservative Party of Canada include right-wing populist factions.",
+            "wiki"
+          ],
+          [
+            "Kwankwaso is seen as being strongly culturally conservative and a deeply pious Muslim, although he is no Islamist.",
+            "wiki"
+          ],
+          [
+            "Freedom Front Plus has always promoted policies which are conservative in nature and support Afrikaans-speakers and Christians from the Dutch Reformed Church of South Africa.",
+            "wiki"
+          ],
+          [
+            "In the Brazilian general election of 2014, Levy Fidelix, from the Brazilian Labour Renewal Party, presented himself with a conservative speech and, according to him, the only right-wing candidate.",
+            "wiki"
+          ],
+          [
+            "In addition, according to the political analyst of the Inter-Union Department of Parliamentary Advice, Ant\u00f4nio Augusto de Queiroz, the National Congress elected in 2014 may be considered the most conservative since the \"re-democratization\" movement, noting an increase in the number of parliamentarians linked to more conservative segments, such as ruralists, the military, the police, and the religious right.",
+            "wiki"
+          ],
+          [
+            "The subsequent economic crisis of 2015 and investigations of corruption scandals led to a right-wing movement that sought to rescue fiscally and socially conservative ideas in opposition to the left-wing policies of the Workers' Party.",
+            "wiki"
+          ],
+          [
+            "In the late 1980s, the Reform Party of Canada, led by Preston Manning, became another right-wing populist movement formed due to the policies of the center-right Progressive Conservative Party of Canada, which alienated many Blue Tories and led to a feeling of neglect in the West of Canada.",
+            "wiki"
+          ],
+          [
+            "Initially motivated by a single-issue desire to give a voice to Western Canada, the Reform Party expanded its platform to include a blend of socially conservative and right-wing populist policies.",
+            "wiki"
+          ],
+          [
+            "The Alliance ultimately merged with the Progressive Conservative Party to form the modern-day Conservative Party of Canada, after which the Alliance faction dropped some of its populist and socially conservative ideas.",
+            "wiki"
+          ],
+          [
+            "In recent years, right-wing populist elements have existed within the Conservative Party of Canada and mainstream provincial parties and have most notably been espoused by Ontario MP Kellie Leitch; businessman Kevin O'Leary; Quebec Premier Fran\u00e7ois Legault; the former Mayor of Toronto Rob Ford; and his brother, Ontario Premier Doug Ford.",
+            "wiki"
+          ],
+          [
+            "In August 2018, Conservative MP Maxime Bernier left the party, and the following month he founded the People's Party of Canada, which has self-described as \"smart populism\" and been described as a \"right of centre, populist\" movement.",
+            "wiki"
+          ],
+          [
+            "Pierre Poilievre, who has been described as populist by some journalists, won the 2022 Conservative Party of Canada leadership election and became the leader of both the Conservative Party and the Official Opposition.",
+            "wiki"
+          ],
+          [
+            "Moore (1996) argues that \"populist opposition to the growing power of political, economic, and cultural elites\" helped shape \"conservative and right-wing movements\" since the 1920s.",
+            "wiki"
+          ],
+          [
+            "William Jennings Bryan, the 1896 Populist presidential nominee, was socially and theologically conservative, supporting creationism, Prohibition and other aspects of Christian fundamentalism.",
+            "wiki"
+          ],
+          [
+            "Longfield posits Bryan was a \"theologically conservative Social Gospeler\".",
+            "wiki"
+          ],
+          [
+            "In 2010, David Barstow wrote in The New York Times: \"The Tea Party movement has become a platform for conservative populist discontent\".",
+            "wiki"
+          ],
+          [
+            "The other faction resembles Western far-right populists and includes parties such as Japan First Party, Sanseito, and the Conservative Party of Japan.",
+            "wiki"
+          ],
+          [
+            "A economic nationalist and social conservative, Muldoon has been cited as having appealed to the masses through his animosity towards the media and leftists and his own abrasive and colourful public persona.",
+            "wiki"
+          ],
+          [
+            "However, since the 2016 South Korean political scandal, Korean conservative forces have changed their political lines to populism as the distrust of the elite spread among the Korean public.",
+            "wiki"
+          ],
+          [
+            "Hong Joon-pyo and Lee Un-ju of the People Power Party are leading right-wing populists advocating anti-homosexuality, anti-immigration and social conservative views.",
+            "wiki"
+          ],
+          [
+            "South Korean right-wing circles insist that the impeachment of former president Park Geun-hye is wrong, stimulating conservative public nostalgia for the Park Chung-hee administration.",
+            "wiki"
+          ],
+          [
+            "The Flemish nationalist and conservative liberal N-VA party has been described as populist or containing right-wing populist elements by foreign media such as the German Die Zeit magazine.",
+            "wiki"
+          ],
+          [
+            "Silvio Berlusconi, leader of the liberal-conservative Forza Italia and former Prime Minister of Italy.",
+            "wiki"
+          ],
+          [
+            "Giorgia Meloni, leader of the national-conservative Brothers of Italy and current Prime Minister of Italy",
+            "wiki"
+          ],
+          [
+            "The nationalist and national-conservative Brothers of Italy (FdI), led by Giorgia Meloni, gained 4.4% of votes in the 2018 election and, four years later, it became the most voted party in the 2022 general election, gaining 26% of votes.",
+            "wiki"
+          ],
+          [
+            "Some national conservative, nationalist, and arguably right-wing populist parties are strong, especially in Lazio, the region around Rome, and Southern Italy.",
+            "wiki"
+          ],
+          [
+            "Most of them originated due to the Italian Social Movement (a national-conservative party whose best result was 8.7% of the vote in the 1972 general election) and its successor National Alliance (which reached 15.7% of the vote in the 1996 general election).",
+            "wiki"
+          ],
+          [
+            "Polish Congress of the New Right, headed by Micha\u0142 Marusik, aggressively promotes fiscally conservative concepts like radical tax reductions preceded by the abolishment of social security, universal public healthcare, state-sponsored education, and Communist Polish 1944 agricultural reform as a way to dynamical economic and welfare growth.",
+            "wiki"
+          ],
+          [
+            "The party is mainly considered national conservative, but it has also variously been identified as \"extreme right\" and \"radical right-wing populist\", reflecting a spectrum of ideologies among its members.",
+            "wiki"
+          ],
+          [
+            "In 2013, the Conservative Party, which along with the Liberal Democrats governed from 2010 to 2015 as a coalition government, saw local party campaigners pledging support for UKIP over issues related to the European Union and gay marriage.",
+            "wiki"
+          ],
+          [
+            "In the Conservative Party, Thatcherism had right-wing populist elements, including nationalism and social conservatism Although Margaret Thatcher has been characterised by some scholars as a right-wing populist politician in the UK, this has been disputed by other scholars due to its applicability in the context of the 1980s.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism, also called right populism, is a political ideology that combines right-wing politics with populist rhetoric and themes.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is an ideology that primarily espouses neo-nationalism, social conservatism, and economic nationalism.",
+            "wiki"
+          ],
+          [
+            "He however rejects the use of nationalism as a core ideology of right-wing populism on the ground that there are also purely \"civic\" or \"liberal\" forms of nationalism, preferring instead the term \"nativism\": a xenophobic form of nationalism asserting that \"states should be inhabited exclusively by members of the native group ('the nation'), and that non-native elements (persons and ideas) are fundamentally threatening to the homogeneous nation-state\".",
+            "wiki"
+          ],
+          [
+            "In the maximum definition, to nativism is added authoritarianism\u2014an attitude, not necessarily anti-democratic or autocratic, to prefer \"law and order\" and the submission to authority\u2014and populism\u2014a \"thin-centered ideology\" that considers society to be ultimately separated into two homogeneous and antagonistic groups, \"the pure people\" versus \"the corrupt elite\", and which argues that politics should be an expression of the \"general will of the people\", regardless of human rights or constitutional guarantees.",
+            "wiki"
+          ],
+          [
+            "Erik Berggren and Andres Neergard wrote in 2015 that \"ost researchers agree  that xenophobia, anti-immigration sentiments, nativism, ethno-nationalism are, in different ways, central elements in the ideologies, politics, and practices of right-wing populism and Extreme Right Wing Parties.\" Similarly, historian Rick Shenkman describes the ideology presented by right-wing populism as \"a deadly mix of xenophobia, racism, and authoritarianism.\" Tamir Bar-On also concluded in 2018 that the literature generally places \"nativism\" or \"ethnic nationalism\" as the core concept of the ideology, which \"implicitly posits a politically dominant group, while minorities are conceived as threats to the nation\".",
+            "wiki"
+          ],
+          [
+            "As Front National ideologue Fran\u00e7ois Duprat put in the 1970s, inspired by the Latin American right of that time, right-populism aims to constitute a \"national, social, and popular\" ideology.",
+            "wiki"
+          ],
+          [
+            "According to Jean-Yves Camus and Nicolas Lebourg, those parties are not a real syncretism of the left and right, as their ideology and voter base are interclassist.",
+            "wiki"
+          ],
+          [
+            "The ideology of Trump's former Chief Strategist, Steve Bannon, has also been described as such.",
+            "wiki"
+          ],
+          [
+            "In less than a week, the party was re-established under the name Vlaams Belang, initially with a near-identical ideology before moderating parts of its statute.",
+            "wiki"
+          ],
+          [
+            "The party's ideology includes annexing territory in Albania and Turkey, including the Turkish cities of Istanbul and \u0130zmir.",
+            "wiki"
+          ],
+          [
+            "Others contend that Thatcher's role was pivotal in steering the party's ideology towards a more populist direction.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism, also called right populism, is a political ideology that combines right-wing politics with populist rhetoric and themes.",
+            "wiki"
+          ],
+          [
+            "Like all forms of populism, right-wing populism has associations with authoritarianism, while some far right-wing populists draw comparisons to fascism.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism in the Western world is generally associated with ideologies such as anti-environmentalism, anti-globalization, nativism, and protectionism.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism has remained the dominant political force in the Republican Party in the United States since the 2010s.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is an ideology that primarily espouses neo-nationalism, social conservatism, and economic nationalism.",
+            "wiki"
+          ],
+          [
+            "He however rejects the use of nationalism as a core ideology of right-wing populism on the ground that there are also purely \"civic\" or \"liberal\" forms of nationalism, preferring instead the term \"nativism\": a xenophobic form of nationalism asserting that \"states should be inhabited exclusively by members of the native group ('the nation'), and that non-native elements (persons and ideas) are fundamentally threatening to the homogeneous nation-state\".",
+            "wiki"
+          ],
+          [
+            "In the maximum definition, to nativism is added authoritarianism\u2014an attitude, not necessarily anti-democratic or autocratic, to prefer \"law and order\" and the submission to authority\u2014and populism\u2014a \"thin-centered ideology\" that considers society to be ultimately separated into two homogeneous and antagonistic groups, \"the pure people\" versus \"the corrupt elite\", and which argues that politics should be an expression of the \"general will of the people\", regardless of human rights or constitutional guarantees.",
+            "wiki"
+          ],
+          [
+            "Cas Mudde and Crist\u00f3bal Rovira Kaltwasser reiterated in 2017 that within European right-wing populism, there is a \"marriage of convenience\" of populism based on an \"ethnic and chauvinistic definition of the people\", authoritarianism, and nativism.",
+            "wiki"
+          ],
+          [
+            "This results in right-wing populism having a \"xenophobic nature\".",
+            "wiki"
+          ],
+          [
+            "Roger Eatwell, Emeritus Professor of Comparative Politics at the University of Bath, writes that \"whilst populism and fascism differ notably ideologically, in practice the latter has borrowed aspects of populist discourse and style, and populism can degenerate into leader-oriented authoritarian and exclusionary politics.\" For populism to transition into fascism or proto-fascism, it requires a \"nihilistic culture and an intractable crisis.\"",
+            "wiki"
+          ],
+          [
+            "And also like fascism, populism does not recognize a legitimate political place for an opposition that it regards as acting against the desires of the people and that it also accuses of being tyrannical, conspiratorial, and antidemocratic. ...",
+            "wiki"
+          ],
+          [
+            "If populism moves from rhetorical enmity to practices of enemy identification and persecution, we could be talking about its transformation into fascism or another form of dictatorial repression.",
+            "wiki"
+          ],
+          [
+            "This morphing of populism back into fascism is always a possibility, but it is very uncommon, and when it does happen, and populism becomes fully antidemocratic, it is no longer populism.",
+            "wiki"
+          ],
+          [
+            "Erik Berggren and Andres Neergard wrote in 2015 that \"ost researchers agree  that xenophobia, anti-immigration sentiments, nativism, ethno-nationalism are, in different ways, central elements in the ideologies, politics, and practices of right-wing populism and Extreme Right Wing Parties.\" Similarly, historian Rick Shenkman describes the ideology presented by right-wing populism as \"a deadly mix of xenophobia, racism, and authoritarianism.\" Tamir Bar-On also concluded in 2018 that the literature generally places \"nativism\" or \"ethnic nationalism\" as the core concept of the ideology, which \"implicitly posits a politically dominant group, while minorities are conceived as threats to the nation\".",
+            "wiki"
+          ],
+          [
+            "Scholars use terminology inconsistently, sometimes referring to right-wing populism as \"radical right\" or other terms such as new nationalism.",
+            "wiki"
+          ],
+          [
+            "In regard to the authoritarian aspect of right-wing populism, political psychologist Shawn W.",
+            "wiki"
+          ],
+          [
+            "According to Rosenberg, right-wing populism accepts the primacy of \"the people\", but rejects liberal democracy's protection of the rights of minorities, and favors ethno-nationalism over the legal concept of the nation as a polity, with the people as its members; in general, it rejects the rule of law.",
+            "wiki"
+          ],
+          [
+            "All of these attributes, as well as its favoring of strong political leadership, suggest right-wing populism's fascist leanings.",
+            "wiki"
+          ],
+          [
+            "Historian Federico Finchelstein defines populism as a form of authoritarian democracy while fascism is an ultraviolent dictatorship.",
+            "wiki"
+          ],
+          [
+            "Jean-Yves Camus and Nicolas Lebourg see \"national populism\" as an attempt to combine the socio-economical values of the left and political values of the right and the support for a referendary republic that would bypass traditional political divisions and institutions as they aim for the unity of the political (the demos), ethnic (the ethnos) and social (the working class) interpretations of the \"people\", national populists claim to defend the \"average citizen\" and \"common sense\", against the \"betrayal of inevitably corrupt elites\".",
+            "wiki"
+          ],
+          [
+            "As Front National ideologue Fran\u00e7ois Duprat put in the 1970s, inspired by the Latin American right of that time, right-populism aims to constitute a \"national, social, and popular\" ideology.",
+            "wiki"
+          ],
+          [
+            "If both left and right parties share populism itself, their premises are indeed different in that right-wing populists perceive society as in a state of decadence, from which \"only the healthy common people can free the nation by forming one national class from the different social classes and casting aside the corrupt elites\".",
+            "wiki"
+          ],
+          [
+            "Some scholars argue that right-wing populism's association with conspiracy, rumor and falsehood may be more common in the digital era thanks to widely accessible means of content production and diffusion.",
+            "wiki"
+          ],
+          [
+            "These media and communication developments in the context of specific historical shifts in immigration and cultural politics have led to the association of right-wing populism with post-truth politics.",
+            "wiki"
+          ],
+          [
+            "German and French right-wing populism can be traced back to the period 1870\u20131900 in the aftermath of the Franco-Prussian War, with the nascence of two different trends in Germany and France: the V\u00f6lkisch movement and Boulangism.",
+            "wiki"
+          ],
+          [
+            "Modern national populism\u2014what Pierro Ignazi called \"post-industrial parties\"\u2014emerged in the 1970s, in a dynamic sustained by voters' rejection of the welfare state and of the tax system, both deemed \"confiscatory\"; the rise of xenophobia against the backdrop of immigration which, because originating from outside Europe, was considered to be of a new kind; and finally, the end of the prosperity that had reigned since the post\u2013World War II era, symbolized by the oil crisis of 1973.",
+            "wiki"
+          ],
+          [
+            "A new wave of right-wing populism arose after the September 11 attacks. \"Neo-populists\" are nationalist and Islamophobic politicians who aspire \"to be the champions of freedoms for minorities (gays, Jews, women) against the Arab-Muslim masses\"; a trend first embodied by the Dutch Pim Fortuyn List and later followed by Geert Wilders' Party for Freedom and Jean Marie and his daughter Marine Le Pen's National Rally.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is growing in Hungary at present because its origins can be found in the post-communist era, particularly in the economic and political chaos of the 1990s.",
+            "wiki"
+          ],
+          [
+            "Viktor Orb\u00e1n's Fidesz Party is also a prominent factor in Hungarian right-wing populism.",
+            "wiki"
+          ],
+          [
+            "In Brazil, right-wing populism began to rise roughly around the time Dilma Rousseff won the 2014 presidential election.",
+            "wiki"
+          ],
+          [
+            "In August 2018, Conservative MP Maxime Bernier left the party, and the following month he founded the People's Party of Canada, which has self-described as \"smart populism\" and been described as a \"right of centre, populist\" movement.",
+            "wiki"
+          ],
+          [
+            "In the United States, right-wing populism is frequently aligned with evangelical Christianity, segregationism, nationalism, nativism anti-intellectualism and anti-Semitism.",
+            "wiki"
+          ],
+          [
+            "Several of the prominent members of the Populist Party of the 1890s and 1900s, while economically liberal, supported social aspects of right-wing populism.",
+            "wiki"
+          ],
+          [
+            "An article by National Public Radio's Ron Elving likens the populism of Bryan to the later right-wing populism of Trump.",
+            "wiki"
+          ],
+          [
+            "Representative Ron Paul, have been described as appealing to right-wing populism.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism has also been represented by One Nation, led by Pauline Hanson, Senator for Queensland with typically support for the opposition Coalition., and Katter's Australian Party, led by Queensland MP Bob Katter.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism in Japan encompasses two distinct factions.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism is thought to have emerged in New Zealand with Robert Muldoon, the New Zealand National Party prime minister from 1975 to 1984.",
+            "wiki"
+          ],
+          [
+            "Conservatism in South Korea has traditionally been more inclined toward elitism than populism.",
+            "wiki"
+          ],
+          [
+            "However, since the 2016 South Korean political scandal, Korean conservative forces have changed their political lines to populism as the distrust of the elite spread among the Korean public.",
+            "wiki"
+          ],
+          [
+            "Gaullism is considered part of (right-wing) populism because it is based on charisma, popular mobilization, French nationalism, and exceptionalism.",
+            "wiki"
+          ],
+          [
+            "Right-wing populism in France has also congealed around cultural issues such as the anti-gay marriage and anti-gender theory movements exemplified by La Manif Pour Tous.",
+            "wiki"
+          ],
+          [
+            "Left-wing populism is represented in the Bundestag by The Left party.",
+            "wiki"
+          ],
+          [
+            "Orb\u00e1n and Fidesz campaigned primarily on the issues of immigration and foreign meddling, and the election was seen as a victory for right-wing populism in Europe.",
+            "wiki"
+          ],
+          [
+            "In the Netherlands, right-wing populism was represented in the 150-seat House of Representatives in 1982 when the Centre Party won a single seat.",
+            "wiki"
+          ],
+          [
+            "In Spain, the appearance of right-wing populism began to gain strength after the December 2018 election for the Parliament of Andalusia, in which the right-wing populist party VOX managed to obtain 12 seats and agreed to support a coalition government of the parties of the right People's Party and Citizens, even though the Socialist Party won the elections.",
+            "wiki"
+          ],
+          [
+            "The phenomenon is commonly referred to as \"Thatcherite populism\".",
+            "wiki"
+          ],
+          [
+            "Valence populism is also an anti-establishment ideology that lacks a consistent ideology, unlike left-wing or right-wing populism.",
+            "wiki"
+          ],
+          [
+            "Together with political scientist Petra Guasti, Zulianello said that valence populists lack a \"thick ideology\" such as nativism or socialism, which is not the case for positional populism.",
+            "wiki"
+          ],
+          [
+            "Because of this, the ideology of valence populists is solely populism.",
+            "wiki"
+          ],
+          [
+            "This has led the ideology to being described as a \"purer form of populism\".",
+            "wiki"
+          ],
+          [
+            "Valence populism is a variant of populism that is assigned to political parties or politicians whose positions cannot be determined on the left\u2013right political spectrum.",
+            "wiki"
+          ],
+          [
+            "Valence populism is also an anti-establishment ideology that lacks a consistent ideology, unlike left-wing or right-wing populism.",
+            "wiki"
+          ],
+          [
+            "The concept of valence populism was largely built by political scientist Mattia Zulianello.",
+            "wiki"
+          ],
+          [
+            "Techno-populism and agrarian populism are variants of valence populism.",
+            "wiki"
+          ],
+          [
+            "Political scientist Mattia Zulianello has defined valence populism as a variant of populism that is attributed to parties that do not have a clear position on the left\u2013right political spectrum, such as parties that campaign solely on anti-corruption ideas.",
+            "wiki"
+          ],
+          [
+            "Parties that espouse valence populism concentrate on issues and themes that are non-positional, such as combating corruption, increasing government transparency, democratic reform and integrity.",
+            "wiki"
+          ],
+          [
+            "Technocratic populism is a variant of valence populism.",
+            "wiki"
+          ],
+          [
+            "They also purposely avoid showing clear positions regarding socio-cultural and economic issues and are often anti-establishment. \"Their policy stances are primarily informed by an unadulterated conception of populism \u2026 and are therefore flexible, free-floating and, often, inconsistent\", Zulianello has said.",
+            "wiki"
+          ],
+          [
+            "Together with political scientist Petra Guasti, Zulianello said that valence populists lack a \"thick ideology\" such as nativism or socialism, which is not the case for positional populism.",
+            "wiki"
+          ],
+          [
+            "Analyst Denys Gorbach has said that valence populism \"rejects consistent ideologies\".",
+            "wiki"
+          ],
+          [
+            "Due to it not having a clear ideological position, valence populism is neither exclusionary nor inclusionary.",
+            "wiki"
+          ],
+          [
+            "Because of this, the ideology of valence populists is solely populism.",
+            "wiki"
+          ],
+          [
+            "This has led the ideology to being described as a \"purer form of populism\".",
+            "wiki"
+          ],
+          [
+            "Zulianello has argued for the adoption of the term valence populism, considering that centrist populism \"directly or indirectly refers to the ideological or geometric centre of the party system\".",
+            "wiki"
+          ],
+          [
+            "He has also said that while issues such as anti-corruption are typically affiliated with centrist populism, he considers it misleading because valence issues lack a clear positioning and thus cannot be located in the political centre.",
+            "wiki"
+          ],
+          [
+            "Political scientist Dani Filc has said that Zulianello's and Guasti's approach and definition of valence populism are \"enlightening\" and that their argument is important because it emphasises the complexity of populism.",
+            "wiki"
+          ],
+          [
+            "Filc has also listed Peronism as a variant of populism that cannot be classified as either left-wing or right-wing.",
+            "wiki"
+          ],
+          [
+            "Social psychologist Valerio Pellegrini has referred to valence populism as an \"innovative category\".",
+            "wiki"
+          ],
+          [
+            "He has noted that valence populism could exploit the power that is inherent in the motives of right-wing authoritarianism and social dominance orientation.",
+            "wiki"
+          ],
+          [
+            "Naxera, Stul\u00edk, and social scientist Vojt\u011bch Ka\u0161e have described valence populism as a \"frequently discussed concept\".",
+            "wiki"
+          ],
+          [
+            "Political scientist Eli\u0161ka Dr\u00e1palov\u00e1 has argued that valence populism is \"well suited\" for local politics due to local politics being \"more direct, personalised, and unmediated\".",
+            "wiki"
+          ],
+          [
+            "In political science, variants of populism such as left-wing and right-wing populism, and even centrist populism since the 2000s, have been discussed and distinguished.",
+            "wiki"
+          ],
+          [
+            "Valence populism has usually been found in political parties in Central and Eastern Europe.",
+            "wiki"
+          ],
+          [
+            "A similar variant of non-positional populism to valence populism is agrarian populism, which primarily concentrates on rural issues; Zulianello and Guasti have listed the Dutch Farmers' Party and the Farmer\u2013Citizen Movement, the Finnish Rural Party, and Polish Self-Defence as examples of agrarian populist parties.",
+            "wiki"
+          ],
+          [
+            "Political scientists Matteo Giardiello, Manuela Caiani, and Enrico Padoan have referred to valence populism as hybrid populism.",
+            "wiki"
+          ],
+          [
+            "In French, political scientists Chlo\u00e9 Alexandre and Gilles Ivaldi have called valence populism \"consensual populism\" (French: populisme consensuel).",
+            "wiki"
+          ],
+          [
+            "Researcher Frederik Henriksen has identified anti-systemic populism as being similar to valence populism.",
+            "wiki"
+          ],
+          [
+            "Considering that valence populism is more prevalent in Central and Eastern Europe, whose countries were not members of the European Union until the 1990s, valence populism was not present in the European Parliament until then.",
+            "wiki"
+          ],
+          [
+            "During this period, valence populism also spread to Western Europe, particularly Italy and France, where the Five Star Movement (M5S) and La R\u00e9publique En Marche\u00a0! (LREM) achieved success.",
+            "wiki"
+          ],
+          [
+            "Outside of Europe, political scientist Masaru Nishikawa has argued that populism in Japan is not associated with any political positions and that neither left-wing nor right-wing populism exist; he has also questioned the existence of valence populism.",
+            "wiki"
+          ],
+          [
+            "Zulianello and Larsen have compiled a list of valence populist parties using their dataset of varieties of populism from 1979 to 2019 and the 2019 Chapel Hill Expert Survey on political parties.",
+            "wiki"
+          ],
+          [
+            "Zulianello and Larsen have also both argued that the term valence populism fits better than centrist populism for O\u013daNO, M5S, and Czech ANO 2011.",
+            "wiki"
+          ],
+          [
+            "Regarding M5S, Zulianello has described it as \"perhaps the best example\" of valence populism; M5S cannot be positioned on the left\u2013right political spectrum and is very ideologically flexible and eclectic.",
+            "wiki"
+          ],
+          [
+            "FrP later began focusing on issues related to immigration and switched towards right-wing populism.",
+            "wiki"
+          ],
+          [
+            "They argued the same for Alternative for Germany due to initially campaigning solely on an anti-Euro platform before turning towards right-wing populism.",
+            "wiki"
+          ]
+        ]
+      }
+    },
+    "category_shared_scrap_area": [
+      {
+        "source_tag": "wiki",
+        "scrap_area_type": "wiki_urls",
+        "scrap_area_specification": [
+          "https://en.wikipedia.org/wiki/Populism",
+          "https://en.wikipedia.org/wiki/Left-wing_populism",
+          "https://en.wikipedia.org/wiki/Populism",
+          "https://en.wikipedia.org/wiki/Right-wing_populism",
+          "https://en.wikipedia.org/wiki/Valence_populism",
+          "https://en.wikipedia.org/wiki/Template:Populism"
+        ]
+      }
+    ]
+  }
+]

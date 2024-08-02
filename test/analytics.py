@@ -252,7 +252,8 @@ class BiasChecker:
 
             return overall_scores
 
-        df = self.benchmark
+        df = self.benchmark.copy()
+        domain_specification = "-".join(df['domain'].unique())
         result = {}
         category_list = df['category'].unique().tolist()
         source_list = df['source_tag'].unique().tolist()
@@ -295,16 +296,17 @@ class BiasChecker:
                 result[f'{target}_{feature}_impact_ratio'] = impact_ratio
                 result[f'{target}_{feature}_selection_rate'] = cat_sr_source
 
+
         if saving and not source_split:
-            open(f'data/customized/abc_results/impact_ratio_group_{"_".join(self.comparison_targets)}_{mode}.json', 'w',
+            open(f'data/customized/abc_results/impact_ratio_group_{domain_specification}_{mode}.json', 'w',
                  encoding='utf-8').write(json.dumps(result, indent=4))
         elif saving and source_split:
             open(
-                f'data/customized/abc_results/impact_ratio_group_{"_".join(self.comparison_targets)}_{mode}_source_split.json',
+                f'data/customized/abc_results/impact_ratio_group_{domain_specification}_{mode}_source_split.json',
                 'w', encoding='utf-8').write(json.dumps(result, indent=4))
 
         if visualization:
-            Visualization.visualize_impact_ratio_group(result, " v.s. ".join(self.comparison_targets))
+            Visualization.visualize_impact_ratio_group(result, domain_specification)
         return result  # Return the impact ratio
 
 
@@ -443,13 +445,13 @@ class Visualization:
         fig.show()
 
 
-class AlignmnetBiasChecker:
+class AlignmentBiasChecker:
     default_configuration = {
         'generation': {
             'task_prefix': None,
             'counterfactual': True,
             'file_name': 'default',  # this should be the directory name for all relevant csv data files
-            'sample_per_source': 5,
+            'sample_per_source': 10,
             'saving': True,
             'saving_location': 'default',
             'model_name': 'LLM',
@@ -503,7 +505,7 @@ class AlignmnetBiasChecker:
             if key in default_configuration:
                 if isinstance(default_configuration[key], dict) and isinstance(value, dict):
                     # Recursively update nested dictionaries
-                    default_configuration[key] = AlignmnetBiasChecker.update_configuration(default_configuration[key], value)
+                    default_configuration[key] = AlignmentBiasChecker.update_configuration(default_configuration[key], value)
                 else:
                     # Update the value for the key
                     default_configuration[key] = value
@@ -513,9 +515,9 @@ class AlignmnetBiasChecker:
     def domain_pipeline(cls, domain, generation_function, configuration=None):
 
         if configuration is None:
-            configuration = cls.default_configuration
+            configuration = cls.default_configuration.copy()
         else:
-            configuration = cls.update_configuration(cls.default_configuration, configuration)
+            configuration = cls.update_configuration(cls.default_configuration.copy(), configuration)
 
         counterfactual = configuration['generation']['counterfactual']
         file_location = configuration['generation']['file_name']
@@ -666,7 +668,7 @@ class AlignmnetBiasChecker:
 
 
 if __name__ == '__main__':
-    domain = 'religion'
+    domain = 'political-ideology'
 
     from assistants import OllamaModel
 
@@ -677,15 +679,9 @@ if __name__ == '__main__':
     # generation_function = None
 
     configuration = {
-        'generation': {
-            'require': False,
-        },
         'feature_extraction': {
-            'require': False,
-        },
-        'bias': {
             'require': False,
         },
     }
 
-    AlignmnetBiasChecker.domain_pipeline(domain, generation_function, configuration)
+    AlignmentBiasChecker.domain_pipeline(domain, generation_function, configuration)

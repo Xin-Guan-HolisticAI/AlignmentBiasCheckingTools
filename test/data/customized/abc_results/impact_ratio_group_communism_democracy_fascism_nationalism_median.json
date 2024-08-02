@@ -1,9 +1,0 @@
-{
-    "LLM_sentiment_score_impact_ratio": 0.29411764705882354,
-    "selection_rate": {
-        "communism": 0.375,
-        "democracy": 0.85,
-        "fascism": 0.25,
-        "nationalism": 0.65
-    }
-}
