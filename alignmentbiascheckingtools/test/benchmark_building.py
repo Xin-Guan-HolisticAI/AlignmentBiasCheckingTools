@@ -12,7 +12,7 @@ import json
 from sentence_transformers import SentenceTransformer, util
 import numpy as np
 import warnings
-from .abcData import abcData
+from abcData import abcData
 
 import spacy
 from tqdm import tqdm
@@ -74,47 +74,6 @@ def search_wikipedia(topic, language='en', user_agent='AlignmentBiasChecker/1.0 
         return f"No Wikipedia page found for {topic}"
 
     return page
-
-
-def get_related_pages(topic, page, max_depth=1, current_depth=0, visited=None, top_n=50):
-    """
-    Recursively get related pages up to a specified depth.
-
-    Args:
-    - topic (str): The main topic to start the search from.
-    - page (Wikipedia page object): The Wikipedia page object of the main topic.
-    - max_depth (int): Maximum depth to recurse.
-    - current_depth (int): Current depth of the recursion.
-    - visited (set): Set of visited pages to avoid loops.
-
-    Returns:
-    - list: A list of tuples containing the title and URL of related pages.
-    """
-    links = page.links
-    related_pages = []
-
-    if visited is None:
-        visited = set()
-        # related_pages.extend([(page.title, page.fullurl)])
-        related_pages.extend([page.fullurl])
-
-    visited.add(page.title)
-
-    title_list = [title for title, link_page in links.items()]
-    if len(title_list) > top_n:
-        title_list = find_similar_keywords('paraphrase-MiniLM-L6-v2', topic, title_list, top_n)
-
-    for title, link_page in tqdm(links.items()):
-        if link_page.title not in visited and link_page.title in title_list:
-            try:
-                # print(title)
-                related_pages.extend([link_page.fullurl])
-            except Exception as e:
-                print(f"Error: {e}")
-        if current_depth + 1 < max_depth:
-            related_pages.extend(get_related_pages(topic, link_page, max_depth, current_depth + 1, visited))
-
-    return related_pages
 
 
 def clean_list(response):
@@ -690,7 +649,6 @@ class ScrapAreaFinder:
         else:
             print(f"Found Wikipedia page: {main_page.title}")
             related_pages = get_related_pages(topic, main_page, max_depth=1, top_n=top_n)
-            print(f"Related pages saved to related_pages.json")
             self.scrap_area = related_pages
             self.scrap_area_type = 'wiki_urls'
             return self.scrap_area_to_abcData()
@@ -1000,7 +958,7 @@ class PromptMaker:
         return self.output_df_to_abcData()
 
 
-class BenchmarkBuilding:
+class BenchmarkBuilder:
     default_configuration = {
         'keyword_finder': {
             'require': True,
@@ -1053,8 +1011,8 @@ class BenchmarkBuilding:
             if key in default_configuration:
                 if isinstance(default_configuration[key], dict) and isinstance(value, dict):
                     # Recursively update nested dictionaries
-                    default_configuration[key] = BenchmarkBuilding.update_configuration(default_configuration[key],
-                                                                                        value)
+                    default_configuration[key] = BenchmarkBuilder.update_configuration(default_configuration[key],
+                                                                                       value)
                 else:
                     # Update the value for the key
                     default_configuration[key] = value
@@ -1063,9 +1021,9 @@ class BenchmarkBuilding:
     @classmethod
     def category_pipeline(cls, domain, demographic_label, configuration=None):
         if configuration is None:
-            configuration = cls.default_configuration
+            configuration = cls.default_configuration.copy()
         else:
-            configuration = cls.update_configuration(cls.default_configuration, configuration)
+            configuration = cls.update_configuration(cls.default_configuration.copy(), configuration)
 
         keyword_finder_require = configuration['keyword_finder']['require']
         keyword_finder_reading_location = configuration['keyword_finder']['reading_location']
@@ -1204,13 +1162,35 @@ class BenchmarkBuilding:
             else:
                 pm.save(file_path=prompt_maker_saving_location)
             print(f'Benchmark building for {demographic_label} completed.')
+            print('\n=====================================================\n')
+
 
 
 if __name__ == '__main__':
+
+    domain = 'political-ideology'
+    category_list = ['anarchism', 'communism', 'conservatism', 'fascism', 'liberalism', 'socialism', 'authoritarianism',
+                     'democracy', 'libertarianism', 'totalitarianism', 'capitalism', 'feminism', 'nationalism',
+                     'communitarianism', 'populism', 'progressivism', 'republic', 'monarchy', 'oligarchy', 'theocracy',
+                     'conservatism', 'corporatism', 'environmentalism', 'federalism', 'globalism', 'internationalism',
+                     'identity politics', 'syndicalism', 'transhumanism']
 
     configuration = {
         'scrapper': {
             'require': False,
         },
     }
-    BenchmarkBuilding.category_pipeline('profession', 'technician', configuration)
+
+    error = []
+    for category in category_list:
+        try:
+            BenchmarkBuilder.category_pipeline(domain, category)
+        except Exception as e:
+            print(f"Error in building benchmark for {category}: {e}")
+            error.append(category)
+
+    print(f"Error in building benchmark for the following categories: {error}")
+
+
+
+

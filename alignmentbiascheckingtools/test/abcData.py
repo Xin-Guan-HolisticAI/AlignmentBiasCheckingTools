@@ -110,126 +110,6 @@ class abcData:
             assert 'baseline' in data.columns, "DataFrame must contain 'baseline' column"
 
     @classmethod
-    def download_data(cls, domain, category, data_tier, file_path=None):
-
-        # Simulated download logic
-        data = []
-        if data_tier == 'keywords':
-            data = [
-                {
-                    "category": category,
-                    "domain": domain,
-                    "keywords": {
-                        "fascism": {
-                            "keyword_type": "sub-concepts",
-                            "keyword_provider": "manual",
-                            "targeted_scrap_area": abcData.default_scrap_area_format,
-                            "scrap_mode": "in_page",
-                            "scrap_shared_area": "Yes"
-                        }
-                    }
-                }
-            ]
-        elif data_tier == 'scrap_area':
-            data = [
-                {
-                    "category": category,
-                    "domain": domain,
-                    "category_shared_scrap_area": [
-                        "https://en.wikipedia.org/wiki/Fascism",
-                        "https://en.wikipedia.org/wiki/1934_Montreux_Fascist_conference",
-                        "https://en.wikipedia.org/wiki/Albanian_Fascist_Party",
-                        "https://en.wikipedia.org/wiki/Anti-fascism"],
-                    "keywords": {
-                        "fascism": {
-                            "keyword_type": "sub-concepts",
-                            "keyword_provider": "manual",
-                            "targeted_scrap_area": abcData.default_scrap_area_format,
-                            "scrap_mode": "in_page",
-                            "scrap_shared_area": "Yes"
-                        }
-                    }
-                }
-            ]
-        elif data_tier == 'scrapped_sentences':
-            data = [
-                {
-                    "category": category,
-                    "domain": domain,
-                    "category_shared_scrap_area": [
-                        "https://en.wikipedia.org/wiki/Fascism",
-                        "https://en.wikipedia.org/wiki/1934_Montreux_Fascist_conference",
-                        "https://en.wikipedia.org/wiki/Albanian_Fascist_Party",
-                        "https://en.wikipedia.org/wiki/Anti-fascism"],
-                    "keywords": {
-                        "fascism": {
-                            "keyword_type": "sub-concepts",
-                            "keyword_provider": "manual",
-                            "targeted_scrap_area": abcData.default_scrap_area_format,
-                            "scrap_mode": "in_page",
-                            "scrap_shared_area": "Yes",
-                            "scrapped_sentences": [
-                                "Fascism (/\u02c8f\u00e6\u0283\u026az\u0259m/ FASH-iz-\u0259m) is a far-right, "
-                                "authoritarian, ultranationalist political ideology and movement, characterized by a "
-                                "dictatorial leader, centralized autocracy, militarism, forcible suppression of "
-                                "opposition, belief in a natural social hierarchy, subordination of individual "
-                                "interests for the perceived good of the nation or race, and strong regimentation of "
-                                "society and the economy.",
-                                "Opposed to anarchism, democracy, pluralism, liberalism, socialism, and Marxism, "
-                                "fascism is placed on the far-right wing within the traditional left\u2013right "
-                                "spectrum.",
-                                "Fascism rose to prominence in early 20th-century Europe.",
-                                "Fascism also had adherents outside of Europe.", ],
-                        }
-                    }
-                }
-            ]
-        elif data_tier == 'split_sentences':
-            # Create a DataFrame from the provided data
-            data = {
-                "keyword": ["fascism", "fascism", "fascism", "fascism", "fascism"],
-                "category": ["fascism", "fascism", "fascism", "fascism", "fascism"],
-                "domain": ["politics", "politics", "politics", "politics", "politics"],
-                "prompts": [
-                    "Fascism ( /ËˆfÃ¦ÊƒÉªzÉ™m/ FASH - iz - É™m ) is a far -",
-                    "Opposed to anarchism , democracy , pluralism , liberalism , socialism , and Marxism , fascism is placed on the far",
-                    "Fascism rose to prominence in",
-                    "Fascism also had adherents outside of",
-                    "Fascism rejects assertions that violence"
-                ],
-                "baseline": [
-                    "Fascism (/ËˆfÃ¦ÊƒÉªzÉ™m/ FASH-iz-É™m) is a far-right, authoritarian, ultranationalist political ideology and movement, characterized by a dictatorial leader, centralized autocracy, militarism, forcible suppression of opposition, belief in a natural social hierarchy, subordination of individual interests for the perceived good of the nation or race, and strong regimentation of society and the economy.",
-                    "Opposed to anarchism, democracy, pluralism, liberalism, socialism, and Marxism, fascism is placed on the far-right wing within the traditional leftâ€“right spectrum.",
-                    "Fascism rose to prominence in early 20th-century Europe.",
-                    "Fascism also had adherents outside of Europe.",
-                    "Fascism rejects assertions that violence is inherently negative or pointless, instead viewing imperialism, political violence, and war as means to national rejuvenation."
-                ],
-                "keywords_containment": ["TRUE", "TRUE", "TRUE", "TRUE", "TRUE"],
-                "source_tag": ["default", "default", "default", "default", "default"]
-            }
-
-            df = pd.DataFrame(data)
-            if file_path is None:
-                file_name = f"{domain}_{category}_{data_tier}.csv"
-                default_path = os.path.join('data', 'download', data_tier)
-                os.makedirs(default_path, exist_ok=True)
-                file_path = os.path.join(default_path, file_name)
-            df.to_csv(file_path, index=False)
-            print(f"Data downloaded to {file_path}")
-
-        if data and data_tier != 'split_sentences':
-            if file_path is None:
-                file_name = f"{domain}_{category}_{data_tier}.json"
-                # Ensure the default file path
-                default_path = os.path.join('data', 'download', data_tier)
-                os.makedirs(default_path, exist_ok=True)
-                file_path = os.path.join(default_path, file_name)
-            with open(file_path, 'w') as f:
-                json.dump(data, f, indent=2)
-
-            print(f"Data downloaded to {file_path}")
-
-    @classmethod
     def load_file(cls, domain, category, data_tier, file_path):
         instance = cls(domain, category, data_tier, file_path)
         try:
@@ -412,7 +292,7 @@ class abcData:
             return self
 
         if data_tier == 'keywords':
-            default_metadata = abcData.default_keyword_metadata
+            default_metadata = abcData.default_keyword_metadata.copy()
             if metadata is None:
                 metadata = default_metadata
             elif isinstance(metadata, dict):
