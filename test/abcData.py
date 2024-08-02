@@ -123,7 +123,7 @@ class abcData:
                         "fascism": {
                             "keyword_type": "sub-concepts",
                             "keyword_provider": "manual",
-                            "targeted_scrap_area": abcData.default_scrap_area_format,
+                            "targeted_scrap_area": abcData.default_scrap_area_format.copy(),
                             "scrap_mode": "in_page",
                             "scrap_shared_area": "Yes"
                         }
@@ -144,7 +144,7 @@ class abcData:
                         "fascism": {
                             "keyword_type": "sub-concepts",
                             "keyword_provider": "manual",
-                            "targeted_scrap_area": abcData.default_scrap_area_format,
+                            "targeted_scrap_area": abcData.default_scrap_area_format.copy(),
                             "scrap_mode": "in_page",
                             "scrap_shared_area": "Yes"
                         }
@@ -165,7 +165,7 @@ class abcData:
                         "fascism": {
                             "keyword_type": "sub-concepts",
                             "keyword_provider": "manual",
-                            "targeted_scrap_area": abcData.default_scrap_area_format,
+                            "targeted_scrap_area": abcData.default_scrap_area_format.copy(),
                             "scrap_mode": "in_page",
                             "scrap_shared_area": "Yes",
                             "scrapped_sentences": [
@@ -412,7 +412,7 @@ class abcData:
             return self
 
         if data_tier == 'keywords':
-            default_metadata = abcData.default_keyword_metadata
+            default_metadata = abcData.default_keyword_metadata.copy()
             if metadata is None:
                 metadata = default_metadata
             elif isinstance(metadata, dict):

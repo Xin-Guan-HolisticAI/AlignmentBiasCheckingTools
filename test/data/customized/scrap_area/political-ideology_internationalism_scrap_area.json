@@ -1,0 +1,35 @@
+[
+  {
+    "category": "internationalism",
+    "domain": "political-ideology",
+    "keywords": {
+      "internationalism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      }
+    },
+    "category_shared_scrap_area": [
+      {
+        "source_tag": "wiki",
+        "scrap_area_type": "wiki_urls",
+        "scrap_area_specification": [
+          "https://en.wikipedia.org/wiki/Internationalism",
+          "https://en.wikipedia.org/wiki/Internationalism_(linguistics)",
+          "https://en.wikipedia.org/wiki/Internationalism_(politics)",
+          "https://en.wikipedia.org/wiki/Internationality",
+          "https://en.wikipedia.org/wiki/Proletarian_internationalism",
+          "https://en.wikipedia.org/wiki/Talk:Internationalism"
+        ]
+      }
+    ]
+  }
+]

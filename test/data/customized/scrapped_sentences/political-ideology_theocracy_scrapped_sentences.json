@@ -1,0 +1,616 @@
+[
+  {
+    "category": "theocracy",
+    "domain": "political-ideology",
+    "keywords": {
+      "th\u00e9ocratie": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": []
+      },
+      "ecclesiocracy": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The common, generic use of the term, as defined above in terms of rule by a church or analogous religious leadership, may be more accurately described as an ecclesiocracy.",
+            "wiki"
+          ],
+          [
+            "In an ecclesiocracy, the religious leaders assume a leading role in the state, but do not claim that they are instruments of divine revelation.",
+            "wiki"
+          ]
+        ]
+      },
+      "religion": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The common, generic use of the term, as defined above in terms of rule by a church or analogous religious leadership, may be more accurately described as an ecclesiocracy.",
+            "wiki"
+          ],
+          [
+            "In an ecclesiocracy, the religious leaders assume a leading role in the state, but do not claim that they are instruments of divine revelation.",
+            "wiki"
+          ],
+          [
+            "A related phenomenon is a secular government co-existing with a state religion or delegating some aspects of civil law to religious communities.",
+            "wiki"
+          ],
+          [
+            "For example, in Israel, marriage is governed by officially recognized religious bodies who each provide marriage services for their respected adherents, yet no form of civil marriage (free of religion) exists, nor marriage by non-recognized minority religions.",
+            "wiki"
+          ],
+          [
+            "In the Basic Law of Saudi Arabia, Saudi Arabia defines itself as a sovereign Arab Islamic state with Islam as its official religion.",
+            "wiki"
+          ],
+          [
+            "Religious minorities do not have the right to practice their religion openly.",
+            "wiki"
+          ],
+          [
+            "Conversion from Islam to another religion is punishable by death as apostasy.",
+            "wiki"
+          ],
+          [
+            "Having a state religion is not sufficient to mean that a state is a theocracy in the narrow sense of the term.",
+            "wiki"
+          ],
+          [
+            "Many countries have a state religion without the government directly deriving its powers from a divine authority or a religious authority which is directly exercising governmental powers.",
+            "wiki"
+          ],
+          [
+            "Since few theocracies exist in the modern world, the word \"theocracy\" is now used as a descriptive term for a government which enforces a state religion.",
+            "wiki"
+          ],
+          [
+            "During the Achaemenid Empire (550 to 330 BCE), Zoroastrianism functioned as the state religion, with  formalized worship.",
+            "wiki"
+          ],
+          [
+            "The church controlled education and healthcare, books and films were censored, drive-in movie theatres were illegal, religion had strong influence over civil law (for example, only churches could conduct marriages, and divorce was banned), and Jehovah's Witnesses were persecuted.",
+            "wiki"
+          ],
+          [
+            "I define a totalitarian state as one with a system of government that is unlimited,  constitutionally or by countervailing powers in society (such as by a Church, rural gentry, labor unions, or regional powers); is not held responsible to the public by periodic secret and competitive elections; and employs its unlimited power to control all aspects of society, including the family, religion, education, business, private property, and social relationships.",
+            "wiki"
+          ],
+          [
+            "Franco was portrayed as a fervent Catholic and a staunch defender of Catholicism, the declared state religion.",
+            "wiki"
+          ]
+        ]
+      },
+      "faiths": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The common, generic use of the term, as defined above in terms of rule by a church or analogous religious leadership, may be more accurately described as an ecclesiocracy.",
+            "wiki"
+          ],
+          [
+            "In an ecclesiocracy, the religious leaders assume a leading role in the state, but do not claim that they are instruments of divine revelation.",
+            "wiki"
+          ],
+          [
+            "A related phenomenon is a secular government co-existing with a state religion or delegating some aspects of civil law to religious communities.",
+            "wiki"
+          ],
+          [
+            "For example, in Israel, marriage is governed by officially recognized religious bodies who each provide marriage services for their respected adherents, yet no form of civil marriage (free of religion) exists, nor marriage by non-recognized minority religions.",
+            "wiki"
+          ],
+          [
+            "In the Basic Law of Saudi Arabia, Saudi Arabia defines itself as a sovereign Arab Islamic state with Islam as its official religion.",
+            "wiki"
+          ],
+          [
+            "Religious minorities do not have the right to practice their religion openly.",
+            "wiki"
+          ],
+          [
+            "Conversion from Islam to another religion is punishable by death as apostasy.",
+            "wiki"
+          ],
+          [
+            "Having a state religion is not sufficient to mean that a state is a theocracy in the narrow sense of the term.",
+            "wiki"
+          ],
+          [
+            "Many countries have a state religion without the government directly deriving its powers from a divine authority or a religious authority which is directly exercising governmental powers.",
+            "wiki"
+          ],
+          [
+            "Since few theocracies exist in the modern world, the word \"theocracy\" is now used as a descriptive term for a government which enforces a state religion.",
+            "wiki"
+          ],
+          [
+            "During the Achaemenid Empire (550 to 330 BCE), Zoroastrianism functioned as the state religion, with  formalized worship.",
+            "wiki"
+          ],
+          [
+            "The church controlled education and healthcare, books and films were censored, drive-in movie theatres were illegal, religion had strong influence over civil law (for example, only churches could conduct marriages, and divorce was banned), and Jehovah's Witnesses were persecuted.",
+            "wiki"
+          ],
+          [
+            "During the Sassanid period (224 to 651 CE), the Zoroastrian calendar was reformed, image-use in worship was banned, Fire Temples were increasingly built, and intolerance towards other faiths prevailed.",
+            "wiki"
+          ],
+          [
+            "Hill, \"the Latter-day Saints saw the maelstrom of competing faiths and social institutions in the early 19th century as evidence of social upheaval and found confirmation in the rioting and violence that characterized Jacksonian America.\" Smith wrote in 1842 that earthly governments \"have failed in all their attempts to promote eternal peace and happiness....  is rent, from center to circumference, with party strife, political intrigues, and sectional interest.\"",
+            "wiki"
+          ],
+          [
+            "I define a totalitarian state as one with a system of government that is unlimited,  constitutionally or by countervailing powers in society (such as by a Church, rural gentry, labor unions, or regional powers); is not held responsible to the public by periodic secret and competitive elections; and employs its unlimited power to control all aspects of society, including the family, religion, education, business, private property, and social relationships.",
+            "wiki"
+          ],
+          [
+            "Franco was portrayed as a fervent Catholic and a staunch defender of Catholicism, the declared state religion.",
+            "wiki"
+          ]
+        ]
+      },
+      "theo": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The common, generic use of the term, as defined above in terms of rule by a church or analogous religious leadership, may be more accurately described as an ecclesiocracy.",
+            "wiki"
+          ],
+          [
+            "In an ecclesiocracy, the religious leaders assume a leading role in the state, but do not claim that they are instruments of divine revelation.",
+            "wiki"
+          ],
+          [
+            "A related phenomenon is a secular government co-existing with a state religion or delegating some aspects of civil law to religious communities.",
+            "wiki"
+          ],
+          [
+            "For example, in Israel, marriage is governed by officially recognized religious bodies who each provide marriage services for their respected adherents, yet no form of civil marriage (free of religion) exists, nor marriage by non-recognized minority religions.",
+            "wiki"
+          ],
+          [
+            "In the Basic Law of Saudi Arabia, Saudi Arabia defines itself as a sovereign Arab Islamic state with Islam as its official religion.",
+            "wiki"
+          ],
+          [
+            "Religious minorities do not have the right to practice their religion openly.",
+            "wiki"
+          ],
+          [
+            "Conversion from Islam to another religion is punishable by death as apostasy.",
+            "wiki"
+          ],
+          [
+            "Having a state religion is not sufficient to mean that a state is a theocracy in the narrow sense of the term.",
+            "wiki"
+          ],
+          [
+            "Many countries have a state religion without the government directly deriving its powers from a divine authority or a religious authority which is directly exercising governmental powers.",
+            "wiki"
+          ],
+          [
+            "Since few theocracies exist in the modern world, the word \"theocracy\" is now used as a descriptive term for a government which enforces a state religion.",
+            "wiki"
+          ],
+          [
+            "During the Achaemenid Empire (550 to 330 BCE), Zoroastrianism functioned as the state religion, with  formalized worship.",
+            "wiki"
+          ],
+          [
+            "The church controlled education and healthcare, books and films were censored, drive-in movie theatres were illegal, religion had strong influence over civil law (for example, only churches could conduct marriages, and divorce was banned), and Jehovah's Witnesses were persecuted.",
+            "wiki"
+          ],
+          [
+            "During the Sassanid period (224 to 651 CE), the Zoroastrian calendar was reformed, image-use in worship was banned, Fire Temples were increasingly built, and intolerance towards other faiths prevailed.",
+            "wiki"
+          ],
+          [
+            "Muhammad Al-Atawneh describes the current Saudi regime as a \u2018theo-monarchy, that draws power from long-standing religio-cultural norms.'",
+            "wiki"
+          ],
+          [
+            "Hill, \"the Latter-day Saints saw the maelstrom of competing faiths and social institutions in the early 19th century as evidence of social upheaval and found confirmation in the rioting and violence that characterized Jacksonian America.\" Smith wrote in 1842 that earthly governments \"have failed in all their attempts to promote eternal peace and happiness....  is rent, from center to circumference, with party strife, political intrigues, and sectional interest.\"",
+            "wiki"
+          ],
+          [
+            "I define a totalitarian state as one with a system of government that is unlimited,  constitutionally or by countervailing powers in society (such as by a Church, rural gentry, labor unions, or regional powers); is not held responsible to the public by periodic secret and competitive elections; and employs its unlimited power to control all aspects of society, including the family, religion, education, business, private property, and social relationships.",
+            "wiki"
+          ],
+          [
+            "Franco was portrayed as a fervent Catholic and a staunch defender of Catholicism, the declared state religion.",
+            "wiki"
+          ]
+        ]
+      },
+      "dominionism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The common, generic use of the term, as defined above in terms of rule by a church or analogous religious leadership, may be more accurately described as an ecclesiocracy.",
+            "wiki"
+          ],
+          [
+            "In an ecclesiocracy, the religious leaders assume a leading role in the state, but do not claim that they are instruments of divine revelation.",
+            "wiki"
+          ],
+          [
+            "A related phenomenon is a secular government co-existing with a state religion or delegating some aspects of civil law to religious communities.",
+            "wiki"
+          ],
+          [
+            "For example, in Israel, marriage is governed by officially recognized religious bodies who each provide marriage services for their respected adherents, yet no form of civil marriage (free of religion) exists, nor marriage by non-recognized minority religions.",
+            "wiki"
+          ],
+          [
+            "In the Basic Law of Saudi Arabia, Saudi Arabia defines itself as a sovereign Arab Islamic state with Islam as its official religion.",
+            "wiki"
+          ],
+          [
+            "Religious minorities do not have the right to practice their religion openly.",
+            "wiki"
+          ],
+          [
+            "Conversion from Islam to another religion is punishable by death as apostasy.",
+            "wiki"
+          ],
+          [
+            "Having a state religion is not sufficient to mean that a state is a theocracy in the narrow sense of the term.",
+            "wiki"
+          ],
+          [
+            "Many countries have a state religion without the government directly deriving its powers from a divine authority or a religious authority which is directly exercising governmental powers.",
+            "wiki"
+          ],
+          [
+            "Since few theocracies exist in the modern world, the word \"theocracy\" is now used as a descriptive term for a government which enforces a state religion.",
+            "wiki"
+          ],
+          [
+            "During the Achaemenid Empire (550 to 330 BCE), Zoroastrianism functioned as the state religion, with  formalized worship.",
+            "wiki"
+          ],
+          [
+            "The church controlled education and healthcare, books and films were censored, drive-in movie theatres were illegal, religion had strong influence over civil law (for example, only churches could conduct marriages, and divorce was banned), and Jehovah's Witnesses were persecuted.",
+            "wiki"
+          ],
+          [
+            "During the Sassanid period (224 to 651 CE), the Zoroastrian calendar was reformed, image-use in worship was banned, Fire Temples were increasingly built, and intolerance towards other faiths prevailed.",
+            "wiki"
+          ],
+          [
+            "Muhammad Al-Atawneh describes the current Saudi regime as a \u2018theo-monarchy, that draws power from long-standing religio-cultural norms.'",
+            "wiki"
+          ],
+          [
+            "Hill, \"the Latter-day Saints saw the maelstrom of competing faiths and social institutions in the early 19th century as evidence of social upheaval and found confirmation in the rioting and violence that characterized Jacksonian America.\" Smith wrote in 1842 that earthly governments \"have failed in all their attempts to promote eternal peace and happiness....  is rent, from center to circumference, with party strife, political intrigues, and sectional interest.\"",
+            "wiki"
+          ],
+          [
+            "I define a totalitarian state as one with a system of government that is unlimited,  constitutionally or by countervailing powers in society (such as by a Church, rural gentry, labor unions, or regional powers); is not held responsible to the public by periodic secret and competitive elections; and employs its unlimited power to control all aspects of society, including the family, religion, education, business, private property, and social relationships.",
+            "wiki"
+          ],
+          [
+            "Franco was portrayed as a fervent Catholic and a staunch defender of Catholicism, the declared state religion.",
+            "wiki"
+          ]
+        ]
+      },
+      "edicts": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The common, generic use of the term, as defined above in terms of rule by a church or analogous religious leadership, may be more accurately described as an ecclesiocracy.",
+            "wiki"
+          ],
+          [
+            "In an ecclesiocracy, the religious leaders assume a leading role in the state, but do not claim that they are instruments of divine revelation.",
+            "wiki"
+          ],
+          [
+            "A related phenomenon is a secular government co-existing with a state religion or delegating some aspects of civil law to religious communities.",
+            "wiki"
+          ],
+          [
+            "For example, in Israel, marriage is governed by officially recognized religious bodies who each provide marriage services for their respected adherents, yet no form of civil marriage (free of religion) exists, nor marriage by non-recognized minority religions.",
+            "wiki"
+          ],
+          [
+            "In the Basic Law of Saudi Arabia, Saudi Arabia defines itself as a sovereign Arab Islamic state with Islam as its official religion.",
+            "wiki"
+          ],
+          [
+            "Religious minorities do not have the right to practice their religion openly.",
+            "wiki"
+          ],
+          [
+            "Conversion from Islam to another religion is punishable by death as apostasy.",
+            "wiki"
+          ],
+          [
+            "Having a state religion is not sufficient to mean that a state is a theocracy in the narrow sense of the term.",
+            "wiki"
+          ],
+          [
+            "Many countries have a state religion without the government directly deriving its powers from a divine authority or a religious authority which is directly exercising governmental powers.",
+            "wiki"
+          ],
+          [
+            "Since few theocracies exist in the modern world, the word \"theocracy\" is now used as a descriptive term for a government which enforces a state religion.",
+            "wiki"
+          ],
+          [
+            "During the Achaemenid Empire (550 to 330 BCE), Zoroastrianism functioned as the state religion, with  formalized worship.",
+            "wiki"
+          ],
+          [
+            "The church controlled education and healthcare, books and films were censored, drive-in movie theatres were illegal, religion had strong influence over civil law (for example, only churches could conduct marriages, and divorce was banned), and Jehovah's Witnesses were persecuted.",
+            "wiki"
+          ],
+          [
+            "During the Sassanid period (224 to 651 CE), the Zoroastrian calendar was reformed, image-use in worship was banned, Fire Temples were increasingly built, and intolerance towards other faiths prevailed.",
+            "wiki"
+          ],
+          [
+            "Muhammad Al-Atawneh describes the current Saudi regime as a \u2018theo-monarchy, that draws power from long-standing religio-cultural norms.'",
+            "wiki"
+          ],
+          [
+            "The Taliban sought to establish law and order and to impose a strict interpretation of Islamic Sharia law, along with the religious edicts of Mullah Mohammed Omar, upon the entire country of Afghanistan.",
+            "wiki"
+          ],
+          [
+            "During the five-year history of the Islamic Emirate, the Taliban regime interpreted the Sharia in accordance with the Hanafi school of Islamic jurisprudence and the religious edicts of Mullah Omar.",
+            "wiki"
+          ],
+          [
+            "Even after the fall of Qin in 206 BCE, an emperor's words were considered sacred edicts (\u8056\u65e8) and his written proclamations \"directives from above\" (\u4e0a\u8aed).",
+            "wiki"
+          ],
+          [
+            "Hill, \"the Latter-day Saints saw the maelstrom of competing faiths and social institutions in the early 19th century as evidence of social upheaval and found confirmation in the rioting and violence that characterized Jacksonian America.\" Smith wrote in 1842 that earthly governments \"have failed in all their attempts to promote eternal peace and happiness....  is rent, from center to circumference, with party strife, political intrigues, and sectional interest.\"",
+            "wiki"
+          ],
+          [
+            "I define a totalitarian state as one with a system of government that is unlimited,  constitutionally or by countervailing powers in society (such as by a Church, rural gentry, labor unions, or regional powers); is not held responsible to the public by periodic secret and competitive elections; and employs its unlimited power to control all aspects of society, including the family, religion, education, business, private property, and social relationships.",
+            "wiki"
+          ],
+          [
+            "Franco was portrayed as a fervent Catholic and a staunch defender of Catholicism, the declared state religion.",
+            "wiki"
+          ]
+        ]
+      },
+      "theocracy": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The common, generic use of the term, as defined above in terms of rule by a church or analogous religious leadership, may be more accurately described as an ecclesiocracy.",
+            "wiki"
+          ],
+          [
+            "In an ecclesiocracy, the religious leaders assume a leading role in the state, but do not claim that they are instruments of divine revelation.",
+            "wiki"
+          ],
+          [
+            "A related phenomenon is a secular government co-existing with a state religion or delegating some aspects of civil law to religious communities.",
+            "wiki"
+          ],
+          [
+            "For example, in Israel, marriage is governed by officially recognized religious bodies who each provide marriage services for their respected adherents, yet no form of civil marriage (free of religion) exists, nor marriage by non-recognized minority religions.",
+            "wiki"
+          ],
+          [
+            "In the Basic Law of Saudi Arabia, Saudi Arabia defines itself as a sovereign Arab Islamic state with Islam as its official religion.",
+            "wiki"
+          ],
+          [
+            "Religious minorities do not have the right to practice their religion openly.",
+            "wiki"
+          ],
+          [
+            "Conversion from Islam to another religion is punishable by death as apostasy.",
+            "wiki"
+          ],
+          [
+            "Having a state religion is not sufficient to mean that a state is a theocracy in the narrow sense of the term.",
+            "wiki"
+          ],
+          [
+            "Many countries have a state religion without the government directly deriving its powers from a divine authority or a religious authority which is directly exercising governmental powers.",
+            "wiki"
+          ],
+          [
+            "Since few theocracies exist in the modern world, the word \"theocracy\" is now used as a descriptive term for a government which enforces a state religion.",
+            "wiki"
+          ],
+          [
+            "During the Achaemenid Empire (550 to 330 BCE), Zoroastrianism functioned as the state religion, with  formalized worship.",
+            "wiki"
+          ],
+          [
+            "The church controlled education and healthcare, books and films were censored, drive-in movie theatres were illegal, religion had strong influence over civil law (for example, only churches could conduct marriages, and divorce was banned), and Jehovah's Witnesses were persecuted.",
+            "wiki"
+          ],
+          [
+            "During the Sassanid period (224 to 651 CE), the Zoroastrian calendar was reformed, image-use in worship was banned, Fire Temples were increasingly built, and intolerance towards other faiths prevailed.",
+            "wiki"
+          ],
+          [
+            "Muhammad Al-Atawneh describes the current Saudi regime as a \u2018theo-monarchy, that draws power from long-standing religio-cultural norms.'",
+            "wiki"
+          ],
+          [
+            "The Taliban sought to establish law and order and to impose a strict interpretation of Islamic Sharia law, along with the religious edicts of Mullah Mohammed Omar, upon the entire country of Afghanistan.",
+            "wiki"
+          ],
+          [
+            "During the five-year history of the Islamic Emirate, the Taliban regime interpreted the Sharia in accordance with the Hanafi school of Islamic jurisprudence and the religious edicts of Mullah Omar.",
+            "wiki"
+          ],
+          [
+            "Even after the fall of Qin in 206 BCE, an emperor's words were considered sacred edicts (\u8056\u65e8) and his written proclamations \"directives from above\" (\u4e0a\u8aed).",
+            "wiki"
+          ],
+          [
+            "Theocracy is a form of government in which one or more deities are recognized as supreme ruling authorities, giving divine guidance to human intermediaries who manage the government's daily affairs.",
+            "wiki"
+          ],
+          [
+            "The word theocracy originates from the Greek: \u03b8\u03b5\u03bf\u03ba\u03c1\u03b1\u03c4\u03af\u03b1 (theocratia) meaning \"the rule of God\".",
+            "wiki"
+          ],
+          [
+            "Josephus offered the term theocracy to describe this polity in which a god was sovereign and the god's word was law.",
+            "wiki"
+          ],
+          [
+            "The term theocracy derives from the Koine Greek \u03b8\u03b5\u03bf\u03ba\u03c1\u03b1\u03c4\u03af\u03b1, \"rule of God\", a term used by Josephus for the kingdoms of Israel and Judah, reflecting the view that \"God himself is recognized as the head\" of the state.",
+            "wiki"
+          ],
+          [
+            "According to Merriam-Webster's Dictionary, there are two meanings for the word theocracy: (1) government of a state by immediate divine guidance or by officials who are regarded as divinely guided; and (2) a state governed by a theocracy.",
+            "wiki"
+          ],
+          [
+            "Afghanistan was an Islamic theocracy when the Taliban first ruled Afghanistan from 1996 to 2001 and since their reinstatement of the Islamic Emirate of Afghanistan in 2021, Afghanistan is an Islamic theocracy again.",
+            "wiki"
+          ],
+          [
+            "However, some critiques describe Saudi Arabia as an Islamic theocracy.",
+            "wiki"
+          ],
+          [
+            "Having a state religion is not sufficient to mean that a state is a theocracy in the narrow sense of the term.",
+            "wiki"
+          ],
+          [
+            "Since few theocracies exist in the modern world, the word \"theocracy\" is now used as a descriptive term for a government which enforces a state religion.",
+            "wiki"
+          ],
+          [
+            "The Shang dynasty (c.\u20091600 BCE to c.\u20091045 BCE) essentially functioned as a theocracy, declaring the ruling family the sons of heaven and calling the chief sky god Shangdi after a word for their deceased ancestors.",
+            "wiki"
+          ],
+          [
+            "The Heavenly Kingdom of Great Peace (1851 to 1864) in Qing China was a heterodox Christian theocracy led by Hong Xiuquan, who portrayed himself as the younger brother of Jesus Christ.",
+            "wiki"
+          ],
+          [
+            "Jennifer Fretland VanVoorst argues that \"the Byzantine Empire became a theocracy in the sense that Christian values and ideals were the foundation of the empire's political ideals and heavily entwined with its political goals\".",
+            "wiki"
+          ],
+          [
+            "Steven Runciman writes in his book The Byzantine Theocracy (2004):",
+            "wiki"
+          ],
+          [
+            "Historians debate the extent to which Geneva, Switzerland, in the days of John Calvin (1509\u201364) was a theocracy.",
+            "wiki"
+          ],
+          [
+            "In nearby Z\u00fcrich, Switzerland, Protestant reformer Huldrych Zwingli (1484\u20131531) built a political system that many scholars have called a theocracy, while others have denied it.",
+            "wiki"
+          ],
+          [
+            "The question of theocracy has been debated extensively by historians regarding the  Latter-Day Saint communities in Illinois and (especially) in Utah.",
+            "wiki"
+          ],
+          [
+            "This original organization, based upon Joseph Smith's  concept of theodemocracy, instituted a governmental system combining biblical theocracy with mid-19th-century American political ideals.",
+            "wiki"
+          ],
+          [
+            "The short rule (1494\u20131498) of Girolamo Savonarola, a  Dominican priest, over the city of Florence had features of a theocracy.",
+            "wiki"
+          ],
+          [
+            "Quebec under the premiership of Maurice Duplessis (1936-1939 and 1944-1959) had attributes of a Roman Catholic theocracy.",
+            "wiki"
+          ],
+          [
+            "This theocracy ended in 1960 with the beginning of the Quiet Revolution (1960-1966).",
+            "wiki"
+          ],
+          [
+            "It emerged from the Eparchy of Cetinje, later known as the Metropolitanate of Montenegro and the Littoral, whose bishops defied the Ottoman Empire overlordship and transformed the parish of Cetinje into a de facto theocracy, ruling it as Metropolitans (Vladike, also known as prince-bishops).",
+            "wiki"
+          ],
+          [
+            "Theocracy is a form of government in which God or a deity is recognized as the supreme civil ruler.",
+            "wiki"
+          ],
+          [
+            "Hill, \"the Latter-day Saints saw the maelstrom of competing faiths and social institutions in the early 19th century as evidence of social upheaval and found confirmation in the rioting and violence that characterized Jacksonian America.\" Smith wrote in 1842 that earthly governments \"have failed in all their attempts to promote eternal peace and happiness....  is rent, from center to circumference, with party strife, political intrigues, and sectional interest.\"",
+            "wiki"
+          ],
+          [
+            "In 1859, Church President Brigham Young equated the terms \"republican theocracy\" and \"democratic theocracy\" and expressed his understanding of them when he taught, \"The kingdom that the Almighty will set up in the latter days will have its officers, and those officers will be peace.",
+            "wiki"
+          ],
+          [
+            "However, later critics labeled the town a \"theocracy,\" mostly because of the position of many church leaders, including Smith, as elected city officials.",
+            "wiki"
+          ],
+          [
+            "Some critics  see theonomy as a significant form of dominion theology, which they define as a type of theocracy.",
+            "wiki"
+          ],
+          [
+            "I define a totalitarian state as one with a system of government that is unlimited,  constitutionally or by countervailing powers in society (such as by a Church, rural gentry, labor unions, or regional powers); is not held responsible to the public by periodic secret and competitive elections; and employs its unlimited power to control all aspects of society, including the family, religion, education, business, private property, and social relationships.",
+            "wiki"
+          ],
+          [
+            "Franco was portrayed as a fervent Catholic and a staunch defender of Catholicism, the declared state religion.",
+            "wiki"
+          ]
+        ]
+      }
+    },
+    "category_shared_scrap_area": [
+      {
+        "source_tag": "wiki",
+        "scrap_area_type": "wiki_urls",
+        "scrap_area_specification": [
+          "https://en.wikipedia.org/wiki/Theocracy",
+          "https://en.wikipedia.org/wiki/Theocracy_(disambiguation)",
+          "https://en.wikipedia.org/wiki/Theodemocracy",
+          "https://en.wikipedia.org/wiki/Theonomy",
+          "https://en.wikipedia.org/wiki/Totalitarianism",
+          "https://en.wikipedia.org/wiki/Template:Religion_and_politics"
+        ]
+      }
+    ]
+  }
+]
