@@ -492,6 +492,8 @@ class abcData:
                 default_path = os.path.join('data', 'customized', self.data_tier)
                 os.makedirs(default_path, exist_ok=True)
                 file_path = os.path.join(default_path, file_name)
+            #Creates directory if file_path doesn't exist.
+            os.makedirs(os.path.dirname(file_path), exist_ok=True)
             with open(file_path, 'w') as f:
                 json.dump(self.data, f, indent=2)
             print(f"Data saved to {file_path}")

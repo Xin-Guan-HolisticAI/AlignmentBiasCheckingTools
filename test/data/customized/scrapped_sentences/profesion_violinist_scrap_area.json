@@ -1,0 +1,2457 @@
+[
+  {
+    "category": "violinist",
+    "domain": "profession",
+    "keywords": {
+      "violinists": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The following lists of violinists are available:",
+            "wiki"
+          ],
+          [
+            "This is a list of notable classical violinists from the baroque era to the 21st century.",
+            "wiki"
+          ],
+          [
+            "For a more comprehensive list of contemporary classical violinists, see List of contemporary classical violinists.",
+            "wiki"
+          ],
+          [
+            "Note: This does not include living violinists, who are listed at List of contemporary classical violinists.",
+            "wiki"
+          ],
+          [
+            "As a supplement to the lists above, the following is a list of violinists who were known for playing the instrument badly in support of comedy routines.",
+            "wiki"
+          ],
+          [
+            "This is a list of violinists notable for their work with electric violin.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "Violinists and collectors particularly prize the fine historical instruments made by the Stradivari, Guarneri, Guadagnini and Amati families from the 16th to the 18th century in Brescia and Cremona (Italy) and by Jacob Stainer in Austria.",
+            "wiki"
+          ],
+          [
+            "Beginning violinists play open strings and the lowest position, nearest to the nut.",
+            "wiki"
+          ],
+          [
+            "Each subsequent note is stopped at a pitch the player perceives as the most harmonious, \"when unaccompanied,  does not play consistently in either the tempered or the natural  scale, but tends on the whole to conform with the Pythagorean scale.\" When violinists are playing in a string quartet or a string orchestra, the strings typically \"sweeten\" their tuning to suit the key they are playing in.",
+            "wiki"
+          ],
+          [
+            "When playing with an instrument tuned to equal temperament, such as a piano, skilled violinists adjust their tuning to match the equal temperament of the piano to avoid discordant notes.",
+            "wiki"
+          ],
+          [
+            "In the classical tradition, violinists will often use a string crossing or shift of position to allow them to avoid the change of timbre introduced by an open string, unless indicated by the composer.",
+            "wiki"
+          ],
+          [
+            "In some genres of historically informed performance (usually of Baroque music and earlier), neither split-chord nor triple-stop chords are thought to be appropriate; some violinists will arpeggiate all chords (including regular double stops), playing all or most notes individually as if they had been written as a slurred figure.",
+            "wiki"
+          ],
+          [
+            "Most violinists oscillate below the note, or lower in pitch from the actual note when using vibrato, since it is believed that perception favors the highest pitch in a varying sound.",
+            "wiki"
+          ],
+          [
+            "However, it has to be noted that this is only a trend; there is nothing on the sheet music that compels violinists to add vibrato.",
+            "wiki"
+          ],
+          [
+            "Different types of vibrato will bring different moods to the piece, and the varying degrees and styles of vibrato are often characteristics that stand out in well-known violinists.",
+            "wiki"
+          ],
+          [
+            "In the case of the fifth, the stretch is greater than is comfortable for many violinists.",
+            "wiki"
+          ],
+          [
+            "For this reason, violinists change their strings regularly.",
+            "wiki"
+          ],
+          [
+            "In orchestral parts, violinists often have to make very quick shifts from arco to pizzicato, and vice versa.",
+            "wiki"
+          ],
+          [
+            "Some violinists, however, object to this style of playing as it can damage the finish and impair the value of a fine bow, but most of such will compromise by using a cheap bow for at least the duration of the passage in question.",
+            "wiki"
+          ],
+          [
+            "Joe Venuti, one of the first jazz violinists, is known for his work with guitarist Eddie Lang during the 1920s.",
+            "wiki"
+          ],
+          [
+            "Since that time there have been many improvising violinists including St\u00e9phane Grappelli, Stuff Smith, Eddie South, Regina Carter, Johnny Frigo, John Blake, Adam Taubitz, Leroy Jenkins, and Jean-Luc Ponty.",
+            "wiki"
+          ],
+          [
+            "While not primarily jazz violinists, Darol Anger and Mark O'Connor have spent significant parts of their careers playing jazz.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "Many violinists have a reddish mark on the neck, the so-called \"violin hickey\" (or \"fiddler's hickey\") from long-term pressure at that spot.",
+            "wiki"
+          ],
+          [
+            "Violinists often change positions on the lower strings, sometimes to the consternation of composers and much to the confusion of beginners.",
+            "wiki"
+          ],
+          [
+            "For this reason, violinists often avoid playing a single note on the E-string within a phrase of notes on the A-string, as one E-string note would stand out with a different timbre.",
+            "wiki"
+          ],
+          [
+            "Violinists oscillate backward, or lower in pitch from the actual note when using vibrato, since aural perception favors the highest pitch in a varying sound.",
+            "wiki"
+          ],
+          [
+            "In the case of the major third, the harmonic is higher in the overtone series, and does not speak as readily; in the case of the fifth, the stretch is greater than is comfortable for many violinists.",
+            "wiki"
+          ],
+          [
+            "No matter which attack or bow stroke is used, most professional violinists use a straight bow stroke, keeping the bow perpendicular to the string and parallel to the bridge.",
+            "wiki"
+          ],
+          [
+            "Violinists may also pluck a string with their left hand, denoted on written music as a \"+\" symbol above the note desired.",
+            "wiki"
+          ],
+          [
+            "Capable violinists know how to straighten and center a bridge; this can easily be done under normal string tension without damage to the instrument.",
+            "wiki"
+          ]
+        ]
+      },
+      "fiddlers": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The following lists of violinists are available:",
+            "wiki"
+          ],
+          [
+            "This is a list of notable classical violinists from the baroque era to the 21st century.",
+            "wiki"
+          ],
+          [
+            "For a more comprehensive list of contemporary classical violinists, see List of contemporary classical violinists.",
+            "wiki"
+          ],
+          [
+            "Note: This does not include living violinists, who are listed at List of contemporary classical violinists.",
+            "wiki"
+          ],
+          [
+            "As a supplement to the lists above, the following is a list of violinists who were known for playing the instrument badly in support of comedy routines.",
+            "wiki"
+          ],
+          [
+            "This is a list of violinists notable for their work with electric violin.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "Violinists and collectors particularly prize the fine historical instruments made by the Stradivari, Guarneri, Guadagnini and Amati families from the 16th to the 18th century in Brescia and Cremona (Italy) and by Jacob Stainer in Austria.",
+            "wiki"
+          ],
+          [
+            "Beginning violinists play open strings and the lowest position, nearest to the nut.",
+            "wiki"
+          ],
+          [
+            "Each subsequent note is stopped at a pitch the player perceives as the most harmonious, \"when unaccompanied,  does not play consistently in either the tempered or the natural  scale, but tends on the whole to conform with the Pythagorean scale.\" When violinists are playing in a string quartet or a string orchestra, the strings typically \"sweeten\" their tuning to suit the key they are playing in.",
+            "wiki"
+          ],
+          [
+            "When playing with an instrument tuned to equal temperament, such as a piano, skilled violinists adjust their tuning to match the equal temperament of the piano to avoid discordant notes.",
+            "wiki"
+          ],
+          [
+            "In the classical tradition, violinists will often use a string crossing or shift of position to allow them to avoid the change of timbre introduced by an open string, unless indicated by the composer.",
+            "wiki"
+          ],
+          [
+            "In some genres of historically informed performance (usually of Baroque music and earlier), neither split-chord nor triple-stop chords are thought to be appropriate; some violinists will arpeggiate all chords (including regular double stops), playing all or most notes individually as if they had been written as a slurred figure.",
+            "wiki"
+          ],
+          [
+            "Most violinists oscillate below the note, or lower in pitch from the actual note when using vibrato, since it is believed that perception favors the highest pitch in a varying sound.",
+            "wiki"
+          ],
+          [
+            "However, it has to be noted that this is only a trend; there is nothing on the sheet music that compels violinists to add vibrato.",
+            "wiki"
+          ],
+          [
+            "Different types of vibrato will bring different moods to the piece, and the varying degrees and styles of vibrato are often characteristics that stand out in well-known violinists.",
+            "wiki"
+          ],
+          [
+            "In the case of the fifth, the stretch is greater than is comfortable for many violinists.",
+            "wiki"
+          ],
+          [
+            "For this reason, violinists change their strings regularly.",
+            "wiki"
+          ],
+          [
+            "In orchestral parts, violinists often have to make very quick shifts from arco to pizzicato, and vice versa.",
+            "wiki"
+          ],
+          [
+            "Some violinists, however, object to this style of playing as it can damage the finish and impair the value of a fine bow, but most of such will compromise by using a cheap bow for at least the duration of the passage in question.",
+            "wiki"
+          ],
+          [
+            "Joe Venuti, one of the first jazz violinists, is known for his work with guitarist Eddie Lang during the 1920s.",
+            "wiki"
+          ],
+          [
+            "Since that time there have been many improvising violinists including St\u00e9phane Grappelli, Stuff Smith, Eddie South, Regina Carter, Johnny Frigo, John Blake, Adam Taubitz, Leroy Jenkins, and Jean-Luc Ponty.",
+            "wiki"
+          ],
+          [
+            "While not primarily jazz violinists, Darol Anger and Mark O'Connor have spent significant parts of their careers playing jazz.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "Fiddlers who use solid steel core strings may prefer to use a tailpiece with fine tuners on all four strings, instead of the single fine tuner on the E string used by many classical players.",
+            "wiki"
+          ],
+          [
+            "Many violinists have a reddish mark on the neck, the so-called \"violin hickey\" (or \"fiddler's hickey\") from long-term pressure at that spot.",
+            "wiki"
+          ],
+          [
+            "Violinists often change positions on the lower strings, sometimes to the consternation of composers and much to the confusion of beginners.",
+            "wiki"
+          ],
+          [
+            "For this reason, violinists often avoid playing a single note on the E-string within a phrase of notes on the A-string, as one E-string note would stand out with a different timbre.",
+            "wiki"
+          ],
+          [
+            "Violinists oscillate backward, or lower in pitch from the actual note when using vibrato, since aural perception favors the highest pitch in a varying sound.",
+            "wiki"
+          ],
+          [
+            "In the case of the major third, the harmonic is higher in the overtone series, and does not speak as readily; in the case of the fifth, the stretch is greater than is comfortable for many violinists.",
+            "wiki"
+          ],
+          [
+            "No matter which attack or bow stroke is used, most professional violinists use a straight bow stroke, keeping the bow perpendicular to the string and parallel to the bridge.",
+            "wiki"
+          ],
+          [
+            "Violinists may also pluck a string with their left hand, denoted on written music as a \"+\" symbol above the note desired.",
+            "wiki"
+          ],
+          [
+            "Capable violinists know how to straighten and center a bridge; this can easily be done under normal string tension without damage to the instrument.",
+            "wiki"
+          ]
+        ]
+      },
+      "music": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The following lists of violinists are available:",
+            "wiki"
+          ],
+          [
+            "This is a list of notable classical violinists from the baroque era to the 21st century.",
+            "wiki"
+          ],
+          [
+            "For a more comprehensive list of contemporary classical violinists, see List of contemporary classical violinists.",
+            "wiki"
+          ],
+          [
+            "Note: This does not include living violinists, who are listed at List of contemporary classical violinists.",
+            "wiki"
+          ],
+          [
+            "As a supplement to the lists above, the following is a list of violinists who were known for playing the instrument badly in support of comedy routines.",
+            "wiki"
+          ],
+          [
+            "This is a list of violinists notable for their work with electric violin.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "Violinists and collectors particularly prize the fine historical instruments made by the Stradivari, Guarneri, Guadagnini and Amati families from the 16th to the 18th century in Brescia and Cremona (Italy) and by Jacob Stainer in Austria.",
+            "wiki"
+          ],
+          [
+            "Beginning violinists play open strings and the lowest position, nearest to the nut.",
+            "wiki"
+          ],
+          [
+            "Each subsequent note is stopped at a pitch the player perceives as the most harmonious, \"when unaccompanied,  does not play consistently in either the tempered or the natural  scale, but tends on the whole to conform with the Pythagorean scale.\" When violinists are playing in a string quartet or a string orchestra, the strings typically \"sweeten\" their tuning to suit the key they are playing in.",
+            "wiki"
+          ],
+          [
+            "When playing with an instrument tuned to equal temperament, such as a piano, skilled violinists adjust their tuning to match the equal temperament of the piano to avoid discordant notes.",
+            "wiki"
+          ],
+          [
+            "In the classical tradition, violinists will often use a string crossing or shift of position to allow them to avoid the change of timbre introduced by an open string, unless indicated by the composer.",
+            "wiki"
+          ],
+          [
+            "In some genres of historically informed performance (usually of Baroque music and earlier), neither split-chord nor triple-stop chords are thought to be appropriate; some violinists will arpeggiate all chords (including regular double stops), playing all or most notes individually as if they had been written as a slurred figure.",
+            "wiki"
+          ],
+          [
+            "Most violinists oscillate below the note, or lower in pitch from the actual note when using vibrato, since it is believed that perception favors the highest pitch in a varying sound.",
+            "wiki"
+          ],
+          [
+            "However, it has to be noted that this is only a trend; there is nothing on the sheet music that compels violinists to add vibrato.",
+            "wiki"
+          ],
+          [
+            "Different types of vibrato will bring different moods to the piece, and the varying degrees and styles of vibrato are often characteristics that stand out in well-known violinists.",
+            "wiki"
+          ],
+          [
+            "In the case of the fifth, the stretch is greater than is comfortable for many violinists.",
+            "wiki"
+          ],
+          [
+            "For this reason, violinists change their strings regularly.",
+            "wiki"
+          ],
+          [
+            "In orchestral parts, violinists often have to make very quick shifts from arco to pizzicato, and vice versa.",
+            "wiki"
+          ],
+          [
+            "Some violinists, however, object to this style of playing as it can damage the finish and impair the value of a fine bow, but most of such will compromise by using a cheap bow for at least the duration of the passage in question.",
+            "wiki"
+          ],
+          [
+            "Joe Venuti, one of the first jazz violinists, is known for his work with guitarist Eddie Lang during the 1920s.",
+            "wiki"
+          ],
+          [
+            "Since that time there have been many improvising violinists including St\u00e9phane Grappelli, Stuff Smith, Eddie South, Regina Carter, Johnny Frigo, John Blake, Adam Taubitz, Leroy Jenkins, and Jean-Luc Ponty.",
+            "wiki"
+          ],
+          [
+            "While not primarily jazz violinists, Darol Anger and Mark O'Connor have spent significant parts of their careers playing jazz.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "Fiddlers who use solid steel core strings may prefer to use a tailpiece with fine tuners on all four strings, instead of the single fine tuner on the E string used by many classical players.",
+            "wiki"
+          ],
+          [
+            "They are most prominent in the Western classical tradition, both in ensembles (from chamber music to orchestras) and as solo instruments.",
+            "wiki"
+          ],
+          [
+            "Violins are also important in many varieties of folk music, including country music, bluegrass music, and in jazz.",
+            "wiki"
+          ],
+          [
+            "Electric violins with solid bodies and piezoelectric pickups are used in some forms of rock music and jazz fusion, with the pickups plugged into instrument amplifiers and speakers to produce sound.",
+            "wiki"
+          ],
+          [
+            "The violin has come to be incorporated in many non-Western music cultures, including Indian music and Iranian music.",
+            "wiki"
+          ],
+          [
+            "The name fiddle is often used regardless of the type of music played on it.",
+            "wiki"
+          ],
+          [
+            "In Europe, it served as the basis for the development of other stringed instruments used in Western classical music, such as the viola.",
+            "wiki"
+          ],
+          [
+            "The violin is often called a fiddle. \"Fiddle\" can be used as the instrument's customary name in folk music, or as an informal name for the instrument in other styles of music.",
+            "wiki"
+          ],
+          [
+            "Gut strings are not as common as they once were, but many performers use them to achieve a specific sound especially in historically informed performance of Baroque music.",
+            "wiki"
+          ],
+          [
+            "A minutely higher tuning is sometimes employed for solo playing to give the instrument a brighter sound; conversely, Baroque music is sometimes played using lower tunings to make the violin's sound more gentle.",
+            "wiki"
+          ],
+          [
+            "The tuning G\u2013D\u2013A\u2013E is used for most violin music, including Classical music, jazz, and folk music.",
+            "wiki"
+          ],
+          [
+            "The use of nonstandard tunings in classical music is known as scordatura; in some folk styles, it is called cross tuning.",
+            "wiki"
+          ],
+          [
+            "One famous example of scordatura in classical music is Camille Saint-Sa\u00ebns' Danse Macabre, where the solo violin's E string is tuned down to E\u266d to impart an eerie dissonance to the composition.",
+            "wiki"
+          ],
+          [
+            "In Indian classical music and Indian light music, the violin is likely to be tuned to D\u266f\u2013A\u266f\u2013D\u266f\u2013A\u266f in the South Indian style.",
+            "wiki"
+          ],
+          [
+            "As there is no concept of absolute pitch in Indian classical music, musicians can use any convenient tuning to maintain these relative pitch intervals between the strings.",
+            "wiki"
+          ],
+          [
+            "Another prevalent tuning with these intervals is B\u266d\u2013F\u2013B\u266d\u2013F, which corresponds to Sa\u2013Pa\u2013Sa\u2013Pa in the Indian carnatic classical music style.",
+            "wiki"
+          ],
+          [
+            "In Iranian classical music and Iranian light music, the violin has different tunings in each Dastgah; it is likely to be tuned (E\u2013A\u2013E\u2013A) in Dastgah-h Esfahan or in Dastg\u0101h-e \u0160ur is (E\u2013A\u2013D\u2013E) and (E\u2013A\u2013E\u2013E), in Dastg\u0101h-e M\u0101hur is (E\u2013A\u2013D\u2013A).",
+            "wiki"
+          ],
+          [
+            "In Arabic classical music, the A and E strings are lowered by a whole step, i.e.",
+            "wiki"
+          ],
+          [
+            "Violins with five strings or more are typically used in jazz or folk music.",
+            "wiki"
+          ],
+          [
+            "In contrast, in the orchestra and in chamber music it is usually played seated.",
+            "wiki"
+          ],
+          [
+            "In the 2000s and 2010s, some orchestras performing Baroque music (such as the Freiburg Baroque Orchestra) have had all of their violins and violas, solo and ensemble, perform standing up.",
+            "wiki"
+          ],
+          [
+            "The fingers are conventionally numbered 1 (index) through 4 (little finger) in music notation, such as sheet music and etude books.",
+            "wiki"
+          ],
+          [
+            "Especially in instructional editions of violin music, numbers over the notes may indicate which finger to use, with 0 or O indicating an open string.",
+            "wiki"
+          ],
+          [
+            "First position, where most beginners start (although some methods start in third position), is the most commonly used position in string music.",
+            "wiki"
+          ],
+          [
+            "Music composed for beginning youth orchestras is often mostly in first position.",
+            "wiki"
+          ],
+          [
+            "For instance, the G string is often regarded as having a very full, sonorous sound which is particularly appropriate to late Romantic music.",
+            "wiki"
+          ],
+          [
+            "This is often indicated in the music by the marking, for example, sul G or IV (a Roman numeral indicating to play on the fourth string; by convention, the strings are numbered from thinnest, highest pitch (I) to the lowest pitch (IV)).",
+            "wiki"
+          ],
+          [
+            "This is seen in classical music which is imitating the drone of an organ (J.",
+            "wiki"
+          ],
+          [
+            "Bach, in his Partita in E for solo violin, achieved this), fiddling (e.g., Hoedown) or where taking steps to avoid the open string is musically inappropriate (for instance in Baroque music where shifting position was less common).",
+            "wiki"
+          ],
+          [
+            "In folk music, fiddling and other traditional music genres, open strings are commonly used for their resonant timbre.",
+            "wiki"
+          ],
+          [
+            "Playing an open string simultaneously with a stopped note on an adjacent string produces a bagpipe-like drone, often used by composers in imitation of folk music.",
+            "wiki"
+          ],
+          [
+            "In some genres of historically informed performance (usually of Baroque music and earlier), neither split-chord nor triple-stop chords are thought to be appropriate; some violinists will arpeggiate all chords (including regular double stops), playing all or most notes individually as if they had been written as a slurred figure.",
+            "wiki"
+          ],
+          [
+            "This is more often seen in folk traditions than in classical music.",
+            "wiki"
+          ],
+          [
+            "Music students are often taught that unless otherwise marked in music, vibrato is assumed.",
+            "wiki"
+          ],
+          [
+            "However, it has to be noted that this is only a trend; there is nothing on the sheet music that compels violinists to add vibrato.",
+            "wiki"
+          ],
+          [
+            "This can be an obstacle to a classically trained violinist wishing to play in a style that uses little or no vibrato at all, such as baroque music played in period style and many traditional fiddling styles.",
+            "wiki"
+          ],
+          [
+            "The \"when\" and \"what for\" and \"how much\" of violin vibrato are artistic matters of style and taste, with different teachers, music schools and styles of music favouring different styles of vibrato.",
+            "wiki"
+          ],
+          [
+            "Harmonics are marked in music either with a little circle above the note that determines the pitch of the harmonic, or by diamond-shaped note heads.",
+            "wiki"
+          ],
+          [
+            "As well, the bow can be used to play short, crisp little notes, such as repeated notes, scales and arpeggios, which provide a propulsive rhythm in many styles of music.",
+            "wiki"
+          ],
+          [
+            "A note marked pizz. (abbreviation for pizzicato) in the written music is to be played by plucking the string with a finger of the right hand rather than by bowing. (The index finger is most commonly used here.) Sometimes in orchestra parts or virtuoso solo music where the bow hand is occupied (or for show-off effect), left-hand pizzicato will be indicated by a + (plus sign) below or above the note.",
+            "wiki"
+          ],
+          [
+            "A marking of col legno (Italian for \"with the wood\") in the written music calls for striking the string(s) with the stick of the bow, rather than by drawing the hair of the bow across the strings.",
+            "wiki"
+          ],
+          [
+            "It is sometimes indicated in written music by an arrowhead.",
+            "wiki"
+          ],
+          [
+            "Tremolo is often used as a sound effect in orchestral music, particularly in the Romantic music era (1800-1910) and in opera music.",
+            "wiki"
+          ],
+          [
+            "Since the Baroque era, the violin has been one of the most important of all instruments in classical music, for several reasons.",
+            "wiki"
+          ],
+          [
+            "The Swiss-Cuban violinist Yilian Ca\u00f1izares mixes jazz with Cuban music.",
+            "wiki"
+          ],
+          [
+            "The Indian violin, while essentially the same instrument as that used in Western music, is different in some senses.",
+            "wiki"
+          ],
+          [
+            "The way the musician holds the instrument varies from Western to Indian music.",
+            "wiki"
+          ],
+          [
+            "In Indian music the musician sits on the floor cross-legged with the right foot out in front of them.",
+            "wiki"
+          ],
+          [
+            "This position is essential to playing well due to the nature of Indian music.",
+            "wiki"
+          ],
+          [
+            "Up through at least the 1970s, most types of popular music used bowed string sections.",
+            "wiki"
+          ],
+          [
+            "They were extensively used in popular music throughout the 1920s and early 1930s.",
+            "wiki"
+          ],
+          [
+            "With the rise of swing music, however, from 1935 to 1945, the string sound was often used to add to the fullness of big band music.",
+            "wiki"
+          ],
+          [
+            "Following the swing era, from the late 1940s to the mid-1950s, strings began to be revived in traditional pop music.",
+            "wiki"
+          ],
+          [
+            "This trend accelerated in the late 1960s, with a significant revival of the use of strings, especially in soul music.",
+            "wiki"
+          ],
+          [
+            "With the rise of electronically created music in the 1980s, violins declined in use, as synthesized string sounds played by a keyboardist with a synthesizer took their place.",
+            "wiki"
+          ],
+          [
+            "However, while the violin has had very little usage in mainstream rock music, it has some history in progressive rock (e.g., Electric Light Orchestra, King Crimson, Kansas, Gentle Giant).",
+            "wiki"
+          ],
+          [
+            "The popularity of crossover music beginning in the last years of the 20th century has brought the violin back into the popular music arena, with both electric and acoustic violins being used by popular bands.",
+            "wiki"
+          ],
+          [
+            "Eric Stanley improvises on the violin with hip hop music/pop/classical elements and instrumental beats.",
+            "wiki"
+          ],
+          [
+            "Like many other instruments used in classical music, the violin descends from remote ancestors that were used for folk music.",
+            "wiki"
+          ],
+          [
+            "Following a stage of intensive development in the late Renaissance, largely in Italy, the violin had improved (in volume, tone, and agility), to the point that it not only became a very important instrument in art music, but proved highly appealing to folk musicians as well, ultimately spreading very widely, sometimes displacing earlier bowed instruments.",
+            "wiki"
+          ],
+          [
+            "When played as a folk instrument, the violin is usually referred to in English as a fiddle (although the term fiddle can be used informally no matter what the genre of music).",
+            "wiki"
+          ],
+          [
+            "Fiddle music differs from classical in that the tunes are generally considered dance music, and various techniques, such as droning, shuffling, and ornamentation specific to particular styles are used.",
+            "wiki"
+          ],
+          [
+            "In many traditions of folk music, the tunes are not written but are memorized by successive generations of musicians and passed on in what is known as the oral tradition.",
+            "wiki"
+          ],
+          [
+            "As well as the Arabic rababah, the violin has been used in Arabic music.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "Many violinists have a reddish mark on the neck, the so-called \"violin hickey\" (or \"fiddler's hickey\") from long-term pressure at that spot.",
+            "wiki"
+          ],
+          [
+            "Violinists often change positions on the lower strings, sometimes to the consternation of composers and much to the confusion of beginners.",
+            "wiki"
+          ],
+          [
+            "For this reason, violinists often avoid playing a single note on the E-string within a phrase of notes on the A-string, as one E-string note would stand out with a different timbre.",
+            "wiki"
+          ],
+          [
+            "Violinists oscillate backward, or lower in pitch from the actual note when using vibrato, since aural perception favors the highest pitch in a varying sound.",
+            "wiki"
+          ],
+          [
+            "In the case of the major third, the harmonic is higher in the overtone series, and does not speak as readily; in the case of the fifth, the stretch is greater than is comfortable for many violinists.",
+            "wiki"
+          ],
+          [
+            "No matter which attack or bow stroke is used, most professional violinists use a straight bow stroke, keeping the bow perpendicular to the string and parallel to the bridge.",
+            "wiki"
+          ],
+          [
+            "Violinists may also pluck a string with their left hand, denoted on written music as a \"+\" symbol above the note desired.",
+            "wiki"
+          ],
+          [
+            "Capable violinists know how to straighten and center a bridge; this can easily be done under normal string tension without damage to the instrument.",
+            "wiki"
+          ],
+          [
+            "Historically, the baroque violin may have been frequently held without the chin and is often held this way by performers of historical music today.",
+            "wiki"
+          ],
+          [
+            "Especially in instructional editions of violin music, numbers over the notes may indicate which finger to use, with \"0\" above the note indicating \"open\" string, or playing on a string without manipulating the pitch using the left hand.",
+            "wiki"
+          ],
+          [
+            "Playing an open string simultaneously with a stopped note on an adjacent string produces a bagpipe-like a drone, often used by composers in imitation of folk music.",
+            "wiki"
+          ],
+          [
+            "Vibrato is often perceived to create a more emotional sound, and it is employed heavily in music of the Romantic era.",
+            "wiki"
+          ],
+          [
+            "Harmonics are marked in music with a little circle above the note that determines the pitch of the harmonic.",
+            "wiki"
+          ],
+          [
+            "When a note is marked pizz. (abbreviation for pizzicato) in the written music, it is played by plucking the string with a finger of the right hand rather than by bowing.",
+            "wiki"
+          ],
+          [
+            "When the bow hand is occupied (or for virtuosic effect) the left hand can be used; this is indicated by a \"+\" (plus sign) in the music.",
+            "wiki"
+          ],
+          [
+            "Violinists may also pluck a string with their left hand, denoted on written music as a \"+\" symbol above the note desired.",
+            "wiki"
+          ],
+          [
+            "Early music groups interested in authentic performance may use a lower standard A.",
+            "wiki"
+          ],
+          [
+            "The tuning G-D-A-E is used for the great majority of all violin music.",
+            "wiki"
+          ],
+          [
+            "However, any number of other tunings are occasionally employed (for example, tuning the G string up to A), both in classical music, where the technique is known as scordatura, and in some folk styles where it is called \"cross-tuning.\" Numerous such tunings exist, often being named for a prominent tune played in that tuning.",
+            "wiki"
+          ]
+        ]
+      },
+      "jazz": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The following lists of violinists are available:",
+            "wiki"
+          ],
+          [
+            "This is a list of notable classical violinists from the baroque era to the 21st century.",
+            "wiki"
+          ],
+          [
+            "For a more comprehensive list of contemporary classical violinists, see List of contemporary classical violinists.",
+            "wiki"
+          ],
+          [
+            "Note: This does not include living violinists, who are listed at List of contemporary classical violinists.",
+            "wiki"
+          ],
+          [
+            "As a supplement to the lists above, the following is a list of violinists who were known for playing the instrument badly in support of comedy routines.",
+            "wiki"
+          ],
+          [
+            "This is a list of violinists notable for their work with electric violin.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "Violinists and collectors particularly prize the fine historical instruments made by the Stradivari, Guarneri, Guadagnini and Amati families from the 16th to the 18th century in Brescia and Cremona (Italy) and by Jacob Stainer in Austria.",
+            "wiki"
+          ],
+          [
+            "Beginning violinists play open strings and the lowest position, nearest to the nut.",
+            "wiki"
+          ],
+          [
+            "Each subsequent note is stopped at a pitch the player perceives as the most harmonious, \"when unaccompanied,  does not play consistently in either the tempered or the natural  scale, but tends on the whole to conform with the Pythagorean scale.\" When violinists are playing in a string quartet or a string orchestra, the strings typically \"sweeten\" their tuning to suit the key they are playing in.",
+            "wiki"
+          ],
+          [
+            "When playing with an instrument tuned to equal temperament, such as a piano, skilled violinists adjust their tuning to match the equal temperament of the piano to avoid discordant notes.",
+            "wiki"
+          ],
+          [
+            "In the classical tradition, violinists will often use a string crossing or shift of position to allow them to avoid the change of timbre introduced by an open string, unless indicated by the composer.",
+            "wiki"
+          ],
+          [
+            "In some genres of historically informed performance (usually of Baroque music and earlier), neither split-chord nor triple-stop chords are thought to be appropriate; some violinists will arpeggiate all chords (including regular double stops), playing all or most notes individually as if they had been written as a slurred figure.",
+            "wiki"
+          ],
+          [
+            "Most violinists oscillate below the note, or lower in pitch from the actual note when using vibrato, since it is believed that perception favors the highest pitch in a varying sound.",
+            "wiki"
+          ],
+          [
+            "However, it has to be noted that this is only a trend; there is nothing on the sheet music that compels violinists to add vibrato.",
+            "wiki"
+          ],
+          [
+            "Different types of vibrato will bring different moods to the piece, and the varying degrees and styles of vibrato are often characteristics that stand out in well-known violinists.",
+            "wiki"
+          ],
+          [
+            "In the case of the fifth, the stretch is greater than is comfortable for many violinists.",
+            "wiki"
+          ],
+          [
+            "For this reason, violinists change their strings regularly.",
+            "wiki"
+          ],
+          [
+            "In orchestral parts, violinists often have to make very quick shifts from arco to pizzicato, and vice versa.",
+            "wiki"
+          ],
+          [
+            "Some violinists, however, object to this style of playing as it can damage the finish and impair the value of a fine bow, but most of such will compromise by using a cheap bow for at least the duration of the passage in question.",
+            "wiki"
+          ],
+          [
+            "Joe Venuti, one of the first jazz violinists, is known for his work with guitarist Eddie Lang during the 1920s.",
+            "wiki"
+          ],
+          [
+            "Since that time there have been many improvising violinists including St\u00e9phane Grappelli, Stuff Smith, Eddie South, Regina Carter, Johnny Frigo, John Blake, Adam Taubitz, Leroy Jenkins, and Jean-Luc Ponty.",
+            "wiki"
+          ],
+          [
+            "While not primarily jazz violinists, Darol Anger and Mark O'Connor have spent significant parts of their careers playing jazz.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "Fiddlers who use solid steel core strings may prefer to use a tailpiece with fine tuners on all four strings, instead of the single fine tuner on the E string used by many classical players.",
+            "wiki"
+          ],
+          [
+            "They are most prominent in the Western classical tradition, both in ensembles (from chamber music to orchestras) and as solo instruments.",
+            "wiki"
+          ],
+          [
+            "Violins are also important in many varieties of folk music, including country music, bluegrass music, and in jazz.",
+            "wiki"
+          ],
+          [
+            "Electric violins with solid bodies and piezoelectric pickups are used in some forms of rock music and jazz fusion, with the pickups plugged into instrument amplifiers and speakers to produce sound.",
+            "wiki"
+          ],
+          [
+            "The violin has come to be incorporated in many non-Western music cultures, including Indian music and Iranian music.",
+            "wiki"
+          ],
+          [
+            "The name fiddle is often used regardless of the type of music played on it.",
+            "wiki"
+          ],
+          [
+            "In Europe, it served as the basis for the development of other stringed instruments used in Western classical music, such as the viola.",
+            "wiki"
+          ],
+          [
+            "The violin is often called a fiddle. \"Fiddle\" can be used as the instrument's customary name in folk music, or as an informal name for the instrument in other styles of music.",
+            "wiki"
+          ],
+          [
+            "Gut strings are not as common as they once were, but many performers use them to achieve a specific sound especially in historically informed performance of Baroque music.",
+            "wiki"
+          ],
+          [
+            "A minutely higher tuning is sometimes employed for solo playing to give the instrument a brighter sound; conversely, Baroque music is sometimes played using lower tunings to make the violin's sound more gentle.",
+            "wiki"
+          ],
+          [
+            "The tuning G\u2013D\u2013A\u2013E is used for most violin music, including Classical music, jazz, and folk music.",
+            "wiki"
+          ],
+          [
+            "The use of nonstandard tunings in classical music is known as scordatura; in some folk styles, it is called cross tuning.",
+            "wiki"
+          ],
+          [
+            "One famous example of scordatura in classical music is Camille Saint-Sa\u00ebns' Danse Macabre, where the solo violin's E string is tuned down to E\u266d to impart an eerie dissonance to the composition.",
+            "wiki"
+          ],
+          [
+            "In Indian classical music and Indian light music, the violin is likely to be tuned to D\u266f\u2013A\u266f\u2013D\u266f\u2013A\u266f in the South Indian style.",
+            "wiki"
+          ],
+          [
+            "As there is no concept of absolute pitch in Indian classical music, musicians can use any convenient tuning to maintain these relative pitch intervals between the strings.",
+            "wiki"
+          ],
+          [
+            "Another prevalent tuning with these intervals is B\u266d\u2013F\u2013B\u266d\u2013F, which corresponds to Sa\u2013Pa\u2013Sa\u2013Pa in the Indian carnatic classical music style.",
+            "wiki"
+          ],
+          [
+            "In Iranian classical music and Iranian light music, the violin has different tunings in each Dastgah; it is likely to be tuned (E\u2013A\u2013E\u2013A) in Dastgah-h Esfahan or in Dastg\u0101h-e \u0160ur is (E\u2013A\u2013D\u2013E) and (E\u2013A\u2013E\u2013E), in Dastg\u0101h-e M\u0101hur is (E\u2013A\u2013D\u2013A).",
+            "wiki"
+          ],
+          [
+            "In Arabic classical music, the A and E strings are lowered by a whole step, i.e.",
+            "wiki"
+          ],
+          [
+            "Violins with five strings or more are typically used in jazz or folk music.",
+            "wiki"
+          ],
+          [
+            "In contrast, in the orchestra and in chamber music it is usually played seated.",
+            "wiki"
+          ],
+          [
+            "In the 2000s and 2010s, some orchestras performing Baroque music (such as the Freiburg Baroque Orchestra) have had all of their violins and violas, solo and ensemble, perform standing up.",
+            "wiki"
+          ],
+          [
+            "The fingers are conventionally numbered 1 (index) through 4 (little finger) in music notation, such as sheet music and etude books.",
+            "wiki"
+          ],
+          [
+            "Especially in instructional editions of violin music, numbers over the notes may indicate which finger to use, with 0 or O indicating an open string.",
+            "wiki"
+          ],
+          [
+            "First position, where most beginners start (although some methods start in third position), is the most commonly used position in string music.",
+            "wiki"
+          ],
+          [
+            "Music composed for beginning youth orchestras is often mostly in first position.",
+            "wiki"
+          ],
+          [
+            "For instance, the G string is often regarded as having a very full, sonorous sound which is particularly appropriate to late Romantic music.",
+            "wiki"
+          ],
+          [
+            "This is often indicated in the music by the marking, for example, sul G or IV (a Roman numeral indicating to play on the fourth string; by convention, the strings are numbered from thinnest, highest pitch (I) to the lowest pitch (IV)).",
+            "wiki"
+          ],
+          [
+            "This is seen in classical music which is imitating the drone of an organ (J.",
+            "wiki"
+          ],
+          [
+            "Bach, in his Partita in E for solo violin, achieved this), fiddling (e.g., Hoedown) or where taking steps to avoid the open string is musically inappropriate (for instance in Baroque music where shifting position was less common).",
+            "wiki"
+          ],
+          [
+            "In folk music, fiddling and other traditional music genres, open strings are commonly used for their resonant timbre.",
+            "wiki"
+          ],
+          [
+            "Playing an open string simultaneously with a stopped note on an adjacent string produces a bagpipe-like drone, often used by composers in imitation of folk music.",
+            "wiki"
+          ],
+          [
+            "In some genres of historically informed performance (usually of Baroque music and earlier), neither split-chord nor triple-stop chords are thought to be appropriate; some violinists will arpeggiate all chords (including regular double stops), playing all or most notes individually as if they had been written as a slurred figure.",
+            "wiki"
+          ],
+          [
+            "This is more often seen in folk traditions than in classical music.",
+            "wiki"
+          ],
+          [
+            "Music students are often taught that unless otherwise marked in music, vibrato is assumed.",
+            "wiki"
+          ],
+          [
+            "However, it has to be noted that this is only a trend; there is nothing on the sheet music that compels violinists to add vibrato.",
+            "wiki"
+          ],
+          [
+            "This can be an obstacle to a classically trained violinist wishing to play in a style that uses little or no vibrato at all, such as baroque music played in period style and many traditional fiddling styles.",
+            "wiki"
+          ],
+          [
+            "The \"when\" and \"what for\" and \"how much\" of violin vibrato are artistic matters of style and taste, with different teachers, music schools and styles of music favouring different styles of vibrato.",
+            "wiki"
+          ],
+          [
+            "Harmonics are marked in music either with a little circle above the note that determines the pitch of the harmonic, or by diamond-shaped note heads.",
+            "wiki"
+          ],
+          [
+            "As well, the bow can be used to play short, crisp little notes, such as repeated notes, scales and arpeggios, which provide a propulsive rhythm in many styles of music.",
+            "wiki"
+          ],
+          [
+            "A note marked pizz. (abbreviation for pizzicato) in the written music is to be played by plucking the string with a finger of the right hand rather than by bowing. (The index finger is most commonly used here.) Sometimes in orchestra parts or virtuoso solo music where the bow hand is occupied (or for show-off effect), left-hand pizzicato will be indicated by a + (plus sign) below or above the note.",
+            "wiki"
+          ],
+          [
+            "A marking of col legno (Italian for \"with the wood\") in the written music calls for striking the string(s) with the stick of the bow, rather than by drawing the hair of the bow across the strings.",
+            "wiki"
+          ],
+          [
+            "It is sometimes indicated in written music by an arrowhead.",
+            "wiki"
+          ],
+          [
+            "Tremolo is often used as a sound effect in orchestral music, particularly in the Romantic music era (1800-1910) and in opera music.",
+            "wiki"
+          ],
+          [
+            "Since the Baroque era, the violin has been one of the most important of all instruments in classical music, for several reasons.",
+            "wiki"
+          ],
+          [
+            "The Swiss-Cuban violinist Yilian Ca\u00f1izares mixes jazz with Cuban music.",
+            "wiki"
+          ],
+          [
+            "The Indian violin, while essentially the same instrument as that used in Western music, is different in some senses.",
+            "wiki"
+          ],
+          [
+            "The way the musician holds the instrument varies from Western to Indian music.",
+            "wiki"
+          ],
+          [
+            "In Indian music the musician sits on the floor cross-legged with the right foot out in front of them.",
+            "wiki"
+          ],
+          [
+            "This position is essential to playing well due to the nature of Indian music.",
+            "wiki"
+          ],
+          [
+            "Up through at least the 1970s, most types of popular music used bowed string sections.",
+            "wiki"
+          ],
+          [
+            "They were extensively used in popular music throughout the 1920s and early 1930s.",
+            "wiki"
+          ],
+          [
+            "With the rise of swing music, however, from 1935 to 1945, the string sound was often used to add to the fullness of big band music.",
+            "wiki"
+          ],
+          [
+            "Following the swing era, from the late 1940s to the mid-1950s, strings began to be revived in traditional pop music.",
+            "wiki"
+          ],
+          [
+            "This trend accelerated in the late 1960s, with a significant revival of the use of strings, especially in soul music.",
+            "wiki"
+          ],
+          [
+            "With the rise of electronically created music in the 1980s, violins declined in use, as synthesized string sounds played by a keyboardist with a synthesizer took their place.",
+            "wiki"
+          ],
+          [
+            "However, while the violin has had very little usage in mainstream rock music, it has some history in progressive rock (e.g., Electric Light Orchestra, King Crimson, Kansas, Gentle Giant).",
+            "wiki"
+          ],
+          [
+            "The popularity of crossover music beginning in the last years of the 20th century has brought the violin back into the popular music arena, with both electric and acoustic violins being used by popular bands.",
+            "wiki"
+          ],
+          [
+            "Eric Stanley improvises on the violin with hip hop music/pop/classical elements and instrumental beats.",
+            "wiki"
+          ],
+          [
+            "Like many other instruments used in classical music, the violin descends from remote ancestors that were used for folk music.",
+            "wiki"
+          ],
+          [
+            "Following a stage of intensive development in the late Renaissance, largely in Italy, the violin had improved (in volume, tone, and agility), to the point that it not only became a very important instrument in art music, but proved highly appealing to folk musicians as well, ultimately spreading very widely, sometimes displacing earlier bowed instruments.",
+            "wiki"
+          ],
+          [
+            "When played as a folk instrument, the violin is usually referred to in English as a fiddle (although the term fiddle can be used informally no matter what the genre of music).",
+            "wiki"
+          ],
+          [
+            "Fiddle music differs from classical in that the tunes are generally considered dance music, and various techniques, such as droning, shuffling, and ornamentation specific to particular styles are used.",
+            "wiki"
+          ],
+          [
+            "In many traditions of folk music, the tunes are not written but are memorized by successive generations of musicians and passed on in what is known as the oral tradition.",
+            "wiki"
+          ],
+          [
+            "As well as the Arabic rababah, the violin has been used in Arabic music.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "Violins are also important in many varieties of folk music, including country music, bluegrass music, and in jazz.",
+            "wiki"
+          ],
+          [
+            "Electric violins with solid bodies and piezoelectric pickups are used in some forms of rock music and jazz fusion, with the pickups plugged into instrument amplifiers and speakers to produce sound.",
+            "wiki"
+          ],
+          [
+            "The tuning G\u2013D\u2013A\u2013E is used for most violin music, including Classical music, jazz, and folk music.",
+            "wiki"
+          ],
+          [
+            "Violins with five strings or more are typically used in jazz or folk music.",
+            "wiki"
+          ],
+          [
+            "Pizzicato is used on all of the violin family instruments; however, the systematic study of advanced pizzicato techniques is most developed in jazz bass, a style in which the instrument is almost exclusively plucked.",
+            "wiki"
+          ],
+          [
+            "The earliest references to jazz performance using the violin as a solo instrument are documented during the first decades of the 20th century.",
+            "wiki"
+          ],
+          [
+            "Joe Venuti, one of the first jazz violinists, is known for his work with guitarist Eddie Lang during the 1920s.",
+            "wiki"
+          ],
+          [
+            "While not primarily jazz violinists, Darol Anger and Mark O'Connor have spent significant parts of their careers playing jazz.",
+            "wiki"
+          ],
+          [
+            "The Swiss-Cuban violinist Yilian Ca\u00f1izares mixes jazz with Cuban music.",
+            "wiki"
+          ],
+          [
+            "Violins also appear in ensembles supplying orchestral backgrounds to many jazz recordings.",
+            "wiki"
+          ],
+          [
+            "The instrument has a stronger place in modern jazz fusion bands, notably The Corrs.",
+            "wiki"
+          ],
+          [
+            "The Flock featured violinist Jerry Goodman who later joined the jazz-rock fusion band, The Mahavishnu Orchestra.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "Many violinists have a reddish mark on the neck, the so-called \"violin hickey\" (or \"fiddler's hickey\") from long-term pressure at that spot.",
+            "wiki"
+          ],
+          [
+            "Violinists often change positions on the lower strings, sometimes to the consternation of composers and much to the confusion of beginners.",
+            "wiki"
+          ],
+          [
+            "For this reason, violinists often avoid playing a single note on the E-string within a phrase of notes on the A-string, as one E-string note would stand out with a different timbre.",
+            "wiki"
+          ],
+          [
+            "Violinists oscillate backward, or lower in pitch from the actual note when using vibrato, since aural perception favors the highest pitch in a varying sound.",
+            "wiki"
+          ],
+          [
+            "In the case of the major third, the harmonic is higher in the overtone series, and does not speak as readily; in the case of the fifth, the stretch is greater than is comfortable for many violinists.",
+            "wiki"
+          ],
+          [
+            "No matter which attack or bow stroke is used, most professional violinists use a straight bow stroke, keeping the bow perpendicular to the string and parallel to the bridge.",
+            "wiki"
+          ],
+          [
+            "Violinists may also pluck a string with their left hand, denoted on written music as a \"+\" symbol above the note desired.",
+            "wiki"
+          ],
+          [
+            "Capable violinists know how to straighten and center a bridge; this can easily be done under normal string tension without damage to the instrument.",
+            "wiki"
+          ],
+          [
+            "Historically, the baroque violin may have been frequently held without the chin and is often held this way by performers of historical music today.",
+            "wiki"
+          ],
+          [
+            "Especially in instructional editions of violin music, numbers over the notes may indicate which finger to use, with \"0\" above the note indicating \"open\" string, or playing on a string without manipulating the pitch using the left hand.",
+            "wiki"
+          ],
+          [
+            "Playing an open string simultaneously with a stopped note on an adjacent string produces a bagpipe-like a drone, often used by composers in imitation of folk music.",
+            "wiki"
+          ],
+          [
+            "Vibrato is often perceived to create a more emotional sound, and it is employed heavily in music of the Romantic era.",
+            "wiki"
+          ],
+          [
+            "Harmonics are marked in music with a little circle above the note that determines the pitch of the harmonic.",
+            "wiki"
+          ],
+          [
+            "When a note is marked pizz. (abbreviation for pizzicato) in the written music, it is played by plucking the string with a finger of the right hand rather than by bowing.",
+            "wiki"
+          ],
+          [
+            "When the bow hand is occupied (or for virtuosic effect) the left hand can be used; this is indicated by a \"+\" (plus sign) in the music.",
+            "wiki"
+          ],
+          [
+            "Violinists may also pluck a string with their left hand, denoted on written music as a \"+\" symbol above the note desired.",
+            "wiki"
+          ],
+          [
+            "Early music groups interested in authentic performance may use a lower standard A.",
+            "wiki"
+          ],
+          [
+            "The tuning G-D-A-E is used for the great majority of all violin music.",
+            "wiki"
+          ],
+          [
+            "However, any number of other tunings are occasionally employed (for example, tuning the G string up to A), both in classical music, where the technique is known as scordatura, and in some folk styles where it is called \"cross-tuning.\" Numerous such tunings exist, often being named for a prominent tune played in that tuning.",
+            "wiki"
+          ]
+        ]
+      },
+      "baroque": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The following lists of violinists are available:",
+            "wiki"
+          ],
+          [
+            "This is a list of notable classical violinists from the baroque era to the 21st century.",
+            "wiki"
+          ],
+          [
+            "For a more comprehensive list of contemporary classical violinists, see List of contemporary classical violinists.",
+            "wiki"
+          ],
+          [
+            "Note: This does not include living violinists, who are listed at List of contemporary classical violinists.",
+            "wiki"
+          ],
+          [
+            "As a supplement to the lists above, the following is a list of violinists who were known for playing the instrument badly in support of comedy routines.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable classical violinists from the baroque era to the 21st century.",
+            "wiki"
+          ],
+          [
+            "This is a list of violinists notable for their work with electric violin.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "Violinists and collectors particularly prize the fine historical instruments made by the Stradivari, Guarneri, Guadagnini and Amati families from the 16th to the 18th century in Brescia and Cremona (Italy) and by Jacob Stainer in Austria.",
+            "wiki"
+          ],
+          [
+            "Beginning violinists play open strings and the lowest position, nearest to the nut.",
+            "wiki"
+          ],
+          [
+            "Each subsequent note is stopped at a pitch the player perceives as the most harmonious, \"when unaccompanied,  does not play consistently in either the tempered or the natural  scale, but tends on the whole to conform with the Pythagorean scale.\" When violinists are playing in a string quartet or a string orchestra, the strings typically \"sweeten\" their tuning to suit the key they are playing in.",
+            "wiki"
+          ],
+          [
+            "When playing with an instrument tuned to equal temperament, such as a piano, skilled violinists adjust their tuning to match the equal temperament of the piano to avoid discordant notes.",
+            "wiki"
+          ],
+          [
+            "In the classical tradition, violinists will often use a string crossing or shift of position to allow them to avoid the change of timbre introduced by an open string, unless indicated by the composer.",
+            "wiki"
+          ],
+          [
+            "In some genres of historically informed performance (usually of Baroque music and earlier), neither split-chord nor triple-stop chords are thought to be appropriate; some violinists will arpeggiate all chords (including regular double stops), playing all or most notes individually as if they had been written as a slurred figure.",
+            "wiki"
+          ],
+          [
+            "Most violinists oscillate below the note, or lower in pitch from the actual note when using vibrato, since it is believed that perception favors the highest pitch in a varying sound.",
+            "wiki"
+          ],
+          [
+            "However, it has to be noted that this is only a trend; there is nothing on the sheet music that compels violinists to add vibrato.",
+            "wiki"
+          ],
+          [
+            "Different types of vibrato will bring different moods to the piece, and the varying degrees and styles of vibrato are often characteristics that stand out in well-known violinists.",
+            "wiki"
+          ],
+          [
+            "In the case of the fifth, the stretch is greater than is comfortable for many violinists.",
+            "wiki"
+          ],
+          [
+            "For this reason, violinists change their strings regularly.",
+            "wiki"
+          ],
+          [
+            "In orchestral parts, violinists often have to make very quick shifts from arco to pizzicato, and vice versa.",
+            "wiki"
+          ],
+          [
+            "Some violinists, however, object to this style of playing as it can damage the finish and impair the value of a fine bow, but most of such will compromise by using a cheap bow for at least the duration of the passage in question.",
+            "wiki"
+          ],
+          [
+            "Joe Venuti, one of the first jazz violinists, is known for his work with guitarist Eddie Lang during the 1920s.",
+            "wiki"
+          ],
+          [
+            "Since that time there have been many improvising violinists including St\u00e9phane Grappelli, Stuff Smith, Eddie South, Regina Carter, Johnny Frigo, John Blake, Adam Taubitz, Leroy Jenkins, and Jean-Luc Ponty.",
+            "wiki"
+          ],
+          [
+            "While not primarily jazz violinists, Darol Anger and Mark O'Connor have spent significant parts of their careers playing jazz.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "Fiddlers who use solid steel core strings may prefer to use a tailpiece with fine tuners on all four strings, instead of the single fine tuner on the E string used by many classical players.",
+            "wiki"
+          ],
+          [
+            "They are most prominent in the Western classical tradition, both in ensembles (from chamber music to orchestras) and as solo instruments.",
+            "wiki"
+          ],
+          [
+            "Violins are also important in many varieties of folk music, including country music, bluegrass music, and in jazz.",
+            "wiki"
+          ],
+          [
+            "Electric violins with solid bodies and piezoelectric pickups are used in some forms of rock music and jazz fusion, with the pickups plugged into instrument amplifiers and speakers to produce sound.",
+            "wiki"
+          ],
+          [
+            "The violin has come to be incorporated in many non-Western music cultures, including Indian music and Iranian music.",
+            "wiki"
+          ],
+          [
+            "The name fiddle is often used regardless of the type of music played on it.",
+            "wiki"
+          ],
+          [
+            "In Europe, it served as the basis for the development of other stringed instruments used in Western classical music, such as the viola.",
+            "wiki"
+          ],
+          [
+            "The violin is often called a fiddle. \"Fiddle\" can be used as the instrument's customary name in folk music, or as an informal name for the instrument in other styles of music.",
+            "wiki"
+          ],
+          [
+            "Gut strings are not as common as they once were, but many performers use them to achieve a specific sound especially in historically informed performance of Baroque music.",
+            "wiki"
+          ],
+          [
+            "A minutely higher tuning is sometimes employed for solo playing to give the instrument a brighter sound; conversely, Baroque music is sometimes played using lower tunings to make the violin's sound more gentle.",
+            "wiki"
+          ],
+          [
+            "The tuning G\u2013D\u2013A\u2013E is used for most violin music, including Classical music, jazz, and folk music.",
+            "wiki"
+          ],
+          [
+            "The use of nonstandard tunings in classical music is known as scordatura; in some folk styles, it is called cross tuning.",
+            "wiki"
+          ],
+          [
+            "One famous example of scordatura in classical music is Camille Saint-Sa\u00ebns' Danse Macabre, where the solo violin's E string is tuned down to E\u266d to impart an eerie dissonance to the composition.",
+            "wiki"
+          ],
+          [
+            "In Indian classical music and Indian light music, the violin is likely to be tuned to D\u266f\u2013A\u266f\u2013D\u266f\u2013A\u266f in the South Indian style.",
+            "wiki"
+          ],
+          [
+            "As there is no concept of absolute pitch in Indian classical music, musicians can use any convenient tuning to maintain these relative pitch intervals between the strings.",
+            "wiki"
+          ],
+          [
+            "Another prevalent tuning with these intervals is B\u266d\u2013F\u2013B\u266d\u2013F, which corresponds to Sa\u2013Pa\u2013Sa\u2013Pa in the Indian carnatic classical music style.",
+            "wiki"
+          ],
+          [
+            "In Iranian classical music and Iranian light music, the violin has different tunings in each Dastgah; it is likely to be tuned (E\u2013A\u2013E\u2013A) in Dastgah-h Esfahan or in Dastg\u0101h-e \u0160ur is (E\u2013A\u2013D\u2013E) and (E\u2013A\u2013E\u2013E), in Dastg\u0101h-e M\u0101hur is (E\u2013A\u2013D\u2013A).",
+            "wiki"
+          ],
+          [
+            "In Arabic classical music, the A and E strings are lowered by a whole step, i.e.",
+            "wiki"
+          ],
+          [
+            "Violins with five strings or more are typically used in jazz or folk music.",
+            "wiki"
+          ],
+          [
+            "In contrast, in the orchestra and in chamber music it is usually played seated.",
+            "wiki"
+          ],
+          [
+            "In the 2000s and 2010s, some orchestras performing Baroque music (such as the Freiburg Baroque Orchestra) have had all of their violins and violas, solo and ensemble, perform standing up.",
+            "wiki"
+          ],
+          [
+            "The fingers are conventionally numbered 1 (index) through 4 (little finger) in music notation, such as sheet music and etude books.",
+            "wiki"
+          ],
+          [
+            "Especially in instructional editions of violin music, numbers over the notes may indicate which finger to use, with 0 or O indicating an open string.",
+            "wiki"
+          ],
+          [
+            "First position, where most beginners start (although some methods start in third position), is the most commonly used position in string music.",
+            "wiki"
+          ],
+          [
+            "Music composed for beginning youth orchestras is often mostly in first position.",
+            "wiki"
+          ],
+          [
+            "For instance, the G string is often regarded as having a very full, sonorous sound which is particularly appropriate to late Romantic music.",
+            "wiki"
+          ],
+          [
+            "This is often indicated in the music by the marking, for example, sul G or IV (a Roman numeral indicating to play on the fourth string; by convention, the strings are numbered from thinnest, highest pitch (I) to the lowest pitch (IV)).",
+            "wiki"
+          ],
+          [
+            "This is seen in classical music which is imitating the drone of an organ (J.",
+            "wiki"
+          ],
+          [
+            "Bach, in his Partita in E for solo violin, achieved this), fiddling (e.g., Hoedown) or where taking steps to avoid the open string is musically inappropriate (for instance in Baroque music where shifting position was less common).",
+            "wiki"
+          ],
+          [
+            "In folk music, fiddling and other traditional music genres, open strings are commonly used for their resonant timbre.",
+            "wiki"
+          ],
+          [
+            "Playing an open string simultaneously with a stopped note on an adjacent string produces a bagpipe-like drone, often used by composers in imitation of folk music.",
+            "wiki"
+          ],
+          [
+            "In some genres of historically informed performance (usually of Baroque music and earlier), neither split-chord nor triple-stop chords are thought to be appropriate; some violinists will arpeggiate all chords (including regular double stops), playing all or most notes individually as if they had been written as a slurred figure.",
+            "wiki"
+          ],
+          [
+            "This is more often seen in folk traditions than in classical music.",
+            "wiki"
+          ],
+          [
+            "Music students are often taught that unless otherwise marked in music, vibrato is assumed.",
+            "wiki"
+          ],
+          [
+            "However, it has to be noted that this is only a trend; there is nothing on the sheet music that compels violinists to add vibrato.",
+            "wiki"
+          ],
+          [
+            "This can be an obstacle to a classically trained violinist wishing to play in a style that uses little or no vibrato at all, such as baroque music played in period style and many traditional fiddling styles.",
+            "wiki"
+          ],
+          [
+            "The \"when\" and \"what for\" and \"how much\" of violin vibrato are artistic matters of style and taste, with different teachers, music schools and styles of music favouring different styles of vibrato.",
+            "wiki"
+          ],
+          [
+            "Harmonics are marked in music either with a little circle above the note that determines the pitch of the harmonic, or by diamond-shaped note heads.",
+            "wiki"
+          ],
+          [
+            "As well, the bow can be used to play short, crisp little notes, such as repeated notes, scales and arpeggios, which provide a propulsive rhythm in many styles of music.",
+            "wiki"
+          ],
+          [
+            "A note marked pizz. (abbreviation for pizzicato) in the written music is to be played by plucking the string with a finger of the right hand rather than by bowing. (The index finger is most commonly used here.) Sometimes in orchestra parts or virtuoso solo music where the bow hand is occupied (or for show-off effect), left-hand pizzicato will be indicated by a + (plus sign) below or above the note.",
+            "wiki"
+          ],
+          [
+            "A marking of col legno (Italian for \"with the wood\") in the written music calls for striking the string(s) with the stick of the bow, rather than by drawing the hair of the bow across the strings.",
+            "wiki"
+          ],
+          [
+            "It is sometimes indicated in written music by an arrowhead.",
+            "wiki"
+          ],
+          [
+            "Tremolo is often used as a sound effect in orchestral music, particularly in the Romantic music era (1800-1910) and in opera music.",
+            "wiki"
+          ],
+          [
+            "Since the Baroque era, the violin has been one of the most important of all instruments in classical music, for several reasons.",
+            "wiki"
+          ],
+          [
+            "The Swiss-Cuban violinist Yilian Ca\u00f1izares mixes jazz with Cuban music.",
+            "wiki"
+          ],
+          [
+            "The Indian violin, while essentially the same instrument as that used in Western music, is different in some senses.",
+            "wiki"
+          ],
+          [
+            "The way the musician holds the instrument varies from Western to Indian music.",
+            "wiki"
+          ],
+          [
+            "In Indian music the musician sits on the floor cross-legged with the right foot out in front of them.",
+            "wiki"
+          ],
+          [
+            "This position is essential to playing well due to the nature of Indian music.",
+            "wiki"
+          ],
+          [
+            "Up through at least the 1970s, most types of popular music used bowed string sections.",
+            "wiki"
+          ],
+          [
+            "They were extensively used in popular music throughout the 1920s and early 1930s.",
+            "wiki"
+          ],
+          [
+            "With the rise of swing music, however, from 1935 to 1945, the string sound was often used to add to the fullness of big band music.",
+            "wiki"
+          ],
+          [
+            "Following the swing era, from the late 1940s to the mid-1950s, strings began to be revived in traditional pop music.",
+            "wiki"
+          ],
+          [
+            "This trend accelerated in the late 1960s, with a significant revival of the use of strings, especially in soul music.",
+            "wiki"
+          ],
+          [
+            "With the rise of electronically created music in the 1980s, violins declined in use, as synthesized string sounds played by a keyboardist with a synthesizer took their place.",
+            "wiki"
+          ],
+          [
+            "However, while the violin has had very little usage in mainstream rock music, it has some history in progressive rock (e.g., Electric Light Orchestra, King Crimson, Kansas, Gentle Giant).",
+            "wiki"
+          ],
+          [
+            "The popularity of crossover music beginning in the last years of the 20th century has brought the violin back into the popular music arena, with both electric and acoustic violins being used by popular bands.",
+            "wiki"
+          ],
+          [
+            "Eric Stanley improvises on the violin with hip hop music/pop/classical elements and instrumental beats.",
+            "wiki"
+          ],
+          [
+            "Like many other instruments used in classical music, the violin descends from remote ancestors that were used for folk music.",
+            "wiki"
+          ],
+          [
+            "Following a stage of intensive development in the late Renaissance, largely in Italy, the violin had improved (in volume, tone, and agility), to the point that it not only became a very important instrument in art music, but proved highly appealing to folk musicians as well, ultimately spreading very widely, sometimes displacing earlier bowed instruments.",
+            "wiki"
+          ],
+          [
+            "When played as a folk instrument, the violin is usually referred to in English as a fiddle (although the term fiddle can be used informally no matter what the genre of music).",
+            "wiki"
+          ],
+          [
+            "Fiddle music differs from classical in that the tunes are generally considered dance music, and various techniques, such as droning, shuffling, and ornamentation specific to particular styles are used.",
+            "wiki"
+          ],
+          [
+            "In many traditions of folk music, the tunes are not written but are memorized by successive generations of musicians and passed on in what is known as the oral tradition.",
+            "wiki"
+          ],
+          [
+            "As well as the Arabic rababah, the violin has been used in Arabic music.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "Violins are also important in many varieties of folk music, including country music, bluegrass music, and in jazz.",
+            "wiki"
+          ],
+          [
+            "Electric violins with solid bodies and piezoelectric pickups are used in some forms of rock music and jazz fusion, with the pickups plugged into instrument amplifiers and speakers to produce sound.",
+            "wiki"
+          ],
+          [
+            "The tuning G\u2013D\u2013A\u2013E is used for most violin music, including Classical music, jazz, and folk music.",
+            "wiki"
+          ],
+          [
+            "Violins with five strings or more are typically used in jazz or folk music.",
+            "wiki"
+          ],
+          [
+            "Pizzicato is used on all of the violin family instruments; however, the systematic study of advanced pizzicato techniques is most developed in jazz bass, a style in which the instrument is almost exclusively plucked.",
+            "wiki"
+          ],
+          [
+            "The earliest references to jazz performance using the violin as a solo instrument are documented during the first decades of the 20th century.",
+            "wiki"
+          ],
+          [
+            "Joe Venuti, one of the first jazz violinists, is known for his work with guitarist Eddie Lang during the 1920s.",
+            "wiki"
+          ],
+          [
+            "While not primarily jazz violinists, Darol Anger and Mark O'Connor have spent significant parts of their careers playing jazz.",
+            "wiki"
+          ],
+          [
+            "The Swiss-Cuban violinist Yilian Ca\u00f1izares mixes jazz with Cuban music.",
+            "wiki"
+          ],
+          [
+            "Violins also appear in ensembles supplying orchestral backgrounds to many jazz recordings.",
+            "wiki"
+          ],
+          [
+            "The instrument has a stronger place in modern jazz fusion bands, notably The Corrs.",
+            "wiki"
+          ],
+          [
+            "The Flock featured violinist Jerry Goodman who later joined the jazz-rock fusion band, The Mahavishnu Orchestra.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "1658 Baroque violin by Jacob Stainer",
+            "wiki"
+          ],
+          [
+            "The neck graft allows the original scroll to be kept with a Baroque violin when bringing its neck into conformance with modern standards.",
+            "wiki"
+          ],
+          [
+            "Gut strings are not as common as they once were, but many performers use them to achieve a specific sound especially in historically informed performance of Baroque music.",
+            "wiki"
+          ],
+          [
+            "A minutely higher tuning is sometimes employed for solo playing to give the instrument a brighter sound; conversely, Baroque music is sometimes played using lower tunings to make the violin's sound more gentle.",
+            "wiki"
+          ],
+          [
+            "In the 2000s and 2010s, some orchestras performing Baroque music (such as the Freiburg Baroque Orchestra) have had all of their violins and violas, solo and ensemble, perform standing up.",
+            "wiki"
+          ],
+          [
+            "Bach, in his Partita in E for solo violin, achieved this), fiddling (e.g., Hoedown) or where taking steps to avoid the open string is musically inappropriate (for instance in Baroque music where shifting position was less common).",
+            "wiki"
+          ],
+          [
+            "In some genres of historically informed performance (usually of Baroque music and earlier), neither split-chord nor triple-stop chords are thought to be appropriate; some violinists will arpeggiate all chords (including regular double stops), playing all or most notes individually as if they had been written as a slurred figure.",
+            "wiki"
+          ],
+          [
+            "This can be an obstacle to a classically trained violinist wishing to play in a style that uses little or no vibrato at all, such as baroque music played in period style and many traditional fiddling styles.",
+            "wiki"
+          ],
+          [
+            "A sonata for two violins by the Baroque composer Telemann.",
+            "wiki"
+          ],
+          [
+            "A relatively typical baroque violin composition, it would probably have been performed with less use of vibrato originally.",
+            "wiki"
+          ],
+          [
+            "Since the Baroque era, the violin has been one of the most important of all instruments in classical music, for several reasons.",
+            "wiki"
+          ],
+          [
+            "The successful indie rock and baroque pop band Arcade Fire use violins extensively in their arrangements.",
+            "wiki"
+          ],
+          [
+            "Many violinists have a reddish mark on the neck, the so-called \"violin hickey\" (or \"fiddler's hickey\") from long-term pressure at that spot.",
+            "wiki"
+          ],
+          [
+            "Violinists often change positions on the lower strings, sometimes to the consternation of composers and much to the confusion of beginners.",
+            "wiki"
+          ],
+          [
+            "For this reason, violinists often avoid playing a single note on the E-string within a phrase of notes on the A-string, as one E-string note would stand out with a different timbre.",
+            "wiki"
+          ],
+          [
+            "Violinists oscillate backward, or lower in pitch from the actual note when using vibrato, since aural perception favors the highest pitch in a varying sound.",
+            "wiki"
+          ],
+          [
+            "In the case of the major third, the harmonic is higher in the overtone series, and does not speak as readily; in the case of the fifth, the stretch is greater than is comfortable for many violinists.",
+            "wiki"
+          ],
+          [
+            "No matter which attack or bow stroke is used, most professional violinists use a straight bow stroke, keeping the bow perpendicular to the string and parallel to the bridge.",
+            "wiki"
+          ],
+          [
+            "Violinists may also pluck a string with their left hand, denoted on written music as a \"+\" symbol above the note desired.",
+            "wiki"
+          ],
+          [
+            "Capable violinists know how to straighten and center a bridge; this can easily be done under normal string tension without damage to the instrument.",
+            "wiki"
+          ],
+          [
+            "Historically, the baroque violin may have been frequently held without the chin and is often held this way by performers of historical music today.",
+            "wiki"
+          ],
+          [
+            "Especially in instructional editions of violin music, numbers over the notes may indicate which finger to use, with \"0\" above the note indicating \"open\" string, or playing on a string without manipulating the pitch using the left hand.",
+            "wiki"
+          ],
+          [
+            "Playing an open string simultaneously with a stopped note on an adjacent string produces a bagpipe-like a drone, often used by composers in imitation of folk music.",
+            "wiki"
+          ],
+          [
+            "Vibrato is often perceived to create a more emotional sound, and it is employed heavily in music of the Romantic era.",
+            "wiki"
+          ],
+          [
+            "Harmonics are marked in music with a little circle above the note that determines the pitch of the harmonic.",
+            "wiki"
+          ],
+          [
+            "When a note is marked pizz. (abbreviation for pizzicato) in the written music, it is played by plucking the string with a finger of the right hand rather than by bowing.",
+            "wiki"
+          ],
+          [
+            "When the bow hand is occupied (or for virtuosic effect) the left hand can be used; this is indicated by a \"+\" (plus sign) in the music.",
+            "wiki"
+          ],
+          [
+            "Violinists may also pluck a string with their left hand, denoted on written music as a \"+\" symbol above the note desired.",
+            "wiki"
+          ],
+          [
+            "Early music groups interested in authentic performance may use a lower standard A.",
+            "wiki"
+          ],
+          [
+            "The tuning G-D-A-E is used for the great majority of all violin music.",
+            "wiki"
+          ],
+          [
+            "However, any number of other tunings are occasionally employed (for example, tuning the G string up to A), both in classical music, where the technique is known as scordatura, and in some folk styles where it is called \"cross-tuning.\" Numerous such tunings exist, often being named for a prominent tune played in that tuning.",
+            "wiki"
+          ],
+          [
+            "Historically, the baroque violin may have been frequently held without the chin and is often held this way by performers of historical music today.",
+            "wiki"
+          ],
+          [
+            "The middle and ring fingers are usually wrapped around the frog, although in some cases (such as in baroque performance practice) the whole hand holds the stick above the frog.",
+            "wiki"
+          ]
+        ]
+      },
+      "violinist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The following lists of violinists are available:",
+            "wiki"
+          ],
+          [
+            "This is a list of notable classical violinists from the baroque era to the 21st century.",
+            "wiki"
+          ],
+          [
+            "For a more comprehensive list of contemporary classical violinists, see List of contemporary classical violinists.",
+            "wiki"
+          ],
+          [
+            "Note: This does not include living violinists, who are listed at List of contemporary classical violinists.",
+            "wiki"
+          ],
+          [
+            "As a supplement to the lists above, the following is a list of violinists who were known for playing the instrument badly in support of comedy routines.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable classical violinists from the baroque era to the 21st century.",
+            "wiki"
+          ],
+          [
+            "This is a list of violinists notable for their work with electric violin.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "This is a list of notable popular music violinists including fiddlers.",
+            "wiki"
+          ],
+          [
+            "Violinists and collectors particularly prize the fine historical instruments made by the Stradivari, Guarneri, Guadagnini and Amati families from the 16th to the 18th century in Brescia and Cremona (Italy) and by Jacob Stainer in Austria.",
+            "wiki"
+          ],
+          [
+            "Beginning violinists play open strings and the lowest position, nearest to the nut.",
+            "wiki"
+          ],
+          [
+            "Each subsequent note is stopped at a pitch the player perceives as the most harmonious, \"when unaccompanied,  does not play consistently in either the tempered or the natural  scale, but tends on the whole to conform with the Pythagorean scale.\" When violinists are playing in a string quartet or a string orchestra, the strings typically \"sweeten\" their tuning to suit the key they are playing in.",
+            "wiki"
+          ],
+          [
+            "When playing with an instrument tuned to equal temperament, such as a piano, skilled violinists adjust their tuning to match the equal temperament of the piano to avoid discordant notes.",
+            "wiki"
+          ],
+          [
+            "In the classical tradition, violinists will often use a string crossing or shift of position to allow them to avoid the change of timbre introduced by an open string, unless indicated by the composer.",
+            "wiki"
+          ],
+          [
+            "In some genres of historically informed performance (usually of Baroque music and earlier), neither split-chord nor triple-stop chords are thought to be appropriate; some violinists will arpeggiate all chords (including regular double stops), playing all or most notes individually as if they had been written as a slurred figure.",
+            "wiki"
+          ],
+          [
+            "Most violinists oscillate below the note, or lower in pitch from the actual note when using vibrato, since it is believed that perception favors the highest pitch in a varying sound.",
+            "wiki"
+          ],
+          [
+            "However, it has to be noted that this is only a trend; there is nothing on the sheet music that compels violinists to add vibrato.",
+            "wiki"
+          ],
+          [
+            "Different types of vibrato will bring different moods to the piece, and the varying degrees and styles of vibrato are often characteristics that stand out in well-known violinists.",
+            "wiki"
+          ],
+          [
+            "In the case of the fifth, the stretch is greater than is comfortable for many violinists.",
+            "wiki"
+          ],
+          [
+            "For this reason, violinists change their strings regularly.",
+            "wiki"
+          ],
+          [
+            "In orchestral parts, violinists often have to make very quick shifts from arco to pizzicato, and vice versa.",
+            "wiki"
+          ],
+          [
+            "Some violinists, however, object to this style of playing as it can damage the finish and impair the value of a fine bow, but most of such will compromise by using a cheap bow for at least the duration of the passage in question.",
+            "wiki"
+          ],
+          [
+            "Joe Venuti, one of the first jazz violinists, is known for his work with guitarist Eddie Lang during the 1920s.",
+            "wiki"
+          ],
+          [
+            "Since that time there have been many improvising violinists including St\u00e9phane Grappelli, Stuff Smith, Eddie South, Regina Carter, Johnny Frigo, John Blake, Adam Taubitz, Leroy Jenkins, and Jean-Luc Ponty.",
+            "wiki"
+          ],
+          [
+            "While not primarily jazz violinists, Darol Anger and Mark O'Connor have spent significant parts of their careers playing jazz.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "Fiddlers who use solid steel core strings may prefer to use a tailpiece with fine tuners on all four strings, instead of the single fine tuner on the E string used by many classical players.",
+            "wiki"
+          ],
+          [
+            "They are most prominent in the Western classical tradition, both in ensembles (from chamber music to orchestras) and as solo instruments.",
+            "wiki"
+          ],
+          [
+            "Violins are also important in many varieties of folk music, including country music, bluegrass music, and in jazz.",
+            "wiki"
+          ],
+          [
+            "Electric violins with solid bodies and piezoelectric pickups are used in some forms of rock music and jazz fusion, with the pickups plugged into instrument amplifiers and speakers to produce sound.",
+            "wiki"
+          ],
+          [
+            "The violin has come to be incorporated in many non-Western music cultures, including Indian music and Iranian music.",
+            "wiki"
+          ],
+          [
+            "The name fiddle is often used regardless of the type of music played on it.",
+            "wiki"
+          ],
+          [
+            "In Europe, it served as the basis for the development of other stringed instruments used in Western classical music, such as the viola.",
+            "wiki"
+          ],
+          [
+            "The violin is often called a fiddle. \"Fiddle\" can be used as the instrument's customary name in folk music, or as an informal name for the instrument in other styles of music.",
+            "wiki"
+          ],
+          [
+            "Gut strings are not as common as they once were, but many performers use them to achieve a specific sound especially in historically informed performance of Baroque music.",
+            "wiki"
+          ],
+          [
+            "A minutely higher tuning is sometimes employed for solo playing to give the instrument a brighter sound; conversely, Baroque music is sometimes played using lower tunings to make the violin's sound more gentle.",
+            "wiki"
+          ],
+          [
+            "The tuning G\u2013D\u2013A\u2013E is used for most violin music, including Classical music, jazz, and folk music.",
+            "wiki"
+          ],
+          [
+            "The use of nonstandard tunings in classical music is known as scordatura; in some folk styles, it is called cross tuning.",
+            "wiki"
+          ],
+          [
+            "One famous example of scordatura in classical music is Camille Saint-Sa\u00ebns' Danse Macabre, where the solo violin's E string is tuned down to E\u266d to impart an eerie dissonance to the composition.",
+            "wiki"
+          ],
+          [
+            "In Indian classical music and Indian light music, the violin is likely to be tuned to D\u266f\u2013A\u266f\u2013D\u266f\u2013A\u266f in the South Indian style.",
+            "wiki"
+          ],
+          [
+            "As there is no concept of absolute pitch in Indian classical music, musicians can use any convenient tuning to maintain these relative pitch intervals between the strings.",
+            "wiki"
+          ],
+          [
+            "Another prevalent tuning with these intervals is B\u266d\u2013F\u2013B\u266d\u2013F, which corresponds to Sa\u2013Pa\u2013Sa\u2013Pa in the Indian carnatic classical music style.",
+            "wiki"
+          ],
+          [
+            "In Iranian classical music and Iranian light music, the violin has different tunings in each Dastgah; it is likely to be tuned (E\u2013A\u2013E\u2013A) in Dastgah-h Esfahan or in Dastg\u0101h-e \u0160ur is (E\u2013A\u2013D\u2013E) and (E\u2013A\u2013E\u2013E), in Dastg\u0101h-e M\u0101hur is (E\u2013A\u2013D\u2013A).",
+            "wiki"
+          ],
+          [
+            "In Arabic classical music, the A and E strings are lowered by a whole step, i.e.",
+            "wiki"
+          ],
+          [
+            "Violins with five strings or more are typically used in jazz or folk music.",
+            "wiki"
+          ],
+          [
+            "In contrast, in the orchestra and in chamber music it is usually played seated.",
+            "wiki"
+          ],
+          [
+            "In the 2000s and 2010s, some orchestras performing Baroque music (such as the Freiburg Baroque Orchestra) have had all of their violins and violas, solo and ensemble, perform standing up.",
+            "wiki"
+          ],
+          [
+            "The fingers are conventionally numbered 1 (index) through 4 (little finger) in music notation, such as sheet music and etude books.",
+            "wiki"
+          ],
+          [
+            "Especially in instructional editions of violin music, numbers over the notes may indicate which finger to use, with 0 or O indicating an open string.",
+            "wiki"
+          ],
+          [
+            "First position, where most beginners start (although some methods start in third position), is the most commonly used position in string music.",
+            "wiki"
+          ],
+          [
+            "Music composed for beginning youth orchestras is often mostly in first position.",
+            "wiki"
+          ],
+          [
+            "For instance, the G string is often regarded as having a very full, sonorous sound which is particularly appropriate to late Romantic music.",
+            "wiki"
+          ],
+          [
+            "This is often indicated in the music by the marking, for example, sul G or IV (a Roman numeral indicating to play on the fourth string; by convention, the strings are numbered from thinnest, highest pitch (I) to the lowest pitch (IV)).",
+            "wiki"
+          ],
+          [
+            "This is seen in classical music which is imitating the drone of an organ (J.",
+            "wiki"
+          ],
+          [
+            "Bach, in his Partita in E for solo violin, achieved this), fiddling (e.g., Hoedown) or where taking steps to avoid the open string is musically inappropriate (for instance in Baroque music where shifting position was less common).",
+            "wiki"
+          ],
+          [
+            "In folk music, fiddling and other traditional music genres, open strings are commonly used for their resonant timbre.",
+            "wiki"
+          ],
+          [
+            "Playing an open string simultaneously with a stopped note on an adjacent string produces a bagpipe-like drone, often used by composers in imitation of folk music.",
+            "wiki"
+          ],
+          [
+            "In some genres of historically informed performance (usually of Baroque music and earlier), neither split-chord nor triple-stop chords are thought to be appropriate; some violinists will arpeggiate all chords (including regular double stops), playing all or most notes individually as if they had been written as a slurred figure.",
+            "wiki"
+          ],
+          [
+            "This is more often seen in folk traditions than in classical music.",
+            "wiki"
+          ],
+          [
+            "Music students are often taught that unless otherwise marked in music, vibrato is assumed.",
+            "wiki"
+          ],
+          [
+            "However, it has to be noted that this is only a trend; there is nothing on the sheet music that compels violinists to add vibrato.",
+            "wiki"
+          ],
+          [
+            "This can be an obstacle to a classically trained violinist wishing to play in a style that uses little or no vibrato at all, such as baroque music played in period style and many traditional fiddling styles.",
+            "wiki"
+          ],
+          [
+            "The \"when\" and \"what for\" and \"how much\" of violin vibrato are artistic matters of style and taste, with different teachers, music schools and styles of music favouring different styles of vibrato.",
+            "wiki"
+          ],
+          [
+            "Harmonics are marked in music either with a little circle above the note that determines the pitch of the harmonic, or by diamond-shaped note heads.",
+            "wiki"
+          ],
+          [
+            "As well, the bow can be used to play short, crisp little notes, such as repeated notes, scales and arpeggios, which provide a propulsive rhythm in many styles of music.",
+            "wiki"
+          ],
+          [
+            "A note marked pizz. (abbreviation for pizzicato) in the written music is to be played by plucking the string with a finger of the right hand rather than by bowing. (The index finger is most commonly used here.) Sometimes in orchestra parts or virtuoso solo music where the bow hand is occupied (or for show-off effect), left-hand pizzicato will be indicated by a + (plus sign) below or above the note.",
+            "wiki"
+          ],
+          [
+            "A marking of col legno (Italian for \"with the wood\") in the written music calls for striking the string(s) with the stick of the bow, rather than by drawing the hair of the bow across the strings.",
+            "wiki"
+          ],
+          [
+            "It is sometimes indicated in written music by an arrowhead.",
+            "wiki"
+          ],
+          [
+            "Tremolo is often used as a sound effect in orchestral music, particularly in the Romantic music era (1800-1910) and in opera music.",
+            "wiki"
+          ],
+          [
+            "Since the Baroque era, the violin has been one of the most important of all instruments in classical music, for several reasons.",
+            "wiki"
+          ],
+          [
+            "The Swiss-Cuban violinist Yilian Ca\u00f1izares mixes jazz with Cuban music.",
+            "wiki"
+          ],
+          [
+            "The Indian violin, while essentially the same instrument as that used in Western music, is different in some senses.",
+            "wiki"
+          ],
+          [
+            "The way the musician holds the instrument varies from Western to Indian music.",
+            "wiki"
+          ],
+          [
+            "In Indian music the musician sits on the floor cross-legged with the right foot out in front of them.",
+            "wiki"
+          ],
+          [
+            "This position is essential to playing well due to the nature of Indian music.",
+            "wiki"
+          ],
+          [
+            "Up through at least the 1970s, most types of popular music used bowed string sections.",
+            "wiki"
+          ],
+          [
+            "They were extensively used in popular music throughout the 1920s and early 1930s.",
+            "wiki"
+          ],
+          [
+            "With the rise of swing music, however, from 1935 to 1945, the string sound was often used to add to the fullness of big band music.",
+            "wiki"
+          ],
+          [
+            "Following the swing era, from the late 1940s to the mid-1950s, strings began to be revived in traditional pop music.",
+            "wiki"
+          ],
+          [
+            "This trend accelerated in the late 1960s, with a significant revival of the use of strings, especially in soul music.",
+            "wiki"
+          ],
+          [
+            "With the rise of electronically created music in the 1980s, violins declined in use, as synthesized string sounds played by a keyboardist with a synthesizer took their place.",
+            "wiki"
+          ],
+          [
+            "However, while the violin has had very little usage in mainstream rock music, it has some history in progressive rock (e.g., Electric Light Orchestra, King Crimson, Kansas, Gentle Giant).",
+            "wiki"
+          ],
+          [
+            "The popularity of crossover music beginning in the last years of the 20th century has brought the violin back into the popular music arena, with both electric and acoustic violins being used by popular bands.",
+            "wiki"
+          ],
+          [
+            "Eric Stanley improvises on the violin with hip hop music/pop/classical elements and instrumental beats.",
+            "wiki"
+          ],
+          [
+            "Like many other instruments used in classical music, the violin descends from remote ancestors that were used for folk music.",
+            "wiki"
+          ],
+          [
+            "Following a stage of intensive development in the late Renaissance, largely in Italy, the violin had improved (in volume, tone, and agility), to the point that it not only became a very important instrument in art music, but proved highly appealing to folk musicians as well, ultimately spreading very widely, sometimes displacing earlier bowed instruments.",
+            "wiki"
+          ],
+          [
+            "When played as a folk instrument, the violin is usually referred to in English as a fiddle (although the term fiddle can be used informally no matter what the genre of music).",
+            "wiki"
+          ],
+          [
+            "Fiddle music differs from classical in that the tunes are generally considered dance music, and various techniques, such as droning, shuffling, and ornamentation specific to particular styles are used.",
+            "wiki"
+          ],
+          [
+            "In many traditions of folk music, the tunes are not written but are memorized by successive generations of musicians and passed on in what is known as the oral tradition.",
+            "wiki"
+          ],
+          [
+            "As well as the Arabic rababah, the violin has been used in Arabic music.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "Violins are also important in many varieties of folk music, including country music, bluegrass music, and in jazz.",
+            "wiki"
+          ],
+          [
+            "Electric violins with solid bodies and piezoelectric pickups are used in some forms of rock music and jazz fusion, with the pickups plugged into instrument amplifiers and speakers to produce sound.",
+            "wiki"
+          ],
+          [
+            "The tuning G\u2013D\u2013A\u2013E is used for most violin music, including Classical music, jazz, and folk music.",
+            "wiki"
+          ],
+          [
+            "Violins with five strings or more are typically used in jazz or folk music.",
+            "wiki"
+          ],
+          [
+            "Pizzicato is used on all of the violin family instruments; however, the systematic study of advanced pizzicato techniques is most developed in jazz bass, a style in which the instrument is almost exclusively plucked.",
+            "wiki"
+          ],
+          [
+            "The earliest references to jazz performance using the violin as a solo instrument are documented during the first decades of the 20th century.",
+            "wiki"
+          ],
+          [
+            "Joe Venuti, one of the first jazz violinists, is known for his work with guitarist Eddie Lang during the 1920s.",
+            "wiki"
+          ],
+          [
+            "While not primarily jazz violinists, Darol Anger and Mark O'Connor have spent significant parts of their careers playing jazz.",
+            "wiki"
+          ],
+          [
+            "The Swiss-Cuban violinist Yilian Ca\u00f1izares mixes jazz with Cuban music.",
+            "wiki"
+          ],
+          [
+            "Violins also appear in ensembles supplying orchestral backgrounds to many jazz recordings.",
+            "wiki"
+          ],
+          [
+            "The instrument has a stronger place in modern jazz fusion bands, notably The Corrs.",
+            "wiki"
+          ],
+          [
+            "The Flock featured violinist Jerry Goodman who later joined the jazz-rock fusion band, The Mahavishnu Orchestra.",
+            "wiki"
+          ],
+          [
+            "The majority of the first electric violinists were musicians playing jazz fusion (e.g., Jean-Luc Ponty) and popular music.",
+            "wiki"
+          ],
+          [
+            "1658 Baroque violin by Jacob Stainer",
+            "wiki"
+          ],
+          [
+            "The neck graft allows the original scroll to be kept with a Baroque violin when bringing its neck into conformance with modern standards.",
+            "wiki"
+          ],
+          [
+            "Gut strings are not as common as they once were, but many performers use them to achieve a specific sound especially in historically informed performance of Baroque music.",
+            "wiki"
+          ],
+          [
+            "A minutely higher tuning is sometimes employed for solo playing to give the instrument a brighter sound; conversely, Baroque music is sometimes played using lower tunings to make the violin's sound more gentle.",
+            "wiki"
+          ],
+          [
+            "In the 2000s and 2010s, some orchestras performing Baroque music (such as the Freiburg Baroque Orchestra) have had all of their violins and violas, solo and ensemble, perform standing up.",
+            "wiki"
+          ],
+          [
+            "Bach, in his Partita in E for solo violin, achieved this), fiddling (e.g., Hoedown) or where taking steps to avoid the open string is musically inappropriate (for instance in Baroque music where shifting position was less common).",
+            "wiki"
+          ],
+          [
+            "In some genres of historically informed performance (usually of Baroque music and earlier), neither split-chord nor triple-stop chords are thought to be appropriate; some violinists will arpeggiate all chords (including regular double stops), playing all or most notes individually as if they had been written as a slurred figure.",
+            "wiki"
+          ],
+          [
+            "This can be an obstacle to a classically trained violinist wishing to play in a style that uses little or no vibrato at all, such as baroque music played in period style and many traditional fiddling styles.",
+            "wiki"
+          ],
+          [
+            "A sonata for two violins by the Baroque composer Telemann.",
+            "wiki"
+          ],
+          [
+            "A relatively typical baroque violin composition, it would probably have been performed with less use of vibrato originally.",
+            "wiki"
+          ],
+          [
+            "Since the Baroque era, the violin has been one of the most important of all instruments in classical music, for several reasons.",
+            "wiki"
+          ],
+          [
+            "The successful indie rock and baroque pop band Arcade Fire use violins extensively in their arrangements.",
+            "wiki"
+          ],
+          [
+            "The lowest note of a violin, tuned normally, is G3, or G below middle C (C4). (On rare occasions, the lowest string may be tuned down by as much as a fourth, to D3.) The highest note playable is less well defined: E7, the E two octaves above the open string (which is tuned to E5) may be considered a practical limit for orchestral violin parts, but it is often possible to play higher, depending on the length of the fingerboard and the skill of the violinist.",
+            "wiki"
+          ],
+          [
+            "Through practice of scales and arpeggios and ear training, the violinist's left hand eventually \"finds\" the notes intuitively by muscle memory.",
+            "wiki"
+          ],
+          [
+            "For example, when playing the stopped pitch \"A\" on the G string, the violinist could play the open D string at the same time, to check the intonation of the stopped \"A\".",
+            "wiki"
+          ],
+          [
+            "Even without an explicit instructions in the score, an advanced violinist will use her/his discretion and artistic sensibility to select which string to play specific notes or passages.",
+            "wiki"
+          ],
+          [
+            "Some classical violin parts have notes for which the composer requests the violinist to play an open string, because of the specific sonority created by an open string.",
+            "wiki"
+          ],
+          [
+            "Where three or four simultaneous notes are indicated, the violinist will typically \"split\" the chord, choosing the lower one or two notes to play first before immediately continuing onto the upper one or two notes, with the natural resonance of the instrument producing an effect similar to if all four notes had been voiced simultaneously.",
+            "wiki"
+          ],
+          [
+            "The bow will not naturally strike three strings at once, but if there is sufficient bow speed and pressure when the violinist \"breaks\" (sounds) a three note chord, the bow hair can be bent temporarily onto three strings, allowing each to sound simultaneously.",
+            "wiki"
+          ],
+          [
+            "This can be an obstacle to a classically trained violinist wishing to play in a style that uses little or no vibrato at all, such as baroque music played in period style and many traditional fiddling styles.",
+            "wiki"
+          ],
+          [
+            "Vibrato is, in a large part, left to the discretion of the violinist.",
+            "wiki"
+          ],
+          [
+            "In some cases, the violinist will pluck strings with the left hand.",
+            "wiki"
+          ],
+          [
+            "The Swiss-Cuban violinist Yilian Ca\u00f1izares mixes jazz with Cuban music.",
+            "wiki"
+          ],
+          [
+            "Dave Matthews Band features violinist Boyd Tinsley.",
+            "wiki"
+          ],
+          [
+            "The Flock featured violinist Jerry Goodman who later joined the jazz-rock fusion band, The Mahavishnu Orchestra.",
+            "wiki"
+          ],
+          [
+            "James' Saul Davies, who is also a guitarist, was enlisted by the band as a violinist.",
+            "wiki"
+          ],
+          [
+            "Many violinists have a reddish mark on the neck, the so-called \"violin hickey\" (or \"fiddler's hickey\") from long-term pressure at that spot.",
+            "wiki"
+          ],
+          [
+            "Violinists often change positions on the lower strings, sometimes to the consternation of composers and much to the confusion of beginners.",
+            "wiki"
+          ],
+          [
+            "For this reason, violinists often avoid playing a single note on the E-string within a phrase of notes on the A-string, as one E-string note would stand out with a different timbre.",
+            "wiki"
+          ],
+          [
+            "Violinists oscillate backward, or lower in pitch from the actual note when using vibrato, since aural perception favors the highest pitch in a varying sound.",
+            "wiki"
+          ],
+          [
+            "In the case of the major third, the harmonic is higher in the overtone series, and does not speak as readily; in the case of the fifth, the stretch is greater than is comfortable for many violinists.",
+            "wiki"
+          ],
+          [
+            "No matter which attack or bow stroke is used, most professional violinists use a straight bow stroke, keeping the bow perpendicular to the string and parallel to the bridge.",
+            "wiki"
+          ],
+          [
+            "Violinists may also pluck a string with their left hand, denoted on written music as a \"+\" symbol above the note desired.",
+            "wiki"
+          ],
+          [
+            "Capable violinists know how to straighten and center a bridge; this can easily be done under normal string tension without damage to the instrument.",
+            "wiki"
+          ],
+          [
+            "Historically, the baroque violin may have been frequently held without the chin and is often held this way by performers of historical music today.",
+            "wiki"
+          ],
+          [
+            "Especially in instructional editions of violin music, numbers over the notes may indicate which finger to use, with \"0\" above the note indicating \"open\" string, or playing on a string without manipulating the pitch using the left hand.",
+            "wiki"
+          ],
+          [
+            "Playing an open string simultaneously with a stopped note on an adjacent string produces a bagpipe-like a drone, often used by composers in imitation of folk music.",
+            "wiki"
+          ],
+          [
+            "Vibrato is often perceived to create a more emotional sound, and it is employed heavily in music of the Romantic era.",
+            "wiki"
+          ],
+          [
+            "Harmonics are marked in music with a little circle above the note that determines the pitch of the harmonic.",
+            "wiki"
+          ],
+          [
+            "When a note is marked pizz. (abbreviation for pizzicato) in the written music, it is played by plucking the string with a finger of the right hand rather than by bowing.",
+            "wiki"
+          ],
+          [
+            "When the bow hand is occupied (or for virtuosic effect) the left hand can be used; this is indicated by a \"+\" (plus sign) in the music.",
+            "wiki"
+          ],
+          [
+            "Violinists may also pluck a string with their left hand, denoted on written music as a \"+\" symbol above the note desired.",
+            "wiki"
+          ],
+          [
+            "Early music groups interested in authentic performance may use a lower standard A.",
+            "wiki"
+          ],
+          [
+            "The tuning G-D-A-E is used for the great majority of all violin music.",
+            "wiki"
+          ],
+          [
+            "However, any number of other tunings are occasionally employed (for example, tuning the G string up to A), both in classical music, where the technique is known as scordatura, and in some folk styles where it is called \"cross-tuning.\" Numerous such tunings exist, often being named for a prominent tune played in that tuning.",
+            "wiki"
+          ],
+          [
+            "Historically, the baroque violin may have been frequently held without the chin and is often held this way by performers of historical music today.",
+            "wiki"
+          ],
+          [
+            "The middle and ring fingers are usually wrapped around the frog, although in some cases (such as in baroque performance practice) the whole hand holds the stick above the frog.",
+            "wiki"
+          ],
+          [
+            "If held properly under the chin, the violinist can let go of the instrument with their hands and it will stay there firmly.",
+            "wiki"
+          ],
+          [
+            "Another method sometimes used to increase volume is using greater bow speed; however, a violinist can increase bow speed and still play softly at the same time.",
+            "wiki"
+          ],
+          [
+            "This position is especially helpful when the composer alternates between series of arco and pizzicato notes, because it allows the violinist to quickly and accurately switch styles.",
+            "wiki"
+          ],
+          [
+            "Left-handed pizzicato is generally less flexible pitch-wise than the right-handed technique, but allows the right hand to either stay where it is or simultaneously play, a technique composer and violinist Niccolo Paganini was renowned for.",
+            "wiki"
+          ],
+          [
+            "When playing with a fixed-pitch instrument such as a piano or accordion, the violinist must tune to accommodate that instrument.",
+            "wiki"
+          ],
+          [
+            "A good example of scordatura in classical solo violin repertoire is Paganini's First Violin Concerto in E-flat major, where the violin part is written in D-major and the violinist is supposed to tune a half tone higher to match the orchestra's key of E-flat major.",
+            "wiki"
+          ]
+        ]
+      }
+    },
+    "category_shared_scrap_area": [
+      {
+        "source_tag": "wiki",
+        "scrap_area_type": "wiki_urls",
+        "scrap_area_specification": [
+          "https://en.wikipedia.org/wiki/Lists_of_violinists",
+          "https://en.wikipedia.org/wiki/List_of_classical_violinists",
+          "https://en.wikipedia.org/wiki/List_of_electric_violinists",
+          "https://en.wikipedia.org/wiki/List_of_popular_music_violinists",
+          "https://en.wikipedia.org/wiki/Violin",
+          "https://en.wikipedia.org/wiki/Violin_technique"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,325 @@
+[
+  {
+    "category": "violinist",
+    "domain": "profession",
+    "keywords": {
+      "Abolhasan Saba": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Abolhasan_Saba"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "Ali-Naqi Vaziri": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Ali-Naqi_Vaziri"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "Ali Tajvidi": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Ali_Tajvidi"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "The Kamkars": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/The_Kamkars"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "Bijan Mortazavi": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Bijan_Mortazavi"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "Homayoun Khorram": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Homayoun_Khorram"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "Khachik Babayan": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Khachik_Babayan"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "Mahmoud Zoufonoun": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Mahmoud_Zoufonoun"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "Mojtaba Mirzadeh": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Mojtaba_Mirzadeh"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "Parviz Yahaghi": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Parviz_Yahaghi"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "Reza Mahjubi": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Reza_Mahjubi"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "Ruhollah Khaleqi": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Ruhollah_Khaleqi"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "Shahrdad Rohani": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Shahrdad_Rohani"
+            ]
+          }
+        ],
+        "scrapped_sentences": []
+      },
+      "violinist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The lowest note of a violin, tuned normally, is G3, or G below middle C (C4). (On rare occasions, the lowest string may be tuned down by as much as a fourth, to D3.) The highest note playable is less well defined: E7, the E two octaves above the open string (which is tuned to E5) may be considered a practical limit for orchestral violin parts, but it is often possible to play higher, depending on the length of the fingerboard and the skill of the violinist.",
+            "wiki"
+          ],
+          [
+            "Through practice of scales and arpeggios and ear training, the violinist's left hand eventually \"finds\" the notes intuitively by muscle memory.",
+            "wiki"
+          ],
+          [
+            "For example, when playing the stopped pitch \"A\" on the G string, the violinist could play the open D string at the same time, to check the intonation of the stopped \"A\".",
+            "wiki"
+          ],
+          [
+            "Even without an explicit instructions in the score, an advanced violinist will use her/his discretion and artistic sensibility to select which string to play specific notes or passages.",
+            "wiki"
+          ],
+          [
+            "Some classical violin parts have notes for which the composer requests the violinist to play an open string, because of the specific sonority created by an open string.",
+            "wiki"
+          ],
+          [
+            "Where three or four simultaneous notes are indicated, the violinist will typically \"split\" the chord, choosing the lower one or two notes to play first before immediately continuing onto the upper one or two notes, with the natural resonance of the instrument producing an effect similar to if all four notes had been voiced simultaneously.",
+            "wiki"
+          ],
+          [
+            "The bow will not naturally strike three strings at once, but if there is sufficient bow speed and pressure when the violinist \"breaks\" (sounds) a three note chord, the bow hair can be bent temporarily onto three strings, allowing each to sound simultaneously.",
+            "wiki"
+          ],
+          [
+            "This can be an obstacle to a classically trained violinist wishing to play in a style that uses little or no vibrato at all, such as baroque music played in period style and many traditional fiddling styles.",
+            "wiki"
+          ],
+          [
+            "Vibrato is, in a large part, left to the discretion of the violinist.",
+            "wiki"
+          ],
+          [
+            "In some cases, the violinist will pluck strings with the left hand.",
+            "wiki"
+          ],
+          [
+            "The Swiss-Cuban violinist Yilian Ca\u00f1izares mixes jazz with Cuban music.",
+            "wiki"
+          ],
+          [
+            "Dave Matthews Band features violinist Boyd Tinsley.",
+            "wiki"
+          ],
+          [
+            "The Flock featured violinist Jerry Goodman who later joined the jazz-rock fusion band, The Mahavishnu Orchestra.",
+            "wiki"
+          ],
+          [
+            "James' Saul Davies, who is also a guitarist, was enlisted by the band as a violinist.",
+            "wiki"
+          ],
+          [
+            "If held properly under the chin, the violinist can let go of the instrument with their hands and it will stay there firmly.",
+            "wiki"
+          ],
+          [
+            "Another method sometimes used to increase volume is using greater bow speed; however, a violinist can increase bow speed and still play softly at the same time.",
+            "wiki"
+          ],
+          [
+            "This position is especially helpful when the composer alternates between series of arco and pizzicato notes, because it allows the violinist to quickly and accurately switch styles.",
+            "wiki"
+          ],
+          [
+            "Left-handed pizzicato is generally less flexible pitch-wise than the right-handed technique, but allows the right hand to either stay where it is or simultaneously play, a technique composer and violinist Niccolo Paganini was renowned for.",
+            "wiki"
+          ],
+          [
+            "When playing with a fixed-pitch instrument such as a piano or accordion, the violinist must tune to accommodate that instrument.",
+            "wiki"
+          ],
+          [
+            "A good example of scordatura in classical solo violin repertoire is Paganini's First Violin Concerto in E-flat major, where the violin part is written in D-major and the violinist is supposed to tune a half tone higher to match the orchestra's key of E-flat major.",
+            "wiki"
+          ]
+        ]
+      }
+    },
+    "category_shared_scrap_area": [
+      {
+        "source_tag": "wiki",
+        "scrap_area_type": "wiki_urls",
+        "scrap_area_specification": [
+          "https://en.wikipedia.org/wiki/Lists_of_violinists",
+          "https://en.wikipedia.org/wiki/List_of_classical_violinists",
+          "https://en.wikipedia.org/wiki/List_of_electric_violinists",
+          "https://en.wikipedia.org/wiki/List_of_popular_music_violinists",
+          "https://en.wikipedia.org/wiki/Violin",
+          "https://en.wikipedia.org/wiki/Violin_technique"
+        ]
+      }
+    ]
+  }
+]

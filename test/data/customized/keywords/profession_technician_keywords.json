@@ -15,6 +15,42 @@
         ],
         "scrap_mode": "in_page",
         "scrap_shared_area": "Yes"
+      },
+      "technical": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "technology": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "electronics": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "repair": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "machinery": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "machines": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
       }
     }
   }

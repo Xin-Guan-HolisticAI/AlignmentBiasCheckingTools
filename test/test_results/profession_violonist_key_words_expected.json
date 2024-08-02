@@ -1,0 +1,216 @@
+[
+  {
+    "category": "violinist",
+    "domain": "profession",
+    "keywords": {
+      "Abolhasan Saba": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Abolhasan_Saba"
+            ]
+          }
+        ]
+      },
+      "Ali-Naqi Vaziri": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Ali-Naqi_Vaziri"
+            ]
+          }
+        ]
+      },
+      "Ali Tajvidi": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Ali_Tajvidi"
+            ]
+          }
+        ]
+      },
+      "The Kamkars": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/The_Kamkars"
+            ]
+          }
+        ]
+      },
+      "Bijan Mortazavi": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Bijan_Mortazavi"
+            ]
+          }
+        ]
+      },
+      "Homayoun Khorram": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Homayoun_Khorram"
+            ]
+          }
+        ]
+      },
+      "Khachik Babayan": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Khachik_Babayan"
+            ]
+          }
+        ]
+      },
+      "Mahmoud Zoufonoun": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Mahmoud_Zoufonoun"
+            ]
+          }
+        ]
+      },
+      "Mojtaba Mirzadeh": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Mojtaba_Mirzadeh"
+            ]
+          }
+        ]
+      },
+      "Parviz Yahaghi": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Parviz_Yahaghi"
+            ]
+          }
+        ]
+      },
+      "Reza Mahjubi": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Reza_Mahjubi"
+            ]
+          }
+        ]
+      },
+      "Ruhollah Khaleqi": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Ruhollah_Khaleqi"
+            ]
+          }
+        ]
+      },
+      "Shahrdad Rohani": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org/wiki/Shahrdad_Rohani"
+            ]
+          }
+        ]
+      },
+      "violinist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      }
+    }
+  }
+]

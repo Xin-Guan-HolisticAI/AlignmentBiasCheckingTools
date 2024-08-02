@@ -1,10 +1,12 @@
 import json
+import logging
 import yaml
 import requests
 import backoff
 from openai import AzureOpenAI
 import http.client
 import ollama
+import httpx
 
 class ContentFormatter:
     @staticmethod
@@ -78,26 +80,38 @@ class OllamaModel:
 
     def model_create(self, model_name, system_prompt):
         modelfile = f'FROM llama3\nSYSTEM {system_prompt} \n'
-        # print(modelfile)
-        ollama.create(model=model_name, modelfile=modelfile)
+        try:
+            ollama.create(model=model_name, modelfile=modelfile)
+            logging.info("Model created successfully.")
+        except httpx.RequestError as e:
+            logging.error(f"An error occurred while creating the model: {e}")
 
-    def invoke(self, prompt, mode = 'normal'):
-        if mode == 'bin_classification':
-            error = 0
-            while True:
+    def invoke(self, prompt, mode='normal'):
+        try:
+            if mode == 'bin_classification':
+                error = 0
+                while True:
+                    answer = ollama.generate(model=self.model_name, prompt=prompt)
+                    if 'response' in answer:
+                        logging.info(f"Received response: {answer['response']}")
+                        if answer['response'].lower().startswith('yes'):
+                            return 1
+                        elif answer['response'].lower().startswith('no'):
+                            return 0
+                        else:
+                            error += 1
+                    else:
+                        error += 1
+                    if error > 10:
+                        return -1
+            else:
                 answer = ollama.generate(model=self.model_name, prompt=prompt)
-                print(answer['response'])
-                if answer['response'].lower().startswith('yes'):
-                    return 1
-                elif answer['response'].lower().startswith('no'):
-                    return 0
-                else:
-                    error += 1
-                if error > 10:
-                    return -1
-        else:
-            answer = ollama.generate(model=self.model_name, prompt=prompt)
-            return answer['response']
+                response = answer.get('response', 'No response received')
+                logging.info(f"Received response: {response}")
+                return response
+        except httpx.RequestError as e:
+            logging.error(f"An error occurred during invocation: {e}")
+            return 'Error occurred'
 
 if __name__ == '__main__':
     agents = {

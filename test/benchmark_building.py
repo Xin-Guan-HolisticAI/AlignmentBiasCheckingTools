@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import re
 import glob
 
+from assistants import OllamaModel
 import wikipediaapi
 import json
 from sentence_transformers import SentenceTransformer, util
@@ -355,6 +356,7 @@ class KeywordFinder:
             raise f"Page not Found: {e}"
 
         if isinstance(page_content, str) and page_content.startswith("No Wikipedia page found"):
+            print("No wiki")
             return page_content
 
         # Tokenize the Wikipedia page content
@@ -363,14 +365,14 @@ class KeywordFinder:
 
         # Get unique tokens
         unique_tokens = list(set(tokens))
-        # print("Unique Tokens:", unique_tokens)
+        print("Unique Tokens:", unique_tokens)
 
         # Get embeddings for unique tokens
         embeddings = {}
         token_embeddings = model.encode(unique_tokens, show_progress_bar=True)
         for token, embedding in zip(unique_tokens, token_embeddings):
             embeddings[token] = embedding
-        # print("Embeddings:", {k: v[:5] for k, v in embeddings.items()})  # Printing first 5 values for brevity
+        print("Embeddings:", {k: v[:5] for k, v in embeddings.items()})  # Printing first 5 values for brevity
 
         # # Find most similar words to the keyword
         # if keyword not in embeddings:
@@ -380,23 +382,48 @@ class KeywordFinder:
         similarities = {}
         for token, embedding in tqdm(embeddings.items(), desc="Calculating similarities"):
             similarities[token] = util.pytorch_cos_sim(keyword_embedding, embedding).item()
+        
+        MAX_ADJUSTMENT = 150
+        ADDITIONAL_ITEMS = 20
 
-        # Sort tokens by similarity score
-        if n_keywords + 150 > len(similarities) / 2:
-            n_keywords = int(len(similarities) / 2) - 151
+        # Ensure n_keywords is non-negative and within valid range. Adjusts n_keywords accordingly
+        if n_keywords + MAX_ADJUSTMENT > len(similarities) / 2:
+            n_keywords = max(int(len(similarities) / 2) - MAX_ADJUSTMENT - 1, 0)
 
-        similar_words_first_pass = sorted(similarities.items(), key=lambda item: item[1], reverse=True)[
-                                   :n_keywords * 2 + 20]
+        print("Adjusted n_keywords:")
+        print(n_keywords)
+
+        # Sort tokens by similarity score and select top candidates
+        sorted_similarities = sorted(similarities.items(), key=lambda item: item[1], reverse=True)
+
+        # Ensure not to exceed the available number of items
+        num_items_to_select = min(len(sorted_similarities), n_keywords * 2 + ADDITIONAL_ITEMS)
+        similar_words_first_pass = sorted_similarities[:num_items_to_select]
+
+        # Convert to dictionary
         words_dict = dict(similar_words_first_pass)
+
+        # Construct non-containing set
         non_containing_set = construct_non_containing_set(words_dict.keys())
+
+        # Filter based on non-containing set
         similar_words_dict = {k: v for k, v in words_dict.items() if k in non_containing_set}
-        self.keywords = sorted(similar_words_dict, key=lambda k: similar_words_dict[k], reverse=True)[
-                        :min(n_keywords, len(similar_words_dict))]
+
+        print("Filtered Similar Words Dictionary:")
+        print(similar_words_dict)
+
+        # Select top keywords
+        self.keywords = sorted(similar_words_dict, key=lambda k: similar_words_dict[k], reverse=True)[:min(n_keywords, len(similar_words_dict))]
+
+        print("Top Keywords:")
+        print(self.keywords)
+
+        # Set mode and return processed data
         self.finder_mode = "embedding"
         return self.keywords_to_abcData()
     
     def find_name_keywords_by_hyperlinks_on_wiki(self, format='Paragraph', link=None, page_name=None, name_filter=False,
-                                                 col_info=None, depth=None, source_tag='default'):
+                                                 col_info=None, depth=1, source_tag='default'):
 
         def complete_link_page_name_pair(link, page_name, wiki_html):
             def extract_title_from_url(url):
@@ -408,7 +435,7 @@ class KeywordFinder:
                     return title
                 else:
                     return None
-
+                
             if page_name == None:
                 page_name = extract_title_from_url(link)
                 return link, page_name
@@ -691,7 +718,6 @@ class ScrapAreaFinder:
         main_page = search_wikipedia(topic, language=language, user_agent=user_agent)
 
         if isinstance(main_page, str):
-            print(main_page)
             return self.scrap_area_to_abcData()
         else:
             print(f"Found Wikipedia page: {main_page.title}")
@@ -1012,7 +1038,8 @@ class BenchmarkBuilding:
         'keyword_finder': {
             'require': True,
             'reading_location': 'default',
-            'method': 'embedding_on_wiki',  # 'embedding_on_wiki' or 'llm_templates' or 'hyperlinks_on_wiki'
+            'method': 'embedding_on_wiki',  # 'embedding_on_wiki' or 'llm_inquiries' or 'hyperlinks_on_wiki'
+            'page_name_or_link': None, # if hyperlinks_on_wiki is chosen, page_name or link must be provided
             'keyword_number': 7,
             'embedding_model': 'paraphrase-Mpnet-base-v2',
             'saving': True,
@@ -1056,15 +1083,22 @@ class BenchmarkBuilding:
         Returns:
         - dict: The updated configuration dictionary.
         """
+        print(updated_configuration)
+        print("\n")
+        print(default_configuration)
+        print("\n")
         for key, value in updated_configuration.items():
             if key in default_configuration:
                 if isinstance(default_configuration[key], dict) and isinstance(value, dict):
+                    print("recursive")
                     # Recursively update nested dictionaries
                     default_configuration[key] = BenchmarkBuilding.update_configuration(default_configuration[key],
                                                                                         value)
                 else:
                     # Update the value for the key
                     default_configuration[key] = value
+        
+        print(default_configuration)
         return default_configuration
 
     @classmethod
@@ -1077,6 +1111,7 @@ class BenchmarkBuilding:
         keyword_finder_require = configuration['keyword_finder']['require']
         keyword_finder_reading_location = configuration['keyword_finder']['reading_location']
         keyword_finder_method = configuration['keyword_finder']['method']
+        keyword_finder_page_name_or_link = configuration['keyword_finder']['page_name_or_link']
         keyword_finder_keyword_number = configuration['keyword_finder']['keyword_number']
         keyword_finder_embedding_model = configuration['keyword_finder']['embedding_model']
         keyword_finder_saving = configuration['keyword_finder']['saving']
@@ -1131,7 +1166,7 @@ class BenchmarkBuilding:
                     keyword=demographic_label)
             elif keyword_finder_method == 'hyperlinks_on_wiki':
                 kw = KeywordFinder(domain=domain,
-                                   category=demographic_label).find_name_keywords_by_hyperlinks_on_wiki().add(
+                                   category=demographic_label).find_name_keywords_by_hyperlinks_on_wiki(page_name=keyword_finder_page_name_or_link).add(
                     keyword=demographic_label)
             print('Keywords found.')
 
@@ -1148,6 +1183,7 @@ class BenchmarkBuilding:
                                        data_tier='keywords')
                 print(f'Keywords loaded from data/customized/keywords/{domain}_{demographic_label}_keywords.json')
             else:
+                print(keyword_finder_reading_location)
                 kw = abcData.load_file(domain=domain, category=demographic_label,
                                        file_path=keyword_finder_reading_location, data_tier='keywords')
                 print(f'Keywords loaded from {keyword_finder_reading_location}')
@@ -1198,13 +1234,14 @@ class BenchmarkBuilding:
                 sc = abcData.load_file(domain=domain, category=demographic_label,
                                        file_path=f'data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json',
                                        data_tier='scrapped_sentences')
-                print(f'Scrapped sentences loaded from data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json')
+                if (sc!=None): print(f'Scrapped sentences loaded from data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json')
             else:
                 sc = abcData.load_file(domain=domain, category=demographic_label, file_path=scrapper_reading_location,
                                        data_tier='scrapped_sentences')
-                print(f'Scrapped sentences loaded from {scrapper_reading_location}')
+                if (sc!=None): print(f'Scrapped sentences loaded from {scrapper_reading_location}')
 
-        if prompt_maker_method == 'split_sentences':
+        if prompt_maker_method == 'split_sentences' and sc !=None:
+            print(prompt_maker_saving_location)
             pm = PromptMaker(sc).split_sentences()
             if prompt_maker_saving_location == 'default':
                 pm.save()
@@ -1212,13 +1249,4 @@ class BenchmarkBuilding:
                 pm.save(file_path=prompt_maker_saving_location)
             print(f'Benchmark building for {demographic_label} completed.')
 
-
-if __name__ == '__main__':
-
-    configuration = {
-        'scrapper': {
-            'require': False,
-        },
-    }
-    BenchmarkBuilding.category_pipeline('profession', 'technician', configuration)
 
