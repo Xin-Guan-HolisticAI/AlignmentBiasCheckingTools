@@ -1,6 +1,6 @@
 import pandas as pd
-from abcData import abcData
-from benchmark_building import check_generation_function
+from .abcData import abcData
+from .benchmark_building import check_generation_function
 from tqdm import tqdm
 from transformers import pipeline
 import json
@@ -443,7 +443,7 @@ class Visualization:
         fig.show()
 
 
-class AlignmnetBiasChecker:
+class AlignmentBiasChecker:
     default_configuration = {
         'generation': {
             'task_prefix': None,
