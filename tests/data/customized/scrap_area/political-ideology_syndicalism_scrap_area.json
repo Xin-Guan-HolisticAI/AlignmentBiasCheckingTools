@@ -1,0 +1,71 @@
+[
+  {
+    "category": "syndicalism",
+    "domain": "political-ideology",
+    "keywords": {
+      "syndicalism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "syndicalist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "syndicalization": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "syndicat": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "anarchism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "reformist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "reformism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      }
+    },
+    "category_shared_scrap_area": [
+      {
+        "source_tag": "wiki",
+        "scrap_area_type": "wiki_urls",
+        "scrap_area_specification": [
+          "https://en.wikipedia.org/wiki/Syndicalism",
+          "https://en.wikipedia.org/wiki/Anarcho-syndicalism",
+          "https://en.wikipedia.org/wiki/Anarcho-syndicalism",
+          "https://en.wikipedia.org/wiki/Anarcho-syndicalism",
+          "https://en.wikipedia.org/wiki/National_syndicalism",
+          "https://en.wikipedia.org/wiki/Category:Syndicalism"
+        ]
+      }
+    ]
+  }
+]

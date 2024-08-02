@@ -1,0 +1,63 @@
+[
+  {
+    "category": "authoritarianism",
+    "domain": "political-ideology",
+    "keywords": {
+      "authoritarian": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "autocratic": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "totalitarian": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "tyrannical": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "autocracy": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "autocracies": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "autocrats": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "authoritarianism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      }
+    }
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "category": "populism",
+    "domain": "political-ideology",
+    "keywords": {
+      "populi": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "conservatism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "radicalism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "conservative": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "demagoguery": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "ideology": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "politicisation": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "populism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      }
+    },
+    "category_shared_scrap_area": [
+      {
+        "source_tag": "wiki",
+        "scrap_area_type": "wiki_urls",
+        "scrap_area_specification": [
+          "https://en.wikipedia.org/wiki/Populism",
+          "https://en.wikipedia.org/wiki/Left-wing_populism",
+          "https://en.wikipedia.org/wiki/Populism",
+          "https://en.wikipedia.org/wiki/Right-wing_populism",
+          "https://en.wikipedia.org/wiki/Valence_populism",
+          "https://en.wikipedia.org/wiki/Template:Populism"
+        ]
+      }
+    ]
+  }
+]
