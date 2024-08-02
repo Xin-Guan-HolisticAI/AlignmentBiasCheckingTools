@@ -1,0 +1,3053 @@
+[
+  {
+    "category": "environmentalism",
+    "domain": "political-ideology",
+    "keywords": {
+      "sustainability": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "At its crux, environmentalism is an attempt to balance relations between humans and the various natural systems on which they depend in such a way that all the components are accorded a proper degree of sustainability.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "Notable advocates for environmental protection and sustainability include:",
+            "wiki"
+          ],
+          [
+            "It is becoming an increasingly important force for global sustainability.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "As Mart\u00ednez Alier argues, they assert that \u2018'technical change will make the production of commodities compatible with ecological sustainability\u2019\u2019, thus emphasizing \u2018\u2019the preservation of that part of Nature which is still outside the economy\u2019\u2019.",
+            "wiki"
+          ]
+        ]
+      },
+      "greenpeace": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "At its crux, environmentalism is an attempt to balance relations between humans and the various natural systems on which they depend in such a way that all the components are accorded a proper degree of sustainability.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "Notable advocates for environmental protection and sustainability include:",
+            "wiki"
+          ],
+          [
+            "New pressure groups formed, notably Greenpeace and Friends of the Earth (US), as well as notable local organisations such as the Wyoming Outdoor Council, which was founded in 1967.",
+            "wiki"
+          ],
+          [
+            "More radical organisations, such as Greenpeace, Earth First!, and the Earth Liberation Front, have more directly opposed actions they regard as environmentally harmful.",
+            "wiki"
+          ],
+          [
+            "While Greenpeace is devoted to nonviolent confrontation as a means of bearing witness to environmental wrongs and bringing issues into the public realm for debate, the underground Earth Liberation Front engages in the clandestine destruction of property, the release of caged or penned animals, and other criminal acts.",
+            "wiki"
+          ],
+          [
+            "It is becoming an increasingly important force for global sustainability.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "As Mart\u00ednez Alier argues, they assert that \u2018'technical change will make the production of commodities compatible with ecological sustainability\u2019\u2019, thus emphasizing \u2018\u2019the preservation of that part of Nature which is still outside the economy\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "While many people believe that the first significant radical environmentalist group was Greenpeace, which made use of direct action beginning in the 1970s to confront whaling ships and nuclear weapons testers, others within the movement, argues as Earth Liberation Front (ELF) prisoner Jeff \"Free\" Luers, suggests that the movement was established centuries ago.",
+            "wiki"
+          ]
+        ]
+      },
+      "environment": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "At its crux, environmentalism is an attempt to balance relations between humans and the various natural systems on which they depend in such a way that all the components are accorded a proper degree of sustainability.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "Notable advocates for environmental protection and sustainability include:",
+            "wiki"
+          ],
+          [
+            "New pressure groups formed, notably Greenpeace and Friends of the Earth (US), as well as notable local organisations such as the Wyoming Outdoor Council, which was founded in 1967.",
+            "wiki"
+          ],
+          [
+            "More radical organisations, such as Greenpeace, Earth First!, and the Earth Liberation Front, have more directly opposed actions they regard as environmentally harmful.",
+            "wiki"
+          ],
+          [
+            "While Greenpeace is devoted to nonviolent confrontation as a means of bearing witness to environmental wrongs and bringing issues into the public realm for debate, the underground Earth Liberation Front engages in the clandestine destruction of property, the release of caged or penned animals, and other criminal acts.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and improvement of the natural environment and critical earth system elements or processes such as the climate, and may be referred to as a movement to control pollution or protect plant and animal diversity.",
+            "wiki"
+          ],
+          [
+            "An environmentalist is a person who may speak out about our natural environment and the sustainable management of its resources through changes in public policy or individual behaviour.",
+            "wiki"
+          ],
+          [
+            "In general terms, environmentalists advocate the sustainable management of resources, and the protection (and restoration, when necessary) of the natural environment through changes in public policy and individual behaviour.",
+            "wiki"
+          ],
+          [
+            "Jainism offers a view that is in many ways compatible with core values associated with environmental activism, such as the protection of life by nonviolence, which could form a strong ecological ethos for global protection of the environment.",
+            "wiki"
+          ],
+          [
+            "Early interest in the environment was a feature of the Romantic movement in the early 19th century.",
+            "wiki"
+          ],
+          [
+            "One of the earliest modern pronouncements on thinking about human industrial advancement and its influence on the environment was written by Japanese geographer, educator, philosopher and author Tsunesaburo Makiguchi in his 1903 publication Jinsei Chirigaku (A Geography of Human Life).",
+            "wiki"
+          ],
+          [
+            "Systematic efforts on behalf of the environment only began in the late 19th century; it grew out of the amenity movement in Britain in the 1870s, which was a reaction to industrialisation, the growth of cities, and worsening air and water pollution.",
+            "wiki"
+          ],
+          [
+            "It explained Leopold's belief that humankind should have moral respect for the environment and that it is unethical to harm it.",
+            "wiki"
+          ],
+          [
+            "Although this newfound self-awareness among Europeans about the destructive impacts of colonization on the environment did not halt the expansion of colonization itself, it did pave the way for a different approach to colonization \u2013 one focused on the preservation and protection of foreign natural resources.",
+            "wiki"
+          ],
+          [
+            "The book cataloged the environmental impacts of the indiscriminate spraying of DDT in the US and questioned the logic of releasing large amounts of chemicals into the environment without fully understanding their effects on human health and ecology.",
+            "wiki"
+          ],
+          [
+            "The book's legacy was to produce a far greater awareness of environmental issues and interest into how people affect the environment.",
+            "wiki"
+          ],
+          [
+            "With this new interest in environment came interest in problems such as air pollution and petroleum spills, and environmental interest grew.",
+            "wiki"
+          ],
+          [
+            "The first green party in Europe was the Popular Movement for the Environment, founded in 1972 in the Swiss canton of Neuch\u00e2tel.",
+            "wiki"
+          ],
+          [
+            "Protection of the environment also became important in the developing world; the Chipko movement was formed in India under the influence of Mhatmas Gandhi and they set up peaceful resistance to deforestation by literally hugging trees (leading to the term \"tree huggers\").",
+            "wiki"
+          ],
+          [
+            "The UN's first major conference on international environmental issues, the United Nations Conference on the Human Environment (also known as the Stockholm Conference), was held on 5\u201316 June 1972.",
+            "wiki"
+          ],
+          [
+            "Since 2005, the percentage of Americans agreeing that the environment should be given priority over economic growth has dropped 10 points; in contrast, those feeling that growth should be given priority \"even if the environment suffers to some extent\" has risen 12 percent.",
+            "wiki"
+          ],
+          [
+            "They have also created a network of autonomous community radio stations to educate people about dangers to the environment and inform the surrounding communities about new industrial projects that would destroy more land.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "On an international level, concern for the environment was the subject of a United Nations Conference on the Human Environment in Stockholm in 1972, attended by 114 nations.",
+            "wiki"
+          ],
+          [
+            "Out of this meeting developed the United Nations Environment Programme (UNEP) and the follow-up United Nations Conference on Environment and Development in 1992.",
+            "wiki"
+          ],
+          [
+            "Other international organisations in support of environmental policies development include the Commission for Environmental Cooperation (as part of NAFTA), the European Environment Agency (EEA), and the Intergovernmental Panel on Climate Change (IPCC).",
+            "wiki"
+          ],
+          [
+            "Nevertheless, there is a risk that the shift from emotional environmentalism into the technical management of natural resources and hazards could decrease the touch of humans with nature, leading to less concern with environment preservation.",
+            "wiki"
+          ],
+          [
+            "Others seek a balance that involves both caring deeply for the environment while letting science guide human actions affecting it.",
+            "wiki"
+          ],
+          [
+            "It is becoming an increasingly important force for global sustainability.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "As Mart\u00ednez Alier argues, they assert that \u2018'technical change will make the production of commodities compatible with ecological sustainability\u2019\u2019, thus emphasizing \u2018\u2019the preservation of that part of Nature which is still outside the economy\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "The conservation movement does try to limit the effects of economic activity on the natural environment.",
+            "wiki"
+          ],
+          [
+            "The main course of action proposed by conservationists is to separate economic activity and the environment, to limit the effects of the former on the latter.",
+            "wiki"
+          ],
+          [
+            "According to Joan Martinez Alier, some of the most prominent proponents of the \u2018gospel of ecoefficiency are Gifford Pinchot in the USA and the Wuppertal Institute for Climate, Environment and Energy in Europe.",
+            "wiki"
+          ],
+          [
+            "However, numerous case studies pointed out that poor people protect the environment against powerful interests to defend their livelihoods and cultures.",
+            "wiki"
+          ],
+          [
+            "In doing so, they protect their livelihoods, and this often means that they protect traditional ways of life that have coevolved in equilibrium with the environment, and that therefore are sustainable.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that poor people simply protecting their livelihoods are often on the side of resource conservation and a clean environment, although they may not claim to be environmentalists and may use other language to describe their agendas (such as sacredness, sovereignty, etc.).",
+            "wiki"
+          ],
+          [
+            "The basic assumption was that human activity as a whole was prejudicial to the environment.",
+            "wiki"
+          ],
+          [
+            "For example, poor people or indigenous people are deemed ignorant and incapable of respecting the environment; therefore, they are sometimes banned from accessing it.",
+            "wiki"
+          ],
+          [
+            "However, poor and indigenous people are not ignorant, and in fact are much more conscious of the necessity of biodiversity and the environment as a positive asset worthy of conservation.",
+            "wiki"
+          ],
+          [
+            "For example, poor farmers are often interested in preserving the environment and the soil because they know it is crucial for their material livelihood.",
+            "wiki"
+          ],
+          [
+            "In addition, indigenous people often want to preserve the value of the environment because they have spiritual connections with it, which is also crucial for their livelihood.",
+            "wiki"
+          ],
+          [
+            "It is rather used as a \u2018\u2019tool for conviviality\u2019\u2019, which Ivan Illich described as \u2018\u2019those which give each person who uses them the greatest opportunity to enrich the environment with the fruits of his or her vision\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "This can be seen either as an effort to minimize the impact of economic activities on the environment and society, or as an effort to optimize the costs of production to increase the benefit margin and increase the investment in new capital.",
+            "wiki"
+          ],
+          [
+            "An environmentalist is a person who is concerned with and/or advocates for the protection of the environment.",
+            "wiki"
+          ],
+          [
+            "An environmentalist can be considered a supporter of the goals of the environmental movement, \"a political and ethical movement that seeks to improve and protect the quality of the natural environment through changes to environmentally harmful human activities\".",
+            "wiki"
+          ],
+          [
+            "Conservationists are concerned with leaving the environment in a better state than the condition they found it distinct from human interaction.",
+            "wiki"
+          ],
+          [
+            "Environmental defenders or environmental human rights defenders are individuals or collectives who protect the environment from harms resulting from resource extraction, hazardous waste disposal, infrastructure projects, land appropriation, or other dangers.",
+            "wiki"
+          ],
+          [
+            "Use of the term is contested, as it homogenizes such a wide range of groups and campaigns, many of whom do not self-identify with the term and may not have explicit aims to protect the environment (being motivated primarily by social justice concerns).",
+            "wiki"
+          ],
+          [
+            "In recent years, there are not only environmentalists for natural environment but also environmentalists for human environment.",
+            "wiki"
+          ],
+          [
+            "Environmentalism \u2013 broad philosophy, ideology and social movement regarding concerns for environmental conservation and improvement of the health of the environment, particularly as the measure for this health seeks to incorporate the concerns of non-human elements.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and/or improvement of the natural environment, and may be referred to as a movement to control pollution.",
+            "wiki"
+          ],
+          [
+            "These topics relate to the anthropogenic effects on the natural environment:",
+            "wiki"
+          ],
+          [
+            "While many people believe that the first significant radical environmentalist group was Greenpeace, which made use of direct action beginning in the 1970s to confront whaling ships and nuclear weapons testers, others within the movement, argues as Earth Liberation Front (ELF) prisoner Jeff \"Free\" Luers, suggests that the movement was established centuries ago.",
+            "wiki"
+          ],
+          [
+            "Ecofeminism originated in the 1970s and draws a parallel between the oppression of women in patriarchal societies and the oppression of the environment.",
+            "wiki"
+          ],
+          [
+            "Social Ecology is an idea attributed to Murray Bookchin, who argued that in order to save the environment, human society needed to copy the structure of nature and decentralize both socially and economically.",
+            "wiki"
+          ]
+        ]
+      },
+      "pollution": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "At its crux, environmentalism is an attempt to balance relations between humans and the various natural systems on which they depend in such a way that all the components are accorded a proper degree of sustainability.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "Notable advocates for environmental protection and sustainability include:",
+            "wiki"
+          ],
+          [
+            "New pressure groups formed, notably Greenpeace and Friends of the Earth (US), as well as notable local organisations such as the Wyoming Outdoor Council, which was founded in 1967.",
+            "wiki"
+          ],
+          [
+            "More radical organisations, such as Greenpeace, Earth First!, and the Earth Liberation Front, have more directly opposed actions they regard as environmentally harmful.",
+            "wiki"
+          ],
+          [
+            "While Greenpeace is devoted to nonviolent confrontation as a means of bearing witness to environmental wrongs and bringing issues into the public realm for debate, the underground Earth Liberation Front engages in the clandestine destruction of property, the release of caged or penned animals, and other criminal acts.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and improvement of the natural environment and critical earth system elements or processes such as the climate, and may be referred to as a movement to control pollution or protect plant and animal diversity.",
+            "wiki"
+          ],
+          [
+            "An environmentalist is a person who may speak out about our natural environment and the sustainable management of its resources through changes in public policy or individual behaviour.",
+            "wiki"
+          ],
+          [
+            "In general terms, environmentalists advocate the sustainable management of resources, and the protection (and restoration, when necessary) of the natural environment through changes in public policy and individual behaviour.",
+            "wiki"
+          ],
+          [
+            "Jainism offers a view that is in many ways compatible with core values associated with environmental activism, such as the protection of life by nonviolence, which could form a strong ecological ethos for global protection of the environment.",
+            "wiki"
+          ],
+          [
+            "Early interest in the environment was a feature of the Romantic movement in the early 19th century.",
+            "wiki"
+          ],
+          [
+            "One of the earliest modern pronouncements on thinking about human industrial advancement and its influence on the environment was written by Japanese geographer, educator, philosopher and author Tsunesaburo Makiguchi in his 1903 publication Jinsei Chirigaku (A Geography of Human Life).",
+            "wiki"
+          ],
+          [
+            "Systematic efforts on behalf of the environment only began in the late 19th century; it grew out of the amenity movement in Britain in the 1870s, which was a reaction to industrialisation, the growth of cities, and worsening air and water pollution.",
+            "wiki"
+          ],
+          [
+            "It explained Leopold's belief that humankind should have moral respect for the environment and that it is unethical to harm it.",
+            "wiki"
+          ],
+          [
+            "Although this newfound self-awareness among Europeans about the destructive impacts of colonization on the environment did not halt the expansion of colonization itself, it did pave the way for a different approach to colonization \u2013 one focused on the preservation and protection of foreign natural resources.",
+            "wiki"
+          ],
+          [
+            "The book cataloged the environmental impacts of the indiscriminate spraying of DDT in the US and questioned the logic of releasing large amounts of chemicals into the environment without fully understanding their effects on human health and ecology.",
+            "wiki"
+          ],
+          [
+            "The book's legacy was to produce a far greater awareness of environmental issues and interest into how people affect the environment.",
+            "wiki"
+          ],
+          [
+            "With this new interest in environment came interest in problems such as air pollution and petroleum spills, and environmental interest grew.",
+            "wiki"
+          ],
+          [
+            "The first green party in Europe was the Popular Movement for the Environment, founded in 1972 in the Swiss canton of Neuch\u00e2tel.",
+            "wiki"
+          ],
+          [
+            "Protection of the environment also became important in the developing world; the Chipko movement was formed in India under the influence of Mhatmas Gandhi and they set up peaceful resistance to deforestation by literally hugging trees (leading to the term \"tree huggers\").",
+            "wiki"
+          ],
+          [
+            "The UN's first major conference on international environmental issues, the United Nations Conference on the Human Environment (also known as the Stockholm Conference), was held on 5\u201316 June 1972.",
+            "wiki"
+          ],
+          [
+            "Since 2005, the percentage of Americans agreeing that the environment should be given priority over economic growth has dropped 10 points; in contrast, those feeling that growth should be given priority \"even if the environment suffers to some extent\" has risen 12 percent.",
+            "wiki"
+          ],
+          [
+            "They have also created a network of autonomous community radio stations to educate people about dangers to the environment and inform the surrounding communities about new industrial projects that would destroy more land.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "On an international level, concern for the environment was the subject of a United Nations Conference on the Human Environment in Stockholm in 1972, attended by 114 nations.",
+            "wiki"
+          ],
+          [
+            "Out of this meeting developed the United Nations Environment Programme (UNEP) and the follow-up United Nations Conference on Environment and Development in 1992.",
+            "wiki"
+          ],
+          [
+            "Other international organisations in support of environmental policies development include the Commission for Environmental Cooperation (as part of NAFTA), the European Environment Agency (EEA), and the Intergovernmental Panel on Climate Change (IPCC).",
+            "wiki"
+          ],
+          [
+            "Nevertheless, there is a risk that the shift from emotional environmentalism into the technical management of natural resources and hazards could decrease the touch of humans with nature, leading to less concern with environment preservation.",
+            "wiki"
+          ],
+          [
+            "Others seek a balance that involves both caring deeply for the environment while letting science guide human actions affecting it.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and improvement of the natural environment and critical earth system elements or processes such as the climate, and may be referred to as a movement to control pollution or protect plant and animal diversity.",
+            "wiki"
+          ],
+          [
+            "In the Middle East, the Caliph Abu Bakr in the 630s AD commanded his army to \"Bring no harm to the trees, nor burn them with fire,\" and to \"Slay not any of the enemy's flock, save for your food.\" Various Arabic medical treatises during the 9th to 13th centuries dealt with environmentalism and environmental science, including the issue of pollution.",
+            "wiki"
+          ],
+          [
+            "Their works covered a number of subjects related to pollution, such as air pollution, water pollution, soil contamination, and the mishandling of municipal solid waste.",
+            "wiki"
+          ],
+          [
+            "Levels of air pollution rose during the Industrial Revolution, sparking the first modern environmental laws to be passed in the mid-19th century.",
+            "wiki"
+          ],
+          [
+            "The origins of the environmental movement lay in the response to increasing levels of smoke pollution in the atmosphere during the Industrial Revolution.",
+            "wiki"
+          ],
+          [
+            "The emergence of great factories and the concomitant immense growth in coal consumption gave rise to an unprecedented level of air pollution in industrial centers; after 1900 the large volume of industrial chemical discharges added to the growing load of untreated human waste.",
+            "wiki"
+          ],
+          [
+            "The first large-scale, modern environmental laws came in the form of Britain's Alkali Acts, passed in 1863, to regulate the deleterious air pollution (gaseous hydrochloric acid) given off by the Leblanc process, used to produce soda ash.",
+            "wiki"
+          ],
+          [
+            "An Alkali inspector and four sub-inspectors were appointed to curb this pollution.",
+            "wiki"
+          ],
+          [
+            "In industrial cities, local experts and reformers, especially after 1890, took the lead in identifying environmental degradation and pollution, and initiating grass-roots movements to demand and achieve reforms.",
+            "wiki"
+          ],
+          [
+            "Typically the highest priority went to water and air pollution.",
+            "wiki"
+          ],
+          [
+            "It was only under the impetus of the Great Smog of 1952 in London, which almost brought the city to a standstill and may have caused upward of 6,000 deaths, that the Clean Air Act 1956 was passed and airborne pollution in the city was first tackled.",
+            "wiki"
+          ],
+          [
+            "Once there was a link discovered between air pollution and tuberculosis, the CNT shut down several metal factories.",
+            "wiki"
+          ],
+          [
+            "Systematic efforts on behalf of the environment only began in the late 19th century; it grew out of the amenity movement in Britain in the 1870s, which was a reaction to industrialisation, the growth of cities, and worsening air and water pollution.",
+            "wiki"
+          ],
+          [
+            "An early \"Back-to-Nature\" movement, which anticipated the romantic ideal of modern environmentalism, was advocated by intellectuals such as John Ruskin, William Morris, George Bernard Shaw and Edward Carpenter, who were all against consumerism, pollution and other activities that were harmful to the natural world.",
+            "wiki"
+          ],
+          [
+            "The movement was a reaction to the urban conditions of the industrial towns, where sanitation was awful, pollution levels intolerable and housing terribly cramped.",
+            "wiki"
+          ],
+          [
+            "The concept of the Dauerwald (best translated as the \"perpetual forest\") which included concepts such as forest management and protection was promoted and efforts were also made to curb air pollution.",
+            "wiki"
+          ],
+          [
+            "After a focus on preserving wilderness in the 1950s and 1960s, the Sierra Club and other groups broadened their focus to include such issues as air and water pollution, population concern, and curbing the exploitation of natural resources.",
+            "wiki"
+          ],
+          [
+            "With this new interest in environment came interest in problems such as air pollution and petroleum spills, and environmental interest grew.",
+            "wiki"
+          ],
+          [
+            "Environmentalism continues to evolve to face up to new issues such as global warming, overpopulation, genetic engineering, and plastic pollution.",
+            "wiki"
+          ],
+          [
+            "Before the Syrian civil war, Rojava had been ecologically damaged by monoculture, oil extraction, damming of rivers, deforestation, drought, topsoil loss and general pollution.",
+            "wiki"
+          ],
+          [
+            "Environmentalism as a movement covers broad areas of institutional oppression, including for example: consumption of ecosystems and natural resources into waste, dumping waste into disadvantaged communities, air pollution, water pollution, weak infrastructure, exposure of organic life to toxins, mono-culture, anti-polythene drive (jhola movement) and various other focuses.",
+            "wiki"
+          ],
+          [
+            "It is becoming an increasingly important force for global sustainability.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "As Mart\u00ednez Alier argues, they assert that \u2018'technical change will make the production of commodities compatible with ecological sustainability\u2019\u2019, thus emphasizing \u2018\u2019the preservation of that part of Nature which is still outside the economy\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "The conservation movement does try to limit the effects of economic activity on the natural environment.",
+            "wiki"
+          ],
+          [
+            "The main course of action proposed by conservationists is to separate economic activity and the environment, to limit the effects of the former on the latter.",
+            "wiki"
+          ],
+          [
+            "According to Joan Martinez Alier, some of the most prominent proponents of the \u2018gospel of ecoefficiency are Gifford Pinchot in the USA and the Wuppertal Institute for Climate, Environment and Energy in Europe.",
+            "wiki"
+          ],
+          [
+            "However, numerous case studies pointed out that poor people protect the environment against powerful interests to defend their livelihoods and cultures.",
+            "wiki"
+          ],
+          [
+            "In doing so, they protect their livelihoods, and this often means that they protect traditional ways of life that have coevolved in equilibrium with the environment, and that therefore are sustainable.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that poor people simply protecting their livelihoods are often on the side of resource conservation and a clean environment, although they may not claim to be environmentalists and may use other language to describe their agendas (such as sacredness, sovereignty, etc.).",
+            "wiki"
+          ],
+          [
+            "The basic assumption was that human activity as a whole was prejudicial to the environment.",
+            "wiki"
+          ],
+          [
+            "For example, poor people or indigenous people are deemed ignorant and incapable of respecting the environment; therefore, they are sometimes banned from accessing it.",
+            "wiki"
+          ],
+          [
+            "However, poor and indigenous people are not ignorant, and in fact are much more conscious of the necessity of biodiversity and the environment as a positive asset worthy of conservation.",
+            "wiki"
+          ],
+          [
+            "For example, poor farmers are often interested in preserving the environment and the soil because they know it is crucial for their material livelihood.",
+            "wiki"
+          ],
+          [
+            "In addition, indigenous people often want to preserve the value of the environment because they have spiritual connections with it, which is also crucial for their livelihood.",
+            "wiki"
+          ],
+          [
+            "It is rather used as a \u2018\u2019tool for conviviality\u2019\u2019, which Ivan Illich described as \u2018\u2019those which give each person who uses them the greatest opportunity to enrich the environment with the fruits of his or her vision\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "This can be seen either as an effort to minimize the impact of economic activities on the environment and society, or as an effort to optimize the costs of production to increase the benefit margin and increase the investment in new capital.",
+            "wiki"
+          ],
+          [
+            "The \"gospel of eco-efficiency\", or \u2018scientific industrialism\u2019, originated with the 19th-century writings of Malthus and William Stanley Jevons and grew during the 20th century when the effects of pollution and resource exhaustion were more apparent.",
+            "wiki"
+          ],
+          [
+            "The gospel of eco-efficiency asks questions such as, \u2018\u2019How is pollution going to affect economic development?\u2019\u2019; \u2018\u2019How can we minimize pollution?\u2019\u2019; \u2018\u2019How can we remediate its consequences?\u2019\u2019; \u2018\u2019How can we minimize the consumption of resources?\u2019\u2019; and \u2018\u2019How can we turn waste into a resource?\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that, as the scale of the economy increases, \u2018poor people\u2019 are \u2018\u2019deprived of access to environmental resources and services, and they endure a disproportionate amount of pollution\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "Examples of environmentalism of the poor include the struggles against environmental racism in the United States,  urban air pollution, and struggles against mines and struggles for access to water, struggles forests, etc.",
+            "wiki"
+          ],
+          [
+            "For example, in urban settings, women are most likely to take action against the dumping of waste or other pollution, even if gendered hierarchies prevent their participation.",
+            "wiki"
+          ],
+          [
+            "Ecological distribution conflicts not only affect unevenly poor people in general, but also affect women more because of their closer relationship with Nature and pollution.",
+            "wiki"
+          ],
+          [
+            "For example, in locations that have implemented an efficient waste management program, environmental pollution has been effectively reduced.",
+            "wiki"
+          ],
+          [
+            "An environmentalist is a person who is concerned with and/or advocates for the protection of the environment.",
+            "wiki"
+          ],
+          [
+            "An environmentalist can be considered a supporter of the goals of the environmental movement, \"a political and ethical movement that seeks to improve and protect the quality of the natural environment through changes to environmentally harmful human activities\".",
+            "wiki"
+          ],
+          [
+            "Conservationists are concerned with leaving the environment in a better state than the condition they found it distinct from human interaction.",
+            "wiki"
+          ],
+          [
+            "Environmental defenders or environmental human rights defenders are individuals or collectives who protect the environment from harms resulting from resource extraction, hazardous waste disposal, infrastructure projects, land appropriation, or other dangers.",
+            "wiki"
+          ],
+          [
+            "Use of the term is contested, as it homogenizes such a wide range of groups and campaigns, many of whom do not self-identify with the term and may not have explicit aims to protect the environment (being motivated primarily by social justice concerns).",
+            "wiki"
+          ],
+          [
+            "In recent years, there are not only environmentalists for natural environment but also environmentalists for human environment.",
+            "wiki"
+          ],
+          [
+            "Environmentalism \u2013 broad philosophy, ideology and social movement regarding concerns for environmental conservation and improvement of the health of the environment, particularly as the measure for this health seeks to incorporate the concerns of non-human elements.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and/or improvement of the natural environment, and may be referred to as a movement to control pollution.",
+            "wiki"
+          ],
+          [
+            "These topics relate to the anthropogenic effects on the natural environment:",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and/or improvement of the natural environment, and may be referred to as a movement to control pollution.",
+            "wiki"
+          ],
+          [
+            "While many people believe that the first significant radical environmentalist group was Greenpeace, which made use of direct action beginning in the 1970s to confront whaling ships and nuclear weapons testers, others within the movement, argues as Earth Liberation Front (ELF) prisoner Jeff \"Free\" Luers, suggests that the movement was established centuries ago.",
+            "wiki"
+          ],
+          [
+            "Ecofeminism originated in the 1970s and draws a parallel between the oppression of women in patriarchal societies and the oppression of the environment.",
+            "wiki"
+          ],
+          [
+            "Social Ecology is an idea attributed to Murray Bookchin, who argued that in order to save the environment, human society needed to copy the structure of nature and decentralize both socially and economically.",
+            "wiki"
+          ]
+        ]
+      },
+      "conservation": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "At its crux, environmentalism is an attempt to balance relations between humans and the various natural systems on which they depend in such a way that all the components are accorded a proper degree of sustainability.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "Notable advocates for environmental protection and sustainability include:",
+            "wiki"
+          ],
+          [
+            "New pressure groups formed, notably Greenpeace and Friends of the Earth (US), as well as notable local organisations such as the Wyoming Outdoor Council, which was founded in 1967.",
+            "wiki"
+          ],
+          [
+            "More radical organisations, such as Greenpeace, Earth First!, and the Earth Liberation Front, have more directly opposed actions they regard as environmentally harmful.",
+            "wiki"
+          ],
+          [
+            "While Greenpeace is devoted to nonviolent confrontation as a means of bearing witness to environmental wrongs and bringing issues into the public realm for debate, the underground Earth Liberation Front engages in the clandestine destruction of property, the release of caged or penned animals, and other criminal acts.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and improvement of the natural environment and critical earth system elements or processes such as the climate, and may be referred to as a movement to control pollution or protect plant and animal diversity.",
+            "wiki"
+          ],
+          [
+            "An environmentalist is a person who may speak out about our natural environment and the sustainable management of its resources through changes in public policy or individual behaviour.",
+            "wiki"
+          ],
+          [
+            "In general terms, environmentalists advocate the sustainable management of resources, and the protection (and restoration, when necessary) of the natural environment through changes in public policy and individual behaviour.",
+            "wiki"
+          ],
+          [
+            "Jainism offers a view that is in many ways compatible with core values associated with environmental activism, such as the protection of life by nonviolence, which could form a strong ecological ethos for global protection of the environment.",
+            "wiki"
+          ],
+          [
+            "Early interest in the environment was a feature of the Romantic movement in the early 19th century.",
+            "wiki"
+          ],
+          [
+            "One of the earliest modern pronouncements on thinking about human industrial advancement and its influence on the environment was written by Japanese geographer, educator, philosopher and author Tsunesaburo Makiguchi in his 1903 publication Jinsei Chirigaku (A Geography of Human Life).",
+            "wiki"
+          ],
+          [
+            "Systematic efforts on behalf of the environment only began in the late 19th century; it grew out of the amenity movement in Britain in the 1870s, which was a reaction to industrialisation, the growth of cities, and worsening air and water pollution.",
+            "wiki"
+          ],
+          [
+            "It explained Leopold's belief that humankind should have moral respect for the environment and that it is unethical to harm it.",
+            "wiki"
+          ],
+          [
+            "Although this newfound self-awareness among Europeans about the destructive impacts of colonization on the environment did not halt the expansion of colonization itself, it did pave the way for a different approach to colonization \u2013 one focused on the preservation and protection of foreign natural resources.",
+            "wiki"
+          ],
+          [
+            "The book cataloged the environmental impacts of the indiscriminate spraying of DDT in the US and questioned the logic of releasing large amounts of chemicals into the environment without fully understanding their effects on human health and ecology.",
+            "wiki"
+          ],
+          [
+            "The book's legacy was to produce a far greater awareness of environmental issues and interest into how people affect the environment.",
+            "wiki"
+          ],
+          [
+            "With this new interest in environment came interest in problems such as air pollution and petroleum spills, and environmental interest grew.",
+            "wiki"
+          ],
+          [
+            "The first green party in Europe was the Popular Movement for the Environment, founded in 1972 in the Swiss canton of Neuch\u00e2tel.",
+            "wiki"
+          ],
+          [
+            "Protection of the environment also became important in the developing world; the Chipko movement was formed in India under the influence of Mhatmas Gandhi and they set up peaceful resistance to deforestation by literally hugging trees (leading to the term \"tree huggers\").",
+            "wiki"
+          ],
+          [
+            "The UN's first major conference on international environmental issues, the United Nations Conference on the Human Environment (also known as the Stockholm Conference), was held on 5\u201316 June 1972.",
+            "wiki"
+          ],
+          [
+            "Since 2005, the percentage of Americans agreeing that the environment should be given priority over economic growth has dropped 10 points; in contrast, those feeling that growth should be given priority \"even if the environment suffers to some extent\" has risen 12 percent.",
+            "wiki"
+          ],
+          [
+            "They have also created a network of autonomous community radio stations to educate people about dangers to the environment and inform the surrounding communities about new industrial projects that would destroy more land.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "On an international level, concern for the environment was the subject of a United Nations Conference on the Human Environment in Stockholm in 1972, attended by 114 nations.",
+            "wiki"
+          ],
+          [
+            "Out of this meeting developed the United Nations Environment Programme (UNEP) and the follow-up United Nations Conference on Environment and Development in 1992.",
+            "wiki"
+          ],
+          [
+            "Other international organisations in support of environmental policies development include the Commission for Environmental Cooperation (as part of NAFTA), the European Environment Agency (EEA), and the Intergovernmental Panel on Climate Change (IPCC).",
+            "wiki"
+          ],
+          [
+            "Nevertheless, there is a risk that the shift from emotional environmentalism into the technical management of natural resources and hazards could decrease the touch of humans with nature, leading to less concern with environment preservation.",
+            "wiki"
+          ],
+          [
+            "Others seek a balance that involves both caring deeply for the environment while letting science guide human actions affecting it.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and improvement of the natural environment and critical earth system elements or processes such as the climate, and may be referred to as a movement to control pollution or protect plant and animal diversity.",
+            "wiki"
+          ],
+          [
+            "In the Middle East, the Caliph Abu Bakr in the 630s AD commanded his army to \"Bring no harm to the trees, nor burn them with fire,\" and to \"Slay not any of the enemy's flock, save for your food.\" Various Arabic medical treatises during the 9th to 13th centuries dealt with environmentalism and environmental science, including the issue of pollution.",
+            "wiki"
+          ],
+          [
+            "Their works covered a number of subjects related to pollution, such as air pollution, water pollution, soil contamination, and the mishandling of municipal solid waste.",
+            "wiki"
+          ],
+          [
+            "Levels of air pollution rose during the Industrial Revolution, sparking the first modern environmental laws to be passed in the mid-19th century.",
+            "wiki"
+          ],
+          [
+            "The origins of the environmental movement lay in the response to increasing levels of smoke pollution in the atmosphere during the Industrial Revolution.",
+            "wiki"
+          ],
+          [
+            "The emergence of great factories and the concomitant immense growth in coal consumption gave rise to an unprecedented level of air pollution in industrial centers; after 1900 the large volume of industrial chemical discharges added to the growing load of untreated human waste.",
+            "wiki"
+          ],
+          [
+            "The first large-scale, modern environmental laws came in the form of Britain's Alkali Acts, passed in 1863, to regulate the deleterious air pollution (gaseous hydrochloric acid) given off by the Leblanc process, used to produce soda ash.",
+            "wiki"
+          ],
+          [
+            "An Alkali inspector and four sub-inspectors were appointed to curb this pollution.",
+            "wiki"
+          ],
+          [
+            "In industrial cities, local experts and reformers, especially after 1890, took the lead in identifying environmental degradation and pollution, and initiating grass-roots movements to demand and achieve reforms.",
+            "wiki"
+          ],
+          [
+            "Typically the highest priority went to water and air pollution.",
+            "wiki"
+          ],
+          [
+            "It was only under the impetus of the Great Smog of 1952 in London, which almost brought the city to a standstill and may have caused upward of 6,000 deaths, that the Clean Air Act 1956 was passed and airborne pollution in the city was first tackled.",
+            "wiki"
+          ],
+          [
+            "Once there was a link discovered between air pollution and tuberculosis, the CNT shut down several metal factories.",
+            "wiki"
+          ],
+          [
+            "Systematic efforts on behalf of the environment only began in the late 19th century; it grew out of the amenity movement in Britain in the 1870s, which was a reaction to industrialisation, the growth of cities, and worsening air and water pollution.",
+            "wiki"
+          ],
+          [
+            "An early \"Back-to-Nature\" movement, which anticipated the romantic ideal of modern environmentalism, was advocated by intellectuals such as John Ruskin, William Morris, George Bernard Shaw and Edward Carpenter, who were all against consumerism, pollution and other activities that were harmful to the natural world.",
+            "wiki"
+          ],
+          [
+            "The movement was a reaction to the urban conditions of the industrial towns, where sanitation was awful, pollution levels intolerable and housing terribly cramped.",
+            "wiki"
+          ],
+          [
+            "The concept of the Dauerwald (best translated as the \"perpetual forest\") which included concepts such as forest management and protection was promoted and efforts were also made to curb air pollution.",
+            "wiki"
+          ],
+          [
+            "After a focus on preserving wilderness in the 1950s and 1960s, the Sierra Club and other groups broadened their focus to include such issues as air and water pollution, population concern, and curbing the exploitation of natural resources.",
+            "wiki"
+          ],
+          [
+            "With this new interest in environment came interest in problems such as air pollution and petroleum spills, and environmental interest grew.",
+            "wiki"
+          ],
+          [
+            "Environmentalism continues to evolve to face up to new issues such as global warming, overpopulation, genetic engineering, and plastic pollution.",
+            "wiki"
+          ],
+          [
+            "Before the Syrian civil war, Rojava had been ecologically damaged by monoculture, oil extraction, damming of rivers, deforestation, drought, topsoil loss and general pollution.",
+            "wiki"
+          ],
+          [
+            "Environmentalism as a movement covers broad areas of institutional oppression, including for example: consumption of ecosystems and natural resources into waste, dumping waste into disadvantaged communities, air pollution, water pollution, weak infrastructure, exposure of organic life to toxins, mono-culture, anti-polythene drive (jhola movement) and various other focuses.",
+            "wiki"
+          ],
+          [
+            "This may include supporting practices such as informed consumption, conservation initiatives, investment in renewable resources, improved efficiencies in the materials economy, transitioning to new accounting paradigms such as ecological economics, renewing and revitalizing our connections with non-human life or even opting to have one less child to reduce consumption and pressure on resources.",
+            "wiki"
+          ],
+          [
+            "The late 19th century also saw the passage of the first wildlife conservation laws.",
+            "wiki"
+          ],
+          [
+            "John Ruskin, an influential thinker who articulated the Romantic ideal of environmental protection and conservation",
+            "wiki"
+          ],
+          [
+            "Peter Kropotkin wrote about ecology in economics, agricultural science, conservation, ethology, criminology, urban planning, geography, geology and biology.",
+            "wiki"
+          ],
+          [
+            "In 1893 Hill, Hunter and Rawnsley agreed to set up a national body to coordinate environmental conservation efforts across the country; the \"National Trust for Places of Historic Interest or Natural Beauty\" was formally inaugurated in 1894.",
+            "wiki"
+          ],
+          [
+            "The garden city movement incorporated many environmental concerns into its urban planning manifesto; the Socialist League and The Clarion movement also began to advocate measures of nature conservation.",
+            "wiki"
+          ],
+          [
+            "The book is sometimes called the most influential book on conservation.",
+            "wiki"
+          ],
+          [
+            "The powerful use of photography in addition to the written word for conservation dated back to the creation of Yosemite National Park, when photographs persuaded Abraham Lincoln to preserve the beautiful glacier carved landscape for all time.",
+            "wiki"
+          ],
+          [
+            "In terms of conservation efforts, there is a widespread view that the conservation movement began as a predominantly elite concern in North America, focusing on the preservation of local natural areas.",
+            "wiki"
+          ],
+          [
+            "The environmental movement (a term that sometimes includes the conservation and green movements) is a diverse scientific, social, and political movement.",
+            "wiki"
+          ],
+          [
+            "Federal Register documents and literature related to US environmental regulations, including the Resource Conservation and Recovery Act (RCRA), 1987",
+            "wiki"
+          ],
+          [
+            "Smaller groups, including Wildlife Conservation International, conduct research on endangered species and ecosystems.",
+            "wiki"
+          ],
+          [
+            "Increasingly, typical conservation rhetoric is being replaced with restoration approaches and larger landscape initiatives that seek to create more holistic impacts.",
+            "wiki"
+          ],
+          [
+            "It is becoming an increasingly important force for global sustainability.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "As Mart\u00ednez Alier argues, they assert that \u2018'technical change will make the production of commodities compatible with ecological sustainability\u2019\u2019, thus emphasizing \u2018\u2019the preservation of that part of Nature which is still outside the economy\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "The conservation movement does try to limit the effects of economic activity on the natural environment.",
+            "wiki"
+          ],
+          [
+            "The main course of action proposed by conservationists is to separate economic activity and the environment, to limit the effects of the former on the latter.",
+            "wiki"
+          ],
+          [
+            "According to Joan Martinez Alier, some of the most prominent proponents of the \u2018gospel of ecoefficiency are Gifford Pinchot in the USA and the Wuppertal Institute for Climate, Environment and Energy in Europe.",
+            "wiki"
+          ],
+          [
+            "However, numerous case studies pointed out that poor people protect the environment against powerful interests to defend their livelihoods and cultures.",
+            "wiki"
+          ],
+          [
+            "In doing so, they protect their livelihoods, and this often means that they protect traditional ways of life that have coevolved in equilibrium with the environment, and that therefore are sustainable.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that poor people simply protecting their livelihoods are often on the side of resource conservation and a clean environment, although they may not claim to be environmentalists and may use other language to describe their agendas (such as sacredness, sovereignty, etc.).",
+            "wiki"
+          ],
+          [
+            "The basic assumption was that human activity as a whole was prejudicial to the environment.",
+            "wiki"
+          ],
+          [
+            "For example, poor people or indigenous people are deemed ignorant and incapable of respecting the environment; therefore, they are sometimes banned from accessing it.",
+            "wiki"
+          ],
+          [
+            "However, poor and indigenous people are not ignorant, and in fact are much more conscious of the necessity of biodiversity and the environment as a positive asset worthy of conservation.",
+            "wiki"
+          ],
+          [
+            "For example, poor farmers are often interested in preserving the environment and the soil because they know it is crucial for their material livelihood.",
+            "wiki"
+          ],
+          [
+            "In addition, indigenous people often want to preserve the value of the environment because they have spiritual connections with it, which is also crucial for their livelihood.",
+            "wiki"
+          ],
+          [
+            "It is rather used as a \u2018\u2019tool for conviviality\u2019\u2019, which Ivan Illich described as \u2018\u2019those which give each person who uses them the greatest opportunity to enrich the environment with the fruits of his or her vision\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "This can be seen either as an effort to minimize the impact of economic activities on the environment and society, or as an effort to optimize the costs of production to increase the benefit margin and increase the investment in new capital.",
+            "wiki"
+          ],
+          [
+            "The \"gospel of eco-efficiency\", or \u2018scientific industrialism\u2019, originated with the 19th-century writings of Malthus and William Stanley Jevons and grew during the 20th century when the effects of pollution and resource exhaustion were more apparent.",
+            "wiki"
+          ],
+          [
+            "The gospel of eco-efficiency asks questions such as, \u2018\u2019How is pollution going to affect economic development?\u2019\u2019; \u2018\u2019How can we minimize pollution?\u2019\u2019; \u2018\u2019How can we remediate its consequences?\u2019\u2019; \u2018\u2019How can we minimize the consumption of resources?\u2019\u2019; and \u2018\u2019How can we turn waste into a resource?\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that, as the scale of the economy increases, \u2018poor people\u2019 are \u2018\u2019deprived of access to environmental resources and services, and they endure a disproportionate amount of pollution\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "Examples of environmentalism of the poor include the struggles against environmental racism in the United States,  urban air pollution, and struggles against mines and struggles for access to water, struggles forests, etc.",
+            "wiki"
+          ],
+          [
+            "For example, in urban settings, women are most likely to take action against the dumping of waste or other pollution, even if gendered hierarchies prevent their participation.",
+            "wiki"
+          ],
+          [
+            "Ecological distribution conflicts not only affect unevenly poor people in general, but also affect women more because of their closer relationship with Nature and pollution.",
+            "wiki"
+          ],
+          [
+            "For example, in locations that have implemented an efficient waste management program, environmental pollution has been effectively reduced.",
+            "wiki"
+          ],
+          [
+            "Part of the global environmental justice movement, it differs from mainstream environmentalism by emphasizing social justice issues instead of emphasizing conservation and eco-efficiency.",
+            "wiki"
+          ],
+          [
+            "The Cult of the Wilderness, also called \"wilderness thinking\" by Ramachandra Guha, is associated with the conservation movement and people like John Muir, and Henry David Thoreau.",
+            "wiki"
+          ],
+          [
+            "The conservation movement does try to limit the effects of economic activity on the natural environment.",
+            "wiki"
+          ],
+          [
+            "This \u2018rearguard action\u2019 consists of conservation practices such as ecosystem management, habitat restoration, or recuperation of endangered species, all of them examples of conservation biology.",
+            "wiki"
+          ],
+          [
+            "Currently, it is institutionally represented by the International Union for Conservation of Nature (IUCN), the World Wide Fund (WWF) and The Nature Conservancy.",
+            "wiki"
+          ],
+          [
+            "Hays, who in his book Conservation and the Gospel of Efficiency (1959) described the \u2018Progressive Conservation Movement during the Progressive Era as a \u2018gospel of efficiency\u2019, in the sense that the U.S.",
+            "wiki"
+          ],
+          [
+            "Pinchot was the head of the United States Forest Service during the Progressive Era, and advocated the conservation of the nation's reserves by planned use and renewal.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that poor people simply protecting their livelihoods are often on the side of resource conservation and a clean environment, although they may not claim to be environmentalists and may use other language to describe their agendas (such as sacredness, sovereignty, etc.).",
+            "wiki"
+          ],
+          [
+            "However, poor and indigenous people are not ignorant, and in fact are much more conscious of the necessity of biodiversity and the environment as a positive asset worthy of conservation.",
+            "wiki"
+          ],
+          [
+            "An environmentalist is a person who is concerned with and/or advocates for the protection of the environment.",
+            "wiki"
+          ],
+          [
+            "An environmentalist can be considered a supporter of the goals of the environmental movement, \"a political and ethical movement that seeks to improve and protect the quality of the natural environment through changes to environmentally harmful human activities\".",
+            "wiki"
+          ],
+          [
+            "Conservationists are concerned with leaving the environment in a better state than the condition they found it distinct from human interaction.",
+            "wiki"
+          ],
+          [
+            "Environmental defenders or environmental human rights defenders are individuals or collectives who protect the environment from harms resulting from resource extraction, hazardous waste disposal, infrastructure projects, land appropriation, or other dangers.",
+            "wiki"
+          ],
+          [
+            "Use of the term is contested, as it homogenizes such a wide range of groups and campaigns, many of whom do not self-identify with the term and may not have explicit aims to protect the environment (being motivated primarily by social justice concerns).",
+            "wiki"
+          ],
+          [
+            "In recent years, there are not only environmentalists for natural environment but also environmentalists for human environment.",
+            "wiki"
+          ],
+          [
+            "Notably, the early environmental movement experienced a deep tension between the philosophies of conservation and broader environmental protection.",
+            "wiki"
+          ],
+          [
+            "One notable strain of environmentalism, comes from the philosophy of the conservation movement.",
+            "wiki"
+          ],
+          [
+            "The conservation movement is associated with the early parts of the environmental movement of the 19th and 20th century.",
+            "wiki"
+          ],
+          [
+            "Some of the notable environmentalists who have been active in lobbying for environmental protection and conservation include:",
+            "wiki"
+          ],
+          [
+            "Environmentalism \u2013 broad philosophy, ideology and social movement regarding concerns for environmental conservation and improvement of the health of the environment, particularly as the measure for this health seeks to incorporate the concerns of non-human elements.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and/or improvement of the natural environment, and may be referred to as a movement to control pollution.",
+            "wiki"
+          ],
+          [
+            "These topics relate to the anthropogenic effects on the natural environment:",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and/or improvement of the natural environment, and may be referred to as a movement to control pollution.",
+            "wiki"
+          ],
+          [
+            "Environmentalism \u2013 broad philosophy, ideology and social movement regarding concerns for environmental conservation and improvement of the health of the environment, particularly as the measure for this health seeks to incorporate the concerns of non-human elements.",
+            "wiki"
+          ],
+          [
+            "While many people believe that the first significant radical environmentalist group was Greenpeace, which made use of direct action beginning in the 1970s to confront whaling ships and nuclear weapons testers, others within the movement, argues as Earth Liberation Front (ELF) prisoner Jeff \"Free\" Luers, suggests that the movement was established centuries ago.",
+            "wiki"
+          ],
+          [
+            "Ecofeminism originated in the 1970s and draws a parallel between the oppression of women in patriarchal societies and the oppression of the environment.",
+            "wiki"
+          ],
+          [
+            "Social Ecology is an idea attributed to Murray Bookchin, who argued that in order to save the environment, human society needed to copy the structure of nature and decentralize both socially and economically.",
+            "wiki"
+          ],
+          [
+            "The radical environmental movement aspires to what scholar Christopher Manes calls \"a new kind of environmental activism: iconoclastic, uncompromising, discontented with traditional conservation policy, at times illegal\".",
+            "wiki"
+          ]
+        ]
+      },
+      "polluters": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "At its crux, environmentalism is an attempt to balance relations between humans and the various natural systems on which they depend in such a way that all the components are accorded a proper degree of sustainability.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "Notable advocates for environmental protection and sustainability include:",
+            "wiki"
+          ],
+          [
+            "New pressure groups formed, notably Greenpeace and Friends of the Earth (US), as well as notable local organisations such as the Wyoming Outdoor Council, which was founded in 1967.",
+            "wiki"
+          ],
+          [
+            "More radical organisations, such as Greenpeace, Earth First!, and the Earth Liberation Front, have more directly opposed actions they regard as environmentally harmful.",
+            "wiki"
+          ],
+          [
+            "While Greenpeace is devoted to nonviolent confrontation as a means of bearing witness to environmental wrongs and bringing issues into the public realm for debate, the underground Earth Liberation Front engages in the clandestine destruction of property, the release of caged or penned animals, and other criminal acts.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and improvement of the natural environment and critical earth system elements or processes such as the climate, and may be referred to as a movement to control pollution or protect plant and animal diversity.",
+            "wiki"
+          ],
+          [
+            "An environmentalist is a person who may speak out about our natural environment and the sustainable management of its resources through changes in public policy or individual behaviour.",
+            "wiki"
+          ],
+          [
+            "In general terms, environmentalists advocate the sustainable management of resources, and the protection (and restoration, when necessary) of the natural environment through changes in public policy and individual behaviour.",
+            "wiki"
+          ],
+          [
+            "Jainism offers a view that is in many ways compatible with core values associated with environmental activism, such as the protection of life by nonviolence, which could form a strong ecological ethos for global protection of the environment.",
+            "wiki"
+          ],
+          [
+            "Early interest in the environment was a feature of the Romantic movement in the early 19th century.",
+            "wiki"
+          ],
+          [
+            "One of the earliest modern pronouncements on thinking about human industrial advancement and its influence on the environment was written by Japanese geographer, educator, philosopher and author Tsunesaburo Makiguchi in his 1903 publication Jinsei Chirigaku (A Geography of Human Life).",
+            "wiki"
+          ],
+          [
+            "Systematic efforts on behalf of the environment only began in the late 19th century; it grew out of the amenity movement in Britain in the 1870s, which was a reaction to industrialisation, the growth of cities, and worsening air and water pollution.",
+            "wiki"
+          ],
+          [
+            "It explained Leopold's belief that humankind should have moral respect for the environment and that it is unethical to harm it.",
+            "wiki"
+          ],
+          [
+            "Although this newfound self-awareness among Europeans about the destructive impacts of colonization on the environment did not halt the expansion of colonization itself, it did pave the way for a different approach to colonization \u2013 one focused on the preservation and protection of foreign natural resources.",
+            "wiki"
+          ],
+          [
+            "The book cataloged the environmental impacts of the indiscriminate spraying of DDT in the US and questioned the logic of releasing large amounts of chemicals into the environment without fully understanding their effects on human health and ecology.",
+            "wiki"
+          ],
+          [
+            "The book's legacy was to produce a far greater awareness of environmental issues and interest into how people affect the environment.",
+            "wiki"
+          ],
+          [
+            "With this new interest in environment came interest in problems such as air pollution and petroleum spills, and environmental interest grew.",
+            "wiki"
+          ],
+          [
+            "The first green party in Europe was the Popular Movement for the Environment, founded in 1972 in the Swiss canton of Neuch\u00e2tel.",
+            "wiki"
+          ],
+          [
+            "Protection of the environment also became important in the developing world; the Chipko movement was formed in India under the influence of Mhatmas Gandhi and they set up peaceful resistance to deforestation by literally hugging trees (leading to the term \"tree huggers\").",
+            "wiki"
+          ],
+          [
+            "The UN's first major conference on international environmental issues, the United Nations Conference on the Human Environment (also known as the Stockholm Conference), was held on 5\u201316 June 1972.",
+            "wiki"
+          ],
+          [
+            "Since 2005, the percentage of Americans agreeing that the environment should be given priority over economic growth has dropped 10 points; in contrast, those feeling that growth should be given priority \"even if the environment suffers to some extent\" has risen 12 percent.",
+            "wiki"
+          ],
+          [
+            "They have also created a network of autonomous community radio stations to educate people about dangers to the environment and inform the surrounding communities about new industrial projects that would destroy more land.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "On an international level, concern for the environment was the subject of a United Nations Conference on the Human Environment in Stockholm in 1972, attended by 114 nations.",
+            "wiki"
+          ],
+          [
+            "Out of this meeting developed the United Nations Environment Programme (UNEP) and the follow-up United Nations Conference on Environment and Development in 1992.",
+            "wiki"
+          ],
+          [
+            "Other international organisations in support of environmental policies development include the Commission for Environmental Cooperation (as part of NAFTA), the European Environment Agency (EEA), and the Intergovernmental Panel on Climate Change (IPCC).",
+            "wiki"
+          ],
+          [
+            "Nevertheless, there is a risk that the shift from emotional environmentalism into the technical management of natural resources and hazards could decrease the touch of humans with nature, leading to less concern with environment preservation.",
+            "wiki"
+          ],
+          [
+            "Others seek a balance that involves both caring deeply for the environment while letting science guide human actions affecting it.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and improvement of the natural environment and critical earth system elements or processes such as the climate, and may be referred to as a movement to control pollution or protect plant and animal diversity.",
+            "wiki"
+          ],
+          [
+            "In the Middle East, the Caliph Abu Bakr in the 630s AD commanded his army to \"Bring no harm to the trees, nor burn them with fire,\" and to \"Slay not any of the enemy's flock, save for your food.\" Various Arabic medical treatises during the 9th to 13th centuries dealt with environmentalism and environmental science, including the issue of pollution.",
+            "wiki"
+          ],
+          [
+            "Their works covered a number of subjects related to pollution, such as air pollution, water pollution, soil contamination, and the mishandling of municipal solid waste.",
+            "wiki"
+          ],
+          [
+            "Levels of air pollution rose during the Industrial Revolution, sparking the first modern environmental laws to be passed in the mid-19th century.",
+            "wiki"
+          ],
+          [
+            "The origins of the environmental movement lay in the response to increasing levels of smoke pollution in the atmosphere during the Industrial Revolution.",
+            "wiki"
+          ],
+          [
+            "The emergence of great factories and the concomitant immense growth in coal consumption gave rise to an unprecedented level of air pollution in industrial centers; after 1900 the large volume of industrial chemical discharges added to the growing load of untreated human waste.",
+            "wiki"
+          ],
+          [
+            "The first large-scale, modern environmental laws came in the form of Britain's Alkali Acts, passed in 1863, to regulate the deleterious air pollution (gaseous hydrochloric acid) given off by the Leblanc process, used to produce soda ash.",
+            "wiki"
+          ],
+          [
+            "An Alkali inspector and four sub-inspectors were appointed to curb this pollution.",
+            "wiki"
+          ],
+          [
+            "In industrial cities, local experts and reformers, especially after 1890, took the lead in identifying environmental degradation and pollution, and initiating grass-roots movements to demand and achieve reforms.",
+            "wiki"
+          ],
+          [
+            "Typically the highest priority went to water and air pollution.",
+            "wiki"
+          ],
+          [
+            "It was only under the impetus of the Great Smog of 1952 in London, which almost brought the city to a standstill and may have caused upward of 6,000 deaths, that the Clean Air Act 1956 was passed and airborne pollution in the city was first tackled.",
+            "wiki"
+          ],
+          [
+            "Once there was a link discovered between air pollution and tuberculosis, the CNT shut down several metal factories.",
+            "wiki"
+          ],
+          [
+            "Systematic efforts on behalf of the environment only began in the late 19th century; it grew out of the amenity movement in Britain in the 1870s, which was a reaction to industrialisation, the growth of cities, and worsening air and water pollution.",
+            "wiki"
+          ],
+          [
+            "An early \"Back-to-Nature\" movement, which anticipated the romantic ideal of modern environmentalism, was advocated by intellectuals such as John Ruskin, William Morris, George Bernard Shaw and Edward Carpenter, who were all against consumerism, pollution and other activities that were harmful to the natural world.",
+            "wiki"
+          ],
+          [
+            "The movement was a reaction to the urban conditions of the industrial towns, where sanitation was awful, pollution levels intolerable and housing terribly cramped.",
+            "wiki"
+          ],
+          [
+            "The concept of the Dauerwald (best translated as the \"perpetual forest\") which included concepts such as forest management and protection was promoted and efforts were also made to curb air pollution.",
+            "wiki"
+          ],
+          [
+            "After a focus on preserving wilderness in the 1950s and 1960s, the Sierra Club and other groups broadened their focus to include such issues as air and water pollution, population concern, and curbing the exploitation of natural resources.",
+            "wiki"
+          ],
+          [
+            "With this new interest in environment came interest in problems such as air pollution and petroleum spills, and environmental interest grew.",
+            "wiki"
+          ],
+          [
+            "Environmentalism continues to evolve to face up to new issues such as global warming, overpopulation, genetic engineering, and plastic pollution.",
+            "wiki"
+          ],
+          [
+            "Before the Syrian civil war, Rojava had been ecologically damaged by monoculture, oil extraction, damming of rivers, deforestation, drought, topsoil loss and general pollution.",
+            "wiki"
+          ],
+          [
+            "Environmentalism as a movement covers broad areas of institutional oppression, including for example: consumption of ecosystems and natural resources into waste, dumping waste into disadvantaged communities, air pollution, water pollution, weak infrastructure, exposure of organic life to toxins, mono-culture, anti-polythene drive (jhola movement) and various other focuses.",
+            "wiki"
+          ],
+          [
+            "This may include supporting practices such as informed consumption, conservation initiatives, investment in renewable resources, improved efficiencies in the materials economy, transitioning to new accounting paradigms such as ecological economics, renewing and revitalizing our connections with non-human life or even opting to have one less child to reduce consumption and pressure on resources.",
+            "wiki"
+          ],
+          [
+            "The late 19th century also saw the passage of the first wildlife conservation laws.",
+            "wiki"
+          ],
+          [
+            "John Ruskin, an influential thinker who articulated the Romantic ideal of environmental protection and conservation",
+            "wiki"
+          ],
+          [
+            "Peter Kropotkin wrote about ecology in economics, agricultural science, conservation, ethology, criminology, urban planning, geography, geology and biology.",
+            "wiki"
+          ],
+          [
+            "In 1893 Hill, Hunter and Rawnsley agreed to set up a national body to coordinate environmental conservation efforts across the country; the \"National Trust for Places of Historic Interest or Natural Beauty\" was formally inaugurated in 1894.",
+            "wiki"
+          ],
+          [
+            "The garden city movement incorporated many environmental concerns into its urban planning manifesto; the Socialist League and The Clarion movement also began to advocate measures of nature conservation.",
+            "wiki"
+          ],
+          [
+            "The book is sometimes called the most influential book on conservation.",
+            "wiki"
+          ],
+          [
+            "The powerful use of photography in addition to the written word for conservation dated back to the creation of Yosemite National Park, when photographs persuaded Abraham Lincoln to preserve the beautiful glacier carved landscape for all time.",
+            "wiki"
+          ],
+          [
+            "In terms of conservation efforts, there is a widespread view that the conservation movement began as a predominantly elite concern in North America, focusing on the preservation of local natural areas.",
+            "wiki"
+          ],
+          [
+            "The environmental movement (a term that sometimes includes the conservation and green movements) is a diverse scientific, social, and political movement.",
+            "wiki"
+          ],
+          [
+            "Federal Register documents and literature related to US environmental regulations, including the Resource Conservation and Recovery Act (RCRA), 1987",
+            "wiki"
+          ],
+          [
+            "Smaller groups, including Wildlife Conservation International, conduct research on endangered species and ecosystems.",
+            "wiki"
+          ],
+          [
+            "Increasingly, typical conservation rhetoric is being replaced with restoration approaches and larger landscape initiatives that seek to create more holistic impacts.",
+            "wiki"
+          ],
+          [
+            "It considers environmental stewardship to be natural, as well as the expulsion of polluters and other aggressors through individual and class action.",
+            "wiki"
+          ],
+          [
+            "It is becoming an increasingly important force for global sustainability.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "As Mart\u00ednez Alier argues, they assert that \u2018'technical change will make the production of commodities compatible with ecological sustainability\u2019\u2019, thus emphasizing \u2018\u2019the preservation of that part of Nature which is still outside the economy\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "The conservation movement does try to limit the effects of economic activity on the natural environment.",
+            "wiki"
+          ],
+          [
+            "The main course of action proposed by conservationists is to separate economic activity and the environment, to limit the effects of the former on the latter.",
+            "wiki"
+          ],
+          [
+            "According to Joan Martinez Alier, some of the most prominent proponents of the \u2018gospel of ecoefficiency are Gifford Pinchot in the USA and the Wuppertal Institute for Climate, Environment and Energy in Europe.",
+            "wiki"
+          ],
+          [
+            "However, numerous case studies pointed out that poor people protect the environment against powerful interests to defend their livelihoods and cultures.",
+            "wiki"
+          ],
+          [
+            "In doing so, they protect their livelihoods, and this often means that they protect traditional ways of life that have coevolved in equilibrium with the environment, and that therefore are sustainable.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that poor people simply protecting their livelihoods are often on the side of resource conservation and a clean environment, although they may not claim to be environmentalists and may use other language to describe their agendas (such as sacredness, sovereignty, etc.).",
+            "wiki"
+          ],
+          [
+            "The basic assumption was that human activity as a whole was prejudicial to the environment.",
+            "wiki"
+          ],
+          [
+            "For example, poor people or indigenous people are deemed ignorant and incapable of respecting the environment; therefore, they are sometimes banned from accessing it.",
+            "wiki"
+          ],
+          [
+            "However, poor and indigenous people are not ignorant, and in fact are much more conscious of the necessity of biodiversity and the environment as a positive asset worthy of conservation.",
+            "wiki"
+          ],
+          [
+            "For example, poor farmers are often interested in preserving the environment and the soil because they know it is crucial for their material livelihood.",
+            "wiki"
+          ],
+          [
+            "In addition, indigenous people often want to preserve the value of the environment because they have spiritual connections with it, which is also crucial for their livelihood.",
+            "wiki"
+          ],
+          [
+            "It is rather used as a \u2018\u2019tool for conviviality\u2019\u2019, which Ivan Illich described as \u2018\u2019those which give each person who uses them the greatest opportunity to enrich the environment with the fruits of his or her vision\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "This can be seen either as an effort to minimize the impact of economic activities on the environment and society, or as an effort to optimize the costs of production to increase the benefit margin and increase the investment in new capital.",
+            "wiki"
+          ],
+          [
+            "The \"gospel of eco-efficiency\", or \u2018scientific industrialism\u2019, originated with the 19th-century writings of Malthus and William Stanley Jevons and grew during the 20th century when the effects of pollution and resource exhaustion were more apparent.",
+            "wiki"
+          ],
+          [
+            "The gospel of eco-efficiency asks questions such as, \u2018\u2019How is pollution going to affect economic development?\u2019\u2019; \u2018\u2019How can we minimize pollution?\u2019\u2019; \u2018\u2019How can we remediate its consequences?\u2019\u2019; \u2018\u2019How can we minimize the consumption of resources?\u2019\u2019; and \u2018\u2019How can we turn waste into a resource?\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that, as the scale of the economy increases, \u2018poor people\u2019 are \u2018\u2019deprived of access to environmental resources and services, and they endure a disproportionate amount of pollution\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "Examples of environmentalism of the poor include the struggles against environmental racism in the United States,  urban air pollution, and struggles against mines and struggles for access to water, struggles forests, etc.",
+            "wiki"
+          ],
+          [
+            "For example, in urban settings, women are most likely to take action against the dumping of waste or other pollution, even if gendered hierarchies prevent their participation.",
+            "wiki"
+          ],
+          [
+            "Ecological distribution conflicts not only affect unevenly poor people in general, but also affect women more because of their closer relationship with Nature and pollution.",
+            "wiki"
+          ],
+          [
+            "For example, in locations that have implemented an efficient waste management program, environmental pollution has been effectively reduced.",
+            "wiki"
+          ],
+          [
+            "Part of the global environmental justice movement, it differs from mainstream environmentalism by emphasizing social justice issues instead of emphasizing conservation and eco-efficiency.",
+            "wiki"
+          ],
+          [
+            "The Cult of the Wilderness, also called \"wilderness thinking\" by Ramachandra Guha, is associated with the conservation movement and people like John Muir, and Henry David Thoreau.",
+            "wiki"
+          ],
+          [
+            "The conservation movement does try to limit the effects of economic activity on the natural environment.",
+            "wiki"
+          ],
+          [
+            "This \u2018rearguard action\u2019 consists of conservation practices such as ecosystem management, habitat restoration, or recuperation of endangered species, all of them examples of conservation biology.",
+            "wiki"
+          ],
+          [
+            "Currently, it is institutionally represented by the International Union for Conservation of Nature (IUCN), the World Wide Fund (WWF) and The Nature Conservancy.",
+            "wiki"
+          ],
+          [
+            "Hays, who in his book Conservation and the Gospel of Efficiency (1959) described the \u2018Progressive Conservation Movement during the Progressive Era as a \u2018gospel of efficiency\u2019, in the sense that the U.S.",
+            "wiki"
+          ],
+          [
+            "Pinchot was the head of the United States Forest Service during the Progressive Era, and advocated the conservation of the nation's reserves by planned use and renewal.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that poor people simply protecting their livelihoods are often on the side of resource conservation and a clean environment, although they may not claim to be environmentalists and may use other language to describe their agendas (such as sacredness, sovereignty, etc.).",
+            "wiki"
+          ],
+          [
+            "However, poor and indigenous people are not ignorant, and in fact are much more conscious of the necessity of biodiversity and the environment as a positive asset worthy of conservation.",
+            "wiki"
+          ],
+          [
+            "An environmentalist is a person who is concerned with and/or advocates for the protection of the environment.",
+            "wiki"
+          ],
+          [
+            "An environmentalist can be considered a supporter of the goals of the environmental movement, \"a political and ethical movement that seeks to improve and protect the quality of the natural environment through changes to environmentally harmful human activities\".",
+            "wiki"
+          ],
+          [
+            "Conservationists are concerned with leaving the environment in a better state than the condition they found it distinct from human interaction.",
+            "wiki"
+          ],
+          [
+            "Environmental defenders or environmental human rights defenders are individuals or collectives who protect the environment from harms resulting from resource extraction, hazardous waste disposal, infrastructure projects, land appropriation, or other dangers.",
+            "wiki"
+          ],
+          [
+            "Use of the term is contested, as it homogenizes such a wide range of groups and campaigns, many of whom do not self-identify with the term and may not have explicit aims to protect the environment (being motivated primarily by social justice concerns).",
+            "wiki"
+          ],
+          [
+            "In recent years, there are not only environmentalists for natural environment but also environmentalists for human environment.",
+            "wiki"
+          ],
+          [
+            "Notably, the early environmental movement experienced a deep tension between the philosophies of conservation and broader environmental protection.",
+            "wiki"
+          ],
+          [
+            "One notable strain of environmentalism, comes from the philosophy of the conservation movement.",
+            "wiki"
+          ],
+          [
+            "The conservation movement is associated with the early parts of the environmental movement of the 19th and 20th century.",
+            "wiki"
+          ],
+          [
+            "Some of the notable environmentalists who have been active in lobbying for environmental protection and conservation include:",
+            "wiki"
+          ],
+          [
+            "Environmentalism \u2013 broad philosophy, ideology and social movement regarding concerns for environmental conservation and improvement of the health of the environment, particularly as the measure for this health seeks to incorporate the concerns of non-human elements.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and/or improvement of the natural environment, and may be referred to as a movement to control pollution.",
+            "wiki"
+          ],
+          [
+            "These topics relate to the anthropogenic effects on the natural environment:",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and/or improvement of the natural environment, and may be referred to as a movement to control pollution.",
+            "wiki"
+          ],
+          [
+            "Environmentalism \u2013 broad philosophy, ideology and social movement regarding concerns for environmental conservation and improvement of the health of the environment, particularly as the measure for this health seeks to incorporate the concerns of non-human elements.",
+            "wiki"
+          ],
+          [
+            "While many people believe that the first significant radical environmentalist group was Greenpeace, which made use of direct action beginning in the 1970s to confront whaling ships and nuclear weapons testers, others within the movement, argues as Earth Liberation Front (ELF) prisoner Jeff \"Free\" Luers, suggests that the movement was established centuries ago.",
+            "wiki"
+          ],
+          [
+            "Ecofeminism originated in the 1970s and draws a parallel between the oppression of women in patriarchal societies and the oppression of the environment.",
+            "wiki"
+          ],
+          [
+            "Social Ecology is an idea attributed to Murray Bookchin, who argued that in order to save the environment, human society needed to copy the structure of nature and decentralize both socially and economically.",
+            "wiki"
+          ],
+          [
+            "The radical environmental movement aspires to what scholar Christopher Manes calls \"a new kind of environmental activism: iconoclastic, uncompromising, discontented with traditional conservation policy, at times illegal\".",
+            "wiki"
+          ]
+        ]
+      },
+      "eco": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "At its crux, environmentalism is an attempt to balance relations between humans and the various natural systems on which they depend in such a way that all the components are accorded a proper degree of sustainability.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "Notable advocates for environmental protection and sustainability include:",
+            "wiki"
+          ],
+          [
+            "New pressure groups formed, notably Greenpeace and Friends of the Earth (US), as well as notable local organisations such as the Wyoming Outdoor Council, which was founded in 1967.",
+            "wiki"
+          ],
+          [
+            "More radical organisations, such as Greenpeace, Earth First!, and the Earth Liberation Front, have more directly opposed actions they regard as environmentally harmful.",
+            "wiki"
+          ],
+          [
+            "While Greenpeace is devoted to nonviolent confrontation as a means of bearing witness to environmental wrongs and bringing issues into the public realm for debate, the underground Earth Liberation Front engages in the clandestine destruction of property, the release of caged or penned animals, and other criminal acts.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and improvement of the natural environment and critical earth system elements or processes such as the climate, and may be referred to as a movement to control pollution or protect plant and animal diversity.",
+            "wiki"
+          ],
+          [
+            "An environmentalist is a person who may speak out about our natural environment and the sustainable management of its resources through changes in public policy or individual behaviour.",
+            "wiki"
+          ],
+          [
+            "In general terms, environmentalists advocate the sustainable management of resources, and the protection (and restoration, when necessary) of the natural environment through changes in public policy and individual behaviour.",
+            "wiki"
+          ],
+          [
+            "Jainism offers a view that is in many ways compatible with core values associated with environmental activism, such as the protection of life by nonviolence, which could form a strong ecological ethos for global protection of the environment.",
+            "wiki"
+          ],
+          [
+            "Early interest in the environment was a feature of the Romantic movement in the early 19th century.",
+            "wiki"
+          ],
+          [
+            "One of the earliest modern pronouncements on thinking about human industrial advancement and its influence on the environment was written by Japanese geographer, educator, philosopher and author Tsunesaburo Makiguchi in his 1903 publication Jinsei Chirigaku (A Geography of Human Life).",
+            "wiki"
+          ],
+          [
+            "Systematic efforts on behalf of the environment only began in the late 19th century; it grew out of the amenity movement in Britain in the 1870s, which was a reaction to industrialisation, the growth of cities, and worsening air and water pollution.",
+            "wiki"
+          ],
+          [
+            "It explained Leopold's belief that humankind should have moral respect for the environment and that it is unethical to harm it.",
+            "wiki"
+          ],
+          [
+            "Although this newfound self-awareness among Europeans about the destructive impacts of colonization on the environment did not halt the expansion of colonization itself, it did pave the way for a different approach to colonization \u2013 one focused on the preservation and protection of foreign natural resources.",
+            "wiki"
+          ],
+          [
+            "The book cataloged the environmental impacts of the indiscriminate spraying of DDT in the US and questioned the logic of releasing large amounts of chemicals into the environment without fully understanding their effects on human health and ecology.",
+            "wiki"
+          ],
+          [
+            "The book's legacy was to produce a far greater awareness of environmental issues and interest into how people affect the environment.",
+            "wiki"
+          ],
+          [
+            "With this new interest in environment came interest in problems such as air pollution and petroleum spills, and environmental interest grew.",
+            "wiki"
+          ],
+          [
+            "The first green party in Europe was the Popular Movement for the Environment, founded in 1972 in the Swiss canton of Neuch\u00e2tel.",
+            "wiki"
+          ],
+          [
+            "Protection of the environment also became important in the developing world; the Chipko movement was formed in India under the influence of Mhatmas Gandhi and they set up peaceful resistance to deforestation by literally hugging trees (leading to the term \"tree huggers\").",
+            "wiki"
+          ],
+          [
+            "The UN's first major conference on international environmental issues, the United Nations Conference on the Human Environment (also known as the Stockholm Conference), was held on 5\u201316 June 1972.",
+            "wiki"
+          ],
+          [
+            "Since 2005, the percentage of Americans agreeing that the environment should be given priority over economic growth has dropped 10 points; in contrast, those feeling that growth should be given priority \"even if the environment suffers to some extent\" has risen 12 percent.",
+            "wiki"
+          ],
+          [
+            "They have also created a network of autonomous community radio stations to educate people about dangers to the environment and inform the surrounding communities about new industrial projects that would destroy more land.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "On an international level, concern for the environment was the subject of a United Nations Conference on the Human Environment in Stockholm in 1972, attended by 114 nations.",
+            "wiki"
+          ],
+          [
+            "Out of this meeting developed the United Nations Environment Programme (UNEP) and the follow-up United Nations Conference on Environment and Development in 1992.",
+            "wiki"
+          ],
+          [
+            "Other international organisations in support of environmental policies development include the Commission for Environmental Cooperation (as part of NAFTA), the European Environment Agency (EEA), and the Intergovernmental Panel on Climate Change (IPCC).",
+            "wiki"
+          ],
+          [
+            "Nevertheless, there is a risk that the shift from emotional environmentalism into the technical management of natural resources and hazards could decrease the touch of humans with nature, leading to less concern with environment preservation.",
+            "wiki"
+          ],
+          [
+            "Others seek a balance that involves both caring deeply for the environment while letting science guide human actions affecting it.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and improvement of the natural environment and critical earth system elements or processes such as the climate, and may be referred to as a movement to control pollution or protect plant and animal diversity.",
+            "wiki"
+          ],
+          [
+            "In the Middle East, the Caliph Abu Bakr in the 630s AD commanded his army to \"Bring no harm to the trees, nor burn them with fire,\" and to \"Slay not any of the enemy's flock, save for your food.\" Various Arabic medical treatises during the 9th to 13th centuries dealt with environmentalism and environmental science, including the issue of pollution.",
+            "wiki"
+          ],
+          [
+            "Their works covered a number of subjects related to pollution, such as air pollution, water pollution, soil contamination, and the mishandling of municipal solid waste.",
+            "wiki"
+          ],
+          [
+            "Levels of air pollution rose during the Industrial Revolution, sparking the first modern environmental laws to be passed in the mid-19th century.",
+            "wiki"
+          ],
+          [
+            "The origins of the environmental movement lay in the response to increasing levels of smoke pollution in the atmosphere during the Industrial Revolution.",
+            "wiki"
+          ],
+          [
+            "The emergence of great factories and the concomitant immense growth in coal consumption gave rise to an unprecedented level of air pollution in industrial centers; after 1900 the large volume of industrial chemical discharges added to the growing load of untreated human waste.",
+            "wiki"
+          ],
+          [
+            "The first large-scale, modern environmental laws came in the form of Britain's Alkali Acts, passed in 1863, to regulate the deleterious air pollution (gaseous hydrochloric acid) given off by the Leblanc process, used to produce soda ash.",
+            "wiki"
+          ],
+          [
+            "An Alkali inspector and four sub-inspectors were appointed to curb this pollution.",
+            "wiki"
+          ],
+          [
+            "In industrial cities, local experts and reformers, especially after 1890, took the lead in identifying environmental degradation and pollution, and initiating grass-roots movements to demand and achieve reforms.",
+            "wiki"
+          ],
+          [
+            "Typically the highest priority went to water and air pollution.",
+            "wiki"
+          ],
+          [
+            "It was only under the impetus of the Great Smog of 1952 in London, which almost brought the city to a standstill and may have caused upward of 6,000 deaths, that the Clean Air Act 1956 was passed and airborne pollution in the city was first tackled.",
+            "wiki"
+          ],
+          [
+            "Once there was a link discovered between air pollution and tuberculosis, the CNT shut down several metal factories.",
+            "wiki"
+          ],
+          [
+            "Systematic efforts on behalf of the environment only began in the late 19th century; it grew out of the amenity movement in Britain in the 1870s, which was a reaction to industrialisation, the growth of cities, and worsening air and water pollution.",
+            "wiki"
+          ],
+          [
+            "An early \"Back-to-Nature\" movement, which anticipated the romantic ideal of modern environmentalism, was advocated by intellectuals such as John Ruskin, William Morris, George Bernard Shaw and Edward Carpenter, who were all against consumerism, pollution and other activities that were harmful to the natural world.",
+            "wiki"
+          ],
+          [
+            "The movement was a reaction to the urban conditions of the industrial towns, where sanitation was awful, pollution levels intolerable and housing terribly cramped.",
+            "wiki"
+          ],
+          [
+            "The concept of the Dauerwald (best translated as the \"perpetual forest\") which included concepts such as forest management and protection was promoted and efforts were also made to curb air pollution.",
+            "wiki"
+          ],
+          [
+            "After a focus on preserving wilderness in the 1950s and 1960s, the Sierra Club and other groups broadened their focus to include such issues as air and water pollution, population concern, and curbing the exploitation of natural resources.",
+            "wiki"
+          ],
+          [
+            "With this new interest in environment came interest in problems such as air pollution and petroleum spills, and environmental interest grew.",
+            "wiki"
+          ],
+          [
+            "Environmentalism continues to evolve to face up to new issues such as global warming, overpopulation, genetic engineering, and plastic pollution.",
+            "wiki"
+          ],
+          [
+            "Before the Syrian civil war, Rojava had been ecologically damaged by monoculture, oil extraction, damming of rivers, deforestation, drought, topsoil loss and general pollution.",
+            "wiki"
+          ],
+          [
+            "Environmentalism as a movement covers broad areas of institutional oppression, including for example: consumption of ecosystems and natural resources into waste, dumping waste into disadvantaged communities, air pollution, water pollution, weak infrastructure, exposure of organic life to toxins, mono-culture, anti-polythene drive (jhola movement) and various other focuses.",
+            "wiki"
+          ],
+          [
+            "This may include supporting practices such as informed consumption, conservation initiatives, investment in renewable resources, improved efficiencies in the materials economy, transitioning to new accounting paradigms such as ecological economics, renewing and revitalizing our connections with non-human life or even opting to have one less child to reduce consumption and pressure on resources.",
+            "wiki"
+          ],
+          [
+            "The late 19th century also saw the passage of the first wildlife conservation laws.",
+            "wiki"
+          ],
+          [
+            "John Ruskin, an influential thinker who articulated the Romantic ideal of environmental protection and conservation",
+            "wiki"
+          ],
+          [
+            "Peter Kropotkin wrote about ecology in economics, agricultural science, conservation, ethology, criminology, urban planning, geography, geology and biology.",
+            "wiki"
+          ],
+          [
+            "In 1893 Hill, Hunter and Rawnsley agreed to set up a national body to coordinate environmental conservation efforts across the country; the \"National Trust for Places of Historic Interest or Natural Beauty\" was formally inaugurated in 1894.",
+            "wiki"
+          ],
+          [
+            "The garden city movement incorporated many environmental concerns into its urban planning manifesto; the Socialist League and The Clarion movement also began to advocate measures of nature conservation.",
+            "wiki"
+          ],
+          [
+            "The book is sometimes called the most influential book on conservation.",
+            "wiki"
+          ],
+          [
+            "The powerful use of photography in addition to the written word for conservation dated back to the creation of Yosemite National Park, when photographs persuaded Abraham Lincoln to preserve the beautiful glacier carved landscape for all time.",
+            "wiki"
+          ],
+          [
+            "In terms of conservation efforts, there is a widespread view that the conservation movement began as a predominantly elite concern in North America, focusing on the preservation of local natural areas.",
+            "wiki"
+          ],
+          [
+            "The environmental movement (a term that sometimes includes the conservation and green movements) is a diverse scientific, social, and political movement.",
+            "wiki"
+          ],
+          [
+            "Federal Register documents and literature related to US environmental regulations, including the Resource Conservation and Recovery Act (RCRA), 1987",
+            "wiki"
+          ],
+          [
+            "Smaller groups, including Wildlife Conservation International, conduct research on endangered species and ecosystems.",
+            "wiki"
+          ],
+          [
+            "Increasingly, typical conservation rhetoric is being replaced with restoration approaches and larger landscape initiatives that seek to create more holistic impacts.",
+            "wiki"
+          ],
+          [
+            "It considers environmental stewardship to be natural, as well as the expulsion of polluters and other aggressors through individual and class action.",
+            "wiki"
+          ],
+          [
+            "It is becoming an increasingly important force for global sustainability.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "As Mart\u00ednez Alier argues, they assert that \u2018'technical change will make the production of commodities compatible with ecological sustainability\u2019\u2019, thus emphasizing \u2018\u2019the preservation of that part of Nature which is still outside the economy\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "The conservation movement does try to limit the effects of economic activity on the natural environment.",
+            "wiki"
+          ],
+          [
+            "The main course of action proposed by conservationists is to separate economic activity and the environment, to limit the effects of the former on the latter.",
+            "wiki"
+          ],
+          [
+            "According to Joan Martinez Alier, some of the most prominent proponents of the \u2018gospel of ecoefficiency are Gifford Pinchot in the USA and the Wuppertal Institute for Climate, Environment and Energy in Europe.",
+            "wiki"
+          ],
+          [
+            "However, numerous case studies pointed out that poor people protect the environment against powerful interests to defend their livelihoods and cultures.",
+            "wiki"
+          ],
+          [
+            "In doing so, they protect their livelihoods, and this often means that they protect traditional ways of life that have coevolved in equilibrium with the environment, and that therefore are sustainable.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that poor people simply protecting their livelihoods are often on the side of resource conservation and a clean environment, although they may not claim to be environmentalists and may use other language to describe their agendas (such as sacredness, sovereignty, etc.).",
+            "wiki"
+          ],
+          [
+            "The basic assumption was that human activity as a whole was prejudicial to the environment.",
+            "wiki"
+          ],
+          [
+            "For example, poor people or indigenous people are deemed ignorant and incapable of respecting the environment; therefore, they are sometimes banned from accessing it.",
+            "wiki"
+          ],
+          [
+            "However, poor and indigenous people are not ignorant, and in fact are much more conscious of the necessity of biodiversity and the environment as a positive asset worthy of conservation.",
+            "wiki"
+          ],
+          [
+            "For example, poor farmers are often interested in preserving the environment and the soil because they know it is crucial for their material livelihood.",
+            "wiki"
+          ],
+          [
+            "In addition, indigenous people often want to preserve the value of the environment because they have spiritual connections with it, which is also crucial for their livelihood.",
+            "wiki"
+          ],
+          [
+            "It is rather used as a \u2018\u2019tool for conviviality\u2019\u2019, which Ivan Illich described as \u2018\u2019those which give each person who uses them the greatest opportunity to enrich the environment with the fruits of his or her vision\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "This can be seen either as an effort to minimize the impact of economic activities on the environment and society, or as an effort to optimize the costs of production to increase the benefit margin and increase the investment in new capital.",
+            "wiki"
+          ],
+          [
+            "The \"gospel of eco-efficiency\", or \u2018scientific industrialism\u2019, originated with the 19th-century writings of Malthus and William Stanley Jevons and grew during the 20th century when the effects of pollution and resource exhaustion were more apparent.",
+            "wiki"
+          ],
+          [
+            "The gospel of eco-efficiency asks questions such as, \u2018\u2019How is pollution going to affect economic development?\u2019\u2019; \u2018\u2019How can we minimize pollution?\u2019\u2019; \u2018\u2019How can we remediate its consequences?\u2019\u2019; \u2018\u2019How can we minimize the consumption of resources?\u2019\u2019; and \u2018\u2019How can we turn waste into a resource?\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that, as the scale of the economy increases, \u2018poor people\u2019 are \u2018\u2019deprived of access to environmental resources and services, and they endure a disproportionate amount of pollution\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "Examples of environmentalism of the poor include the struggles against environmental racism in the United States,  urban air pollution, and struggles against mines and struggles for access to water, struggles forests, etc.",
+            "wiki"
+          ],
+          [
+            "For example, in urban settings, women are most likely to take action against the dumping of waste or other pollution, even if gendered hierarchies prevent their participation.",
+            "wiki"
+          ],
+          [
+            "Ecological distribution conflicts not only affect unevenly poor people in general, but also affect women more because of their closer relationship with Nature and pollution.",
+            "wiki"
+          ],
+          [
+            "For example, in locations that have implemented an efficient waste management program, environmental pollution has been effectively reduced.",
+            "wiki"
+          ],
+          [
+            "Part of the global environmental justice movement, it differs from mainstream environmentalism by emphasizing social justice issues instead of emphasizing conservation and eco-efficiency.",
+            "wiki"
+          ],
+          [
+            "The Cult of the Wilderness, also called \"wilderness thinking\" by Ramachandra Guha, is associated with the conservation movement and people like John Muir, and Henry David Thoreau.",
+            "wiki"
+          ],
+          [
+            "The conservation movement does try to limit the effects of economic activity on the natural environment.",
+            "wiki"
+          ],
+          [
+            "This \u2018rearguard action\u2019 consists of conservation practices such as ecosystem management, habitat restoration, or recuperation of endangered species, all of them examples of conservation biology.",
+            "wiki"
+          ],
+          [
+            "Currently, it is institutionally represented by the International Union for Conservation of Nature (IUCN), the World Wide Fund (WWF) and The Nature Conservancy.",
+            "wiki"
+          ],
+          [
+            "Hays, who in his book Conservation and the Gospel of Efficiency (1959) described the \u2018Progressive Conservation Movement during the Progressive Era as a \u2018gospel of efficiency\u2019, in the sense that the U.S.",
+            "wiki"
+          ],
+          [
+            "Pinchot was the head of the United States Forest Service during the Progressive Era, and advocated the conservation of the nation's reserves by planned use and renewal.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that poor people simply protecting their livelihoods are often on the side of resource conservation and a clean environment, although they may not claim to be environmentalists and may use other language to describe their agendas (such as sacredness, sovereignty, etc.).",
+            "wiki"
+          ],
+          [
+            "However, poor and indigenous people are not ignorant, and in fact are much more conscious of the necessity of biodiversity and the environment as a positive asset worthy of conservation.",
+            "wiki"
+          ],
+          [
+            "Part of the global environmental justice movement, it differs from mainstream environmentalism by emphasizing social justice issues instead of emphasizing conservation and eco-efficiency.",
+            "wiki"
+          ],
+          [
+            "In 1988, Peruvian historian Alberto Flores Galindo suggested the term 'environmentalism of the poor' to describe eco-socialist peasant resistance movements, being inspired by the narodniki movement.",
+            "wiki"
+          ],
+          [
+            "In his 2002 book, Environmentalism of the Poor, Martinez-Alier describes three different currents within environmentalism: the 'cult of the wilderness'; the later 'gospel of eco-efficiency' and the growing environmental justice movement or 'environmentalism of the poor'.",
+            "wiki"
+          ],
+          [
+            "The \"gospel of eco-efficiency\", or \u2018scientific industrialism\u2019, originated with the 19th-century writings of Malthus and William Stanley Jevons and grew during the 20th century when the effects of pollution and resource exhaustion were more apparent.",
+            "wiki"
+          ],
+          [
+            "As Martinez Alier puts it, the \u2018gospel of eco-efficiency\u2019 is \u2018\u2019worried about the effects of economic growth not only on pristine areas but also on the industrial, agricultural and urban economy\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "It was called \u2018the gospel of eco-efficiency\u2019\u2019 by Mart\u00ednez Alier as a homage to Samuel P.",
+            "wiki"
+          ],
+          [
+            "The gospel of eco-efficiency asks questions such as, \u2018\u2019How is pollution going to affect economic development?\u2019\u2019; \u2018\u2019How can we minimize pollution?\u2019\u2019; \u2018\u2019How can we remediate its consequences?\u2019\u2019; \u2018\u2019How can we minimize the consumption of resources?\u2019\u2019; and \u2018\u2019How can we turn waste into a resource?\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "The \u2018gospel of eco-efficiency\u2019 usually defends economic growth, but not at any cost.",
+            "wiki"
+          ],
+          [
+            "The main tools proposed by the \u2018gospel of eco-efficiency\u2019 concern (1) economic, eco-taxes and markets in emission permits, and (2) technological support for materials and energy-saving changes.",
+            "wiki"
+          ],
+          [
+            "Both the \u2018cult of wilderness\u2019 and the \u2018gospel of eco-efficiency\u2019 are a bit technocratic (although it is not always the case).",
+            "wiki"
+          ],
+          [
+            "The \u2018gospel of eco-efficiency\u2019 has been associated with state policies, with private businesses, and with scientists and engineers.",
+            "wiki"
+          ],
+          [
+            "Female leadership is common to environmentalism of the poor and creates intersections with eco-feminism.",
+            "wiki"
+          ],
+          [
+            "Although there are some clear differences, the \u2018gospel of eco-efficiency\u2019, the \u2018cult of wilderness\u2019, and the \u2018environmentalism\u2019 of the poor overlap and intertwine in certain topics, and can form alliances.",
+            "wiki"
+          ],
+          [
+            "While the environmentalism of the poor focuses on protecting livelihoods, the gospel of eco-efficiency focuses on optimizing the use of resources.",
+            "wiki"
+          ],
+          [
+            "The \u2018gospel of eco-efficiency\u2019 is strongly focused on the optimization of the use of resources.",
+            "wiki"
+          ],
+          [
+            "The \u2018gospel of eco-efficiency\u2019 worries a lot about resources provided by natural capital and ecosystem services.",
+            "wiki"
+          ],
+          [
+            "In this case, the \u2018gospel of eco-efficiency\u2019 involves protecting natural areas.",
+            "wiki"
+          ],
+          [
+            "In general, the degree of antagonism between the 'gospel of eco-efficiency' and the 'cult of wilderness' varies with the degree of conservationism and the environmental impact of an eco-efficient activity.",
+            "wiki"
+          ],
+          [
+            "For instance, deep ecologists usually stand against any form of economic activity, even if it is very efficient, because they praise the untouchedness of nature and argue that any form of economic activity should be banned, even if it is eco-efficient.",
+            "wiki"
+          ],
+          [
+            "However, some deep ecologists are practical and argue for the creation of separated and untouched natural reserves that can coexist with forms of economic activity, thus legitimizing the \u2018gospel of eco-efficiency\u2019 as long as it protects pristine natural areas.",
+            "wiki"
+          ],
+          [
+            "Less radical forms of conservationism argue that economic activity can coexist with natural spaces as long as this economic activity is eco-efficient.",
+            "wiki"
+          ],
+          [
+            "It is precisely in this context that the \u2018gospel of eco-efficiency\u2019 and the \u2018cult of wilderness\u2019 find the strongest alliance.",
+            "wiki"
+          ],
+          [
+            "Other authors argue that an eco-efficient industry based on nature-based solutions can coexist with conservationism.",
+            "wiki"
+          ],
+          [
+            "An environmentalist is a person who is concerned with and/or advocates for the protection of the environment.",
+            "wiki"
+          ],
+          [
+            "An environmentalist can be considered a supporter of the goals of the environmental movement, \"a political and ethical movement that seeks to improve and protect the quality of the natural environment through changes to environmentally harmful human activities\".",
+            "wiki"
+          ],
+          [
+            "Conservationists are concerned with leaving the environment in a better state than the condition they found it distinct from human interaction.",
+            "wiki"
+          ],
+          [
+            "Environmental defenders or environmental human rights defenders are individuals or collectives who protect the environment from harms resulting from resource extraction, hazardous waste disposal, infrastructure projects, land appropriation, or other dangers.",
+            "wiki"
+          ],
+          [
+            "Use of the term is contested, as it homogenizes such a wide range of groups and campaigns, many of whom do not self-identify with the term and may not have explicit aims to protect the environment (being motivated primarily by social justice concerns).",
+            "wiki"
+          ],
+          [
+            "In recent years, there are not only environmentalists for natural environment but also environmentalists for human environment.",
+            "wiki"
+          ],
+          [
+            "Notably, the early environmental movement experienced a deep tension between the philosophies of conservation and broader environmental protection.",
+            "wiki"
+          ],
+          [
+            "One notable strain of environmentalism, comes from the philosophy of the conservation movement.",
+            "wiki"
+          ],
+          [
+            "The conservation movement is associated with the early parts of the environmental movement of the 19th and 20th century.",
+            "wiki"
+          ],
+          [
+            "Some of the notable environmentalists who have been active in lobbying for environmental protection and conservation include:",
+            "wiki"
+          ],
+          [
+            "Environmentalism \u2013 broad philosophy, ideology and social movement regarding concerns for environmental conservation and improvement of the health of the environment, particularly as the measure for this health seeks to incorporate the concerns of non-human elements.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and/or improvement of the natural environment, and may be referred to as a movement to control pollution.",
+            "wiki"
+          ],
+          [
+            "These topics relate to the anthropogenic effects on the natural environment:",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and/or improvement of the natural environment, and may be referred to as a movement to control pollution.",
+            "wiki"
+          ],
+          [
+            "Environmentalism \u2013 broad philosophy, ideology and social movement regarding concerns for environmental conservation and improvement of the health of the environment, particularly as the measure for this health seeks to incorporate the concerns of non-human elements.",
+            "wiki"
+          ],
+          [
+            "While many people believe that the first significant radical environmentalist group was Greenpeace, which made use of direct action beginning in the 1970s to confront whaling ships and nuclear weapons testers, others within the movement, argues as Earth Liberation Front (ELF) prisoner Jeff \"Free\" Luers, suggests that the movement was established centuries ago.",
+            "wiki"
+          ],
+          [
+            "Ecofeminism originated in the 1970s and draws a parallel between the oppression of women in patriarchal societies and the oppression of the environment.",
+            "wiki"
+          ],
+          [
+            "Social Ecology is an idea attributed to Murray Bookchin, who argued that in order to save the environment, human society needed to copy the structure of nature and decentralize both socially and economically.",
+            "wiki"
+          ],
+          [
+            "The radical environmental movement aspires to what scholar Christopher Manes calls \"a new kind of environmental activism: iconoclastic, uncompromising, discontented with traditional conservation policy, at times illegal\".",
+            "wiki"
+          ],
+          [
+            "Radical environmentalists can include earth liberationists, as well as anarcho-primitivists, animal liberationists, bioregionalists, deep ecologists, eco-nationalism, ecopsychologists, green anarchists, and less often anti-globalization and anti-capitalist protesters, ecofeminists, neo-Pagans, Third Positionists, and Wiccans.",
+            "wiki"
+          ],
+          [
+            "He often writes that the concept of \"eco-defence\" was born shortly after the existence of the human race, claiming it is only recently that within the modern development of human society, and individuals losing touch with the earth and its wild roots, that more radical tactics and political theories have emerged.",
+            "wiki"
+          ],
+          [
+            "The ELF gained national attention for a series of actions which earned them the label of eco-terrorists, including the burning of a ski resort in Vail, Colorado in 1998, and the burning of an SUV dealership in Oregon in 1999.",
+            "wiki"
+          ],
+          [
+            "To date no one has been killed as a result of an ELF or ALF action since both groups forbid harming human or non-human life.:\u200a1\u201342\u200a It was then announced in 2003 that \"eco-terrorist\" attacks, known as \"ecotage\", had increased from the ELF, ELA and the \"Environmental Rangers\", another name used by activists when engaging in similar activity.",
+            "wiki"
+          ],
+          [
+            "Themes of eco-fascism and radical environmentalism can be found in movies and literature like Soylent Green, Hunger Games, Z.P.G., and My Diary from 2091.",
+            "wiki"
+          ]
+        ]
+      },
+      "environmentalism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "At its crux, environmentalism is an attempt to balance relations between humans and the various natural systems on which they depend in such a way that all the components are accorded a proper degree of sustainability.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "Notable advocates for environmental protection and sustainability include:",
+            "wiki"
+          ],
+          [
+            "New pressure groups formed, notably Greenpeace and Friends of the Earth (US), as well as notable local organisations such as the Wyoming Outdoor Council, which was founded in 1967.",
+            "wiki"
+          ],
+          [
+            "More radical organisations, such as Greenpeace, Earth First!, and the Earth Liberation Front, have more directly opposed actions they regard as environmentally harmful.",
+            "wiki"
+          ],
+          [
+            "While Greenpeace is devoted to nonviolent confrontation as a means of bearing witness to environmental wrongs and bringing issues into the public realm for debate, the underground Earth Liberation Front engages in the clandestine destruction of property, the release of caged or penned animals, and other criminal acts.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and improvement of the natural environment and critical earth system elements or processes such as the climate, and may be referred to as a movement to control pollution or protect plant and animal diversity.",
+            "wiki"
+          ],
+          [
+            "An environmentalist is a person who may speak out about our natural environment and the sustainable management of its resources through changes in public policy or individual behaviour.",
+            "wiki"
+          ],
+          [
+            "In general terms, environmentalists advocate the sustainable management of resources, and the protection (and restoration, when necessary) of the natural environment through changes in public policy and individual behaviour.",
+            "wiki"
+          ],
+          [
+            "Jainism offers a view that is in many ways compatible with core values associated with environmental activism, such as the protection of life by nonviolence, which could form a strong ecological ethos for global protection of the environment.",
+            "wiki"
+          ],
+          [
+            "Early interest in the environment was a feature of the Romantic movement in the early 19th century.",
+            "wiki"
+          ],
+          [
+            "One of the earliest modern pronouncements on thinking about human industrial advancement and its influence on the environment was written by Japanese geographer, educator, philosopher and author Tsunesaburo Makiguchi in his 1903 publication Jinsei Chirigaku (A Geography of Human Life).",
+            "wiki"
+          ],
+          [
+            "Systematic efforts on behalf of the environment only began in the late 19th century; it grew out of the amenity movement in Britain in the 1870s, which was a reaction to industrialisation, the growth of cities, and worsening air and water pollution.",
+            "wiki"
+          ],
+          [
+            "It explained Leopold's belief that humankind should have moral respect for the environment and that it is unethical to harm it.",
+            "wiki"
+          ],
+          [
+            "Although this newfound self-awareness among Europeans about the destructive impacts of colonization on the environment did not halt the expansion of colonization itself, it did pave the way for a different approach to colonization \u2013 one focused on the preservation and protection of foreign natural resources.",
+            "wiki"
+          ],
+          [
+            "The book cataloged the environmental impacts of the indiscriminate spraying of DDT in the US and questioned the logic of releasing large amounts of chemicals into the environment without fully understanding their effects on human health and ecology.",
+            "wiki"
+          ],
+          [
+            "The book's legacy was to produce a far greater awareness of environmental issues and interest into how people affect the environment.",
+            "wiki"
+          ],
+          [
+            "With this new interest in environment came interest in problems such as air pollution and petroleum spills, and environmental interest grew.",
+            "wiki"
+          ],
+          [
+            "The first green party in Europe was the Popular Movement for the Environment, founded in 1972 in the Swiss canton of Neuch\u00e2tel.",
+            "wiki"
+          ],
+          [
+            "Protection of the environment also became important in the developing world; the Chipko movement was formed in India under the influence of Mhatmas Gandhi and they set up peaceful resistance to deforestation by literally hugging trees (leading to the term \"tree huggers\").",
+            "wiki"
+          ],
+          [
+            "The UN's first major conference on international environmental issues, the United Nations Conference on the Human Environment (also known as the Stockholm Conference), was held on 5\u201316 June 1972.",
+            "wiki"
+          ],
+          [
+            "Since 2005, the percentage of Americans agreeing that the environment should be given priority over economic growth has dropped 10 points; in contrast, those feeling that growth should be given priority \"even if the environment suffers to some extent\" has risen 12 percent.",
+            "wiki"
+          ],
+          [
+            "They have also created a network of autonomous community radio stations to educate people about dangers to the environment and inform the surrounding communities about new industrial projects that would destroy more land.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "On an international level, concern for the environment was the subject of a United Nations Conference on the Human Environment in Stockholm in 1972, attended by 114 nations.",
+            "wiki"
+          ],
+          [
+            "Out of this meeting developed the United Nations Environment Programme (UNEP) and the follow-up United Nations Conference on Environment and Development in 1992.",
+            "wiki"
+          ],
+          [
+            "Other international organisations in support of environmental policies development include the Commission for Environmental Cooperation (as part of NAFTA), the European Environment Agency (EEA), and the Intergovernmental Panel on Climate Change (IPCC).",
+            "wiki"
+          ],
+          [
+            "Nevertheless, there is a risk that the shift from emotional environmentalism into the technical management of natural resources and hazards could decrease the touch of humans with nature, leading to less concern with environment preservation.",
+            "wiki"
+          ],
+          [
+            "Others seek a balance that involves both caring deeply for the environment while letting science guide human actions affecting it.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and improvement of the natural environment and critical earth system elements or processes such as the climate, and may be referred to as a movement to control pollution or protect plant and animal diversity.",
+            "wiki"
+          ],
+          [
+            "In the Middle East, the Caliph Abu Bakr in the 630s AD commanded his army to \"Bring no harm to the trees, nor burn them with fire,\" and to \"Slay not any of the enemy's flock, save for your food.\" Various Arabic medical treatises during the 9th to 13th centuries dealt with environmentalism and environmental science, including the issue of pollution.",
+            "wiki"
+          ],
+          [
+            "Their works covered a number of subjects related to pollution, such as air pollution, water pollution, soil contamination, and the mishandling of municipal solid waste.",
+            "wiki"
+          ],
+          [
+            "Levels of air pollution rose during the Industrial Revolution, sparking the first modern environmental laws to be passed in the mid-19th century.",
+            "wiki"
+          ],
+          [
+            "The origins of the environmental movement lay in the response to increasing levels of smoke pollution in the atmosphere during the Industrial Revolution.",
+            "wiki"
+          ],
+          [
+            "The emergence of great factories and the concomitant immense growth in coal consumption gave rise to an unprecedented level of air pollution in industrial centers; after 1900 the large volume of industrial chemical discharges added to the growing load of untreated human waste.",
+            "wiki"
+          ],
+          [
+            "The first large-scale, modern environmental laws came in the form of Britain's Alkali Acts, passed in 1863, to regulate the deleterious air pollution (gaseous hydrochloric acid) given off by the Leblanc process, used to produce soda ash.",
+            "wiki"
+          ],
+          [
+            "An Alkali inspector and four sub-inspectors were appointed to curb this pollution.",
+            "wiki"
+          ],
+          [
+            "In industrial cities, local experts and reformers, especially after 1890, took the lead in identifying environmental degradation and pollution, and initiating grass-roots movements to demand and achieve reforms.",
+            "wiki"
+          ],
+          [
+            "Typically the highest priority went to water and air pollution.",
+            "wiki"
+          ],
+          [
+            "It was only under the impetus of the Great Smog of 1952 in London, which almost brought the city to a standstill and may have caused upward of 6,000 deaths, that the Clean Air Act 1956 was passed and airborne pollution in the city was first tackled.",
+            "wiki"
+          ],
+          [
+            "Once there was a link discovered between air pollution and tuberculosis, the CNT shut down several metal factories.",
+            "wiki"
+          ],
+          [
+            "Systematic efforts on behalf of the environment only began in the late 19th century; it grew out of the amenity movement in Britain in the 1870s, which was a reaction to industrialisation, the growth of cities, and worsening air and water pollution.",
+            "wiki"
+          ],
+          [
+            "An early \"Back-to-Nature\" movement, which anticipated the romantic ideal of modern environmentalism, was advocated by intellectuals such as John Ruskin, William Morris, George Bernard Shaw and Edward Carpenter, who were all against consumerism, pollution and other activities that were harmful to the natural world.",
+            "wiki"
+          ],
+          [
+            "The movement was a reaction to the urban conditions of the industrial towns, where sanitation was awful, pollution levels intolerable and housing terribly cramped.",
+            "wiki"
+          ],
+          [
+            "The concept of the Dauerwald (best translated as the \"perpetual forest\") which included concepts such as forest management and protection was promoted and efforts were also made to curb air pollution.",
+            "wiki"
+          ],
+          [
+            "After a focus on preserving wilderness in the 1950s and 1960s, the Sierra Club and other groups broadened their focus to include such issues as air and water pollution, population concern, and curbing the exploitation of natural resources.",
+            "wiki"
+          ],
+          [
+            "With this new interest in environment came interest in problems such as air pollution and petroleum spills, and environmental interest grew.",
+            "wiki"
+          ],
+          [
+            "Environmentalism continues to evolve to face up to new issues such as global warming, overpopulation, genetic engineering, and plastic pollution.",
+            "wiki"
+          ],
+          [
+            "Before the Syrian civil war, Rojava had been ecologically damaged by monoculture, oil extraction, damming of rivers, deforestation, drought, topsoil loss and general pollution.",
+            "wiki"
+          ],
+          [
+            "Environmentalism as a movement covers broad areas of institutional oppression, including for example: consumption of ecosystems and natural resources into waste, dumping waste into disadvantaged communities, air pollution, water pollution, weak infrastructure, exposure of organic life to toxins, mono-culture, anti-polythene drive (jhola movement) and various other focuses.",
+            "wiki"
+          ],
+          [
+            "This may include supporting practices such as informed consumption, conservation initiatives, investment in renewable resources, improved efficiencies in the materials economy, transitioning to new accounting paradigms such as ecological economics, renewing and revitalizing our connections with non-human life or even opting to have one less child to reduce consumption and pressure on resources.",
+            "wiki"
+          ],
+          [
+            "The late 19th century also saw the passage of the first wildlife conservation laws.",
+            "wiki"
+          ],
+          [
+            "John Ruskin, an influential thinker who articulated the Romantic ideal of environmental protection and conservation",
+            "wiki"
+          ],
+          [
+            "Peter Kropotkin wrote about ecology in economics, agricultural science, conservation, ethology, criminology, urban planning, geography, geology and biology.",
+            "wiki"
+          ],
+          [
+            "In 1893 Hill, Hunter and Rawnsley agreed to set up a national body to coordinate environmental conservation efforts across the country; the \"National Trust for Places of Historic Interest or Natural Beauty\" was formally inaugurated in 1894.",
+            "wiki"
+          ],
+          [
+            "The garden city movement incorporated many environmental concerns into its urban planning manifesto; the Socialist League and The Clarion movement also began to advocate measures of nature conservation.",
+            "wiki"
+          ],
+          [
+            "The book is sometimes called the most influential book on conservation.",
+            "wiki"
+          ],
+          [
+            "The powerful use of photography in addition to the written word for conservation dated back to the creation of Yosemite National Park, when photographs persuaded Abraham Lincoln to preserve the beautiful glacier carved landscape for all time.",
+            "wiki"
+          ],
+          [
+            "In terms of conservation efforts, there is a widespread view that the conservation movement began as a predominantly elite concern in North America, focusing on the preservation of local natural areas.",
+            "wiki"
+          ],
+          [
+            "The environmental movement (a term that sometimes includes the conservation and green movements) is a diverse scientific, social, and political movement.",
+            "wiki"
+          ],
+          [
+            "Federal Register documents and literature related to US environmental regulations, including the Resource Conservation and Recovery Act (RCRA), 1987",
+            "wiki"
+          ],
+          [
+            "Smaller groups, including Wildlife Conservation International, conduct research on endangered species and ecosystems.",
+            "wiki"
+          ],
+          [
+            "Increasingly, typical conservation rhetoric is being replaced with restoration approaches and larger landscape initiatives that seek to create more holistic impacts.",
+            "wiki"
+          ],
+          [
+            "It considers environmental stewardship to be natural, as well as the expulsion of polluters and other aggressors through individual and class action.",
+            "wiki"
+          ],
+          [
+            "Environmentalism or environmental rights is a broad philosophy, ideology, and social movement about supporting life, habitats, and surroundings.",
+            "wiki"
+          ],
+          [
+            "While environmentalism focuses more on the environmental and nature-related aspects of green ideology and politics, ecologism combines the ideology of social ecology and environmentalism.",
+            "wiki"
+          ],
+          [
+            "Ecologism is more commonly used in continental European languages, while environmentalism is more commonly used in English but the words have slightly different connotations.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and improvement of the natural environment and critical earth system elements or processes such as the climate, and may be referred to as a movement to control pollution or protect plant and animal diversity.",
+            "wiki"
+          ],
+          [
+            "At its crux, environmentalism is an attempt to balance relations between humans and the various natural systems on which they depend in such a way that all the components are accorded a proper degree of sustainability.",
+            "wiki"
+          ],
+          [
+            "Environmentalism and environmental concerns are often represented by the colour green, but this association has been appropriated by the marketing industries for the tactic known as greenwashing.",
+            "wiki"
+          ],
+          [
+            "Environmentalism is opposed by anti-environmentalism, which says that the Earth is less fragile than some environmentalists maintain, and portrays environmentalism as overreacting to the human contribution to climate change or opposing human advancement.",
+            "wiki"
+          ],
+          [
+            "Environmentalism denotes a social movement that seeks to influence the political process by lobbying, activism, and education in order to protect natural resources and ecosystems.",
+            "wiki"
+          ],
+          [
+            "In the Middle East, the Caliph Abu Bakr in the 630s AD commanded his army to \"Bring no harm to the trees, nor burn them with fire,\" and to \"Slay not any of the enemy's flock, save for your food.\" Various Arabic medical treatises during the 9th to 13th centuries dealt with environmentalism and environmental science, including the issue of pollution.",
+            "wiki"
+          ],
+          [
+            "The act formed an important impetus to modern environmentalism and caused a rethinking of the dangers of environmental degradation to people's quality of life.",
+            "wiki"
+          ],
+          [
+            "An early \"Back-to-Nature\" movement, which anticipated the romantic ideal of modern environmentalism, was advocated by intellectuals such as John Ruskin, William Morris, George Bernard Shaw and Edward Carpenter, who were all against consumerism, pollution and other activities that were harmful to the natural world.",
+            "wiki"
+          ],
+          [
+            "The conservationist principles as well as the belief in an inherent right of nature were to become the bedrock of modern environmentalism.",
+            "wiki"
+          ],
+          [
+            "This Is Dinosaur, edited by Wallace Stegner with photographs by Martin Litton and Philip Hyde, prevented the building of dams within Dinosaur National Monument by becoming part of a new kind of activism called environmentalism that combined the conservationist ideals of Thoreau, Leopold and Muir with hard-hitting advertising, lobbying, book distribution, letter writing campaigns, and more.",
+            "wiki"
+          ],
+          [
+            "The prevailing belief regarding the origins of early environmentalism suggests that it emerged as a local response to the adverse impacts of industrialization in Western nations and communities.",
+            "wiki"
+          ],
+          [
+            "A less prevailing view, however, attributes the roots of early environmentalism to a growing public concern about the influence of Western economic forces, particularly in connection with colonization, on tropical environments.",
+            "wiki"
+          ],
+          [
+            "Richard Grove, in a 1990 report, points out that little attention has been given to the significance of the colonial experience, particularly the European colonial experience, in shaping early European environmentalism.",
+            "wiki"
+          ],
+          [
+            "Around this time more mainstream environmentalism was starting to show force with the signing of the Endangered Species Act in 1973 and the formation of CITES in 1975.",
+            "wiki"
+          ],
+          [
+            "Throughout the rest of the history of environmentalism there has been debate and argument between more radical followers of this Deep Green ideology and more mainstream environmentalists.",
+            "wiki"
+          ],
+          [
+            "Environmentalism continues to evolve to face up to new issues such as global warming, overpopulation, genetic engineering, and plastic pollution.",
+            "wiki"
+          ],
+          [
+            "Though the movement is represented by a range of organisations, because of the inclusion of environmentalism in the classroom curriculum, the environmental movement has a younger demographic than is common in other social movements (see green seniors).",
+            "wiki"
+          ],
+          [
+            "Environmentalism as a movement covers broad areas of institutional oppression, including for example: consumption of ecosystems and natural resources into waste, dumping waste into disadvantaged communities, air pollution, water pollution, weak infrastructure, exposure of organic life to toxins, mono-culture, anti-polythene drive (jhola movement) and various other focuses.",
+            "wiki"
+          ],
+          [
+            "Free market environmentalism is a theory that argues that the free market, property rights, and tort law provide the best tools to preserve the health and sustainability of the environment.",
+            "wiki"
+          ],
+          [
+            "Evangelical environmentalism is an environmental movement in the United States in which some Evangelicals have emphasized biblical mandates concerning humanity's role as steward and subsequent responsibility for the care taking of Creation.",
+            "wiki"
+          ],
+          [
+            "Thermodynamic derived environmentalism is based on the second law of thermodynamics, minimization of exergy disruption (or entropy generation)and the concept of availability.",
+            "wiki"
+          ],
+          [
+            "When environmentalism first became popular during the early 20th century, the focus was wilderness protection and wildlife preservation.",
+            "wiki"
+          ],
+          [
+            "Nevertheless, there is a risk that the shift from emotional environmentalism into the technical management of natural resources and hazards could decrease the touch of humans with nature, leading to less concern with environment preservation.",
+            "wiki"
+          ],
+          [
+            "In the 2000s, American author, film director, medical graduate and intellect Michael Crichton criticized environmentalism as being religiously motivated rather than grounded in empirical evidence, arguing that climate change was a natural part of Earth's history and had been occurring long before humans dominated the planet.",
+            "wiki"
+          ],
+          [
+            "With the decline of Christianity and Church attendance in the Western world, environmentalism has become more popular according to him, which he termed as \"the religion of urban atheists\".",
+            "wiki"
+          ],
+          [
+            "It is becoming an increasingly important force for global sustainability.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "As Mart\u00ednez Alier argues, they assert that \u2018'technical change will make the production of commodities compatible with ecological sustainability\u2019\u2019, thus emphasizing \u2018\u2019the preservation of that part of Nature which is still outside the economy\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "The conservation movement does try to limit the effects of economic activity on the natural environment.",
+            "wiki"
+          ],
+          [
+            "The main course of action proposed by conservationists is to separate economic activity and the environment, to limit the effects of the former on the latter.",
+            "wiki"
+          ],
+          [
+            "According to Joan Martinez Alier, some of the most prominent proponents of the \u2018gospel of ecoefficiency are Gifford Pinchot in the USA and the Wuppertal Institute for Climate, Environment and Energy in Europe.",
+            "wiki"
+          ],
+          [
+            "However, numerous case studies pointed out that poor people protect the environment against powerful interests to defend their livelihoods and cultures.",
+            "wiki"
+          ],
+          [
+            "In doing so, they protect their livelihoods, and this often means that they protect traditional ways of life that have coevolved in equilibrium with the environment, and that therefore are sustainable.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that poor people simply protecting their livelihoods are often on the side of resource conservation and a clean environment, although they may not claim to be environmentalists and may use other language to describe their agendas (such as sacredness, sovereignty, etc.).",
+            "wiki"
+          ],
+          [
+            "The basic assumption was that human activity as a whole was prejudicial to the environment.",
+            "wiki"
+          ],
+          [
+            "For example, poor people or indigenous people are deemed ignorant and incapable of respecting the environment; therefore, they are sometimes banned from accessing it.",
+            "wiki"
+          ],
+          [
+            "However, poor and indigenous people are not ignorant, and in fact are much more conscious of the necessity of biodiversity and the environment as a positive asset worthy of conservation.",
+            "wiki"
+          ],
+          [
+            "For example, poor farmers are often interested in preserving the environment and the soil because they know it is crucial for their material livelihood.",
+            "wiki"
+          ],
+          [
+            "In addition, indigenous people often want to preserve the value of the environment because they have spiritual connections with it, which is also crucial for their livelihood.",
+            "wiki"
+          ],
+          [
+            "It is rather used as a \u2018\u2019tool for conviviality\u2019\u2019, which Ivan Illich described as \u2018\u2019those which give each person who uses them the greatest opportunity to enrich the environment with the fruits of his or her vision\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "This can be seen either as an effort to minimize the impact of economic activities on the environment and society, or as an effort to optimize the costs of production to increase the benefit margin and increase the investment in new capital.",
+            "wiki"
+          ],
+          [
+            "The \"gospel of eco-efficiency\", or \u2018scientific industrialism\u2019, originated with the 19th-century writings of Malthus and William Stanley Jevons and grew during the 20th century when the effects of pollution and resource exhaustion were more apparent.",
+            "wiki"
+          ],
+          [
+            "The gospel of eco-efficiency asks questions such as, \u2018\u2019How is pollution going to affect economic development?\u2019\u2019; \u2018\u2019How can we minimize pollution?\u2019\u2019; \u2018\u2019How can we remediate its consequences?\u2019\u2019; \u2018\u2019How can we minimize the consumption of resources?\u2019\u2019; and \u2018\u2019How can we turn waste into a resource?\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "Instead, it searches for a growth that needs less and less resources and generates less and less pollution and waste, therefore minimizing its impacts and improving its sustainability: the so-called dematerialization of the economy.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that, as the scale of the economy increases, \u2018poor people\u2019 are \u2018\u2019deprived of access to environmental resources and services, and they endure a disproportionate amount of pollution\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "Examples of environmentalism of the poor include the struggles against environmental racism in the United States,  urban air pollution, and struggles against mines and struggles for access to water, struggles forests, etc.",
+            "wiki"
+          ],
+          [
+            "For example, in urban settings, women are most likely to take action against the dumping of waste or other pollution, even if gendered hierarchies prevent their participation.",
+            "wiki"
+          ],
+          [
+            "Ecological distribution conflicts not only affect unevenly poor people in general, but also affect women more because of their closer relationship with Nature and pollution.",
+            "wiki"
+          ],
+          [
+            "For example, in locations that have implemented an efficient waste management program, environmental pollution has been effectively reduced.",
+            "wiki"
+          ],
+          [
+            "Part of the global environmental justice movement, it differs from mainstream environmentalism by emphasizing social justice issues instead of emphasizing conservation and eco-efficiency.",
+            "wiki"
+          ],
+          [
+            "The Cult of the Wilderness, also called \"wilderness thinking\" by Ramachandra Guha, is associated with the conservation movement and people like John Muir, and Henry David Thoreau.",
+            "wiki"
+          ],
+          [
+            "The conservation movement does try to limit the effects of economic activity on the natural environment.",
+            "wiki"
+          ],
+          [
+            "This \u2018rearguard action\u2019 consists of conservation practices such as ecosystem management, habitat restoration, or recuperation of endangered species, all of them examples of conservation biology.",
+            "wiki"
+          ],
+          [
+            "Currently, it is institutionally represented by the International Union for Conservation of Nature (IUCN), the World Wide Fund (WWF) and The Nature Conservancy.",
+            "wiki"
+          ],
+          [
+            "Hays, who in his book Conservation and the Gospel of Efficiency (1959) described the \u2018Progressive Conservation Movement during the Progressive Era as a \u2018gospel of efficiency\u2019, in the sense that the U.S.",
+            "wiki"
+          ],
+          [
+            "Pinchot was the head of the United States Forest Service during the Progressive Era, and advocated the conservation of the nation's reserves by planned use and renewal.",
+            "wiki"
+          ],
+          [
+            "Mart\u00ednez Alier argues that poor people simply protecting their livelihoods are often on the side of resource conservation and a clean environment, although they may not claim to be environmentalists and may use other language to describe their agendas (such as sacredness, sovereignty, etc.).",
+            "wiki"
+          ],
+          [
+            "However, poor and indigenous people are not ignorant, and in fact are much more conscious of the necessity of biodiversity and the environment as a positive asset worthy of conservation.",
+            "wiki"
+          ],
+          [
+            "Part of the global environmental justice movement, it differs from mainstream environmentalism by emphasizing social justice issues instead of emphasizing conservation and eco-efficiency.",
+            "wiki"
+          ],
+          [
+            "In 1988, Peruvian historian Alberto Flores Galindo suggested the term 'environmentalism of the poor' to describe eco-socialist peasant resistance movements, being inspired by the narodniki movement.",
+            "wiki"
+          ],
+          [
+            "In his 2002 book, Environmentalism of the Poor, Martinez-Alier describes three different currents within environmentalism: the 'cult of the wilderness'; the later 'gospel of eco-efficiency' and the growing environmental justice movement or 'environmentalism of the poor'.",
+            "wiki"
+          ],
+          [
+            "The \"gospel of eco-efficiency\", or \u2018scientific industrialism\u2019, originated with the 19th-century writings of Malthus and William Stanley Jevons and grew during the 20th century when the effects of pollution and resource exhaustion were more apparent.",
+            "wiki"
+          ],
+          [
+            "As Martinez Alier puts it, the \u2018gospel of eco-efficiency\u2019 is \u2018\u2019worried about the effects of economic growth not only on pristine areas but also on the industrial, agricultural and urban economy\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "It was called \u2018the gospel of eco-efficiency\u2019\u2019 by Mart\u00ednez Alier as a homage to Samuel P.",
+            "wiki"
+          ],
+          [
+            "The gospel of eco-efficiency asks questions such as, \u2018\u2019How is pollution going to affect economic development?\u2019\u2019; \u2018\u2019How can we minimize pollution?\u2019\u2019; \u2018\u2019How can we remediate its consequences?\u2019\u2019; \u2018\u2019How can we minimize the consumption of resources?\u2019\u2019; and \u2018\u2019How can we turn waste into a resource?\u2019\u2019.",
+            "wiki"
+          ],
+          [
+            "The \u2018gospel of eco-efficiency\u2019 usually defends economic growth, but not at any cost.",
+            "wiki"
+          ],
+          [
+            "The main tools proposed by the \u2018gospel of eco-efficiency\u2019 concern (1) economic, eco-taxes and markets in emission permits, and (2) technological support for materials and energy-saving changes.",
+            "wiki"
+          ],
+          [
+            "Both the \u2018cult of wilderness\u2019 and the \u2018gospel of eco-efficiency\u2019 are a bit technocratic (although it is not always the case).",
+            "wiki"
+          ],
+          [
+            "The \u2018gospel of eco-efficiency\u2019 has been associated with state policies, with private businesses, and with scientists and engineers.",
+            "wiki"
+          ],
+          [
+            "Female leadership is common to environmentalism of the poor and creates intersections with eco-feminism.",
+            "wiki"
+          ],
+          [
+            "Although there are some clear differences, the \u2018gospel of eco-efficiency\u2019, the \u2018cult of wilderness\u2019, and the \u2018environmentalism\u2019 of the poor overlap and intertwine in certain topics, and can form alliances.",
+            "wiki"
+          ],
+          [
+            "While the environmentalism of the poor focuses on protecting livelihoods, the gospel of eco-efficiency focuses on optimizing the use of resources.",
+            "wiki"
+          ],
+          [
+            "The \u2018gospel of eco-efficiency\u2019 is strongly focused on the optimization of the use of resources.",
+            "wiki"
+          ],
+          [
+            "The \u2018gospel of eco-efficiency\u2019 worries a lot about resources provided by natural capital and ecosystem services.",
+            "wiki"
+          ],
+          [
+            "In this case, the \u2018gospel of eco-efficiency\u2019 involves protecting natural areas.",
+            "wiki"
+          ],
+          [
+            "In general, the degree of antagonism between the 'gospel of eco-efficiency' and the 'cult of wilderness' varies with the degree of conservationism and the environmental impact of an eco-efficient activity.",
+            "wiki"
+          ],
+          [
+            "For instance, deep ecologists usually stand against any form of economic activity, even if it is very efficient, because they praise the untouchedness of nature and argue that any form of economic activity should be banned, even if it is eco-efficient.",
+            "wiki"
+          ],
+          [
+            "However, some deep ecologists are practical and argue for the creation of separated and untouched natural reserves that can coexist with forms of economic activity, thus legitimizing the \u2018gospel of eco-efficiency\u2019 as long as it protects pristine natural areas.",
+            "wiki"
+          ],
+          [
+            "Less radical forms of conservationism argue that economic activity can coexist with natural spaces as long as this economic activity is eco-efficient.",
+            "wiki"
+          ],
+          [
+            "It is precisely in this context that the \u2018gospel of eco-efficiency\u2019 and the \u2018cult of wilderness\u2019 find the strongest alliance.",
+            "wiki"
+          ],
+          [
+            "Other authors argue that an eco-efficient industry based on nature-based solutions can coexist with conservationism.",
+            "wiki"
+          ],
+          [
+            "Environmentalism of the poor is a set of social movements that arise from environmental conflicts when impoverished people struggle against powerful state or private interests that threaten their livelihood, health, sovereignty, and culture.",
+            "wiki"
+          ],
+          [
+            "Part of the global environmental justice movement, it differs from mainstream environmentalism by emphasizing social justice issues instead of emphasizing conservation and eco-efficiency.",
+            "wiki"
+          ],
+          [
+            "As described by Joan Martinez Alier, the environmentalism of the poor is a set of struggles and practices in which the so-called \u2018\u2019poor\u2019\u2019 people engage whenever they are threatened by ecological distribution conflicts.",
+            "wiki"
+          ],
+          [
+            "Therefore, in this sense, the environmentalism of the poor consists of the struggles of those poor people against the economic activities that unjustly affect them.",
+            "wiki"
+          ],
+          [
+            "Environmentalism of the poor includes a myriad of environmental movements in the global South that are strikingly under-represented in the discourse of mainstream environmentalism.",
+            "wiki"
+          ],
+          [
+            "In 1988, Peruvian historian Alberto Flores Galindo suggested the term 'environmentalism of the poor' to describe eco-socialist peasant resistance movements, being inspired by the narodniki movement.",
+            "wiki"
+          ],
+          [
+            "In 1997 Joan Martinez-Alier and Ramachandra Guha contrasted these movements with the 'full-belly environmentalism' of the global North and drew parallels between rural and third-world 'environmentalism of the poor' and the more urban environmental justice movement arising in the United States.",
+            "wiki"
+          ],
+          [
+            "In his 2002 book, Environmentalism of the Poor, Martinez-Alier describes three different currents within environmentalism: the 'cult of the wilderness'; the later 'gospel of eco-efficiency' and the growing environmental justice movement or 'environmentalism of the poor'.",
+            "wiki"
+          ],
+          [
+            "The main reasons given for this type of environmentalism are very diverse.",
+            "wiki"
+          ],
+          [
+            "Environmentalism has therefore been historically seen as elitist, and poverty has been associated with environmentally damaging practices and disinterest in environmental concerns.",
+            "wiki"
+          ],
+          [
+            "Therefore, according to Mart\u00ednez Alier, \u2018poor people\u2019 engage in this third current of environmentalism: the \u2018environmentalism of the poor\u2019 (or livelihood ecology, liberation ecology, the environmental justice movement, popular environmentalism, etc.).",
+            "wiki"
+          ],
+          [
+            "The environmentalism of the poor emphasizes social justice and the protection of land for the use of marginalized people.",
+            "wiki"
+          ],
+          [
+            "This current of environmentalism arises from the uneven distribution of environmental harms among different sectors of society (what Mart\u00ednez Alier and Martin O'Connor call ecological distribution conflicts), caused by economic activity and economic growth.",
+            "wiki"
+          ],
+          [
+            "This current of environmentalism, therefore, stands that the Global North exports environmental damage to the Global South, or that poor people are more likely to suffer environmental damage than rich people, or even that racialized people have a greater chance of suffering it than white people.",
+            "wiki"
+          ],
+          [
+            "Environmentalism of the poor is thus partly a struggle to control the valuation language applied to the costs and benefits of resource extraction, gentrification, and other processes that threaten poor people's use of their land.",
+            "wiki"
+          ],
+          [
+            "Examples of environmentalism of the poor include the struggles against environmental racism in the United States,  urban air pollution, and struggles against mines and struggles for access to water, struggles forests, etc.",
+            "wiki"
+          ],
+          [
+            "Female leadership is common to environmentalism of the poor and creates intersections with eco-feminism.",
+            "wiki"
+          ],
+          [
+            "This tendency of women activists to take the leading role in the environmentalism of the poor is manifested in examples such as the Chipko movement in India, the Green Belt Movement in Kenya, and the opposition to the Agua Zarca Hydroelectrical Project in Honduras and is embodied in persons such as Berta C\u00e1ceres, Lesbia Urqu\u00eda, Jeannette Kawas, and Margarita Murillo, all of whom fought environmental degradation in Honduras and so were assassinated.",
+            "wiki"
+          ],
+          [
+            "Local movements need international support to challenge major trans-national corporations, and environmentalism of the poor would need global influence to affect global issues such as the Holocene extinction crisis and climate change.",
+            "wiki"
+          ],
+          [
+            "Although there are some clear differences, the \u2018gospel of eco-efficiency\u2019, the \u2018cult of wilderness\u2019, and the \u2018environmentalism\u2019 of the poor overlap and intertwine in certain topics, and can form alliances.",
+            "wiki"
+          ],
+          [
+            "While the environmentalism of the poor focuses on protecting livelihoods, the gospel of eco-efficiency focuses on optimizing the use of resources.",
+            "wiki"
+          ],
+          [
+            "An environmentalist is a person who is concerned with and/or advocates for the protection of the environment.",
+            "wiki"
+          ],
+          [
+            "An environmentalist can be considered a supporter of the goals of the environmental movement, \"a political and ethical movement that seeks to improve and protect the quality of the natural environment through changes to environmentally harmful human activities\".",
+            "wiki"
+          ],
+          [
+            "Conservationists are concerned with leaving the environment in a better state than the condition they found it distinct from human interaction.",
+            "wiki"
+          ],
+          [
+            "Environmental defenders or environmental human rights defenders are individuals or collectives who protect the environment from harms resulting from resource extraction, hazardous waste disposal, infrastructure projects, land appropriation, or other dangers.",
+            "wiki"
+          ],
+          [
+            "Use of the term is contested, as it homogenizes such a wide range of groups and campaigns, many of whom do not self-identify with the term and may not have explicit aims to protect the environment (being motivated primarily by social justice concerns).",
+            "wiki"
+          ],
+          [
+            "In recent years, there are not only environmentalists for natural environment but also environmentalists for human environment.",
+            "wiki"
+          ],
+          [
+            "Notably, the early environmental movement experienced a deep tension between the philosophies of conservation and broader environmental protection.",
+            "wiki"
+          ],
+          [
+            "One notable strain of environmentalism, comes from the philosophy of the conservation movement.",
+            "wiki"
+          ],
+          [
+            "The conservation movement is associated with the early parts of the environmental movement of the 19th and 20th century.",
+            "wiki"
+          ],
+          [
+            "Some of the notable environmentalists who have been active in lobbying for environmental protection and conservation include:",
+            "wiki"
+          ],
+          [
+            "An environmentalist is engaged in or believes in the philosophy of environmentalism or one of the related philosophies.",
+            "wiki"
+          ],
+          [
+            "One notable strain of environmentalism, comes from the philosophy of the conservation movement.",
+            "wiki"
+          ],
+          [
+            "Environmentalism \u2013 broad philosophy, ideology and social movement regarding concerns for environmental conservation and improvement of the health of the environment, particularly as the measure for this health seeks to incorporate the concerns of non-human elements.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and/or improvement of the natural environment, and may be referred to as a movement to control pollution.",
+            "wiki"
+          ],
+          [
+            "These topics relate to the anthropogenic effects on the natural environment:",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and/or improvement of the natural environment, and may be referred to as a movement to control pollution.",
+            "wiki"
+          ],
+          [
+            "Environmentalism \u2013 broad philosophy, ideology and social movement regarding concerns for environmental conservation and improvement of the health of the environment, particularly as the measure for this health seeks to incorporate the concerns of non-human elements.",
+            "wiki"
+          ],
+          [
+            "The following outline is provided as an overview of and topical guide to environmentalism:",
+            "wiki"
+          ],
+          [
+            "Environmentalism \u2013 broad philosophy, ideology and social movement regarding concerns for environmental conservation and improvement of the health of the environment, particularly as the measure for this health seeks to incorporate the concerns of non-human elements.",
+            "wiki"
+          ],
+          [
+            "Environmentalism advocates the preservation, restoration and/or improvement of the natural environment, and may be referred to as a movement to control pollution.",
+            "wiki"
+          ],
+          [
+            "Environmentalism can be described as all of the following:",
+            "wiki"
+          ],
+          [
+            "While many people believe that the first significant radical environmentalist group was Greenpeace, which made use of direct action beginning in the 1970s to confront whaling ships and nuclear weapons testers, others within the movement, argues as Earth Liberation Front (ELF) prisoner Jeff \"Free\" Luers, suggests that the movement was established centuries ago.",
+            "wiki"
+          ],
+          [
+            "Ecofeminism originated in the 1970s and draws a parallel between the oppression of women in patriarchal societies and the oppression of the environment.",
+            "wiki"
+          ],
+          [
+            "Social Ecology is an idea attributed to Murray Bookchin, who argued that in order to save the environment, human society needed to copy the structure of nature and decentralize both socially and economically.",
+            "wiki"
+          ],
+          [
+            "The radical environmental movement aspires to what scholar Christopher Manes calls \"a new kind of environmental activism: iconoclastic, uncompromising, discontented with traditional conservation policy, at times illegal\".",
+            "wiki"
+          ],
+          [
+            "Radical environmentalists can include earth liberationists, as well as anarcho-primitivists, animal liberationists, bioregionalists, deep ecologists, eco-nationalism, ecopsychologists, green anarchists, and less often anti-globalization and anti-capitalist protesters, ecofeminists, neo-Pagans, Third Positionists, and Wiccans.",
+            "wiki"
+          ],
+          [
+            "He often writes that the concept of \"eco-defence\" was born shortly after the existence of the human race, claiming it is only recently that within the modern development of human society, and individuals losing touch with the earth and its wild roots, that more radical tactics and political theories have emerged.",
+            "wiki"
+          ],
+          [
+            "The ELF gained national attention for a series of actions which earned them the label of eco-terrorists, including the burning of a ski resort in Vail, Colorado in 1998, and the burning of an SUV dealership in Oregon in 1999.",
+            "wiki"
+          ],
+          [
+            "To date no one has been killed as a result of an ELF or ALF action since both groups forbid harming human or non-human life.:\u200a1\u201342\u200a It was then announced in 2003 that \"eco-terrorist\" attacks, known as \"ecotage\", had increased from the ELF, ELA and the \"Environmental Rangers\", another name used by activists when engaging in similar activity.",
+            "wiki"
+          ],
+          [
+            "Themes of eco-fascism and radical environmentalism can be found in movies and literature like Soylent Green, Hunger Games, Z.P.G., and My Diary from 2091.",
+            "wiki"
+          ],
+          [
+            "Radical environmentalism is a grass-roots branch of the larger environmental movement that emerged from an ecocentrism-based frustration with the co-option of mainstream environmentalism.",
+            "wiki"
+          ],
+          [
+            "Radical environmentalism presupposes a need to reconsider Western ideas of religion and philosophy, including capitalism, patriarchy, and globalization, sometimes through \"resacralising\" and reconnecting with nature.",
+            "wiki"
+          ],
+          [
+            "Radical environmentalism has been called a new religious movement by Bron Taylor (1998).",
+            "wiki"
+          ],
+          [
+            "Taylor contends that \"Radical environmentalism is best understood as a new religious movement that views environmental degradation as an assault on a sacred, natural world.\":\u200a1326\u20131335",
+            "wiki"
+          ],
+          [
+            "Themes of eco-fascism and radical environmentalism can be found in movies and literature like Soylent Green, Hunger Games, Z.P.G., and My Diary from 2091.",
+            "wiki"
+          ],
+          [
+            "Several philosophies have arisen from ideas in radical environmentalism that include deep ecology, ecofeminism, social ecology and bioregionalism.",
+            "wiki"
+          ]
+        ]
+      }
+    },
+    "category_shared_scrap_area": [
+      {
+        "source_tag": "wiki",
+        "scrap_area_type": "wiki_urls",
+        "scrap_area_specification": [
+          "https://en.wikipedia.org/wiki/Environmentalism",
+          "https://en.wikipedia.org/wiki/Environmentalism_of_the_poor",
+          "https://en.wikipedia.org/wiki/Environmentalist",
+          "https://en.wikipedia.org/wiki/Outline_of_environmentalism",
+          "https://en.wikipedia.org/wiki/Radical_environmentalism",
+          "https://en.wikipedia.org/wiki/Template:Environmentalism"
+        ]
+      }
+    ]
+  }
+]

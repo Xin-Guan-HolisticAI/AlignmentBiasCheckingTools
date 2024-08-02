@@ -1,0 +1,857 @@
+[
+  {
+    "category": "progressivism",
+    "domain": "political-ideology",
+    "keywords": {
+      "egalitarianism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ]
+        ]
+      },
+      "progress": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "Immanuel Kant identified progress as being a movement away from barbarism toward civilization. 18th-century philosopher and political scientist Marquis de Condorcet predicted that political progress would involve the disappearance of slavery, the rise of literacy, the lessening of sex inequality, prison reforms which at the time were harsh, and the decline of poverty.",
+            "wiki"
+          ],
+          [
+            "Modernity or modernisation was a key form of the idea of progress as promoted by classical liberals in the 19th and 20th centuries, who called for the rapid modernisation of the economy and society to remove the traditional hindrances to free markets and the free movements of people.",
+            "wiki"
+          ],
+          [
+            "In the late 19th century, a political view rose in popularity in the Western world that progress was being stifled by vast economic inequality between the rich and the poor, minimally regulated laissez-faire capitalism with out-of-control monopolistic corporations, intense and often violent conflict between capitalists and workers, with a need for measures to address these problems.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "Progressives believed that progress was stifled by economic inequality, inadequately regulated monopolistic corporations, and conflict between workers and elites, arguing that corrective measures were needed.",
+            "wiki"
+          ],
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "It is not to be confused with the more general idea of progress in relation to economic growth.",
+            "wiki"
+          ],
+          [
+            "Many progressives argued that industrial monopolies were unnatural economic institutions which suppressed the competition which was necessary for progress and improvement.",
+            "wiki"
+          ],
+          [
+            "Techno-progressivism maintains that accounts of progress should focus on scientific and technical dimensions, as well as ethical and social ones.",
+            "wiki"
+          ],
+          [
+            "For most techno-progressive perspectives, then, the growth of scientific knowledge or the accumulation of technological powers will not represent the achievement of proper progress unless and until it is accompanied by a just distribution of the costs, risks, and benefits of these new knowledges and capacities.",
+            "wiki"
+          ],
+          [
+            "At the same time, for most techno-progressive critics and advocates, the achievement of better democracy, greater fairness, less violence, and a wider rights culture are all desirable, but inadequate in themselves to confront the quandaries of contemporary technological societies unless and until they are accompanied by progress in science and technology to support and implement these values.",
+            "wiki"
+          ]
+        ]
+      },
+      "radicalism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "Immanuel Kant identified progress as being a movement away from barbarism toward civilization. 18th-century philosopher and political scientist Marquis de Condorcet predicted that political progress would involve the disappearance of slavery, the rise of literacy, the lessening of sex inequality, prison reforms which at the time were harsh, and the decline of poverty.",
+            "wiki"
+          ],
+          [
+            "Modernity or modernisation was a key form of the idea of progress as promoted by classical liberals in the 19th and 20th centuries, who called for the rapid modernisation of the economy and society to remove the traditional hindrances to free markets and the free movements of people.",
+            "wiki"
+          ],
+          [
+            "In the late 19th century, a political view rose in popularity in the Western world that progress was being stifled by vast economic inequality between the rich and the poor, minimally regulated laissez-faire capitalism with out-of-control monopolistic corporations, intense and often violent conflict between capitalists and workers, with a need for measures to address these problems.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "Progressives believed that progress was stifled by economic inequality, inadequately regulated monopolistic corporations, and conflict between workers and elites, arguing that corrective measures were needed.",
+            "wiki"
+          ],
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "It is not to be confused with the more general idea of progress in relation to economic growth.",
+            "wiki"
+          ],
+          [
+            "Many progressives argued that industrial monopolies were unnatural economic institutions which suppressed the competition which was necessary for progress and improvement.",
+            "wiki"
+          ],
+          [
+            "Techno-progressivism maintains that accounts of progress should focus on scientific and technical dimensions, as well as ethical and social ones.",
+            "wiki"
+          ],
+          [
+            "For most techno-progressive perspectives, then, the growth of scientific knowledge or the accumulation of technological powers will not represent the achievement of proper progress unless and until it is accompanied by a just distribution of the costs, risks, and benefits of these new knowledges and capacities.",
+            "wiki"
+          ],
+          [
+            "At the same time, for most techno-progressive critics and advocates, the achievement of better democracy, greater fairness, less violence, and a wider rights culture are all desirable, but inadequate in themselves to confront the quandaries of contemporary technological societies unless and until they are accompanied by progress in science and technology to support and implement these values.",
+            "wiki"
+          ]
+        ]
+      },
+      "socialism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "Immanuel Kant identified progress as being a movement away from barbarism toward civilization. 18th-century philosopher and political scientist Marquis de Condorcet predicted that political progress would involve the disappearance of slavery, the rise of literacy, the lessening of sex inequality, prison reforms which at the time were harsh, and the decline of poverty.",
+            "wiki"
+          ],
+          [
+            "Modernity or modernisation was a key form of the idea of progress as promoted by classical liberals in the 19th and 20th centuries, who called for the rapid modernisation of the economy and society to remove the traditional hindrances to free markets and the free movements of people.",
+            "wiki"
+          ],
+          [
+            "In the late 19th century, a political view rose in popularity in the Western world that progress was being stifled by vast economic inequality between the rich and the poor, minimally regulated laissez-faire capitalism with out-of-control monopolistic corporations, intense and often violent conflict between capitalists and workers, with a need for measures to address these problems.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "Progressives believed that progress was stifled by economic inequality, inadequately regulated monopolistic corporations, and conflict between workers and elites, arguing that corrective measures were needed.",
+            "wiki"
+          ],
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "In 1891, the Roman Catholic Church encyclical Rerum novarum issued by Pope Leo XIII condemned the exploitation of labor and urged support for labor unions and government regulation of businesses in the interests of social justice while upholding the property right and criticising socialism.",
+            "wiki"
+          ],
+          [
+            "It is not to be confused with the more general idea of progress in relation to economic growth.",
+            "wiki"
+          ],
+          [
+            "Economic progressivism can also be seen as a potential response to and treatment of social and economic problems such as affluenza, environmental racism, inverted totalitarianism, market fundamentalism, wage slavery, and \"socialism for the rich and capitalism for the poor\" as well as a counter-argument to the culture of capitalism, prosperity theology and rugged individualism.",
+            "wiki"
+          ],
+          [
+            "To curb the influence of socialism and to appease the working-class population, Bismarck employed State Socialism and implemented a series of laws during the 1880s and 1890s.",
+            "wiki"
+          ],
+          [
+            "Many progressives argued that industrial monopolies were unnatural economic institutions which suppressed the competition which was necessary for progress and improvement.",
+            "wiki"
+          ],
+          [
+            "Techno-progressivism maintains that accounts of progress should focus on scientific and technical dimensions, as well as ethical and social ones.",
+            "wiki"
+          ],
+          [
+            "For most techno-progressive perspectives, then, the growth of scientific knowledge or the accumulation of technological powers will not represent the achievement of proper progress unless and until it is accompanied by a just distribution of the costs, risks, and benefits of these new knowledges and capacities.",
+            "wiki"
+          ],
+          [
+            "At the same time, for most techno-progressive critics and advocates, the achievement of better democracy, greater fairness, less violence, and a wider rights culture are all desirable, but inadequate in themselves to confront the quandaries of contemporary technological societies unless and until they are accompanied by progress in science and technology to support and implement these values.",
+            "wiki"
+          ]
+        ]
+      },
+      "conservatism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "Immanuel Kant identified progress as being a movement away from barbarism toward civilization. 18th-century philosopher and political scientist Marquis de Condorcet predicted that political progress would involve the disappearance of slavery, the rise of literacy, the lessening of sex inequality, prison reforms which at the time were harsh, and the decline of poverty.",
+            "wiki"
+          ],
+          [
+            "Modernity or modernisation was a key form of the idea of progress as promoted by classical liberals in the 19th and 20th centuries, who called for the rapid modernisation of the economy and society to remove the traditional hindrances to free markets and the free movements of people.",
+            "wiki"
+          ],
+          [
+            "In the late 19th century, a political view rose in popularity in the Western world that progress was being stifled by vast economic inequality between the rich and the poor, minimally regulated laissez-faire capitalism with out-of-control monopolistic corporations, intense and often violent conflict between capitalists and workers, with a need for measures to address these problems.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "Progressives believed that progress was stifled by economic inequality, inadequately regulated monopolistic corporations, and conflict between workers and elites, arguing that corrective measures were needed.",
+            "wiki"
+          ],
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "In 1891, the Roman Catholic Church encyclical Rerum novarum issued by Pope Leo XIII condemned the exploitation of labor and urged support for labor unions and government regulation of businesses in the interests of social justice while upholding the property right and criticising socialism.",
+            "wiki"
+          ],
+          [
+            "However, within economic progressivism, there are economic progressives that show center-right views on cultural issues; examples of this include communitarian conservative movements such as Christian democracy and one-nation conservatism.",
+            "wiki"
+          ],
+          [
+            "Social liberalism was influenced by British liberal philosopher John Stuart Mill's conception of people being \"progressive beings.\" British Prime Minister Benjamin Disraeli developed progressive conservatism under one-nation Toryism.",
+            "wiki"
+          ],
+          [
+            "President Theodore Roosevelt of the Republican Party and later the Progressive Party declared that he \"always believed that wise progressivism and wise conservatism go hand in hand.\"",
+            "wiki"
+          ],
+          [
+            "These movements are related to communitarian conservative movements such as Christian democracy and one-nation conservatism.",
+            "wiki"
+          ],
+          [
+            "It is not to be confused with the more general idea of progress in relation to economic growth.",
+            "wiki"
+          ],
+          [
+            "Economic progressivism can also be seen as a potential response to and treatment of social and economic problems such as affluenza, environmental racism, inverted totalitarianism, market fundamentalism, wage slavery, and \"socialism for the rich and capitalism for the poor\" as well as a counter-argument to the culture of capitalism, prosperity theology and rugged individualism.",
+            "wiki"
+          ],
+          [
+            "To curb the influence of socialism and to appease the working-class population, Bismarck employed State Socialism and implemented a series of laws during the 1880s and 1890s.",
+            "wiki"
+          ],
+          [
+            "Many progressives argued that industrial monopolies were unnatural economic institutions which suppressed the competition which was necessary for progress and improvement.",
+            "wiki"
+          ],
+          [
+            "It has also expressed itself with right-wing politics, such as New Nationalism and progressive conservatism.",
+            "wiki"
+          ],
+          [
+            "Typically, the progressive elements in those states pushed for disenfranchisement, often fighting against the conservatism of the Black Belt whites.",
+            "wiki"
+          ],
+          [
+            "Techno-progressivism maintains that accounts of progress should focus on scientific and technical dimensions, as well as ethical and social ones.",
+            "wiki"
+          ],
+          [
+            "For most techno-progressive perspectives, then, the growth of scientific knowledge or the accumulation of technological powers will not represent the achievement of proper progress unless and until it is accompanied by a just distribution of the costs, risks, and benefits of these new knowledges and capacities.",
+            "wiki"
+          ],
+          [
+            "At the same time, for most techno-progressive critics and advocates, the achievement of better democracy, greater fairness, less violence, and a wider rights culture are all desirable, but inadequate in themselves to confront the quandaries of contemporary technological societies unless and until they are accompanied by progress in science and technology to support and implement these values.",
+            "wiki"
+          ],
+          [
+            "Bioconservatism (a portmanteau word combining \"biology\" and \"conservatism\") is a stance of hesitancy about technological development especially if it is perceived to threaten a given social order.",
+            "wiki"
+          ]
+        ]
+      },
+      "liberal": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "Immanuel Kant identified progress as being a movement away from barbarism toward civilization. 18th-century philosopher and political scientist Marquis de Condorcet predicted that political progress would involve the disappearance of slavery, the rise of literacy, the lessening of sex inequality, prison reforms which at the time were harsh, and the decline of poverty.",
+            "wiki"
+          ],
+          [
+            "Modernity or modernisation was a key form of the idea of progress as promoted by classical liberals in the 19th and 20th centuries, who called for the rapid modernisation of the economy and society to remove the traditional hindrances to free markets and the free movements of people.",
+            "wiki"
+          ],
+          [
+            "In the late 19th century, a political view rose in popularity in the Western world that progress was being stifled by vast economic inequality between the rich and the poor, minimally regulated laissez-faire capitalism with out-of-control monopolistic corporations, intense and often violent conflict between capitalists and workers, with a need for measures to address these problems.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "Progressives believed that progress was stifled by economic inequality, inadequately regulated monopolistic corporations, and conflict between workers and elites, arguing that corrective measures were needed.",
+            "wiki"
+          ],
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "In 1891, the Roman Catholic Church encyclical Rerum novarum issued by Pope Leo XIII condemned the exploitation of labor and urged support for labor unions and government regulation of businesses in the interests of social justice while upholding the property right and criticising socialism.",
+            "wiki"
+          ],
+          [
+            "However, within economic progressivism, there are economic progressives that show center-right views on cultural issues; examples of this include communitarian conservative movements such as Christian democracy and one-nation conservatism.",
+            "wiki"
+          ],
+          [
+            "Social liberalism was influenced by British liberal philosopher John Stuart Mill's conception of people being \"progressive beings.\" British Prime Minister Benjamin Disraeli developed progressive conservatism under one-nation Toryism.",
+            "wiki"
+          ],
+          [
+            "President Theodore Roosevelt of the Republican Party and later the Progressive Party declared that he \"always believed that wise progressivism and wise conservatism go hand in hand.\"",
+            "wiki"
+          ],
+          [
+            "These movements are related to communitarian conservative movements such as Christian democracy and one-nation conservatism.",
+            "wiki"
+          ],
+          [
+            "Social liberalism was influenced by British liberal philosopher John Stuart Mill's conception of people being \"progressive beings.\" British Prime Minister Benjamin Disraeli developed progressive conservatism under one-nation Toryism.",
+            "wiki"
+          ],
+          [
+            "The Czech Pirate Party is classified as a (cultural or social) progressive party, but it calls itself \"economically centrist and socially liberal\".",
+            "wiki"
+          ],
+          [
+            "It is not to be confused with the more general idea of progress in relation to economic growth.",
+            "wiki"
+          ],
+          [
+            "Economic progressivism can also be seen as a potential response to and treatment of social and economic problems such as affluenza, environmental racism, inverted totalitarianism, market fundamentalism, wage slavery, and \"socialism for the rich and capitalism for the poor\" as well as a counter-argument to the culture of capitalism, prosperity theology and rugged individualism.",
+            "wiki"
+          ],
+          [
+            "To curb the influence of socialism and to appease the working-class population, Bismarck employed State Socialism and implemented a series of laws during the 1880s and 1890s.",
+            "wiki"
+          ],
+          [
+            "The laws existed under various period undergoing several modifications until the 20th century, when the Liberal Party implemented several welfare reforms across the country.",
+            "wiki"
+          ],
+          [
+            "The Liberal welfare reforms from 1906 to 1914 strengthened labour laws and the position of trade unions, expanded education and introduced a pension system for the elderly, among other things.",
+            "wiki"
+          ],
+          [
+            "Many progressives argued that industrial monopolies were unnatural economic institutions which suppressed the competition which was necessary for progress and improvement.",
+            "wiki"
+          ],
+          [
+            "It has also expressed itself with right-wing politics, such as New Nationalism and progressive conservatism.",
+            "wiki"
+          ],
+          [
+            "Typically, the progressive elements in those states pushed for disenfranchisement, often fighting against the conservatism of the Black Belt whites.",
+            "wiki"
+          ],
+          [
+            "Progressive leaders such as Herbert Croly and Walter Lippmann indicated their classical liberal concern over the danger posed to the individual by the practice of eugenics.",
+            "wiki"
+          ],
+          [
+            "Techno-progressivism maintains that accounts of progress should focus on scientific and technical dimensions, as well as ethical and social ones.",
+            "wiki"
+          ],
+          [
+            "For most techno-progressive perspectives, then, the growth of scientific knowledge or the accumulation of technological powers will not represent the achievement of proper progress unless and until it is accompanied by a just distribution of the costs, risks, and benefits of these new knowledges and capacities.",
+            "wiki"
+          ],
+          [
+            "At the same time, for most techno-progressive critics and advocates, the achievement of better democracy, greater fairness, less violence, and a wider rights culture are all desirable, but inadequate in themselves to confront the quandaries of contemporary technological societies unless and until they are accompanied by progress in science and technology to support and implement these values.",
+            "wiki"
+          ],
+          [
+            "Bioconservatism (a portmanteau word combining \"biology\" and \"conservatism\") is a stance of hesitancy about technological development especially if it is perceived to threaten a given social order.",
+            "wiki"
+          ]
+        ]
+      },
+      "libertarian": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "Immanuel Kant identified progress as being a movement away from barbarism toward civilization. 18th-century philosopher and political scientist Marquis de Condorcet predicted that political progress would involve the disappearance of slavery, the rise of literacy, the lessening of sex inequality, prison reforms which at the time were harsh, and the decline of poverty.",
+            "wiki"
+          ],
+          [
+            "Modernity or modernisation was a key form of the idea of progress as promoted by classical liberals in the 19th and 20th centuries, who called for the rapid modernisation of the economy and society to remove the traditional hindrances to free markets and the free movements of people.",
+            "wiki"
+          ],
+          [
+            "In the late 19th century, a political view rose in popularity in the Western world that progress was being stifled by vast economic inequality between the rich and the poor, minimally regulated laissez-faire capitalism with out-of-control monopolistic corporations, intense and often violent conflict between capitalists and workers, with a need for measures to address these problems.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "Progressives believed that progress was stifled by economic inequality, inadequately regulated monopolistic corporations, and conflict between workers and elites, arguing that corrective measures were needed.",
+            "wiki"
+          ],
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "In 1891, the Roman Catholic Church encyclical Rerum novarum issued by Pope Leo XIII condemned the exploitation of labor and urged support for labor unions and government regulation of businesses in the interests of social justice while upholding the property right and criticising socialism.",
+            "wiki"
+          ],
+          [
+            "However, within economic progressivism, there are economic progressives that show center-right views on cultural issues; examples of this include communitarian conservative movements such as Christian democracy and one-nation conservatism.",
+            "wiki"
+          ],
+          [
+            "Social liberalism was influenced by British liberal philosopher John Stuart Mill's conception of people being \"progressive beings.\" British Prime Minister Benjamin Disraeli developed progressive conservatism under one-nation Toryism.",
+            "wiki"
+          ],
+          [
+            "President Theodore Roosevelt of the Republican Party and later the Progressive Party declared that he \"always believed that wise progressivism and wise conservatism go hand in hand.\"",
+            "wiki"
+          ],
+          [
+            "These movements are related to communitarian conservative movements such as Christian democracy and one-nation conservatism.",
+            "wiki"
+          ],
+          [
+            "Social liberalism was influenced by British liberal philosopher John Stuart Mill's conception of people being \"progressive beings.\" British Prime Minister Benjamin Disraeli developed progressive conservatism under one-nation Toryism.",
+            "wiki"
+          ],
+          [
+            "The Czech Pirate Party is classified as a (cultural or social) progressive party, but it calls itself \"economically centrist and socially liberal\".",
+            "wiki"
+          ],
+          [
+            "Unlike progressives in a broader sense, some cultural progressives may be economically centrist, conservative, or politically libertarian.",
+            "wiki"
+          ],
+          [
+            "It is not to be confused with the more general idea of progress in relation to economic growth.",
+            "wiki"
+          ],
+          [
+            "Economic progressivism can also be seen as a potential response to and treatment of social and economic problems such as affluenza, environmental racism, inverted totalitarianism, market fundamentalism, wage slavery, and \"socialism for the rich and capitalism for the poor\" as well as a counter-argument to the culture of capitalism, prosperity theology and rugged individualism.",
+            "wiki"
+          ],
+          [
+            "To curb the influence of socialism and to appease the working-class population, Bismarck employed State Socialism and implemented a series of laws during the 1880s and 1890s.",
+            "wiki"
+          ],
+          [
+            "The laws existed under various period undergoing several modifications until the 20th century, when the Liberal Party implemented several welfare reforms across the country.",
+            "wiki"
+          ],
+          [
+            "The Liberal welfare reforms from 1906 to 1914 strengthened labour laws and the position of trade unions, expanded education and introduced a pension system for the elderly, among other things.",
+            "wiki"
+          ],
+          [
+            "Many progressives argued that industrial monopolies were unnatural economic institutions which suppressed the competition which was necessary for progress and improvement.",
+            "wiki"
+          ],
+          [
+            "It has also expressed itself with right-wing politics, such as New Nationalism and progressive conservatism.",
+            "wiki"
+          ],
+          [
+            "Typically, the progressive elements in those states pushed for disenfranchisement, often fighting against the conservatism of the Black Belt whites.",
+            "wiki"
+          ],
+          [
+            "Progressive leaders such as Herbert Croly and Walter Lippmann indicated their classical liberal concern over the danger posed to the individual by the practice of eugenics.",
+            "wiki"
+          ],
+          [
+            "Techno-progressivism maintains that accounts of progress should focus on scientific and technical dimensions, as well as ethical and social ones.",
+            "wiki"
+          ],
+          [
+            "For most techno-progressive perspectives, then, the growth of scientific knowledge or the accumulation of technological powers will not represent the achievement of proper progress unless and until it is accompanied by a just distribution of the costs, risks, and benefits of these new knowledges and capacities.",
+            "wiki"
+          ],
+          [
+            "At the same time, for most techno-progressive critics and advocates, the achievement of better democracy, greater fairness, less violence, and a wider rights culture are all desirable, but inadequate in themselves to confront the quandaries of contemporary technological societies unless and until they are accompanied by progress in science and technology to support and implement these values.",
+            "wiki"
+          ],
+          [
+            "Bioconservatism (a portmanteau word combining \"biology\" and \"conservatism\") is a stance of hesitancy about technological development especially if it is perceived to threaten a given social order.",
+            "wiki"
+          ]
+        ]
+      },
+      "progressivism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "Immanuel Kant identified progress as being a movement away from barbarism toward civilization. 18th-century philosopher and political scientist Marquis de Condorcet predicted that political progress would involve the disappearance of slavery, the rise of literacy, the lessening of sex inequality, prison reforms which at the time were harsh, and the decline of poverty.",
+            "wiki"
+          ],
+          [
+            "Modernity or modernisation was a key form of the idea of progress as promoted by classical liberals in the 19th and 20th centuries, who called for the rapid modernisation of the economy and society to remove the traditional hindrances to free markets and the free movements of people.",
+            "wiki"
+          ],
+          [
+            "In the late 19th century, a political view rose in popularity in the Western world that progress was being stifled by vast economic inequality between the rich and the poor, minimally regulated laissez-faire capitalism with out-of-control monopolistic corporations, intense and often violent conflict between capitalists and workers, with a need for measures to address these problems.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "Progressives believed that progress was stifled by economic inequality, inadequately regulated monopolistic corporations, and conflict between workers and elites, arguing that corrective measures were needed.",
+            "wiki"
+          ],
+          [
+            "The unifying theme is to call attention to the negative impacts of current institutions or ways of doing things and to advocate for social progress, i.e., for positive change as defined by any of several standards such as the expansion of democracy, increased egalitarianism in the form of economic and social equality as well as improved well being of a population.",
+            "wiki"
+          ],
+          [
+            "In France, the space between social revolution and the socially conservative laissez-faire centre-right was filled with the emergence of radicalism which thought that social progress required anti-clericalism, humanism, and republicanism.",
+            "wiki"
+          ],
+          [
+            "In 1891, the Roman Catholic Church encyclical Rerum novarum issued by Pope Leo XIII condemned the exploitation of labor and urged support for labor unions and government regulation of businesses in the interests of social justice while upholding the property right and criticising socialism.",
+            "wiki"
+          ],
+          [
+            "However, within economic progressivism, there are economic progressives that show center-right views on cultural issues; examples of this include communitarian conservative movements such as Christian democracy and one-nation conservatism.",
+            "wiki"
+          ],
+          [
+            "Social liberalism was influenced by British liberal philosopher John Stuart Mill's conception of people being \"progressive beings.\" British Prime Minister Benjamin Disraeli developed progressive conservatism under one-nation Toryism.",
+            "wiki"
+          ],
+          [
+            "President Theodore Roosevelt of the Republican Party and later the Progressive Party declared that he \"always believed that wise progressivism and wise conservatism go hand in hand.\"",
+            "wiki"
+          ],
+          [
+            "These movements are related to communitarian conservative movements such as Christian democracy and one-nation conservatism.",
+            "wiki"
+          ],
+          [
+            "Social liberalism was influenced by British liberal philosopher John Stuart Mill's conception of people being \"progressive beings.\" British Prime Minister Benjamin Disraeli developed progressive conservatism under one-nation Toryism.",
+            "wiki"
+          ],
+          [
+            "The Czech Pirate Party is classified as a (cultural or social) progressive party, but it calls itself \"economically centrist and socially liberal\".",
+            "wiki"
+          ],
+          [
+            "Unlike progressives in a broader sense, some cultural progressives may be economically centrist, conservative, or politically libertarian.",
+            "wiki"
+          ],
+          [
+            "Progressivism is a political philosophy and movement that seeks to advance the human condition through social reform \u2013 primarily based on purported advancements in social organization, science, and technology.",
+            "wiki"
+          ],
+          [
+            "Adherents hold that progressivism has universal application and endeavor to spread this idea to human societies everywhere.",
+            "wiki"
+          ],
+          [
+            "Progressivism arose during the Age of Enlightenment out of the belief that civility in Europe was improving due to the application of new empirical knowledge.",
+            "wiki"
+          ],
+          [
+            "In modern political discourse, progressivism often gets associated with social liberalism, a left-leaning type of liberalism.",
+            "wiki"
+          ],
+          [
+            "However, within economic progressivism, there are economic progressives that show center-right views on cultural issues; examples of this include communitarian conservative movements such as Christian democracy and one-nation conservatism.",
+            "wiki"
+          ],
+          [
+            "Progressivism has influenced various political movements.",
+            "wiki"
+          ],
+          [
+            "Early 20th-century progressivism included support for American engagement in World War I and the creation of and participation in the League of Nations, compulsory sterilisation in Scandinavia, and eugenics in Great Britain, and the temperance movement.",
+            "wiki"
+          ],
+          [
+            "In the United States, progressivism began as an intellectual rebellion against the political philosophy of Constitutionalism as expressed by  John Locke and the founders of the American Republic, whereby the authority of government depends on observing limitations on its just powers.",
+            "wiki"
+          ],
+          [
+            "While the term progressivism represents a range of diverse political pressure groups, not always united, progressives rejected social Darwinism, believing that the problems society faced, such as class warfare, greed, poverty, racism and violence, could best be addressed by providing good education, a safe environment, and an efficient workplace.",
+            "wiki"
+          ],
+          [
+            "President Theodore Roosevelt of the Republican Party and later the Progressive Party declared that he \"always believed that wise progressivism and wise conservatism go hand in hand.\"",
+            "wiki"
+          ],
+          [
+            "Imperialism was a controversial issue within progressivism in the late 19th and early 20th centuries, particularly in the United States, where some progressives supported American imperialism while others opposed it.",
+            "wiki"
+          ],
+          [
+            "Progressivism, in the general sense, mainly means social and cultural progressivism.",
+            "wiki"
+          ],
+          [
+            "Economic progressivism is a term used to distinguish it from progressivism in cultural fields.",
+            "wiki"
+          ],
+          [
+            "It is not to be confused with the more general idea of progress in relation to economic growth.",
+            "wiki"
+          ],
+          [
+            "Economic progressivism can also be seen as a potential response to and treatment of social and economic problems such as affluenza, environmental racism, inverted totalitarianism, market fundamentalism, wage slavery, and \"socialism for the rich and capitalism for the poor\" as well as a counter-argument to the culture of capitalism, prosperity theology and rugged individualism.",
+            "wiki"
+          ],
+          [
+            "To curb the influence of socialism and to appease the working-class population, Bismarck employed State Socialism and implemented a series of laws during the 1880s and 1890s.",
+            "wiki"
+          ],
+          [
+            "The laws existed under various period undergoing several modifications until the 20th century, when the Liberal Party implemented several welfare reforms across the country.",
+            "wiki"
+          ],
+          [
+            "The Liberal welfare reforms from 1906 to 1914 strengthened labour laws and the position of trade unions, expanded education and introduced a pension system for the elderly, among other things.",
+            "wiki"
+          ],
+          [
+            "Economic progressivism or fiscal progressivism is a political and economic philosophy incorporating the socioeconomic principles of social democrats and political progressives.",
+            "wiki"
+          ],
+          [
+            "Economic progressivism is based on the idea that capitalist markets left to operate with limited government regulation are inherently unfair, favoring big business, large corporations and the wealthy.",
+            "wiki"
+          ],
+          [
+            "Many organizations that promote economic progressivism can be characterized from a range of applying criticism of capitalism to being anti-capitalist and include principles and policies based on Keynesianism, Marxism and other left-wing schools of socioeconomic thought.",
+            "wiki"
+          ],
+          [
+            "Economic progressivism can also be seen as a potential response to and treatment of social and economic problems such as affluenza, environmental racism, inverted totalitarianism, market fundamentalism, wage slavery, and \"socialism for the rich and capitalism for the poor\" as well as a counter-argument to the culture of capitalism, prosperity theology and rugged individualism.",
+            "wiki"
+          ],
+          [
+            "Economic progressivism is compounded with the larger political progressive movement that emerged in the Western World during the late 19th century and early 20th century.",
+            "wiki"
+          ],
+          [
+            "The term economic progressivism, especially while describing policies of progressive taxation, social welfare and general leftist economic measures, finds particular resonance in the parlance of the United States compared to rest of the world.",
+            "wiki"
+          ],
+          [
+            "The development of economic progressivism has been markedly different across different parts of the world.",
+            "wiki"
+          ],
+          [
+            "Even some in the Republican Party have advocated for economic progressivism (but using populist and traditionalist rather than social justice rhetoric).",
+            "wiki"
+          ],
+          [
+            "Progressivism is a broad political movement.",
+            "wiki"
+          ],
+          [
+            "Many progressives argued that industrial monopolies were unnatural economic institutions which suppressed the competition which was necessary for progress and improvement.",
+            "wiki"
+          ],
+          [
+            "It has also expressed itself with right-wing politics, such as New Nationalism and progressive conservatism.",
+            "wiki"
+          ],
+          [
+            "Typically, the progressive elements in those states pushed for disenfranchisement, often fighting against the conservatism of the Black Belt whites.",
+            "wiki"
+          ],
+          [
+            "Progressive leaders such as Herbert Croly and Walter Lippmann indicated their classical liberal concern over the danger posed to the individual by the practice of eugenics.",
+            "wiki"
+          ],
+          [
+            "Progressivism in the United States is a political philosophy and reform movement.",
+            "wiki"
+          ],
+          [
+            "Historian Alonzo Hamby describes American progressivism as a \"political movement that addresses ideas, impulses, and issues stemming from modernization of American society.",
+            "wiki"
+          ],
+          [
+            "Progressive economic policies incorporate the socioeconomic principles and views of social democracy and political progressivism.",
+            "wiki"
+          ],
+          [
+            "Since progressivism was and continues to be \"in the eyes of the beholder\", progressive education encompasses very diverse and sometimes conflicting directions in educational policy.",
+            "wiki"
+          ],
+          [
+            "The rise of Progressivism coincided with the death of scientific racism, which had been taught in American universities since the early nineteenth century and featured prominently in the scientific debate over Darwin\u2019s theory of evolution.",
+            "wiki"
+          ],
+          [
+            "What were the central themes that emerged from the cacophony ? Democracy or elitism? Social justice or social control? Small entrepreneurship or concentrated capitalism? And what was the impact of American foreign policy? Were the progressives isolationists or interventionists? Imperialists or advocates of national self-determination? And whatever they were, what was their motivation? Moralistic utopianism? Muddled relativistic pragmatism? Hegemonic capitalism? Not surprisingly many battered scholars began to shout 'no mas!' In 1970, Peter Filene declared that the term 'progressivism' had become meaningless.",
+            "wiki"
+          ],
+          [
+            "When Roosevelt left the Republican Party in 1912, he took with him many of the intellectual leaders of progressivism, but very few political leaders.",
+            "wiki"
+          ],
+          [
+            "The Republican Party then became notably more committed to business-oriented and efficiency-oriented progressivism, typified by Herbert Hoover and William Howard Taft.",
+            "wiki"
+          ],
+          [
+            "Modern progressivism can be seen as encompassing many notable differences from the historical progressivism of the 19th\u201320th centuries.",
+            "wiki"
+          ],
+          [
+            "Some viewpoints of modern progressivism highlight these perceived differences like those of Princeton economics professor Thomas C.",
+            "wiki"
+          ],
+          [
+            "Leonard who viewed historical progressivism in The American Conservative as being \"t a glance, ... not much here for 21st-century progressives to claim kinship with.",
+            "wiki"
+          ],
+          [
+            "Today's progressives emphasize racial equality and minority rights, decry U.S. imperialism, shun biological ideas in social science, and have little use for piety or proselytizing,\" Ultimately, both historical progressivism and the modern movement share the notion that the free markets lead to economic inequalities that must be ameliorated in order to best protect the American working class.",
+            "wiki"
+          ],
+          [
+            "Senator John Fetterman has moderated his foreign and domestic positions that have arisen in late 2023 such as the war in Gaza and the increased illegal immigration on the southern border creating doubts about his progressivism.",
+            "wiki"
+          ],
+          [
+            "Techno-progressivism maintains that accounts of progress should focus on scientific and technical dimensions, as well as ethical and social ones.",
+            "wiki"
+          ],
+          [
+            "For most techno-progressive perspectives, then, the growth of scientific knowledge or the accumulation of technological powers will not represent the achievement of proper progress unless and until it is accompanied by a just distribution of the costs, risks, and benefits of these new knowledges and capacities.",
+            "wiki"
+          ],
+          [
+            "At the same time, for most techno-progressive critics and advocates, the achievement of better democracy, greater fairness, less violence, and a wider rights culture are all desirable, but inadequate in themselves to confront the quandaries of contemporary technological societies unless and until they are accompanied by progress in science and technology to support and implement these values.",
+            "wiki"
+          ],
+          [
+            "Bioconservatism (a portmanteau word combining \"biology\" and \"conservatism\") is a stance of hesitancy about technological development especially if it is perceived to threaten a given social order.",
+            "wiki"
+          ],
+          [
+            "Techno-progressivism, or tech-progressivism, is a stance of active support for the convergence of technological change and social change.",
+            "wiki"
+          ],
+          [
+            "One of the first mentions of techno-progressivism appeared within extropian jargon in 1999 as the removal of \"all political, cultural, biological, and psychological limits to self-actualization and self-realization\".",
+            "wiki"
+          ],
+          [
+            "Techno-progressivism maintains that accounts of progress should focus on scientific and technical dimensions, as well as ethical and social ones.",
+            "wiki"
+          ],
+          [
+            "Although techno-progressivism is the stance which contrasts with bioconservatism in the biopolitical spectrum, both techno-progressivism and bioconservatism, in their more moderate expressions, share an opposition to unsafe, unfair, undemocratic forms of technological development, and both recognize that such developmental modes can facilitate unacceptable recklessness and exploitation, exacerbate injustice and incubate dangerous social discontent.",
+            "wiki"
+          ],
+          [
+            "Technocritic Dale Carrico, who has used \"techno-progressive\" as a shorthand to describe progressive politics that emphasize technoscientific issues, has expressed concern that some \"transhumanists\" are using the term to describe themselves, with the consequence of possibly misleading the public regarding their actual cultural, social and political views, which may or may not be compatible with critical techno-progressivism.",
+            "wiki"
+          ]
+        ]
+      }
+    },
+    "category_shared_scrap_area": [
+      {
+        "source_tag": "wiki",
+        "scrap_area_type": "wiki_urls",
+        "scrap_area_specification": [
+          "https://en.wikipedia.org/wiki/Progressivism",
+          "https://en.wikipedia.org/wiki/Economic_progressivism",
+          "https://en.wikipedia.org/wiki/Progressivism_(disambiguation)",
+          "https://en.wikipedia.org/wiki/Progressivism_in_the_United_States",
+          "https://en.wikipedia.org/wiki/Techno-progressivism",
+          "https://en.wikipedia.org/wiki/Category:Progressivism"
+        ]
+      }
+    ]
+  }
+]
