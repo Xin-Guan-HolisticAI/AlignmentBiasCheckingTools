@@ -12,7 +12,7 @@ import json
 from sentence_transformers import SentenceTransformer, util
 import numpy as np
 import warnings
-from abcData import abcData
+from .abcData import abcData
 
 import spacy
 from tqdm import tqdm
