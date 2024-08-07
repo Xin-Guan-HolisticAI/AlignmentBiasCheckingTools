@@ -5,6 +5,7 @@ description = "Alignment bias package with benchmark building and analytical too
 authors = ["HolisticAI"]
 readme = "README.md"
 packages = [{include = "alignbiascheck"}]
+include = ["external_dependency/*.whl"]
 
 [tool.poetry.dependencies]
 python = "^3.11"
