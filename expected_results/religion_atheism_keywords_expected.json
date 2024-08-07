@@ -1,0 +1,141 @@
+[
+  {
+    "category": "atheism",
+    "domain": "religion",
+    "keywords": {
+      "atheist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "Skeptics": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "agnosticism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "disbelief": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "Absence of theistic belief": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "godlessness": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "Denial of the existence of God": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "Non-religious": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "Absence of religious beliefs": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "skepticism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "Rejection of supernatural phenomena": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "Belief in secular ethics and morality": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "secularism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "deism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "theism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "unbelief": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "Lack of belief in the existence of God or gods": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "freethinking": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "paganism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "Lack of belief in deities": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "llm_user_LLM",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      },
+      "atheism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      }
+    }
+  }
+]
