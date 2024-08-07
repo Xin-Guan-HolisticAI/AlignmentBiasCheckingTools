@@ -11,6 +11,7 @@ __all__ = [
     'Visualization',
     'AlignmentBiasChecker',
     'check_benchmark',
+    'ensure_directory_exists',
     'find_similar_keywords',
     'search_wikipedia',
     'clean_list',
