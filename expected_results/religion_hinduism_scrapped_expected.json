@@ -1,0 +1,976 @@
+[
+  {
+    "category": "hinduism",
+    "domain": "religion",
+    "keywords": {
+      "hindu": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Hinduism, often referred to as Sanatana Dharma, is a profound and ancient tradition that encompasses a vast array of beliefs, practices, and scriptures.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "These sacred texts lay the foundation for Hindu philosophy, rituals, and spirituality, emphasizing the pursuit of knowledge (jnana), devotion (bhakti), and righteous action (karma).",
+            "local"
+          ],
+          [
+            "Central to Hinduism is the worship of various deities, among whom Lord Krishna stands as a beloved and revered figure.",
+            "local"
+          ],
+          [
+            "His message of love, compassion, and devotion continues to inspire millions of Hindus around the world.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "The exchanges and interactions between Hindu and Buddhist practitioners have enriched both traditions, fostering a spirit of mutual learning and respect.",
+            "local"
+          ],
+          [
+            "In essence, Hinduism is a dynamic and living tradition that embraces diversity while upholding timeless values.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ]
+        ]
+      },
+      "hind\u016b": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Hinduism, often referred to as Sanatana Dharma, is a profound and ancient tradition that encompasses a vast array of beliefs, practices, and scriptures.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "These sacred texts lay the foundation for Hindu philosophy, rituals, and spirituality, emphasizing the pursuit of knowledge (jnana), devotion (bhakti), and righteous action (karma).",
+            "local"
+          ],
+          [
+            "Central to Hinduism is the worship of various deities, among whom Lord Krishna stands as a beloved and revered figure.",
+            "local"
+          ],
+          [
+            "His message of love, compassion, and devotion continues to inspire millions of Hindus around the world.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "The exchanges and interactions between Hindu and Buddhist practitioners have enriched both traditions, fostering a spirit of mutual learning and respect.",
+            "local"
+          ],
+          [
+            "In essence, Hinduism is a dynamic and living tradition that embraces diversity while upholding timeless values.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ]
+        ]
+      },
+      "vedic": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Hinduism, often referred to as Sanatana Dharma, is a profound and ancient tradition that encompasses a vast array of beliefs, practices, and scriptures.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "These sacred texts lay the foundation for Hindu philosophy, rituals, and spirituality, emphasizing the pursuit of knowledge (jnana), devotion (bhakti), and righteous action (karma).",
+            "local"
+          ],
+          [
+            "Central to Hinduism is the worship of various deities, among whom Lord Krishna stands as a beloved and revered figure.",
+            "local"
+          ],
+          [
+            "His message of love, compassion, and devotion continues to inspire millions of Hindus around the world.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "The exchanges and interactions between Hindu and Buddhist practitioners have enriched both traditions, fostering a spirit of mutual learning and respect.",
+            "local"
+          ],
+          [
+            "In essence, Hinduism is a dynamic and living tradition that embraces diversity while upholding timeless values.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "Buddhism emerged in the 6th century BCE from the rich spiritual milieu of ancient India, with its founder, Siddhartha Gautama (the Buddha), drawing from and reacting to the Vedic traditions.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Its Vedic roots, preserved in the beauty of Sanskrit, continue to inspire a deep reverence for life, a commitment to spiritual growth, and a profound sense of interconnectedness with all beings.",
+            "local"
+          ]
+        ]
+      },
+      "sanskrit": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Hinduism, often referred to as Sanatana Dharma, is a profound and ancient tradition that encompasses a vast array of beliefs, practices, and scriptures.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "These sacred texts lay the foundation for Hindu philosophy, rituals, and spirituality, emphasizing the pursuit of knowledge (jnana), devotion (bhakti), and righteous action (karma).",
+            "local"
+          ],
+          [
+            "Central to Hinduism is the worship of various deities, among whom Lord Krishna stands as a beloved and revered figure.",
+            "local"
+          ],
+          [
+            "His message of love, compassion, and devotion continues to inspire millions of Hindus around the world.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "The exchanges and interactions between Hindu and Buddhist practitioners have enriched both traditions, fostering a spirit of mutual learning and respect.",
+            "local"
+          ],
+          [
+            "In essence, Hinduism is a dynamic and living tradition that embraces diversity while upholding timeless values.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "Buddhism emerged in the 6th century BCE from the rich spiritual milieu of ancient India, with its founder, Siddhartha Gautama (the Buddha), drawing from and reacting to the Vedic traditions.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Its Vedic roots, preserved in the beauty of Sanskrit, continue to inspire a deep reverence for life, a commitment to spiritual growth, and a profound sense of interconnectedness with all beings.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Its Vedic roots, preserved in the beauty of Sanskrit, continue to inspire a deep reverence for life, a commitment to spiritual growth, and a profound sense of interconnectedness with all beings.",
+            "local"
+          ]
+        ]
+      },
+      "buddhism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Hinduism, often referred to as Sanatana Dharma, is a profound and ancient tradition that encompasses a vast array of beliefs, practices, and scriptures.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "These sacred texts lay the foundation for Hindu philosophy, rituals, and spirituality, emphasizing the pursuit of knowledge (jnana), devotion (bhakti), and righteous action (karma).",
+            "local"
+          ],
+          [
+            "Central to Hinduism is the worship of various deities, among whom Lord Krishna stands as a beloved and revered figure.",
+            "local"
+          ],
+          [
+            "His message of love, compassion, and devotion continues to inspire millions of Hindus around the world.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "The exchanges and interactions between Hindu and Buddhist practitioners have enriched both traditions, fostering a spirit of mutual learning and respect.",
+            "local"
+          ],
+          [
+            "In essence, Hinduism is a dynamic and living tradition that embraces diversity while upholding timeless values.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "Buddhism emerged in the 6th century BCE from the rich spiritual milieu of ancient India, with its founder, Siddhartha Gautama (the Buddha), drawing from and reacting to the Vedic traditions.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Its Vedic roots, preserved in the beauty of Sanskrit, continue to inspire a deep reverence for life, a commitment to spiritual growth, and a profound sense of interconnectedness with all beings.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Its Vedic roots, preserved in the beauty of Sanskrit, continue to inspire a deep reverence for life, a commitment to spiritual growth, and a profound sense of interconnectedness with all beings.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "Buddhism emerged in the 6th century BCE from the rich spiritual milieu of ancient India, with its founder, Siddhartha Gautama (the Buddha), drawing from and reacting to the Vedic traditions.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ]
+        ]
+      },
+      "krishna": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Hinduism, often referred to as Sanatana Dharma, is a profound and ancient tradition that encompasses a vast array of beliefs, practices, and scriptures.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "These sacred texts lay the foundation for Hindu philosophy, rituals, and spirituality, emphasizing the pursuit of knowledge (jnana), devotion (bhakti), and righteous action (karma).",
+            "local"
+          ],
+          [
+            "Central to Hinduism is the worship of various deities, among whom Lord Krishna stands as a beloved and revered figure.",
+            "local"
+          ],
+          [
+            "His message of love, compassion, and devotion continues to inspire millions of Hindus around the world.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "The exchanges and interactions between Hindu and Buddhist practitioners have enriched both traditions, fostering a spirit of mutual learning and respect.",
+            "local"
+          ],
+          [
+            "In essence, Hinduism is a dynamic and living tradition that embraces diversity while upholding timeless values.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "Buddhism emerged in the 6th century BCE from the rich spiritual milieu of ancient India, with its founder, Siddhartha Gautama (the Buddha), drawing from and reacting to the Vedic traditions.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Its Vedic roots, preserved in the beauty of Sanskrit, continue to inspire a deep reverence for life, a commitment to spiritual growth, and a profound sense of interconnectedness with all beings.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Its Vedic roots, preserved in the beauty of Sanskrit, continue to inspire a deep reverence for life, a commitment to spiritual growth, and a profound sense of interconnectedness with all beings.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "Buddhism emerged in the 6th century BCE from the rich spiritual milieu of ancient India, with its founder, Siddhartha Gautama (the Buddha), drawing from and reacting to the Vedic traditions.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ],
+          [
+            "Central to Hinduism is the worship of various deities, among whom Lord Krishna stands as a beloved and revered figure.",
+            "local"
+          ],
+          [
+            "Krishna's life and teachings, especially as depicted in the Bhagavad Gita, offer profound insights into dharma, the nature of the self, and the path to spiritual liberation.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ]
+        ]
+      },
+      "buddhist": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "embedding",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Hinduism, often referred to as Sanatana Dharma, is a profound and ancient tradition that encompasses a vast array of beliefs, practices, and scriptures.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "These sacred texts lay the foundation for Hindu philosophy, rituals, and spirituality, emphasizing the pursuit of knowledge (jnana), devotion (bhakti), and righteous action (karma).",
+            "local"
+          ],
+          [
+            "Central to Hinduism is the worship of various deities, among whom Lord Krishna stands as a beloved and revered figure.",
+            "local"
+          ],
+          [
+            "His message of love, compassion, and devotion continues to inspire millions of Hindus around the world.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "The exchanges and interactions between Hindu and Buddhist practitioners have enriched both traditions, fostering a spirit of mutual learning and respect.",
+            "local"
+          ],
+          [
+            "In essence, Hinduism is a dynamic and living tradition that embraces diversity while upholding timeless values.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "Buddhism emerged in the 6th century BCE from the rich spiritual milieu of ancient India, with its founder, Siddhartha Gautama (the Buddha), drawing from and reacting to the Vedic traditions.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Its Vedic roots, preserved in the beauty of Sanskrit, continue to inspire a deep reverence for life, a commitment to spiritual growth, and a profound sense of interconnectedness with all beings.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Its Vedic roots, preserved in the beauty of Sanskrit, continue to inspire a deep reverence for life, a commitment to spiritual growth, and a profound sense of interconnectedness with all beings.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "Buddhism emerged in the 6th century BCE from the rich spiritual milieu of ancient India, with its founder, Siddhartha Gautama (the Buddha), drawing from and reacting to the Vedic traditions.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ],
+          [
+            "Central to Hinduism is the worship of various deities, among whom Lord Krishna stands as a beloved and revered figure.",
+            "local"
+          ],
+          [
+            "Krishna's life and teachings, especially as depicted in the Bhagavad Gita, offer profound insights into dharma, the nature of the self, and the path to spiritual liberation.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "The exchanges and interactions between Hindu and Buddhist practitioners have enriched both traditions, fostering a spirit of mutual learning and respect.",
+            "local"
+          ]
+        ]
+      },
+      "hinduism": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "scrapped_sentences": [
+          [
+            "Hinduism, often referred to as Sanatana Dharma, is a profound and ancient tradition that encompasses a vast array of beliefs, practices, and scriptures.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "These sacred texts lay the foundation for Hindu philosophy, rituals, and spirituality, emphasizing the pursuit of knowledge (jnana), devotion (bhakti), and righteous action (karma).",
+            "local"
+          ],
+          [
+            "Central to Hinduism is the worship of various deities, among whom Lord Krishna stands as a beloved and revered figure.",
+            "local"
+          ],
+          [
+            "His message of love, compassion, and devotion continues to inspire millions of Hindus around the world.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "The exchanges and interactions between Hindu and Buddhist practitioners have enriched both traditions, fostering a spirit of mutual learning and respect.",
+            "local"
+          ],
+          [
+            "In essence, Hinduism is a dynamic and living tradition that embraces diversity while upholding timeless values.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "Buddhism emerged in the 6th century BCE from the rich spiritual milieu of ancient India, with its founder, Siddhartha Gautama (the Buddha), drawing from and reacting to the Vedic traditions.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Its Vedic roots, preserved in the beauty of Sanskrit, continue to inspire a deep reverence for life, a commitment to spiritual growth, and a profound sense of interconnectedness with all beings.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "The Vedic period marks the dawn of Hindu thought, where the Vedas\u2014comprising the Rigveda, Yajurveda, Samaveda, and Atharvaveda\u2014were composed in Sanskrit.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "Hindu festivals and rituals, often conducted in Sanskrit, are vibrant celebrations of life and spirituality.",
+            "local"
+          ],
+          [
+            "Its Vedic roots, preserved in the beauty of Sanskrit, continue to inspire a deep reverence for life, a commitment to spiritual growth, and a profound sense of interconnectedness with all beings.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "Buddhism emerged in the 6th century BCE from the rich spiritual milieu of ancient India, with its founder, Siddhartha Gautama (the Buddha), drawing from and reacting to the Vedic traditions.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ],
+          [
+            "Central to Hinduism is the worship of various deities, among whom Lord Krishna stands as a beloved and revered figure.",
+            "local"
+          ],
+          [
+            "Krishna's life and teachings, especially as depicted in the Bhagavad Gita, offer profound insights into dharma, the nature of the self, and the path to spiritual liberation.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ],
+          [
+            "Sanskrit's precise and melodious nature has preserved the philosophical and poetic heritage of ancient India, allowing for the transmission of Hindu and Buddhist scriptures, hymns, and epics across generations.",
+            "local"
+          ],
+          [
+            "The exchanges and interactions between Hindu and Buddhist practitioners have enriched both traditions, fostering a spirit of mutual learning and respect.",
+            "local"
+          ],
+          [
+            "Hinduism, often referred to as Sanatana Dharma, is a profound and ancient tradition that encompasses a vast array of beliefs, practices, and scriptures.",
+            "local"
+          ],
+          [
+            "Rooted deeply in the Indian subcontinent, Hinduism has evolved over millennia, drawing from the rich Vedic traditions and the wisdom encapsulated in Sanskrit texts.",
+            "local"
+          ],
+          [
+            "Central to Hinduism is the worship of various deities, among whom Lord Krishna stands as a beloved and revered figure.",
+            "local"
+          ],
+          [
+            "Interestingly, Hinduism and Buddhism share historical and philosophical ties.",
+            "local"
+          ],
+          [
+            "While Hinduism emphasizes the eternal soul (atman) and its union with Brahman, Buddhism focuses on the cessation of suffering through the Eightfold Path and the realization of Nirvana.",
+            "local"
+          ],
+          [
+            "The influence of Hinduism and its Vedic roots is evident in the spread of Sanskrit as a liturgical and scholarly language.",
+            "local"
+          ],
+          [
+            "Hinduism's inclusive and adaptive nature has allowed it to coexist and flourish alongside other religious traditions, including Buddhism.",
+            "local"
+          ],
+          [
+            "In essence, Hinduism is a dynamic and living tradition that embraces diversity while upholding timeless values.",
+            "local"
+          ],
+          [
+            "Through its teachings, deities like Krishna, and its harmonious relationship with Buddhism, Hinduism remains a beacon of wisdom, compassion, and spiritual aspiration.",
+            "local"
+          ]
+        ]
+      }
+    },
+    "category_shared_scrap_area": [
+      {
+        "source_tag": "local",
+        "scrap_area_type": "local_paths",
+        "scrap_area_specification": [
+          "tests/local_files/hinduism.txt"
+        ]
+      }
+    ]
+  }
+]
