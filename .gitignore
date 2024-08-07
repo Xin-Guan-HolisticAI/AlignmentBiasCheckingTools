@@ -1,9 +1,0 @@
-archive_before_shrinking_for_v1/analytics_archive.py
-test.py
-archive_before_shrinking_for_v1/benchmark_building_archive.py
-archive_before_shrinking_for_v1
-.gitignore
-test/temp.py
-test/test_format.py
-test/test_load_file.py
-multimodal
