@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "alignmentbiascheckingtools"
+name = "alignbiascheck"
 version = "0.1.0"
 description = "Alignment bias package with benchmark building and analytical tools"
 authors = ["HolisticAI"]
 readme = "README.md"
-packages = [{include = "alignmentbiascheckingtools"}]
+packages = [{include = "alignbiascheck"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -16,9 +16,11 @@ bs4 = "^0.0.2"
 wikipedia-api = "^0.6.0"
 nltk = "^3.8.1"
 plotly = "^5.23.0"
-backoff = "^5.23.0"
-openai = "^1.37.2"
-ollama = "^0.3.1"
+scipy = "^1.7.3"
+scikit-learn = "^1.0"
+spacy = "^3.2.1"
+transformers = "^4.11.3"
+sentence-transformers = "^2.1.0"
 
 [build-system]
 requires = ["poetry-core"]
