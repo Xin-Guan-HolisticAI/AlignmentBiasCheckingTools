@@ -1,0 +1,2106 @@
+[
+  {
+    "category": "female_ambassadors",
+    "domain": "profession",
+    "keywords": {
+      "File:US_Minister_to_Bulgaria_Eugenie_M._Anderson_1962_(cropped).jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:US_Minister_to_Bulgaria_Eugenie_M._Anderson_1962_(cropped).jpg"
+            ]
+          }
+        ]
+      },
+      "File:Clare_boothe.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Clare_boothe.jpg"
+            ]
+          }
+        ]
+      },
+      "File:FrancesEWillis1962.png": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:FrancesEWillis1962.png"
+            ]
+          }
+        ]
+      },
+      "File:MJTibbettsUSEmbassyOslo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:MJTibbettsUSEmbassyOslo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Patricia_R._Harris_official_portrait.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Patricia_R._Harris_official_portrait.jpg"
+            ]
+          }
+        ]
+      },
+      "File:CarolCLaise1966.png": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:CarolCLaise1966.png"
+            ]
+          }
+        ]
+      },
+      "File:EileenRDonovan1968.png": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:EileenRDonovan1968.png"
+            ]
+          }
+        ]
+      },
+      "File:Anne_Armstrong_1982.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Anne_Armstrong_1982.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Od_jeane-kirkpatrick-official-portrait_1-255x301.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Od_jeane-kirkpatrick-official-portrait_1-255x301.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Wwwjisom.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Wwwjisom.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Jennifer_C._Ward_(page_14_crop).jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Jennifer_C._Ward_(page_14_crop).jpg"
+            ]
+          }
+        ]
+      },
+      "File:Albrightmadeleine.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Albrightmadeleine.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Elizabeth_Frawley_Bagley.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Elizabeth_Frawley_Bagley.jpg"
+            ]
+          }
+        ]
+      },
+      "File:PrudenceBushnell.gif": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:PrudenceBushnell.gif"
+            ]
+          }
+        ]
+      },
+      "File:Janet_A._Sanderson.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Janet_A._Sanderson.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Amb_Pam_Bridgewater_140.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Amb_Pam_Bridgewater_140.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Gail_D_Mathieu.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Gail_D_Mathieu.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Mary_E._Kramer_-_Official_Portrait_-_80th_GA.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Mary_E._Kramer_-_Official_Portrait_-_80th_GA.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Cynthia_G_Efird.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Cynthia_G_Efird.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Anne_W_Patterson_ambassador_2011.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Anne_W_Patterson_ambassador_2011.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Catherine_Todd_Bailey.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Catherine_Todd_Bailey.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Marie_L_Yovanovitch.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Marie_L_Yovanovitch.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Michele_J._Sison,_U.S._Ambassador.gif": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Michele_J._Sison,_U.S._Ambassador.gif"
+            ]
+          }
+        ]
+      },
+      "File:Ambassador_butenis.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Ambassador_butenis.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Gayleatha_B_Brown.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Gayleatha_B_Brown.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Bernadette_M_Allen.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Bernadette_M_Allen.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Jeanine_E._Jackson.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Jeanine_E._Jackson.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Karen_B_Stewart_ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Karen_B_Stewart_ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Mary_M_Ourisman.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Mary_M_Ourisman.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Cindy_L_Courville.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Cindy_L_Courville.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Eunice_S_Reddick.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Eunice_S_Reddick.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Michele_J_Sison.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Michele_J_Sison.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Liliana_Ayalde.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Liliana_Ayalde.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Susan_Rice,_official_State_Dept_photo_portrait,_2009.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Susan_Rice,_official_State_Dept_photo_portrait,_2009.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Laurie_S._Fulton.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Laurie_S._Fulton.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Vilma_Socorro_Mart%C3%ADnez.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Vilma_Socorro_Mart%C3%ADnez.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Avant,_Nicole.JPG": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Avant,_Nicole.JPG"
+            ]
+          }
+        ]
+      },
+      "File:Anne_Slaughter_Andrew_ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Anne_Slaughter_Andrew_ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Mari_Carmen_Aponte_ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Mari_Carmen_Aponte_ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Bisa_Williams_ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Bisa_Williams_ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Pamela_E_Bridgewater_ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Pamela_E_Bridgewater_ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Mary_Beth_Leonard_official_portrait.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Mary_Beth_Leonard_official_portrait.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Gina_Abercrombie-Winstanley.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Gina_Abercrombie-Winstanley.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Michele-Sison--347x433.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Michele-Sison--347x433.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Rosemary_DiCarlo_official_portrait.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Rosemary_DiCarlo_official_portrait.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Samantha_Power.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Samantha_Power.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Ambassador_Bauer_Official.png": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Ambassador_Bauer_Official.png"
+            ]
+          }
+        ]
+      },
+      "File:Liliana_Ayalde_2017.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Liliana_Ayalde_2017.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Helen_Meagher_La_Lime.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Helen_Meagher_La_Lime.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Joan_Polaschik_2014.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Joan_Polaschik_2014.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Ambassador_Nina_Hachigian.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Ambassador_Nina_Hachigian.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Cynthia_Akuetteh_-_2016_(cropped).jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Cynthia_Akuetteh_-_2016_(cropped).jpg"
+            ]
+          }
+        ]
+      },
+      "File:Maureen-Cormack-8x10.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Maureen-Cormack-8x10.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Virginia_Palmer.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Virginia_Palmer.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Ambassador-Jennifer-Zimdahl-Galt.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Ambassador-Jennifer-Zimdahl-Galt.jpg"
+            ]
+          }
+        ]
+      },
+      "File:LauraDoguamb.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:LauraDoguamb.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Lucy_Tamlyn_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Lucy_Tamlyn_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:C._Patricia_Alsup.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:C._Patricia_Alsup.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Linda_Swartz_Taglialatela.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Linda_Swartz_Taglialatela.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Jean_E._Manes.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Jean_E._Manes.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Karen_B._Stewart_(3).jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Karen_B._Stewart_(3).jpg"
+            ]
+          }
+        ]
+      },
+      "File:Marie_L._Yovanovitch.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Marie_L._Yovanovitch.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Mary_Beth_Leonard.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Mary_Beth_Leonard.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Adrienne_Galanek_profile.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Adrienne_Galanek_profile.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Herro_Mustafa_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Herro_Mustafa_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Nikki_Haley_official_portrait.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Nikki_Haley_official_portrait.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Kay_Bailey_Hutchison_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Kay_Bailey_Hutchison_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Maria_E._Brewer,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Maria_E._Brewer,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Carla_Sands_official_photo_(cropped).jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Carla_Sands_official_photo_(cropped).jpg"
+            ]
+          }
+        ]
+      },
+      "File:Nina_Maria_Fite_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Nina_Maria_Fite_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Michele_Sison_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Michele_Sison_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Jenifer_H._Moore.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Jenifer_H._Moore.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Lynne_M._Tracy_official_photo_(cropped).jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Lynne_M._Tracy_official_photo_(cropped).jpg"
+            ]
+          }
+        ]
+      },
+      "File:Patricia_A._Mahoney_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Patricia_A._Mahoney_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Melissa_A._Brown.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Melissa_A._Brown.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Bridget_A._Brink_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Bridget_A._Brink_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Kelly_Knight_Craft.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Kelly_Knight_Craft.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Jessica_E._Lapenn_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Jessica_E._Lapenn_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Herro_K._Mustafa_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Herro_K._Mustafa_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Mary_Beth_Leonard_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Mary_Beth_Leonard_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Kelley_Eckels_Currie_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Kelley_Eckels_Currie_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Yuri_P._Kim_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Yuri_P._Kim_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Roxanne_J._Cabral_(2).jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Roxanne_J._Cabral_(2).jpg"
+            ]
+          }
+        ]
+      },
+      "File:Alina_L._Romanowski,_U.S._Ambassador_2.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Alina_L._Romanowski,_U.S._Ambassador_2.jpg"
+            ]
+          }
+        ]
+      },
+      "File:2020_One_Team_Award_Winner-_Jessica_Davis_Ba_(cropped).jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:2020_One_Team_Award_Winner-_Jessica_Davis_Ba_(cropped).jpg"
+            ]
+          }
+        ]
+      },
+      "File:Charisse_Phillips.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Charisse_Phillips.jpg"
+            ]
+          }
+        ]
+      },
+      "File:AmbassadorClark.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:AmbassadorClark.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Julie_Fisher.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Julie_Fisher.jpg"
+            ]
+          }
+        ]
+      },
+      "File:MaryKay_Loss_Carlson.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:MaryKay_Loss_Carlson.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Yael_Lempert.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Yael_Lempert.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Martina_Strong,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Martina_Strong,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Linda-Thomas-Greenfield-v1-8x10-1.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Linda-Thomas-Greenfield-v1-8x10-1.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Melanie_Harris_Higgins_official_photo.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Melanie_Harris_Higgins_official_photo.jpg"
+            ]
+          }
+        ]
+      },
+      "File:CDA-Moses-Ones-Official.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:CDA-Moses-Ones-Official.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Victoria_Reggie_Kennedy,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Victoria_Reggie_Kennedy,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Elizabeth_Moore_Aubin.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Elizabeth_Moore_Aubin.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Claire_D._Cronin,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Claire_D._Cronin,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Ambassador_Jamie_Harpootlian_Official_Portrait.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Ambassador_Jamie_Harpootlian_Official_Portrait.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Amy_Gutmann,_U.S._Ambassador_3.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Amy_Gutmann,_U.S._Ambassador_3.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Julie_J._Chung,_U.S._Ambassador.png": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Julie_J._Chung,_U.S._Ambassador.png"
+            ]
+          }
+        ]
+      },
+      "File:Ambassador-Cromer.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Ambassador-Cromer.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Patricia_A._Mahoney,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Patricia_A._Mahoney,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Randi_Charno_Levine,_U.S._Ambassador.png": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Randi_Charno_Levine,_U.S._Ambassador.png"
+            ]
+          }
+        ]
+      },
+      "File:Elizabeth_Fitzsimmons,_U.S._Ambassador_(cropped).jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Elizabeth_Fitzsimmons,_U.S._Ambassador_(cropped).jpg"
+            ]
+          }
+        ]
+      },
+      "File:Virginia_E._Palmer,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Virginia_E._Palmer,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Caryn_R._McClelland,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Caryn_R._McClelland,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Bridget_A._Brink,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Bridget_A._Brink,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Claire_A._Pierangelo,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Claire_A._Pierangelo,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Priti_Patel_and_Jane_Hartley_(cropped).jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Priti_Patel_and_Jane_Hartley_(cropped).jpg"
+            ]
+          }
+        ]
+      },
+      "File:MaryKay_Loss_Carlson,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:MaryKay_Loss_Carlson,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Caroline_Kennedy,_U.S._Ambassador_2.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Caroline_Kennedy,_U.S._Ambassador_2.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Karen_B._Decker.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Karen_B._Decker.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Meg_Whitman,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Meg_Whitman,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Bernadette_M._Meehan,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Bernadette_M._Meehan,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Carrin_F._Patman,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Carrin_F._Patman,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Shefali_Razdan_Duggal,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Shefali_Razdan_Duggal,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Constance_J._Milstein,_U.S._Ambassador_2.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Constance_J._Milstein,_U.S._Ambassador_2.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Angela_Aggeler,_Deputy_Assistant_Secretary_of_State.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Angela_Aggeler,_Deputy_Assistant_Secretary_of_State.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Ambassador_Mari_Carmen_Aponte.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Ambassador_Mari_Carmen_Aponte.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Marie_Damour,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Marie_Damour,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Michelle_Kwan,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Michelle_Kwan,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Candace_A._Bond,_U.S._Ambassador_2.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Candace_A._Bond,_U.S._Ambassador_2.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Lynne_M._Tracy,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Lynne_M._Tracy,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:445Bagley_Elizabeth_2021_4x6.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:445Bagley_Elizabeth_2021_4x6.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Lucy_Tamlyn,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Lucy_Tamlyn,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Kathleen_Kavalec,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Kathleen_Kavalec,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Julie_D._Fisher,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Julie_D._Fisher,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Kristina_Kvien,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Kristina_Kvien,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Jessica_Davis_Ba,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Jessica_Davis_Ba,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Rachna_Korhonen,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Rachna_Korhonen,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Heide_B._Fulton,_U.S._Ambassador.png": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Heide_B._Fulton,_U.S._Ambassador.png"
+            ]
+          }
+        ]
+      },
+      "File:Kathleen_A._FitzGibbon,_U.S._Deputy_Chief_of_Mission.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Kathleen_A._FitzGibbon,_U.S._Deputy_Chief_of_Mission.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Yael_Lempert,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Yael_Lempert,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:DCM-Galanek-Adrienne-headshot.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:DCM-Galanek-Adrienne-headshot.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Jennifer_Johnson,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Jennifer_Johnson,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Robin_L._Dunnigan,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Robin_L._Dunnigan,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Nicole_D._Theriot,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Nicole_D._Theriot,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Herro_Mustafa_Garg,_U.S._Ambassador.jpg": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Herro_Mustafa_Garg,_U.S._Ambassador.jpg"
+            ]
+          }
+        ]
+      },
+      "File:Nicole_Shampaine,_U.S._Deputy_Chief_of_Mission.png": {
+        "keyword_type": "name_entity",
+        "keyword_provider": "wiki_hyperlinks",
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "wiki_urls",
+            "scrap_area_specification": [
+              "https://en.wikipedia.org//wiki/File:Nicole_Shampaine,_U.S._Deputy_Chief_of_Mission.png"
+            ]
+          }
+        ]
+      },
+      "female_ambassadors": {
+        "keyword_type": "sub-concepts",
+        "keyword_provider": "manual",
+        "targeted_scrap_area": [
+          {
+            "source_tag": "default",
+            "scrap_area_type": "unknown",
+            "scrap_area_specification": []
+          }
+        ],
+        "scrap_mode": "in_page",
+        "scrap_shared_area": "Yes"
+      }
+    }
+  }
+]
