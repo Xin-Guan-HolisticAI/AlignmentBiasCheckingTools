@@ -12,7 +12,8 @@ import json
 from sentence_transformers import SentenceTransformer, util
 import numpy as np
 import warnings
-from abcData import abcData
+from alignmentbiascheckingtools.test.abcData import abcData
+from alignmentbiascheckingtools.test import benchmark_building
 
 import spacy
 from tqdm import tqdm
@@ -111,7 +112,6 @@ def construct_non_containing_set(strings):
     result_set = set()
     for string in strings:
         update_string_set(result_set, string)
-        # print(f"Current set: {result_set}")
     return result_set
 
 
@@ -127,7 +127,7 @@ def check_generation_function(generation_function, test_mode=None):
     if test_mode == 'list':
         try:
             test_response = generation_function('Give me a list of birds in Python format.')
-            response_list = clean_list(test_response)
+            clean_list(test_response)
         except Exception as e:
             warnings.warn("The generation function seems not capable enough to respond in Python list format.")
 
@@ -299,7 +299,7 @@ class KeywordFinder:
     def find_keywords_by_embedding_on_wiki(self, keyword=None,
                                            n_keywords=40, embedding_model='paraphrase-Mpnet-base-v2',
                                            language='en',
-                                           user_agent='YourAppName/1.0 (yourname@example.com)'):
+                                           user_agent='YourAppName/1.0 (yourname@example.com)', max_adjustment = 150):
         if not keyword:
             keyword = self.category
 
@@ -316,19 +316,15 @@ class KeywordFinder:
 
         # Tokenize the Wikipedia page content
         tokens = re.findall(r'\b\w+\b', page_content.lower())
-        # print("Tokens:", tokens)
 
         # Get unique tokens
         unique_tokens = list(set(tokens))
-        # print("Unique Tokens:", unique_tokens)
 
         # Get embeddings for unique tokens
         embeddings = {}
         token_embeddings = model.encode(unique_tokens, show_progress_bar=True)
         for token, embedding in zip(unique_tokens, token_embeddings):
             embeddings[token] = embedding
-        # print("Embeddings:", {k: v[:5] for k, v in embeddings.items()})  # Printing first 5 values for brevity
-
         # # Find most similar words to the keyword
         # if keyword not in embeddings:
         #     raise AssertionError(f"Keyword '{keyword}' not found in the embeddings")
@@ -338,22 +334,39 @@ class KeywordFinder:
         for token, embedding in tqdm(embeddings.items(), desc="Calculating similarities"):
             similarities[token] = util.pytorch_cos_sim(keyword_embedding, embedding).item()
 
-        # Sort tokens by similarity score
-        if n_keywords + 150 > len(similarities) / 2:
-            n_keywords = int(len(similarities) / 2) - 151
+        ADDITIONAL_ITEMS = 20
 
-        similar_words_first_pass = sorted(similarities.items(), key=lambda item: item[1], reverse=True)[
-                                   :n_keywords * 2 + 20]
+        # Ensure n_keywords is non-negative and within valid range. Adjusts n_keywords accordingly
+        if max_adjustment > 0 and n_keywords + max_adjustment > len(similarities) / 2:
+            n_keywords = max(int(len(similarities) / 2) - max_adjustment - 1, 0)
+
+        # Sort tokens by similarity score and select top candidates
+        sorted_similarities = sorted(similarities.items(), key=lambda item: item[1], reverse=True)
+
+        # Ensure not to exceed the available number of items
+        num_items_to_select = min(len(sorted_similarities), n_keywords * 2 + ADDITIONAL_ITEMS)
+        similar_words_first_pass = sorted_similarities[:num_items_to_select]
+
+        # Convert to dictionary
         words_dict = dict(similar_words_first_pass)
+
+        # Construct non-containing set
         non_containing_set = construct_non_containing_set(words_dict.keys())
+
+        # Filter based on non-containing set
         similar_words_dict = {k: v for k, v in words_dict.items() if k in non_containing_set}
-        self.keywords = sorted(similar_words_dict, key=lambda k: similar_words_dict[k], reverse=True)[
-                        :min(n_keywords, len(similar_words_dict))]
+
+
+        # Select top keywords
+        self.keywords = sorted(similar_words_dict, key=lambda k: similar_words_dict[k], reverse=True)[:min(n_keywords, len(similar_words_dict))]
+
+        # Set mode and return processed data
         self.finder_mode = "embedding"
         return self.keywords_to_abcData()
 
+
     def find_name_keywords_by_hyperlinks_on_wiki(self, format='Paragraph', link=None, page_name=None, name_filter=False,
-                                                 col_info=None, depth=None, source_tag='default'):
+                                                 col_info=None, depth=None, source_tag='default', max_keywords = None):
 
         def complete_link_page_name_pair(link, page_name, wiki_html):
             def extract_title_from_url(url):
@@ -379,7 +392,7 @@ class KeywordFinder:
                 raise AssertionError("You must enter either the page_name or the link")
             return link, page_name
 
-        def bullet(link, page_name, wiki_html):
+        def bullet(link, page_name, wiki_html, max_keywords = None):
 
             p_html = wiki_html.page(page_name)
             # all_urls stores title as key and link as value
@@ -387,18 +400,23 @@ class KeywordFinder:
 
             links = p_html.links
 
+            #keywords counter, if max_keywords is given, will only output the top max_keywords from the bullet list.
+            counter = 0
             for key in tqdm(links.keys(), desc=f'Finding Keywords by Hyperlinks on Wiki Page {page_name}'):
-                # print(key)
                 k_entity = links[key]
                 if k_entity != None and k_entity.title != None and "Category" not in k_entity.title and "List" not in k_entity.title and "Template" not in k_entity.title and "Citation" not in k_entity.title and 'Portal' not in k_entity.title:
                     try:
                         all_urls[k_entity.title] = (k_entity.fullurl)
+                        counter+=1
+
+                        if max_keywords != None and counter>=max_keywords:
+                            break
                     except KeyError:
                         continue
 
             return all_urls
 
-        def table(link, col_info):
+        def table(link, col_info, max_keywords = 100):
             matched_links = {}
             try:
                 page = requests.get(link)
@@ -407,7 +425,10 @@ class KeywordFinder:
                 soup = BeautifulSoup(page.content, 'html.parser')
                 # Find the div with id="mw-content-text"
                 mw_content_text_div = soup.find('div', id='mw-content-text')
-
+                
+                #If max_keywords is given, will print out keywords from current table until max_keywords is exceeded.
+                #Note: This method will finish keywords in the current table, meaning max_keywords may be exceeded.
+                counter = 0 
                 if mw_content_text_div:
                     # Find all <table> tags within mw-content-text div
                     table_tags = mw_content_text_div.find_all('table')
@@ -445,6 +466,12 @@ class KeywordFinder:
                                                             '/wiki/') and "Category" not in href_value:
                                                         matched_links[href_value[6:]] = (
                                                                 'https://en.wikipedia.org/' + href_value)
+                                                        counter+=1
+
+                        if max_keywords!=None and counter>=max_keywords:
+                            break
+
+                                    
                         table_num += 1
                 else:
                     print("Div with id='mw-content-text' not found.")
@@ -455,7 +482,7 @@ class KeywordFinder:
 
             return matched_links
 
-        def nested(link, page_name, depth, wiki_html):
+        def nested(link, page_name, depth, wiki_html, max_keywords = None):
 
             def default_depth(categorymembers, level=1):
 
@@ -467,18 +494,31 @@ class KeywordFinder:
                             max_depth = current_depth
                 return max_depth
 
-            def print_categorymembers(categorymembers, all_urls, max_level=1, level=0):
+            def print_categorymembers(categorymembers, all_urls, max_level=1, level=0, max_keywords=None):
+                # Initialize a counter to track the number of links added
+                if 'count' not in print_categorymembers.__dict__:
+                    print_categorymembers.count = 0
+
+                # If max_keywords is specified and the count has reached this limit, return
+                if max_keywords is not None and print_categorymembers.count >= max_keywords:
+                    return
+
                 for c in categorymembers.values():
-                    if c != None and c.title != None and "Category" not in c.title and "List" not in c.title and "Template" not in c.title and "Citation" not in c.title and 'Portal' not in c.title:
-                        # Try catch block to prevent KeyError in case fullurl is not present
+                    if c is not None and c.title is not None and "Category" not in c.title and "List" not in c.title and "Template" not in c.title and "Citation" not in c.title and 'Portal' not in c.title:
+                        # Try-catch block to prevent KeyError in case fullurl is not present
                         try:
+                            if max_keywords is not None and print_categorymembers.count >= max_keywords:
+                                return
+                            
                             all_urls[c.title] = c.fullurl
+                            print_categorymembers.count += 1
+
                         except KeyError:
                             continue
 
-                    # As long as Category is still the name of the site and level is lower than max_level, recursively calls method again.
+                    # As long as Category is still the name of the site and level is lower than max_level, recursively call the method again
                     if c.ns == wikipediaapi.Namespace.CATEGORY and level < max_level:
-                        print_categorymembers(c.categorymembers, all_urls, max_level=max_level, level=level + 1, )
+                        print_categorymembers(c.categorymembers, all_urls, max_level=max_level, level=level + 1, max_keywords=max_keywords)
 
             p_html = wiki_html.page(page_name)
             all_urls = {}
@@ -487,24 +527,30 @@ class KeywordFinder:
                 depth = default_depth(p_html.categorymembers)
                 print(f"Default depth is {depth}.")
             # Calls recursive method to iterate through links according to depth
-            print_categorymembers(p_html.categorymembers, all_urls, depth)
+            print_categorymembers(p_html.categorymembers, all_urls, depth, 0, max_keywords)
 
             return all_urls
 
-        def named_entity_recognition(all_links):
+        def named_entity_recognition(all_links, max_keywords=None):
 
             # Uses spacy for named_entity recognition
             nlp = spacy.load("en_core_web_sm")
             pd.set_option("display.max_rows", 200)
             new_links = {}
 
+            count = 0
             for key, url in all_links.items():
+
+                if max_keywords!=None and count>=max_keywords:
+                    break
+
                 doc = nlp(key)
 
                 # Goes through each entity in the key to search for PERSON label
                 for ent in doc.ents:
                     if ent.label_ == "PERSON":
                         new_links[key] = url
+                        count+=1
                         break
 
             return new_links
@@ -549,18 +595,18 @@ class KeywordFinder:
         assert format in ['Paragraph', 'Bullet', 'Table',
                           'Nested'], "Invalid format type. It must be either Paragraph, Bullet, Table, or Nested"
         if format == 'Bullet' or format == 'Paragraph':
-            result_map = bullet(link, page_name, wiki_html)
+            result_map = bullet(link, page_name, wiki_html, max_keywords)
         elif format == 'Table':
             if col_info == 'None':
                 print("Missing table information")
                 return
-            result_map = table(link, col_info)
+            result_map = table(link, col_info, max_keywords)
         elif format == 'Nested':
-            result_map = nested(link, page_name, depth, wiki_html)
+            result_map = nested(link, page_name, depth, wiki_html, max_keywords)
 
         # Checks to see if user wants NER. This will work for all formats however is most helpful for Paragraph
         if name_filter:
-            result_map = named_entity_recognition(result_map)
+            result_map = named_entity_recognition(result_map, max_keywords)
 
         return turn_results_to_abcData(result_map)
 
@@ -590,6 +636,7 @@ class ScrapAreaFinder:
         self.data[0]["category_shared_scrap_area"] = formatted_scrap_area
         scrap_area = abcData.create_data(category=self.category, domain=self.domain, data_tier='scrap_area',
                                          data=self.data)
+        
         return scrap_area
 
     def find_scrap_urls_on_wiki(self, top_n=5, bootstrap_url=None, language='en',
@@ -629,7 +676,6 @@ class ScrapAreaFinder:
             for title, link_page in tqdm(links.items()):
                 if link_page.title not in visited and link_page.title in title_list:
                     try:
-                        # print(title)
                         related_pages.extend([link_page.fullurl])
                     except Exception as e:
                         print(f"Error: {e}")
@@ -644,7 +690,6 @@ class ScrapAreaFinder:
         main_page = search_wikipedia(topic, language=language, user_agent=user_agent)
 
         if isinstance(main_page, str):
-            print(main_page)
             return self.scrap_area_to_abcData()
         else:
             print(f"Found Wikipedia page: {main_page.title}")
@@ -794,7 +839,6 @@ class Scrapper:
 
                 # Split the cleaned text into sentences
                 sentences = re.split(r'(?<=\.)\s+(?=[A-Z])|(?<=\?”)\s+|(?<=\.”)\s+', clean_text)
-                # print(sentences)
 
                 # Extract desired sentences
                 for sentence in sentences:
@@ -815,7 +859,6 @@ class Scrapper:
                     for source_tag in source_tag_buffer:
                         f.write(f'{source_tag}\n')
 
-        # Read from temporary files and aggregate results
         for keyword in self.keywords:
             aggregated_results = []
             aggregated_source_tags = []
@@ -959,37 +1002,43 @@ class PromptMaker:
 
 
 class BenchmarkBuilder:
-    default_configuration = {
-        'keyword_finder': {
-            'require': True,
-            'reading_location': 'default',
-            'method': 'embedding_on_wiki',  # 'embedding_on_wiki' or 'llm_templates' or 'hyperlinks_on_wiki'
-            'keyword_number': 7,
-            'embedding_model': 'paraphrase-Mpnet-base-v2',
-            'saving': True,
-            'saving_location': 'default',
-            'generation_function': None,  # if llm is chosen as the method, this function should be provided
-        },
-        'scrap_area_finder': {
-            'require': True,
-            'reading_location': 'default',
-            'local_file_location': 'default',
-            'method': 'wiki',  # 'wiki' or 'local_files'
-            'scrap_number': 5,
-            'saving': True,
-            'saving_location': 'default',
-        },
-        'scrapper': {
-            'require': True,
-            'reading_location': 'default',
-            'saving': True,
-            'method': 'wiki',  # This is related to the scrap_area_finder method
-            'saving_location': 'default'},
-        'prompt_maker': {
-            'method': 'split_sentences',
-            'saving_location': 'default',
-        },
-    }
+
+    default_configuration = {}
+    def reset(cls):
+        cls.default_configuration = {
+            'keyword_finder': {
+                'require': True,
+                'reading_location': 'default',
+                'method': 'embedding_on_wiki',  # 'embedding_on_wiki' or 'llm_inquiries' or 'hyperlinks_on_wiki'
+                'keyword_number': 7, #keyword_number works for both embedding_on_wiki and hyperlinks_on_wiki
+                'hyperlinks_info': [], #If hyperlinks_info is method chosen, can give more info... format='Paragraph', link=None, page_name=None, name_filter=False, col_info=None, depth=None, source_tag='default', max_keywords = None). col_info format is [{'table_num': value, 'column_name':List}]
+                'llm_info': [], #If llm_inequiries is method chosen, can give more info... self, n_run=20,n_keywords=20, generation_function=None, model_name=None, embedding_model=None, show_progress=True
+                'max_adjustment': 150, #max_adjustment for embedding_on_wiki. If max_adjustment is equal to -1, then max_adjustment is not taken into account.
+                'embedding_model': 'paraphrase-Mpnet-base-v2',
+                'saving': True,
+                'saving_location': 'default'
+            },
+            'scrap_area_finder': {
+                'require': True,
+                'reading_location': 'default',
+                'method': 'wiki',  # 'wiki' or 'local_files',
+                'local_file': None,
+                'scrap_number': 5,
+                'saving': True,
+                'saving_location': 'default',
+            },
+            'scrapper': {
+                'require': True,
+                'reading_location': 'default',
+                'saving': True,
+                'method': 'wiki',  # This is related to the scrap_area_finder method,
+                'saving_location': 'default'},
+            'prompt_maker': {
+                'require': True,
+                'method': 'split_sentences',
+                'saving_location': 'default',
+            },
+        }
 
     def __init__(self):
         pass
@@ -1020,6 +1069,7 @@ class BenchmarkBuilder:
 
     @classmethod
     def category_pipeline(cls, domain, demographic_label, configuration=None):
+        cls.reset(cls)
         if configuration is None:
             configuration = cls.default_configuration.copy()
         else:
@@ -1029,15 +1079,17 @@ class BenchmarkBuilder:
         keyword_finder_reading_location = configuration['keyword_finder']['reading_location']
         keyword_finder_method = configuration['keyword_finder']['method']
         keyword_finder_keyword_number = configuration['keyword_finder']['keyword_number']
+        keyword_finder_hyperlinks_info = configuration['keyword_finder']['hyperlinks_info']
+        keyword_finder_llm_info = configuration['keyword_finder']['llm_info'] 
+        keyword_finder_max_adjustment = configuration['keyword_finder']['max_adjustment']
         keyword_finder_embedding_model = configuration['keyword_finder']['embedding_model']
         keyword_finder_saving = configuration['keyword_finder']['saving']
         keyword_finder_saving_location = configuration['keyword_finder']['saving_location']
-        keyword_finder_generation_function = configuration['keyword_finder']['generation_function']
 
         scrap_area_finder_require = configuration['scrap_area_finder']['require']
-        scrap_area_local_files_location = configuration['scrap_area_finder']['local_file_location']
         scrap_area_finder_reading_location = configuration['scrap_area_finder']['reading_location']
         scrap_area_finder_method = configuration['scrap_area_finder']['method']
+        scrap_area_local_file = configuration['scrap_area_finder']['local_file']
         scrap_area_finder_saving = configuration['scrap_area_finder']['saving']
         scrap_area_finder_saving_location = configuration['scrap_area_finder']['saving_location']
         scrap_area_finder_scrap_area_number = configuration['scrap_area_finder']['scrap_number']
@@ -1048,6 +1100,7 @@ class BenchmarkBuilder:
         scrapper_method = configuration['scrapper']['method']
         scrapper_saving_location = configuration['scrapper']['saving_location']
 
+        prompt_maker_require = configuration['prompt_maker']['require']
         prompt_maker_method = configuration['prompt_maker']['method']
         prompt_maker_saving_location = configuration['prompt_maker']['saving_location']
 
@@ -1055,8 +1108,8 @@ class BenchmarkBuilder:
         assert keyword_finder_method in ['embedding_on_wiki', 'llm_inquiries',
                                          'hyperlinks_on_wiki'], "Invalid keyword finder method. Choose either 'embedding_on_wiki', 'llm_inquiries', or 'hyperlinks_on_wiki'."
         if keyword_finder_method == 'llm_inquiries':
-            assert keyword_finder_generation_function is not None, "generation function must be provided if llm_inquiries is chosen as the method"
-            check_generation_function(keyword_finder_generation_function)
+            assert 'generation_function' in keyword_finder_llm_info and keyword_finder_llm_info['generation_function'] is not None, "generation function must be provided if llm_inquiries is chosen as the method"
+            check_generation_function(keyword_finder_llm_info['generation_function'])
         assert scrap_area_finder_method in ['wiki',
                                             'local_files'], "Invalid scrap area finder method. Choose either 'wiki' or 'local_files'"
         assert scrapper_method in ['wiki',
@@ -1064,28 +1117,45 @@ class BenchmarkBuilder:
         assert scrap_area_finder_method == scrapper_method, "scrap_area_finder and scrapper methods must be the same"
         assert prompt_maker_method in ['split_sentences'], "Invalid prompt maker method. Choose 'split_sentences'"
 
+        '''
         # make sure only the required loading is done
         if not scrapper_require:
             scrap_area_finder_require = False
 
         if not scrap_area_finder_require:
             keyword_finder_require = False
+        '''
 
         if keyword_finder_require:
             if keyword_finder_method == 'embedding_on_wiki':
                 kw = KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_embedding_on_wiki(
-                    n_keywords=keyword_finder_keyword_number, embedding_model=keyword_finder_embedding_model).add(
+                    n_keywords=keyword_finder_keyword_number, embedding_model=keyword_finder_embedding_model, max_adjustment = keyword_finder_max_adjustment).add(
                     keyword=demographic_label)
             elif keyword_finder_method == 'llm_inquiries':
-                kw = KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_llm_inquiries(
-                    generation_function=keyword_finder_generation_function).add(
+                #format = self, n_run=20,n_keywords=20, generation_function=None, model_name=None, embedding_model=None, show_progress=True
+                default_values = {'n_run': 20, 'n_keywords': 20, 'generation_function': None, 'model_name': None, 'embedding_model': None, 'show_progress': True}
+    
+                # Create a new dictionary with only non-default fields
+                for key in keyword_finder_llm_info:
+                    if key in default_values:
+                        default_values[key] = keyword_finder_llm_info[key]
+
+                kw = KeywordFinder(domain=domain, category=demographic_label).find_keywords_by_llm_inquiries(**default_values).add(
                     keyword=demographic_label)
             elif keyword_finder_method == 'hyperlinks_on_wiki':
-                kw = KeywordFinder(domain=domain,
-                                   category=demographic_label).find_name_keywords_by_hyperlinks_on_wiki().add(
-                    keyword=demographic_label)
-            print('Keywords found.')
-
+                #format='Paragraph', link=None, page_name=None, name_filter=False, col_info=None, depth=None, source_tag='default', max_keywords = None):
+                if ('link' in keyword_finder_hyperlinks_info and keyword_finder_hyperlinks_info['link'] != None) or ('page_name' in keyword_finder_hyperlinks_info and keyword_finder_hyperlinks_info['page_name'] != None):
+                    default_values = {'format': 'Paragraph', 'link': None, 'page_name': None, 'name_filter': False, 'col_info': None, 'depth': None, 'source_tag': 'default', 'max_keywords': None}
+                else: raise AssertionError("For hyperlinks of wiki, must provide either the page name or link")
+                
+                default_values = {'format': 'Paragraph', 'link': None, 'page_name': None, 'name_filter': False, 'col_info': None, 'depth': None, 'source_tag': 'default', 'max_keywords': None}
+    
+                # Create a new dictionary with only non-default fields
+                for key in keyword_finder_hyperlinks_info:
+                    if key in default_values:
+                        default_values[key] = keyword_finder_hyperlinks_info[key]
+                
+                kw = KeywordFinder(domain=domain, category=demographic_label).find_name_keywords_by_hyperlinks_on_wiki(**default_values).add(keyword=demographic_label)
             if keyword_finder_saving:
                 if keyword_finder_saving_location == 'default':
                     kw.save()
@@ -1093,27 +1163,28 @@ class BenchmarkBuilder:
                     kw.save(file_path=keyword_finder_saving_location)
 
         elif scrap_area_finder_require:
+            filePath = ""
             if keyword_finder_reading_location == 'default':
+                filePath = f'tests/data/customized/keywords/{domain}_{demographic_label}_keywords.json'
                 kw = abcData.load_file(domain=domain, category=demographic_label,
-                                       file_path=f'data/customized/keywords/{domain}_{demographic_label}_keywords.json',
+                                       file_path = filePath,
                                        data_tier='keywords')
-                print(f'Keywords loaded from data/customized/keywords/{domain}_{demographic_label}_keywords.json')
             else:
+                filePath = keyword_finder_reading_location
                 kw = abcData.load_file(domain=domain, category=demographic_label,
-                                       file_path=keyword_finder_reading_location, data_tier='keywords')
-                print(f'Keywords loaded from {keyword_finder_reading_location}')
+                                       file_path=filePath, data_tier='keywords')
+                
+            if kw!=None: print(f'Keywords loaded from {filePath}')
+            else: raise ValueError(f"Unable to read keywords from {filePath}. Can't scrap area.")
 
         if scrap_area_finder_require:
             if scrap_area_finder_method == 'wiki':
                 sa = ScrapAreaFinder(kw, source_tag='wiki').find_scrap_urls_on_wiki(top_n=scrap_area_finder_scrap_area_number)
             elif scrap_area_finder_method == 'local_files':
-                if scrap_area_finder_reading_location == 'default':
-                    sa = ScrapAreaFinder(kw, source_tag='local').find_scrap_paths_local(
-                        f'data/customized/local_files/{demographic_label}')
-                else:
-                    sa = ScrapAreaFinder(kw, source_tag='local').find_scrap_paths_local(scrap_area_local_files_location)
-            print('Scrapped areas found.')
-
+                if scrap_area_local_file == None:
+                    raise ValueError(f"Unable to read keywords from {scrap_area_local_file}. Can't scrap area.")
+                sa = ScrapAreaFinder(kw, source_tag='local').find_scrap_paths_local(scrap_area_local_file)
+            
             if scrap_area_finder_saving:
                 if scrap_area_finder_saving_location == 'default':
                     sa.save()
@@ -1121,15 +1192,19 @@ class BenchmarkBuilder:
                     sa.save(file_path=scrap_area_finder_saving_location)
 
         elif scrapper_require:
+            filePath = ""
             if scrap_area_finder_reading_location == 'default':
+                filePath = f'tests/data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json'
                 sa = abcData.load_file(domain=domain, category=demographic_label,
-                                       file_path=f'data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json',
+                                       file_path=filePath,
                                        data_tier='scrap_area')
-                print(f'Scrap areas loaded from data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json')
             else:
+                filePath = scrap_area_finder_reading_location
                 sa = abcData.load_file(domain=domain, category=demographic_label,
                                        file_path=scrap_area_finder_reading_location, data_tier='scrap_area')
-                print(f'Scrap areas loaded from {scrap_area_finder_reading_location}')
+
+            if sa!= None: print(f'Scrap areas loaded from {filePath}')
+            else: raise ValueError(f"Unable to scrap areas from {filePath}. Can't use scrapper.")
 
         if scrapper_require:
             if scrapper_method == 'wiki':
@@ -1143,27 +1218,32 @@ class BenchmarkBuilder:
                     sc.save()
                 else:
                     sc.save(file_path=scrapper_saving_location)
-
-        else:
+        elif prompt_maker_require:
+            filePath = ""
             if scrapper_reading_location == 'default':
+                filePath = f'tests/data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json'
                 sc = abcData.load_file(domain=domain, category=demographic_label,
-                                       file_path=f'data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json',
+                                       file_path=filePath,
                                        data_tier='scrapped_sentences')
-                print(f'Scrapped sentences loaded from data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json')
+                print(f'Scrapped sentences loaded from tests/data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json')
             else:
+                filePath = scrapper_reading_location
                 sc = abcData.load_file(domain=domain, category=demographic_label, file_path=scrapper_reading_location,
                                        data_tier='scrapped_sentences')
                 print(f'Scrapped sentences loaded from {scrapper_reading_location}')
-
-        if prompt_maker_method == 'split_sentences':
+        
+            if sc!= None: print(f'Scrapped loaded from {filePath}')
+            else: raise ValueError(f"Unable to scrap from {filePath}. Can't make prompts.")
+        
+        if prompt_maker_method == 'split_sentences' and prompt_maker_require:
             pm = PromptMaker(sc).split_sentences()
+            if pm==None: raise ValueError(f"Unable to make prompts out of no scrapped sentences")
             if prompt_maker_saving_location == 'default':
                 pm.save()
             else:
                 pm.save(file_path=prompt_maker_saving_location)
             print(f'Benchmark building for {demographic_label} completed.')
             print('\n=====================================================\n')
-
 
 
 if __name__ == '__main__':
