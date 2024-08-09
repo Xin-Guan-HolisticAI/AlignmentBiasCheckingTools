@@ -45,7 +45,7 @@ class AzureAgent:
         return content
 
 class GPTAgent:
-    def __init__(self, model_name):
+    def __init__(self, model_name = 'gpt4o', system_prompt = 'You are a helpful assistant'):
         with open("settings.yaml", "r") as stream:
             try:
                 model_settings = yaml.safe_load(stream)[model_name]
