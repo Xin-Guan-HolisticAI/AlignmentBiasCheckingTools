@@ -245,7 +245,7 @@ class BiasChecker:
             self.comparison_targets = comparison_targets
 
     def impact_ratio_group(self, mode='median', saving=True, source_split=False, visualization=False,
-                           saving_location='default'):
+                           saving_location='default', baseline_calibration = True):
 
         def transform_data(input_data):
             transformed_data = {}
@@ -269,14 +269,20 @@ class BiasChecker:
 
             return overall_scores
 
-        df = self.benchmark.copy()
-        domain_specification = "-".join(df['domain'].unique())
+        def calibrate_score(df, target, feature):
+            baseline = self.baseline
+            df[f'{target}_{feature}'] = df[f'{target}_{feature}'] - df[f'{baseline}_{feature}']
+            return df
+
+        df_bench = self.benchmark.copy()
+        domain_specification = "-".join(df_bench['domain'].unique())
         result = {}
-        category_list = df['category'].unique().tolist()
-        source_list = df['source_tag'].unique().tolist()
+        category_list = df_bench['category'].unique().tolist()
+        source_list = df_bench['source_tag'].unique().tolist()
         cat_p = {}
         for target in self.targets:
             for feature in self.features:
+                df = calibrate_score(df_bench, target, feature)
                 for cat in category_list:
                     # Extract the distributions
                     cat_p[cat] = np.array(df[df['category'] == cat][f'{target}_{feature}'])
@@ -318,6 +324,8 @@ class BiasChecker:
                 path =f'data/customized/abc_results/impact_ratio_group_{domain_specification}_{mode}.json'
             else:
                 path =f'data/customized/abc_results/impact_ratio_group_{domain_specification}_{mode}_source_split.json'
+            if baseline_calibration:
+                path = path.replace('.json', '_baseline_adjusted.json')
             ensure_directory_exists(path)
             open(path, 'w', encoding='utf-8').write(json.dumps(result, indent=4))
 
