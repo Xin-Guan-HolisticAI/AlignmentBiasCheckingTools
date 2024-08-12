@@ -11,7 +11,7 @@ tqdm.pandas()
 class abcData:
 
     tier_order = {value: index for index, value in
-                  enumerate(['keywords', 'scrap_area', 'scrapped_sentences', 'split_sentences'])}
+                  enumerate(['keywords', 'scrap_area', 'scrapped_sentences', 'split_sentences', 'questions'])}
 
     default_scrap_area_format = [{
         "source_tag": "default",
@@ -36,7 +36,7 @@ class abcData:
         self.category = category
         self.data_tier = data_tier
         assert data_tier in ['keywords', 'scrap_area', 'scrapped_sentences',
-                             'split_sentences'], "Invalid data tier. Choose from 'keywords', 'scrap_area', 'scrapped_sentences', 'split_sentences'."
+                             'split_sentences', 'questions'], "Invalid data tier. Choose from 'keywords', 'scrap_area', 'scrapped_sentences', 'split_sentences', 'questions'."
         # self.tier_order = {value: index for index, value in enumerate(['keywords', 'scrap_area', 'scrapped_sentences', 'split_sentences'])}
         self.file_name = file_name
         self.data = [{
@@ -63,7 +63,7 @@ class abcData:
             return check_scrap_area_format
 
         assert data_tier in ['keywords', 'scrap_area', 'scrapped_sentences',
-                             'split_sentences'], "Invalid data tier. Choose from 'keywords', 'scrap_area', 'scrapped_sentences', 'split_sentences'."
+                             'split_sentences', 'questions'], "Invalid data tier. Choose from 'keywords', 'scrap_area', 'scrapped_sentences', 'split_sentences', 'questions'."
         if data_tier in ['keywords', 'scrap_area', 'scrapped_sentences']:
             assert isinstance(data, list), "Data should be a list of dictionaries."
             for item in data:
@@ -109,11 +109,21 @@ class abcData:
             assert 'prompts' in data.columns, "DataFrame must contain 'prompts' column"
             assert 'baseline' in data.columns, "DataFrame must contain 'baseline' column"
 
+        elif data_tier == 'questions':
+            print("IN HERE")
+            assert isinstance(data, pd.DataFrame), "Data should be a DataFrame"
+            assert 'keyword' in data.columns, "DataFrame must contain 'keyword' column"
+            assert 'category' in data.columns, "DataFrame must contain 'category' column"
+            assert 'domain' in data.columns, "DataFrame must contain 'domain' column"
+            assert 'questions' in data.columns, "DataFrame must contain 'questions' column"
+            assert 'original_answer' in data.columns, "DataFrame must contain 'original_answer' column"
+            
+
     @classmethod
     def load_file(cls, domain, category, data_tier, file_path):
         instance = cls(domain, category, data_tier, file_path)
         try:
-            if data_tier == 'split_sentences':
+            if data_tier == 'split_sentences' or data_tier == 'questions':
                 instance.data = pd.read_csv(file_path)
             else:
                 with open(file_path, 'r') as f:
@@ -128,6 +138,7 @@ class abcData:
 
     @classmethod
     def create_data(cls, domain, category, data_tier, data):
+        print(data_tier)
         instance = cls(domain, category, data_tier)
 
         try:
@@ -175,6 +186,9 @@ class abcData:
                         print(f"  Keyword: {keyword}, targeted_scrap_area: {metadata.get('scrapped_sentences')}")
         elif data_tier == 'split_sentences':
             print("Split sentences are in a DataFrame")
+            print(self.data)
+        elif data_tier == 'questions':
+            print("Questions are in a DataFrame")
             print(self.data)
 
     def remove(self, entity, data_tier=None, keyword=None, removal_range='all'):
@@ -253,6 +267,8 @@ class abcData:
                     print(f"Scrapped sentence '{entity}' removed from the data.")
         if data_tier == 'split_sentences':
             print("Cannot remove from split sentences data, it is a DataFrame.")
+        if data_tier == 'questions':
+            print("Cannot remove from questions data, it is a DataFrame.")
 
     def add(self, keyword=None, scrap_area=None, metadata=None, scrap_area_target='common', data_tier=None):
 
@@ -350,10 +366,14 @@ class abcData:
         if data_tier == 'split_sentences':
             print("Cannot add to split sentences data, it is a DataFrame.")
             return self
+        
+        if data_tier == 'questions':
+            print("Cannot add to questions data, it is a DataFrame.")
+            return self
 
     def save(self, file_path=None):
 
-        if self.data_tier == 'split_sentences':
+        if self.data_tier == 'split_sentences' or self.data_tier == 'questions':
             if file_path is None:
                 file_name = f"{self.domain}_{self.category}_{self.data_tier}.csv"
                 default_path = os.path.join('data', 'customized', self.data_tier)
@@ -372,6 +392,8 @@ class abcData:
                 default_path = os.path.join('data', 'customized', self.data_tier)
                 os.makedirs(default_path, exist_ok=True)
                 file_path = os.path.join(default_path, file_name)
+
+            os.makedirs(os.path.dirname(file_path), exist_ok=True)
             with open(file_path, 'w') as f:
                 json.dump(self.data, f, indent=2)
             print(f"Data saved to {file_path}")
