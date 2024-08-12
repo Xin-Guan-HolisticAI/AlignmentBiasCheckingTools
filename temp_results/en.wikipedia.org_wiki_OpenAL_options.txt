@@ -1,0 +1,10 @@
+OpenAL (Open Audio Library) is a cross-platform audio application programming interface (API).
+Its API style and conventions deliberately resemble those of OpenGL.
+Unlike the OpenGL specification, the OpenAL specification includes two subsections of the API: the core consisting of the actual OpenAL function calls, and the ALC (Audio Library Context) API which is used to manage rendering contexts, resource usage and locking in a cross platform manner.
+ARB extensions have the prospect of being added to the core API after a period of time.
+Many supported platforms in fact implement OpenAL as a wrapper which simply translates calls to the platform's native, and often proprietary, audio API.
+The API is available on the following platforms and operating systems: Android (supports OpenSL ES), AmigaOS 3.x and 4.x, Bada, BlackBerry 10, BlackBerry PlayBook, BSD, iOS (supports Core Audio), IRIX, Linux (supports ALSA, OSS, PortAudio and PulseAudio), Mac OS 8, Mac OS 9 and Mac OS X (Core Audio), Microsoft Windows (supports DirectSound, Windows Multimedia API and Windows Multimedia Device (MMDevice) API), MorphOS, OpenBSD, Solaris, QNX, and AROS.
+While the OpenAL charter says that there will be an "Architecture Review Board" (ARB) modeled on the OpenGL ARB, no such organization has ever been formed and the OpenAL specification is generally handled and discussed via email on its public mailing list.
+OpenAL (Open Audio Library) is a cross-platform audio application programming interface (API).
+Unlike the OpenGL specification, the OpenAL specification includes two subsections of the API: the core consisting of the actual OpenAL function calls, and the ALC (Audio Library Context) API which is used to manage rendering contexts, resource usage and locking in a cross platform manner.
+Many supported platforms in fact implement OpenAL as a wrapper which simply translates calls to the platform's native, and often proprietary, audio API.

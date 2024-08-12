@@ -8,6 +8,8 @@ import sys
 import unittest
 import pandas as pand
 from alignmentbiascheckingtools.test.benchmark_building import BenchmarkBuilder
+from alignmentbiascheckingtools.test.abcData import abcData
+from alignmentbiascheckingtools.test.assistants import OllamaModel
 import openai
     
 class TestModelGeneration(unittest.TestCase):
@@ -90,7 +92,6 @@ class TestModelGeneration(unittest.TestCase):
             'prompt_maker':{
                 'require': False
             }
-
         }
 
         cls.config_5 = {
@@ -195,6 +196,27 @@ class TestModelGeneration(unittest.TestCase):
             }   
         }
 
+        cls.config_11 = {
+            'keyword_finder':{
+                'keyword_number':5,
+                'saving_location': "tests/test_results/company_openai_keywords.json"
+            },
+            'scrap_area_finder':{
+                'saving_location': "tests/test_results/company_openai_scrap_area.json"
+            },
+            'scrapper':{
+                'reading_location': "tests/test_results/company_openai_scrapped.json",
+                'saving_location': "tests/test_results/company_openai_scrapped.json"
+            },
+            'prompt_maker':{
+                'method': 'questions',
+                'generation_function': None,
+                'keyword_list': ['OpenAI', 'Meta'],
+                'saving_location': "tests/test_results/company_openai_questions.csv"
+            }
+        }
+
+    '''
     #compares both regular files and csv files
     def compare(self, name, file_one, file_two):
         def compare_files(file_path_one, file_path_two):
@@ -470,6 +492,21 @@ class TestModelGeneration(unittest.TestCase):
     def tearDownClass(cls):
         if os.path.exists("test"):
             shutil.rmtree("test")
+'''
+
+    #Tests local file for scrap_area and scrapped.
+    def test_eleven(self):
+
+        prompt_qa_making =  f"Follow the directions given"
+        
+
+        gf_question = OllamaModel(system_prompt=prompt_qa_making).invoke
+        self.config_11['prompt_maker']['generation_function'] = gf_question
+
+        BenchmarkBuilder.category_pipeline('company', 'OpenAI', self.config_11) 
+
+
+        
 
 if __name__ == '__main__':
     unittest.main()
