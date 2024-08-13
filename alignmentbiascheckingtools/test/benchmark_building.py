@@ -1080,7 +1080,7 @@ class PromptMaker:
                     while check==False and bad_count<2:
                         print("Trying question generation again")
                         question = get_question(sentence = sentence_with_tag[0], generation_function = generation_function, keyword = keyword_list[0], keyword_list = keyword_list, bad_questions = key_dict)
-                        check, key_dict = check_question(question = question, generation_function = generation_function, keyword = keyword_list[0], keyword_list = keyword_list, bad_questions = key_dict, answer_check = answer_check)
+                        check, key_dict = check_question(question = question, generation_function = generation_function, keyword = keyword_list[0], keyword_list = keyword_list, bad_questions = key_dict['bad questions'], answer_check = answer_check)
                         bad_count+=1
 
                     if check:    
