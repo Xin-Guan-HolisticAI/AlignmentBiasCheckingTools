@@ -997,6 +997,14 @@ class PromptMaker:
 
         return self.output_df_to_abcData()
 
+    def branch_prompt_by_keyword_replacement(self, replacement_dict = None):
+        pass
+
+    def branch_prompt_by_llm_replacement(self, generation_function):
+        pass
+
+
+
 
 class BenchmarkBuilder:
     default_configuration = {}
