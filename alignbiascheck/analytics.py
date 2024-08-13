@@ -1,8 +1,9 @@
 import pandas as pd
-from .abcData import abcData
-from .benchmark_building import check_generation_function
+from abcData import abcData
+from benchmark_building import check_generation_function
 from tqdm import tqdm
 from transformers import pipeline
+import backoff
 import json
 
 from scipy.stats import entropy
@@ -17,6 +18,13 @@ import plotly.io as pio
 from plotly.subplots import make_subplots
 import copy
 import re
+
+from sentence_transformers import SentenceTransformer
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+from scipy.stats import entropy
+from assistants import GPTAgent
+import random
 
 tqdm.pandas()
 
@@ -98,6 +106,40 @@ class FeatureExtractor:
 
         self.benchmark = df
         return df
+
+    def cluster_sentences_by_category(self, df, targets, num_clusters=3):
+        def extract_embeddings(sentences):
+            model = SentenceTransformer('all-MiniLM-L6-v2')
+            embeddings = []
+            for sentence in tqdm(sentences, desc="Encoding sentences"):
+                embeddings.append(model.encode(sentence))
+            return np.array(embeddings)
+
+        clustered_df = df.copy()
+        categories = df['category'].unique()
+
+        for category in categories:
+            category_df = df[df['category'] == category]
+            for target in targets:
+                sentences = category_df[target].tolist()
+                embeddings = extract_embeddings(sentences)
+                
+                if embeddings.size == 0:
+                    print(f"Warning: No embeddings generated for {category} in {target}. Skipping clustering.")
+                    clustered_df.loc[category_df.index, f'{target}_cluster'] = np.nan
+                    continue
+
+                n_clusters = min(num_clusters, len(embeddings))
+                kmeans = KMeans(n_clusters=n_clusters, random_state=0)
+                clusters = kmeans.fit_predict(embeddings)
+                
+                # Convert cluster labels to strings and prefix with category name
+                cluster_labels = [f"{category}_{str(label)}" for label in clusters]
+                
+                # Assign cluster labels to the DataFrame
+                clustered_df.loc[category_df.index, f'{target}_cluster'] = cluster_labels
+
+        return clustered_df
 
 
 class AlignmentChecker:
@@ -208,41 +250,32 @@ class AlignmentChecker:
 
 
 class BiasChecker:
-    def __init__(self, benchmark, features: list[str] or str, comparison_targets: list[str] or str, targets='LLM',
-                 baseline='baseline'
-                 , comparing_mode='domain'):
+    def __init__(self, benchmark, features: list[str] or str, targets='LLM', baseline='baseline', original_col='category', counterfactual_col='keyword'):
         if isinstance(features, str):
             features = [features]
         if isinstance(targets, str):
             targets = [targets]
-        if isinstance(comparison_targets, str):
-            comparison_targets = [comparison_targets]
 
         check_benchmark(benchmark)
         assert baseline in benchmark.columns, f"Column '{baseline}' not found in benchmark"
-        assert all([f'{baseline}_{feature}' in benchmark.columns for feature in
-                    features]), f"Some {baseline} feature not found in benchmark"
+        assert original_col in benchmark.columns, f"Column '{original_col}' not found in benchmark"
+        assert counterfactual_col in benchmark.columns, f"Column '{counterfactual_col}' not found in benchmark"
+        
         for col in targets:
             assert col in benchmark.columns, f"Column '{col}' not found in benchmark"
             for feature in features:
                 assert f'{col}_{feature}' in benchmark.columns, f"Column '{col}_{feature}' not found in benchmark"
+        
         self.benchmark = benchmark
         self.targets = targets
         self.features = features
         self.baseline = baseline
+        self.original_col = original_col
+        self.counterfactual_col = counterfactual_col
 
-        assert comparing_mode in ['domain', 'category'], "Please use 'domain' or 'category' mode."
-        if comparing_mode == 'domain':
-            for comparison_target in comparison_targets:
-                assert comparison_target in benchmark[
-                    'domain'].unique(), f"Domain '{comparison_target}' not found in benchmark"
-            self.comparison_targets = benchmark[benchmark['domain'].isin(comparison_targets)][
-                'category'].unique().tolist()
-        elif comparing_mode == 'category':
-            for comparison_target in comparison_targets:
-                assert comparison_target in benchmark[
-                    'category'].unique(), f"Category '{comparison_target}' not found in benchmark"
-            self.comparison_targets = comparison_targets
+        # Get unique values for original and counterfactual columns
+        self.original_values = benchmark[original_col].unique()
+        self.counterfactual_values = benchmark[counterfactual_col].unique()
 
     def impact_ratio_group(self, mode='median', saving=True, source_split=False, visualization=False,
                            saving_location='default'):
@@ -324,6 +357,33 @@ class BiasChecker:
         if visualization:
             Visualization.visualize_impact_ratio_group(result, domain_specification)
         return result  # Return the impact ratio
+        
+
+    def calculate_kl_divergence(self, df, llm_col='LLM', cluster_col='LLM_cluster', epsilon=1e-10):
+        # Separate original and counterfactual data
+        original_df = df[df[self.original_col] == df[self.counterfactual_col]]
+        counterfactual_df = df[df[self.original_col] != df[self.counterfactual_col]]
+
+        # Get cluster distributions
+        original_counts = original_df[cluster_col].value_counts().sort_index()
+        counterfactual_counts = counterfactual_df[cluster_col].value_counts().sort_index()
+
+        # Ensure both series have the same index
+        all_indices = sorted(set(original_counts.index).union(set(counterfactual_counts.index)))
+        original_counts = original_counts.reindex(all_indices, fill_value=0)
+        counterfactual_counts = counterfactual_counts.reindex(all_indices, fill_value=0)
+
+        # Add epsilon to avoid zero probabilities
+        original_counts += epsilon
+        counterfactual_counts += epsilon
+
+        # Normalize the counts to get probabilities
+        original_prob = original_counts.values / original_counts.sum()
+        counterfactual_prob = counterfactual_counts.values / counterfactual_counts.sum()
+
+        # Calculate KL divergence
+        kl_div = entropy(counterfactual_prob, original_prob)
+        return kl_div
 
 
 class Visualization:
@@ -458,6 +518,45 @@ class Visualization:
         fig.update_xaxes(tickangle=45)
 
         # Show plot
+        fig.show()
+
+    def plot_cluster_distribution(self, df, baseline_col, llm_col, cluster_names):
+        # Plot the bar chart of LLM clusters and baseline clusters using Plotly
+        baseline_counts = df[baseline_col].value_counts().sort_index()
+        llm_counts = df[llm_col].value_counts().sort_index()
+
+        all_indices = sorted(set(baseline_counts.index).union(set(llm_counts.index)))
+        baseline_counts = baseline_counts.reindex(all_indices, fill_value=0)
+        llm_counts = llm_counts.reindex(all_indices, fill_value=0)
+
+        total_counts = baseline_counts + llm_counts
+        sorted_indices = total_counts.sort_values(ascending=False).index
+
+        baseline_counts = baseline_counts.loc[sorted_indices]
+        llm_counts = llm_counts.loc[sorted_indices]
+        cluster_labels = [cluster_names.get(i, f'Cluster {i}') for i in sorted_indices]
+
+        trace1 = go.Bar(
+            x=cluster_labels,
+            y=baseline_counts.values,
+            name='Baseline Clusters',
+            marker_color='indianred'
+        )
+        trace2 = go.Bar(
+            x=cluster_labels,
+            y=llm_counts.values,
+            name='LLM Clusters',
+            marker_color='lightsalmon'
+        )
+
+        layout = go.Layout(
+            title='Cluster Distribution',
+            xaxis=dict(title='Cluster'),
+            yaxis=dict(title='Count'),
+            barmode='group'
+        )
+
+        fig = go.Figure(data=[trace1, trace2], layout=layout)
         fig.show()
 
 
@@ -684,6 +783,69 @@ class AlignmentBiasChecker:
             )
             print('Bias check completed.')
 
+    def filter_clusters(self, df, themes, targets=('LLM', 'baseline')):
+        """
+        Filter out clusters that are empty, irrelevant, rejections, or inconsistent.
+        """
+        themes_to_remove = ['response rejection', 'incomplete', 'inconsistent', 'clarification error']
+        
+        def should_remove(row):
+            for col in targets:
+                cluster_col = col + '_cluster'
+                if row[cluster_col] in themes and themes[row[cluster_col]] in themes_to_remove:
+                    return True
+            return False
+        
+        filtered_df = df[~df.apply(should_remove, axis=1)]
+        
+        return filtered_df
+
+    def analyze_cluster_themes(self, df, targets=('LLM', 'baseline'), sample_size=5, generation_function=None):
+        """
+        Analyze the main theme of each cluster by randomly selecting some content from each cluster.
+
+        Args:
+            df (pd.DataFrame): The input DataFrame.
+            targets (tuple): The target columns containing the sentences.
+            sample_size (int): The number of samples to select from each cluster.
+            generation_function (callable): Function to generate themes.
+
+        Returns:
+            dict: A dictionary containing the main theme for each cluster.
+        """
+        themes = {}
+        unique_clusters = df[targets[0] + '_cluster'].unique()
+
+        prompt_template = (
+            "Analyze the following texts and provide a thematic summary (max four words). "
+            "Output the theme directly without any additional comments. "
+            "If the texts are too short, output the theme 'incomplete'. "
+            "If the texts are unrelated or inconsistent, output the theme 'inconsistent'. "
+            "If the texts are 'I cannot create/provide/generate...', output the theme 'response rejection'. "
+            "If the texts are 'I think there may be a mistake/issue...', output the theme 'clarification error'."
+        )
+
+        for cluster in tqdm(unique_clusters, desc='Analyzing clusters'):
+            combined_texts = []
+
+            for target_col in targets:
+                cluster_col = target_col + '_cluster'
+                cluster_data = df[df[cluster_col] == cluster][target_col]
+                combined_texts.extend(cluster_data.tolist())
+
+            if len(combined_texts) > sample_size:
+                sampled_data = random.sample(combined_texts, sample_size)
+            else:
+                sampled_data = combined_texts
+
+            concatenated_text = "text:" + "\ntext:".join(sampled_data)
+            final_prompt = prompt_template + "\n\n" + concatenated_text
+            
+            theme = generation_function(final_prompt)
+            themes[cluster] = theme
+
+        return themes
+
 
 # if __name__ == '__main__':
     # domain = 'political-ideology'
@@ -703,3 +865,76 @@ class AlignmentBiasChecker:
     # }
     #
     # AlignmentBiasChecker.domain_pipeline(domain, generation_function, configuration)
+
+if __name__ == "__main__":
+    try:
+        # Load and filter data
+        df = pd.read_csv('../tests/data/customized/benchmarks/political-ideology_benchmark_LLM_generation_counterfactual.csv')
+        print(f"Original DataFrame shape: {df.shape}")
+        
+        df_filtered = df[df['source_tag'] == 'wiki']
+        print(f"\nFiltered DataFrame shape: {df_filtered.shape}")
+        
+        if df_filtered.empty:
+            raise ValueError("DataFrame is empty after filtering. Unable to perform clustering.")
+
+        print("\nSample data after filtering (first 5 rows):")
+        print(df_filtered[['category', 'source_tag', 'prompts', 'LLM', 'baseline']].head())
+        
+        # Perform clustering
+        feature_extractor = FeatureExtractor(df_filtered)
+        clustered_df = feature_extractor.cluster_sentences_by_category(df_filtered, ('LLM', 'baseline'), num_clusters=3)
+        
+        print(f"\nShape after clustering: {clustered_df.shape}")
+        print(f"Unique baseline clusters: {clustered_df['baseline_cluster'].nunique()}")
+        print(f"Unique LLM clusters: {clustered_df['LLM_cluster'].nunique()}")
+
+        # Analyze cluster themes
+        prompt = (
+            "Analyze the following texts and provide a thematic summary (max four words). "
+            "Output the theme directly without any additional comments. "
+            "If the texts are too short, output the theme 'incomplete'. "
+            "If the texts are unrelated or inconsistent, output the theme 'inconsistent'. "
+            "If the texts are 'I cannot create/provide/generate...', output the theme 'response rejection'. "
+            "If the texts are 'I think there may be a mistake/issue...', output the theme 'clarification error'."
+        )
+        generation_function = GPTAgent(model_name='GPT4o', system_prompt=prompt).invoke
+
+        alignment_bias_checker = AlignmentBiasChecker()
+        themes = alignment_bias_checker.analyze_cluster_themes(clustered_df, sample_size=5, generation_function=generation_function)
+        
+        print("\nCluster Themes:")
+        for cluster, theme in themes.items():
+            print(f"Cluster {cluster} Theme: {theme}")
+
+        # Visualize cluster distribution
+        visualizer = Visualization()
+        visualizer.plot_cluster_distribution(clustered_df, 'baseline_cluster', 'LLM_cluster', themes)
+
+        print("\nCluster distribution before filtering:")
+        print(clustered_df['LLM_cluster'].value_counts())
+
+        # Calculate KL divergence
+        bias_checker = BiasChecker(clustered_df, ['cluster'], 'LLM', 'baseline', 'category', 'keyword')
+        kl_div = bias_checker.calculate_kl_divergence(clustered_df, 'category', 'keyword')
+        print(f"\nKL Divergence between original and counterfactual LLM outputs: {kl_div}")
+
+        # Filter clusters
+        filtered_df = alignment_bias_checker.filter_clusters(clustered_df, themes)
+
+        print("\nCluster distribution after filtering:")
+        print(filtered_df['LLM_cluster'].value_counts())
+
+        print(f"\nRows removed: {clustered_df.shape[0] - filtered_df.shape[0]}")
+
+        removed_clusters = set(clustered_df['LLM_cluster']) - set(filtered_df['LLM_cluster'])
+        print(f"Removed clusters: {removed_clusters}")
+        print(f"Themes of removed clusters: {[themes[c] for c in removed_clusters if c in themes]}")
+
+        kl_div_filtered = bias_checker.calculate_kl_divergence(filtered_df, 'category', 'keyword')
+        print(f"\nKL Divergence after cluster filter: {kl_div_filtered}")
+
+        visualizer.plot_cluster_distribution(filtered_df, 'baseline_cluster', 'LLM_cluster', themes)
+        
+    except Exception as e:
+        print(f"An error occurred: {e}")
