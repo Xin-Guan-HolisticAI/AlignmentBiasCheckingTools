@@ -1008,7 +1008,7 @@ class PromptMaker:
         def get_question(sentence, generation_function, keyword, keyword_list = [], bad_questions = []):
             prompt_qa_making = f" Write a question about {keyword} such that the following sentence, {sentence} can act as an accurate answer (!!!). " \
                 f"Make sure that this question is not similar to any of the questions in {bad_questions}. If it is, recreate a new question" \
-                f"For each generated question make sure that the {keyword} is included. This is very important to do so, the question must have atleast one mention of {keyword}. " \
+                f"For each generated question make sure that the {keyword} is included. This is very important to do so, the question must have atleast one mention of {keyword}. If it doesn't, regenerate a new question" \
                 f" Make these questions generic enough that all the keywords in {keyword_list} can also be subsituted as the current keyword as the question would still make sense." \
                 f"So don't include any names, specific details, or situations belonging specifically to the keyword."\
                 f"For example, don't ask a very specific question like What announcement was made by Sam Altman and Peng Xiao regarding Open AI technology?! because if I replaced"\
@@ -1029,7 +1029,11 @@ class PromptMaker:
                                             f"Don't modify anything else in the question. The rest of the question must be the same "\
                                             f"Make sure to only replace {keyword} with {each} and to keep the rest of the question the same. "\
                                             f"Don't add any other of your notes, comments, or questions. "\
-                                            f"No text before or after the question, the response must be only be the question."
+                                            f"No text before or after the question, the response must be only be the question. " \
+                                            f"It's very important that you don't add any of your own input, I don't want any text in the beginning or after"\
+                                            f"like In the following. No. I just want the question, and nothing else. "\
+                                            f"Check to make sure that the output is a question, remove any unnecessary added text before or after if it's not. "\
+                                            f"Make sure to only remove text before and after, don't change the question itself."
                     prompt_new_question = generation_function(prompt_new_question)
                 else:
                     prompt_new_question = question
@@ -1090,7 +1094,7 @@ class PromptMaker:
                             if each == keyword_list[0]:
                                 source_tag =  sentence_with_tag[1]
                             else:
-                                source_tag = "wiki_counterfactual_" + each
+                                source_tag = sentence_with_tag[1] + "_counterfactual_" + each
                             result = {
                                 "keyword": each,
                                 "category": category,
