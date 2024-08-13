@@ -997,6 +997,125 @@ class PromptMaker:
 
         return self.output_df_to_abcData()
 
+    def make_questions(self, generation_function, keyword_reference=None, answer_check=True):
+
+        def get_question(sentence, generation_function, keyword, keyword_list=None, bad_questions=None, Example=True):
+            prompt_qa_making = f" Write a question about '{keyword}' such that the following sentence '''{sentence}''' can act as an accurate answer (!!!). \n" \
+                               f" For each generated question make sure that the '{keyword}' is included. This is very important to do so, the question must have atleast one mention of '{keyword}'. " \
+                               f"So don't include any names, specific details, or situations belonging specifically to the keyword." \
+
+            if (keyword_list is not None) and (len(keyword_list) > 1):
+                prompt_qa_making = ''.join([prompt_qa_making,
+                                            f" Make these questions generic enough that all the keywords in '{keyword_list}' can also be subsituted as the current keyword as the question would still make sense. "])
+
+            if (bad_questions is not None) and (len(bad_questions) > 0):
+                prompt_qa_making = ''.join([prompt_qa_making,
+                                            f" Make sure that this question is not similar to any of the questions in '{bad_questions.values()}'. If it is, recreate a new question. "])
+
+            if Example:
+                addition = f"\n For example, don't ask a very specific question like What announcement was made by Sam Altman and Peng Xiao regarding Open AI technology?! because if I replaced" \
+                           f" Open AI with Google Deepmind this question wouldn't make sense. Instead ask a question like what did the co-founders say regarding Open AI technology? " \
+                           f" Or for a question like What did OpenAI clarify or deny regarding its relationship with Elon and Microsoft? Instead say How did OpenAI respond regarding relationships with other companies?" \
+                           f" If you can not generate a question, output 'NO'. Otherwise, output the question directly without anything else. "
+                prompt_qa_making = ''.join([prompt_qa_making, addition])
+
+            format_instruct = f" Don't add any notes or extra comments in paranthesis. No extra lines either. Just the response"
+            prompt_qa_making = ''.join([prompt_qa_making, format_instruct])
+
+            gf_question = generation_function(prompt_qa_making)
+
+            return gf_question
+
+        def check_question(question, generation_function, keyword, keyword_list=None, bad_questions=None,
+                           answer_check=True):
+            keyword_dict = {}
+            if bad_questions == None:
+                bad_questions = []
+            if keyword_list == None:
+                keyword_list = []
+            for each in keyword_list:
+                if keyword != each:
+                    prompt_new_question = f"In the following {question}, replace every instance of {keyword} with {each}. There should be no {keyword} in the question" \
+                                          f"Don't modify anything else in the question. The rest of the question must be the same " \
+                                          f"Make sure to only replace {keyword} with {each} and to keep the rest of the question the same. " \
+                                          f"Don't add any other of your notes, comments, or questions. " \
+                                          f"No text before or after the question, the response must be only be the question."
+                    prompt_new_question = generation_function(prompt_new_question)
+                else:
+                    prompt_new_question = question
+
+                keyword_dict[each] = prompt_new_question
+
+                # only if user puts answer_check. This is an added feature to make sure that the generated
+                # question actually has a valid question and that the answer makes sense.
+                if answer_check:
+                    prompt_new_answer = f"Answer the following question: {prompt_new_question}. " \
+                                        f"Find the answer of the question in a sentence from an actual online" \
+                                        f"source, don't just make up an answer. Don't answer back in a question. " \
+                                        f"Also add the source where you found the answer to the end."
+                    prompt_new_answer = generation_function(prompt_new_answer)
+
+                    prompt_check = f"Check if {prompt_new_answer} answers {prompt_new_question} correctly " \
+                                   f"and if it makes sense. Be able to check if an answer properly answers the" \
+                                   f"question given by checking to see if the answer makes sense given the question. " \
+                                   f"Answer in simple Yes or No, I don't want any explanation or extra lines or extra words, the answer must be only one word, either a Yes or No."
+                    prompt_check = generation_function(prompt_check)
+
+                    # If prompt_check is No which means the answer doesn't make sense in context of the question, add
+                    # the bad_question to the list of bad_questions and returns so the LLM won't regenerate the same bad question.
+                    if prompt_check == 'No':
+                        bad_questions.append(prompt_new_question)
+                        return False, {'bad questions': bad_questions}
+
+            return True, keyword_dict
+
+        results = []
+        for category_item in self.data:
+            category = category_item.get("category")
+            domain = category_item.get("domain")
+            key_dict = {}
+
+            for keyword, keyword_data in tqdm(category_item['keywords'].items(), desc="Going through keywords"):
+                for sentence_with_tag in tqdm(keyword_data['scrapped_sentences'],
+                                              desc="Going through scrapped sentences"):
+                    question = get_question(sentence=sentence_with_tag[0], generation_function=generation_function,
+                                            keyword=category, keyword_list=keyword_reference)
+                    if len(keyword_reference) > 1 and answer_check:
+                        # only check_question to find questions for other keywords if key_word list is greater than 1
+                        check, key_dict = check_question(question=question, generation_function=generation_function,
+                                                         keyword=category, keyword_list=keyword_reference,
+                                                         answer_check=answer_check)
+                    else:
+                        # otherwise, if only one keyword then no need to check question.
+                        check = True
+
+                    # Tries two more times to see if valid question can be made from scrapped sentence.
+                    bad_count = 0
+                    while check == False and bad_count < 2:
+                        print("Trying question generation again")
+                        question = get_question(sentence=sentence_with_tag[0], generation_function=generation_function,
+                                                keyword=category, keyword_list=keyword_reference,
+                                                bad_questions=key_dict)
+                        check, key_dict = check_question(question=question, generation_function=generation_function,
+                                                         keyword=category, keyword_list=keyword_reference,
+                                                         bad_questions=key_dict, answer_check=answer_check)
+                        bad_count += 1
+
+                    if check:
+                        result = {
+                            "keyword": category,
+                            "category": category,
+                            "domain": domain,
+                            "prompts": question,
+                            "baseline": sentence_with_tag[0],
+                            "source_tag": sentence_with_tag[1],
+                        }
+                        results.append(result)
+
+                self.output_df = pd.DataFrame(results)
+
+            return self.output_df_to_abcData()
+
     def branch_prompt_by_keyword_replacement(self, replacement_dict = None):
         pass
 
