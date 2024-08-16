@@ -3,7 +3,6 @@ import os
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-import re
 import glob
 
 import wikipediaapi
@@ -14,11 +13,16 @@ import warnings
 from .abcData import abcData
 
 import spacy
-from tqdm import tqdm
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk import download
 from urllib.parse import urlparse, unquote
+from sentence_transformers import SentenceTransformer, util
+
+
+import itertools
+import re
+from tqdm import tqdm
 
 
 # Ensure required NLTK resources are downloaded
@@ -1116,11 +1120,241 @@ class PromptMaker:
 
             return self.output_df_to_abcData()
 
-    def branch_prompt_by_keyword_replacement(self, replacement_dict = None):
-        pass
+    def merge(self, prompt_df):
+        self.output_df = pd.concat([self.output_df, prompt_df])
+        return self.output_df_to_abcData()
 
-    def branch_prompt_by_llm_replacement(self, generation_function):
-        pass
+    def branching(self, branching_config = None):
+
+        df = self.output_df
+        default_branching_config = {
+            'branching_pairs': 'all',
+            'direction': 'both',
+            'source_restriction': None,
+            'replacement_descriptor_require': True,
+            'descriptor_threshold': 'Auto',
+            'descriptor_embedding_model': 'paraphrase-Mpnet-base-v2',
+            'descriptor_distance': 'cosine',
+            'replacement_description': {},
+            'replacement_description_saving': True,
+            'replacement_description_saving_location': f'data/customized/split_sentences/{self.domain}_replacement_description.csv',
+            'counterfactual_baseline': True,
+            'generation_function': None,
+        }
+        if branching_config is None:
+            branching_config = {}
+        branching_config = BenchmarkBuilder.update_configuration(default_branching_config, branching_config)
+
+        def replacement_descriptor(df, original_category, replace_category, replacing: list[str] or str, gf=None,
+                                   embedding_model='paraphrase-Mpnet-base-v2',
+                                   descriptor_threold='Auto', descriptor_distance='cosine'):
+
+            if isinstance(replacing, str):
+                replacing = [replacing]
+
+            def find_similar_words(word_bank, target_word, model_name=embedding_model, threshold=0.2):
+                model = SentenceTransformer(model_name)
+                tokens = word_bank.lower().split()  # Tokenize the word_bank
+
+                # Get embeddings for each token and the target word
+                target_vector = model.encode(target_word, convert_to_tensor=True)
+                similar_tokens = []
+
+                def cosine_similarity(vec1, vec2):
+                    return util.cos_sim(vec1, vec2).item()
+
+                for token in tokens:
+                    token_vector = model.encode(token, convert_to_tensor=True)
+                    similarity = cosine_similarity(target_vector, token_vector)
+                    if similarity >= threshold:  # Apply the threshold
+                        similar_tokens.append((token, similarity))
+
+                similar_tokens.sort(key=lambda x: x[1], reverse=True)  # Sort by similarity
+                return similar_tokens
+
+            def clean_sentences_and_join(sentence_list):
+                return ' '.join(sentence_list) \
+                    .replace('?', '').replace('.', '') \
+                    .replace(',', '').replace('!', '') \
+                    .replace(':', '').replace(';', '') \
+                    .replace('(', '').replace(')', '') \
+                    .replace('[', '').replace(']', '') \
+                    .replace('{', '').replace('}', '') \
+                    .replace('"', '').replace("'", '') \
+                    .replace('`', '').replace('~', '') \
+                    .replace('@', '').replace('#', '') \
+                    .replace('$', '').replace('%', '') \
+                    .replace('^', '').replace('&', '') \
+                    .replace('*', '')
+
+            def check_if_threshold_can_go_higher(similar_tokens, threshold, target_word, gf=gf):
+
+                vocabs = [word for word, similarity in similar_tokens if similarity < threshold][:15]
+
+                prompts = f"Do you find any words in the below list that can be associated with the word '''{target_word}'''? \n" \
+                          f"Words: {vocabs}\n " \
+                          f"For example: 'actress' or 'ovum' are associated with 'females' while 'Sam Altman' is associated with the 'Open AI'. \n" \
+                          f"Output 'Yes' or 'No' directly."
+
+                response = gf(prompts)
+
+                if response.startswith('Yes'):
+                    return False
+                else:
+                    return True
+
+            def iterative_guessing(sorted_list_threshold, check_go_higher, max_iterations = 50):
+                remaining = sorted_list_threshold[:]
+                lower_bound = None
+                iteration_count = 0
+
+                while len(remaining) > 2 and iteration_count < max_iterations:
+                    guess = remaining[len(remaining) // 2]
+                    iteration_count += 1
+
+                    if check_go_higher(guess):
+                        lower_bound = guess
+                        remaining = [i for i in remaining if i >= guess]
+                    else:
+                        remaining = [i for i in remaining if i <= guess]
+                        print(f"Remaining: {remaining}")
+
+                # After narrowing down, the remaining list will contain the correct number
+                correct_guess = remaining[-1]
+
+                return correct_guess
+
+            def replacer_prompts(target_word, branch, words):
+                return f" The following words are about'''{target_word}''' and your job is to find the analogous words about '''{branch} \n" \
+                       f" Words: {words}\n " \
+                       f" For example: 'women' for female is associated with 'men' for male " \
+                       ' Give a dictionary of the following python json format only: [{"word1": "analogy1", "word2": "analogy2" ....}]. ' \
+                       f" You only need to provide words that you can find analogy."
+
+            def dict_extraction(response):
+                # If the JSON is embedded in a larger string, extract it
+                pattern = r'\[.*?\]'
+                match = re.search(pattern, response, re.DOTALL)
+
+                if match:
+                    json_string = match.group(0).replace("'", '"')
+                    try:
+                        # Parse the JSON
+                        json_data = json.loads(json_string)
+                        return (json_data)
+                    except json.JSONDecodeError as e:
+                        print(f"Error decoding JSON: {e}")
+                else:
+                    print("No JSON found in the string.")
+
+            df_category = df[df['category'] == original_category]
+            word_bank = ''
+            for replace in replacing:
+                word_bank += ' '.join(list(set(clean_sentences_and_join(df_category[replace].tolist()).split(' '))))
+            if descriptor_threold == 'Auto':
+                print('Obtaining the similar words...')
+                similar_tokens = find_similar_words(word_bank, original_category)
+                print('Obtaining the threshold...')
+                thresholds_list = [similarity for word, similarity in similar_tokens]
+                checker = lambda x: check_if_threshold_can_go_higher(similar_tokens, x, original_category)
+                threshold = iterative_guessing(thresholds_list, checker)
+                words = [word for word, similarity in similar_tokens if similarity >= threshold]
+
+            else:
+                similar_tokens = find_similar_words(word_bank, original_category, threshold=float(descriptor_threold))
+                words = [word for word, similarity in similar_tokens]
+
+            print('Obtaining the replacement...')
+            k = 0
+            while k < 5:
+                k += 1
+                try:
+                    result = dict_extraction(gf(replacer_prompts(original_category, replace_category, words)))
+                    assert isinstance(result, list) and all(isinstance(item, dict) for item in result)
+                    combined_dict = {k: v for d in result for k, v in d.items()}
+                    return combined_dict
+                except AssertionError:
+                    print('Try again...')
+                    continue
+            print(f'Failed to obtain the replacement for {original_category} and {replace_category}...')
+            return {}
+
+        def replace_gender_terms(sentence, replacement_dictionary):
+            # Step 1: Define the replacement dictionary
+
+            # Step 2: Extend the dictionary to include reverse replacements
+            reverse_replacement_dictionary = {v: k for k, v in replacement_dictionary.items()}
+            full_replacement_dictionary = {**replacement_dictionary, **reverse_replacement_dictionary}
+
+            # Step 3: Tokenize the sentence
+            tokens = re.findall(r'\b\w+\b', sentence)
+
+            # Step 4: Replace the words according to the dictionary
+            replaced_tokens = [full_replacement_dictionary.get(token.lower(), token) for token in tokens]
+
+            # Step 5: Reassemble the sentence
+            replaced_sentence = ' '.join(replaced_tokens)
+
+            return replaced_sentence
+
+        replacement_description = branching_config['replacement_description']
+        gef = branching_config['generation_function']
+
+        if branching_config['branching_pairs'] == 'all':
+            branching_pairs = list(itertools.combinations(df['category'].unique().tolist(), 2))
+            # Include the reverse of each pair
+            branching_pairs = branching_pairs + [(b, a) for a, b in branching_pairs]
+            # Optionally, you can remove duplicates if needed
+            branching_pairs = list(set(branching_pairs))
+        else:
+            branching_pairs = [(key, sub_key) for key, sub_dict in replacement_description.items() for sub_key in
+                               sub_dict.keys()]
+            # Include the reverse of each pair
+            if branching_config['direction'] == 'both':
+                branching_pairs = branching_pairs + [(b, a) for a, b in branching_pairs]
+                # Optionally, you can remove duplicates if needed
+                branching_pairs = list(set(branching_pairs))
+
+        if branching_config['source_restriction'] is not None:
+            df = df[df['source_tag'] == branching_config['source_restriction']]
+
+        df_result = df.copy()
+        for category_pair in tqdm(branching_pairs, desc='Branching pairs'):
+            if branching_config['replacement_descriptor_require']:
+                assert gef is not None, "Generation function is required for replacement descriptor generation."
+                if branching_config['counterfactual_baseline']:
+                    rd = replacement_descriptor(df, category_pair[0], category_pair[1], ['baseline', 'prompts'], gf=gef)
+                else:
+                    rd = replacement_descriptor(df, category_pair[0], category_pair[1], ["prompts"], gf=gef)
+                # Ensure category_pair[0] exists in replacement_description
+                if category_pair[0] not in replacement_description:
+                    replacement_description[category_pair[0]] = {}
+
+                # Ensure category_pair[1] exists within the nested dictionary
+                if category_pair[1] not in replacement_description[category_pair[0]]:
+                    replacement_description[category_pair[0]][category_pair[1]] = {}
+
+                # Update the existing dictionary with the contents of rd
+                replacement_description[category_pair[0]][category_pair[1]].update(rd)
+                if branching_config['replacement_description_saving']:
+                    with open(branching_config['replacement_description_saving_location'], 'w', encoding='utf-8') as f:
+                        json.dump(replacement_description, f)
+            else:
+                rd = replacement_description[category_pair[0]][category_pair[1]]
+
+            print('Replacing...')
+            df_new = df[df['category'] == category_pair[0]].copy()
+            df_new['prompts'] = df_new['prompts'].apply(lambda x: replace_gender_terms(x, rd))
+            if branching_config['counterfactual_baseline']:
+                df_new['baseline'] = df_new['baseline'].apply(lambda x: replace_gender_terms(x, rd))
+            df_new['source_tag'] = df_new.apply(lambda row: f'br_{row["source_tag"]}_cat_{row["category"]}', axis=1)
+            df_new['category'] = df_new['category'].apply(lambda x: replace_gender_terms(x, rd))
+            df_new['keyword'] = df_new['keyword'].apply(lambda x: replace_gender_terms(x, rd))
+            df_result = pd.concat([df_result, df_new])
+
+            self.output_df = df_result
+
+        return self.output_df_to_abcData()
 
 
 
