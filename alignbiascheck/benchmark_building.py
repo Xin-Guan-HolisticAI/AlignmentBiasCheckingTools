@@ -364,7 +364,7 @@ class KeywordFinder:
 
     def find_name_keywords_by_hyperlinks_on_wiki(self, format='Paragraph', link=None, page_name=None, name_filter=False,
                                                  col_info=None, depth=None, source_tag='default', max_keywords=None):
-
+        
         def complete_link_page_name_pair(link, page_name, wiki_html):
             def extract_title_from_url(url):
                 parsed_url = urlparse(url)
@@ -388,6 +388,39 @@ class KeywordFinder:
             if link == None and page_name == None:
                 raise AssertionError("You must enter either the page_name or the link")
             return link, page_name
+        
+        def check_page_name(title, domain):
+            
+            api_url = "https://en.wikipedia.org/w/api.php"
+
+            page_params = {
+                "action": "query",
+                "titles": title,
+                "prop": "categories",
+                "format": "json"
+            }
+            response = requests.get(api_url, params=page_params)
+            page_data = response.json()
+
+            # Get the page ID
+            page_id = list(page_data["query"]["pages"].keys())[0]
+            
+            if page_id == "-1":
+                return "Page not found."
+
+            categories = page_data["query"]["pages"][page_id].get("categories", [])
+            
+            is_disambiguation = any(cat["title"] == "Category:Disambiguation pages" for cat in categories)
+
+            if is_disambiguation:
+                return f"The page '{title}' is a disambiguation page."
+            
+            # Step 2: Check if the title matches the domain
+            if domain.lower() in title.lower():
+                return None
+            else:
+                return f"Warning: The page '{title}' may not match the domain '{domain}'."
+
 
         def bullet(link, page_name, wiki_html, max_keywords=None):
 
@@ -587,6 +620,15 @@ class KeywordFinder:
         )
 
         link, page_name = complete_link_page_name_pair(link, page_name, wiki_html)
+
+        check_result = check_page_name(title = page_name, domain = self.domain)
+
+        if check_result!=None:
+            user_input = input(check_result + " Do you want to exit, Yes or No -> ").strip().lower()
+        
+            if user_input == "yes":
+                raise SystemExit("Exiting the program") 
+
 
         result_map = {}
         assert format in ['Paragraph', 'Bullet', 'Table',
@@ -1414,4 +1456,10 @@ if __name__ == '__main__':
             print(f"Error in building benchmark for {category}: {e}")
             error.append(category)
 
-    print(f"Error in building benchmark for the following categories: {error}")
+    print(f"Error in building benchmark for the following categories: {error}") 
+
+    '''default_values = {'format': 'Paragraph', 'link': "https://en.wikipedia.org/wiki/French_language", 'page_name': None, 'name_filter': False,
+                                  'col_info': None, 'depth': None, 'source_tag': 'default', 'max_keywords': None}
+
+    kw = KeywordFinder(domain="People", category="French").find_name_keywords_by_hyperlinks_on_wiki(
+        **default_values).add(keyword="French")'''
