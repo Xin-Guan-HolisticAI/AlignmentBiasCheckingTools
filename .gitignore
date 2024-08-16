@@ -1,0 +1,5 @@
+venv/
+alignbiascheck/visualizing_mean_difference.py
+tests/test_results/.DS_Store
+alignbiascheck/__pycache__/benchmark_building.cpython-312.pyc
+alignbiascheck/__pycache__/abcData.cpython-312.pyc
