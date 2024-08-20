@@ -959,8 +959,8 @@ class Visualization:
 class AlignmentBiasChecker:
     default_configuration = {
         'generation': {
+            'category_breakdown': False,
             'task_prefix': None,
-            'counterfactual': True,
             'file_name': 'default',  # this should be the directory name for all relevant csv data files
             'sample_per_source': 10,
             'saving': True,
@@ -970,22 +970,6 @@ class AlignmentBiasChecker:
             'reading_location': 'default',
             'split_sentence': False
         },
-        # 'feature_extraction': {
-        #     'feature': 'sentiment',
-        #     'comparison': 'whole',
-        #     'saving': True,
-        #     'saving_location': 'default',
-        #     'require': True,
-        #     'reading_location': 'default',
-        # },
-        # 'alignment': {
-        #     'require': True,
-        #     'method': 'mean_difference_and_test',
-        #     'saving': True,
-        #     'saving_location': 'default',
-        #     'source_split': True,
-        #     'visualization': True,
-        # },
         'feature_extraction': {
             'feature': 'cluster',
             'comparison': 'whole',
@@ -1052,7 +1036,6 @@ class AlignmentBiasChecker:
         else:
             configuration = cls.update_configuration(cls.default_configuration.copy(), configuration)
 
-        counterfactual = configuration['generation']['counterfactual']
         file_location = configuration['generation']['file_name']
         sample_size_per_source = configuration['generation']['sample_per_source']
         generation_saving = configuration['generation']['saving']
@@ -1060,6 +1043,7 @@ class AlignmentBiasChecker:
         generation_saving_location = configuration['generation']['saving_location']
         generation_require = configuration['generation']['require']
         generation_reading_location = configuration['generation']['reading_location']
+        category_breakdown = configuration['generation']['category_breakdown']
 
         extraction_feature = configuration['feature_extraction']['feature']
         extraction_comparison = configuration['feature_extraction']['comparison']
@@ -1090,49 +1074,53 @@ class AlignmentBiasChecker:
         if not extraction_require:
             generation_require = False
 
-        if file_location == 'default':
-            file_name_root = 'customized'
-            pattern = f'data/{file_name_root}/split_sentences/{domain}_*_split_sentences.csv'
+
+        if category_breakdown:
+            if file_location == 'default':
+                file_name_root = 'customized'
+                pattern = f'data/{file_name_root}/split_sentences/{domain}_*_split_sentences.csv'
+            else:
+                file_name_root = file_location
+                pattern = f'data/{file_name_root}/*.csv'
+
+            if generation_require:
+
+                matching_files = glob.glob(pattern)
+                file_map = {}
+
+                # Iterate over matching files and populate the dictionary
+                for file_name in matching_files:
+                    base_name = os.path.basename(file_name)
+                    if file_location == 'default':
+                        file_map[file_name] = base_name[len(f'{domain}_'):-len('_split_sentences.csv')]
+                    else:
+                        file_map[file_name] = base_name[:-len('.csv')]
+
+                benchmark = pd.DataFrame()
+                for file_name, category in file_map.items():
+                    data_abc = abcData.load_file(category=category, domain=domain, data_tier='split_sentences',
+                                                 file_path=file_name)
+
+                    benchmark = benchmark._append(data_abc.sub_sample(sample_size_per_source))
         else:
-            file_name_root = file_location
-            pattern = f'data/{file_name_root}/*.csv'
+            if file_location == 'default':
+                file_name_root = 'customized'
+                file_path = f'data/{file_name_root}/split_sentences/{domain}_merged_split_sentences.csv'
+            else:
+                file_name_root = 'customized'
+                file_path = file_location
+            if generation_require:
+                benchmark = pd.DataFrame()
+                data_abc = abcData.load_file(category='merged', domain=domain, data_tier='split_sentences',
+                                             file_path=file_path)
+                benchmark = benchmark._append(data_abc.sub_sample(sample_size_per_source))
 
         if generation_require:
-
-            matching_files = glob.glob(pattern)
-            file_map = {}
-
-            # Iterate over matching files and populate the dictionary
-            for file_name in matching_files:
-                base_name = os.path.basename(file_name)
-                if file_location == 'default':
-                    file_map[file_name] = base_name[len(f'{domain}_'):-len('_split_sentences.csv')]
-                else:
-                    file_map[file_name] = base_name[:-len('.csv')]
-
-            benchmark = pd.DataFrame()
-            for file_name, category in file_map.items():
-                data_abc = abcData.load_file(category=category, domain=domain, data_tier='split_sentences',
-                                             file_path=file_name)
-                if counterfactual:
-                    data_abc.data = data_abc.data[data_abc.data['keyword'] == category]
-                    benchmark = benchmark._append(data_abc.sub_sample(sample_size_per_source))
-                else:
-                    benchmark = benchmark._append(data_abc.sub_sample(sample_size_per_source))
-            if counterfactual:
-                benchmark_abcD = abcData.create_data(category='counterfactual', domain=domain,
-                                                     data_tier='split_sentences',
-                                                     data=benchmark)
-                benchmark = benchmark._append(benchmark_abcD.counterfactualization())
-
             model_generator = ModelGenerator(benchmark)
             benchmark = model_generator.generate(generation_function)
             if generation_saving:
                 if generation_saving_location == 'default':
-                    if counterfactual:
-                        path = f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation_counterfactual.csv'
-                    else:
-                        path = f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation.csv'
+                    path = f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation.csv'
                 else:
                     path = generation_saving_location
                 ensure_directory_exists(path)
@@ -1141,16 +1129,10 @@ class AlignmentBiasChecker:
             print('Generation completed.')
         elif extraction_require:  # read the existing data
             if generation_reading_location == 'default':
-                if counterfactual:
-                    benchmark = pd.read_csv(
-                        f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation_counterfactual.csv')
-                    print(
-                        f'Generation data loaded from data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation_counterfactual.csv')
-                else:
-                    benchmark = pd.read_csv(
-                        f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation.csv')
-                    print(
-                        f'Generation data loaded from data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation.csv')
+                benchmark = pd.read_csv(
+                    f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation.csv')
+                print(
+                    f'Generation data loaded from data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation.csv')
             else:
                 benchmark = pd.read_csv(generation_reading_location)
                 print(f'Generation data loaded from {generation_reading_location}')
@@ -1189,10 +1171,7 @@ class AlignmentBiasChecker:
 
             if extraction_saving:
                 if extraction_saving_location == 'default':
-                    if counterfactual:
-                        path = f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}_counterfactual.csv'
-                    else:
-                        path = f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}.csv'
+                    path = f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}.csv'
                 else:
                     path = extraction_saving_location
                 ensure_directory_exists(path)
@@ -1201,16 +1180,10 @@ class AlignmentBiasChecker:
             print(f'{extraction_feature.title()} extraction completed.')
         else:
             if extraction_reading_location == 'default':
-                if counterfactual:
-                    benchmark = pd.read_csv(
-                        f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}_counterfactual.csv')
-                    print(
-                        f'{extraction_feature.title()} data loaded from data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}_counterfactual.csv')
-                else:
-                    benchmark = pd.read_csv(
-                        f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}.csv')
-                    print(
-                        f'{extraction_feature.title()} data loaded from data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}.csv')
+                benchmark = pd.read_csv(
+                    f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}.csv')
+                print(
+                    f'{extraction_feature.title()} data loaded from data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}.csv')
             else:
                 benchmark = pd.read_csv(extraction_reading_location)
                 print(f'{extraction_feature.title()} data loaded from {extraction_reading_location}')
@@ -1264,21 +1237,4 @@ class AlignmentBiasChecker:
             )
             print('Bias check completed.')
 
-# if __name__ == '__main__':
-# domain = 'political-ideology'
-#
-# from assistants import OllamaModel
-#
-# llama = OllamaModel(model_name='continuation',
-#                     system_prompt='Continue to finish the following part of the sentence and output nothing else: ')
-# generation_function = llama.invoke
-#
-# # generation_function = None
-#
-# configuration = {
-#     'feature_extraction': {
-#         'require': False,
-#     },
-# }
-#
-# AlignmentBiasChecker.domain_pipeline(domain, generation_function, configuration)
+
