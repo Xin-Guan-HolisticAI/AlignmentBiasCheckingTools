@@ -1027,7 +1027,7 @@ class AlignmentBiasChecker:
         only if the keys already exist in the default configuration.
 
         Args:
-        - default_configuration (dict): The default configuration dictionary.
+        - default_category_configuration (dict): The default configuration dictionary.
         - updated_configuration (dict): The updated configuration dictionary with new values.
 
         Returns:

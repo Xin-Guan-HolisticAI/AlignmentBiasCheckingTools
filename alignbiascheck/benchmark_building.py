@@ -689,6 +689,11 @@ class ScrapAreaFinder:
 
         print(f"Searching Wikipedia for topic: {topic}")
         main_page = search_wikipedia(topic, language=language, user_agent=user_agent)
+        if top_n == 0:
+            main_page_link = search_wikipedia(topic, language=language, user_agent=user_agent).fullurl
+            self.scrap_area = [main_page_link]
+            self.scrap_area_type = 'wiki_urls'
+            return self.scrap_area_to_abcData()
 
         if isinstance(main_page, str):
             return self.scrap_area_to_abcData()
@@ -1001,7 +1006,7 @@ class PromptMaker:
 
         return self.output_df_to_abcData()
 
-    def make_questions(self, generation_function, keyword_reference=None, answer_check=True):
+    def make_questions(self, generation_function, keyword_reference=None, answer_check=True, max_questions=None):
 
         def get_question(sentence, generation_function, keyword, keyword_list=None, bad_questions=None, Example=True):
             prompt_qa_making = f" Write a question about '{keyword}' such that the following sentence '''{sentence}''' can act as an accurate answer (!!!). \n" \
@@ -1082,13 +1087,18 @@ class PromptMaker:
             for keyword, keyword_data in tqdm(category_item['keywords'].items(), desc="Going through keywords"):
                 for sentence_with_tag in tqdm(keyword_data['scrapped_sentences'],
                                               desc="Going through scrapped sentences"):
+                    if max_questions != None and len(results) >= max_questions:
+                        break
                     question = get_question(sentence=sentence_with_tag[0], generation_function=generation_function,
                                             keyword=category, keyword_list=keyword_reference)
-                    if len(keyword_reference) > 1 and answer_check:
-                        # only check_question to find questions for other keywords if key_word list is greater than 1
-                        check, key_dict = check_question(question=question, generation_function=generation_function,
-                                                         keyword=category, keyword_list=keyword_reference,
-                                                         answer_check=answer_check)
+                    if keyword_reference is not None:
+                        if len(keyword_reference) > 1 and answer_check:
+                            # only check_question to find questions for other keywords if key_word list is greater than 1
+                            check, key_dict = check_question(question=question, generation_function=generation_function,
+                                                             keyword=category, keyword_list=keyword_reference,
+                                                             answer_check=answer_check)
+                        else:
+                            check = True
                     else:
                         # otherwise, if only one keyword then no need to check question.
                         check = True
@@ -1137,13 +1147,14 @@ class PromptMaker:
             'descriptor_distance': 'cosine',
             'replacement_description': {},
             'replacement_description_saving': True,
-            'replacement_description_saving_location': f'data/customized/split_sentences/{self.domain}_replacement_description.csv',
+            'replacement_description_saving_location': f'data/customized/split_sentences/{self.domain}_replacement_description.json',
             'counterfactual_baseline': True,
             'generation_function': None,
         }
         if branching_config is None:
             branching_config = {}
         branching_config = BenchmarkBuilder.update_configuration(default_branching_config, branching_config)
+
 
         def replacement_descriptor(df, original_category, replace_category, replacing: list[str] or str, gf=None,
                                    embedding_model='paraphrase-Mpnet-base-v2',
@@ -1217,7 +1228,7 @@ class PromptMaker:
                         remaining = [i for i in remaining if i >= guess]
                     else:
                         remaining = [i for i in remaining if i <= guess]
-                        print(f"Remaining: {remaining}")
+                        # print(f"Remaining: {remaining}")
 
                 # After narrowing down, the remaining list will contain the correct number
                 correct_guess = remaining[-1]
@@ -1246,6 +1257,7 @@ class PromptMaker:
                         print(f"Error decoding JSON: {e}")
                 else:
                     print("No JSON found in the string.")
+
 
             df_category = df[df['category'] == original_category]
             word_bank = ''
@@ -1279,23 +1291,74 @@ class PromptMaker:
             print(f'Failed to obtain the replacement for {original_category} and {replace_category}...')
             return {}
 
-        def replace_gender_terms(sentence, replacement_dictionary):
+        def add_and_clean_replacement_pairs(replacement_dict):
+                for outer_key, inner_dict in replacement_dict.items():
+                    for sub_key, replacements in inner_dict.items():
+                        # Collect pairs to remove
+                        pairs_to_remove = []
+
+                        for a, b in replacements.items():
+                            # Check if a contains outer_key or outer_key is contained by a
+                            if outer_key.lower() in a.lower() or a.lower() in outer_key.lower():
+                                pairs_to_remove.append(a)
+                            # Check if b contains sub_key or sub_key is contained by b
+                            elif sub_key.lower() in b.lower() or b.lower() in sub_key.lower():
+                                pairs_to_remove.append(a)
+
+                        # Remove conflicting pairs
+                        for a in pairs_to_remove:
+                            del replacements[a]
+
+                        # After removing conflicts, add the new pair if no conflict
+                        if outer_key not in replacements and sub_key not in replacements.values():
+                            if outer_key not in replacements and sub_key not in replacements:
+                                replacements[outer_key] = sub_key
+
+                return replacement_dict
+
+        def replace_terms(sentence, replacement_dict):
+
+            replacement_dict = {k.lower(): v for k, v in replacement_dict.items()}
+            reverse_replacement_dict = {v.lower(): k for k, v in replacement_dict.items()}
+            replacement_dict.update(reverse_replacement_dict)
+
+            sentence = sentence.lower()
+
+            # Create a regular expression pattern that matches any of the phrases
+            pattern = re.compile("|".join(re.escape(phrase) for phrase in replacement_dict.keys()))
+
+            # Function to replace matched phrases using the replacement dictionary
+            def replace_match(match):
+                return replacement_dict[match.group(0)]
+
+            # Replace all matched phrases with their corresponding replacements
+            modified_sentence = pattern.sub(replace_match, sentence)
+
+            return modified_sentence
+
+        def replace_gender_terms_arc(sentence, replacement_dictionary):
             # Step 1: Define the replacement dictionary
 
             # Step 2: Extend the dictionary to include reverse replacements
             reverse_replacement_dictionary = {v: k for k, v in replacement_dictionary.items()}
             full_replacement_dictionary = {**replacement_dictionary, **reverse_replacement_dictionary}
+            # Lower the keys
+            full_lower_replacement_dictionary = {k.lower(): v for k, v in full_replacement_dictionary.items()}
+            print(full_lower_replacement_dictionary)
+
 
             # Step 3: Tokenize the sentence
             tokens = re.findall(r'\b\w+\b', sentence)
 
             # Step 4: Replace the words according to the dictionary
-            replaced_tokens = [full_replacement_dictionary.get(token.lower(), token) for token in tokens]
+            replaced_tokens = [full_lower_replacement_dictionary.get(token.lower(), token) for token in tokens]
 
             # Step 5: Reassemble the sentence
             replaced_sentence = ' '.join(replaced_tokens)
 
             return replaced_sentence
+
+
 
         replacement_description = branching_config['replacement_description']
         gef = branching_config['generation_function']
@@ -1336,20 +1399,23 @@ class PromptMaker:
 
                 # Update the existing dictionary with the contents of rd
                 replacement_description[category_pair[0]][category_pair[1]].update(rd)
+                replacement_description = add_and_clean_replacement_pairs(replacement_description)
                 if branching_config['replacement_description_saving']:
                     with open(branching_config['replacement_description_saving_location'], 'w', encoding='utf-8') as f:
                         json.dump(replacement_description, f)
             else:
-                rd = replacement_description[category_pair[0]][category_pair[1]]
+                replacement_description = add_and_clean_replacement_pairs(replacement_description)
 
+            rd = replacement_description[category_pair[0]][category_pair[1]]
+            print(rd)
             print('Replacing...')
             df_new = df[df['category'] == category_pair[0]].copy()
-            df_new['prompts'] = df_new['prompts'].apply(lambda x: replace_gender_terms(x, rd))
+            df_new['prompts'] = df_new['prompts'].apply(lambda x: replace_terms(x, rd).title())
             if branching_config['counterfactual_baseline']:
-                df_new['baseline'] = df_new['baseline'].apply(lambda x: replace_gender_terms(x, rd))
+                df_new['baseline'] = df_new['baseline'].apply(lambda x: replace_terms(x, rd).title())
             df_new['source_tag'] = df_new.apply(lambda row: f'br_{row["source_tag"]}_cat_{row["category"]}', axis=1)
-            df_new['category'] = df_new['category'].apply(lambda x: replace_gender_terms(x, rd))
-            df_new['keyword'] = df_new['keyword'].apply(lambda x: replace_gender_terms(x, rd))
+            df_new['category'] = df_new['category'].apply(lambda x: replace_terms(x, rd))
+            df_new['keyword'] = df_new['keyword'].apply(lambda x: replace_terms(x, rd))
             df_result = pd.concat([df_result, df_new])
 
             self.output_df = df_result
@@ -1360,10 +1426,26 @@ class PromptMaker:
 
 
 class BenchmarkBuilder:
-    default_configuration = {}
+    default_category_configuration = {}
+    default_domain_configuration = {}
+    default_branching_configuration = {}
 
     def reset(cls):
-        cls.default_configuration = {
+        cls.default_branching_configuration = {
+            'branching_pairs': 'all',
+            'direction': 'both',
+            'source_restriction': None,
+            'replacement_descriptor_require': True,
+            'descriptor_threshold': 'Auto',
+            'descriptor_embedding_model': 'paraphrase-Mpnet-base-v2',
+            'descriptor_distance': 'cosine',
+            'replacement_description': {},
+            'replacement_description_saving': True,
+            'replacement_description_saving_location': f'data/customized/split_sentences/replacement_description.json',
+            'counterfactual_baseline': True,
+            'generation_function': None,
+        }
+        cls.default_category_configuration = {
             'keyword_finder': {
                 'require': True,
                 'reading_location': 'default',
@@ -1371,13 +1453,14 @@ class BenchmarkBuilder:
                 'keyword_number': 7,  # keyword_number works for both embedding_on_wiki and hyperlinks_on_wiki
                 'hyperlinks_info': [],
                 # If hyperlinks_info is method chosen, can give more info... format='Paragraph', link=None, page_name=None, name_filter=False, col_info=None, depth=None, source_tag='default', max_keywords = None). col_info format is [{'table_num': value, 'column_name':List}]
-                'llm_info': [],
+                'llm_info': {},
                 # If llm_inequiries is method chosen, can give more info... self, n_run=20,n_keywords=20, generation_function=None, model_name=None, embedding_model=None, show_progress=True
                 'max_adjustment': 150,
                 # max_adjustment for embedding_on_wiki. If max_adjustment is equal to -1, then max_adjustment is not taken into account.
                 'embedding_model': 'paraphrase-Mpnet-base-v2',
                 'saving': True,
-                'saving_location': 'default'
+                'saving_location': 'default',
+                'manual_keywords': None,
             },
             'scrap_area_finder': {
                 'require': True,
@@ -1396,9 +1479,26 @@ class BenchmarkBuilder:
                 'saving_location': 'default'},
             'prompt_maker': {
                 'require': True,
-                'method': 'split_sentences',
+                'method': 'split_sentences',  # can also have "questions" as a method
+                # prompt_maker_generation_function and prompt_maker_keyword_list are needed for questions
+                'generation_function': None,
+                # prompt_maker_keyword_list must contain at least one keyword. The first keyword must be the keyword
+                # of the original scrapped data.
+                'keyword_list': None,
+                # User will enter False if they don't want their questions answer checked.
+                'answer_check': False,
                 'saving_location': 'default',
+                'max_benchmark_length': 500,
             },
+        }
+        cls.default_domain_configuration = {
+            'categories': [],
+            'branching': False,  # If branching is False, then branching_config is not taken into account
+            'branching_config': cls.default_branching_configuration,
+            'shared_config':cls.default_category_configuration,
+            'category_specified_config':{},
+            'saving': True,  # If saving is False, then saving_location is not taken into account
+            'saving_location': 'default',
         }
 
     def __init__(self):
@@ -1411,30 +1511,49 @@ class BenchmarkBuilder:
         only if the keys already exist in the default configuration.
 
         Args:
-        - default_configuration (dict): The default configuration dictionary.
+        - default_category_configuration (dict): The default configuration dictionary.
         - updated_configuration (dict): The updated configuration dictionary with new values.
 
         Returns:
         - dict: The updated configuration dictionary.
         """
+
         for key, value in updated_configuration.items():
-            if key in default_configuration:
+            if key in default_configuration.copy():
+                # print(f"Updating {key} recursively")
                 if isinstance(default_configuration[key], dict) and isinstance(value, dict):
                     # Recursively update nested dictionaries
-                    default_configuration[key] = BenchmarkBuilder.update_configuration(default_configuration[key],
+                    default_configuration[key] = BenchmarkBuilder.update_configuration(default_configuration[key].copy(),
                                                                                        value)
                 else:
+                    # print(f"Skipping key: {key} due to type mismatch")
                     # Update the value for the key
                     default_configuration[key] = value
         return default_configuration
+
+    @staticmethod
+    def merge_category_specified_configuration(domain_configuration):
+        specified_config = domain_configuration['category_specified_config'].copy()
+        domain_configuration = BenchmarkBuilder.update_configuration(BenchmarkBuilder.default_domain_configuration.copy(),
+                                              domain_configuration)
+        domain_configuration['shared_config'] = BenchmarkBuilder.update_configuration(BenchmarkBuilder.default_category_configuration.copy(), domain_configuration['shared_config'].copy())
+
+        base_category_config = {}
+        for cat in domain_configuration['categories']:
+            base_category_config[cat] = domain_configuration['shared_config'].copy()
+
+        # print('start ====================== \n\n')
+        merge_category_config = BenchmarkBuilder.update_configuration(base_category_config.copy(), specified_config.copy())
+        print(merge_category_config)
+        return merge_category_config
 
     @classmethod
     def category_pipeline(cls, domain, demographic_label, configuration=None):
         cls.reset(cls)
         if configuration is None:
-            configuration = cls.default_configuration.copy()
+            configuration = cls.default_category_configuration.copy()
         else:
-            configuration = cls.update_configuration(cls.default_configuration.copy(), configuration)
+            configuration = cls.update_configuration(cls.default_category_configuration.copy(), configuration)
 
         keyword_finder_require = configuration['keyword_finder']['require']
         keyword_finder_reading_location = configuration['keyword_finder']['reading_location']
@@ -1446,6 +1565,7 @@ class BenchmarkBuilder:
         keyword_finder_embedding_model = configuration['keyword_finder']['embedding_model']
         keyword_finder_saving = configuration['keyword_finder']['saving']
         keyword_finder_saving_location = configuration['keyword_finder']['saving_location']
+        keyword_finder_manual_keywords = configuration['keyword_finder']['manual_keywords']
 
         scrap_area_finder_require = configuration['scrap_area_finder']['require']
         scrap_area_finder_reading_location = configuration['scrap_area_finder']['reading_location']
@@ -1463,7 +1583,11 @@ class BenchmarkBuilder:
 
         prompt_maker_require = configuration['prompt_maker']['require']
         prompt_maker_method = configuration['prompt_maker']['method']
+        prompt_maker_generation_function = configuration['prompt_maker']['generation_function']
+        prompt_maker_keyword_list = configuration['prompt_maker']['keyword_list']
+        prompt_maker_answer_check = configuration['prompt_maker']['answer_check']
         prompt_maker_saving_location = configuration['prompt_maker']['saving_location']
+        prompt_maker_max_sample_number = configuration['prompt_maker']['max_benchmark_length']
 
         # check the validity of the configuration
         assert keyword_finder_method in ['embedding_on_wiki', 'llm_inquiries',
@@ -1477,7 +1601,7 @@ class BenchmarkBuilder:
         assert scrapper_method in ['wiki',
                                    'local_files'], "Invalid scrapper method. Choose either 'wiki' or 'local_files'"
         assert scrap_area_finder_method == scrapper_method, "scrap_area_finder and scrapper methods must be the same"
-        assert prompt_maker_method in ['split_sentences'], "Invalid prompt maker method. Choose 'split_sentences'"
+        assert prompt_maker_method in ['split_sentences', 'questions'], "Invalid prompt maker method. Choose 'split_sentences' or 'questions'"
 
         '''
         # make sure only the required loading is done
@@ -1527,13 +1651,24 @@ class BenchmarkBuilder:
 
                 kw = KeywordFinder(domain=domain, category=demographic_label).find_name_keywords_by_hyperlinks_on_wiki(
                     **default_values).add(keyword=demographic_label)
+
+                # if manual keywords are provided, add them to the keyword finder
+                if isinstance(keyword_finder_manual_keywords, list):
+                    for keyword in keyword_finder_manual_keywords:
+                        kw = kw.add(keyword)
+
             if keyword_finder_saving:
                 if keyword_finder_saving_location == 'default':
                     kw.save()
                 else:
                     kw.save(file_path=keyword_finder_saving_location)
 
-        elif scrap_area_finder_require:
+        elif (not keyword_finder_require) and isinstance(keyword_finder_manual_keywords, list):
+            kw = abcData.create_data(domain=domain, category=demographic_label, data_tier='keywords')
+            for keyword in keyword_finder_manual_keywords:
+                kw = kw.add(keyword)
+
+        elif scrap_area_finder_require and (keyword_finder_manual_keywords is None):
             filePath = ""
             if keyword_finder_reading_location == 'default':
                 filePath = f'tests/data/customized/keywords/{domain}_{demographic_label}_keywords.json'
@@ -1559,11 +1694,13 @@ class BenchmarkBuilder:
                     raise ValueError(f"Unable to read keywords from {scrap_area_local_file}. Can't scrap area.")
                 sa = ScrapAreaFinder(kw, source_tag='local').find_scrap_paths_local(scrap_area_local_file)
 
+
             if scrap_area_finder_saving:
                 if scrap_area_finder_saving_location == 'default':
                     sa.save()
                 else:
                     sa.save(file_path=scrap_area_finder_saving_location)
+
 
         elif scrapper_require:
             filePath = ""
@@ -1614,15 +1751,55 @@ class BenchmarkBuilder:
             else:
                 raise ValueError(f"Unable to scrap from {filePath}. Can't make prompts.")
 
+        pm_result = None
         if prompt_maker_method == 'split_sentences' and prompt_maker_require:
-            pm = PromptMaker(sc).split_sentences()
-            if pm == None: raise ValueError(f"Unable to make prompts out of no scrapped sentences")
-            if prompt_maker_saving_location == 'default':
-                pm.save()
-            else:
-                pm.save(file_path=prompt_maker_saving_location)
-            print(f'Benchmark building for {demographic_label} completed.')
-            print('\n=====================================================\n')
+            pm = PromptMaker(sc)
+            pm_result = pm.split_sentences()
+        elif prompt_maker_method == 'questions' and prompt_maker_require:
+            pm = PromptMaker(sc)
+            pm_result = pm.make_questions(generation_function = prompt_maker_generation_function, keyword_reference=prompt_maker_keyword_list, answer_check = prompt_maker_answer_check, max_questions = prompt_maker_max_sample_number)
+        if pm_result is None:
+            raise ValueError(f"Unable to make prompts out of no scrapped sentences")
+        pm_result = pm_result.sub_sample(prompt_maker_max_sample_number, floor=True, abc_format=True) ### There is likely a bug
+        if prompt_maker_saving_location == 'default':
+            pm_result.save()
+        else:
+            pm_result.save(file_path=prompt_maker_saving_location)
+
+        print(f'Benchmark building for {demographic_label} completed.')
+        print('\n=====================================================\n')
+
+        return pm_result
+    @classmethod
+    def domain_pipeline(cls, domain, configuration=None):
+        cls.reset(cls)
+        category_list = configuration['categories']
+        category_specified_configuration = cls.merge_category_specified_configuration(configuration.copy())
+        configuration = cls.update_configuration(cls.default_domain_configuration.copy(), configuration)
+        domain_benchmark = abcData.create_data(domain=domain, category='all', data_tier='split_sentences')
+        for category in category_list:
+            cat_result = cls.category_pipeline(domain, category, category_specified_configuration[category])
+            print(f'Benchmark building for {category} completed.')
+            domain_benchmark = abcData.merge(domain, [domain_benchmark, cat_result])
+
+            if configuration['saving']:
+                if configuration['saving_location'] == 'default':
+                    domain_benchmark.save()
+                else:
+                    domain_benchmark.save(file_path=configuration['saving_location'])
+
+        if configuration['branching']:
+            empty_ss = abcData.create_data(category='merged', domain='AI-company', data_tier='scrapped_sentences')
+            pmr = PromptMaker(empty_ss)
+            pmr.output_df = domain_benchmark.data
+            domain_benchmark = pmr.branching(branching_config=configuration['branching_config'])
+            if configuration['saving']:
+                if configuration['saving_location'] == 'default':
+                    domain_benchmark.save(suffix='branching')
+                else:
+                    domain_benchmark.save(file_path=configuration['saving_location'])
+
+        return domain_benchmark
 
 
 if __name__ == '__main__':
