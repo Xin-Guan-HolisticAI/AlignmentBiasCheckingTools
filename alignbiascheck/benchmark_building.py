@@ -641,12 +641,12 @@ class ScrapAreaFinder:
         return scrap_area
 
     def find_scrap_urls_on_wiki(self, top_n=5, bootstrap_url=None, language='en',
-                                user_agent='AlignmentBiasChecker/1.0 (contact@holisticai.com)'):
+                                user_agent='AlignmentBiasChecker/1.0 (contact@holisticai.com)', scrap_backlinks=0):
         """
         Main function to search Wikipedia for a topic and find related pages.
         """
 
-        def get_related_pages(topic, page, max_depth=1, current_depth=0, visited=None, top_n=50):
+        def get_related_forelinks(topic, page, max_depth=1, current_depth=0, visited=None, top_n=50):
             """
             Recursively get related pages up to a specified depth.
 
@@ -681,9 +681,50 @@ class ScrapAreaFinder:
                     except Exception as e:
                         print(f"Error: {e}")
                 if current_depth + 1 < max_depth:
-                    related_pages.extend(get_related_pages(topic, link_page, max_depth, current_depth + 1, visited))
+                    related_pages.extend(get_related_forelinks(topic, link_page, max_depth, current_depth + 1, visited))
 
             return related_pages
+
+        def get_related_backlinks(topic, page, max_depth=1, current_depth=0, visited=None, top_n=50):
+            """
+            Recursively get related backlinks up to a specified depth.
+
+            Args:
+            - topic (str): The main topic to start the search from.
+            - page (Wikipedia page object): The Wikipedia page object of the main topic.
+            - max_depth (int): Maximum depth to recurse.
+            - current_depth (int): Current depth of the recursion.
+            - visited (set): Set of visited pages to avoid loops.
+
+            Returns:
+            - list: A list of tuples containing the title and URL of related backlinks.
+            """
+            links = page.backlinks
+            related_pages = []
+
+            if visited is None:
+                visited = set()
+                # related_pages.extend([(page.title, page.fullurl)])
+                related_pages.extend([page.fullurl])
+
+            visited.add(page.title)
+
+            title_list = [title for title, link_page in links.items()]
+            if len(title_list) > top_n:
+                title_list = find_similar_keywords('paraphrase-MiniLM-L6-v2', topic, title_list, top_n)
+
+            for title, link_page in tqdm(links.items()):
+                if link_page.title not in visited and link_page.title in title_list:
+                    try:
+                        related_pages.extend([link_page.fullurl])
+                    except Exception as e:
+                        print(f"Error: {e}")
+                if current_depth + 1 < max_depth:
+                    related_pages.extend(get_related_forelinks(topic, link_page, max_depth, current_depth + 1, visited))
+
+            return related_pages
+
+
 
         topic = self.category
 
@@ -699,8 +740,11 @@ class ScrapAreaFinder:
             return self.scrap_area_to_abcData()
         else:
             print(f"Found Wikipedia page: {main_page.title}")
-            related_pages = get_related_pages(topic, main_page, max_depth=1, top_n=top_n)
-            self.scrap_area = related_pages
+            related_pages = get_related_forelinks(topic, main_page, max_depth=1, top_n=top_n)
+            if scrap_backlinks > 0:
+                related_backlinks = get_related_backlinks(topic, main_page, max_depth=1, top_n=scrap_backlinks)
+                related_pages.extend(related_backlinks)
+            self.scrap_area = list(set(related_pages))
             self.scrap_area_type = 'wiki_urls'
             return self.scrap_area_to_abcData()
 
@@ -1410,9 +1454,9 @@ class PromptMaker:
             print(rd)
             print('Replacing...')
             df_new = df[df['category'] == category_pair[0]].copy()
-            df_new['prompts'] = df_new['prompts'].apply(lambda x: replace_terms(x, rd).title())
+            df_new['prompts'] = df_new['prompts'].apply(lambda x: replace_terms(x, rd).capitalize())
             if branching_config['counterfactual_baseline']:
-                df_new['baseline'] = df_new['baseline'].apply(lambda x: replace_terms(x, rd).title())
+                df_new['baseline'] = df_new['baseline'].apply(lambda x: replace_terms(x, rd).capitalize())
             df_new['source_tag'] = df_new.apply(lambda row: f'br_{row["source_tag"]}_cat_{row["category"]}', axis=1)
             df_new['category'] = df_new['category'].apply(lambda x: replace_terms(x, rd))
             df_new['keyword'] = df_new['keyword'].apply(lambda x: replace_terms(x, rd))
@@ -1470,6 +1514,7 @@ class BenchmarkBuilder:
                 'scrap_number': 5,
                 'saving': True,
                 'saving_location': 'default',
+                'scrap_backlinks': 0,
             },
             'scrapper': {
                 'require': True,
@@ -1574,6 +1619,7 @@ class BenchmarkBuilder:
         scrap_area_finder_saving = configuration['scrap_area_finder']['saving']
         scrap_area_finder_saving_location = configuration['scrap_area_finder']['saving_location']
         scrap_area_finder_scrap_area_number = configuration['scrap_area_finder']['scrap_number']
+        scrap_area_finder_scrap_backlinks = configuration['scrap_area_finder']['scrap_backlinks']
 
         scrapper_require = configuration['scrapper']['require']
         scrapper_reading_location = configuration['scrapper']['reading_location']
@@ -1688,7 +1734,7 @@ class BenchmarkBuilder:
         if scrap_area_finder_require:
             if scrap_area_finder_method == 'wiki':
                 sa = ScrapAreaFinder(kw, source_tag='wiki').find_scrap_urls_on_wiki(
-                    top_n=scrap_area_finder_scrap_area_number)
+                    top_n=scrap_area_finder_scrap_area_number, scrap_backlinks=scrap_area_finder_scrap_backlinks)
             elif scrap_area_finder_method == 'local_files':
                 if scrap_area_local_file == None:
                     raise ValueError(f"Unable to read keywords from {scrap_area_local_file}. Can't scrap area.")
