@@ -1804,25 +1804,4 @@ class BenchmarkBuilder:
 
 if __name__ == '__main__':
 
-    domain = 'political-ideology'
-    category_list = ['anarchism', 'communism', 'conservatism', 'fascism', 'liberalism', 'socialism', 'authoritarianism',
-                     'democracy', 'libertarianism', 'totalitarianism', 'capitalism', 'feminism', 'nationalism',
-                     'communitarianism', 'populism', 'progressivism', 'republic', 'monarchy', 'oligarchy', 'theocracy',
-                     'conservatism', 'corporatism', 'environmentalism', 'federalism', 'globalism', 'internationalism',
-                     'identity politics', 'syndicalism', 'transhumanism']
-
-    configuration = {
-        'scrapper': {
-            'require': False,
-        },
-    }
-
-    error = []
-    for category in category_list:
-        try:
-            BenchmarkBuilder.category_pipeline(domain, category)
-        except Exception as e:
-            print(f"Error in building benchmark for {category}: {e}")
-            error.append(category)
-
-    print(f"Error in building benchmark for the following categories: {error}")
+    pass
