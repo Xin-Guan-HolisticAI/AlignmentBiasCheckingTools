@@ -127,8 +127,36 @@ class abcData:
         return instance
 
     @classmethod
-    def create_data(cls, domain, category, data_tier, data):
+    def create_data(cls, domain, category, data_tier, data = None):
         instance = cls(domain, category, data_tier)
+
+        if data is None:
+            if data_tier == 'keywords':
+                instance.data = [{
+                    "category": category,
+                    "domain": domain,
+                    "keywords": {}
+                }]
+                return instance
+            elif data_tier == 'scrap_area':
+                instance.data = [{
+                    "category": category,
+                    "domain": domain,
+                    "category_shared_scrap_area": cls.default_scrap_area_format,
+                    "keywords": {}
+                }]
+                return instance
+            elif data_tier == 'scrapped_sentences':
+                instance.data = [{
+                    "category": category,
+                    "domain": domain,
+                    "category_shared_scrap_area": cls.default_scrap_area_format,
+                    "keywords": {}
+                }]
+                return instance
+            elif data_tier == 'split_sentences':
+                instance.data = pd.DataFrame(columns=['keyword', 'category', 'domain', 'prompts', 'baseline', 'source_tag'])
+                return instance
 
         try:
             instance.data = data
@@ -351,11 +379,16 @@ class abcData:
             print("Cannot add to split sentences data, it is a DataFrame.")
             return self
 
-    def save(self, file_path=None):
+    def save(self, file_path=None, domain_save=False, suffix=None):
 
         if self.data_tier == 'split_sentences':
             if file_path is None:
-                file_name = f"{self.domain}_{self.category}_{self.data_tier}.csv"
+                if domain_save:
+                    file_name = f"{self.domain}_{self.data_tier}.csv"
+                else:
+                    file_name = f"{self.domain}_{self.category}_{self.data_tier}.csv"
+                if suffix is not None:
+                    file_name = f"{file_name[:-4]}_{suffix}.csv"
                 default_path = os.path.join('data', 'customized', self.data_tier)
                 os.makedirs(default_path, exist_ok=True)
                 file_path = os.path.join(default_path, file_name)
@@ -376,32 +409,56 @@ class abcData:
                 json.dump(self.data, f, indent=2)
             print(f"Data saved to {file_path}")
 
-    def sub_sample(self, sample=10, seed=42, clean=True):
+    @classmethod
+    def merge(cls, domain, merge_list, category = 'merged', abc_format = True):
+        df = pd.DataFrame()
+        for data_item in merge_list:
+            assert isinstance(data_item, abcData), "Data to merge should be of type abcData."
+            assert data_item.domain == domain, "Data to merge should have the same domain."
+            assert data_item.data_tier == 'split_sentences', "Data to merge should be in split_sentences data tier."
+            df = pd.concat([df, data_item.data], ignore_index=True)
+
+        merged_data = abcData.create_data(domain, category, 'split_sentences', df)
+
+        if abc_format:
+            return merged_data
+
+        return df
+
+    def sub_sample(self, sample=10, seed=42, clean=True, floor = False , abc_format = False):
         if not isinstance(self.data, pd.DataFrame):
             print("Cannot generate sub_sample from non-DataFrame data. You need to perform sentence split.")
             return
 
         if clean and 'keywords_containment' in self.data.columns:
-            # print(self.data)
             df = self.data
-            # print(df['keywords_containment'] == True)
             df = df[df['keywords_containment'] == True]
             df = df.copy()  # Make a copy to avoid the SettingWithCopyWarning
             df.drop(['keywords_containment'], axis=1, inplace=True)
-            # print(df)
             self.data = df
 
-        assert sample <= len(self.data), f"Sample size should be less than or equal to the data size {len(self.data)}."
-        sample_data = self.data.sample(n=sample, random_state=seed)
+        if floor:
+            sample = min(sample, len(self.data))
+        else:
+           assert sample <= len(self.data), f"Sample size should be less than or equal to the data size {len(self.data)}."
+        sample_data = self.data.sample(n=sample, random_state=seed).copy()
         self.data = sample_data
+
+        if abc_format:
+            return self
+
         return sample_data
 
-    def model_generation(self, generation_function, generation_name='generated_output'):
+    def model_generation(self, generation_function, generation_name='generated_output',  abc_format = False):
         if not isinstance(self.data, pd.DataFrame):
             print("Cannot generate model output from non-DataFrame data. You need to perform sentence split.")
             return
 
         self.data[generation_name] = self.data['prompts'].progress_apply(generation_function)
+
+        if abc_format:
+            return self
+
         return self.data
 
     def counterfactualization(self, keywords_mapping = None, mode='all', source_tag='counterfactual', merge = False):
@@ -459,5 +516,6 @@ class abcData:
         all_modified_df = pd.concat(modified_df_dict.values(), ignore_index=True)
         self.data = all_modified_df
         return all_modified_df
+
 
 
