@@ -58,7 +58,7 @@ def find_similar_keywords(model_name, target_word, keywords_list, top_n=100):
     return top_keywords
 
 
-def search_wikipedia(topic, language='en', user_agent='AlignmentBiasChecker/1.0 (contact@holisticai.com)'):
+def search_wikipedia(topic, language='en', user_agent='Pipeline/1.0 (contact@holisticai.com)'):
     """
     Search for a topic on Wikipedia and return the page object.
 
@@ -641,7 +641,7 @@ class ScrapAreaFinder:
         return scrap_area
 
     def find_scrap_urls_on_wiki(self, top_n=5, bootstrap_url=None, language='en',
-                                user_agent='AlignmentBiasChecker/1.0 (contact@holisticai.com)', scrap_backlinks=0):
+                                user_agent='Pipeline/1.0 (contact@holisticai.com)', scrap_backlinks=0):
         """
         Main function to search Wikipedia for a topic and find related pages.
         """
@@ -1600,40 +1600,49 @@ class BenchmarkBuilder:
         else:
             configuration = cls.update_configuration(cls.default_category_configuration.copy(), configuration)
 
-        keyword_finder_require = configuration['keyword_finder']['require']
-        keyword_finder_reading_location = configuration['keyword_finder']['reading_location']
-        keyword_finder_method = configuration['keyword_finder']['method']
-        keyword_finder_keyword_number = configuration['keyword_finder']['keyword_number']
-        keyword_finder_hyperlinks_info = configuration['keyword_finder']['hyperlinks_info']
-        keyword_finder_llm_info = configuration['keyword_finder']['llm_info']
-        keyword_finder_max_adjustment = configuration['keyword_finder']['max_adjustment']
-        keyword_finder_embedding_model = configuration['keyword_finder']['embedding_model']
-        keyword_finder_saving = configuration['keyword_finder']['saving']
-        keyword_finder_saving_location = configuration['keyword_finder']['saving_location']
-        keyword_finder_manual_keywords = configuration['keyword_finder']['manual_keywords']
+        # Unpacking keyword_finder section
+        keyword_finder_config = configuration['keyword_finder']
+        keyword_finder_require, keyword_finder_reading_location, keyword_finder_method, \
+        keyword_finder_keyword_number, keyword_finder_hyperlinks_info, keyword_finder_llm_info, \
+        keyword_finder_max_adjustment, keyword_finder_embedding_model, keyword_finder_saving, \
+        keyword_finder_saving_location, keyword_finder_manual_keywords = (
+            keyword_finder_config[key] for key in [
+            'require', 'reading_location', 'method', 'keyword_number', 'hyperlinks_info',
+            'llm_info', 'max_adjustment', 'embedding_model', 'saving', 'saving_location',
+            'manual_keywords'
+        ]
+        )
 
-        scrap_area_finder_require = configuration['scrap_area_finder']['require']
-        scrap_area_finder_reading_location = configuration['scrap_area_finder']['reading_location']
-        scrap_area_finder_method = configuration['scrap_area_finder']['method']
-        scrap_area_local_file = configuration['scrap_area_finder']['local_file']
-        scrap_area_finder_saving = configuration['scrap_area_finder']['saving']
-        scrap_area_finder_saving_location = configuration['scrap_area_finder']['saving_location']
-        scrap_area_finder_scrap_area_number = configuration['scrap_area_finder']['scrap_number']
-        scrap_area_finder_scrap_backlinks = configuration['scrap_area_finder']['scrap_backlinks']
+        # Unpacking scrap_area_finder section
+        scrap_area_finder_config = configuration['scrap_area_finder']
+        scrap_area_finder_require, scrap_area_finder_reading_location, scrap_area_finder_method, \
+        scrap_area_local_file, scrap_area_finder_saving, scrap_area_finder_saving_location, \
+        scrap_area_finder_scrap_area_number, scrap_area_finder_scrap_backlinks = (
+            scrap_area_finder_config[key] for key in [
+            'require', 'reading_location', 'method', 'local_file', 'saving',
+            'saving_location', 'scrap_number', 'scrap_backlinks'
+        ]
+        )
 
-        scrapper_require = configuration['scrapper']['require']
-        scrapper_reading_location = configuration['scrapper']['reading_location']
-        scrapper_saving = configuration['scrapper']['saving']
-        scrapper_method = configuration['scrapper']['method']
-        scrapper_saving_location = configuration['scrapper']['saving_location']
+        # Unpacking scrapper section
+        scrapper_config = configuration['scrapper']
+        scrapper_require, scrapper_reading_location, scrapper_saving, \
+        scrapper_method, scrapper_saving_location = (
+            scrapper_config[key] for key in [
+            'require', 'reading_location', 'saving', 'method', 'saving_location'
+        ]
+        )
 
-        prompt_maker_require = configuration['prompt_maker']['require']
-        prompt_maker_method = configuration['prompt_maker']['method']
-        prompt_maker_generation_function = configuration['prompt_maker']['generation_function']
-        prompt_maker_keyword_list = configuration['prompt_maker']['keyword_list']
-        prompt_maker_answer_check = configuration['prompt_maker']['answer_check']
-        prompt_maker_saving_location = configuration['prompt_maker']['saving_location']
-        prompt_maker_max_sample_number = configuration['prompt_maker']['max_benchmark_length']
+        # Unpacking prompt_maker section
+        prompt_maker_config = configuration['prompt_maker']
+        prompt_maker_require, prompt_maker_method, prompt_maker_generation_function, \
+        prompt_maker_keyword_list, prompt_maker_answer_check, prompt_maker_saving_location, \
+        prompt_maker_max_sample_number = (
+            prompt_maker_config[key] for key in [
+            'require', 'method', 'generation_function', 'keyword_list', 'answer_check',
+            'saving_location', 'max_benchmark_length'
+        ]
+        )
 
         # check the validity of the configuration
         assert keyword_finder_method in ['embedding_on_wiki', 'llm_inquiries',

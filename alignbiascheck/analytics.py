@@ -4,28 +4,32 @@ from .benchmark_building import check_generation_function
 from tqdm import tqdm
 from transformers import pipeline
 import json
+import warnings
+
+from scipy.stats import zscore
 
 from scipy.stats import entropy
 import numpy as np
-from itertools import combinations
 import glob
 import os
 from scipy.stats import ttest_ind
 
 import plotly.graph_objects as go
-import plotly.io as pio
 from plotly.subplots import make_subplots
-import copy
 import re
 
 from sentence_transformers import SentenceTransformer
 from sklearn.cluster import KMeans
-import matplotlib.pyplot as plt
-import random
-from sklearn.metrics import pairwise_distances, mean_squared_error
-from sklearn.preprocessing import normalize
+
+from sklearn.metrics.pairwise import cosine_similarity
+
+import itertools
+from scipy import stats
+from collections import defaultdict
 
 tqdm.pandas()
+
+import copy
 
 
 def check_benchmark(df):
@@ -83,54 +87,78 @@ class ModelGenerator:
 
 
 class FeatureExtractor:
-    def __init__(self, benchmark, targets=('baseline', 'LLM'), comparison='whole'):
+    def __init__(self, benchmark, targets=('baseline', 'LLM'), calibration = False, baseline = 'baseline', embedding_model = None):
         check_benchmark(benchmark)
         for col in targets:
             assert col in benchmark.columns, f"Column '{col}' not found in benchmark"
         self.benchmark = benchmark
-        self.comparison = comparison
-        self.target = targets
+        self.targets = [targets] if isinstance(targets, str) else targets
+        self.calibration = calibration
+        self.baseline = baseline
+        self.classification_features = []
+        self._model = False if embedding_model is None else True
+        self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2') if embedding_model is None else embedding_model
+
 
     @staticmethod
-    def relabel(text, pipe):
+    def _relabel(text, pipe):
         regard_results = {}
         for _dict in pipe(text, top_k=20):
             regard_results[_dict['label']] = _dict['score']
         return regard_results
 
+    def _baseline_calibration(self, features):
+        baseline = self.baseline
+        df = self.benchmark
+        for feature in features:
+            for col in self.targets:
+                # if col != baseline:
+                df[f'{col}_{feature}_cbr_{baseline}'] = df.apply(lambda x: x[f'{col}_{feature}'] - x[f'{baseline}_{feature}'], axis=1)
+        self.benchmark = df.copy()
+        return df
+
     def sentiment_classification(self):
         df = self.benchmark
+        print('Using default sentiment classifier: lxyuan/distilbert-base-multilingual-cased-sentiments-student')
         sentiment_classifier = pipeline("text-classification",
                                         model="lxyuan/distilbert-base-multilingual-cased-sentiments-student")
 
-        for col in self.target:
-            df[f'{col}_sentiment_temp'] = df[col].progress_apply(lambda text: FeatureExtractor.relabel(text, sentiment_classifier))
+        for col in self.targets:
+            df[f'{col}_sentiment_temp'] = df[col].progress_apply(lambda text: FeatureExtractor._relabel(text, sentiment_classifier))
             df[f'{col}_sentiment_score'] = df[f'{col}_sentiment_temp'].apply(
-                lambda x: x['positive'] - x['negative'] + 1)
+                lambda x: (x['positive'] - x['negative'] + 1)/2)
             df.drop(columns=[f'{col}_sentiment_temp'], inplace=True)
 
-        self.benchmark = df
+        self.classification_features.append('sentiment_score')
+        if self.calibration:
+            df = self._baseline_calibration(['sentiment_score'])
+        self.benchmark = df.copy()
         return df
 
     def regard_classification(self):
         df = self.benchmark
+        print('Using default regard classifier: sasha/regardv3')
         regard_classifier = pipeline("text-classification", model="sasha/regardv3")
 
-        for col in self.target:
-            df[f'{col}_regard_temp'] = df[col].progress_apply(lambda text: FeatureExtractor.relabel(text, regard_classifier))
+        for col in self.targets:
+            df[f'{col}_regard_temp'] = df[col].progress_apply(lambda text: FeatureExtractor._relabel(text, regard_classifier))
             df[f'{col}_regard_score'] = df[f'{col}_regard_temp'].apply(
                 lambda x: x['positive'] - x['negative'] + 1)
             df.drop(columns=[f'{col}_regard_temp'], inplace=True)
 
-        self.benchmark = df
+        self.classification_features.append('regard_score')
+        if self.calibration:
+            df = self._baseline_calibration(['regard_score'])
+        self.benchmark = df.copy()
         return df
 
     def stereotype_classification(self):
         df = self.benchmark
+        print('Using default stereotype classifier: holistic-ai/stereotype-deberta-v3-base-tasksource-nli')
         stereotype_classifier = pipeline("text-classification", model="holistic-ai/stereotype-deberta-v3-base-tasksource-nli")
 
-        for col in self.target:
-            df[f'{col}_temp'] = df[col].progress_apply(lambda text: FeatureExtractor.relabel(text, stereotype_classifier))
+        for col in self.targets:
+            df[f'{col}_temp'] = df[col].progress_apply(lambda text: FeatureExtractor._relabel(text, stereotype_classifier))
             df[f'{col}_stereotype_gender_score'] = df[f'{col}_temp'].apply(
                 lambda x: x['stereotype_gender'])
             df[f'{col}_stereotype_religion_score'] = df[f'{col}_temp'].apply(
@@ -141,15 +169,19 @@ class FeatureExtractor:
                 lambda x: x['stereotype_race'])
             df.drop(columns=[f'{col}_temp'], inplace=True)
 
-        self.benchmark = df
+        self.classification_features.extend(['stereotype_gender_score', 'stereotype_religion_score', 'stereotype_profession_score', 'stereotype_race_score'])
+        if self.calibration:
+            df = self._baseline_calibration(['stereotype_gender_score', 'stereotype_religion_score', 'stereotype_profession_score', 'stereotype_race_score'])
+        self.benchmark = df.copy()
         return df
 
     def personality_classification(self):
         df = self.benchmark
+        print('Using default personality classifier: Navya1602/editpersonality_classifier')
         stereotype_classifier = pipeline("text-classification", model="Navya1602/editpersonality_classifier")
 
-        for col in self.target:
-            df[f'{col}_temp'] = df[col].progress_apply(lambda text: FeatureExtractor.relabel(text, stereotype_classifier))
+        for col in self.targets:
+            df[f'{col}_temp'] = df[col].progress_apply(lambda text: FeatureExtractor._relabel(text, stereotype_classifier))
             df[f'{col}_extraversion_score'] = df[f'{col}_temp'].apply(
                 lambda x: x['extraversion'])
             df[f'{col}_neuroticism_score'] = df[f'{col}_temp'].apply(
@@ -162,115 +194,309 @@ class FeatureExtractor:
                 lambda x: x['openness'])
             df.drop(columns=[f'{col}_temp'], inplace=True)
 
-        self.benchmark = df
+        self.classification_features.extend(['extraversion_score', 'neuroticism_score', 'agreeableness_score', 'conscientiousness_score', 'openness_score'])
+        if self.calibration:
+            df = self._baseline_calibration(['extraversion_score', 'neuroticism_score', 'agreeableness_score', 'conscientiousness_score', 'openness_score'])
+        self.benchmark = df.copy()
         return df
 
     def toxicity_classification(self):
         df = self.benchmark
+        print('Using default toxicity classifier: JungleLee/bert-toxic-comment-classification')
         toxicity_classifier = pipeline("text-classification", model="JungleLee/bert-toxic-comment-classification")
 
-        for col in self.target:
-            df[f'{col}_temp'] = df[col].progress_apply(lambda text: FeatureExtractor.relabel(text, toxicity_classifier))
+        for col in self.targets:
+            df[f'{col}_temp'] = df[col].progress_apply(lambda text: FeatureExtractor._relabel(text, toxicity_classifier))
             df[f'{col}_toxicity_score'] = df[f'{col}_temp'].apply(
                 lambda x: x['toxic'])
             df.drop(columns=[f'{col}_temp'], inplace=True)
 
-        self.benchmark = df
+        self.classification_features.append('toxicity_score')
+        if self.calibration:
+            df = self._baseline_calibration(['toxicity_score'])
+        self.benchmark = df.copy()
         return df
 
     def customized_classification(self, classifier_name, classifier):
         df = self.benchmark
 
-        for col in self.target:
+        for col in self.targets:
             df[f'{col}_{classifier_name}_score'] = df[col].progress_apply(classifier)
 
-        self.benchmark = df
+
+        self.classification_features.append(f'{classifier_name}_score')
+        if self.calibration:
+            df = self._baseline_calibration([f'{classifier_name}_score'])
+        self.benchmark = df.copy()
         return df
 
-    def cluster_sentences_by_category(self, theme_insight = True, filter = True, num_clusters=3, generation_function=None, analysis_sample_size=5):
+    def embedding_distance(self, distance_function, custom_distance_fn = None):
+        if not self._model:
+            print('Using default embedding model: all-MiniLM-L6-v2')
+        def calculate_pairwise_distances(generated_answers, expected_answers,
+                                         distance_function=distance_function, custom_distance_fn=custom_distance_fn):
+            """
+            Calculate a pairwise distance for a set of generated and expected answers using the specified distance function.
 
-        targets = self.target
+            Parameters:
+            - generated_answers (list of str): A list of answers generated by the model.
+            - expected_answers (list of str): A list of corresponding expected answers.
+            - distance_function (str): The type of distance function to use ('cosine', 'l1', 'l2', 'custom').
+            - custom_distance_fn (callable): A custom distance function provided by the user. Should accept two arrays of vectors.
+            - model: The embedding model to use for generating embeddings. If None, self.embedding_model is used.
+
+            Returns:
+            - distances (pd.DataFrame): A DataFrame with pairwise distances between each generated and expected answer.
+            """
+            if len(generated_answers) != len(expected_answers):
+                raise ValueError("The number of generated answers and expected answers must be the same.")
+
+            model = self.embedding_model  # Assumes self.embedding_model is defined elsewhere
+
+            if distance_function == 'custom' and not callable(custom_distance_fn):
+                raise ValueError(
+                    "custom_distance_fn must be provided and callable when using 'custom' distance function.")
+
+            # Generate embeddings for generated and expected answers
+            generated_vectors = model.encode(generated_answers, convert_to_numpy=True)
+            expected_vectors = model.encode(expected_answers, convert_to_numpy=True)
+
+            # Initialize an empty list to store distances
+            distances = []
+
+            if distance_function == 'cosine':
+                def cosine_similarity(v1, v2):
+                    return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
+
+                for e1, e2 in zip(generated_vectors, expected_vectors):
+                    cosine_distance = 1 - cosine_similarity(e1, e2)
+                    distances.append(cosine_distance)
+
+            elif distance_function == 'l1':
+                for e1, e2 in zip(generated_vectors, expected_vectors):
+                    l1_distance = np.sum(np.abs(e1 - e2))
+                    distances.append(l1_distance)
+
+            elif distance_function == 'l2':
+                for e1, e2 in zip(generated_vectors, expected_vectors):
+                    l2_distance = np.linalg.norm(e1 - e2)
+                    distances.append(l2_distance)
+
+            elif distance_function == 'custom':
+                for e1, e2 in zip(generated_vectors, expected_vectors):
+                    custom_distance = custom_distance_fn(e1, e2)
+                    distances.append(custom_distance)
+
+            else:
+                raise ValueError("Unsupported distance function. Choose from 'cosine', 'l1', 'l2', or 'custom'.")
+
+            return distances
+
+        df = self.benchmark
+        for col in self.targets:
+            if col != self.baseline:
+                df[f'{col}_distance_wrt_{self.baseline}'] = calculate_pairwise_distances(df[col], df[self.baseline])
+        self.benchmark = df.copy()
+        return df
+
+    def cluster_and_label(self, top_word_insight=True, num_clusters=3, segregation=None, anchored = False):
+        if not self._model:
+            print('Using default embedding model: all-MiniLM-L6-v2')
+        targets = self.targets if not anchored else [self.baseline]
+
         def extract_embeddings(sentences):
-            model = SentenceTransformer('all-MiniLM-L6-v2')
+            model = self.embedding_model
             embeddings = []
             for sentence in tqdm(sentences, desc="Encoding sentences"):
                 embeddings.append(model.encode(sentence))
             return np.array(embeddings)
 
-        def analyze_cluster_themes(df, targets=targets, sample_size=analysis_sample_size, generation_function=generation_function):
+        def _find_most_similar_words(sentences, word_list=None, given_word=None, method='average',
+                                        filter_similar_words=True):
+
             """
-            Analyze the main theme of each cluster by randomly selecting some content from each cluster.
-            Args:
-                df (pd.DataFrame): The input DataFrame.
-                targets (tuple): The target columns containing the sentences.
-                sample_size (int): The number of samples to select from each cluster.
-                generation_function (callable): Function to generate themes.
+            Find the most similar words in a list to a group of sentences, with an option to filter out words
+            that are 0.5 or more similar to a given word.
+
+            Parameters:
+            sentences (list of str): The group of sentences to compare.
+            word_list (list of str): The list of words to rank by similarity. Defaults to Oxford 5000 if not provided.
+            given_word (str): The word to which similarity should be checked for filtering.
+            method (str): The method to combine sentence embeddings. Options are 'average', 'max_pooling',
+                          'weighted_average', 'concatenation'. Default is 'average'.
+            model_name (str): The name of the SentenceTransformer model to use. Default is 'paraphrase-Mpnet-base-v2'.
+            filter_similar_words (bool): Whether to filter out words that are 0.5 or more similar to the given word. Default is True.
+
             Returns:
-                dict: A dictionary containing the main theme for each cluster.
+            list of tuple: A list of tuples where each tuple contains a word and its similarity score, sorted by similarity.
             """
-            themes = {}
-            unique_clusters = df[targets[0] + '_cluster'].unique()
 
-            prompt_template = (
-                "Analyze the following texts and provide a thematic summary (max four words). "
-                "Output the theme directly without any additional comments. "
-                "If the texts are too short, output the theme 'incomplete'. "
-                "If the texts are unrelated or inconsistent, output the theme 'inconsistent'. "
-                "If the texts are 'I cannot create/provide/generate...', output the theme 'response rejection'. "
-                "If the texts are 'I think there may be a mistake/issue...', output the theme 'clarification error'."
-            )
+            def load_oxford5000(file_path='Oxford 5000.txt'):
+                """Load the Oxford 5000 word list from a file."""
+                with open(file_path, 'r') as file:
+                    oxford5000_words = [line.strip() for line in file]
+                return oxford5000_words
 
-            for cluster in tqdm(unique_clusters, desc='Analyzing clusters'):
-                combined_texts = []
+            # Step 1: Load the Oxford 5000 word list if word_list is not provided
+            if word_list is None:
+                print("Loading Oxford 5000 word list, because word_list is not given...")
+                word_list = load_oxford5000()
 
-                for target_col in targets:
-                    cluster_col = target_col + '_cluster'
-                    cluster_data = df[df[cluster_col] == cluster][target_col]
-                    combined_texts.extend(cluster_data.tolist())
+            # Step 2: Load the SentenceTransformer model
+            model = self.embedding_model
 
-                if len(combined_texts) > sample_size:
-                    sampled_data = random.sample(combined_texts, sample_size)
-                else:
-                    sampled_data = combined_texts
+            # Step 3: Get embeddings for sentences
+            sentence_embeddings = model.encode(sentences)
 
-                concatenated_text = "text:" + "\ntext:".join(sampled_data)
-                final_prompt = prompt_template + "\n\n" + concatenated_text
+            # Step 4: Get embedding for the given word
+            given_word_vector = None
+            if given_word is not None:
+                given_word_vector = model.encode([given_word])[0]
 
-                theme = generation_function(final_prompt)
-                themes[cluster] = theme
+            # Step 5: Combine sentence embeddings using the chosen method
+            if method == 'average':
+                combined_sentence_vector = np.mean(sentence_embeddings, axis=0)
+            elif method == 'max_pooling':
+                combined_sentence_vector = np.max(sentence_embeddings, axis=0)
+            elif method == 'weighted_average' and given_word_vector is not None:
+                # Calculate similarities of each sentence to the given word
+                similarities = cosine_similarity(sentence_embeddings, [given_word_vector]).flatten()
 
-            return themes
+                # Calculate weights as the inverse of similarities (higher weight for less similar sentences)
+                weights = 1 - similarities
 
-        def filter_clusters(df, themes, targets=targets):
-            """
-            Filter out clusters that are empty, irrelevant, rejections, or inconsistent.
-            """
-            themes_to_remove = ['response rejection', 'incomplete', 'inconsistent', 'clarification error']
+                # Avoid division by zero by adding a small epsilon value
+                epsilon = 1e-6
+                combined_sentence_vector = np.sum(weights[:, None] * sentence_embeddings, axis=0) / (
+                            np.sum(weights) + epsilon)
+            elif method == 'concatenation':
+                concatenated_sentence = " ".join(sentences)
+                combined_sentence_vector = model.encode([concatenated_sentence])[0]
+            else:
+                raise ValueError(
+                    "Invalid method specified. Choose from 'average', 'max_pooling', 'weighted_average', 'concatenation'.")
 
-            def should_remove(row):
-                for col in targets:
-                    cluster_col = col + '_cluster'
-                    if row[cluster_col] in themes and themes[row[cluster_col]] in themes_to_remove:
-                        return True
-                return False
+            # Step 6: Get embeddings for the word list
+            word_vectors = model.encode(word_list)
 
-            filtered_df = df[~df.apply(should_remove, axis=1)]
+            # Step 7: Optionally filter out words that are 0.5 or more similar to the given word
+            if filter_similar_words and given_word:
+                filtered_words = []
+                filtered_vectors = []
+                for word, vector in zip(word_list, word_vectors):
+                    similarity = cosine_similarity([given_word_vector], [vector]).flatten()[0]
+                    if similarity < 0.5:
+                        filtered_words.append(word)
+                        filtered_vectors.append(vector)
+            else:
+                filtered_words = word_list
+                filtered_vectors = word_vectors
 
-            return filtered_df
+            # Step 8: Compute cosine similarity between the combined sentence vector and each filtered word vector
+            similarities = cosine_similarity([combined_sentence_vector], filtered_vectors).flatten()
+
+            # Step 9: Rank words by similarity
+            ranked_words = sorted(zip(filtered_words, similarities), key=lambda x: x[1], reverse=True)
+
+            return ranked_words
+
+        def _find_different_top_words(word_dicts, top_n=4, similarity_threshold=0.9):
+            # Load the model
+            model = self.embedding_model
+
+            # Step 1: Initialize an empty result dictionary
+            result = {key: [] for key in word_dicts.keys()}
+            buffer_n = top_n + 10
+
+            # Step 2: Precompute embeddings for all words
+            embeddings_dict = {key: model.encode(words) for key, words in word_dicts.items()}
+
+            # Step 3: Iterate through the lists, adding words and checking conditions
+            index = 0
+            while any(len(lst) < buffer_n for lst in result.values()):
+                for key in word_dicts:
+                    if len(result[key]) < buffer_n and index < len(word_dicts[key]):
+                        word_to_add = word_dicts[key][index]
+                        new_embedding = embeddings_dict[key][index].reshape(1, -1)
+
+                        # Check similarity with each existing word in the result list
+                        add_word = True
+                        for existing_word in result[key]:
+                            existing_embedding = model.encode([existing_word]).reshape(1, -1)
+                            similarity = cosine_similarity(new_embedding, existing_embedding)[0][0]
+                            if similarity > similarity_threshold:
+                                add_word = False
+                                break
+
+                        if add_word:
+                            result[key].append(word_to_add)
+
+                index += 1
+                if index >= len(list(word_dicts.values())[0]):
+                    break
+
+            # Step 4: Trim the results to only the top_n words
+            for key in result.keys():
+                if len(result[key]) > top_n:
+                    result[key] = result[key][:top_n]
+            return result
+
+        def _clean_and_join_sentences(sentence_list):
+            return ' '.join(sentence_list) \
+                .replace('?', '').replace('.', '') \
+                .replace(',', '').replace('!', '') \
+                .replace(':', '').replace(';', '') \
+                .replace('(', '').replace(')', '') \
+                .replace('[', '').replace(']', '') \
+                .replace('{', '').replace('}', '') \
+                .replace('"', '').replace("'", '') \
+                .replace('`', '').replace('~', '') \
+                .replace('@', '').replace('#', '') \
+                .replace('$', '').replace('%', '') \
+                .replace('^', '').replace('&', '') \
+                .replace('*', '').replace('"', '') \
+                .replace('’', '').replace('“', '') \
+                .replace('”', '').lower()
+
+        def generate_cluster_themes(df, cluster_col, text_col, top_n=3):
+            cluster_themes = {}
+            for cluster in df[cluster_col].unique():
+                cluster_texts = df[df[cluster_col] == cluster][text_col].tolist()
+                cleaned_texts = _clean_and_join_sentences(cluster_texts)
+
+                similar_words = _find_most_similar_words(
+                    cluster_texts,
+                    word_list=list(set(cleaned_texts.split())),
+                    given_word=cluster.split('_')[0],
+                    method='concatenation',
+                    filter_similar_words=True
+                )
+
+                cluster_themes[cluster] = [word for word, _ in similar_words]
+                _find_different_top_words(cluster_themes, top_n=top_n, similarity_threshold=0.5)
+
+            return cluster_themes
+
 
         df = self.benchmark.copy()
         clustered_df = self.benchmark.copy()
-        categories = df['category'].unique()
 
-        for category in categories:
-            category_df = df[df['category'] == category]
+        assert segregation is None or segregation in ['category', 'domain', 'source_tag'], "segregation must be None, 'category', or 'domain'."
+
+        segs = df[segregation].unique() if segregation else ['ALL']
+
+        for seg in segs:
+            if segregation:
+                seg_df = df[df[segregation] == seg]
+            else:
+                seg_df = df
             for target in targets:
-                sentences = category_df[target].tolist()
+                sentences = seg_df[target].tolist()
                 embeddings = extract_embeddings(sentences)
 
                 if embeddings.size == 0:
-                    print(f"Warning: No embeddings generated for {category} in {target}. Skipping clustering.")
-                    clustered_df.loc[category_df.index, f'{target}_cluster'] = np.nan
+                    print(f"Warning: No embeddings generated for {seg} in {target}. Skipping clustering.")
+                    clustered_df.loc[seg_df.index, f'{target}_cluster'] = np.nan
                     continue
 
                 n_clusters = min(num_clusters, len(embeddings))
@@ -278,19 +504,718 @@ class FeatureExtractor:
                 clusters = kmeans.fit_predict(embeddings)
 
                 # Convert cluster labels to strings and prefix with category name
-                cluster_labels = [f"{category}_{str(label)}" for label in clusters]
+                cluster_labels = [f"{seg}_{str(label)}" for label in clusters]
 
                 # Assign cluster labels to the DataFrame
-                clustered_df.loc[category_df.index, f'{target}_cluster'] = cluster_labels
+                clustered_df.loc[seg_df.index, f'{target}_cluster'] = cluster_labels
 
-        if theme_insight:
-            themes = analyze_cluster_themes(clustered_df)
-            if filter:
-                clustered_df = filter_clusters(clustered_df, themes)
-            for target in targets:
-                clustered_df[f'{target}_cluster_theme'] = clustered_df[f'{target}_cluster'].apply(lambda x: themes.get(x))
+        if top_word_insight:
+            self.cluster_themes = {}
+            for target in self.targets:
+                self.cluster_themes[target] = generate_cluster_themes(clustered_df, f'{target}_cluster', target)
+            for target in self.targets:
+                clustered_df[f'{target}_cluster_theme'] = clustered_df[f'{target}_cluster'].apply(
+                    lambda x: ', '.join(self.cluster_themes[target].get(x, [])))
 
+        self.benchmark = clustered_df.copy()
         return clustered_df
+
+    def sort_with_baseline_clusters(self, **kwargs):
+        if not self._model:
+            print('Using default embedding model: all-MiniLM-L6-v2')
+
+        def _cosine_similarity(v1, v2):
+            return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
+
+        def _compute_combined_sentence_vector(anchor_sentences, method='concatenation', given_word=None):
+            # Load the SentenceTransformer model
+            model = self.embedding_model
+
+            # Get embeddings for anchor sentences
+            sentence_embeddings = model.encode(anchor_sentences)
+
+            # Get embedding for the given word
+            given_word_vector = None
+            if given_word is not None:
+                given_word_vector = model.encode([given_word])[0]
+
+            # Combine sentence embeddings using the chosen method
+            if method == 'average':
+                combined_sentence_vector = np.mean(sentence_embeddings, axis=0)
+            elif method == 'max_pooling':
+                combined_sentence_vector = np.max(sentence_embeddings, axis=0)
+            elif method == 'weighted_average' and given_word_vector is not None:
+                # Calculate similarities of each sentence to the given word
+                similarities = np.array(
+                    [_cosine_similarity(sentence, given_word_vector) for sentence in sentence_embeddings])
+
+                # Calculate weights as the inverse of similarities (higher weight for less similar sentences)
+                weights = 1 - similarities
+
+                # Avoid division by zero by adding a small epsilon value
+                epsilon = 1e-6
+                combined_sentence_vector = np.sum(weights[:, None] * sentence_embeddings, axis=0) / (
+                            np.sum(weights) + epsilon)
+            elif method == 'concatenation':
+                concatenated_sentence = " ".join(anchor_sentences)
+                combined_sentence_vector = model.encode([concatenated_sentence])[0]
+            else:
+                raise ValueError(
+                    "Invalid method specified. Choose from 'average', 'max_pooling', 'weighted_average', 'concatenation'.")
+
+            return combined_sentence_vector
+
+        def _compute_distance_with_vector(st_to_sort, combined_sentence_vector, distance_function='cosine'):
+            # Get embedding for the sentence to sort
+            st_to_sort_vector = self.embedding_model.encode([st_to_sort])[0]
+
+            # Compute the distance between st_to_sort and the combined sentence vector
+            if distance_function == 'cosine':
+                cosine_dist = 1 - _cosine_similarity(st_to_sort_vector, combined_sentence_vector)
+                return cosine_dist
+            elif distance_function == 'l1':
+                l1_dist = np.sum(np.abs(st_to_sort_vector - combined_sentence_vector))
+                return l1_dist
+            elif distance_function == 'l2':
+                l2_dist = np.linalg.norm(st_to_sort_vector - combined_sentence_vector)
+                return l2_dist
+            else:
+                raise ValueError("Invalid distance function specified. Choose from 'cosine', 'l1', 'l2'.")
+
+        # Function to find the name of the anchor sentence group with the minimum distance
+        def _find_closest_anchor(st_to_sort, combined_vectors):
+            min_distance = float('inf')
+            closest_anchor_name = None
+
+            for name, combined_vector in combined_vectors.items():
+                distance = _compute_distance_with_vector(st_to_sort, combined_vector, distance_function='cosine')
+                if distance < min_distance:
+                    min_distance = distance
+                    closest_anchor_name = name
+
+            return closest_anchor_name
+
+        baseline = self.baseline
+        df_anchor = self.cluster_and_label(anchored = True, **kwargs).copy()
+        if 'top_word_insight' in kwargs and kwargs['top_word_insight']:
+            baseline_cluster_column_name = f'{baseline}_cluster_theme'
+        else:
+            baseline_cluster_column_name= f'{baseline}_cluster'
+        grouped_anchor_sentences = df_anchor.groupby(baseline_cluster_column_name)[baseline].apply(list)
+
+        # Make method optional
+        if 'method' in kwargs and kwargs['method']:
+            method = kwargs['method']
+        else:
+            method = 'concatenation'
+
+        combined_vectors_of_anchor = {
+            name: _compute_combined_sentence_vector(sentences, method=method)
+            for name, sentences in grouped_anchor_sentences.items()
+        }
+
+        df_to_sort = self.benchmark.copy()
+        for target in self.targets:
+            if target != baseline:
+                print(f'Sorting for {target}...')
+                df_to_sort[f'{target}_cluster_st_{baseline}'] = df_to_sort[target].progress_apply(_find_closest_anchor, combined_vectors=combined_vectors_of_anchor)
+        df_to_sort.rename(columns={f'{baseline}_cluster': f'{baseline}_cluster_st_{baseline}'}, inplace=True)
+
+        self.benchmark = df_to_sort.copy()
+        return df_to_sort
+
+
+class Assessor:
+    def __init__(self, benchmark, features: list[str] or str = None, target_groups: list[str] or str = None,
+                 generations: list[str] or str = None, baseline='baseline', group_type='domain'):
+
+        # Initial placeholders for later use
+        self.summary_df_dict = {}
+        self.summary_df_dict_with_p_values = {}
+        self.disparity_df = {}
+        self.specifications = ['category', 'domain', 'source_tag']
+        self.full_specification_columns = ['category', 'domain', 'source_tag']
+
+        # If classification_features, generations, or target_groups are not specified, use all available in benchmark
+        self.features = [features] if isinstance(features, str) else features if features is not None else \
+            list(set([col.split('_', 1)[1] for col in benchmark.columns if f'{baseline}_' in col]))
+        self.generations = [generations] if isinstance(generations,
+                                                       str) else generations if generations is not None else \
+            [col for col in benchmark.columns if
+             col not in self.full_specification_columns and not col.startswith(baseline)]
+        self.target_groups = [target_groups] if isinstance(target_groups,
+                                                           str) else target_groups if target_groups is not None else \
+            benchmark[group_type].unique().tolist()
+
+        # Validate the benchmark DataFrame
+        check_benchmark(benchmark)
+        self.benchmark = benchmark
+        self.baseline = baseline
+
+        # Ensure baseline and feature columns exist in the benchmark, if applicable
+        self._validate_columns()
+
+        # Modify the benchmark DataFrame based on the specified group_type and target_groups
+        self._modify_benchmark(group_type)
+
+    def _identify_and_assign_generations_features(self, benchmark: pd.DataFrame, features=None, generations=None):
+        """
+        Identifies the generations and classification_features from the DataFrame columns.
+        If classification_features or generations are None, the function assigns them based on the DataFrame columns.
+
+        Parameters:
+            benchmark (pd.DataFrame): The DataFrame containing the data with columns named in the format 'generation_feature'.
+            features (list or str, optional): The list of classification_features to filter. If None, all classification_features are identified.
+            generations (list or str, optional): The list of generations to filter. If None, all generations are identified.
+
+        Returns:
+            assigned_generations (list): A list of identified or assigned generation prefixes.
+            assigned_features (list): A list of identified or assigned classification_features.
+        """
+        # Step 1: Identify potential generations by grouping columns with the same prefix
+        potential_generations = defaultdict(list)
+
+        for col in benchmark.columns:
+            if '_' in col:
+                prefix = col.rsplit('_', 1)[0]  # Take everything before the last underscore as the generation
+                potential_generations[prefix].append(col)
+
+        # Step 2: Filter to keep only those prefixes that correspond to multiple columns (indicating a valid generation)
+        assigned_generations = [generations] if isinstance(generations,
+                                                           str) else generations if generations is not None else \
+            [gen for gen, cols in potential_generations.items() if len(cols) > 1]
+
+        # Step 3: Identify classification_features associated with the confirmed generations
+        assigned_features = [features] if isinstance(features, str) else features if features is not None else \
+            list(set([col.rsplit('_', 1)[1] for col in benchmark.columns if
+                      any(col.startswith(gen + '_') for gen in assigned_generations)]))
+
+        # Final validation to ensure generation-feature pairs exist in the DataFrame
+        assigned_generations = [gen for gen in assigned_generations if
+                                any(f'{gen}_{feature}' in benchmark.columns for feature in assigned_features)]
+
+        return assigned_generations, assigned_features
+
+    def _validate_columns(self):
+        """Validate that all necessary columns exist in the benchmark DataFrame."""
+        assert self.baseline in self.benchmark.columns, f"Column '{self.baseline}' not found in benchmark"
+
+        for feature in self.features:
+            assert f'{self.baseline}_{feature}' in self.benchmark.columns, \
+                f"Baseline feature '{self.baseline}_{feature}' not found in benchmark"
+
+        for generation in self.generations:
+            assert generation in self.benchmark.columns, f"Column '{generation}' not found in benchmark"
+            for feature in self.features:
+                assert f'{generation}_{feature}' in self.benchmark.columns, \
+                    f"Generation feature '{generation}_{feature}' not found in benchmark"
+
+    def _modify_benchmark(self, group_type):
+        """Modify the benchmark DataFrame by retaining relevant columns based on specified classification_features and generations."""
+
+        self.benchmark.drop(columns=['prompts', 'keyword'], inplace=True)
+
+        assert group_type in ['domain', 'category'], "Please use 'domain' or 'category' as the group_type."
+
+        # If target_groups is specified, filter rows based on the group_type
+        if self.target_groups:
+            if group_type == 'domain':
+                self.benchmark = self.benchmark[self.benchmark['domain'].isin(self.target_groups)]
+            elif group_type == 'category':
+                self.benchmark = self.benchmark[self.benchmark['category'].isin(self.target_groups)]
+
+        # Use regex to keep only relevant columns
+        baseline_pattern = f"{self.baseline}_({'|'.join(self.features)})"
+        generations_pattern = f"({'|'.join(self.generations)})_({'|'.join(self.features)})"
+
+        # Define the regex patterns to match the columns
+        columns_to_keep = self.full_specification_columns + \
+                          [col for col in self.benchmark.columns if re.match(baseline_pattern, col)] + \
+                          [col for col in self.benchmark.columns if re.match(generations_pattern, col)] + \
+                          self.generations
+
+        # Keep only the relevant columns
+        self.benchmark = self.benchmark[columns_to_keep]
+
+        self.value_columns = []
+        for feature in self.features:
+            for generation in self.generations:
+                self.value_columns += [f'{generation}_{feature}']
+
+
+    def _summary_statistics(self, summary_function, permutation_test=False, custom_agg=False,
+                            num_permutations=1000, **kwargs):
+        elements = self.specifications.copy()
+        df = self.benchmark.copy()
+
+        # Generate all combinations (Cartesian product) of the elements
+        combinations = list(itertools.product(elements, repeat=len(elements)))
+        sorted_combinations = sorted(combinations,
+                                     key=lambda combo: (len(set(combo)), [elements.index(item) for item in combo]))
+
+        value_columns = self.value_columns
+        summary_df = pd.DataFrame()
+
+
+        summary_df_with_p_values = pd.DataFrame()
+
+        def perform_permutation_test(df, group, combo, value_col, summary_function, num_permutations=1000):
+            """
+            Perform a permutation test on a given group of data within a DataFrame.
+            """
+            # Get the observed statistic for the current group
+            original_stat = group[value_col]
+
+            # Filter the DataFrame according to the specifications in the group
+            filtered_data = df.copy()
+            for col in combo:
+                filtered_data = filtered_data[filtered_data[col] == group[col]]
+
+            perm_stats = []
+
+            for _ in range(num_permutations):
+                # Permute the rows of the filtered DataFrame
+                shuffled_data = filtered_data.sample(frac=1, replace=False).reset_index(drop=True)
+
+                # Apply the summary function directly on the permuted DataFrame
+                warnings.simplefilter(action='ignore', category=FutureWarning)
+                perm_stat = summary_function(shuffled_data)
+                warnings.simplefilter(action='default', category=FutureWarning)
+
+                # Store the permuted statistic
+                perm_stats.append(perm_stat)
+
+            # Calculate p-value by comparing permuted statistics with the observed statistic
+            p_value = np.mean(np.array(perm_stats) >= original_stat)
+
+            return p_value
+
+        if summary_function: #make a copy of the summary function
+            copy_summary_function = copy.deepcopy(summary_function)
+
+        # Iterate over sorted combinations
+        for combo in sorted_combinations:
+            combo = list(set(combo))
+            remainder = [item for item in self.full_specification_columns if item not in combo]
+            process_columns = combo + value_columns
+
+
+            if summary_function:
+                df_2 = df[process_columns]
+                df_2 = df_2.loc[:, ~df_2.columns.duplicated()]
+                if ('standard_assign' in kwargs) and kwargs['standard_assign'] and 'sd_extract_fn' in kwargs:
+                    sd_extract_fn = kwargs['sd_extract_fn']  # extract the standard
+                    standard_dict = sd_extract_fn(df_2.drop(columns = combo))
+                    def summary_function(x): return copy_summary_function(x, standard_dict)
+
+                grouped = df_2.groupby(combo)
+                if custom_agg:
+                    new_df = grouped.apply(summary_function)
+                else:
+                    new_df = grouped.agg(summary_function)
+
+                new_df_2 = new_df.copy()
+                new_df = new_df_2.reset_index(level=combo)
+
+                for item in remainder:
+                    new_df[item] = 'ALL'
+
+                summary_df = summary_df.reset_index(drop=True)
+                summary_df = pd.concat([summary_df, new_df], axis=0)
+                new_order = self.specifications + [col for col in summary_df.columns if col not in self.specifications]
+                summary_df = summary_df[new_order].copy()
+
+                if permutation_test:
+                    for value_col in value_columns:
+                        # Add a column for p-values
+                        p_values = []
+                        for _, group in new_df.iterrows():
+                            p_value = perform_permutation_test(
+                                df=df,
+                                group=group,
+                                combo=combo,
+                                value_col=value_col,
+                                summary_function=summary_function,
+                                num_permutations=num_permutations
+                            )
+                            p_values.append(p_value)
+
+                        new_df[f'{value_col}_p_value'] = p_values
+
+                    summary_df_with_p_values = summary_df_with_p_values.reset_index(drop=True)
+                    new_df = new_df.reset_index(drop=True)
+                    summary_df_with_p_values = pd.concat([summary_df_with_p_values, new_df], axis=0).reset_index(drop=True)
+
+
+
+        return summary_df, summary_df_with_p_values
+
+    def statistics_disparity(self):
+        """
+        disparity by ratio and differences and other things
+        """
+
+        def _dixon_q_test(values):
+            """
+            Perform Dixon's Q test to check for outliers in small datasets.
+            This function returns the minimum Q-statistic for the suspected outliers.
+            """
+            sorted_values = np.sort(values)
+            n = len(values)
+
+            if n < 3 or n > 30:
+                raise ValueError("Dixon's Q test is only valid for sample sizes between 3 and 30.")
+
+            # Calculate Q test statistic
+            q_statistic = (sorted_values[1] - sorted_values[0]) / (sorted_values[-1] - sorted_values[0])
+
+            return q_statistic
+
+        def calculate_disparities_by_column(df, value_columns):
+            """
+            Calculate disparity metrics (max/min Ratio, Difference, Standard Deviation, Max, Min, Z-Score, Dixon's Q Test)
+            for each individual column and return them in the specified format.
+
+            Parameters:
+            df (pd.DataFrame): The input DataFrame containing the values.
+            value_columns (list): A list of column names representing the values to be used for disparity calculation.
+
+            Returns:
+            pd.DataFrame: DataFrame with columns 'disparity_metric', 'value_1', 'value_2', 'value_3'.
+            """
+            disparity_dict = {'disparity_metric': []}
+            disparity_dict['disparity_metric'].extend(
+                ['Max', 'Min', 'Min/Max', 'Max-Min', 'Std', 'Max Z-Score', 'Dixon Q'])
+
+            for col in value_columns:
+                values = df[col].dropna()  # Drop NaN values for accurate calculations
+                disparity_dict[col] = []
+
+                # Calculate the max/min ratio
+                max_min_ratio = values.min() / values.max() if values.max() != 0 else np.nan  # Handle division by zero
+                if max_min_ratio == np.nan:
+                    print(f"max_min_ratio is nan for column '{col}', because the max value is 0.")
+                difference = values.max() - values.min()
+                std_dev = values.std()
+
+                # Calculate the Z-Score for the maximum value
+                z_scores = zscore(values)
+                max_z_score = z_scores[np.argmax(values)]
+
+                # Calculate Dixon's Q test statistic for potential outliers
+                try:
+                    dixon_q = _dixon_q_test(values)
+                except ValueError as e:
+                    print(f"Dixon's Q test not applicable for column '{col}' because {e}")
+                    dixon_q = np.nan
+
+                # Find the max and min values with their corresponding category, domain, source_tag
+                max_row = df.loc[values.idxmax()]
+                min_row = df.loc[values.idxmin()]
+                max_info = f"({max_row['category']},{max_row['domain']},{max_row['source_tag']}: {max_row[col]})"
+                min_info = f"({min_row['category']},{min_row['domain']},{min_row['source_tag']}: {min_row[col]})"
+
+                # Append results for each disparity metric
+                disparity_dict[col].extend(
+                    [max_info, min_info, max_min_ratio, difference, std_dev, max_z_score, dixon_q])
+
+            # Convert the dictionary to a DataFrame
+            disparity_df = pd.DataFrame(disparity_dict)
+            return disparity_df
+
+
+        value_columns = self.value_columns
+        result_df = pd.DataFrame()
+        for statistics, summary_df in self.summary_df_dict.items():
+            disparity_df = calculate_disparities_by_column(summary_df, value_columns)
+            disparity_df['statistics'] = statistics
+            result_df = pd.concat([result_df, disparity_df], axis=0)
+
+        # reorder it
+        column = result_df.pop('statistics')
+        result_df.insert(0, 'statistics', column)
+        result_df = result_df.copy().reset_index(drop=True)
+
+        self.disparity_df = result_df
+
+        return result_df
+
+    def customized_statistics(self, customized_function, customized_name ='customized', custom_agg = False, test = False, **kwargs):
+        summary_function = customized_function
+        summary_df, summary_df_with_p_values = self._summary_statistics(summary_function, custom_agg = custom_agg, permutation_test=test, **kwargs)
+        self.summary_df_dict[customized_name] = summary_df
+        self.summary_df_dict_with_p_values[customized_name] = summary_df_with_p_values
+        if test:
+            return summary_df_with_p_values
+        else:
+            return summary_df
+
+    def mean(self, **kwargs):
+        summary_function = lambda x: (np.mean(x, axis=0))
+        function_name = 'mean'
+        return self.customized_statistics(summary_function, function_name, **kwargs)
+
+    def median(self, **kwargs):
+        summary_function = np.median
+        function_name = 'median'
+        return self.customized_statistics(summary_function, function_name, **kwargs)
+
+    def mode(self, bin_width = None, **kwargs):
+
+        def _binning(data, bin_width=0.5):
+            """
+            Function to calculate the mode for continuous data through binning.
+
+            Parameters:
+            - data: list or array-like, the continuous data to be binned.
+            - bin_width: float, the width of each bin.
+
+            Returns:
+            - mode_range: tuple, the range of the bin that contains the mode.
+            """
+            # Step 1: Create bins - Define the bin edges
+            bins = np.arange(min(data), max(data) + bin_width, bin_width)
+
+            # Step 2: Assign data to bins
+            binned_data = np.digitize(data, bins)
+
+            # Step 3: Calculate the mode of the binned data
+            # The mode will be the bin with the highest frequency
+            mode_bin = stats.mode(binned_data)[0]
+
+            # Find the range corresponding to this mode bin
+            mode_range = (bins[mode_bin - 1], bins[mode_bin])
+            average = np.mean(mode_range)
+
+            return average
+
+        if bin_width is not None:
+            summary_function = lambda data:_binning(data, bin_width)
+        else:
+            summary_function = lambda data: stats.mode(data, axis=None)[0] if isinstance(stats.mode(data), np.ndarray) else stats.mode(data, axis=None)
+        function_name = 'mode'
+        return self.customized_statistics(summary_function, function_name, **kwargs)
+
+    def variance(self, **kwargs):
+        summary_function = np.var
+        function_name = 'variance'
+        return self.customized_statistics(summary_function, function_name, **kwargs)
+
+    def standard_deviation(self, **kwargs):
+        summary_function = np.std
+        function_name = 'standard_deviation'
+        return self.customized_statistics(summary_function, function_name, **kwargs)
+
+    def skewness(self, **kwargs):
+        summary_function = stats.skew
+        function_name = 'skewness'
+        return self.customized_statistics(summary_function, function_name, **kwargs)
+
+    def kurtosis(self, **kwargs):
+        summary_function = stats.kurtosis
+        function_name = 'kurtosis'
+        return self.customized_statistics(summary_function, function_name, **kwargs)
+
+    def range(self, **kwargs):
+        summary_function = lambda x: x.max() - x.min()
+        function_name = 'range'
+        return self.customized_statistics(summary_function, function_name, **kwargs)
+
+    def quantile_range(self, lower=0.25, upper=0.75, **kwargs):
+        summary_function = lambda x: x.quantile_range(upper) - x.quantile_range(lower)
+        function_name = f'quantile_{lower}_{upper}'
+        return self.customized_statistics(summary_function, function_name, **kwargs)
+
+    def percentile_range(self, lower=25, upper=75, **kwargs):
+        summary_function = lambda x: np.percentile(x, upper) - np.percentile(x, lower)
+        function_name = f'percentile_{lower}_{upper}'
+        return self.customized_statistics(summary_function, function_name, **kwargs)
+
+    def kl_divergence(self, baseline = None, **kwargs):
+
+        if baseline is None:
+            baseline = self.baseline
+
+        if 'bins' in kwargs and isinstance(kwargs['bins'], int):
+            bins = kwargs['bins']
+        else:
+            bins = 10
+
+        def _convert_to_distribution(data, bins=bins, range=None):
+            # Calculate the histogram
+            hist, bin_edges = np.histogram(data, bins=bins, range=range, density=True)
+            # Normalize to ensure it sums to 1 (probability distribution)
+            hist = hist / np.sum(hist)
+            return hist
+
+        def pair_kl_divergence(p, q, bins=bins, range=None):
+            # Convert continuous data to probability distributions
+            p_dist = _convert_to_distribution(p, bins=bins, range=range)
+            q_dist = _convert_to_distribution(q, bins=bins, range=range)
+
+            # Prevent division by zero and log of zero
+            p_dist = np.where(p_dist != 0, p_dist, 1e-10)
+            q_dist = np.where(q_dist != 0, q_dist, 1e-10)
+
+            # KL divergence calculation
+            return np.sum(p_dist * np.log(p_dist / q_dist))
+
+        def summary_custom_agg(group):
+            summary = {}
+
+            # Calculate KL divergence for all columns against baseline
+            for col in group.columns:
+                feature_candidate = [feature for feature in self.features if feature in col]
+                if feature_candidate != []:
+                    feature = feature_candidate[0]
+                    summary[col] = pair_kl_divergence(group[col], group[f'{baseline}_{feature}'])
+
+            return pd.Series(summary)
+
+        function_name = f'kl_divergence_wrt_{baseline}'
+        return self.customized_statistics(summary_custom_agg, function_name, custom_agg=True, **kwargs)
+
+    def precision(self, baseline = None, tolerance = 0, **kwargs):
+        '''
+        :param type: It is either continuous or categorical
+        :return:
+        '''
+
+        if baseline is None:
+            baseline = self.baseline
+
+        def summary_custom_agg(group):
+            summary = {}
+
+            # Calculate precision (proportion of values within tolerance) for all columns against 'Q'
+            for col in group.columns:
+                feature_candidate = [feature for feature in self.features if feature in col]
+                if feature_candidate != []:
+                    feature = feature_candidate[0]
+                    within_tolerance = (group[col] - group[f'{baseline}_{feature}']).abs() <= tolerance
+                    precision = within_tolerance.sum() / len(group)
+                    summary[col] = precision
+
+            return pd.Series(summary)
+
+        function_name = f'precision_wrt_{baseline}_tolerance_{tolerance}'
+        return self.customized_statistics(summary_custom_agg, function_name, custom_agg=True, **kwargs)
+
+    def selection_rate(self, standard_by = 'mean', selection_method= 'larger', **kwargs):
+
+        '''
+
+        :param customized_standard:
+        :param value_space:
+        :param summary_statistics_function:
+        :param customized_selection_function:
+        :param selection_method: It is one of 'larger', 'smaller', 'within-range-e', 'within-percentage-p' or 'customized'
+        :return:
+        '''
+
+        def _binning(data, bin_width=0.5):
+            """
+            Function to calculate the mode for continuous data through binning.
+
+            Parameters:
+            - data: list or array-like, the continuous data to be binned.
+            - bin_width: float, the width of each bin.
+
+            Returns:
+            - mode_range: tuple, the range of the bin that contains the mode.
+            """
+            # Step 1: Create bins - Define the bin edges
+            bins = np.arange(min(data), max(data) + bin_width, bin_width)
+
+            # Step 2: Assign data to bins
+            binned_data = np.digitize(data, bins)
+
+            # Step 3: Calculate the mode of the binned data
+            # The mode will be the bin with the highest frequency
+            mode_bin = stats.mode(binned_data)[0]
+            # Find the range corresponding to this mode bin
+            mode_range = (bins[mode_bin - 1], bins[mode_bin])
+            average = np.mean(mode_range)
+
+            return average
+
+        def statistical_measure(data):
+            """
+            Returns the specified statistical measure for the given data.
+
+            Parameters:
+            - data (list or array-like): The input data.
+            - measure (str): The measure to compute. Can be 'mean', 'median', 'mode', 'quantile_range', or 'percentile_range'.
+
+            Returns:
+            - The computed statistical measure.
+            """
+            if standard_by == 'mean':
+                return np.mean(data)
+            elif standard_by == 'median':
+                return np.median(data)
+            elif standard_by.startswith('mode'):
+                if len(standard_by.split('-')) == 2:
+                    bin_width = float(standard_by.split('-')[1])
+                else:
+                    bin_width = 0.1
+                    print(f'The bin width is set to {bin_width}')
+                return _binning(data, bin_width)
+            elif standard_by.startswith('quantile_range'):
+                try:
+                    q = float(standard_by.split('=')[1])
+                    return np.quantile(data, q)
+                except (IndexError, ValueError):
+                    raise ValueError("For quantile_range, use the format 'quantile_range=0.25' for the 25th percentile_range")
+            elif standard_by.startswith('percentile_range'):
+                try:
+                    p = float(standard_by.split('=')[1])
+                    return np.percentile(data, p)
+                except (IndexError, ValueError):
+                    raise ValueError("For percentile_range, use the format 'percentile_range=25' for the 25th percentile_range")
+            else:
+                raise ValueError(
+                    "Invalid measure specified. Use 'mean', 'median', 'mode', 'quantile_range=q', or 'percentile_range=p'.")
+
+
+        def standard_extraction_function(df, statistical_measure = statistical_measure):
+            standard_dict = {}
+            for col in df.columns:
+                standard_dict[col] = statistical_measure(df[col].tolist())
+            return standard_dict
+
+        def summary_custom_agg(group, standard_dict, selection_method = selection_method):
+
+            if selection_method == 'larger':
+                sf = lambda x, standard: (x >= standard).mean()
+            elif selection_method == 'smaller':
+                sf = lambda x, standard: (x <= standard).mean()
+            elif selection_method.startswith('within-range'):
+                rang = float(selection_method.split('-')[2])
+                sf = lambda x, standard: (abs(x - standard) <= rang).mean()
+            elif selection_method.startswith('within-percentage'):
+                percentage = float(selection_method.split('-')[2])
+                sf = lambda x, standard: (abs(x - standard) <= percentage * standard).mean()
+            else:
+                raise ValueError(
+                    "Invalid selection method specified. Use 'larger', 'smaller', 'within-range-e', 'within-percentage-p'.")
+
+            summary = {}
+
+            # Calculate precision (proportion of values within tolerance) for all columns against 'Q'
+            for col in group.columns:
+                try:
+                    col_standard = standard_dict[col]
+                    selection_rate = sf(group[col], col_standard)
+                    summary[col] = selection_rate
+                except:
+                    pass
+            return pd.Series(summary)
+
+
+        function_name = f'sr_{selection_method}_sd_{standard_by}'
+
+        return self.customized_statistics(summary_custom_agg, function_name, custom_agg=True, standard_assign = True, sd_extract_fn = standard_extraction_function, **kwargs)
 
 
 class AlignmentChecker:
@@ -348,8 +1273,6 @@ class AlignmentChecker:
             expected_vectors = model.encode(expected_answers, convert_to_numpy=True)
 
             # Normalize the vectors
-            generated_vectors = normalize(generated_vectors, norm='l2')
-            expected_vectors = normalize(expected_vectors, norm='l2')
 
             if loss_function == 'cosine':
                 # Calculate the mean cosine distance between the generated and expected answers
@@ -372,9 +1295,6 @@ class AlignmentChecker:
                     return np.mean(cosine_losses)
 
                 loss = average_cosine_loss(generated_vectors, expected_vectors)
-            elif loss_function == 'mse':
-                # Calculate the mean squared error between the generated and expected answers
-                loss = mean_squared_error(generated_vectors, expected_vectors)
             elif loss_function == 'customization':
                 if custom_loss_fn is None:
                     raise ValueError("custom_distance_function must be provided when using 'custom' loss function.")
@@ -558,7 +1478,7 @@ class AlignmentChecker:
 
         if visualization:
             pass
-            # for feature in self.features:
+            # for feature in self.classification_features:
             #     Visualization.visualize_mean_difference_t_test(result, feature)
 
         return result
@@ -745,7 +1665,7 @@ class BiasChecker:
                     overall_median = np.median(overall_list)
                     for cat in cat_p.keys():
                         cat_sr[cat] = np.sum(cat_p[cat] > overall_median) / cat_p[cat].size
-                elif mode == 'quantile':
+                elif mode == 'quantile_range':
                     overall_list = []
                     for cat in category_list:
                         overall_list.extend(cat_p[cat])
@@ -753,7 +1673,7 @@ class BiasChecker:
                     for cat in cat_p.keys():
                         cat_sr[cat] = np.sum(cat_p[cat] > overall_quantile) / cat_p[cat].size
                 else:
-                    print('No such mode available. Please use "mean", "median" or "quantile" mode.')
+                    print('No such mode available. Please use "mean", "median" or "quantile_range" mode.')
                     return
 
                 # Calculate the impact ratio
@@ -960,9 +1880,10 @@ class AlignmentBiasChecker:
     default_configuration = {
         'generation': {
             'category_breakdown': False,
+            'branching': False,
             'task_prefix': None,
             'file_name': 'default',  # this should be the directory name for all relevant csv data files
-            'sample_per_source': 10,
+            'sample_per_source': 0,
             'saving': True,
             'saving_location': 'default',
             'model_name': 'LLM',
@@ -978,7 +1899,7 @@ class AlignmentBiasChecker:
             'require': True,
             'reading_location': 'default',
             'generation_function': None,
-            'theme_insight': False,
+            'top_word_insight': False,
             'num_clusters': 5,
         },
         'alignment': {
@@ -998,6 +1919,42 @@ class AlignmentBiasChecker:
             'saving_location': 'default',
             'source_split': True,
             'visualization': True
+        }
+    }
+    default_configuration_multiple_generation = {
+        'generation': {
+            'category_breakdown': False,
+            'branching': False,
+            'task_prefix': None,
+            'file_name': 'default',  # this should be the directory name for all relevant csv data files
+            'sample_per_source': 0,
+            'saving': True,
+            'saving_location': 'default',
+            'require': True,
+            'reading_location': 'default',
+            'split_sentence': False,
+            'generation_function_settings': {}
+        },
+        'feature_extraction': {
+            'feature': ['cluster'],
+            'comparison': 'whole',
+            'saving': True,
+            'saving_location': 'default',
+            'require': True,
+            'reading_location': 'default',
+            'generation_function': None,
+            'top_word_insight': False,
+            'num_clusters': 5,
+        },
+        'assessment': {
+            'require': True,
+            'method': ['kl_divergence', 'cluster_matching_proportion', 'embedding_distance'],
+            'saving': True,
+            'saving_location': 'default',
+            'source_split': True,
+            'visualization': True,
+            'distance_function': 'cosine',
+            'mode': 'mean',
         }
     }
 
@@ -1029,7 +1986,7 @@ class AlignmentBiasChecker:
         return default_configuration
 
     @classmethod
-    def domain_pipeline(cls, domain, generation_function, configuration=None):
+    def domain_pipeline_single_generation(cls, domain, generation_function, configuration=None):
 
         if configuration is None:
             configuration = cls.default_configuration.copy()
@@ -1044,6 +2001,7 @@ class AlignmentBiasChecker:
         generation_require = configuration['generation']['require']
         generation_reading_location = configuration['generation']['reading_location']
         category_breakdown = configuration['generation']['category_breakdown']
+        branching = configuration['generation']['branching']
 
         extraction_feature = configuration['feature_extraction']['feature']
         extraction_comparison = configuration['feature_extraction']['comparison']
@@ -1052,7 +2010,7 @@ class AlignmentBiasChecker:
         extraction_require = configuration['feature_extraction']['require']
         extraction_reading_location = configuration['feature_extraction']['reading_location']
         extraction_generation_function = configuration['feature_extraction']['generation_function']
-        extraction_theme_insight = configuration['feature_extraction']['theme_insight']
+        extraction_theme_insight = configuration['feature_extraction']['top_word_insight']
         extraction_num_clusters = configuration['feature_extraction']['num_clusters']
 
         alignment_check = configuration['alignment']['require']
@@ -1100,12 +2058,17 @@ class AlignmentBiasChecker:
                 for file_name, category in file_map.items():
                     data_abc = abcData.load_file(category=category, domain=domain, data_tier='split_sentences',
                                                  file_path=file_name)
-
-                    benchmark = benchmark._append(data_abc.sub_sample(sample_size_per_source))
+                    if sample_size_per_source > 0:
+                        benchmark = benchmark._append(data_abc.sub_sample(sample_size_per_source))
+                    else:
+                        benchmark = benchmark._append(data_abc.data)
         else:
             if file_location == 'default':
                 file_name_root = 'customized'
-                file_path = f'data/{file_name_root}/split_sentences/{domain}_merged_split_sentences.csv'
+                if branching:
+                    file_path = f'data/{file_name_root}/split_sentences/{domain}_merged_split_sentences_branching.csv'
+                else:
+                    file_path = f'data/{file_name_root}/split_sentences/{domain}_merged_split_sentences.csv'
             else:
                 file_name_root = 'customized'
                 file_path = file_location
@@ -1113,7 +2076,228 @@ class AlignmentBiasChecker:
                 benchmark = pd.DataFrame()
                 data_abc = abcData.load_file(category='merged', domain=domain, data_tier='split_sentences',
                                              file_path=file_path)
-                benchmark = benchmark._append(data_abc.sub_sample(sample_size_per_source))
+                if sample_size_per_source > 0:
+                    benchmark = benchmark._append(data_abc.sub_sample(sample_size_per_source))
+                else:
+                    benchmark = benchmark._append(data_abc.data)
+
+        if generation_require:
+            model_generator = ModelGenerator(benchmark)
+            benchmark = model_generator.generate(generation_function)
+            if generation_saving:
+                if generation_saving_location == 'default':
+                    path = f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation.csv'
+                else:
+                    path = generation_saving_location
+                ensure_directory_exists(path)
+                benchmark.to_csv(path, index=False)
+                print(f'Generation result saved to {path}')
+            print('Generation completed.')
+        elif extraction_require:  # read the existing data
+            if generation_reading_location == 'default':
+                benchmark = pd.read_csv(
+                    f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation.csv')
+                print(
+                    f'Generation data loaded from data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_generation.csv')
+            else:
+                benchmark = pd.read_csv(generation_reading_location)
+                print(f'Generation data loaded from {generation_reading_location}')
+
+        score_name = None
+        if extraction_require:
+            feature_extractor = FeatureExtractor(benchmark, comparison=extraction_comparison)
+            if extraction_feature == 'sentiment':
+                benchmark = feature_extractor.sentiment_classification()
+                print('Sentiment classification completed.')
+                score_name = 'sentiment_score'
+            elif extraction_feature == 'regard':
+                benchmark = feature_extractor.regard_classification()
+                print('Regard classification completed.')
+                score_name = 'regard_score'
+            elif extraction_feature == 'stereotype':
+                benchmark = feature_extractor.stereotype_classification()
+                print('Stereotype classification completed.')
+                score_name = 'stereotype_gender_score'
+            elif extraction_feature == 'personality':
+                benchmark = feature_extractor.personality_classification()
+                print('Personality classification completed.')
+                # score_name = 'extraversion_score'
+                score_name = 'agreeableness_score'
+            elif extraction_feature == 'toxicity':
+                benchmark = feature_extractor.toxicity_classification()
+                print('Toxicity classification completed.')
+                score_name = 'toxicity_score'
+            elif extraction_feature == 'cluster':
+                if extraction_theme_insight:
+                    assert extraction_generation_function is not None, "Please provide a generation function for giving cluster theme insight."
+                benchmark = feature_extractor.cluster_sentences_by_category(theme_insight = extraction_theme_insight, generation_function=
+                                                                            extraction_generation_function, num_clusters = extraction_num_clusters)
+                print('Clustering completed.')
+                score_name = 'cluster'
+
+            if extraction_saving:
+                if extraction_saving_location == 'default':
+                    path = f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}.csv'
+                else:
+                    path = extraction_saving_location
+                ensure_directory_exists(path)
+                benchmark.to_csv(path, index=False)
+                print(f'{extraction_feature.title()} extraction result saved to {path}')
+            print(f'{extraction_feature.title()} extraction completed.')
+        else:
+            if extraction_reading_location == 'default':
+                benchmark = pd.read_csv(
+                    f'data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}.csv')
+                print(
+                    f'{extraction_feature.title()} data loaded from data/{file_name_root}/benchmarks/{domain}_benchmark_{model_name}_{extraction_feature}.csv')
+            else:
+                benchmark = pd.read_csv(extraction_reading_location)
+                print(f'{extraction_feature.title()} data loaded from {extraction_reading_location}')
+
+        if alignment_method == 'mean_difference_and_test' and alignment_check:
+            if score_name is None:
+                score_name = f'{extraction_feature}_score'
+            AlignmentChecker(benchmark, score_name) \
+                .mean_difference_and_test(
+                saving=alignment_saving,
+                source_split=alignment_source_split,
+                visualization=alignment_visualization,
+                saving_location=alignment_saving_location
+            )
+            print('Alignment check completed.')
+        elif alignment_method == 'kl_divergence' and alignment_check and extraction_feature == 'cluster':
+            AlignmentChecker(benchmark, score_name) \
+                .calculate_kl_divergence(
+                saving=alignment_saving,
+                theme=True,
+                visualization=alignment_visualization,
+                saving_location=alignment_saving_location,
+            )
+            print('Alignment check completed.')
+        elif alignment_method == 'embedding_distance' and alignment_check:
+            AlignmentChecker(benchmark, features = None) \
+                .embedding_distance(
+                saving=alignment_saving,
+                saving_location=alignment_saving_location,
+                distance_function=alignment_loss_function
+            )
+            print('Alignment check completed.')
+        elif alignment_method == 'cluster_matching_proportion' and alignment_check and extraction_feature == 'cluster':
+            AlignmentChecker(benchmark, score_name) \
+                .calculate_cluster_matching_proportion(
+                saving=alignment_saving,
+                theme=True,
+                visualization=alignment_visualization,
+                saving_location=alignment_saving_location,
+            )
+            print('Alignment check completed.')
+
+        if bias_method == 'impact_ratio_group' and bias_check:
+            BiasChecker(benchmark, score_name, domain) \
+                .impact_ratio_group(
+                mode=bias_mode,
+                saving=bias_saving,
+                source_split=bias_source_split,
+                visualization=bias_visualization,
+                saving_location=bias_saving_location
+            )
+            print('Bias check completed.')
+
+    @classmethod
+    def domain_pipeline_multiple_generation(cls, domain, generation_function, configuration=None):
+
+        if configuration is None:
+            configuration = cls.default_configuration.copy()
+        else:
+            configuration = cls.update_configuration(cls.default_configuration.copy(), configuration)
+
+        file_location = configuration['generation']['file_name']
+        sample_size_per_source = configuration['generation']['sample_per_source']
+        generation_saving = configuration['generation']['saving']
+        model_name = configuration['generation']['model_name']
+        generation_saving_location = configuration['generation']['saving_location']
+        generation_require = configuration['generation']['require']
+        generation_reading_location = configuration['generation']['reading_location']
+        category_breakdown = configuration['generation']['category_breakdown']
+        branching = configuration['generation']['branching']
+
+        extraction_feature = configuration['feature_extraction']['feature']
+        extraction_comparison = configuration['feature_extraction']['comparison']
+        extraction_saving = configuration['feature_extraction']['saving']
+        extraction_saving_location = configuration['feature_extraction']['saving_location']
+        extraction_require = configuration['feature_extraction']['require']
+        extraction_reading_location = configuration['feature_extraction']['reading_location']
+        extraction_generation_function = configuration['feature_extraction']['generation_function']
+        extraction_theme_insight = configuration['feature_extraction']['top_word_insight']
+        extraction_num_clusters = configuration['feature_extraction']['num_clusters']
+
+        alignment_check = configuration['alignment']['require']
+        alignment_method = configuration['alignment']['method']
+        alignment_saving = configuration['alignment']['saving']
+        alignment_saving_location = configuration['alignment']['saving_location']
+        alignment_source_split = configuration['alignment']['source_split']
+        alignment_visualization = configuration['alignment']['visualization']
+        alignment_loss_function = configuration['alignment']['distance_function']
+
+        bias_check = configuration['bias']['require']
+        bias_method = configuration['bias']['method']
+        bias_mode = configuration['bias']['mode']
+        bias_saving = configuration['bias']['saving']
+        bias_saving_location = configuration['bias']['saving_location']
+        bias_source_split = configuration['bias']['source_split']
+        bias_visualization = configuration['bias']['visualization']
+
+        if not extraction_require:
+            generation_require = False
+
+
+        if category_breakdown:
+            if file_location == 'default':
+                file_name_root = 'customized'
+                pattern = f'data/{file_name_root}/split_sentences/{domain}_*_split_sentences.csv'
+            else:
+                file_name_root = file_location
+                pattern = f'data/{file_name_root}/*.csv'
+
+            if generation_require:
+
+                matching_files = glob.glob(pattern)
+                file_map = {}
+
+                # Iterate over matching files and populate the dictionary
+                for file_name in matching_files:
+                    base_name = os.path.basename(file_name)
+                    if file_location == 'default':
+                        file_map[file_name] = base_name[len(f'{domain}_'):-len('_split_sentences.csv')]
+                    else:
+                        file_map[file_name] = base_name[:-len('.csv')]
+
+                benchmark = pd.DataFrame()
+                for file_name, category in file_map.items():
+                    data_abc = abcData.load_file(category=category, domain=domain, data_tier='split_sentences',
+                                                 file_path=file_name)
+                    if sample_size_per_source > 0:
+                        benchmark = benchmark._append(data_abc.sub_sample(sample_size_per_source))
+                    else:
+                        benchmark = benchmark._append(data_abc.data)
+        else:
+            if file_location == 'default':
+                file_name_root = 'customized'
+                if branching:
+                    file_path = f'data/{file_name_root}/split_sentences/{domain}_merged_split_sentences_branching.csv'
+                else:
+                    file_path = f'data/{file_name_root}/split_sentences/{domain}_merged_split_sentences.csv'
+            else:
+                file_name_root = 'customized'
+                file_path = file_location
+            if generation_require:
+                benchmark = pd.DataFrame()
+                data_abc = abcData.load_file(category='merged', domain=domain, data_tier='split_sentences',
+                                             file_path=file_path)
+                if sample_size_per_source > 0:
+                    benchmark = benchmark._append(data_abc.sub_sample(sample_size_per_source))
+                else:
+                    benchmark = benchmark._append(data_abc.data)
 
         if generation_require:
             model_generator = ModelGenerator(benchmark)
