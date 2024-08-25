@@ -1,6 +1,6 @@
 import pandas as pd
-from .abcData import abcData
-from .benchmark_building import check_generation_function
+from alignbiascheck.abcData import abcData
+from alignbiascheck.benchmark_building import check_generation_function
 from tqdm import tqdm
 from transformers import pipeline
 import json
@@ -579,6 +579,7 @@ class BiasChecker:
 
 
 class Visualization:
+    print("IN HERE")
     @staticmethod
     def visualize_impact_ratio_group(data, domain, score_name):
         """
@@ -730,6 +731,11 @@ class Visualization:
         llm_counts = llm_counts.loc[sorted_indices]
         cluster_labels = sorted_indices
 
+        print("VISUALIZE")
+        print(baseline_counts)
+        print(llm_counts)
+        print(cluster_labels)
+
         trace1 = go.Bar(
             x=cluster_labels,
             y=baseline_counts.values,
@@ -752,6 +758,8 @@ class Visualization:
 
         fig = go.Figure(data=[trace1, trace2], layout=layout)
         fig.show()
+
+        print("VISUALIZE DONE")
 
 
 class AlignmentBiasChecker:

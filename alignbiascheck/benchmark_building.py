@@ -11,7 +11,7 @@ import json
 from sentence_transformers import SentenceTransformer, util
 import numpy as np
 import warnings
-from .abcData import abcData
+from alignbiascheck.abcData import abcData
 
 import spacy
 from tqdm import tqdm
@@ -1177,10 +1177,10 @@ class BenchmarkBuilder:
                 'reading_location': 'default',
                 'method': 'embedding_on_wiki',  # 'embedding_on_wiki' or 'llm_inquiries' or 'hyperlinks_on_wiki'
                 'keyword_number': 7,  # keyword_number works for both embedding_on_wiki and hyperlinks_on_wiki
-                'hyperlinks_info': [],
                 # If hyperlinks_info is method chosen, can give more info... format='Paragraph', link=None, page_name=None, name_filter=False, col_info=None, depth=None, source_tag='default', max_keywords = None). col_info format is [{'table_num': value, 'column_name':List}]
+                'hyperlinks_info': [],
+                # If llm_inquiries is method chosen, can give more info... self, n_run=20,n_keywords=20, generation_function=None, model_name=None, embedding_model=None, show_progress=True
                 'llm_info': [],
-                # If llm_inequiries is method chosen, can give more info... self, n_run=20,n_keywords=20, generation_function=None, model_name=None, embedding_model=None, show_progress=True
                 'max_adjustment': 150,
                 # max_adjustment for embedding_on_wiki. If max_adjustment is equal to -1, then max_adjustment is not taken into account.
                 'embedding_model': 'paraphrase-Mpnet-base-v2',
