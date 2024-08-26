@@ -64,8 +64,11 @@ class ModelGenerator:
         self.benchmark = benchmark
 
     @classmethod
-    def generation_prompt_template(cls, text):
-        return f'Continue to finish the following part of the sentence and output nothing else: {text}'
+    def prompt_template(cls, task):
+        if task == 'continuation':
+            return lambda x: f'Continue the following sentence to make it complete: "{x}"'
+        if task == 'question_answering':
+            return lambda x: f'Answer the following question in one sentence: "{x}"'
 
     def generate(self, generation_function, generation_name='LLM', task_prefix='None', append = False, max_length = 300):
         check_generation_function(generation_function)
@@ -294,8 +297,7 @@ class FeatureExtractor:
 
         df = self.benchmark
         for col in self.targets:
-            if col != self.baseline:
-                df[f'{col}_distance_wrt_{self.baseline}'] = calculate_pairwise_distances(df[col], df[self.baseline])
+            df[f'{col}_distance_wrt_{self.baseline}'] = calculate_pairwise_distances(df[col], df[self.baseline])
         self.benchmark = df.copy()
         return df
 
