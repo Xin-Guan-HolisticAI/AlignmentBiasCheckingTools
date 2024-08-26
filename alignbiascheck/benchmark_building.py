@@ -3,7 +3,6 @@ import os
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-import re
 import glob
 
 import wikipediaapi
@@ -14,11 +13,16 @@ import warnings
 from alignbiascheck.abcData import abcData
 
 import spacy
-from tqdm import tqdm
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk import download
 from urllib.parse import urlparse, unquote
+from sentence_transformers import SentenceTransformer, util
+
+
+import itertools
+import re
+from tqdm import tqdm
 
 
 # Ensure required NLTK resources are downloaded
@@ -54,7 +58,7 @@ def find_similar_keywords(model_name, target_word, keywords_list, top_n=100):
     return top_keywords
 
 
-def search_wikipedia(topic, language='en', user_agent='AlignmentBiasChecker/1.0 (contact@holisticai.com)'):
+def search_wikipedia(topic, language='en', user_agent='Pipeline/1.0 (contact@holisticai.com)'):
     """
     Search for a topic on Wikipedia and return the page object.
 
@@ -679,12 +683,12 @@ class ScrapAreaFinder:
         return scrap_area
 
     def find_scrap_urls_on_wiki(self, top_n=5, bootstrap_url=None, language='en',
-                                user_agent='AlignmentBiasChecker/1.0 (contact@holisticai.com)'):
+                                user_agent='Pipeline/1.0 (contact@holisticai.com)', scrap_backlinks=0):
         """
         Main function to search Wikipedia for a topic and find related pages.
         """
 
-        def get_related_pages(topic, page, max_depth=1, current_depth=0, visited=None, top_n=50):
+        def get_related_forelinks(topic, page, max_depth=1, current_depth=0, visited=None, top_n=50):
             """
             Recursively get related pages up to a specified depth.
 
@@ -719,21 +723,70 @@ class ScrapAreaFinder:
                     except Exception as e:
                         print(f"Error: {e}")
                 if current_depth + 1 < max_depth:
-                    related_pages.extend(get_related_pages(topic, link_page, max_depth, current_depth + 1, visited))
+                    related_pages.extend(get_related_forelinks(topic, link_page, max_depth, current_depth + 1, visited))
 
             return related_pages
+
+        def get_related_backlinks(topic, page, max_depth=1, current_depth=0, visited=None, top_n=50):
+            """
+            Recursively get related backlinks up to a specified depth.
+
+            Args:
+            - topic (str): The main topic to start the search from.
+            - page (Wikipedia page object): The Wikipedia page object of the main topic.
+            - max_depth (int): Maximum depth to recurse.
+            - current_depth (int): Current depth of the recursion.
+            - visited (set): Set of visited pages to avoid loops.
+
+            Returns:
+            - list: A list of tuples containing the title and URL of related backlinks.
+            """
+            links = page.backlinks
+            related_pages = []
+
+            if visited is None:
+                visited = set()
+                # related_pages.extend([(page.title, page.fullurl)])
+                related_pages.extend([page.fullurl])
+
+            visited.add(page.title)
+
+            title_list = [title for title, link_page in links.items()]
+            if len(title_list) > top_n:
+                title_list = find_similar_keywords('paraphrase-MiniLM-L6-v2', topic, title_list, top_n)
+
+            for title, link_page in tqdm(links.items()):
+                if link_page.title not in visited and link_page.title in title_list:
+                    try:
+                        related_pages.extend([link_page.fullurl])
+                    except Exception as e:
+                        print(f"Error: {e}")
+                if current_depth + 1 < max_depth:
+                    related_pages.extend(get_related_forelinks(topic, link_page, max_depth, current_depth + 1, visited))
+
+            return related_pages
+
+
 
         topic = self.category
 
         print(f"Searching Wikipedia for topic: {topic}")
         main_page = search_wikipedia(topic, language=language, user_agent=user_agent)
+        if top_n == 0:
+            main_page_link = search_wikipedia(topic, language=language, user_agent=user_agent).fullurl
+            self.scrap_area = [main_page_link]
+            self.scrap_area_type = 'wiki_urls'
+            return self.scrap_area_to_abcData()
 
         if isinstance(main_page, str):
             return self.scrap_area_to_abcData()
         else:
             print(f"Found Wikipedia page: {main_page.title}")
-            related_pages = get_related_pages(topic, main_page, max_depth=1, top_n=top_n)
-            self.scrap_area = related_pages
+            related_pages = get_related_forelinks(topic, main_page, max_depth=1, top_n=top_n)
+            if scrap_backlinks > 0:
+                related_backlinks = get_related_backlinks(topic, main_page, max_depth=1, top_n=scrap_backlinks)
+                related_pages.extend(related_backlinks)
+            self.scrap_area = list(set(related_pages))
             self.scrap_area_type = 'wiki_urls'
             return self.scrap_area_to_abcData()
 
@@ -1039,7 +1092,7 @@ class PromptMaker:
 
         return self.output_df_to_abcData()
 
-    def make_questions(self, generation_function, keyword_reference=None, answer_check=True):
+    def make_questions(self, generation_function, keyword_reference=None, answer_check=True, max_questions=None):
 
         def get_question(sentence, generation_function, keyword, keyword_list=None, bad_questions=None, Example=True):
             prompt_qa_making = f" Write a question about '{keyword}' such that the following sentence '''{sentence}''' can act as an accurate answer (!!!). \n" \
@@ -1120,13 +1173,18 @@ class PromptMaker:
             for keyword, keyword_data in tqdm(category_item['keywords'].items(), desc="Going through keywords"):
                 for sentence_with_tag in tqdm(keyword_data['scrapped_sentences'],
                                               desc="Going through scrapped sentences"):
+                    if max_questions != None and len(results) >= max_questions:
+                        break
                     question = get_question(sentence=sentence_with_tag[0], generation_function=generation_function,
                                             keyword=category, keyword_list=keyword_reference)
-                    if len(keyword_reference) > 1 and answer_check:
-                        # only check_question to find questions for other keywords if key_word list is greater than 1
-                        check, key_dict = check_question(question=question, generation_function=generation_function,
-                                                         keyword=category, keyword_list=keyword_reference,
-                                                         answer_check=answer_check)
+                    if keyword_reference is not None:
+                        if len(keyword_reference) > 1 and answer_check:
+                            # only check_question to find questions for other keywords if key_word list is greater than 1
+                            check, key_dict = check_question(question=question, generation_function=generation_function,
+                                                             keyword=category, keyword_list=keyword_reference,
+                                                             answer_check=answer_check)
+                        else:
+                            check = True
                     else:
                         # otherwise, if only one keyword then no need to check question.
                         check = True
@@ -1158,34 +1216,336 @@ class PromptMaker:
 
             return self.output_df_to_abcData()
 
-    def branch_prompt_by_keyword_replacement(self, replacement_dict = None):
-        pass
+    def merge(self, prompt_df):
+        self.output_df = pd.concat([self.output_df, prompt_df])
+        return self.output_df_to_abcData()
 
-    def branch_prompt_by_llm_replacement(self, generation_function):
-        pass
+    def branching(self, branching_config = None):
+
+        df = self.output_df
+        default_branching_config = {
+            'branching_pairs': 'all',
+            'direction': 'both',
+            'source_restriction': None,
+            'replacement_descriptor_require': True,
+            'descriptor_threshold': 'Auto',
+            'descriptor_embedding_model': 'paraphrase-Mpnet-base-v2',
+            'descriptor_distance': 'cosine',
+            'replacement_description': {},
+            'replacement_description_saving': True,
+            'replacement_description_saving_location': f'data/customized/split_sentences/{self.domain}_replacement_description.json',
+            'counterfactual_baseline': True,
+            'generation_function': None,
+        }
+        if branching_config is None:
+            branching_config = {}
+        branching_config = BenchmarkBuilder.update_configuration(default_branching_config, branching_config)
+
+
+        def replacement_descriptor(df, original_category, replace_category, replacing: list[str] or str, gf=None,
+                                   embedding_model='paraphrase-Mpnet-base-v2',
+                                   descriptor_threold='Auto', descriptor_distance='cosine'):
+
+            if isinstance(replacing, str):
+                replacing = [replacing]
+
+            def find_similar_words(word_bank, target_word, model_name=embedding_model, threshold=0.2):
+                model = SentenceTransformer(model_name)
+                tokens = word_bank.lower().split()  # Tokenize the word_bank
+
+                # Get embeddings for each token and the target word
+                target_vector = model.encode(target_word, convert_to_tensor=True)
+                similar_tokens = []
+
+                def cosine_similarity(vec1, vec2):
+                    return util.cos_sim(vec1, vec2).item()
+
+                for token in tokens:
+                    token_vector = model.encode(token, convert_to_tensor=True)
+                    similarity = cosine_similarity(target_vector, token_vector)
+                    if similarity >= threshold:  # Apply the threshold
+                        similar_tokens.append((token, similarity))
+
+                similar_tokens.sort(key=lambda x: x[1], reverse=True)  # Sort by similarity
+                return similar_tokens
+
+            def clean_sentences_and_join(sentence_list):
+                return ' '.join(sentence_list) \
+                    .replace('?', '').replace('.', '') \
+                    .replace(',', '').replace('!', '') \
+                    .replace(':', '').replace(';', '') \
+                    .replace('(', '').replace(')', '') \
+                    .replace('[', '').replace(']', '') \
+                    .replace('{', '').replace('}', '') \
+                    .replace('"', '').replace("'", '') \
+                    .replace('`', '').replace('~', '') \
+                    .replace('@', '').replace('#', '') \
+                    .replace('$', '').replace('%', '') \
+                    .replace('^', '').replace('&', '') \
+                    .replace('*', '')
+
+            def check_if_threshold_can_go_higher(similar_tokens, threshold, target_word, gf=gf):
+
+                vocabs = [word for word, similarity in similar_tokens if similarity < threshold][:15]
+
+                prompts = f"Do you find any words in the below list that can be associated with the word '''{target_word}'''? \n" \
+                          f"Words: {vocabs}\n " \
+                          f"For example: 'actress' or 'ovum' are associated with 'females' while 'Sam Altman' is associated with the 'Open AI'. \n" \
+                          f"Output 'Yes' or 'No' directly."
+
+                response = gf(prompts)
+
+                if response.startswith('Yes'):
+                    return False
+                else:
+                    return True
+
+            def iterative_guessing(sorted_list_threshold, check_go_higher, max_iterations = 50):
+                remaining = sorted_list_threshold[:]
+                lower_bound = None
+                iteration_count = 0
+
+                while len(remaining) > 2 and iteration_count < max_iterations:
+                    guess = remaining[len(remaining) // 2]
+                    iteration_count += 1
+
+                    if check_go_higher(guess):
+                        lower_bound = guess
+                        remaining = [i for i in remaining if i >= guess]
+                    else:
+                        remaining = [i for i in remaining if i <= guess]
+                        # print(f"Remaining: {remaining}")
+
+                # After narrowing down, the remaining list will contain the correct number
+                correct_guess = remaining[-1]
+
+                return correct_guess
+
+            def replacer_prompts(target_word, branch, words):
+                return f" The following words are about'''{target_word}''' and your job is to find the analogous words about '''{branch} \n" \
+                       f" Words: {words}\n " \
+                       f" For example: 'women' for female is associated with 'men' for male " \
+                       ' Give a dictionary of the following python json format only: [{"word1": "analogy1", "word2": "analogy2" ....}]. ' \
+                       f" You only need to provide words that you can find analogy."
+
+            def dict_extraction(response):
+                # If the JSON is embedded in a larger string, extract it
+                pattern = r'\[.*?\]'
+                match = re.search(pattern, response, re.DOTALL)
+
+                if match:
+                    json_string = match.group(0).replace("'", '"')
+                    try:
+                        # Parse the JSON
+                        json_data = json.loads(json_string)
+                        return (json_data)
+                    except json.JSONDecodeError as e:
+                        print(f"Error decoding JSON: {e}")
+                else:
+                    print("No JSON found in the string.")
+
+
+            df_category = df[df['category'] == original_category]
+            word_bank = ''
+            for replace in replacing:
+                word_bank += ' '.join(list(set(clean_sentences_and_join(df_category[replace].tolist()).split(' '))))
+            if descriptor_threold == 'Auto':
+                print('Obtaining the similar words...')
+                similar_tokens = find_similar_words(word_bank, original_category)
+                print('Obtaining the threshold...')
+                thresholds_list = [similarity for word, similarity in similar_tokens]
+                checker = lambda x: check_if_threshold_can_go_higher(similar_tokens, x, original_category)
+                threshold = iterative_guessing(thresholds_list, checker)
+                words = [word for word, similarity in similar_tokens if similarity >= threshold]
+
+            else:
+                similar_tokens = find_similar_words(word_bank, original_category, threshold=float(descriptor_threold))
+                words = [word for word, similarity in similar_tokens]
+
+            print('Obtaining the replacement...')
+            k = 0
+            while k < 5:
+                k += 1
+                try:
+                    result = dict_extraction(gf(replacer_prompts(original_category, replace_category, words)))
+                    assert isinstance(result, list) and all(isinstance(item, dict) for item in result)
+                    combined_dict = {k: v for d in result for k, v in d.items()}
+                    return combined_dict
+                except AssertionError:
+                    print('Try again...')
+                    continue
+            print(f'Failed to obtain the replacement for {original_category} and {replace_category}...')
+            return {}
+
+        def add_and_clean_replacement_pairs(replacement_dict):
+                for outer_key, inner_dict in replacement_dict.items():
+                    for sub_key, replacements in inner_dict.items():
+                        # Collect pairs to remove
+                        pairs_to_remove = []
+
+                        for a, b in replacements.items():
+                            # Check if a contains outer_key or outer_key is contained by a
+                            if outer_key.lower() in a.lower() or a.lower() in outer_key.lower():
+                                pairs_to_remove.append(a)
+                            # Check if b contains sub_key or sub_key is contained by b
+                            elif sub_key.lower() in b.lower() or b.lower() in sub_key.lower():
+                                pairs_to_remove.append(a)
+
+                        # Remove conflicting pairs
+                        for a in pairs_to_remove:
+                            del replacements[a]
+
+                        # After removing conflicts, add the new pair if no conflict
+                        if outer_key not in replacements and sub_key not in replacements.values():
+                            if outer_key not in replacements and sub_key not in replacements:
+                                replacements[outer_key] = sub_key
+
+                return replacement_dict
+
+        def replace_terms(sentence, replacement_dict):
+
+            replacement_dict = {k.lower(): v for k, v in replacement_dict.items()}
+            reverse_replacement_dict = {v.lower(): k for k, v in replacement_dict.items()}
+            replacement_dict.update(reverse_replacement_dict)
+
+            sentence = sentence.lower()
+
+            # Create a regular expression pattern that matches any of the phrases
+            pattern = re.compile("|".join(re.escape(phrase) for phrase in replacement_dict.keys()))
+
+            # Function to replace matched phrases using the replacement dictionary
+            def replace_match(match):
+                return replacement_dict[match.group(0)]
+
+            # Replace all matched phrases with their corresponding replacements
+            modified_sentence = pattern.sub(replace_match, sentence)
+
+            return modified_sentence
+
+        def replace_gender_terms_arc(sentence, replacement_dictionary):
+            # Step 1: Define the replacement dictionary
+
+            # Step 2: Extend the dictionary to include reverse replacements
+            reverse_replacement_dictionary = {v: k for k, v in replacement_dictionary.items()}
+            full_replacement_dictionary = {**replacement_dictionary, **reverse_replacement_dictionary}
+            # Lower the keys
+            full_lower_replacement_dictionary = {k.lower(): v for k, v in full_replacement_dictionary.items()}
+            print(full_lower_replacement_dictionary)
+
+
+            # Step 3: Tokenize the sentence
+            tokens = re.findall(r'\b\w+\b', sentence)
+
+            # Step 4: Replace the words according to the dictionary
+            replaced_tokens = [full_lower_replacement_dictionary.get(token.lower(), token) for token in tokens]
+
+            # Step 5: Reassemble the sentence
+            replaced_sentence = ' '.join(replaced_tokens)
+
+            return replaced_sentence
+
+
+
+        replacement_description = branching_config['replacement_description']
+        gef = branching_config['generation_function']
+
+        if branching_config['branching_pairs'] == 'all':
+            branching_pairs = list(itertools.combinations(df['category'].unique().tolist(), 2))
+            # Include the reverse of each pair
+            branching_pairs = branching_pairs + [(b, a) for a, b in branching_pairs]
+            # Optionally, you can remove duplicates if needed
+            branching_pairs = list(set(branching_pairs))
+        else:
+            branching_pairs = [(key, sub_key) for key, sub_dict in replacement_description.items() for sub_key in
+                               sub_dict.keys()]
+            # Include the reverse of each pair
+            if branching_config['direction'] == 'both':
+                branching_pairs = branching_pairs + [(b, a) for a, b in branching_pairs]
+                # Optionally, you can remove duplicates if needed
+                branching_pairs = list(set(branching_pairs))
+
+        if branching_config['source_restriction'] is not None:
+            df = df[df['source_tag'] == branching_config['source_restriction']]
+
+        df_result = df.copy()
+        for category_pair in tqdm(branching_pairs, desc='Branching pairs'):
+            if branching_config['replacement_descriptor_require']:
+                assert gef is not None, "Generation function is required for replacement descriptor generation."
+                if branching_config['counterfactual_baseline']:
+                    rd = replacement_descriptor(df, category_pair[0], category_pair[1], ['baseline', 'prompts'], gf=gef)
+                else:
+                    rd = replacement_descriptor(df, category_pair[0], category_pair[1], ["prompts"], gf=gef)
+                # Ensure category_pair[0] exists in replacement_description
+                if category_pair[0] not in replacement_description:
+                    replacement_description[category_pair[0]] = {}
+
+                # Ensure category_pair[1] exists within the nested dictionary
+                if category_pair[1] not in replacement_description[category_pair[0]]:
+                    replacement_description[category_pair[0]][category_pair[1]] = {}
+
+                # Update the existing dictionary with the contents of rd
+                replacement_description[category_pair[0]][category_pair[1]].update(rd)
+                replacement_description = add_and_clean_replacement_pairs(replacement_description)
+                if branching_config['replacement_description_saving']:
+                    with open(branching_config['replacement_description_saving_location'], 'w', encoding='utf-8') as f:
+                        json.dump(replacement_description, f)
+            else:
+                replacement_description = add_and_clean_replacement_pairs(replacement_description)
+
+            rd = replacement_description[category_pair[0]][category_pair[1]]
+            print(rd)
+            print('Replacing...')
+            df_new = df[df['category'] == category_pair[0]].copy()
+            df_new['prompts'] = df_new['prompts'].apply(lambda x: replace_terms(x, rd).capitalize())
+            if branching_config['counterfactual_baseline']:
+                df_new['baseline'] = df_new['baseline'].apply(lambda x: replace_terms(x, rd).capitalize())
+            df_new['source_tag'] = df_new.apply(lambda row: f'br_{row["source_tag"]}_cat_{row["category"]}', axis=1)
+            df_new['category'] = df_new['category'].apply(lambda x: replace_terms(x, rd))
+            df_new['keyword'] = df_new['keyword'].apply(lambda x: replace_terms(x, rd))
+            df_result = pd.concat([df_result, df_new])
+
+            self.output_df = df_result
+
+        return self.output_df_to_abcData()
 
 
 
 
 class BenchmarkBuilder:
-    default_configuration = {}
+    default_category_configuration = {}
+    default_domain_configuration = {}
+    default_branching_configuration = {}
 
     def reset(cls):
-        cls.default_configuration = {
+        cls.default_branching_configuration = {
+            'branching_pairs': 'all',
+            'direction': 'both',
+            'source_restriction': None,
+            'replacement_descriptor_require': True,
+            'descriptor_threshold': 'Auto',
+            'descriptor_embedding_model': 'paraphrase-Mpnet-base-v2',
+            'descriptor_distance': 'cosine',
+            'replacement_description': {},
+            'replacement_description_saving': True,
+            'replacement_description_saving_location': f'data/customized/split_sentences/replacement_description.json',
+            'counterfactual_baseline': True,
+            'generation_function': None,
+        }
+        cls.default_category_configuration = {
             'keyword_finder': {
                 'require': True,
                 'reading_location': 'default',
                 'method': 'embedding_on_wiki',  # 'embedding_on_wiki' or 'llm_inquiries' or 'hyperlinks_on_wiki'
                 'keyword_number': 7,  # keyword_number works for both embedding_on_wiki and hyperlinks_on_wiki
                 # If hyperlinks_info is method chosen, can give more info... format='Paragraph', link=None, page_name=None, name_filter=False, col_info=None, depth=None, source_tag='default', max_keywords = None). col_info format is [{'table_num': value, 'column_name':List}]
-                'hyperlinks_info': [],
-                # If llm_inquiries is method chosen, can give more info... self, n_run=20,n_keywords=20, generation_function=None, model_name=None, embedding_model=None, show_progress=True
-                'llm_info': [],
+                'llm_info': {},
+                # If llm_inequiries is method chosen, can give more info... self, n_run=20,n_keywords=20, generation_function=None, model_name=None, embedding_model=None, show_progress=True
                 'max_adjustment': 150,
                 # max_adjustment for embedding_on_wiki. If max_adjustment is equal to -1, then max_adjustment is not taken into account.
                 'embedding_model': 'paraphrase-Mpnet-base-v2',
                 'saving': True,
-                'saving_location': 'default'
+                'saving_location': 'default',
+                'manual_keywords': None,
             },
             'scrap_area_finder': {
                 'require': True,
@@ -1195,6 +1555,7 @@ class BenchmarkBuilder:
                 'scrap_number': 5,
                 'saving': True,
                 'saving_location': 'default',
+                'scrap_backlinks': 0,
             },
             'scrapper': {
                 'require': True,
@@ -1204,9 +1565,26 @@ class BenchmarkBuilder:
                 'saving_location': 'default'},
             'prompt_maker': {
                 'require': True,
-                'method': 'split_sentences',
+                'method': 'split_sentences',  # can also have "questions" as a method
+                # prompt_maker_generation_function and prompt_maker_keyword_list are needed for questions
+                'generation_function': None,
+                # prompt_maker_keyword_list must contain at least one keyword. The first keyword must be the keyword
+                # of the original scrapped data.
+                'keyword_list': None,
+                # User will enter False if they don't want their questions answer checked.
+                'answer_check': False,
                 'saving_location': 'default',
+                'max_benchmark_length': 500,
             },
+        }
+        cls.default_domain_configuration = {
+            'categories': [],
+            'branching': False,  # If branching is False, then branching_config is not taken into account
+            'branching_config': cls.default_branching_configuration,
+            'shared_config':cls.default_category_configuration,
+            'category_specified_config':{},
+            'saving': True,  # If saving is False, then saving_location is not taken into account
+            'saving_location': 'default',
         }
 
     def __init__(self):
@@ -1219,59 +1597,93 @@ class BenchmarkBuilder:
         only if the keys already exist in the default configuration.
 
         Args:
-        - default_configuration (dict): The default configuration dictionary.
+        - default_category_configuration (dict): The default configuration dictionary.
         - updated_configuration (dict): The updated configuration dictionary with new values.
 
         Returns:
         - dict: The updated configuration dictionary.
         """
+
         for key, value in updated_configuration.items():
-            if key in default_configuration:
+            if key in default_configuration.copy():
+                # print(f"Updating {key} recursively")
                 if isinstance(default_configuration[key], dict) and isinstance(value, dict):
                     # Recursively update nested dictionaries
-                    default_configuration[key] = BenchmarkBuilder.update_configuration(default_configuration[key],
+                    default_configuration[key] = BenchmarkBuilder.update_configuration(default_configuration[key].copy(),
                                                                                        value)
                 else:
+                    # print(f"Skipping key: {key} due to type mismatch")
                     # Update the value for the key
                     default_configuration[key] = value
         return default_configuration
+
+    @staticmethod
+    def merge_category_specified_configuration(domain_configuration):
+        specified_config = domain_configuration['category_specified_config'].copy()
+        domain_configuration = BenchmarkBuilder.update_configuration(BenchmarkBuilder.default_domain_configuration.copy(),
+                                              domain_configuration)
+        domain_configuration['shared_config'] = BenchmarkBuilder.update_configuration(BenchmarkBuilder.default_category_configuration.copy(), domain_configuration['shared_config'].copy())
+
+        base_category_config = {}
+        for cat in domain_configuration['categories']:
+            base_category_config[cat] = domain_configuration['shared_config'].copy()
+
+        # print('start ====================== \n\n')
+        merge_category_config = BenchmarkBuilder.update_configuration(base_category_config.copy(), specified_config.copy())
+        print(merge_category_config)
+        return merge_category_config
 
     @classmethod
     def category_pipeline(cls, domain, demographic_label, configuration=None):
         cls.reset(cls)
         if configuration is None:
-            configuration = cls.default_configuration.copy()
+            configuration = cls.default_category_configuration.copy()
         else:
-            configuration = cls.update_configuration(cls.default_configuration.copy(), configuration)
+            configuration = cls.update_configuration(cls.default_category_configuration.copy(), configuration)
 
-        keyword_finder_require = configuration['keyword_finder']['require']
-        keyword_finder_reading_location = configuration['keyword_finder']['reading_location']
-        keyword_finder_method = configuration['keyword_finder']['method']
-        keyword_finder_keyword_number = configuration['keyword_finder']['keyword_number']
-        keyword_finder_hyperlinks_info = configuration['keyword_finder']['hyperlinks_info']
-        keyword_finder_llm_info = configuration['keyword_finder']['llm_info']
-        keyword_finder_max_adjustment = configuration['keyword_finder']['max_adjustment']
-        keyword_finder_embedding_model = configuration['keyword_finder']['embedding_model']
-        keyword_finder_saving = configuration['keyword_finder']['saving']
-        keyword_finder_saving_location = configuration['keyword_finder']['saving_location']
+        # Unpacking keyword_finder section
+        keyword_finder_config = configuration['keyword_finder']
+        keyword_finder_require, keyword_finder_reading_location, keyword_finder_method, \
+        keyword_finder_keyword_number, keyword_finder_hyperlinks_info, keyword_finder_llm_info, \
+        keyword_finder_max_adjustment, keyword_finder_embedding_model, keyword_finder_saving, \
+        keyword_finder_saving_location, keyword_finder_manual_keywords = (
+            keyword_finder_config[key] for key in [
+            'require', 'reading_location', 'method', 'keyword_number', 'hyperlinks_info',
+            'llm_info', 'max_adjustment', 'embedding_model', 'saving', 'saving_location',
+            'manual_keywords'
+        ]
+        )
 
-        scrap_area_finder_require = configuration['scrap_area_finder']['require']
-        scrap_area_finder_reading_location = configuration['scrap_area_finder']['reading_location']
-        scrap_area_finder_method = configuration['scrap_area_finder']['method']
-        scrap_area_local_file = configuration['scrap_area_finder']['local_file']
-        scrap_area_finder_saving = configuration['scrap_area_finder']['saving']
-        scrap_area_finder_saving_location = configuration['scrap_area_finder']['saving_location']
-        scrap_area_finder_scrap_area_number = configuration['scrap_area_finder']['scrap_number']
+        # Unpacking scrap_area_finder section
+        scrap_area_finder_config = configuration['scrap_area_finder']
+        scrap_area_finder_require, scrap_area_finder_reading_location, scrap_area_finder_method, \
+        scrap_area_local_file, scrap_area_finder_saving, scrap_area_finder_saving_location, \
+        scrap_area_finder_scrap_area_number, scrap_area_finder_scrap_backlinks = (
+            scrap_area_finder_config[key] for key in [
+            'require', 'reading_location', 'method', 'local_file', 'saving',
+            'saving_location', 'scrap_number', 'scrap_backlinks'
+        ]
+        )
 
-        scrapper_require = configuration['scrapper']['require']
-        scrapper_reading_location = configuration['scrapper']['reading_location']
-        scrapper_saving = configuration['scrapper']['saving']
-        scrapper_method = configuration['scrapper']['method']
-        scrapper_saving_location = configuration['scrapper']['saving_location']
+        # Unpacking scrapper section
+        scrapper_config = configuration['scrapper']
+        scrapper_require, scrapper_reading_location, scrapper_saving, \
+        scrapper_method, scrapper_saving_location = (
+            scrapper_config[key] for key in [
+            'require', 'reading_location', 'saving', 'method', 'saving_location'
+        ]
+        )
 
-        prompt_maker_require = configuration['prompt_maker']['require']
-        prompt_maker_method = configuration['prompt_maker']['method']
-        prompt_maker_saving_location = configuration['prompt_maker']['saving_location']
+        # Unpacking prompt_maker section
+        prompt_maker_config = configuration['prompt_maker']
+        prompt_maker_require, prompt_maker_method, prompt_maker_generation_function, \
+        prompt_maker_keyword_list, prompt_maker_answer_check, prompt_maker_saving_location, \
+        prompt_maker_max_sample_number = (
+            prompt_maker_config[key] for key in [
+            'require', 'method', 'generation_function', 'keyword_list', 'answer_check',
+            'saving_location', 'max_benchmark_length'
+        ]
+        )
 
         # check the validity of the configuration
         assert keyword_finder_method in ['embedding_on_wiki', 'llm_inquiries',
@@ -1285,7 +1697,7 @@ class BenchmarkBuilder:
         assert scrapper_method in ['wiki',
                                    'local_files'], "Invalid scrapper method. Choose either 'wiki' or 'local_files'"
         assert scrap_area_finder_method == scrapper_method, "scrap_area_finder and scrapper methods must be the same"
-        assert prompt_maker_method in ['split_sentences'], "Invalid prompt maker method. Choose 'split_sentences'"
+        assert prompt_maker_method in ['split_sentences', 'questions'], "Invalid prompt maker method. Choose 'split_sentences' or 'questions'"
 
         '''
         # make sure only the required loading is done
@@ -1335,13 +1747,24 @@ class BenchmarkBuilder:
 
                 kw = KeywordFinder(domain=domain, category=demographic_label).find_name_keywords_by_hyperlinks_on_wiki(
                     **default_values).add(keyword=demographic_label)
+
+                # if manual keywords are provided, add them to the keyword finder
+                if isinstance(keyword_finder_manual_keywords, list):
+                    for keyword in keyword_finder_manual_keywords:
+                        kw = kw.add(keyword)
+
             if keyword_finder_saving:
                 if keyword_finder_saving_location == 'default':
                     kw.save()
                 else:
                     kw.save(file_path=keyword_finder_saving_location)
 
-        elif scrap_area_finder_require:
+        elif (not keyword_finder_require) and isinstance(keyword_finder_manual_keywords, list):
+            kw = abcData.create_data(domain=domain, category=demographic_label, data_tier='keywords')
+            for keyword in keyword_finder_manual_keywords:
+                kw = kw.add(keyword)
+
+        elif scrap_area_finder_require and (keyword_finder_manual_keywords is None):
             filePath = ""
             if keyword_finder_reading_location == 'default':
                 filePath = f'tests/data/customized/keywords/{domain}_{demographic_label}_keywords.json'
@@ -1361,17 +1784,19 @@ class BenchmarkBuilder:
         if scrap_area_finder_require:
             if scrap_area_finder_method == 'wiki':
                 sa = ScrapAreaFinder(kw, source_tag='wiki').find_scrap_urls_on_wiki(
-                    top_n=scrap_area_finder_scrap_area_number)
+                    top_n=scrap_area_finder_scrap_area_number, scrap_backlinks=scrap_area_finder_scrap_backlinks)
             elif scrap_area_finder_method == 'local_files':
                 if scrap_area_local_file == None:
                     raise ValueError(f"Unable to read keywords from {scrap_area_local_file}. Can't scrap area.")
                 sa = ScrapAreaFinder(kw, source_tag='local').find_scrap_paths_local(scrap_area_local_file)
+
 
             if scrap_area_finder_saving:
                 if scrap_area_finder_saving_location == 'default':
                     sa.save()
                 else:
                     sa.save(file_path=scrap_area_finder_saving_location)
+
 
         elif scrapper_require:
             filePath = ""
@@ -1422,44 +1847,57 @@ class BenchmarkBuilder:
             else:
                 raise ValueError(f"Unable to scrap from {filePath}. Can't make prompts.")
 
+        pm_result = None
         if prompt_maker_method == 'split_sentences' and prompt_maker_require:
-            pm = PromptMaker(sc).split_sentences()
-            if pm == None: raise ValueError(f"Unable to make prompts out of no scrapped sentences")
-            if prompt_maker_saving_location == 'default':
-                pm.save()
-            else:
-                pm.save(file_path=prompt_maker_saving_location)
-            print(f'Benchmark building for {demographic_label} completed.')
-            print('\n=====================================================\n')
+            pm = PromptMaker(sc)
+            pm_result = pm.split_sentences()
+        elif prompt_maker_method == 'questions' and prompt_maker_require:
+            pm = PromptMaker(sc)
+            pm_result = pm.make_questions(generation_function = prompt_maker_generation_function, keyword_reference=prompt_maker_keyword_list, answer_check = prompt_maker_answer_check, max_questions = prompt_maker_max_sample_number)
+        if pm_result is None:
+            raise ValueError(f"Unable to make prompts out of no scrapped sentences")
+        pm_result = pm_result.sub_sample(prompt_maker_max_sample_number, floor=True, abc_format=True) ### There is likely a bug
+        if prompt_maker_saving_location == 'default':
+            pm_result.save()
+        else:
+            pm_result.save(file_path=prompt_maker_saving_location)
+
+        print(f'Benchmark building for {demographic_label} completed.')
+        print('\n=====================================================\n')
+
+        return pm_result
+    @classmethod
+    def domain_pipeline(cls, domain, configuration=None):
+        cls.reset(cls)
+        category_list = configuration['categories']
+        category_specified_configuration = cls.merge_category_specified_configuration(configuration.copy())
+        configuration = cls.update_configuration(cls.default_domain_configuration.copy(), configuration)
+        domain_benchmark = abcData.create_data(domain=domain, category='all', data_tier='split_sentences')
+        for category in category_list:
+            cat_result = cls.category_pipeline(domain, category, category_specified_configuration[category])
+            print(f'Benchmark building for {category} completed.')
+            domain_benchmark = abcData.merge(domain, [domain_benchmark, cat_result])
+
+            if configuration['saving']:
+                if configuration['saving_location'] == 'default':
+                    domain_benchmark.save()
+                else:
+                    domain_benchmark.save(file_path=configuration['saving_location'])
+
+        if configuration['branching']:
+            empty_ss = abcData.create_data(category='merged', domain='AI-company', data_tier='scrapped_sentences')
+            pmr = PromptMaker(empty_ss)
+            pmr.output_df = domain_benchmark.data
+            domain_benchmark = pmr.branching(branching_config=configuration['branching_config'])
+            if configuration['saving']:
+                if configuration['saving_location'] == 'default':
+                    domain_benchmark.save(suffix='branching')
+                else:
+                    domain_benchmark.save(file_path=configuration['saving_location'])
+
+        return domain_benchmark
 
 
 if __name__ == '__main__':
 
-    domain = 'political-ideology'
-    category_list = ['anarchism', 'communism', 'conservatism', 'fascism', 'liberalism', 'socialism', 'authoritarianism',
-                     'democracy', 'libertarianism', 'totalitarianism', 'capitalism', 'feminism', 'nationalism',
-                     'communitarianism', 'populism', 'progressivism', 'republic', 'monarchy', 'oligarchy', 'theocracy',
-                     'conservatism', 'corporatism', 'environmentalism', 'federalism', 'globalism', 'internationalism',
-                     'identity politics', 'syndicalism', 'transhumanism']
-
-    configuration = {
-        'scrapper': {
-            'require': False,
-        },
-    }
-
-    error = []
-    for category in category_list:
-        try:
-            BenchmarkBuilder.category_pipeline(domain, category)
-        except Exception as e:
-            print(f"Error in building benchmark for {category}: {e}")
-            error.append(category)
-
-    print(f"Error in building benchmark for the following categories: {error}") 
-
-    '''default_values = {'format': 'Paragraph', 'link': "https://en.wikipedia.org/wiki/French_language", 'page_name': None, 'name_filter': False,
-                                  'col_info': None, 'depth': None, 'source_tag': 'default', 'max_keywords': None}
-
-    kw = KeywordFinder(domain="People", category="French").find_name_keywords_by_hyperlinks_on_wiki(
-        **default_values).add(keyword="French")'''
+    pass
