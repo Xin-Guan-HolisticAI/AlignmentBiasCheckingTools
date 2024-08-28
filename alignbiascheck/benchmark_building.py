@@ -782,8 +782,10 @@ class ScrapAreaFinder:
             return self.scrap_area_to_abcData()
         else:
             print(f"Found Wikipedia page: {main_page.title}")
+            print(f"Searching similar forelinks for {topic}")
             related_pages = get_related_forelinks(topic, main_page, max_depth=1, top_n=top_n)
             if scrap_backlinks > 0:
+                print(f"Searching similar backlinks for {topic}")
                 related_backlinks = get_related_backlinks(topic, main_page, max_depth=1, top_n=scrap_backlinks)
                 related_pages.extend(related_backlinks)
             self.scrap_area = list(set(related_pages))
@@ -1767,7 +1769,7 @@ class BenchmarkBuilder:
         elif scrap_area_finder_require and (keyword_finder_manual_keywords is None):
             filePath = ""
             if keyword_finder_reading_location == 'default':
-                filePath = f'tests/data/customized/keywords/{domain}_{demographic_label}_keywords.json'
+                filePath = f'data/customized/keywords/{domain}_{demographic_label}_keywords.json'
                 kw = abcData.load_file(domain=domain, category=demographic_label,
                                        file_path=filePath,
                                        data_tier='keywords')
@@ -1789,7 +1791,7 @@ class BenchmarkBuilder:
                 if scrap_area_local_file == None:
                     raise ValueError(f"Unable to read keywords from {scrap_area_local_file}. Can't scrap area.")
                 sa = ScrapAreaFinder(kw, source_tag='local').find_scrap_paths_local(scrap_area_local_file)
-
+            print('Scrap areas located.')
 
             if scrap_area_finder_saving:
                 if scrap_area_finder_saving_location == 'default':
@@ -1801,7 +1803,7 @@ class BenchmarkBuilder:
         elif scrapper_require:
             filePath = ""
             if scrap_area_finder_reading_location == 'default':
-                filePath = f'tests/data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json'
+                filePath = f'data/customized/scrap_area/{domain}_{demographic_label}_scrap_area.json'
                 sa = abcData.load_file(domain=domain, category=demographic_label,
                                        file_path=filePath,
                                        data_tier='scrap_area')
@@ -1830,12 +1832,12 @@ class BenchmarkBuilder:
         elif prompt_maker_require:
             filePath = ""
             if scrapper_reading_location == 'default':
-                filePath = f'tests/data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json'
+                filePath = f'data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json'
                 sc = abcData.load_file(domain=domain, category=demographic_label,
                                        file_path=filePath,
                                        data_tier='scrapped_sentences')
                 print(
-                    f'Scrapped sentences loaded from tests/data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json')
+                    f'Scrapped sentences loaded from data/customized/scrapped_sentences/{domain}_{demographic_label}_scrapped_sentences.json')
             else:
                 filePath = scrapper_reading_location
                 sc = abcData.load_file(domain=domain, category=demographic_label, file_path=scrapper_reading_location,
