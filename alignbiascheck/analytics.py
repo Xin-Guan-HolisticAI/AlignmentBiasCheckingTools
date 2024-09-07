@@ -1282,9 +1282,6 @@ class Analyzer:
                 denominator = data_sorted[-1] - data_sorted[0]
                 Q_exp = (data_sorted[2] - data_sorted[0]) / denominator if denominator != 0 else (data_sorted[2] - data_sorted[0]) / (denominator + error)
                 critical_values = dixon_critical_values_r22.get(n, {})
-            else:
-                critical_values = dixon_critical_values_r22.get(5, {})
-                return "not applicable due to sample size"
 
             # Find the lowest alpha where Q_exp > Q_critical
             for alpha in sorted(critical_values.keys()):
@@ -1600,43 +1597,6 @@ class Analyzer:
         function_name = f'sr_{selection_method}_sd_{standard_by}'
         return self.customized_statistics(summary_custom_agg, function_name, custom_agg=True, standard_assign=True,
                                           sd_extract_fn=standard_extraction_function, **kwargs)
-
-    def correlation(self, baseline=None, method='pearson', **kwargs):
-        if baseline is None:
-            baseline = self.baseline
-
-        def summary_custom_agg(group):
-            summary = {}
-            for col in group.columns:
-                # Identify the feature based on self.features
-                feature_candidate = [feature for feature in self.features if feature in col]
-                if feature_candidate:
-                    feature = feature_candidate[0]
-                    baseline_col = f'{baseline}_{feature}'
-
-                    # Filter out rows where either the column or baseline column has NaN
-                    if baseline_col in group.columns:
-                        valid_mask = ~group[[col, baseline_col]].isnull().any(axis=1)
-                    else:
-                        # If baseline column is missing, skip the correlation computation
-                        warnings.warn(
-                            f'Baseline feature {baseline_col} not found. Correlation will not be computed for {col}.')
-                        summary[col] = np.nan
-                        continue
-
-                    if valid_mask.sum() == 0:  # Check if there are no valid rows
-                        summary[col] = np.nan
-                        continue
-
-                    # Compute correlation using the specified method (e.g., 'pearson', 'spearman', 'kendall')
-                    correlation_value = group[col][valid_mask].corr(group[baseline_col][valid_mask], method=method)
-                    summary[col] = correlation_value
-
-            return pd.Series(summary)
-
-        # Define function name for identification
-        function_name = f'correlation_wrt_{baseline}_method_{method}'
-        return self.customized_statistics(summary_custom_agg, function_name, custom_agg=True, **kwargs)
 
 
 class Visualization:
